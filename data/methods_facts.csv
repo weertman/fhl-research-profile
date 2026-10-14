@@ -1,0 +1,46 @@
+fact,value,label
+source_rows,26759,rows returned by all searches
+wos_records,2543,Web of Science records exported
+candidates,15962,candidate records after merging
+with_doi,6913,candidates with a DOI
+decided_rules,8726,final decisions resting on written rules
+decided_screening,6263,final decisions resting on AI screening
+decided_calibration,259,final decisions resting on calibration review
+decided_audit,367,final decisions resting on the audit
+decided_dedup,137,records merged into another record of the same work
+decided_cleanup,210,records removed or moved to Mention only by the clean-up review
+screened_round1,4201,records judged in the first screening round
+screened_round2,1297,records judged in the second screening round
+calibration_overrides,275,decisions changed by calibration reviewers
+resolution_opened,1396,unverified candidates opened one by one
+resolution_yes,189,confirmed as FHL work
+resolution_no,779,rejected
+resolution_uncertain,428,still undecided
+audited,380,records in the audit sample
+audit_full_text,260,audited records read in full text
+ai_runs,8,"AI runs (multi-agent workflows, the topic classification and the mentor check)"
+ai_agents,103,AI agents run in those runs
+build_hours,8.7,wall-clock hours from the first prompt to the first complete version
+mentor_pairs,146,mentor links inferred from co-authorship
+mentor_doc_visible,21,documented advisor pairs with the student first and advisor last on a census paper
+mentor_doc_recovered,11,"of those, recovered by the co-authorship rule"
+mentor_checked,30,inferred mentor links checked against public records
+mentor_confirmed,19,checked links confirmed as advisor or mentor
+mentor_peer,4,checked links that were collaborations between peers
+mentor_unclear,7,checked links that could not be settled
+dedup_dropped,137,duplicate records merged away
+dedup_kept,119,records they were merged into
+false_excluded,160,records removed as not publications or false matches
+mention_moved,50,obituaries and similar pieces moved to Mention only
+whiteley_records,125,included publications labelled Whiteley Center
+whiteley_inferred,10,"of those, probable (full-text match on non-marine work)"
+topic_classified,6501,publications given a research topic
+topic_with_abstract,4128,"of those, classified with an abstract"
+topic_sample,300,"publications classified twice, independently"
+topic_agreement_pct,94,percent agreeing on the topic
+topic_kappa,0.93,Cohen's kappa for the topic
+organism_agreement_pct,98,percent agreeing on the organism group
+organism_kappa,0.98,Cohen's kappa for the organism group
+topic_harmonized,223,labels changed by the consistency review
+topic_batches,16,random batches classified
+topic_batches_within_chance,15,batches whose topic mix matched the whole within the range expected by chance

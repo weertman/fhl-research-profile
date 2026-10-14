@@ -1,0 +1,143 @@
+decade,topic,n
+1900,Other,1
+1900,Taxonomy & natural history,1
+1910,Biomechanics & form,1
+1910,Cell & molecular biology,1
+1910,"Development, larvae & reproduction",13
+1910,Ecology,7
+1910,"Fisheries, conservation & human impacts",4
+1910,"Microbes, symbiosis & disease",1
+1910,Neurobiology & behaviour,1
+1910,Other,7
+1910,Physiology,18
+1910,Taxonomy & natural history,23
+1920,Biomechanics & form,5
+1920,Cell & molecular biology,8
+1920,"Development, larvae & reproduction",22
+1920,Ecology,9
+1920,"Microbes, symbiosis & disease",1
+1920,Neurobiology & behaviour,1
+1920,Oceanography & environment,14
+1920,Other,3
+1920,Physiology,18
+1920,Taxonomy & natural history,27
+1930,"Development, larvae & reproduction",6
+1930,Ecology,15
+1930,"Microbes, symbiosis & disease",1
+1930,Oceanography & environment,7
+1930,Other,6
+1930,Physiology,6
+1930,Taxonomy & natural history,7
+1940,"Development, larvae & reproduction",1
+1940,Ecology,2
+1940,Oceanography & environment,7
+1940,Other,3
+1940,Physiology,4
+1940,Taxonomy & natural history,7
+1950,Biomechanics & form,2
+1950,Cell & molecular biology,6
+1950,"Development, larvae & reproduction",6
+1950,"Evolution, genetics & genomics",2
+1950,"Fisheries, conservation & human impacts",2
+1950,"Microbes, symbiosis & disease",4
+1950,Neurobiology & behaviour,1
+1950,Oceanography & environment,6
+1950,Other,3
+1950,Physiology,12
+1950,Taxonomy & natural history,7
+1960,Biomechanics & form,3
+1960,Cell & molecular biology,25
+1960,"Development, larvae & reproduction",26
+1960,Ecology,10
+1960,"Evolution, genetics & genomics",2
+1960,"Fisheries, conservation & human impacts",1
+1960,"Microbes, symbiosis & disease",5
+1960,Neurobiology & behaviour,15
+1960,Oceanography & environment,3
+1960,Other,6
+1960,Physiology,32
+1960,Taxonomy & natural history,30
+1970,Biomechanics & form,10
+1970,Cell & molecular biology,38
+1970,"Development, larvae & reproduction",62
+1970,Ecology,21
+1970,"Evolution, genetics & genomics",7
+1970,"Fisheries, conservation & human impacts",1
+1970,"Microbes, symbiosis & disease",6
+1970,Neurobiology & behaviour,58
+1970,Oceanography & environment,1
+1970,Other,9
+1970,Physiology,35
+1970,Taxonomy & natural history,32
+1980,Biomechanics & form,34
+1980,Cell & molecular biology,55
+1980,"Development, larvae & reproduction",113
+1980,Ecology,75
+1980,"Evolution, genetics & genomics",13
+1980,"Fisheries, conservation & human impacts",9
+1980,"Microbes, symbiosis & disease",2
+1980,Neurobiology & behaviour,51
+1980,Oceanography & environment,7
+1980,Other,8
+1980,Paleobiology & taphonomy,4
+1980,Physiology,39
+1980,Taxonomy & natural history,46
+1990,Biomechanics & form,16
+1990,Cell & molecular biology,30
+1990,Climate change & ocean acidification,2
+1990,"Development, larvae & reproduction",82
+1990,Ecology,62
+1990,"Evolution, genetics & genomics",18
+1990,"Fisheries, conservation & human impacts",10
+1990,"Microbes, symbiosis & disease",3
+1990,Neurobiology & behaviour,55
+1990,Oceanography & environment,13
+1990,Other,17
+1990,Paleobiology & taphonomy,1
+1990,Physiology,27
+1990,Taxonomy & natural history,33
+2000,Biomechanics & form,36
+2000,Cell & molecular biology,66
+2000,Climate change & ocean acidification,9
+2000,"Development, larvae & reproduction",122
+2000,Ecology,54
+2000,"Evolution, genetics & genomics",57
+2000,"Fisheries, conservation & human impacts",37
+2000,"Microbes, symbiosis & disease",12
+2000,Neurobiology & behaviour,64
+2000,Oceanography & environment,34
+2000,Other,31
+2000,Paleobiology & taphonomy,8
+2000,Physiology,20
+2000,Taxonomy & natural history,56
+2000,Whiteley Center,21
+2010,Biomechanics & form,225
+2010,Cell & molecular biology,45
+2010,Climate change & ocean acidification,102
+2010,"Development, larvae & reproduction",132
+2010,Ecology,271
+2010,"Evolution, genetics & genomics",110
+2010,"Fisheries, conservation & human impacts",85
+2010,"Microbes, symbiosis & disease",29
+2010,Neurobiology & behaviour,74
+2010,Oceanography & environment,63
+2010,Other,74
+2010,Paleobiology & taphonomy,7
+2010,Physiology,81
+2010,Taxonomy & natural history,102
+2010,Whiteley Center,71
+2020,Biomechanics & form,141
+2020,Cell & molecular biology,16
+2020,Climate change & ocean acidification,76
+2020,"Development, larvae & reproduction",67
+2020,Ecology,149
+2020,"Evolution, genetics & genomics",82
+2020,"Fisheries, conservation & human impacts",83
+2020,"Microbes, symbiosis & disease",60
+2020,Neurobiology & behaviour,54
+2020,Oceanography & environment,40
+2020,Other,42
+2020,Paleobiology & taphonomy,4
+2020,Physiology,66
+2020,Taxonomy & natural history,77
+2020,Whiteley Center,23

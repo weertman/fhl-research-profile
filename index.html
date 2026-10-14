@@ -1,0 +1,2037 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FHL Research Publications</title>
+<meta name="description" content="A census of research published from the Friday Harbor Laboratories (University of Washington) since 1904, with the data behind every figure.">
+<meta name="author" content="Claude Opus 5.5 and Willem Lee Weertman">
+<style>
+  /* Paper and ink for the standalone page; the info sheet's own styles read these tokens. */
+  :root { --color-fg: #141413; --color-panel: #fffefb; --color-bg: #e9e7e1; color-scheme: light; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --color-fg: #ebe9e3; --color-panel: #1c1c1b; --color-bg: #111110; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --color-fg: #ebe9e3; --color-panel: #1c1c1b; --color-bg: #111110; color-scheme: dark; }
+  body { margin: 0; background: var(--color-bg); color: var(--color-fg); padding: clamp(16px, 4vw, 40px) 16px; }
+  .fp-offline { max-width: 40rem; margin: 0 auto 1rem; font: italic 15px Georgia, serif; text-align: center; }
+  .fp-save { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--fp-ink-2); margin-top: .25rem; }
+  .fp-save button { font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--fp-ink); background: none;
+                    border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+  .fp-save button:focus-visible { outline: 2px solid var(--fp-ink); outline-offset: 2px; }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .fp { border: 0; max-width: none; }
+    .fp-save, .fp-controls { display: none; }
+    .fp-table-wrap { max-height: none; overflow: visible; }
+  }
+  .fp-sitenote { max-width: 40rem; margin: 1.2rem auto 0; font: italic 14px/1.5 Georgia, serif; text-align: center; }
+  .fp-sitenote a { color: inherit; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+</head>
+<body>
+<p class="fp-offline" id="fp-offline" hidden>The charts could not be drawn. This page loads its charting library from the
+  internet, so open it while online.</p>
+<style>
+  /* Look: a black-and-white printed station report. Ink and paper follow the dashboard's light/dark theme, and
+     chart series are told apart by engraving-style fills (solid ink, hatching, stipple), never by color. */
+  .fp {
+    --fp-ink: var(--color-fg);
+    --fp-paper: var(--color-panel);
+    --fp-ink-2: color-mix(in oklab, var(--fp-ink) 74%, var(--fp-paper));
+    --fp-ink-3: color-mix(in oklab, var(--fp-ink) 32%, var(--fp-paper));
+    --fp-serif: "Baskerville", "Baskerville Old Face", "Hoefler Text", "Century Schoolbook", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    --fp-display: "Big Caslon", "Hoefler Text", "Baskerville", "Baskerville Old Face", Georgia, serif;
+    container-type: inline-size; position: relative;
+    font-family: var(--fp-serif); font-size: 16px; line-height: 1.55; color: var(--fp-ink);
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    background: var(--fp-paper); border: 1px solid var(--fp-ink-3);
+    max-width: 66rem; margin-inline: auto; padding: clamp(1.25rem, 5%, 3.5rem) clamp(.875rem, 5%, 3.5rem);
+    display: grid; gap: 2.75rem;
+  }
+  .fp p { margin: 0; max-width: 40em; }
+  .fp b { font-weight: 600; }
+  .fp a { color: inherit; }
+  .fp .cap { font-size: .88rem; line-height: 1.5; color: var(--fp-ink-2); }
+
+  /* Title page */
+  .fp-mast { text-align: center; display: grid; justify-items: center; gap: .55rem; }
+  .fp-mast .imprint { text-transform: uppercase; letter-spacing: .28em; font-size: .74rem; }
+  .fp-rule2 { width: 100%; height: 6px; border-top: 3px solid var(--fp-ink); border-bottom: 1px solid var(--fp-ink); }
+  .fp-rule2.flip { border-top-width: 1px; border-bottom-width: 3px; }
+  .fp-mast .over { text-transform: uppercase; letter-spacing: .3em; font-size: .8rem; margin-top: .7rem; }
+  .fp h1 { font-family: var(--fp-display); font-weight: 400; text-transform: uppercase; letter-spacing: .06em;
+           font-size: clamp(1.6rem, 5.4cqi, 3rem); line-height: 1.12; margin: 0; text-wrap: balance; }
+  .fp-mast .sub { font-style: italic; font-size: clamp(1.05rem, 2.4cqi, 1.3rem); text-wrap: balance; }
+  .fp-mast .short { width: 4rem; border-top: 1px solid var(--fp-ink); margin: .4rem 0; }
+  .fp-mast .names { font-size: .92rem; max-width: 44ch; text-wrap: balance; margin-bottom: .7rem; }
+  .fp-mast .byline { font-variant: small-caps; letter-spacing: .06em; font-size: .98rem; margin: -.2rem 0 .6rem; }
+  .fp-mast .stamp { text-transform: uppercase; letter-spacing: .14em; font-size: .74rem; font-variant-numeric: lining-nums; }
+
+  /* Opening paragraph with a drop capital */
+  .fp .fp-lead { font-size: 1.12rem; line-height: 1.6; max-width: 38em; margin-inline: auto; text-align: justify; hyphens: auto; }
+  .fp-lead::first-letter { font-family: var(--fp-display); float: left; font-size: 3.5em; line-height: .8; padding: .07em .1em 0 0; }
+
+  /* Summary of results: label, dot leaders, figure */
+  .fp-abstract { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr)); gap: 1.15rem 3rem;
+                 border-top: 1px solid var(--fp-ink); border-bottom: 1px solid var(--fp-ink); padding: 1rem 0 1.2rem; }
+  .fp-abstract .head { grid-column: 1 / -1; text-align: center; text-transform: uppercase; letter-spacing: .22em; font-size: .76rem; }
+  .fp-item { display: grid; gap: .15rem; min-width: 0; }
+  .fp-item .line { display: flex; align-items: baseline; gap: .45rem; }
+  .fp-item .lab { min-width: 0; }
+  .fp-item .dots { flex: 1; min-width: 1.2rem; border-bottom: 2px dotted var(--fp-ink-2); transform: translateY(-.3em); }
+  .fp-item .val { flex: none; font-size: 1.5rem; line-height: 1; font-variant-numeric: lining-nums; min-width: 2ch; text-align: right; }
+  .fp-item .note { font-size: .82rem; font-style: italic; color: var(--fp-ink-2); }
+
+  /* Sections, figures and their captions */
+  .fp-section { display: grid; gap: 1.5rem; }
+  .fp h2 { font-family: var(--fp-serif); font-weight: 400; text-align: center; text-transform: uppercase; letter-spacing: .16em;
+           font-size: 1rem; line-height: 1.4; margin: 0; text-wrap: balance; display: grid; justify-items: center; gap: .3rem; }
+  .fp h2 .num { letter-spacing: .1em; font-variant-numeric: lining-nums; }
+  .fp h2::after { content: ""; width: 3rem; border-top: 1px solid var(--fp-ink); margin-top: .3rem; }
+  .fp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 2.5rem 3rem; align-items: start; }
+  .fp-fig { margin: 0; display: grid; gap: .65rem; min-width: 0; position: relative; align-content: start; }
+  .fp-fig figcaption { display: grid; gap: .3rem; }
+  .fp h3 { font-size: .95rem; font-weight: 400; line-height: 1.4; margin: 0; text-wrap: pretty; }
+  .fp h3 .fig { text-transform: uppercase; letter-spacing: .1em; font-size: .8em; font-variant-numeric: lining-nums; }
+
+  /* Charts: ink on paper, thin rules, dotted grid */
+  .fp-chart { position: relative; width: 100%; min-height: 15rem; }
+  .fp-chart.tall { min-height: 19rem; }
+  .fp-chart svg { display: block; overflow: visible; }
+  .fp-chart text { fill: var(--fp-ink-2); font-size: 12px; font-family: var(--fp-serif); font-variant-numeric: lining-nums tabular-nums; }
+  .fp-chart .lbl { fill: var(--fp-ink); }
+  .fp-chart .era { fill: var(--fp-ink); font-style: italic; }
+  .fp-chart .mark { stroke: var(--fp-ink); stroke-width: .6; }
+  .fp-chart .frame { fill: none; stroke: var(--fp-ink); stroke-width: .8; }
+  .fp-chart .base { stroke: var(--fp-ink); stroke-width: 1; }
+  .fp-chart .sep { stroke: var(--fp-ink); stroke-width: .7; stroke-dasharray: 3 3; }
+  .fp-chart .axis .domain, .fp-chart .axis .tick line { stroke: var(--fp-ink); stroke-width: .8; }
+  .fp-chart .grid .tick line { stroke: var(--fp-ink-3); stroke-width: 1; stroke-dasharray: 1 3; }
+  .fp-chart .gridline { stroke: var(--fp-ink-3); stroke-width: 1; stroke-dasharray: 1 3; }
+  .fp-chart .ptitle { fill: var(--fp-ink); font-size: 12.5px; }
+  .fp-chart .pcount { fill: var(--fp-ink-2); font-style: italic; }
+  .fp-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+  .fp-defs .bg { fill: var(--fp-paper); }
+  .fp-defs .ink { stroke: var(--fp-ink); fill: none; }
+  .fp-defs .dot { fill: var(--fp-ink); }
+
+  /* Key and tooltip */
+  .fp-legend { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem 1.1rem; font-size: .85rem; }
+  .fp-legend:empty { display: none; }
+  .fp-legend::before { content: "Key"; text-transform: uppercase; letter-spacing: .14em; font-size: .74rem; margin-right: -.3rem; }
+  .fp-legend span { display: inline-flex; align-items: center; gap: .45em; }
+  .fp-legend svg, .fp-tip svg { width: 1.15rem; height: .8rem; flex: none; overflow: visible; }
+  .fp-tip { position: absolute; pointer-events: none; background: var(--fp-paper); border: 3px double var(--fp-ink);
+            padding: .35rem .6rem; font-size: .85rem; line-height: 1.4; z-index: 5; max-width: 18rem; }
+  .fp-tip .t { font-style: italic; margin-bottom: 2px; }
+  .fp-tip .r { display: flex; align-items: center; gap: .45em; font-variant-numeric: lining-nums tabular-nums; }
+
+  /* Tables: rules above and below, none between columns */
+  .fp-table-wrap { overflow: auto; max-height: 30rem; border-top: 1.5px solid var(--fp-ink); border-bottom: 1.5px solid var(--fp-ink); }
+  .fp table { border-collapse: collapse; width: 100%; font-size: .87rem; line-height: 1.4; font-variant-numeric: lining-nums tabular-nums; }
+  .fp-scroll { overflow-x: auto; min-width: 0; }
+  .fp table.ruled { border-top: 1.5px solid var(--fp-ink); border-bottom: 1.5px solid var(--fp-ink); }
+  .fp th { text-align: left; font-weight: 400; text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; white-space: nowrap;
+           position: sticky; top: 0; background: var(--fp-paper); box-shadow: inset 0 -1px 0 var(--fp-ink); padding: .5rem .55rem .4rem; }
+  .fp td { padding: .38rem .55rem; border-bottom: 1px dotted var(--fp-ink-3); vertical-align: top; }
+  .fp tbody tr:last-child td { border-bottom: 0; }
+  .fp td.num, .fp th.num { text-align: right; white-space: nowrap; }
+  .fp td.title { min-width: 16rem; }
+  .fp td.venue { font-style: italic; }
+
+  /* Search controls */
+  .fp-controls { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+  .fp-controls input, .fp-controls select { font: inherit; font-size: .9rem; padding: .35rem .55rem; border: 1px solid var(--fp-ink);
+           border-radius: 0; background: var(--fp-paper); color: var(--fp-ink); }
+  .fp-controls input { min-width: min(100%, 18rem); flex: 1; }
+  .fp-controls input::placeholder { font-style: italic; color: var(--fp-ink-2); }
+  .fp-controls input:focus-visible, .fp-controls select:focus-visible { outline: 2px solid var(--fp-ink); outline-offset: 2px; }
+  .fp-controls .cap { font-style: italic; }
+
+  /* Load states */
+  .fp-fail { display: flex; align-items: center; justify-content: center; min-height: inherit; font-style: italic; font-size: .9rem; color: var(--fp-ink-2); }
+  .fp [data-dash-source-state=empty] { color: transparent; }
+  .fp [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+
+  /* Notes, set as run-in paragraphs */
+  .fp-notes { display: grid; gap: .55rem; font-size: .92rem; line-height: 1.55; max-width: 44em; margin-inline: auto; }
+  .fp-notes p { max-width: none; text-indent: 1.5em; text-align: justify; hyphens: auto; }
+  .fp-notes .runin { font-style: italic; }
+  .fp-end { text-align: center; font-size: 1.3rem; letter-spacing: .4em; margin-top: -1rem; }
+
+  /* Technical methods: sub-heading, narrow tables, the prompts as typed */
+  .fp .fp-subhead { text-align: center; text-transform: uppercase; letter-spacing: .14em; font-size: .85rem; margin: .5rem 0 0; }
+  .fp-narrow { max-width: 40.5rem; width: 100%; margin-inline: auto; }
+  .fp-prompts { max-width: 40.5rem; width: 100%; margin-inline: auto; box-sizing: border-box; font-size: .9rem;
+                border-top: 1px solid var(--fp-ink); border-bottom: 1px solid var(--fp-ink); padding: .6rem 0; }
+  .fp-prompts summary { cursor: pointer; text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; }
+  .fp-prompts ol { margin: .9rem 0 .3rem; padding-left: 1.8em; display: grid; gap: .8rem; font-variant-numeric: lining-nums; }
+  .fp-prompts .typed { font-family: "American Typewriter", "Courier Prime", "Courier New", Courier, monospace; font-size: .84rem;
+                       line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .fp-prompts .said { font-style: italic; color: var(--fp-ink-2); }
+
+  /* The people: map, mentoring network and citation network */
+  .fp .fp-intro { max-width: 44em; margin-inline: auto; font-size: 1rem; text-align: center; text-wrap: balance; }
+  .fp-toggle { justify-content: center; }
+  .fp-toggle button { font: inherit; font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; padding: .3rem .75rem;
+                      border: 1px solid var(--fp-ink); border-radius: 0; background: var(--fp-paper); color: var(--fp-ink); cursor: pointer; }
+  .fp-toggle button[aria-pressed="true"] { background: var(--fp-ink); color: var(--fp-paper); }
+  .fp-toggle button:focus-visible { outline: 2px solid var(--fp-ink); outline-offset: 2px; }
+  .fp-toggle .fp-gap { width: 1.2rem; }
+  .fp-chart .sphere { fill: var(--fp-paper); stroke: var(--fp-ink); stroke-width: .9; }
+  .fp-chart .graticule { fill: none; stroke: var(--fp-ink-3); stroke-width: .5; stroke-dasharray: 1 3; }
+  .fp-chart .land { fill: url(#fp-dots); fill-rule: evenodd; stroke: var(--fp-ink); stroke-width: .5; }
+  .fp-chart .route { fill: none; stroke: var(--fp-ink); stroke-opacity: .45; }
+  .fp-chart .route.from { stroke-dasharray: 3 3; }
+  .fp-chart .place.from { fill: var(--fp-paper); stroke: var(--fp-ink); stroke-width: 1.3; }
+  .fp-chart .place.to { fill: var(--fp-ink); stroke: var(--fp-paper); stroke-width: .8; }
+  .fp-chart .fhl-ring { fill: var(--fp-paper); stroke: var(--fp-ink); stroke-width: 1.6; }
+  .fp-chart .fhl-dot { fill: var(--fp-ink); }
+  .fp-chart .maplabel { font-style: italic; font-size: 12px; }
+  .fp-chart .maplabel { paint-order: stroke; stroke: var(--fp-paper); stroke-width: 3px; stroke-linejoin: round; }
+  .fp-chart .lin-axis line { stroke: var(--fp-ink-3); stroke-width: .5; stroke-dasharray: 1 3; }
+  .fp-chart .lin-axis text { font-size: 10.5px; fill: var(--fp-ink-2); }
+  .fp-chart .lin-axis .lin-axis-note { font-style: italic; }
+  .fp-chart .lin-link { fill: none; stroke: var(--fp-ink); stroke-width: .7; stroke-opacity: .45; }
+  .fp-chart .lin-link.inferred { stroke-dasharray: 3 2; }
+  .fp-chart .lin-link.committee { stroke-dasharray: 1 2.5; }
+  .fp-chart .lin-link.on { stroke-opacity: 1; stroke-width: 1.4; }
+  .fp-chart .lin-link.off { stroke-opacity: .07; }
+  .fp-chart .lin-mark.fhl { fill: var(--fp-ink); }
+  .fp-chart .lin-mark.other { fill: var(--fp-paper); stroke: var(--fp-ink); stroke-width: 1; }
+  .fp-chart .lin-node.off { opacity: .18; }
+  .fp-chart .lin-node.self .lin-mark { stroke: var(--fp-ink); stroke-width: 2.5; }
+  .fp-chart .lin-label { font-size: 10.5px; fill: var(--fp-ink); paint-order: stroke; stroke: var(--fp-paper); stroke-width: 3.5px; stroke-linejoin: round; pointer-events: none; }
+  .fp-chart .lin-label.hub { font-weight: 700; }
+  .fp-chart .lin-label.minor { font-size: 9.5px; fill: var(--fp-ink-2); }
+  .fp-chart .lin-leader { stroke: var(--fp-ink-2); stroke-width: .6; }
+  .fp-chart .lin-label.self { font-weight: 700; text-decoration: underline; }
+  .fp-chart .net-label.hit { text-decoration: underline; font-weight: 700; fill: var(--fp-ink); }
+  .fp-profile { border: 1px solid var(--fp-ink); padding: .8rem 1rem .6rem; margin: .4rem 0 1rem; max-width: 46rem; background: var(--fp-paper); }
+  .fp-profile .head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+  .fp-profile h4 { margin: 0; font-size: 1.15rem; font-variant: small-caps; letter-spacing: .04em; }
+  .fp-profile .close { font: inherit; font-size: 1.3rem; line-height: 1; background: none; border: 0; cursor: pointer; color: var(--fp-ink); }
+  .fp-profile .facts { margin: .3rem 0; font-size: .9rem; font-style: italic; }
+  .fp-profile .para { margin: .6rem 0; line-height: 1.5; }
+  .fp-profile .note { margin: .6rem 0 0; font-size: .78rem; color: var(--fp-ink-2); }
+  .fp-profile .note a { color: inherit; }
+  .fp-chart #ch-net g.off > .net-node { opacity: .2; }
+  .fp-find .fp-combo { position: relative; flex: 0 1 26rem; min-width: min(100%, 18rem); }
+  .fp-find .fp-combo input { width: 100%; box-sizing: border-box; }
+  .fp-suggest { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 2px); margin: 0; padding: 0; list-style: none;
+    background: var(--fp-paper); border: 1px solid var(--fp-ink); max-height: 18rem; overflow-y: auto; box-shadow: 2px 3px 0 var(--fp-ink-3); }
+  .fp-suggest li { display: flex; justify-content: space-between; gap: 1rem; padding: .3rem .55rem; cursor: pointer; font-size: .9rem; }
+  .fp-suggest li .where { font-size: .74rem; font-style: italic; color: var(--fp-ink-2); white-space: nowrap; }
+  .fp-suggest li[aria-selected="true"], .fp-suggest li[role="option"]:hover { background: var(--fp-ink); color: var(--fp-paper); }
+  .fp-suggest li[aria-selected="true"] .where, .fp-suggest li[role="option"]:hover .where { color: var(--fp-paper); }
+  .fp-suggest li.none { font-style: italic; color: var(--fp-ink-2); cursor: default; }
+  .fp-chart .net-link { fill: none; stroke: var(--fp-ink); stroke-opacity: .28; }
+  .fp-chart .net-link.on { stroke-opacity: .9; }
+  .fp-chart .net-link.off { stroke-opacity: .05; }
+  .fp-chart .net-node { stroke: var(--fp-ink); stroke-width: .8; }
+  .fp-chart .net-label { fill: var(--fp-ink); font-size: 10.5px; }
+  .fp-chart .net-label.off { fill: var(--fp-ink-3); }
+
+  @container (max-width: 34rem) {
+    .fp .fp-lead, .fp-notes p { text-align: left; }
+    .fp-item .val { font-size: 1.3rem; }
+  }
+</style>
+
+<div class="fp" id="fhl-profile">
+  <header class="fp-mast" id="top">
+    <div class="imprint">University of Washington</div>
+    <div class="fp-rule2" role="presentation"></div>
+    <div class="over">Research publications of the</div>
+    <h1>Friday Harbor Laboratories</h1>
+    <div class="sub">A census of the work published since the station opened in 1904</div>
+    <div class="short" role="presentation"></div>
+    <p class="names">Including work issued under the station's earlier names: the Puget Sound Marine Station, the Puget Sound
+      Biological Station, and the University of Washington Oceanographic Laboratories.</p>
+    <p class="byline">By Claude Opus 5.5 and Willem Lee Weertman</p>
+    <div class="fp-rule2 flip" role="presentation"></div>
+    <div class="stamp">Data retrieved <span data-source="headline" data-field="retrieved">—</span></div>
+  </header>
+
+  <p class="fp-lead" id="takeaway">
+    FHL research appears in at least <b data-source="headline" data-field="verified" class="dash-skeleton">—</b> publications
+    where we could see the connection in the record itself. Counting the unconfirmed candidates at their audited rates
+    gives a best estimate of about <b data-source="best_estimate" data-field="estimate" class="dash-skeleton">—</b>.
+    The verified publications have been cited
+    <b data-source="headline" data-field="verified_citations" class="dash-skeleton">—</b> times.
+  </p>
+
+  <section class="fp-abstract" id="headline" aria-label="Summary of results">
+    <div class="head">Summary of results</div>
+    <div class="fp-item"><div class="line"><span class="lab">Verified publications</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="headline" data-field="verified">—</span></div>
+      <span class="note">FHL named in an author address, the text, or the station's own series</span></div>
+    <div class="fp-item"><div class="line"><span class="lab">Best estimate</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="best_estimate" data-field="estimate">—</span></div>
+      <span class="note">each tier weighted by its audited accuracy</span></div>
+    <div class="fp-item"><div class="line"><span class="lab">Citations to verified work</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="headline" data-field="verified_citations">—</span></div>
+      <span class="note">OpenAlex counts</span></div>
+    <div class="fp-item"><div class="line"><span class="lab">Verified per year, 2016–2025</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="headline" data-field="verified_per_year_2016_2025">—</span></div>
+      <span class="note">average publications a year</span></div>
+    <div class="fp-item"><div class="line"><span class="lab">Audit: verified tier correct</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="audit_tiers" data-field="precision" data-where="tier=Verified">—</span></div>
+      <span class="note">share confirmed against the papers</span></div>
+    <div class="fp-item"><div class="line"><span class="lab">FHL's own list found by searches</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="headline" data-field="search_recall_vs_fhl_lists">—</span></div>
+      <span class="note">database searches miss many acknowledgment-only papers</span></div>
+  </section>
+
+  <section class="fp-section" id="per-year">
+    <h2><span class="num">I.</span> Publications per year</h2>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-tier"></div>
+      <div class="fp-chart tall" id="ch-tier" data-source="by_year_tier eras"></div>
+      <figcaption>
+        <h3 id="fig-tier"><span class="fig">Fig. 1.</span>—Publications per year, by how directly the FHL connection was confirmed.</h3>
+        <p class="cap">Dashed rules mark changes in the station's name. Database coverage of older work is thin, and the most
+          recent year is partial.</p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="fp-section" id="content">
+    <h2><span class="num">II.</span> What the research was about</h2>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-topics"></div>
+      <div class="fp-chart tall" id="ch-topics" data-source="topics_share_by_decade"></div>
+      <figcaption>
+        <h3 id="fig-topics"><span class="fig">Fig. 2.</span>—Research topics, as a share of each decade's publications.</h3>
+        <p class="cap">Each verified publication was given one research topic by AI agents reading its title, journal and,
+          where available, abstract (see Technical methods). Layers are stacked from the topics whose share peaked
+          earliest (bottom) to those that peaked most recently (top); the key reads from the top layer down, and hovering
+          over a bar gives every value. "Whiteley Center" gathers work whose only link to FHL is the station's study
+          center for visiting scholars and writers (Fig. 4). "Other" covers education, history and records too vague to
+          classify. Decades with fewer than 20 verified publications are left out.</p>
+      </figcaption>
+    </figure>
+    <figure class="fp-fig">
+      <div class="fp-chart" id="ch-topics-n" data-source="topics_by_decade"></div>
+      <figcaption>
+        <h3 id="fig-topics-n"><span class="fig">Fig. 3.</span>—Publications per decade in each research topic.</h3>
+        <p class="cap">Verified publications, every panel on one scale, in the order of Fig. 2; the number beside each name
+          is its total. The 2020s cover 2020–2026 only.</p>
+      </figcaption>
+    </figure>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-whiteley"></div>
+      <div class="fp-chart" id="ch-whiteley" data-source="whiteley_by_field"></div>
+      <figcaption>
+        <h3 id="fig-whiteley"><span class="fig">Fig. 4.</span>—Work written at the Whiteley Center, by field.</h3>
+        <p class="cap">The Helen Riaboff Whiteley Center is FHL's study center for visiting scholars, scientists and writers.
+          Publications whose only link to FHL is a stay there form the "Whiteley Center" layer of Fig. 2 and panel of Fig. 3; here they are
+          broken down by field, which is the science topic for marine and life-science work and the scholarly field for
+          other work. Verified publications only.</p>
+      </figcaption>
+    </figure>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-organisms"></div>
+      <div class="fp-chart tall" id="ch-organisms" data-source="organisms_share_by_decade"></div>
+      <figcaption>
+        <h3 id="fig-organisms"><span class="fig">Fig. 5.</span>—The organisms studied, as a share of each decade's publications.</h3>
+        <p class="cap">The main group of organisms each publication is about, classified the same way and stacked in the
+          same manner as Fig. 2. "Many groups" covers community and biodiversity studies; "No particular organism" covers
+          physical, chemical and methods work and research on people.</p>
+      </figcaption>
+    </figure>
+    <figure class="fp-fig">
+      <div class="fp-chart" id="ch-organisms-n" data-source="organisms_by_decade"></div>
+      <figcaption>
+        <h3 id="fig-organisms-n"><span class="fig">Fig. 6.</span>—Publications per decade on each group of organisms.</h3>
+        <p class="cap">Verified publications, every panel on one scale, in the order of Fig. 5. The 2020s cover 2020–2026 only.</p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="fp-section" id="people">
+    <h2><span class="num">III.</span> The people</h2>
+    <p class="fp-intro"><span data-source="people_summary" data-field="scientists">—</span> scientists list FHL as their
+      address on at least three verified publications. <span data-source="people_summary" data-field="from_north_america">—</span>
+      came from institutions in North America, <span data-source="people_summary" data-field="from_europe">—</span> from
+      Europe and <span data-source="people_summary" data-field="from_asia_pacific">—</span> from Asia and the Pacific;
+      <span data-source="people_summary" data-field="moved_on">—</span> have since moved on, to institutions in
+      <span data-source="people_summary" data-field="destination_countries">—</span> countries, and
+      <span data-source="people_summary" data-field="still_at_fhl">—</span> are still publishing from FHL.</p>
+    <div class="fp-controls fp-find">
+      <div class="fp-combo">
+        <input id="people-q" type="search" placeholder="Find a person in Figs. 8 and 9 and Table I" aria-label="Find a person"
+          role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="people-suggest" autocomplete="off">
+        <ul id="people-suggest" class="fp-suggest" role="listbox" aria-label="Matching people" hidden></ul>
+      </div>
+      <span class="cap" id="people-count"></span>
+    </div>
+    <div class="fp-profile" id="people-profile" data-source="profiles" hidden></div>
+    <figure class="fp-fig">
+      <div class="fp-controls fp-toggle" role="group" aria-label="Map view">
+        <button type="button" data-map="from" aria-pressed="true">Came from</button>
+        <button type="button" data-map="to" aria-pressed="false">Went to</button>
+        <span class="fp-gap"></span>
+        <button type="button" data-view="world" aria-pressed="true">World</button>
+        <button type="button" data-view="na" aria-pressed="false">North America</button>
+      </div>
+      <div class="fp-chart tall" id="ch-map" data-source="places world_land"></div>
+      <figcaption>
+        <h3 id="fig-map"><span class="fig">Fig. 7.</span>—Where FHL scientists came from, and where they went.</h3>
+        <p class="cap">Open circles: the earliest institution in each scientist's publication record before their first FHL
+          paper. Black circles: the institution where they published most after their last FHL paper (at least two years
+          there). Circle area shows the number of scientists; lines are great circles to Friday Harbor. Hover over a circle
+          for names.</p>
+      </figcaption>
+    </figure>
+    <figure class="fp-fig">
+      <div class="fp-controls fp-toggle" role="group" aria-label="Which links to show">
+        <button type="button" data-links="all" aria-pressed="true">Documented and inferred</button>
+        <button type="button" data-links="documented" aria-pressed="false">Documented only</button>
+      </div>
+      <div class="fp-legend" id="lg-tree"></div>
+      <div class="fp-chart" id="ch-tree" data-source="lineage lineage_people"></div>
+      <figcaption>
+        <h3 id="fig-tree"><span class="fig">Fig. 8.</span>—Teachers and students: the mentoring network.</h3>
+        <p class="cap">Each mark is a scientist, placed left to right by the year their career began, so every line runs
+          forward in time from a teacher to a student. Lineages that share people join up, and connected people sit
+          near each other. Solid lines are documented advisors: UW thesis records, which name the advisor, and Wikidata's
+          doctoral-advisor statements, which reach back several academic generations. Dashed lines are mentors inferred
+          from co-authorship: a scientist who is last author on at least two of a younger colleague's first-author FHL
+          papers, early in that colleague's career (rule in section X). Mark size shows the number of students. Hover over
+          a mark, or use "Find a person", to follow a lineage back through teachers and forward through students. The
+          network is a sample and far from complete.</p>
+      </figcaption>
+    </figure>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-net"></div>
+      <div class="fp-chart" id="ch-net" data-source="people people_links"></div>
+      <figcaption>
+        <h3 id="fig-net"><span class="fig">Fig. 9.</span>—Who cites whom: the most prolific FHL scientists.</h3>
+        <p class="cap">The sixty scientists with the most FHL-address publications, around the circle in the order they
+          began publishing from FHL (clockwise from the top). A line joins two scientists when the FHL papers of one cite the
+          FHL papers of the other; its weight shows how often. Marker area shows FHL publications, and the fill shows the
+          region the scientist came from. Hover over a name to pick out their links.</p>
+      </figcaption>
+    </figure>
+    <div class="fp-fig" id="people-table">
+      <h3 id="tab-people"><span class="fig">Table I.</span>—FHL scientists, where they came from and where they went.</h3>
+      <p class="cap">Scientists with at least three FHL-address publications, most prolific first. Career points come from
+        OpenAlex author records, which occasionally merge or split people with similar names. Use "Find a person" above
+        to search the list.</p>
+      <div class="fp-table-wrap">
+        <table id="tbl-people" data-source="people" data-row-key="person_id">
+          <thead><tr><th data-field="name">Name</th><th data-field="fhl_works" class="num">FHL papers</th>
+            <th data-field="first_fhl_year" class="num">First</th><th data-field="last_fhl_year" class="num">Last</th>
+            <th data-field="came_from">Came from</th><th data-field="went_to">Went to</th><th data-field="status">Status</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="fp-section" id="where">
+    <h2><span class="num">IV.</span> Where FHL appears in the publication</h2>
+    <div class="fp-grid">
+      <figure class="fp-fig">
+        <div class="fp-chart" id="ch-appears" data-source="by_appears"></div>
+        <figcaption>
+          <h3 id="fig-appears"><span class="fig">Fig. 10.</span>—Verified publications by where FHL is named.</h3>
+          <p class="cap">"Main text" means anywhere outside the author addresses and the reference list, acknowledgments
+            included. "Text not checked" means no full text was readable.</p>
+        </figcaption>
+      </figure>
+      <figure class="fp-fig">
+        <div class="fp-legend" id="lg-appears"></div>
+        <div class="fp-chart" id="ch-appears-time" data-source="appears_share_by_decade"></div>
+        <figcaption>
+          <h3 id="fig-appears-time"><span class="fig">Fig. 11.</span>—Where FHL is named, as a share of each decade.</h3>
+          <p class="cap">Author-address mentions dominate the record. Main-text mentions (visiting researchers who thank FHL
+            or describe work done there) grow as full text becomes searchable.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="fp-section" id="kinds">
+    <h2><span class="num">V.</span> What kinds of work</h2>
+    <div class="fp-grid">
+      <figure class="fp-fig">
+        <div class="fp-chart" id="ch-type" data-source="by_type"></div>
+        <figcaption>
+          <h3 id="fig-type"><span class="fig">Fig. 12.</span>—Verified publications by type.</h3>
+          <p class="cap">Student and course reports are FHL course papers deposited in UW ResearchWorks.</p>
+        </figcaption>
+      </figure>
+      <figure class="fp-fig">
+        <div class="fp-chart" id="ch-era" data-source="by_era"></div>
+        <figcaption>
+          <h3 id="fig-era"><span class="fig">Fig. 13.</span>—Verified publications by the station's name at the time.</h3>
+          <p class="cap">Grouped by the name the station used in each publication's year.</p>
+        </figcaption>
+      </figure>
+      <figure class="fp-fig">
+        <div class="fp-chart tall" id="ch-venues" data-source="top_venues"></div>
+        <figcaption>
+          <h3 id="fig-venues"><span class="fig">Fig. 14.</span>—The most frequent venues.</h3>
+          <p class="cap">Journals and repositories with the most verified FHL publications.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="fp-section" id="citations">
+    <h2><span class="num">VI.</span> Citations</h2>
+    <div class="fp-grid">
+      <figure class="fp-fig">
+        <div class="fp-chart" id="ch-cites-year" data-source="by_year"></div>
+        <figcaption>
+          <h3 id="fig-cites-year"><span class="fig">Fig. 15.</span>—Citations received, by publication year.</h3>
+          <p class="cap">Verified publications only. Recent papers have had less time to be cited.</p>
+        </figcaption>
+      </figure>
+      <figure class="fp-fig">
+        <div class="fp-chart" id="ch-cite-rate" data-source="by_type"></div>
+        <figcaption>
+          <h3 id="fig-cite-rate"><span class="fig">Fig. 16.</span>—Typical citation rate by type.</h3>
+          <p class="cap">Median citations per year since publication, which allows fair comparison across ages.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="fp-fig" id="top-cited">
+      <h3 id="tab-top"><span class="fig">Table II.</span>—The most-cited publications.</h3>
+      <p class="cap">All tiers. "Where FHL appears" shows how the FHL connection was established.</p>
+      <div class="fp-table-wrap">
+        <table id="tbl-top" data-source="top_cited" data-row-key="record_id">
+          <thead><tr><th data-field="year" class="num">Year</th><th data-field="first_author">First author</th>
+            <th data-field="title">Title</th><th data-field="venue">Venue</th>
+            <th data-field="citations" class="num">Citations</th><th data-field="fhl_appears_in">Where FHL appears</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="fp-section" id="news">
+    <h2><span class="num">VII.</span> In the news</h2>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-news"></div>
+      <div class="fp-chart" id="ch-news" data-source="news_by_year"></div>
+      <figcaption>
+        <h3 id="fig-news"><span class="fig">Fig. 17.</span>—News items about FHL research and about FHL as an institution.</h3>
+        <p class="cap">Found by web search. This is a sample, not a census, and most online coverage dates from 2000 on.</p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="fp-section" id="reliability">
+    <h2><span class="num">VIII.</span> How the census was built, and how far to trust it</h2>
+    <div class="fp-grid">
+      <figure class="fp-fig">
+        <div class="fp-chart" id="ch-status" data-source="candidate_status"></div>
+        <figcaption>
+          <h3 id="fig-status"><span class="fig">Fig. 18.</span>—What happened to every candidate.</h3>
+          <p class="cap">Every record that matched "Friday Harbor" or a station name, after screening. Excluded records are
+            mostly the town, the ferry or other Friday Harbor organizations (Center for Whale Research, Whale Museum),
+            mentions only in reference lists, and figures deposited from papers.</p>
+        </figcaption>
+      </figure>
+      <div class="fp-fig">
+        <h3 id="tab-audit"><span class="fig">Table III.</span>—Independent audit.</h3>
+        <div class="fp-scroll"><table id="tbl-audit" class="ruled" data-source="audit_tiers" data-row-key="tier">
+          <thead><tr><th data-field="tier">Tier</th><th data-field="precision" class="num">Correct</th>
+            <th data-field="checked" class="num">Records checked</th><th data-field="interval" class="num">95% interval</th></tr></thead>
+          <tbody></tbody>
+        </table></div>
+        <p class="cap">A random sample of each tier was checked against the publications themselves. "Correct" is the share
+          the auditors confirmed as genuinely FHL-connected, weighted by tier size.</p>
+      </div>
+      <figure class="fp-fig">
+        <div class="fp-chart" id="ch-recall" data-source="recall_by_decade"></div>
+        <figcaption>
+          <h3 id="fig-recall"><span class="fig">Fig. 19.</span>—What the searches miss.</h3>
+          <p class="cap">Share of the papers on FHL's own publication lists that the database searches found independently.
+            Before about 2008, databases did not index acknowledgments, so papers that thank FHL without listing it in an
+            address are invisible to searches. FHL-listed papers are included in the "Listed by FHL" tier.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="fp-section" id="all-publications">
+    <h2><span class="num">IX.</span> Catalogue of publications</h2>
+    <div class="fp-fig">
+      <h3 id="tab-pubs"><span class="fig">Table IV.</span>—All publications, newest first.</h3>
+      <p class="cap">Search titles, authors and venues, or pick a research topic. Showing up to 300 matches; the full list with evidence for each
+        record is in the census workbook.</p>
+      <div class="fp-controls">
+        <input id="pub-q" type="search" placeholder="Search title, author or venue" aria-label="Search publications">
+        <select id="pub-tier" aria-label="Evidence tier">
+          <option value="">All tiers</option><option>Verified</option><option>Listed by FHL</option><option>Probable</option>
+        </select>
+        <select id="pub-topic" aria-label="Research topic"><option value="">All topics</option></select>
+        <span class="cap" id="pub-count"></span>
+      </div>
+      <div class="fp-table-wrap">
+        <table id="tbl-pubs" data-source="publications" data-row-key="record_id">
+          <thead><tr><th data-field="year" class="num">Year</th><th data-field="title">Title</th><th data-field="authors">Authors</th>
+            <th data-field="venue">Venue</th><th data-field="publication_type">Type</th><th data-field="research_topic">Topic</th>
+            <th data-field="evidence_tier">Tier</th><th data-field="citations" class="num">Citations</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="fp-section" id="method">
+    <h2><span class="num">X.</span> Technical methods</h2>
+    <div class="fp-notes">
+      <p><span class="runin">Definition.</span>—A publication is counted when Friday Harbor Laboratories, or the station under
+        one of its earlier names (Table V), appears in the publication or its record: in an author address, in the main text
+        (methods, acknowledgments, figure captions or anywhere else except the reference list), in the station's own
+        publication series, or in a dataset's metadata. A mention only of the town of Friday Harbor, of another Friday Harbor
+        organization, or only in a reference list does not count. Each publication is assigned the name the station used in
+        its publication year.</p>
+    </div>
+    <div class="fp-fig fp-narrow" id="names">
+      <h3 id="tab-names"><span class="fig">Table V.</span>—The station's names.</h3>
+      <div class="fp-scroll"><table id="tbl-eras" class="ruled" data-source="eras" data-row-key="name">
+        <thead><tr><th data-field="start" class="num">From</th><th data-field="end" class="num">To</th>
+          <th data-field="name">Name</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </div>
+    <div class="fp-notes">
+      <p><span class="runin">Search.</span>—Candidates came from OpenAlex (author-affiliation strings searched for every name
+        variant, the FHL institution record, full text, titles and abstracts); the Web of Science Core Collection (an export of
+        <span data-source="methods_facts" data-field="value" data-where="fact=wos_records">—</span> records matching
+        addresses, funding acknowledgments and topics, run through the University of Washington Libraries under the
+        compiler's own sign-in); PubMed and PubMed Central (affiliations and full text); Europe PMC (searches of the
+        affiliation, methods and acknowledgment sections); Crossref (affiliation, bibliographic and funder queries);
+        DataCite, Zenodo, Dryad, GBIF, NCBI BioProject and BCO-DMO for datasets; UW ResearchWorks and other repositories for
+        theses and student papers; OSTI and USGS for reports; archive.org full-text scans, including the Biodiversity
+        Heritage Library, BioStor and JSTOR Early Journal Content, for the station-era literature; FHL's own publication lists,
+        recovered from the Internet Archive; and news coverage found by web search. Name variants were matched with patterns
+        that tolerate hyphenation, line breaks and the British spelling "Harbour", and with the citation forms of the
+        station's own series. The searches ran on <span data-source="headline" data-field="retrieved">—</span>.</p>
+      <p><span class="runin">Merging.</span>—The searches returned
+        <span data-source="methods_facts" data-field="value" data-where="fact=source_rows">—</span> rows, merged into
+        <span data-source="methods_facts" data-field="value" data-where="fact=candidates">—</span> candidate records
+        (<span data-source="methods_facts" data-field="value" data-where="fact=with_doi">—</span> with a DOI). Two rows were
+        joined when they shared a DOI or a PubMed, PubMed Central or OpenAlex identifier, or when their titles matched
+        closely (a fuzzy similarity of at least 93 out of 100), their years differed by no more than one, and their first
+        authors shared a surname.</p>
+      <p><span class="runin">Screening.</span>—Unambiguous candidates were decided by written rules, such as an author
+        address that names the laboratory, or a match that falls only in a reference list. The rest were judged by AI agents
+        against a written screening guide that defines every field, lists the station's names and describes the common false
+        positives: the town, the ferry, other Friday Harbor organizations (the Center for Whale Research, The Whale Museum and
+        others), Seattle-campus oceanography, and bound journal volumes that merely contain a station paper. For each record
+        an agent recorded whether it is FHL-connected, the kind of connection, whether FHL appears in the affiliation and in
+        the main text (and in which sections), the publication type, its confidence, a reason and a short quotation of the
+        evidence. <span data-source="methods_facts" data-field="value" data-where="fact=screened_round1">—</span> records
+        were judged in a first round and <span data-source="methods_facts" data-field="value" data-where="fact=screened_round2">—</span>
+        in a second, after the search was extended and an address classifier corrected. Calibration agents then re-judged
+        samples across batches and changed <span data-source="methods_facts" data-field="value" data-where="fact=calibration_overrides">—</span>
+        inconsistent calls. Of the final decisions,
+        <span data-source="methods_facts" data-field="value" data-where="fact=decided_rules">—</span> rest on rules,
+        <span data-source="methods_facts" data-field="value" data-where="fact=decided_screening">—</span> on AI screening,
+        <span data-source="methods_facts" data-field="value" data-where="fact=decided_calibration">—</span> on calibration
+        review, <span data-source="methods_facts" data-field="value" data-where="fact=decided_audit">—</span> on the audit, <span data-source="methods_facts" data-field="value" data-where="fact=decided_dedup">—</span> on de-duplication and
+        <span data-source="methods_facts" data-field="value" data-where="fact=decided_cleanup">—</span> on the clean-up review described below.</p>
+      <p><span class="runin">Resolution.</span>—The
+        <span data-source="methods_facts" data-field="value" data-where="fact=resolution_opened">—</span> candidates with no
+        visible evidence were opened one at a time, reading the full text or landing page wherever it was freely available:
+        <span data-source="methods_facts" data-field="value" data-where="fact=resolution_yes">—</span> were confirmed,
+        <span data-source="methods_facts" data-field="value" data-where="fact=resolution_no">—</span> rejected, and
+        <span data-source="methods_facts" data-field="value" data-where="fact=resolution_uncertain">—</span> could not be
+        decided; they stay among the unverified candidates.</p>
+      <p><span class="runin">Where FHL appears.</span>—"Affiliation" is an author address naming the station. "Main text" is
+        anywhere else in the publication except the reference list. Where no full text could be read, the category says
+        "text not checked" rather than assuming the station is absent.</p>
+      <p><span class="runin">Evidence tiers.</span>—<i>Verified</i>: FHL was seen in the record (an author address, a passage
+        of text, the station's own series, or dataset metadata). <i>Probable</i>: a full-text index names the lab, but the
+        passage could not be read. <i>Listed by FHL</i>: on an FHL-maintained publication list but not independently
+        confirmed; the audit found an FHL connection in only about a third, so these are not added to the verified
+        count.</p>
+      <p><span class="runin">Audit.</span>—A stratified random sample of
+        <span data-source="methods_facts" data-field="value" data-where="fact=audited">—</span> decisions, drawn from every
+        tier and from the excluded and unverified records, was re-checked by separate AI agents told to try to prove each
+        decision wrong from the publication itself (<span data-source="methods_facts" data-field="value" data-where="fact=audit_full_text">—</span>
+        read in full text). A second agent adjudicated every disagreement. Precision is the share confirmed, weighted by
+        stratum size, with Wilson 95% intervals (Table III), and the best estimate counts each tier at its precision. The
+        audit was done by AI agents, not by people; a human check of a sample would strengthen it.</p>
+      <p><span class="runin">Recall.</span>—FHL's own publication lists serve as an independent sample of FHL work. For each
+        decade, recall is the share of listed papers that the database searches found on their own (Fig. 19). Listed papers
+        that the searches missed make up the "Listed by FHL" tier.</p>
+      <p><span class="runin">Types and citations.</span>—Publication types come from each source's metadata, corrected by the
+        screening agents, and are grouped into seven categories for Fig. 12. Citations are OpenAlex cited-by counts at
+        retrieval, with Crossref, Europe PMC or DataCite counts where OpenAlex had none; other databases give different
+        numbers. The citation rate in Fig. 16 divides a paper's citations by its age in years, counting the year of
+        publication as one.</p>
+      <p><span class="runin">Research topics.</span>—For Figs. 2 to 6, AI agents gave every included publication one of 13
+        research topics, an optional second topic and one of 13 organism groups, working from its title, journal and, for
+        <span data-source="methods_facts" data-field="value" data-where="fact=topic_with_abstract">—</span> of the
+        <span data-source="methods_facts" data-field="value" data-where="fact=topic_classified">—</span>, an abstract. They
+        followed a written guide with definitions, rules for borderline cases and worked examples. The publications were
+        shuffled into random batches, so that each batch's mix of topics could be checked against the whole. A separate
+        agent labelled a random sample of
+        <span data-source="methods_facts" data-field="value" data-where="fact=topic_sample">—</span> publications without
+        seeing the other labels: the two agreed on the topic for
+        <span data-source="methods_facts" data-field="value" data-where="fact=topic_agreement_pct">—</span>% of them
+        (Cohen's κ <span data-source="methods_facts" data-field="value" data-where="fact=topic_kappa">—</span>) and on the
+        organism group for <span data-source="methods_facts" data-field="value" data-where="fact=organism_agreement_pct">—</span>%
+        (κ <span data-source="methods_facts" data-field="value" data-where="fact=organism_kappa">—</span>). Because both labellings come from the same model following
+        the same guide, this measures consistency, not correctness. Of the
+        <span data-source="methods_facts" data-field="value" data-where="fact=topic_batches">—</span> random batches,
+        <span data-source="methods_facts" data-field="value" data-where="fact=topic_batches_within_chance">—</span> matched
+        the overall mix of topics within the range expected by chance. A final review applied three consistency rules to
+        <span data-source="methods_facts" data-field="value" data-where="fact=topic_harmonized">—</span> labels: disease,
+        symbiosis and microbiome studies take the host's organism group; research on people goes to Other (or to
+        Whiteley Center, below); and fossil and
+        taphonomy work, for which the guide had no topic, was gathered into a fourteenth topic, Paleobiology &amp;
+        taphonomy (docs/topic_guide.md). Publications whose only link to FHL is the Whiteley Center, the station's study
+        center for visiting scholars and writers, are labelled Whiteley Center, with their field as sub-topic (Fig. 4):
+        <span data-source="methods_facts" data-field="value" data-where="fact=whiteley_records">—</span> publications, <span data-source="methods_facts" data-field="value" data-where="fact=whiteley_inferred">—</span> of them probable, inferred from a
+        full-text match on non-marine work published since 2000.</p>
+      <p><span class="runin">Clean-up.</span>—A final review, made after the topic classification, merged
+        <span data-source="methods_facts" data-field="value" data-where="fact=dedup_dropped">—</span> duplicate records into <span data-source="methods_facts" data-field="value" data-where="fact=dedup_kept">—</span>. These were the same article under two
+        DOIs, a preprint and its published version, repository and reprint copies, and the same dataset deposited twice.
+        The kept record takes the strongest FHL evidence and the highest citation count in its group; a dataset, a
+        conference abstract or a thesis counts as a work of its own. The review also removed <span data-source="methods_facts" data-field="value" data-where="fact=false_excluded">—</span>
+        records that are not publications or whose only FHL match lies in a reference list (whole issues, newsletters,
+        front matter, other institutions' catalogues and reports, meeting-abstract volumes, peer-review documents, data
+        downloads), and moved <span data-source="methods_facts" data-field="value" data-where="fact=mention_moved">—</span> obituaries, biographies and histories to Mention only, as the
+        screening guide prescribes. The audit's error rates were measured before this review, which removed many of the
+        errors it found, so the best estimate is now somewhat conservative.</p>
+      <p><span class="runin">People.</span>—FHL scientists are the authors who list FHL, or the station under an earlier
+        name, as their address on at least three verified publications, identified through OpenAlex's author records. For
+        each, OpenAlex's history of the institutions on their papers gives where they came from (the earliest institution
+        with a paper before or in their first FHL year) and where they went (the institution with papers in the most years
+        after their last FHL paper, counting only institutions with at least two such years); those still publishing from
+        FHL in the last three years count as still at FHL. Citation links count how often the FHL papers of one scientist
+        cite the FHL papers of another, from OpenAlex reference lists. Advisor-student links come from UW thesis records,
+        which name the advisor, and from Wikidata's doctoral-advisor and doctoral-student statements. People were matched to
+        Wikidata by ORCID or by Wikidata's own links to the station, and advisors were followed up to five generations back;
+        a match was dropped if it would make the person younger than 18 at their first FHL paper. Mentors were also inferred
+        from co-authorship. Among the verified publications (datasets, news items and papers with more than 25 authors left
+        out), a scientist who is last author on at least two of a colleague's first-author papers is taken as that colleague's
+        mentor, if they lead a group (last author for at least two different first authors), began publishing at least four
+        years earlier, and the pair's first paper comes within eight years of the colleague's first publication. Careers come
+        from OpenAlex affiliation histories, and people are matched by OpenAlex author ID or by surname and given name. The
+        rule found <span data-source="methods_facts" data-field="value" data-where="fact=mentor_pairs">—</span> links. It recovers <span data-source="methods_facts" data-field="value" data-where="fact=mentor_doc_recovered">—</span> of the <span data-source="methods_facts" data-field="value" data-where="fact=mentor_doc_visible">—</span>
+        documented advisor-student pairs that appear in the census with the student first and the advisor last; most of the
+        rest share only one paper. An AI agent checked a random <span data-source="methods_facts" data-field="value" data-where="fact=mentor_checked">—</span> inferred links against public records
+        (theses, lab pages, CVs): <span data-source="methods_facts" data-field="value" data-where="fact=mentor_confirmed">—</span> were advisor, postdoctoral or student-research mentors,
+        <span data-source="methods_facts" data-field="value" data-where="fact=mentor_peer">—</span> were collaborations between peers, and <span data-source="methods_facts" data-field="value" data-where="fact=mentor_unclear">—</span> could not be settled
+        (Table VI). The links found to be between peers were removed from the network. OpenAlex groups papers into
+        people automatically and sometimes merges or splits people with similar names. Two such merges were corrected by
+        hand: L. D. Partridge (FHL papers 1975–79) and Volker Schmid (1988–92) had each been merged with a different scientist
+        of the same name, a biogerontologist and a statistician. Scientists from before about 1970 are under-represented because older papers carry no address
+        metadata.</p>
+      <p><span class="runin">Not searched.</span>—Google Scholar and Scopus (no automated access), BIOSIS Previews, Zoological
+        Record and ASFA. Before about 2008 databases did not index acknowledgments, so counts are a lower bound, especially
+        for 1985–2010 and before 1970.</p>
+      <p><span class="runin">Software and files.</span>—Python 3 scripts (pandas, rapidfuzz, pypdf, lxml, openpyxl) collect,
+        merge, screen and summarise the records, and the charts are drawn with d3, version 7. The scripts and their run order,
+        the screening guide, the agent instructions and every intermediate decision are kept with the census files, so each
+        count can be traced to the records and rules behind it.</p>
+    </div>
+
+    <h3 class="fp-subhead" id="ai-use">The use of artificial intelligence</h3>
+    <div class="fp-notes">
+      <p><span class="runin">Platform.</span>—The census, its code, the spreadsheet, the figures and this page were produced
+        with Claude Code 2.1.295, Anthropic's coding agent, in the Claude desktop app on macOS, on 13–14 October 2026. The
+        coordinating session and every agent it started used the model Claude Opus 5.5 (claude-opus-5-5). The census and
+        the first version of this page were produced at the "xhigh" reasoning-effort setting, the second highest of five
+        (low, medium, high, xhigh, max); from the topic classification onward (14 October, 18:10 UTC), including the people
+        section and the check of inferred mentors, the setting was "max", the highest (Table VI). Claude Code's ultracode
+        mode was on while the census was built, so each substantive step ran as a scripted multi-agent workflow; the topic
+        classification and the mentor check, added afterwards, ran as agents started directly. In all,
+        <span data-source="methods_facts" data-field="value" data-where="fact=ai_runs">—</span> runs used
+        <span data-source="methods_facts" data-field="value" data-where="fact=ai_agents">—</span> agents (Table VI).
+        The first complete version took
+        <span data-source="methods_facts" data-field="value" data-where="fact=build_hours">—</span> hours of wall-clock time,
+        most of it unattended.</p>
+    </div>
+    <div class="fp-fig fp-narrow" id="ai-workflows">
+      <h3 id="tab-ai"><span class="fig">Table VI.</span>—The AI runs.</h3>
+      <div class="fp-scroll"><table id="tbl-ai" class="ruled" data-source="ai_workflows" data-row-key="workflow">
+        <thead><tr><th data-field="workflow">Run</th><th data-field="purpose">Purpose</th>
+          <th data-field="agents" class="num">Agents</th><th data-field="effort">Effort</th>
+          <th data-field="started_utc" class="num">Started (UTC)</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </div>
+    <div class="fp-notes">
+      <p><span class="runin">Division of labour.</span>—Claude planned the pipeline, wrote all the code, queried the public
+        sources through their programming interfaces, judged ambiguous records, ran the audit, and drafted and designed this
+        page. The compiler set the task and the later requests listed below, signed in to the UW Libraries and Web of
+        Science with their own account, and saved the exported files; Claude operated the Web of Science export in a browser
+        after that sign-in. No person screened individual records.</p>
+      <p><span class="runin">Safeguards.</span>—Agents had no accounts or passwords, did not get around paywalls, bot checks or
+        CAPTCHAs, and treated fetched pages as data rather than as instructions. Paywalled publications were judged from
+        their metadata and abstract and are labelled "text not checked". Personal email addresses found in records were
+        removed from the outputs.</p>
+      <p><span class="runin">Limits.</span>—AI judgments can be wrong; the audit's error rates (Table III) and the topic
+        agreement rates above describe how often.
+        Treat individual records as leads to check, and the totals as estimates with the stated uncertainty.</p>
+      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app.
+        Messages about signing in, saving files and progress are summarised rather than quoted. The agents worked from
+        instructions that Claude wrote: a screening guide, a search specification, a topic guide and the workflow scripts, which
+        hold every agent prompt. They are kept with the census files (docs/screening_guide.md, docs/harvest_spec.md,
+        docs/topic_guide.md and docs/ai_workflows/).</p>
+    </div>
+    <details class="fp-prompts" id="prompts">
+      <summary>The prompts, as typed</summary>
+      <ol>
+        <li><div class="typed">i have been given this task. Id like you to break the problem down into technical steps.
+
+* Create an FHL research profile info sheet. Target audiences: RIMB class, FHL website, FHL community
+   * Compile a spreadsheet of FHL research publications since the lab opened (including when it was called Puget Sound Biological Station and Puget Sound Marine Station). Reality-check it for false positives.
+   * Ideal data columns:
+      * Author names
+      * Publication year
+      * Publication title
+      * Publication type: peer-reviewed journal article, book chapter, book, report, editorial, letter, public dataset, news media…any other?
+      * Friday Harbor Laboratories (or PSBS or PSMS) appears in which sections of the publication: author affiliation, main text, or both
+      * Number of citations of each publication
+      * Anything else that seems important?
+   * Graphically summarize patterns of # publications and # citations over time, by publication type, by FHL affiliation vs. main text + anything else that seems interesting</div></li>
+        <li><div class="typed">do all steps</div></li>
+        <li><div class="said">Thirteen short messages while the work ran: a progress check, signing in to the UW Libraries,
+          Web of Science and Scopus (the Scopus sign-in failed), saving the exported files, and whether more help was needed
+          that night.</div></li>
+        <li><div class="typed">whats the best next step?</div></li>
+        <li><div class="typed">id like to have a style for the artifact that reflects the style of old school black and white type. what youd see in an old marine station report</div></li>
+        <li><div class="typed">i see no plots</div></li>
+        <li><div class="typed">is it a standalone html i could send? id like users to be able to export the plots at images</div></li>
+        <li><div class="typed">it needs a technical methods section with details for how the report was created. this should include a bit on the use of ai (the platform, the effort level, the prompts given)</div></li>
+        
+        <li><div class="typed">id like a figure which is research content over time. basically what the publications etc coming out of FHL were about content wise. i think this would be really interesting and AI would do a good job of classifying this.</div></li>
+        <li><div class="typed">delete duplicates and false records. whitely center should be labeled as whitely center + sub topics</div></li>
+        <li><div class="typed">What the research was about... I like the ratios. but i think the ratios could just be a stacked plot, not lots of smaller ones. and then the smaller ones could be raw publication counts.</div></li>
+        <li><div class="typed">I'd like to add a pedagogical tree of the scientists working at fhl. where they came from. how they are connected through citation and institution. where they went in the world. a map, a tree, and a diagram of your choosing.</div></li>
+        <li><div class="typed">i dont see the new figs in the report just blank spaces</div></li>
+        <li><div class="typed">you didnt find me 😞 willem weertman</div></li>
+        <li><div class="typed">looks like you also missed some folks connected to drew harvell. eg., olivia graham. I think a lot of these connections could be expanded dramatically. I understand this is tough. because it involves hunting through co-authorships.</div></li>
+      </ol>
+    </details>
+    <div class="fp-end" aria-hidden="true">⁂</div>
+  </section>
+</div>
+
+<p class="fp-sitenote">Published at <a href="https://weertman.github.io/fhl-research-profile/">https://weertman.github.io/fhl-research-profile/</a>. The data behind every figure and table are
+  CSV and JSON files in the <a href="https://github.com/weertman/fhl-research-profile/tree/main/data">data folder</a> of <a href="https://github.com/weertman/fhl-research-profile">the repository</a>,
+  including <a href="https://github.com/weertman/fhl-research-profile/blob/main/data/census_all_candidates.csv">the full census</a>: every candidate record the
+  searches found, with the decision on each and its evidence. By Claude Opus 5.5 and Willem Lee Weertman.</p>
+<script>
+  // Stand-in for the dashboard runtime: fetches each dataset from data/ and serves it to the info sheet's code unchanged.
+  window.dash = (() => {
+    const FILES = {"ai_workflows": "data/ai_workflows.csv", "audit_tiers": "data/audit_tiers.csv", "by_appears": "data/by_appears.csv", "by_era": "data/by_era.csv", "by_type": "data/by_type.csv", "by_year": "data/by_year.csv", "by_year_appears": "data/by_year_appears.csv", "by_year_tier": "data/by_year_tier.csv", "candidate_status": "data/candidate_status.csv", "eras": "data/eras.csv", "headline": "data/headline.csv", "lineage": "data/lineage.csv", "lineage_people": "data/lineage_people.csv", "methods_facts": "data/methods_facts.csv", "news_by_year": "data/news_by_year.csv", "organisms_by_decade": "data/organisms_by_decade.csv", "people": "data/people.csv", "people_links": "data/people_links.csv", "places": "data/places.csv", "profiles": "data/profiles.csv", "publications": "data/publications.csv", "recall_by_decade": "data/recall_by_decade.csv", "top_cited": "data/top_cited.csv", "top_venues": "data/top_venues.csv", "topics_by_decade": "data/topics_by_decade.csv", "whiteley_by_field": "data/whiteley_by_field.csv", "world_land": "data/world_land.json"};
+    const store = {}, calcs = {}, draws = [];
+    const run = (fn) => { try { fn(); } catch (e) { console.error(e); } };
+    let timer;
+    window.addEventListener('resize', () => { clearTimeout(timer); timer = setTimeout(() => draws.forEach(run), 150); });
+    const api = {
+      data(id) {
+        const c = calcs[id];
+        if (c) {
+          const ins = c.inputs.map((i) => api.data(i));
+          if (ins.some((d) => d.status !== 'ok')) return { status: ins.some((d) => d.status === 'error') ? 'error' : 'loading', data: [] };
+          return { status: 'ok', data: c.fn(...ins.map((d) => d.data)) };
+        }
+        if (!FILES[id]) return { status: 'missing', data: [] };
+        return store[id] || { status: 'loading', data: [] };
+      },
+      onData(fn) { draws.push(fn); run(fn); },
+      calc(id, def) { calcs[id] = def; },
+      colors: [],
+    };
+    if (window.d3) {
+      Promise.all(Object.entries(FILES).map(([id, file]) => fetch(file)
+        .then((r) => { if (!r.ok) throw new Error(`${file}: HTTP ${r.status}`); return file.endsWith('.json') ? r.json() : r.text(); })
+        .then((d) => { const rows = typeof d === 'string' ? d3.csvParse(d) : d; store[id] = { status: 'ok', data: rows, columns: rows.columns || [] }; })
+        .catch((e) => { console.error(e); store[id] = { status: 'error', data: [] }; })))
+        .then(() => draws.forEach(run));
+    }
+    return api;
+  })();
+  if (!window.d3) document.getElementById('fp-offline').hidden = false;
+</script>
+<script>
+  // Shared helpers for every chart on the page. Marks are ink on paper; series differ by fill pattern, not color.
+  window.FP = (() => {
+    const f = d3.format(',');
+    const compact = new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 });
+    const pct = d3.format('.0%');
+    const root = document.getElementById('fhl-profile');
+    const NS = 'http://www.w3.org/2000/svg';
+
+    // Engraving-style fills, defined once for the page. Tones run from solid ink down to bare paper.
+    if (!root.querySelector(':scope > .fp-defs')) {
+      const defs = d3.select(root).insert('svg', ':first-child').attr('class', 'fp-defs').attr('aria-hidden', 'true').append('defs');
+      const pattern = (id, size, angle) => {
+        const p = defs.append('pattern').attr('id', id).attr('patternUnits', 'userSpaceOnUse').attr('width', size).attr('height', size);
+        if (angle) p.attr('patternTransform', `rotate(${angle})`);
+        p.append('rect').attr('class', 'bg').attr('width', size).attr('height', size);
+        return p;
+      };
+      const vline = (p, s, w) => p.append('line').attr('class', 'ink').attr('x1', s / 2).attr('x2', s / 2).attr('y1', 0).attr('y2', s).attr('stroke-width', w);
+      const hline = (p, s, w) => p.append('line').attr('class', 'ink').attr('y1', s / 2).attr('y2', s / 2).attr('x1', 0).attr('x2', s).attr('stroke-width', w);
+      vline(pattern('fp-hatch', 4, 45), 4, 1.3);
+      vline(pattern('fp-hatch2', 4, -45), 4, 1.3);
+      const cross = pattern('fp-cross', 4.5, 45); vline(cross, 4.5, 1.1); hline(cross, 4.5, 1.1);
+      hline(pattern('fp-horiz', 3.5, 0), 3.5, .8);
+      vline(pattern('fp-vert', 3.5, 0), 3.5, .8);
+      const grid = pattern('fp-grid', 4, 0); vline(grid, 4, .9); hline(grid, 4, .9);
+      vline(pattern('fp-hatchw', 7, 45), 7, 1.1);
+      vline(pattern('fp-hatchd', 3.5, 45), 3.5, 1.6);
+      const crossw = pattern('fp-crossw', 7, 45); vline(crossw, 7, 1); hline(crossw, 7, 1);
+      pattern('fp-dotsd', 3, 0).append('circle').attr('class', 'dot').attr('cx', 1.5).attr('cy', 1.5).attr('r', .8);
+      const dots = pattern('fp-dots', 5, 0);
+      [[1.25, 1.25], [3.75, 3.75]].forEach(([cx, cy]) => dots.append('circle').attr('class', 'dot').attr('cx', cx).attr('cy', cy).attr('r', .75));
+    }
+    const INK = 'var(--fp-ink)', PAPER = 'var(--fp-paper)';
+    const FILL = { solid: INK, cross: 'url(#fp-cross)', hatch: 'url(#fp-hatch)', hatch2: 'url(#fp-hatch2)',
+                   horiz: 'url(#fp-horiz)', vert: 'url(#fp-vert)', dots: 'url(#fp-dots)', open: PAPER,
+                   grid: 'url(#fp-grid)', hatchw: 'url(#fp-hatchw)', hatchd: 'url(#fp-hatchd)', crossw: 'url(#fp-crossw)',
+                   dotsd: 'url(#fp-dotsd)', gray: 'color-mix(in oklab, var(--fp-ink) 55%, var(--fp-paper))',
+                   grayl: 'color-mix(in oklab, var(--fp-ink) 18%, var(--fp-paper))' };
+    // Fixed order for categorical series; a residual "Other" category takes FILL.open.
+    const SERIES = [FILL.solid, FILL.cross, FILL.hatch, FILL.horiz, FILL.dots, FILL.hatch2, FILL.vert];
+    // A longer fixed order for the many-layered content charts, alternating dark and light so neighbours stand apart.
+    const SERIES_LONG = [FILL.solid, FILL.dots, FILL.hatchd, FILL.horiz, FILL.cross, FILL.hatchw, FILL.gray, FILL.vert,
+                         FILL.grid, FILL.dotsd, FILL.hatch2, FILL.crossw, FILL.hatch];
+
+    const swatch = (fill) => {
+      const s = document.createElementNS(NS, 'svg'); s.setAttribute('viewBox', '0 0 16 11'); s.setAttribute('aria-hidden', 'true');
+      const r = document.createElementNS(NS, 'rect');
+      [['x', '.5'], ['y', '.5'], ['width', '15'], ['height', '10']].forEach(([k, v]) => r.setAttribute(k, v));
+      r.style.fill = fill; r.style.stroke = INK; r.style.strokeWidth = '.8';
+      s.appendChild(r);
+      return s;
+    };
+    const tipFor = (box) => {
+      let t = box.querySelector(':scope > .fp-tip');
+      if (!t) { t = document.createElement('div'); t.className = 'fp-tip'; t.hidden = true; box.appendChild(t); }
+      return t;
+    };
+    const showTip = (box, event, title, rows) => {
+      const t = tipFor(box);
+      t.replaceChildren();
+      const h = document.createElement('div'); h.className = 't'; h.textContent = title; t.appendChild(h);
+      rows.forEach(([fill, name, val]) => {
+        const r = document.createElement('div'); r.className = 'r';
+        if (fill) r.appendChild(swatch(fill));
+        const s = document.createElement('span'); s.textContent = name ? `${name}: ${val}` : val; r.appendChild(s);
+        t.appendChild(r);
+      });
+      t.hidden = false;
+      const b = box.getBoundingClientRect();
+      const x = event.clientX - b.left, y = event.clientY - b.top;
+      const w = t.offsetWidth, hgt = t.offsetHeight;
+      t.style.left = Math.max(0, Math.min(b.width - w, x + 12)) + 'px';
+      t.style.top = Math.max(0, y - hgt - 10) + 'px';
+    };
+    const hideTip = (box) => { const t = box.querySelector(':scope > .fp-tip'); if (t) t.hidden = true; };
+    const state = (el, ids) => {
+      // returns true when every dataset is ok; otherwise draws the failed/loading state
+      const ds = ids.map((id) => dash.data(id));
+      const failed = ds.some((d) => d.status === 'error' || d.status === 'missing');
+      const ok = ds.every((d) => d.status === 'ok');
+      if (!ok) {
+        el.replaceChildren();
+        el.classList.toggle('dash-skeleton', !failed);
+        if (failed) { const m = document.createElement('div'); m.className = 'fp-fail'; m.textContent = 'Failed to load'; el.appendChild(m); }
+      } else el.classList.remove('dash-skeleton');
+      return ok;
+    };
+    const legend = (el, items) => {
+      el.replaceChildren(...items.map(([name, fill]) => {
+        const s = document.createElement('span');
+        s.append(swatch(fill), document.createTextNode(name));
+        return s;
+      }));
+    };
+    const svgFor = (el, height) => {
+      el.querySelectorAll('svg').forEach((s) => s.remove());
+      const width = Math.max(260, el.clientWidth);
+      const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${width} ${height}`).attr('height', height);
+      return { svg, width, height };
+    };
+    const cleanAxis = (g) => g.attr('font-size', null).attr('font-family', null).classed('axis', true);
+    const textWidth = (svg, strings) => {
+      const t = svg.append('text').attr('font-size', 12);
+      let w = 0;
+      strings.forEach((s) => { t.text(s); w = Math.max(w, t.node().getComputedTextLength()); });
+      t.remove();
+      return w;
+    };
+    // Horizontal bars: one value per category, labels on the left, value at the bar end, hatched like an engraving.
+    const hbars = (el, rows, label, value, { fill = FILL.hatch, fmt = f, tipTitle = (d) => d[label] } = {}) => {
+      const bar = 13, gap = 11;
+      const { svg, width, height } = svgFor(el, rows.length * (bar + gap) + 8);
+      const lw = Math.min(width * 0.5, textWidth(svg, rows.map((d) => d[label])) + 10);
+      const vw = textWidth(svg, rows.map((d) => fmt(d[value]))) + 10;
+      const x = d3.scaleLinear([0, d3.max(rows, (d) => d[value]) || 1], [lw, width - vw]);
+      const g = svg.selectAll('g.row').data(rows).join('g').attr('class', 'row')
+        .attr('transform', (d, i) => `translate(0,${i * (bar + gap) + 4 + gap / 2})`);
+      g.append('rect').attr('y', -gap / 2).attr('width', width).attr('height', bar + gap).style('fill', 'transparent');
+      g.append('text').attr('class', 'lbl').attr('x', lw - 8).attr('y', bar / 2).attr('dy', '0.35em').attr('text-anchor', 'end')
+        .text((d) => d[label])
+        .each(function (d) { // shorten labels that do not fit the label column
+          let t = String(d[label]);
+          while (this.getComputedTextLength() > lw - 10 && t.length > 4) { t = t.slice(0, -2); this.textContent = t + '…'; }
+        });
+      g.append('rect').attr('class', 'mark').attr('x', lw).attr('height', bar).style('fill', (d) => (typeof fill === 'function' ? fill(d) : fill))
+        .attr('width', (d) => Math.max(1, x(d[value]) - lw));
+      g.append('text').attr('x', (d) => x(d[value]) + 6).attr('y', bar / 2).attr('dy', '0.35em').text((d) => fmt(d[value]));
+      svg.append('line').attr('class', 'base').attr('x1', lw).attr('x2', lw).attr('y1', 2).attr('y2', height - 2);
+      g.on('mousemove', (event, d) => showTip(el, event, tipTitle(d), [[null, null, fmt(d[value])]]))
+        .on('mouseleave', () => hideTip(el));
+    };
+    // Stacked columns over time inside a ruled frame, with optional dashed rules where the station's name changed.
+    const stackedYears = (el, rows, keys, fills, { eras = null, height = 300, band = 1, fmtX = (d) => d, yFmt = f, valFmt = f } = {}) => {
+      const byX = d3.rollup(rows, (v) => Object.fromEntries(keys.map((k) => [k, d3.sum(v.filter((r) => r.k === k), (r) => r.n)])), (r) => r.x);
+      const xs = Array.from(byX.keys()).sort((a, b) => a - b);
+      const data = xs.map((x) => ({ x, ...byX.get(x) }));
+      const stack = d3.stack().keys(keys)(data);
+      const { svg, width } = svgFor(el, height);
+      const top = eras ? 26 : 8, base = height - 22, right = width - 4;
+      const yMax = d3.max(data, (d) => d3.sum(keys, (k) => d[k])) || 1;
+      const y = d3.scaleLinear([0, yMax], [base, top]).nice();
+      const yw = textWidth(svg, y.ticks(5).map(yFmt)) + 10;
+      const x = d3.scaleBand(xs, [yw, right]).paddingInner(band === 1 ? 0.15 : 0.3);
+      svg.append('g').attr('class', 'grid').attr('transform', `translate(${yw},0)`)
+        .call(d3.axisLeft(y).ticks(5).tickFormat(yFmt).tickSize(-(right - yw)).tickPadding(6)).call(cleanAxis)
+        .call((g) => g.select('.domain').remove());
+      if (eras) {
+        const half = (x.step() * x.paddingInner()) / 2;
+        const edge = (yr) => { const v = xs.find((v) => v >= yr); return v === undefined ? right : Math.max(yw, x(v) - half); };
+        const spans = eras.map((d) => ({ ...d, l: edge(d.start), r: edge(d.end + 1) })).filter((d) => d.r - d.l > 1);
+        svg.append('g').selectAll('line').data(spans.filter((d) => d.l > yw + 1)).join('line').attr('class', 'sep')
+          .attr('x1', (d) => d.l).attr('x2', (d) => d.l).attr('y1', top - 20).attr('y2', base);
+        svg.append('g').selectAll('text').data(spans).join('text').attr('class', 'era')
+          .attr('x', (d) => (d.l + d.r) / 2).attr('y', top - 8).attr('text-anchor', 'middle').text((d) => d.short)
+          .each(function (d) { if (this.getComputedTextLength() > d.r - d.l - 6) d3.select(this).remove(); }); // only where it fits
+      }
+      const step = Math.ceil(xs.length / Math.max(2, Math.floor((right - yw) / 48)));
+      svg.append('g').attr('transform', `translate(0,${base})`)
+        .call(d3.axisBottom(x).tickValues(xs.filter((v, i) => (band === 1 ? v % (step <= 10 ? 10 : 20) === 0 : i % step === 0)))
+          .tickFormat(fmtX).tickSize(4).tickSizeOuter(0))
+        .call(cleanAxis).call((g) => g.select('.domain').remove());
+      svg.append('g').selectAll('g').data(stack).join('g').style('fill', (s, i) => fills[i])
+        .selectAll('rect').data((s) => s.map((p) => Object.assign(p, { key: s.key }))).join('rect').attr('class', 'mark')
+        .attr('x', (p) => x(p.data.x)).attr('width', x.bandwidth()).attr('y', (p) => y(p[1]))
+        .attr('height', (p) => Math.max(0, y(p[0]) - y(p[1])))
+        .attr('visibility', (p) => (p[1] - p[0] > 0 ? null : 'hidden'));
+      svg.append('rect').attr('class', 'frame').attr('x', yw).attr('y', top).attr('width', right - yw).attr('height', base - top);
+      svg.append('g').selectAll('rect').data(data).join('rect').attr('x', (d) => x(d.x) - x.step() * x.paddingInner() / 2)
+        .attr('width', x.step()).attr('y', 0).attr('height', base).style('fill', 'transparent')
+        .on('mousemove', (event, d) => showTip(el, event, String(fmtX(d.x)),
+          keys.map((k, i) => [fills[i], k, valFmt(d[k])]).filter((r, i) => d[keys[i]] > 0)))
+        .on('mouseleave', () => hideTip(el));
+    };
+    // Small multiples: one panel per category with a bar per decade, every panel on one scale.
+    const multiples = (el, rows, order, { value = (r) => r.share, fmt = pct, tip = (r) => `${fmt(value(r))}` } = {}) => {
+      const decades = Array.from(new Set(rows.map((r) => r.decade))).sort((a, b) => a - b);
+      const byKey = d3.group(rows, (r) => r.key);
+      const width = Math.max(260, el.clientWidth);
+      const gapX = 22, gapY = 24, titleH = 42, plotH = 60, axisH = 16;
+      const cols = Math.max(1, Math.min(order.length, Math.floor((width + gapX) / (185 + gapX))));
+      const pw = (width - gapX * (cols - 1)) / cols, ph = titleH + plotH + axisH;
+      const nRows = Math.ceil(order.length / cols);
+      const { svg } = svgFor(el, nRows * ph + (nRows - 1) * gapY);
+      const y = d3.scaleLinear([0, d3.max(rows, value) || 1], [plotH, 0]).nice(2);
+      const ticks = y.ticks(2).filter((t) => t > 0);
+      const yw = textWidth(svg, ticks.map(fmt)) + 6;
+      const x = d3.scaleBand(decades, [yw, pw]).paddingInner(0.25);
+      order.forEach((key, i) => {
+        const g = svg.append('g').attr('transform', `translate(${(i % cols) * (pw + gapX)},${Math.floor(i / cols) * (ph + gapY)})`);
+        const own = new Map((byKey.get(key) || []).map((r) => [r.decade, r]));
+        const data = decades.map((d) => own.get(d) || { decade: d, key, share: 0, n: 0, total: 0 });
+        const v = (r) => value(r) || 0;
+        const count = f(d3.sum(data, (r) => r.n));
+        const cw = textWidth(svg, [count]) + 10;
+        // The panel's name, wrapped onto at most two lines beside its total.
+        const title = g.append('text').attr('class', 'ptitle').attr('y', 12);
+        let line = title.append('tspan').attr('x', 0), lines = 1;
+        for (const word of String(key).split(' ')) {
+          const prev = line.text();
+          line.text(prev ? `${prev} ${word}` : word);
+          if (prev && line.node().getComputedTextLength() > pw - (lines === 1 ? cw : 0)) {
+            if (lines === 2) { line.text(`${prev}…`); break; }
+            line.text(prev);
+            line = title.append('tspan').attr('x', 0).attr('dy', '1.2em').text(word);
+            lines += 1;
+          }
+        }
+        g.append('text').attr('class', 'pcount').attr('x', pw).attr('y', 12).attr('text-anchor', 'end').text(count);
+        const p = g.append('g').attr('transform', `translate(0,${titleH})`);
+        p.append('g').selectAll('line').data(ticks).join('line').attr('class', 'gridline')
+          .attr('x1', yw).attr('x2', pw).attr('y1', (v) => y(v)).attr('y2', (v) => y(v));
+        if (i % cols === 0) {
+          p.append('g').selectAll('text').data(ticks).join('text').attr('x', yw - 5).attr('y', (v) => y(v))
+            .attr('dy', '0.35em').attr('text-anchor', 'end').text(fmt);
+        }
+        p.append('g').selectAll('rect').data(data).join('rect').attr('class', 'mark').style('fill', FILL.solid)
+          .attr('x', (r) => x(r.decade)).attr('width', x.bandwidth())
+          .attr('y', (r) => y(v(r))).attr('height', (r) => Math.max(0, plotH - y(v(r))))
+          .attr('visibility', (r) => (v(r) > 0 ? null : 'hidden'));
+        p.append('line').attr('class', 'base').attr('x1', yw).attr('x2', pw).attr('y1', plotH).attr('y2', plotH);
+        const ends = [decades[0], decades[decades.length - 1]];
+        p.append('g').selectAll('text').data(ends).join('text').attr('x', (d, j) => (j ? pw : yw)).attr('y', plotH + 13)
+          .attr('text-anchor', (d, j) => (j ? 'end' : 'start')).attr('font-size', 10).text((d) => `${d}s`);
+        p.append('g').selectAll('rect').data(data).join('rect')
+          .attr('x', (r) => x(r.decade) - (x.step() * x.paddingInner()) / 2).attr('width', x.step())
+          .attr('y', -titleH).attr('height', titleH + plotH + axisH).style('fill', 'transparent')
+          .on('mousemove', (event, r) => showTip(el, event, `${key} · ${r.decade}s`, [[null, null, tip(r)]]))
+          .on('mouseleave', () => hideTip(el));
+      });
+    };
+    return { f, compact, pct, FILL, SERIES, SERIES_LONG, state, legend, hbars, stackedYears, multiples, svgFor, cleanAxis, textWidth, showTip, hideTip };
+  })();
+</script>
+
+<script>
+  // Shares by decade (computed from the per-year counts, so readers can see the arithmetic).
+  dash.calc('appears_share_by_decade', {
+    title: 'Where FHL appears, by decade',
+    description: 'Verified publications per decade by where FHL is named, with each category as a share of the decade.',
+    inputs: ['by_year_appears'],
+    fn: (by_year_appears) => {
+      const rows = by_year_appears.map((r) => ({ decade: Math.floor(Number(r.year) / 10) * 10, appears: r.appears, n: Number(r.n) }));
+      const tot = new Map();
+      rows.forEach((r) => tot.set(r.decade, (tot.get(r.decade) || 0) + r.n));
+      const agg = new Map();
+      rows.forEach((r) => { const k = r.decade + '|' + r.appears; agg.set(k, (agg.get(k) || 0) + r.n); });
+      return Array.from(agg, ([k, n]) => { const [d, a] = k.split('|'); return { decade: Number(d), appears: a, n, share: tot.get(Number(d)) ? n / tot.get(Number(d)) : 0, decade_total: tot.get(Number(d)) }; })
+        .filter((r) => r.decade_total >= 20);
+    },
+  });
+  dash.calc('best_estimate', {
+    title: 'Best estimate of FHL publications',
+    description: 'Each evidence tier counted at the share the independent audit confirmed: verified × its precision + probable × its precision + listed by FHL × its precision.',
+    inputs: ['headline', 'audit_tiers'],
+    fn: (headline, audit_tiers) => {
+      const h = headline[0];
+      const p = (tier) => Number((audit_tiers.find((r) => r.tier === tier) || {}).precision || 0);
+      const est = Number(h.verified) * p('Verified') + Number(h.probable) * p('Probable') + Number(h.listed_by_fhl) * p('Listed by FHL');
+      return [{ estimate: Math.round(est / 10) * 10 }];
+    },
+  });
+  dash.calc('people_summary', {
+    title: 'FHL scientists in brief',
+    description: 'Counts from the table of FHL scientists: how many, where they came from (by region), how many moved on, to how many countries, and how many still publish from FHL.',
+    inputs: ['people'],
+    fn: (people) => [{
+      scientists: people.length,
+      from_north_america: people.filter((p) => p.came_from_region === 'North America').length,
+      from_europe: people.filter((p) => p.came_from_region === 'Europe').length,
+      from_asia_pacific: people.filter((p) => p.came_from_region === 'Asia & Pacific').length,
+      moved_on: people.filter((p) => p.status === 'Moved on').length,
+      destination_countries: new Set(people.filter((p) => p.status === 'Moved on').map((p) => p.went_to_country)).size,
+      still_at_fhl: people.filter((p) => p.status === 'Still at FHL').length,
+    }],
+  });
+  dash.calc('topics_share_by_decade', {
+    title: 'Research topics, share by decade',
+    description: 'Verified publications per decade by AI-assigned research topic, as a share of the decade (decades with at least 20).',
+    inputs: ['topics_by_decade'],
+    fn: (topics_by_decade) => {
+      const tot = new Map();
+      topics_by_decade.forEach((r) => tot.set(Number(r.decade), (tot.get(Number(r.decade)) || 0) + Number(r.n)));
+      return topics_by_decade.map((r) => ({ decade: Number(r.decade), topic: r.topic, n: Number(r.n),
+        share: Number(r.n) / tot.get(Number(r.decade)), decade_total: tot.get(Number(r.decade)) }))
+        .filter((r) => r.decade_total >= 20);
+    },
+  });
+  dash.calc('organisms_share_by_decade', {
+    title: 'Organisms studied, share by decade',
+    description: 'Verified publications per decade by AI-assigned organism group, as a share of the decade (decades with at least 20).',
+    inputs: ['organisms_by_decade'],
+    fn: (organisms_by_decade) => {
+      const tot = new Map();
+      organisms_by_decade.forEach((r) => tot.set(Number(r.decade), (tot.get(Number(r.decade)) || 0) + Number(r.n)));
+      return organisms_by_decade.map((r) => ({ decade: Number(r.decade), organism: r.organism, n: Number(r.n),
+        share: Number(r.n) / tot.get(Number(r.decade)), decade_total: tot.get(Number(r.decade)) }))
+        .filter((r) => r.decade_total >= 20);
+    },
+  });
+</script>
+
+<script>
+  const { f, compact, pct, FILL, SERIES, SERIES_LONG, state, legend, hbars, stackedYears, multiples, svgFor, showTip, hideTip, textWidth } = window.FP;
+  const TIER_KEYS = ['Verified', 'Listed by FHL', 'Probable'];
+  const APPEARS_KEYS = ['Affiliation only', 'Affiliation and main text', 'Main text only', 'Affiliation (text not checked)',
+                        'Main text (affiliation unknown)', 'Not determined'];
+  const ERA_SHORT = { 'Summer station (informal name)': 'Summer station', 'Puget Sound Marine Station': 'Marine Station',
+    'Puget Sound Biological Station': 'Biological Station', 'UW Oceanographic Laboratories': 'Oceanographic Laboratories',
+    'Friday Harbor Laboratories': 'Friday Harbor Laboratories' };
+
+  const setText = (sel, ds, field, fmt) => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const d = dash.data(ds);
+      if (d.status !== 'ok') { el.classList.toggle('dash-skeleton', d.status === 'loading'); return; }
+      const where = el.dataset.where;
+      let row = d.data[0];
+      if (where) { const [k, v] = where.split('='); row = d.data.find((r) => String(r[k]) === decodeURIComponent(v)); }
+      el.classList.remove('dash-skeleton');
+      el.textContent = row ? fmt(row[field]) : '—';
+    });
+  };
+  const fillRow = (tr, cells) => cells.forEach(([v, c]) => {
+    const td = document.createElement('td'); td.textContent = v ?? ''; if (c) td.className = c; tr.appendChild(td);
+  });
+  // Declared before dash.onData, which runs its callback immediately and reaches drawPubs.
+  const q = document.getElementById('pub-q');
+  const tierSel = document.getElementById('pub-tier');
+  const topicSel = document.getElementById('pub-topic');
+  // ---- people figures: map, mentoring network and citation network --------------------------------------------------------
+  // ---- map projections ---------------------------------------------------------------------------------------
+  // The dashboard's d3 has no map module, so the two projections the map uses are written out here with d3-geo's
+  // formulas: Natural Earth I for the world, and an Albers conic equal-area projection for North America.
+  const RAD = Math.PI / 180;
+  const wrapLon = (l) => (l > 180 ? l - 360 : l < -180 ? l + 360 : l);
+  const naturalEarth1 = (lam, phi) => {
+    const p2 = phi * phi, p4 = p2 * p2;
+    return [lam * (0.8707 - 0.131979 * p2 + p4 * (-0.013791 + p4 * (0.003971 * p2 - 0.001529 * p4))),
+      phi * (1.007226 + p2 * (0.015085 + p4 * (-0.044475 + 0.028874 * p2 - 0.005916 * p4)))];
+  };
+  const conicEqualArea = (lat0, lat1) => {
+    const s0 = Math.sin(lat0 * RAD), n = (s0 + Math.sin(lat1 * RAD)) / 2, c = 1 + s0 * (2 * n - s0), r0 = Math.sqrt(c) / n;
+    return (lam, phi) => { const r = Math.sqrt(c - 2 * n * Math.sin(phi)) / n; return [r * Math.sin(lam * n), r0 - r * Math.cos(lam * n)]; };
+  };
+  // turn: degrees the globe is turned about its axis before projecting (d3's rotate([turn, 0])). The projection is
+  // scaled and centred so that fitPts fill the box, as d3's fitExtent does.
+  const projection = (raw, turn, fitPts, [[x0, y0], [x1, y1]]) => {
+    const ps = fitPts.map(([lon, lat]) => raw(wrapLon(lon + turn) * RAD, lat * RAD));
+    const [ax, bx] = d3.extent(ps, (q) => q[0]), [ay, by] = d3.extent(ps, (q) => q[1]);
+    const k = Math.min((x1 - x0) / (bx - ax), (y1 - y0) / (by - ay));
+    const ox = x0 + (x1 - x0 - k * (bx - ax)) / 2, oy = y0 + (y1 - y0 - k * (by - ay)) / 2;
+    const screen = ([x, y]) => [ox + k * (x - ax), oy + k * (by - y)];
+    const proj = ([lon, lat]) => screen(raw(wrapLon(lon + turn) * RAD, lat * RAD));
+    proj.turned = (lp, lat) => screen(raw(lp * RAD, lat * RAD)); // a point given by its longitude after turning
+    proj.turn = turn;
+    return proj;
+  };
+  const pt = (q) => q.map((v) => v.toFixed(1)).join(',');
+  // The globe's outline, traced along its edge meridians and its poles.
+  const SPHERE = [...d3.range(-90, 90, 2).map((la) => [-180, la]), ...d3.range(-180, 180, 2).map((lo) => [lo, 90]),
+    ...d3.range(90, -90, -2).map((la) => [180, la]), ...d3.range(180, -180, -2).map((lo) => [lo, -90])];
+  const ringPath = (proj, ring) => `M${ring.map((q) => pt(proj(q))).join('L')}Z`;
+  // A line of [lon, lat] points. Where it crosses the map's edge it ends at one side and resumes at the other.
+  const linePath = (proj, pts) => {
+    let d = '', prev = null;
+    pts.forEach((q) => {
+      const l = wrapLon(q[0] + proj.turn);
+      if (prev && Math.abs(l - prev[0]) > 180) {
+        const e = prev[0] > 0 ? 180 : -180, t = (e - prev[0]) / (l + 2 * e - prev[0]), lat = prev[1] + t * (q[1] - prev[1]);
+        d += `L${pt(proj.turned(e, lat))}M${pt(proj.turned(-e, lat))}`;
+      }
+      d += `${prev ? 'L' : 'M'}${pt(proj(q))}`;
+      prev = [l, q[1]];
+    });
+    return d;
+  };
+  // Meridians and parallels every 10 degrees, as d3.geoGraticule10.
+  const graticulePath = (proj) => [
+    ...d3.range(-180, 180, 10).map((lo) => d3.range(lo % 90 ? -80 : -90, (lo % 90 ? 80 : 90) + 0.1, 2).map((la) => [lo, la])),
+    ...d3.range(-80, 81, 10).map((la) => d3.range(-180, 180.1, 2).map((lp) => [lp - proj.turn, la])),
+  ].map((line) => linePath(proj, line)).join('');
+  const landPath = (proj, geometry) => {
+    const g = typeof geometry === 'string' ? JSON.parse(geometry) : geometry;
+    const rings = g.type === 'Polygon' ? g.coordinates : g.type === 'MultiPolygon' ? g.coordinates.flat() : [];
+    return rings.map((ring) => {
+      // On a turned globe, a ring that crosses the meridian opposite the map's centre lies far off a regional map.
+      const ls = ring.map((q) => wrapLon(q[0] + proj.turn));
+      return proj.turn && ls.some((l, i) => i > 0 && Math.abs(l - ls[i - 1]) > 180) ? '' : ringPath(proj, ring);
+    }).join('');
+  };
+  // Points along the great circle between two places, as d3.geoInterpolate.
+  const greatCircle = ([lon0, lat0], [lon1, lat1], n = 48) => {
+    const v = (lo, la) => [Math.cos(la * RAD) * Math.cos(lo * RAD), Math.cos(la * RAD) * Math.sin(lo * RAD), Math.sin(la * RAD)];
+    const a = v(lon0, lat0), b = v(lon1, lat1);
+    const w = Math.acos(Math.min(1, Math.max(-1, a[0] * b[0] + a[1] * b[1] + a[2] * b[2])));
+    if (w < 1e-6) return [[lon0, lat0], [lon1, lat1]];
+    return d3.range(n + 1).map((i) => {
+      const s0 = Math.sin((1 - i / n) * w) / Math.sin(w), s1 = Math.sin((i / n) * w) / Math.sin(w);
+      const [x, y, z] = [0, 1, 2].map((j) => s0 * a[j] + s1 * b[j]);
+      return [Math.atan2(y, x) / RAD, Math.atan2(z, Math.hypot(x, y)) / RAD];
+    });
+  };
+  // A figure that throws shows a note in its own box instead of stopping the rest of the page. The error is raised
+  // again afterwards, so the dashboard still records it.
+  const safely = (el, draw) => {
+    try { draw(); } catch (e) {
+      el.replaceChildren(); el.classList.remove('dash-skeleton');
+      const m = document.createElement('div'); m.className = 'fp-fail'; m.textContent = 'This figure could not be drawn'; el.appendChild(m);
+      setTimeout(() => { throw e; });
+    }
+  };
+
+  const REGION_FILLS = { 'North America': FILL.solid, Europe: FILL.hatch, 'Asia & Pacific': FILL.dots,
+    'Latin America': FILL.cross, Other: FILL.cross, Unknown: FILL.grayl, 'Began at FHL': FILL.open };
+  let mapMode = 'from', mapView = 'world';
+  document.querySelectorAll('[data-map], [data-view]').forEach((b) => b.addEventListener('click', () => {
+    if (b.dataset.map) mapMode = b.dataset.map; else mapView = b.dataset.view;
+    document.querySelectorAll('[data-map], [data-view]').forEach((x) => x.setAttribute('aria-pressed',
+      String(x.dataset.map ? x.dataset.map === mapMode : x.dataset.view === mapView)));
+    safely(document.getElementById('ch-map'), drawMap);
+  }));
+  let treeLinks = 'all';
+  document.querySelectorAll('[data-links]').forEach((b) => b.addEventListener('click', () => {
+    treeLinks = b.dataset.links;
+    document.querySelectorAll('[data-links]').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.links === treeLinks)));
+    safely(document.getElementById('ch-tree'), drawTree);
+  }));
+  // Find a person: follow their lineage in the mentoring network, underline them in the citation network, filter Table I.
+  // Matching ignores case, accents, punctuation and word order: every word typed must begin a word of the name, so
+  // "drew harvell", "Harvell, Drew" and "harv" all find "C. Drew Harvell".
+  const words = (t) => String(t || '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean);
+  const matcher = (query) => {
+    const q = words(query);
+    if (!q.length || q.join('').length < 2) return null;
+    return (name) => { const w = words(name); return q.every((t) => w.some((x) => x.startsWith(t))); };
+  };
+  const peopleQ = document.getElementById('people-q');
+  const suggest = document.getElementById('people-suggest');
+  let chosen = null; // a name picked from the suggestions: then only that exact person is shown
+  const everyone = () => {
+    const where = new Map();
+    const add = (n, k) => { if (n) { if (!where.has(n)) where.set(n, new Set()); where.get(n).add(k); } };
+    const lp = dash.data('lineage_people'), pp = dash.data('people');
+    if (lp.status === 'ok') lp.data.forEach((r) => add(r.name, 'network'));
+    if (pp.status === 'ok') pp.data.forEach((r) => add(r.name, 'Table I'));
+    return where;
+  };
+  const applyFind = () => {
+    const hit = chosen ? (n) => n === chosen : (matcher(peopleQ.value) || null);
+    const on = !!hit;
+    const matches = lineage && on ? lineage.names.filter(hit) : [];
+    if (lineage) {
+      lineage.pinned = matches[0] || null;
+      if (matches[0]) lineage.focus(matches[0]); else lineage.clear();
+    }
+    const inNet = citeNet && on ? citeNet.names.filter(hit) : [];
+    if (citeNet) { citeNet.pinned = inNet[0] || null; if (inNet[0]) citeNet.focus(inNet[0]); else citeNet.clear(); }
+    showProfile(chosen || (on && everyoneMatching(hit).length === 1 ? everyoneMatching(hit)[0] : null));
+    let shown = 0, total = 0;
+    document.querySelectorAll('#tbl-people tbody tr').forEach((tr) => {
+      const h = !on || hit(tr.firstElementChild && tr.firstElementChild.textContent);
+      tr.hidden = !h; total += 1; if (h) shown += 1;
+    });
+    document.getElementById('people-count').textContent = !on ? ''
+      : `${matches.length ? `${f(matches.length)} in Fig. 8${matches.length > 1 ? ' (showing the first)' : ''}` : 'not in Fig. 8'}; ${inNet.length ? 'in Fig. 9' : 'not in Fig. 9'}; ${f(shown)} of ${f(total)} in Table I`;
+  };
+  const everyoneMatching = (hit) => [...everyone().keys()].filter(hit);
+  // The profile card for one person: a short account of their work (written and fact-checked by AI agents from the
+  // census and public sources) and the facts the page holds about them.
+  const card = document.getElementById('people-profile');
+  const showProfile = (name) => {
+    if (!name) { card.hidden = true; card.replaceChildren(); return; }
+    const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+    const pp = dash.data('people'), lp = dash.data('lineage_people'), ln = dash.data('lineage'), pf = dash.data('profiles');
+    const person = pp.status === 'ok' ? pp.data.find((r) => r.name === name) : null;
+    const node = lp.status === 'ok' ? lp.data.find((r) => r.name === name) : null;
+    const prof = pf.status === 'ok' ? pf.data.find((r) => r.name === name) : null;
+    const kids = []; card.replaceChildren();
+    const head = el('div', 'head'); head.append(el('h4', null, name));
+    const close = el('button', 'close', '×'); close.type = 'button'; close.setAttribute('aria-label', 'Close profile');
+    close.addEventListener('click', () => { chosen = null; peopleQ.value = ''; applyFind(); peopleQ.focus(); });
+    head.append(close); kids.push(head);
+    const facts = [];
+    if (person) {
+      facts.push(`FHL scientist: ${f(+person.fhl_works)} FHL-address papers, ${person.first_fhl_year}–${person.last_fhl_year}`);
+      if (person.came_from) facts.push(`came from ${person.came_from}`);
+      facts.push(person.went_to ? `went to ${person.went_to}` : person.status.replace(/^\w/, (c) => c.toLowerCase()));
+    } else if (node) facts.push(`In the mentoring network; career began about ${node.year}`);
+    if (facts.length) kids.push(el('p', 'facts', facts.join('; ') + '.'));
+    if (ln.status === 'ok') {
+      const t = ln.data.filter((l) => l.student === name).map((l) => l.advisor);
+      const s = ln.data.filter((l) => l.advisor === name).map((l) => l.student);
+      if (t.length) kids.push(el('p', 'facts', `Teachers in Fig. 8: ${t.join(', ')}.`));
+      if (s.length) kids.push(el('p', 'facts', `Students in Fig. 8: ${s.slice(0, 12).join(', ')}${s.length > 12 ? ` and ${f(s.length - 12)} more` : ''}.`));
+    }
+    if (prof) {
+      String(prof.text || '').split(/\n\n+/).forEach((para) => kids.push(el('p', 'para', para)));
+      let src = [];
+      try { src = JSON.parse(prof.sources || '[]'); } catch (e) { src = []; }
+      const note = el('p', 'note', 'Written by Claude Opus 5.5 from the census and the public sources listed, then fact-checked by a second AI agent. It may contain errors.');
+      if (src.length) {
+        note.append(' Sources: ');
+        src.forEach((x, i) => { const a = el('a', null, x.title || x.url); a.href = x.url; a.target = '_blank'; a.rel = 'noopener'; note.append(a); if (i < src.length - 1) note.append('; '); });
+        note.append('.');
+      }
+      kids.push(note);
+    }
+    card.append(...kids); card.hidden = false;
+  };
+  // Suggestions: up to ten names, best first (a surname or first name that starts with what was typed ranks higher).
+  let options = [], active = -1;
+  const closeSuggest = () => { suggest.hidden = true; peopleQ.setAttribute('aria-expanded', 'false'); active = -1; peopleQ.removeAttribute('aria-activedescendant'); };
+  const choose = (name) => { chosen = name; peopleQ.value = name; closeSuggest(); applyFind(); };
+  const renderSuggest = () => {
+    const m = matcher(peopleQ.value);
+    if (!m) { options = []; closeSuggest(); return; }
+    const q = words(peopleQ.value), where = everyone();
+    const score = (n) => { const w = words(n); return (w[w.length - 1].startsWith(q[0]) ? 0 : 1) + (w[0].startsWith(q[0]) ? 0 : 0.5); };
+    options = [...where.keys()].filter(m).sort((a, b) => score(a) - score(b) || d3.ascending(a, b)).slice(0, 10);
+    suggest.replaceChildren(...(options.length ? options.map((n, i) => {
+      const li = document.createElement('li');
+      li.id = `people-opt-${i}`; li.setAttribute('role', 'option'); li.setAttribute('aria-selected', String(i === active));
+      const nm = document.createElement('span'); nm.textContent = n;
+      const wh = document.createElement('span'); wh.className = 'where'; wh.textContent = [...where.get(n)].join(' · ');
+      li.append(nm, wh);
+      li.addEventListener('mousedown', (e) => { e.preventDefault(); choose(n); });
+      return li;
+    }) : [Object.assign(document.createElement('li'), { className: 'none', textContent: 'No one by that name' })]));
+    suggest.hidden = false; peopleQ.setAttribute('aria-expanded', 'true');
+  };
+  const moveActive = (step) => {
+    if (!options.length) return;
+    active = (active + step + options.length) % options.length;
+    suggest.querySelectorAll('li[role="option"]').forEach((li, i) => li.setAttribute('aria-selected', String(i === active)));
+    peopleQ.setAttribute('aria-activedescendant', `people-opt-${active}`);
+  };
+  peopleQ.addEventListener('input', () => { chosen = null; active = -1; renderSuggest(); applyFind(); });
+  peopleQ.addEventListener('focus', () => { if (!chosen) renderSuggest(); });
+  peopleQ.addEventListener('blur', () => setTimeout(closeSuggest, 120));
+  peopleQ.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (suggest.hidden) renderSuggest(); moveActive(1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); moveActive(-1); }
+    else if (e.key === 'Enter') { if (options.length) { e.preventDefault(); choose(options[Math.max(0, active)]); } }
+    else if (e.key === 'Escape') { closeSuggest(); }
+  });
+
+  function drawMap() {
+    const el = document.getElementById('ch-map');
+    if (!state(el, ['places', 'world_land'])) return;
+    const land = dash.data('world_land').data;
+    const places = dash.data('places').data.map((r) => ({ ...r, people: +r.people, lat: +r.lat, lon: +r.lon }));
+    const fhl = places.find((p) => p.role === 'FHL');
+    const role = mapMode === 'from' ? 'came from' : 'went to';
+    const pts = places.filter((p) => p.role === role && Number.isFinite(p.lat) && Number.isFinite(p.lon))
+      .sort((a, b) => b.people - a.people);
+    const width = Math.max(260, el.clientWidth);
+    const height = Math.round(width * (mapView === 'world' ? 0.52 : 0.62));
+    const { svg } = svgFor(el, height);
+    svg.style('overflow', 'hidden');
+    const box = [[6, 6], [width - 6, height - 6]];
+    const proj = mapView === 'world' ? projection(naturalEarth1, 0, SPHERE, box)
+      : projection(conicEqualArea(29.5, 45.5), 100, [[-128, 22], [-62, 22], [-128, 56], [-62, 56]], box);
+    if (mapView === 'world') svg.append('path').attr('class', 'sphere').attr('d', ringPath(proj, SPHERE));
+    else svg.append('rect').attr('class', 'sphere').attr('width', width).attr('height', height);
+    svg.append('path').attr('class', 'graticule').attr('d', graticulePath(proj));
+    svg.append('g').selectAll('path').data(land).join('path').attr('class', 'land').attr('d', (ft) => landPath(proj, ft.geometry));
+    const routes = svg.append('g');
+    routes.selectAll('path').data(pts).join('path').attr('class', `route ${mapMode}`)
+      .attr('d', (p) => linePath(proj, greatCircle([p.lon, p.lat], [fhl.lon, fhl.lat])))
+      .style('stroke-width', (p) => 0.6 + Math.sqrt(p.people) * 0.5);
+    const r = d3.scaleSqrt([1, d3.max(places.filter((p) => p.role !== 'FHL'), (p) => p.people) || 1], [2.6, mapView === 'world' ? 12 : 16]);
+    svg.append('g').selectAll('circle').data(pts).join('circle').attr('class', `place ${mapMode}`)
+      .attr('cx', (p) => proj([p.lon, p.lat])[0]).attr('cy', (p) => proj([p.lon, p.lat])[1]).attr('r', (p) => r(p.people))
+      .on('mousemove', (event, p) => showTip(el, event, p.institution, [[null, null, [p.city, p.country].filter(Boolean).join(', ')],
+        [null, null, `${f(p.people)} scientist${p.people === 1 ? '' : 's'}: ${p.names}`]]))
+      .on('mouseleave', () => hideTip(el));
+    const [fx, fy] = proj([fhl.lon, fhl.lat]);
+    svg.append('circle').attr('class', 'fhl-ring').attr('cx', fx).attr('cy', fy).attr('r', 7);
+    svg.append('circle').attr('class', 'fhl-dot').attr('cx', fx).attr('cy', fy).attr('r', 2.6);
+    svg.append('text').attr('class', 'lbl maplabel').attr('x', fx - 10).attr('y', fy - 10).attr('text-anchor', 'end').text('Friday Harbor');
+  }
+
+  // The mentoring network on a timeline: each person sits at the year their career began, so every line from a teacher
+  // to a student runs forward in time; a force layout pulls connected people together vertically.
+  let lineage = null; // the drawn network, for "Find a person": { focus(name), clear(), names }
+  let citeNet = null; // the citation network (Fig. 9), likewise
+  function drawTree() {
+    const el = document.getElementById('ch-tree');
+    const lg = document.getElementById('lg-tree');
+    legend(lg, [['FHL scientist', FILL.solid], ['Other', FILL.open]]);
+    [['Documented advisor or lab', ''], ['Graduate committee', '1 2.5'], ['Inferred from co-authorship', '4 2.5']].forEach(([name, dash_]) => {
+      const sp = document.createElement('span');
+      sp.innerHTML = `<svg viewBox="0 0 22 10" aria-hidden="true"><line x1="0" y1="5" x2="22" y2="5" stroke="currentColor"
+        stroke-width="1.2" stroke-dasharray="${dash_}"/></svg>`;
+      sp.append(document.createTextNode(name));
+      lg.appendChild(sp);
+    });
+    lineage = null;
+    if (!state(el, ['lineage', 'lineage_people'])) return;
+    const inferred = (l) => l.source === 'Co-authorship';
+    const links = dash.data('lineage').data.filter((l) => l.student !== l.advisor && (treeLinks === 'all' || !inferred(l)))
+      .map((l) => ({ ...l }));
+    const info = new Map(dash.data('lineage_people').data.map((r) => [r.name, r]));
+    const names = [...new Set(links.flatMap((l) => [l.advisor, l.student]))].filter((n) => info.has(n) && info.get(n).year !== '' && info.get(n).year != null);
+    const keep = new Set(names);
+    const L = links.filter((l) => keep.has(l.advisor) && keep.has(l.student));
+    const isFhl = (n) => { const v = info.get(n).fhl; return v === true || String(v) === 'True' || String(v) === 'true'; };
+    const teachersOf = d3.group(L, (l) => l.student), studentsOf = d3.group(L, (l) => l.advisor);
+    const nStudents = (n) => (studentsOf.get(n) || []).length;
+
+    const width = Math.max(260, el.clientWidth), drawW = Math.max(width, 760);
+    const height = Math.round(Math.max(520, Math.min(1500, 260 + names.length * 2.2)));
+    const m = { top: 44, right: 150, bottom: 16, left: 14 };
+    const years = names.map((n) => +info.get(n).year);
+    const y0 = Math.min(d3.min(years), 1945), y1 = Math.max(d3.max(years), 2026);
+    // Early generations are few, so the years before 1950 take a narrow strip at the left.
+    const x = d3.scaleLinear([y0, 1950, y1], [m.left, m.left + (drawW - m.left - m.right) * 0.16, drawW - m.right]);
+    const { svg } = svgFor(el, height);
+    svg.attr('viewBox', `0 0 ${drawW} ${height}`).attr('width', drawW > width ? drawW : '100%');
+    el.style.overflowX = drawW > width ? 'auto' : '';
+
+    // Each connected group gets its own band, largest first; within it people start in teacher-then-students order,
+    // and the force layout untangles them from there.
+    const comp = new Map(names.map((n) => [n, n]));
+    const root = (n) => { while (comp.get(n) !== n) { comp.set(n, comp.get(comp.get(n))); n = comp.get(n); } return n; };
+    L.forEach((l) => { const a = root(l.advisor), b = root(l.student); if (a !== b) comp.set(b, a); });
+    const groups = d3.groups(names, root).sort((a, b) => b[1].length - a[1].length || d3.ascending(a[0], b[0]));
+    const yearOf = (n) => +info.get(n).year;
+    const order = [];
+    groups.forEach(([, ms]) => {
+      const seen = new Set();
+      const visit = (n) => { if (seen.has(n)) return; seen.add(n); order.push(n);
+        (studentsOf.get(n) || []).map((l) => l.student).sort((a, b) => yearOf(a) - yearOf(b)).forEach(visit); };
+      ms.filter((n) => !teachersOf.has(n)).sort((a, b) => yearOf(a) - yearOf(b)).forEach(visit);
+      ms.forEach(visit);
+    });
+    const slot = new Map(order.map((n, i) => [n, m.top + ((i + 0.5) / order.length) * (height - m.top - m.bottom)]));
+    const nodes = names.map((n) => ({ id: n, x: x(yearOf(n)), y: slot.get(n), y0: slot.get(n), fx0: x(yearOf(n)), r: 2.6 + Math.sqrt(nStudents(n)) * 1.25 }));
+    const byId = new Map(nodes.map((d) => [d.id, d]));
+    const simLinks = L.map((l) => ({ source: byId.get(l.advisor), target: byId.get(l.student) }));
+    const sim = d3.forceSimulation(nodes)
+      .force('x', d3.forceX((d) => d.fx0).strength(1))
+      .force('y', d3.forceY((d) => d.y0).strength(0.05))
+      .force('link', d3.forceLink(simLinks).distance((k) => Math.abs(k.source.fx0 - k.target.fx0) + 6).strength(0.35))
+      .force('charge', d3.forceManyBody().strength(-9).distanceMax(90))
+      .force('collide', d3.forceCollide((d) => d.r + 2.2))
+      .stop();
+    for (let i = 0; i < 420; i += 1) sim.tick();
+    const [ya, yb] = d3.extent(nodes, (d) => d.y), fit = d3.scaleLinear([ya, yb], [m.top + 8, height - m.bottom - 8]);
+    nodes.forEach((d) => { d.x = d.fx0; d.y = fit(d.y); });
+
+    // Time axis along the top, with a faint line at each tick.
+    const ticks = [1900, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020].filter((t) => t >= y0 && t <= y1);
+    const ax = svg.append('g').attr('class', 'lin-axis');
+    ax.selectAll('line').data(ticks).join('line').attr('x1', x).attr('x2', x).attr('y1', m.top - 8).attr('y2', height - m.bottom);
+    ax.selectAll('text').data(ticks).join('text').attr('x', x).attr('y', m.top - 14).attr('text-anchor', 'middle').text((t) => t);
+    ax.append('text').attr('class', 'lin-axis-note').attr('x', m.left).attr('y', 11).text('Year each career began →');
+
+    const path = (l) => d3.linkHorizontal()({ source: [byId.get(l.advisor).x, byId.get(l.advisor).y], target: [byId.get(l.student).x, byId.get(l.student).y] });
+    const lk = svg.append('g').selectAll('path').data(L).join('path')
+      .attr('class', (l) => `lin-link ${inferred(l) ? 'inferred' : ''} ${l.source === 'Graduate committee' ? 'committee' : ''}`).attr('d', path);
+    const nd = svg.append('g').selectAll('g').data(nodes).join('g').attr('class', 'lin-node').attr('data-name', (d) => d.id)
+      .attr('transform', (d) => `translate(${d.x},${d.y})`);
+    nd.each(function (d) {
+      const g = d3.select(this);
+      if (isFhl(d.id)) g.append('rect').attr('class', 'lin-mark fhl').attr('x', -d.r).attr('y', -d.r).attr('width', 2 * d.r).attr('height', 2 * d.r);
+      else g.append('circle').attr('class', 'lin-mark other').attr('r', d.r);
+    });
+    // Names for the most prominent people (students in the network, FHL papers, FHL scientists first), set into the
+    // free space: beside the mark, above or below it, or popped out with a leader line, never over another name or mark.
+    const papers = new Map(dash.data('people').status === 'ok' ? dash.data('people').data.map((r) => [r.name, +r.fhl_works]) : []);
+    const prominence = (d) => nStudents(d.id) * 3 + (teachersOf.get(d.id) || []).length + Math.min(30, papers.get(d.id) || 0) / 3 + (isFhl(d.id) ? 2 : 0);
+    const placed = nodes.map((d) => ({ x0: d.x - d.r - 1, x1: d.x + d.r + 1, y0: d.y - d.r - 1, y1: d.y + d.r + 1 }));
+    const free = (b) => b.x0 >= 2 && b.x1 <= drawW - 2 && b.y0 >= m.top - 4 && b.y1 <= height - 2
+      && !placed.some((p) => b.x0 < p.x1 && b.x1 > p.x0 && b.y0 < p.y1 && b.y1 > p.y0);
+    const labels = svg.append('g');
+    const ranked = nodes.filter((d) => prominence(d) >= 3).sort((a, b) => prominence(b) - prominence(a) || d3.ascending(a.id, b.id));
+    let nLabels = 0;
+    for (const d of ranked) {
+      if (nLabels >= 90) break;
+      const hub = nStudents(d.id) >= 3, w = d.id.length * (hub ? 6.1 : 5.5) + 3, h = 12;
+      const spots = [[d.r + 3, 0, 'start'], [-d.r - 3, 0, 'end'], [d.r + 1, -d.r - 7, 'start'], [d.r + 1, d.r + 7, 'start'],
+        [-d.r - 1, -d.r - 7, 'end'], [-d.r - 1, d.r + 7, 'end']];
+      [14, -14, 24, -24, 36, -36].forEach((dy) => { spots.push([d.r + 10, dy, 'start', true]); spots.push([-d.r - 10, dy, 'end', true]); });
+      for (const [dx, dy, anchor, leader] of spots) {
+        const x0 = anchor === 'start' ? d.x + dx : d.x + dx - w;
+        const b = { x0, x1: x0 + w, y0: d.y + dy - h / 2, y1: d.y + dy + h / 2 };
+        if (!free(b)) continue;
+        placed.push(b); nLabels += 1;
+        if (leader) labels.append('line').attr('class', 'lin-leader').attr('x1', d.x + Math.sign(dx) * d.r).attr('y1', d.y)
+          .attr('x2', d.x + dx - Math.sign(dx) * 2).attr('y2', d.y + dy);
+        labels.append('text').attr('class', `lin-label ${hub ? 'hub' : 'minor'}`).attr('x', d.x + dx).attr('y', d.y + dy)
+          .attr('dy', '0.35em').attr('text-anchor', anchor).text(d.id);
+        break;
+      }
+    }
+    const focusLabels = svg.append('g');
+
+    // Following a lineage: everyone this person learned from (and their teachers), and everyone who learned from them.
+    const walk = (start, next) => { const seen = new Set([start]), todo = [start];
+      while (todo.length) { const n = todo.pop(); (next(n) || []).forEach((k) => { if (!seen.has(k)) { seen.add(k); todo.push(k); } }); }
+      return seen; };
+    const focus = (name) => {
+      if (!byId.has(name)) return;
+      const up = walk(name, (n) => (teachersOf.get(n) || []).map((l) => l.advisor));
+      const down = walk(name, (n) => (studentsOf.get(n) || []).map((l) => l.student));
+      const on = new Set([...up, ...down]);
+      const onLink = (l) => (up.has(l.student) && up.has(l.advisor)) || (down.has(l.advisor) && down.has(l.student));
+      lk.classed('on', onLink).classed('off', (l) => !onLink(l));
+      nd.classed('off', (d) => !on.has(d.id)).classed('self', (d) => d.id === name);
+      labels.attr('opacity', 0.15);
+      // Names beside each mark, moved up or down (with a leader line) where they would overlap.
+      const boxes = [], spots = [];
+      nodes.filter((d) => on.has(d.id)).sort((a, b) => a.x - b.x || a.y - b.y).forEach((d) => {
+        const w = d.id.length * 5.6 + 4, x0 = d.x + d.r + 3;
+        for (const dy of [0, 11, -11, 22, -22, 33, -33, 44, -44, 55, -55]) {
+          const bx = { x0, x1: x0 + w, y0: d.y + dy - 6, y1: d.y + dy + 6 };
+          if (!boxes.some((b) => bx.x0 < b.x1 && bx.x1 > b.x0 && bx.y0 < b.y1 && bx.y1 > b.y0)) { boxes.push(bx); spots.push({ d, y: d.y + dy }); return; }
+        }
+        spots.push({ d, y: d.y });
+      });
+      focusLabels.selectAll('line').data(spots.filter((p) => p.y !== p.d.y)).join('line').attr('class', 'lin-leader')
+        .attr('x1', (p) => p.d.x + p.d.r).attr('y1', (p) => p.d.y).attr('x2', (p) => p.d.x + p.d.r + 3).attr('y2', (p) => p.y);
+      focusLabels.selectAll('text').data(spots).join('text')
+        .attr('class', (p) => `lin-label ${p.d.id === name ? 'self' : ''}`)
+        .attr('x', (p) => p.d.x + p.d.r + 4).attr('y', (p) => p.y).attr('dy', '0.35em').text((p) => p.d.id);
+    };
+    const clear = () => { lk.classed('on', false).classed('off', false); nd.classed('off', false).classed('self', false);
+      labels.attr('opacity', 1); focusLabels.selectAll('*').remove(); };
+    const pinned = () => lineage && lineage.pinned;
+    const evidence = (l) => {
+      if (inferred(l)) return `inferred: last author on ${f(+l.papers)} of their first-author papers, ${l.year}`;
+      if (l.source === 'Co-authorship, confirmed') return `${l.relationship || 'mentor'}; confirmed in public records`;
+      if (l.source === 'Lab roster') return `${l.relationship || 'trainee'} on their lab or team page${l.year ? `, ${l.year}` : ''}`;
+      if (l.source === 'Graduate committee') return `graduate committee member${l.year ? `, ${l.year}` : ''}`;
+      return `${l.source}${l.year ? `, ${l.year}` : ''}`;
+    };
+    const delaunay = d3.Delaunay.from(nodes, (d) => d.x, (d) => d.y);
+    svg.on('mousemove', (event) => {
+      const [px, py] = d3.pointer(event, svg.node());
+      const d = nodes[delaunay.find(px, py)];
+      if (!d || Math.hypot(d.x - px, d.y - py) > 14) { if (pinned()) focus(lineage.pinned); else clear(); hideTip(el); return; }
+      focus(d.id);
+      const nfo = info.get(d.id);
+      showTip(el, event, d.id, [[null, null, `${isFhl(d.id) ? 'FHL scientist' : 'Teacher or student of FHL scientists'}; career began about ${nfo.year} (${nfo.year_basis})`],
+        ...(teachersOf.get(d.id) || []).map((l) => [null, null, `Taught by ${l.advisor} (${evidence(l)})`]),
+        ...((studentsOf.get(d.id) || []).length ? [[null, null, `${f(nStudents(d.id))} student${nStudents(d.id) === 1 ? '' : 's'} here: ${(studentsOf.get(d.id) || []).slice(0, 6).map((l) => l.student).join(', ')}${nStudents(d.id) > 6 ? ', …' : ''}`]] : [])]);
+    }).on('mouseleave', () => { hideTip(el); if (pinned()) focus(lineage.pinned); else clear(); });
+    lineage = { focus, clear, names, pinned: null };
+    applyFind(false);
+  }
+
+  function drawNetwork() {
+    const el = document.getElementById('ch-net');
+    legend(document.getElementById('lg-net'), Object.entries(REGION_FILLS).filter(([k]) => !['Other', 'Unknown'].includes(k)));
+    if (!state(el, ['people', 'people_links'])) return;
+    const people = dash.data('people').data.map((r) => ({ ...r, fhl_works: +r.fhl_works, first: +r.first_fhl_year }))
+      .sort((a, b) => b.fhl_works - a.fhl_works).slice(0, 60)
+      .sort((a, b) => a.first - b.first || d3.ascending(a.name, b.name));
+    const idx = new Map(people.map((p, i) => [p.name, i]));
+    const links = dash.data('people_links').data.map((r) => ({ ...r, citations: +r.citations }))
+      .filter((l) => idx.has(l.source) && idx.has(l.target));
+    const width = Math.max(260, el.clientWidth), size = Math.max(520, Math.min(width, 860)), drawW = Math.max(width, size);
+    const { svg } = svgFor(el, size);
+    const probe = svg.append('text').attr('class', 'net-label');
+    const longest = d3.max(people, (p) => { probe.text(p.name); return probe.node().getComputedTextLength(); }) || 0;
+    probe.remove();
+    const R = size / 2 - Math.min(150, longest + 22), cx = drawW / 2, cy = size / 2;
+    svg.attr('viewBox', `0 0 ${drawW} ${size}`).attr('width', drawW > width ? drawW : '100%');
+    el.style.overflowX = drawW > width ? 'auto' : '';
+    const ang = (i) => (i / people.length) * 2 * Math.PI - Math.PI / 2;
+    const at = (i, r = R) => [cx + r * Math.cos(ang(i)), cy + r * Math.sin(ang(i))];
+    const w = d3.scaleSqrt([1, d3.max(links, (l) => l.citations) || 1], [0.5, 4.5]);
+    const lk = svg.append('g').selectAll('path').data(links.sort((a, b) => a.citations - b.citations)).join('path').attr('class', 'net-link')
+      .attr('d', (l) => { const a = at(idx.get(l.source)), b = at(idx.get(l.target)); return `M${a}Q${cx},${cy} ${b}`; })
+      .style('stroke-width', (l) => w(l.citations));
+    const rr = d3.scaleSqrt([1, d3.max(people, (p) => p.fhl_works)], [2.5, 9]);
+    const nodes = svg.append('g').selectAll('g').data(people).join('g');
+    nodes.append('circle').attr('class', 'net-node').attr('cx', (p, i) => at(i)[0]).attr('cy', (p, i) => at(i)[1])
+      .attr('r', (p) => rr(p.fhl_works)).style('fill', (p) => REGION_FILLS[p.came_from_region] || FILL.grayl);
+    const lab = nodes.append('text').attr('class', 'net-label').attr('dy', '0.35em')
+      .attr('transform', (p, i) => {
+        const a = (ang(i) * 180) / Math.PI, [x, y] = at(i, R + 14);
+        return `translate(${x},${y}) rotate(${a > 90 && a < 270 ? a - 180 : a})`;
+      })
+      .attr('text-anchor', (p, i) => { const a = (ang(i) * 180) / Math.PI; return a > 90 && a < 270 ? 'end' : 'start'; })
+      .text((p) => p.name);
+    const hit = (p) => {
+      const mine = new Set([p.name]);
+      lk.attr('class', (l) => { const on = l.source === p.name || l.target === p.name; if (on) { mine.add(l.source); mine.add(l.target); } return `net-link ${on ? 'on' : 'off'}`; });
+      lab.classed('off', (q) => !mine.has(q.name)).classed('hit', (q) => q.name === p.name);
+      nodes.classed('off', (q) => !mine.has(q.name));
+    };
+    const clear = () => { lk.attr('class', 'net-link'); lab.classed('off', false).classed('hit', false); nodes.classed('off', false); };
+    const byName = new Map(people.map((p) => [p.name, p]));
+    citeNet = { names: people.map((p) => p.name), pinned: null,
+      focus: (name) => { const p = byName.get(name); if (p) hit(p); }, clear };
+    const rest = () => { if (citeNet.pinned) citeNet.focus(citeNet.pinned); else clear(); };
+    nodes.on('mousemove', (event, p) => {
+      hit(p);
+      const out = d3.sum(links.filter((l) => l.source === p.name), (l) => l.citations), inn = d3.sum(links.filter((l) => l.target === p.name), (l) => l.citations);
+      showTip(el, event, p.name, [[null, null, `${f(p.fhl_works)} FHL papers, ${p.first_fhl_year}–${p.last_fhl_year}`],
+        [null, null, `Came from ${p.came_from || 'FHL itself'}`], [null, null, `Cites the others ${f(out)} times; cited by them ${f(inn)} times`]]);
+    }).on('mouseleave', () => { rest(); hideTip(el); });
+    applyFind(false);
+  }
+
+
+  dash.onData(() => {
+    // ---- headline -------------------------------------------------------------------------------------------
+    const H = { verified: (v) => f(+v), publications: (v) => f(+v), total_citations: (v) => compact.format(+v),
+      verified_citations: (v) => compact.format(+v), verified_per_year_2016_2025: (v) => f(Math.round(+v)),
+      search_recall_vs_fhl_lists: (v) => pct(+v), retrieved: (v) => v };
+    Object.entries(H).forEach(([field, fmt]) => setText(`[data-source="headline"][data-field="${field}"]`, 'headline', field, fmt));
+    setText('[data-source="audit_tiers"][data-field="precision"]', 'audit_tiers', 'precision', (v) => pct(+v));
+    setText('[data-source="best_estimate"][data-field="estimate"]', 'best_estimate', 'estimate', (v) => f(+v));
+
+    // ---- publications per year by tier ------------------------------------------------------------------------
+    const elTier = document.getElementById('ch-tier');
+    const tierFills = [FILL.solid, FILL.hatch, FILL.dots];
+    legend(document.getElementById('lg-tier'), TIER_KEYS.map((k, i) => [k, tierFills[i]]));
+    if (state(elTier, ['by_year_tier', 'eras'])) {
+      const eras = dash.data('eras').data.map((e) => ({ start: +e.start, end: +e.end, name: e.name, short: ERA_SHORT[e.name] || e.name }));
+      const rows = dash.data('by_year_tier').data.map((r) => ({ x: +r.year, k: r.tier, n: +r.n }));
+      stackedYears(elTier, rows, TIER_KEYS, tierFills, { eras, height: 330 });
+    }
+
+    // ---- what the research was about -----------------------------------------------------------------------
+    // Each content type gets a stacked chart of its share of each decade and small multiples of raw counts, both in
+    // the order in which the categories peaked (share-weighted mean decade), with residual groups last.
+    const LAST = ['Whiteley Center', 'Other', 'Many groups', 'No particular organism'];
+    const RESIDUAL = { 'Whiteley Center': FILL.grayl, Other: FILL.open, 'Many groups': FILL.grayl, 'No particular organism': FILL.open };
+    [['topics', 'topic'], ['organisms', 'organism']].forEach(([name, col]) => {
+      const elS = document.getElementById(`ch-${name}`), elN = document.getElementById(`ch-${name}-n`);
+      const okS = state(elS, [`${name}_share_by_decade`]), okN = state(elN, [`${name}_by_decade`]);
+      if (!okS) { legend(document.getElementById(`lg-${name}`), []); return; }
+      const rows = dash.data(`${name}_share_by_decade`).data.map((r) => ({ decade: r.decade, key: r[col], share: r.share, n: r.n, total: r.decade_total }));
+      const keys = Array.from(new Set(rows.map((r) => r.key)));
+      const centre = (k) => {
+        const rs = rows.filter((r) => r.key === k);
+        return d3.sum(rs, (r) => r.share * r.decade) / (d3.sum(rs, (r) => r.share) || 1);
+      };
+      const order = keys.filter((k) => !LAST.includes(k)).sort((a, b) => centre(a) - centre(b)).concat(LAST.filter((k) => keys.includes(k)));
+      let next = 0;
+      const fills = order.map((k) => RESIDUAL[k] || SERIES_LONG[next++ % SERIES_LONG.length]);
+      legend(document.getElementById(`lg-${name}`), order.map((k, i) => [k, fills[i]]).reverse());
+      stackedYears(elS, rows.map((r) => ({ x: r.decade, k: r.key, n: r.share })), order, fills,
+        { height: 360, band: 10, fmtX: (d) => `${d}s`, yFmt: pct, valFmt: pct });
+      if (okN) {
+        const counts = dash.data(`${name}_by_decade`).data.map((r) => ({ decade: +r.decade, key: r[col], n: +r.n }));
+        const totals = d3.rollup(counts, (v) => d3.sum(v, (r) => r.n), (r) => r.decade);
+        counts.forEach((r) => { r.total = totals.get(r.decade); r.share = r.total ? r.n / r.total : 0; });
+        multiples(elN, counts, order.concat(Array.from(new Set(counts.map((r) => r.key))).filter((k) => !order.includes(k))),
+          { value: (r) => r.n, fmt: f, tip: (r) => `${f(r.n)} publications (${pct(r.share)} of the decade's ${f(r.total)})` });
+      }
+    });
+
+    const elW = document.getElementById('ch-whiteley');
+    const wFills = { 'Marine & life sciences': FILL.hatch, 'Other scholarship': FILL.solid };
+    legend(document.getElementById('lg-whiteley'), Object.entries(wFills));
+    if (state(elW, ['whiteley_by_field'])) {
+      const rows = dash.data('whiteley_by_field').data.map((r) => ({ ...r, publications: +r.publications }))
+        .sort((a, b) => b.publications - a.publications);
+      hbars(elW, rows, 'field', 'publications', { fill: (d) => wFills[d.group] || FILL.open, tipTitle: (d) => `${d.field} · ${d.group}` });
+    }
+
+    // ---- the people -----------------------------------------------------------------------------------------
+    document.querySelectorAll('[data-source="people_summary"]').forEach((el) => {
+      const d = dash.data('people_summary');
+      if (d.status === 'ok') { el.classList.remove('dash-skeleton'); el.textContent = f(+d.data[0][el.dataset.field]); }
+    });
+    safely(document.getElementById('ch-map'), drawMap);
+    safely(document.getElementById('ch-tree'), drawTree);
+    safely(document.getElementById('ch-net'), drawNetwork);
+    const pp = dash.data('people');
+    if (pp.status === 'ok') {
+      document.querySelector('#tbl-people tbody').replaceChildren(...pp.data.map((r) => {
+        const tr = document.createElement('tr'); tr.dataset.key = r.person_id;
+        fillRow(tr, [[r.name, ''], [f(+r.fhl_works), 'num'], [String(r.first_fhl_year), 'num'], [String(r.last_fhl_year), 'num'],
+          [r.came_from || '—', ''], [r.went_to || '—', ''], [r.status, '']]);
+        return tr;
+      }));
+      applyFind(false);
+    }
+
+    // ---- where FHL appears ---------------------------------------------------------------------------------
+    const elAp = document.getElementById('ch-appears');
+    if (state(elAp, ['by_appears'])) {
+      const rows = dash.data('by_appears').data.map((r) => ({ ...r, publications: +r.publications, share: +r.share }))
+        .sort((a, b) => APPEARS_KEYS.indexOf(a.category) - APPEARS_KEYS.indexOf(b.category));
+      hbars(elAp, rows, 'category', 'publications', { tipTitle: (d) => `${d.category} · ${pct(d.share)} of verified` });
+    }
+    const elApT = document.getElementById('ch-appears-time');
+    const apFills = [FILL.solid, FILL.cross, FILL.hatch, FILL.horiz, FILL.dots, FILL.open];
+    legend(document.getElementById('lg-appears'), APPEARS_KEYS.map((k, i) => [k, apFills[i]]));
+    if (state(elApT, ['appears_share_by_decade'])) {
+      const rows = dash.data('appears_share_by_decade').data.map((r) => ({ x: r.decade, k: r.appears, n: r.share }));
+      stackedYears(elApT, rows, APPEARS_KEYS, apFills, { height: 260, band: 10, fmtX: (d) => `${d}s`, yFmt: pct, valFmt: pct });
+    }
+
+    // ---- types and eras -------------------------------------------------------------------------------------
+    const elType = document.getElementById('ch-type');
+    if (state(elType, ['by_type'])) {
+      const rows = dash.data('by_type').data.map((r) => ({ ...r, publications: +r.publications })).sort((a, b) => b.publications - a.publications);
+      hbars(elType, rows, 'category', 'publications');
+    }
+    const elEra = document.getElementById('ch-era');
+    if (state(elEra, ['by_era'])) {
+      const order = ['Summer station (informal name)', 'Puget Sound Marine Station', 'Puget Sound Biological Station', 'UW Oceanographic Laboratories', 'Friday Harbor Laboratories'];
+      const rows = dash.data('by_era').data.map((r) => ({ ...r, publications: +r.publications }))
+        .sort((a, b) => order.indexOf(a.category) - order.indexOf(b.category));
+      hbars(elEra, rows, 'category', 'publications');
+    }
+
+    // ---- citations ------------------------------------------------------------------------------------------
+    const elCy = document.getElementById('ch-cites-year');
+    if (state(elCy, ['by_year'])) {
+      const rows = dash.data('by_year').data.map((r) => ({ x: +r.year, k: 'Citations', n: +r.citations })).filter((r) => r.x >= 1904);
+      stackedYears(elCy, rows, ['Citations'], [FILL.solid], { height: 240 });
+    }
+    const elCr = document.getElementById('ch-cite-rate');
+    if (state(elCr, ['by_type'])) {
+      const rows = dash.data('by_type').data.map((r) => ({ ...r, rate: +r.median_citations_per_year, publications: +r.publications }))
+        .filter((r) => r.publications >= 10 && !isNaN(r.rate)).sort((a, b) => b.rate - a.rate);
+      hbars(elCr, rows, 'category', 'rate', { fmt: d3.format('.2f'), tipTitle: (d) => `${d.category} · ${f(d.publications)} publications` });
+    }
+    const tTop = document.querySelector('#tbl-top tbody');
+    const top = dash.data('top_cited');
+    if (top.status === 'ok') {
+      tTop.replaceChildren(...top.data.map((r) => {
+        const tr = document.createElement('tr'); tr.dataset.key = r.record_id;
+        fillRow(tr, [[r.year ? String(Math.round(+r.year)) : '', 'num'], [r.first_author, ''], [r.title, 'title'], [r.venue, 'venue'],
+          [f(+r.citations), 'num'], [r.fhl_appears_in, '']]);
+        return tr;
+      }));
+    }
+
+    // ---- fields and venues ----------------------------------------------------------------------------------
+    const elV = document.getElementById('ch-venues');
+    if (state(elV, ['top_venues'])) {
+      const rows = dash.data('top_venues').data.map((r) => ({ ...r, publications: +r.publications }));
+      hbars(elV, rows, 'venue', 'publications');
+    }
+
+    // ---- news ------------------------------------------------------------------------------------------------
+    const elN = document.getElementById('ch-news');
+    const newsKeys = ['Coverage of FHL research', 'FHL as an institution', 'Other FHL news'];
+    const newsFills = [FILL.solid, FILL.hatch, FILL.dots];
+    legend(document.getElementById('lg-news'), newsKeys.map((k, i) => [k, newsFills[i]]));
+    if (state(elN, ['news_by_year'])) {
+      const rows = dash.data('news_by_year').data.map((r) => ({ x: +r.year, k: r.kind, n: +r.n })).filter((r) => r.x >= 1990);
+      stackedYears(elN, rows, newsKeys, newsFills, { height: 220 });
+    }
+
+    // ---- reliability ----------------------------------------------------------------------------------------
+    const elS = document.getElementById('ch-status');
+    if (state(elS, ['candidate_status'])) {
+      const order = ['Included', 'Excluded', 'Archive mention (volume-level)', 'Unverified candidate', 'Mention only'];
+      const rows = dash.data('candidate_status').data.map((r) => ({ ...r, records: +r.records }))
+        .sort((a, b) => order.indexOf(a.status) - order.indexOf(b.status));
+      hbars(elS, rows, 'status', 'records');
+    }
+    const tA = document.querySelector('#tbl-audit tbody');
+    const au = dash.data('audit_tiers');
+    if (au.status === 'ok') {
+      tA.replaceChildren(...au.data.map((r) => {
+        const tr = document.createElement('tr');
+        fillRow(tr, [[r.tier, ''], [pct(+r.precision), 'num'], [f(+r.checked), 'num'], [String(r.interval).split('–').map((x) => pct(+x)).join('–'), 'num']]);
+        return tr;
+      }));
+    }
+    const elR = document.getElementById('ch-recall');
+    if (state(elR, ['recall_by_decade'])) {
+      const rows = dash.data('recall_by_decade').data.map((r) => ({ ...r, recall: +r.recall, listed: +r.listed }));
+      hbars(elR, rows, 'decade', 'recall', { fmt: pct, tipTitle: (d) => `${d.decade} · ${f(d.listed)} FHL-listed papers` });
+    }
+
+    // ---- technical methods ----------------------------------------------------------------------------------
+    setText('[data-source="methods_facts"]', 'methods_facts', 'value', (v) => (String(v).includes('.') ? String(v) : f(+v)));
+    const er = dash.data('eras');
+    if (er.status === 'ok') {
+      document.querySelector('#tbl-eras tbody').replaceChildren(...er.data.map((r) => {
+        const tr = document.createElement('tr'); tr.dataset.key = r.name;
+        fillRow(tr, [[String(r.start), 'num'], [String(r.end), 'num'], [r.name, '']]);
+        return tr;
+      }));
+    }
+    const aw = dash.data('ai_workflows');
+    if (aw.status === 'ok') {
+      document.querySelector('#tbl-ai tbody').replaceChildren(...aw.data.map((r) => {
+        const tr = document.createElement('tr'); tr.dataset.key = r.workflow;
+        fillRow(tr, [[r.workflow, ''], [r.purpose, ''], [String(r.agents), 'num'], [r.effort, ''], [r.started_utc, 'num']]);
+        return tr;
+      }));
+    }
+
+    // ---- publication list -----------------------------------------------------------------------------------
+    const pd = dash.data('publications');
+    if (pd.status === 'ok' && topicSel.options.length === 1) {
+      const names = Array.from(new Set(pd.data.map((r) => r.research_topic).filter(Boolean))).sort();
+      topicSel.append(...names.map((n) => new Option(n, n)));
+    }
+    drawPubs();
+  });
+
+  function drawPubs() {
+    const body = document.querySelector('#tbl-pubs tbody');
+    const d = dash.data('publications');
+    const count = document.getElementById('pub-count');
+    if (d.status !== 'ok') { count.textContent = ''; return; }
+    const term = q.value.trim().toLowerCase();
+    const tier = tierSel.value, topic = topicSel.value;
+    const hits = d.data.filter((r) => (!tier || r.evidence_tier === tier) && (!topic || r.research_topic === topic) &&
+      (!term || `${r.title} ${r.authors} ${r.venue}`.toLowerCase().includes(term)));
+    const shown = hits.slice().sort((a, b) => (+b.year || 0) - (+a.year || 0)).slice(0, 300);
+    count.textContent = `${f(hits.length)} matching · showing ${f(shown.length)}`;
+    body.replaceChildren(...shown.map((r) => {
+      const tr = document.createElement('tr'); tr.dataset.key = r.record_id;
+      fillRow(tr, [[r.year ? String(Math.round(+r.year)) : '', 'num'], [r.title, 'title'], [r.authors, ''], [r.venue, 'venue'],
+        [r.publication_type, ''], [r.research_topic, ''], [r.evidence_tier, ''], [r.citations === '' || r.citations == null ? '' : f(+r.citations), 'num']]);
+      return tr;
+    }));
+  }
+  q.addEventListener('input', drawPubs);
+  tierSel.addEventListener('change', drawPubs);
+  topicSel.addEventListener('change', drawPubs);
+</script>
+
+<script>
+  // Save a figure as a PNG or SVG image: its key, the chart and its caption, always in black ink on white paper.
+  (() => {
+    const NS = 'http://www.w3.org/2000/svg';
+    const PROPS = ['fill', 'stroke', 'stroke-width', 'stroke-dasharray', 'opacity', 'visibility', 'font-family', 'font-size',
+                   'font-style', 'font-weight', 'letter-spacing', 'font-variant-numeric'];
+    const localUrl = (v) => v.replace(/url\((['"]?)[^#)'"]*#([^)'"]+)\1\)/g, 'url(#$2)');
+    const el = (name, attrs, text) => {
+      const e = document.createElementNS(NS, name);
+      Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v));
+      if (text != null) e.textContent = text;
+      return e;
+    };
+    // Copy each element's computed look into a style attribute, so the image needs none of the page's CSS.
+    const inline = (src, dst) => {
+      const cs = getComputedStyle(src);
+      dst.setAttribute('style', PROPS.map((p) => `${p}:${localUrl(cs.getPropertyValue(p))}`).join(';'));
+      dst.removeAttribute('class');
+      Array.from(src.children).forEach((c, i) => inline(c, dst.children[i]));
+    };
+    let meter;
+    const textW = (str, style) => {
+      if (!meter) {
+        meter = document.createElementNS(NS, 'svg'); meter.setAttribute('aria-hidden', 'true');
+        meter.style.cssText = 'position:absolute;left:-10000px;top:0;width:10px;height:10px;overflow:hidden';
+        document.body.appendChild(meter);
+      }
+      const t = el('text', { style }, str); meter.appendChild(t);
+      const w = t.getComputedTextLength(); t.remove();
+      return w;
+    };
+    const wrap = (str, style, width) => {
+      const lines = []; let cur = '';
+      for (const w of str.split(/\s+/).filter(Boolean)) {
+        const next = cur ? `${cur} ${w}` : w;
+        if (cur && textW(next, style) > width) { lines.push(cur); cur = w; } else cur = next;
+      }
+      if (cur) lines.push(cur);
+      return lines;
+    };
+    const withLight = (fn) => {
+      const html = document.documentElement, prev = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', 'light');
+      try { return fn(); } finally { if (prev === null) html.removeAttribute('data-theme'); else html.setAttribute('data-theme', prev); }
+    };
+    const build = (fig) => {
+      const chart = fig.querySelector('.fp-chart svg');
+      const page = document.getElementById('fhl-profile'), pcs = getComputedStyle(page);
+      const ink = pcs.color, paper = pcs.backgroundColor, serif = pcs.fontFamily;
+      const ink2 = getComputedStyle(fig.querySelector('figcaption .cap') || page).color;
+      const vb = chart.viewBox.baseVal, pad = 28, W = Math.round(vb.width + pad * 2), inner = W - pad * 2;
+      const font = (size, color, extra = '') => `font-family:${serif};font-size:${size}px;fill:${color};${extra}`;
+      const out = el('svg', { xmlns: NS, version: '1.1' });
+      const defsSrc = document.querySelector('.fp-defs defs'), defs = defsSrc.cloneNode(true);
+      inline(defsSrc, defs); out.appendChild(defs);
+      const bg = el('rect', { x: 0, y: 0, width: W, style: `fill:${paper}` }); out.appendChild(bg);
+      let y = pad;
+      const items = Array.from(fig.querySelectorAll('.fp-legend > span'));
+      if (items.length) { // the key, wrapped to the figure's width
+        const f13 = font(13, ink), fKey = font(10.5, ink, 'letter-spacing:1.5px');
+        out.appendChild(el('text', { x: pad, y: y + 10, style: fKey }, 'KEY'));
+        let x = pad + textW('KEY', fKey) + 14;
+        for (const s of items) {
+          const label = s.textContent.trim(), fill = localUrl(getComputedStyle(s.querySelector('rect')).fill);
+          const w = 22 + textW(label, f13) + 16;
+          if (x + w - 16 > pad + inner && x > pad) { x = pad; y += 20; }
+          out.appendChild(el('rect', { x, y: y + 1, width: 16, height: 11, style: `fill:${fill};stroke:${ink};stroke-width:.8` }));
+          out.appendChild(el('text', { x: x + 22, y: y + 11, style: f13 }, label));
+          x += w;
+        }
+        y += 30;
+      }
+      const clone = chart.cloneNode(true); inline(chart, clone);
+      clone.querySelectorAll('rect').forEach((r) => { // drop the invisible hover targets
+        const st = r.getAttribute('style') || '';
+        if (st.includes('fill:rgba(0, 0, 0, 0)') && st.includes('stroke:none')) r.remove();
+      });
+      const g = el('g', { transform: `translate(${pad},${y})` });
+      while (clone.firstChild) g.appendChild(clone.firstChild);
+      out.appendChild(g);
+      y += vb.height + 12;
+      const h3 = fig.querySelector('h3'), label = (h3.querySelector('.fig')?.textContent || '').trim();
+      const title = h3.textContent.replace(label, '').replace(/^\s*—\s*/, '').trim();
+      const fCap = font(14, ink);
+      wrap(`${label.toUpperCase()}—${title}`, fCap, inner).forEach((line) => { y += 19; out.appendChild(el('text', { x: pad, y, style: fCap }, line)); });
+      const note = fig.querySelector('figcaption .cap');
+      if (note) {
+        const fNote = font(12, ink2); y += 3;
+        wrap(note.textContent.trim(), fNote, inner).forEach((line) => { y += 16; out.appendChild(el('text', { x: pad, y, style: fNote }, line)); });
+      }
+      const stamp = (document.querySelector('.fp-mast .stamp')?.textContent || '').replace(/\s+/g, ' ').trim();
+      const by = (document.querySelector('.fp-mast .byline')?.textContent || '').replace(/^By\s+/, '').trim();
+      y += 22;
+      wrap(`Friday Harbor Laboratories, University of Washington: research publications census${by ? `, by ${by}` : ''}. ${stamp}.`,
+        font(10.5, ink2, 'font-style:italic'), inner).forEach((line, i) => {
+        if (i) y += 14;
+        out.appendChild(el('text', { x: pad, y, style: font(10.5, ink2, 'font-style:italic') }, line));
+      });
+      const H = Math.ceil(y + pad);
+      out.setAttribute('width', W); out.setAttribute('height', H); out.setAttribute('viewBox', `0 0 ${W} ${H}`);
+      bg.setAttribute('height', H);
+      return { svg: out, W, H };
+    };
+    const svgText = (fig) => {
+      const { svg, W, H } = withLight(() => build(fig));
+      return { text: '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(svg), W, H };
+    };
+    const pngBlob = async (fig, scale = 3) => {
+      const { text, W, H } = svgText(fig);
+      const img = new Image();
+      await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(text); });
+      const c = document.createElement('canvas'); c.width = W * scale; c.height = H * scale;
+      const ctx = c.getContext('2d'); ctx.scale(scale, scale); ctx.drawImage(img, 0, 0, W, H);
+      return new Promise((res) => c.toBlob(res, 'image/png'));
+    };
+    const fileName = (fig) => 'FHL-' + fig.querySelector('h3').textContent.toLowerCase()
+      .replace(/fig\.\s*(\d+)\.?/, 'fig$1').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 64);
+    const save = (blob, name) => {
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    };
+    window.FPsave = { svgText, pngBlob };
+    document.querySelectorAll('.fp-fig').forEach((fig) => {
+      if (!fig.querySelector('.fp-chart')) return;
+      const figName = (fig.querySelector('h3 .fig')?.textContent || 'figure').replace(/\.$/, '');
+      const bar = document.createElement('div'); bar.className = 'fp-save';
+      bar.append('Save figure as ');
+      ['png', 'svg'].forEach((fmt, i) => {
+        if (i) bar.append(' or ');
+        const b = document.createElement('button'); b.type = 'button'; b.textContent = fmt.toUpperCase();
+        b.setAttribute('aria-label', `Save ${figName} as ${fmt.toUpperCase()}`);
+        b.addEventListener('click', async () => {
+          try {
+            if (fmt === 'svg') save(new Blob([svgText(fig).text], { type: 'image/svg+xml' }), fileName(fig) + '.svg');
+            else save(await pngBlob(fig), fileName(fig) + '.png');
+          } catch (e) { console.error(e); b.textContent = 'failed'; }
+        });
+        bar.append(b);
+      });
+      (fig.querySelector('figcaption') || fig).appendChild(bar);
+    });
+  })();
+</script>
+</body>
+</html>

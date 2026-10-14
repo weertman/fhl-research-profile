@@ -1,0 +1,9 @@
+workflow,purpose,agents,effort,started_utc
+1. fhl-harvest,"Search the free scholarly sources in parallel, then critique coverage",9,xhigh,2026-10-13 22:42
+2. fhl-screen,"Judge ambiguous candidates against the screening guide, then calibrate across batches",24,xhigh,2026-10-14 01:28
+3. fhl-audit,"Check a stratified sample against the publications, with a second judge on disagreements",18,xhigh,2026-10-14 02:58
+4. fhl-harvest-round2,Second search round closing the gaps the coverage critic found,2,xhigh,2026-10-14 03:29
+5. fhl-resolve-unverified,Open each unverified candidate's publication; audit records found only on FHL's lists,24,xhigh,2026-10-14 04:17
+6. fhl-screen-delta,Screen the second-round candidates and calibrate against the first round,8,xhigh,2026-10-14 05:36
+7. topic classification,Label each publication's research topic and organism group in 16 random batches; one more agent re-labels a random 300 to measure agreement,17,max,2026-10-14 18:14
+8. mentor-link check,"Check a random 30 of the mentor links inferred from co-authorship against public records (theses, lab pages, CVs); links found to be between peers were removed",1,max,2026-10-14 22:09

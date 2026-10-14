@@ -1,0 +1,268 @@
+name,year,year_basis,fhl,students,teachers
+A. O. Dennis Willows,1965,first paper in OpenAlex,True,4,1
+Aaron W. E. Galloway,2006,first paper in OpenAlex,True,2,2
+Adam M. Reitzel,1999,first paper in OpenAlex,False,1,0
+Adam P. Summers,1989,birth year plus 25,True,14,0
+Alberto Stolfi,2008,first paper in OpenAlex,False,1,0
+Alexander Fodor,2014,first paper in OpenAlex,True,0,1
+Alexander T. Lowe,2011,first FHL paper,True,0,1
+Alexander Y. Karatayev,1997,first paper in OpenAlex,False,0,1
+Alison R. Sherwood,1998,first paper in OpenAlex,False,1,0
+Amanda L. Rychel,2004,first paper in OpenAlex,True,0,1
+Amy L. Carlile,2008,first paper in OpenAlex,False,0,1
+Andrea B. Kohn,1956,first paper in OpenAlex,False,1,0
+Andrea Glockner Fagetti,2006,placed from their teachers or students,False,0,1
+Andrea L Graham,1989,placed from their teachers or students,False,0,1
+Andreas Altenburger,2009,first paper in OpenAlex,False,0,1
+Andreas Hejnol,1998,first paper in OpenAlex,False,1,0
+Andreas Heyland,2002,first paper in OpenAlex,True,1,1
+Andreas Wanninger,1999,first paper in OpenAlex,False,1,0
+Andrew E. Christie,1994,first paper in OpenAlex,True,1,0
+Anja Studer,2008,placed from their teachers or students,False,0,1
+Antonio C. Marques,1995,first paper in OpenAlex,False,1,0
+Arthur H. Whiteley,1944,first paper in OpenAlex,True,5,0
+Aurel Wintner,1928,birth year plus 25,False,1,2
+B. A. Illarionov,1994,first paper in OpenAlex,False,0,1
+Billie J. Swalla,1983,first paper in OpenAlex,True,10,0
+Boris Masinovsky,1985,first paper in OpenAlex,False,0,1
+Brad Davidson,2001,first paper in OpenAlex,True,0,1
+Brian Helmuth,1993,first paper in OpenAlex,False,1,0
+Brian S. Leander,2000,first paper in OpenAlex,False,1,0
+Brian S. Ort,2007,first paper in OpenAlex,False,0,1
+Brooke Z. Torjman,2020,first paper in OpenAlex,False,0,1
+Bruce W. Frost,1967,first paper in OpenAlex,False,1,0
+Bryanda Jerri Tiare Wippel,2012,thesis year minus five,False,0,1
+C. C. Ashley,1967,first paper in OpenAlex,False,1,0
+C. Drew Harvell,1979,birth year plus 25,True,4,0
+Cassandra M Donatelli,2015,first paper in OpenAlex,False,0,1
+Charles H. Greene,1981,first paper in OpenAlex,True,1,0
+Chloe Schwab,2024,lab roster years,False,0,1
+Christiane H. Biermann,1992,first paper in OpenAlex,True,1,0
+Christina Mork,2001,first shared paper,False,0,1
+Christopher David Wells,2014,thesis year minus five,False,0,1
+Christopher G. Reed,1982,first shared paper,False,0,1
+Clara F. Asnes,1978,first shared paper,True,0,1
+Constance Amanda Sullivan,2008,thesis year minus five,False,0,1
+DO Duggins,1979,first paper in OpenAlex,True,1,0
+Daniel A. Janies,1993,first paper in OpenAlex,False,0,1
+Daniel Geldof,2014,first shared paper,False,0,1
+Daniel Grünbaum,1994,first paper in OpenAlex,True,3,1
+Danilo Pecorino,2008,placed from their teachers or students,False,0,1
+David H. Gire,2008,first paper in OpenAlex,False,2,0
+Deborah L. Penry,1986,first shared paper,False,0,1
+Derek Smith,2014,thesis year minus five,False,0,1
+Dianna K. Padilla,1984,first paper in OpenAlex,False,1,0
+Diarmaid Ó Foighil,1986,first paper in OpenAlex,False,0,1
+Dina F. Mandoli,1981,first paper in OpenAlex,False,2,0
+Dominic M. Sivitilli,2019,first paper in OpenAlex,False,0,1
+Douglas F. Bertram,1991,first paper in OpenAlex,False,0,1
+Douglas J. Eernisse,1982,first paper in OpenAlex,False,1,0
+Dylan K. Wainwright,2011,first shared paper,False,0,1
+E. W. Misty Paig‐Tran,2011,first FHL paper,True,0,1
+Edgar Meyhöfer,1985,first paper in OpenAlex,False,0,1
+Edwin Munro,2000,first paper in OpenAlex,True,0,1
+Elijah K. Lowe,2014,first paper in OpenAlex,False,0,1
+Eliza C. Heery,2009,first paper in OpenAlex,True,0,1
+Elizabeth A. Ashley,2019,first paper in OpenAlex,False,0,1
+Elizabeth G. Boulding,1984,first paper in OpenAlex,False,1,0
+Elizabeth L. Brainerd,1989,first paper in OpenAlex,True,2,0
+Elska B. Kaczmarek,2015,first shared paper,False,0,1
+Emily A. Roberts,2015,first FHL paper,True,0,1
+Emily Carrington,1989,first paper in OpenAlex,True,13,0
+Emily Rose Bews,2021,thesis year minus five,False,0,1
+Emma Timmins-Schiffman,2012,first paper in OpenAlex,False,0,1
+Emília P. Martins,1991,first paper in OpenAlex,False,1,0
+Eric D. Tytell,2000,first paper in OpenAlex,False,1,0
+Erik E. Sotka,1999,first paper in OpenAlex,False,0,1
+Erika V. Iyengar,2001,first paper in OpenAlex,False,2,1
+Erin Meyer-Gutbrod,2012,first paper in OpenAlex,False,0,1
+Erin Winters-Mist Paig-Tran,2008,thesis year minus five,False,0,1
+Federico D. Brown,2002,first paper in OpenAlex,True,0,1
+Fleur Anteau,2021,lab roster years,False,0,1
+Frederick D. Dooley,2012,first FHL paper,True,0,1
+Fu-Shiang Chia,1966,first paper in OpenAlex,False,2,0
+Gareth J. Fraser,2004,first paper in OpenAlex,False,1,0
+Garrett M. Odell,1966,first paper in OpenAlex,True,2,0
+George von Dassow,1993,first paper in OpenAlex,True,0,1
+Gert-Jan Jeunen,2008,placed from their teachers or students,False,0,1
+Glenys D. Gibson,1989,first paper in OpenAlex,False,0,1
+Graham Hoyle,1952,first paper in OpenAlex,False,1,0
+Gregory S. Gavelis,2009,first paper in OpenAlex,False,0,1
+Gretchen Lambert,1968,first paper in OpenAlex,True,1,0
+Gretchen M. Moeser,2006,first paper in OpenAlex,False,0,1
+H. A. Lessios,1979,first paper in OpenAlex,False,1,0
+Hanna Miller,2015,thesis year minus five,False,0,1
+Hans C P Kelstrup,2010,first census paper,False,0,1
+Hans Jorgen Fyhn,1970,first paper in OpenAlex,True,0,1
+Harold A. Scheraga,1946,birth year plus 25,False,1,0
+Hilary A. Hayford,2011,thesis year minus five,True,0,1
+Hironobu Ozaki,1965,first paper in OpenAlex,True,0,1
+Hwan Su Yoon,1997,first paper in OpenAlex,False,2,0
+Hyuk Je Lee,2004,first paper in OpenAlex,False,0,1
+Iván Quesada,1999,first paper in OpenAlex,True,0,1
+J. Timothy Pennington,1984,first paper in OpenAlex,False,0,1
+Jack Litle,2021,thesis year minus five,False,0,1
+James B. McClintock,1981,first paper in OpenAlex,False,1,0
+James L. Dimond,2006,first paper in OpenAlex,False,0,1
+James M. Newcomb,2001,first FHL paper,True,0,1
+James S. Albert,1992,first paper in OpenAlex,False,2,0
+James W. Truman,2017,first census paper,True,1,1
+James Winton,1981,first paper in OpenAlex,False,1,0
+Jaquan Horton,2015,thesis year minus five,True,0,1
+Jason Hodin,1993,first paper in OpenAlex,True,4,0
+Jennifer R. Hoffman,1995,first paper in OpenAlex,True,0,1
+Jessica E. Spiewak,1993,placed from their teachers or students,False,0,1
+Jessica M. Kendall-Bar,2014,first paper in OpenAlex,False,0,1
+Jin Hong,1994,first paper in OpenAlex,False,0,1
+Joann J. Otto,1976,first FHL paper,True,1,0
+Johanna Taylor Cannon,2008,first paper in OpenAlex,True,0,1
+John R. Blinks,1956,first paper in OpenAlex,True,1,0
+John Spieth,1980,first paper in OpenAlex,False,0,1
+Jon L. Norenburg,1985,first paper in OpenAlex,False,1,0
+Jonathan M. Huie,2017,first paper in OpenAlex,False,0,1
+Joseph J. Bizzarro,2006,first paper in OpenAlex,False,0,1
+Joseph K. Gaydos,2002,first paper in OpenAlex,False,1,0
+Joseph R. Pawlik,1983,first paper in OpenAlex,False,0,1
+Joshua Isaac Cummings,2010,thesis year minus five,False,0,1
+Julia Knopf,2026,lab roster years,False,0,1
+Julio A. Rivera,2017,first paper in OpenAlex,False,0,1
+Julius Bauschinger,1885,birth year plus 25,False,1,0
+Karly Elizabeth Cohen,2017,thesis year minus five,True,0,3
+Kassandra L. Ford,2018,first paper in OpenAlex,False,0,1
+Kate Sparks,2008,placed from their teachers or students,False,0,1
+Katharine R. Hind,2012,first paper in OpenAlex,False,0,1
+Katherine A. Corn,2015,first shared paper,False,0,1
+Katherine A. Galloway,2015,first paper in OpenAlex,False,0,1
+Katie A. Dobkowski,2017,first FHL paper,True,0,1
+Kayla C. Hall,2018,first paper in OpenAlex,True,0,1
+Kenneth M. Halanych,1989,first paper in OpenAlex,True,2,0
+Kenneth P. Sebens,1975,birth year plus 25,True,7,0
+Kerry L. McGowan,2011,first paper in OpenAlex,False,0,1
+Kevin H. Britton‐Simmons,2004,first FHL paper,True,0,1
+Kevin M. Kocot,2008,first paper in OpenAlex,False,0,1
+Kevin Richard Turner,2011,thesis year minus five,False,0,1
+Kevin Staras,1995,first paper in OpenAlex,False,0,1
+Khalid Alqaisi,2008,placed from their teachers or students,False,0,1
+Kindall Murie,2021,thesis year minus five,False,0,1
+Kirk S. Zigler,2003,first paper in OpenAlex,False,0,2
+Kirk W McLean,1974,first shared paper,False,0,1
+Kit Yu Karen Chan,2008,thesis year minus five,False,0,1
+Kjell Johansen,1958,first paper in OpenAlex,True,1,0
+Kory M. Evans,2017,first paper in OpenAlex,False,0,1
+Kristian Fauchald,1974,first paper in OpenAlex,False,1,0
+Kristin Sherrard,2000,first paper in OpenAlex,False,0,1
+Kyle A. Serikawa,1992,first paper in OpenAlex,False,0,1
+Kyle W. Demes,2009,first paper in OpenAlex,False,0,1
+L. D. Allhouse,1999,first paper in OpenAlex,False,0,1
+L. Patricia Hernandez,2000,first paper in OpenAlex,False,1,0
+Larry R. McEdward,1979,first paper in OpenAlex,True,1,1
+Laura Newcomb,2009,first paper in OpenAlex,True,0,1
+Lauren E. Vandepas,2011,first paper in OpenAlex,False,0,1
+Leon Lichtenstein,1903,birth year plus 25,False,1,0
+Leonid L. Moroz,1992,first paper in OpenAlex,True,1,0
+Louis Graf,2014,first paper in OpenAlex,False,0,1
+Lucília S. Miranda,2009,first paper in OpenAlex,False,0,1
+Ludwik Gąsiorowski,2016,first paper in OpenAlex,False,0,1
+Luke A. Hoekstra,2007,first paper in OpenAlex,False,0,1
+Lyda S.T. Harris,2016,thesis year minus five,True,0,1
+Lynn Riddiford,1961,birth year plus 25,True,2,2
+M. Patricia Morse,1976,first paper in OpenAlex,False,1,0
+Marcus Singer,1939,birth year plus 25,False,1,0
+Marianne E Porter,2005,first paper in OpenAlex,False,0,1
+Mason N. Dean,2004,first paper in OpenAlex,False,0,1
+Matthew A. Kolmann,2009,first paper in OpenAlex,True,1,0
+Matthew N. George,2013,first FHL paper,True,0,1
+Max Eugene Maliska,2008,thesis year minus five,False,0,1
+Maya L. Groner,2010,first paper in OpenAlex,False,0,1
+Megan N. Dethier,1980,first paper in OpenAlex,True,1,0
+Meredith Dirkman,2021,thesis year minus five,False,0,1
+Michael A. Harkey,1980,first FHL paper,True,0,1
+Michael G. Hadfield,1972,first paper in OpenAlex,False,1,0
+Michael G. Tassia,2015,first shared paper,False,0,1
+Michael LaBarbera,1970,first paper in OpenAlex,False,1,0
+Michael T. Brett,1989,first paper in OpenAlex,False,1,0
+Michael T. Nishizaki,1999,first paper in OpenAlex,True,0,1
+Michael W. Hart,1987,first paper in OpenAlex,True,0,1
+Miles Lamare,1998,first census paper,True,6,0
+Minako S. Vickery,1998,first paper in OpenAlex,False,0,1
+Monroe H. Martin,1932,birth year plus 25,False,1,1
+Nataliya Budaeva,2006,first paper in OpenAlex,False,0,1
+Nicholas B. Colvard,2011,first paper in OpenAlex,False,0,1
+Nicholas J. Gidmark,2011,first paper in OpenAlex,True,3,1
+Nicole L. Hack,2013,first shared paper,False,0,1
+Nicole N. Nakata,2023,first paper in OpenAlex,False,0,1
+Nicole Phillips,1996,first census paper,True,3,0
+Nina Lester Finley,2014,first shared paper,False,0,1
+Noa Shenkar,2005,first paper in OpenAlex,False,0,1
+Olivia J. Graham,2020,first paper in OpenAlex,False,0,1
+Owen M. Woodward,2001,first paper in OpenAlex,False,0,1
+Patrick T. Martone,2006,first paper in OpenAlex,False,1,0
+Paul K. Dayton,1966,birth year plus 25,False,1,0
+Paul M. Anderson,1965,first paper in OpenAlex,False,1,0
+Paul R. Benjamin,1968,first paper in OpenAlex,False,1,0
+Paul S. Hill,1988,first shared paper,False,0,1
+Pedro Verdugo,1972,first paper in OpenAlex,True,3,0
+Peter A. Getting,1971,first paper in OpenAlex,False,0,1
+Peter A. Jumars,1974,first paper in OpenAlex,False,2,0
+Peter D. Ward,1964,first paper in OpenAlex,False,1,0
+Petra Ditsche,2009,first paper in OpenAlex,True,0,1
+R. L. Crane,2012,first shared paper,False,0,1
+Rachel A. Merz,1984,first paper in OpenAlex,False,1,0
+Rebecca Bruders,2012,first shared paper,False,0,1
+René F. Kratz,1994,first paper in OpenAlex,False,0,1
+Richard A. Cloney,1961,first paper in OpenAlex,True,2,0
+Richard A. Heil-Chapdelaine,1996,first paper in OpenAlex,False,0,1
+Richard A. Roller,1984,first paper in OpenAlex,False,0,1
+Richard A. Satterlie,1976,first paper in OpenAlex,True,2,0
+Richard B. Emlet,1982,first FHL paper,True,1,1
+Richard R. Strathmann,1965,first paper in OpenAlex,True,5,0
+Robert Max Levine,2017,thesis year minus five,False,0,1
+Robert W. Meech,1966,first paper in OpenAlex,False,1,0
+Robin Elahi,2005,first paper in OpenAlex,False,0,1
+Robin J. Fales,2018,first paper in OpenAlex,True,0,1
+Robin M. Harris,2026,placed from their teachers or students,False,0,1
+Rosalie E. Langelan Duncan,1980,first paper in OpenAlex,False,0,1
+Rudolf A. Raff,1966,first paper in OpenAlex,False,1,0
+Ryley S. Crow,2021,first shared paper,False,0,1
+S. P. Leys,1995,first paper in OpenAlex,False,0,1
+Sam Bashevkin,2012,first shared paper,False,0,1
+Samuel Karelitz,2008,placed from their teachers or students,False,0,1
+Sandy Wyllie‐Echeverria,1991,first paper in OpenAlex,True,2,0
+Sara M. Lindsay,1990,first paper in OpenAlex,False,0,1
+Sarah A. Woodin,1972,first paper in OpenAlex,False,2,0
+Sarah K. Berke,2000,first paper in OpenAlex,False,0,1
+Sasha Katya Seroy,2016,thesis year minus five,True,0,1
+Scottie Y. Henderson,1997,first shared paper,False,0,1
+Sebastian Kruppert,2012,first paper in OpenAlex,True,0,1
+Seok-Wan Choi,2021,first shared paper,False,0,1
+Serina Siew-Chen Lee,2013,first paper in OpenAlex,False,0,1
+Shawn M. Luttrell,2012,first FHL paper,True,0,1
+Simon A. Levin,1966,birth year plus 25,False,1,1
+Sonja Lee Miller,2006,placed from their teachers or students,False,0,1
+Sophie B. George,1982,first paper in OpenAlex,False,1,0
+Stephanie B. Crofts,2006,first paper in OpenAlex,True,0,1
+Stephen A. Stricker,1981,first FHL paper,True,0,1
+Stephen M. Bollens,1988,first paper in OpenAlex,False,0,1
+Steven B. Roberts,1965,first paper in OpenAlex,False,1,0
+Svetlana Maslakova,2001,first paper in OpenAlex,False,0,1
+T E Schroeder,1967,first paper in OpenAlex,True,1,0
+Taylor Hughes,2020,thesis year minus five,False,0,1
+Terrie Klinger,1981,birth year plus 25,True,9,1
+Thea Thezin Rogier,2011,thesis year minus five,False,0,1
+Thomas J. Pirtle,2000,first FHL paper,True,0,1
+Thomas Kleinteich,2006,first paper in OpenAlex,True,0,1
+Tigran P. Norekian,1993,first FHL paper,True,0,1
+Tyler J. Carrier,2013,first paper in OpenAlex,False,0,1
+Vannessa Valdez,2024,lab roster years,False,0,1
+Vikram K. Iyengar,1998,first paper in OpenAlex,False,2,0
+Wan Fatma Zuharah,2025,birth year plus 25,False,0,1
+Wei-Chun Chin,1998,first paper in OpenAlex,False,0,1
+Wendel W. Raymond,2014,first FHL paper,True,0,1
+Willem Weertman,2021,first shared paper,True,0,1
+William B. Stickle,1970,first paper in OpenAlex,False,1,0
+William King,2014,thesis year minus five,False,0,1
+Winsor H. Watson,1978,first paper in OpenAlex,True,1,0
+Y. Hanein,1997,first paper in OpenAlex,False,0,1
+Yong-Xue Ding,2006,first paper in OpenAlex,False,0,1
+Yordano E. Jimenez,2015,first shared paper,False,0,1
+Yun-Wei A. Hsu,2005,first paper in OpenAlex,False,0,1
