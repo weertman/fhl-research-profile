@@ -757,9 +757,11 @@
         every page to confirm each entry. Undergraduates named on a home-university lab page are included only if they also
         appear as authors in the census, and the Star Lab team comes from FHL's own pages, read from Internet Archive copies.
         Graduate committees listed in CVs add <span data-source="methods_facts" data-field="value" data-where="fact=committee_links">—</span> links, drawn dotted, and advisors and mentors named
-        in the fact-checked profiles (below) add <span data-source="methods_facts" data-field="value" data-where="fact=profile_links">—</span>. Web-search capacity ran short during the roster
-        searches, even on a second, slower pass, so only <span data-source="methods_facts" data-field="value" data-where="fact=roster_scientists">—</span> scientists have a roster or committee list
-        so far. Each FHL scientist and each teacher in the network has a two-paragraph profile (<span data-source="methods_facts" data-field="value" data-where="fact=profiles">—</span>
+        in the fact-checked profiles (below) add <span data-source="methods_facts" data-field="value" data-where="fact=profile_links">—</span>. Every FHL scientist was searched, in three rounds (the last starting from each profile's sources and ORCID record,
+        since web-search capacity ran short in the first two): <span data-source="methods_facts" data-field="value" data-where="fact=roster_found">—</span> have a roster, CV list or committee list;
+        <span data-source="methods_facts" data-field="value" data-where="fact=roster_no_lab">—</span> lead no lab of their own (students, early-career researchers or staff); <span data-source="methods_facts" data-field="value" data-where="fact=roster_historical">—</span>
+        worked before public lab pages and no list of their students is public; and for <span data-source="methods_facts" data-field="value" data-where="fact=roster_not_found">—</span> who taught,
+        no public list of trainees was found. Each FHL scientist and each teacher in the network has a two-paragraph profile (<span data-source="methods_facts" data-field="value" data-where="fact=profiles">—</span>
         in all), shown when the person is picked in "Find a person": an AI agent wrote it from the person's census record and
         public sources (faculty and lab pages, CVs, ORCID, obituaries), and a second agent checked every claim against
         those sources and revised <span data-source="methods_facts" data-field="value" data-where="fact=profiles_revised">—</span> of them. In all the network holds <span data-source="methods_facts" data-field="value" data-where="fact=network_links">—</span> links among <span data-source="methods_facts" data-field="value" data-where="fact=network_people">—</span> people. OpenAlex groups papers into
@@ -1531,7 +1533,7 @@
     const nStudents = (n) => (studentsOf.get(n) || []).length;
 
     const width = Math.max(260, el.clientWidth), drawW = Math.max(width, 760);
-    const height = Math.round(Math.max(520, Math.min(2100, 260 + names.length * 1.7)));
+    const height = Math.round(Math.max(520, Math.min(2800, 260 + names.length * 1.45)));
     const m = { top: 44, right: 150, bottom: 16, left: 14 };
     const years = names.map((n) => +info.get(n).year);
     const y0 = Math.min(d3.min(years), 1945), y1 = Math.max(d3.max(years), 2026);
