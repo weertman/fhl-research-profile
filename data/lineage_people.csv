@@ -1,65 +1,99 @@
 name,year,year_basis,fhl,students,teachers
-A. O. Dennis Willows,1965,first paper in OpenAlex,True,3,1
-AWE Galloway,2013,first FHL paper,True,19,0
+A. J. Kohn,2000,first census paper,False,1,0
+A. O. Dennis Willows,1962,year in a profile,True,9,1
+AWE Galloway,2013,first FHL paper,True,20,0
 Aaren Freeman,2006,lab roster years,False,0,1
 Aaron Cogger,2022,lab roster years,False,0,1
 Aaron Ninokawa,2015,lab roster years,False,0,1
 Aaron Olsen,2009,placed from their teachers,False,0,1
-Aaron W. E. Galloway,2006,first paper in OpenAlex,True,19,1
+Aaron W. E. Galloway,2002,year in a profile,True,20,5
 Abby van Hemmen,2014,first census paper,False,0,1
+Abdisalan Hawadle,2022,lab roster years,False,0,1
 Abdull J. Massri,2018,lab roster years,False,0,1
 Abisage Sekarore,2024,lab roster years,False,0,1
 Adam M. Reitzel,1999,first paper in OpenAlex,False,1,0
-Adam P. Summers,1989,birth year plus 25,True,38,1
+Adam P. Summers,1989,birth year plus 25,True,49,1
 Adam Pfefferle,2023,placed from their teachers,False,0,1
 Addie Band,2018,placed from their teachers,False,0,1
-Adrian Dahood,2015,placed from their teachers,False,0,1
+Adrian Dahood,2023,placed from their teachers,False,0,1
 Adriana T. Dawes,2006,first FHL paper,True,16,0
+Agnes Rouchon,2014,lab roster years,False,0,1
 Aidan McGowan,2019,lab roster years,False,0,1
+Alan Araiza,2026,lab roster years,False,0,1
+Albert Rodriguez,2005,lab roster years,False,0,1
 Alberto Stolfi,2008,first paper in OpenAlex,False,1,0
 Alejandro Berrio Escobar,2016,placed from their teachers,False,0,1
+Alejandro González Álvarez,2013,lab roster years,False,0,1
 Alex Anneken,2012,placed from their teachers,False,0,1
 Alex Lee,2016,lab roster years,False,0,1
+Alex Lowe,2013,first census paper,False,0,1
 Alex Primus,2008,placed from their teachers,False,0,1
+Alex Rau,1998,lab roster years,False,0,1
 Alex Young,2016,lab roster years,False,0,1
 Alexa Bely,1998,lab roster years,False,0,1
 Alexander Fodor,2014,first paper in OpenAlex,True,0,1
+Alexander T. Lowe,2011,first FHL paper,True,0,1
+Alexi Pearson-Lund,2019,first census paper,False,0,1
+Alexis Janosik,2011,lab roster years,False,0,1
+Alfred Wegener,1900,year in a profile,False,0,1
 Ali Erani,2009,placed from their teachers,False,0,1
+Alicia Highland,2013,lab roster years,False,0,1
 Alisa Alker,2002,placed from their teachers,False,0,1
+Alison Duncan,2016,lab roster years,False,0,1
 Alison Lewis,2001,placed from their teachers,False,0,1
 Alison R. Sherwood,1998,first paper in OpenAlex,False,1,0
+Allan C. Hicks,2013,lab roster years,False,0,1
 Allegra Briggs,2016,placed from their teachers,False,0,1
+Alli Craig,2022,placed from their teachers,False,0,1
 Alli N. Cramer,2014,first paper in OpenAlex,True,7,1
+Allison Cherry,2019,lab roster years,False,0,1
 Allison Edgar,2022,first census paper,False,0,1
 Allison Tracy,2015,first census paper,False,0,1
+Allison Weaver Deal,2008,lab roster years,False,0,1
+Allyce Sullivan,2003,placed from their teachers,False,0,1
+Allyson Lombardo,2023,lab roster years,False,0,1
 Alyaa Fadl,2014,lab roster years,False,0,1
 Alyssa Gehman,2015,lab roster years,False,0,1
+Alyssa Lai,2012,placed from their teachers,False,0,1
+Alyssa Tinnon,2015,lab roster years,False,0,1
 Amanda Byer,2022,placed from their teachers,False,0,1
 Amanda L. Rychel,2004,first paper in OpenAlex,True,0,1
 Amanda Pustam,2016,placed from their teachers,False,0,1
 Amelia Mackenzie,2017,lab roster years,False,0,1
+Amy C. Wyeth,2024,lab roster years,False,0,1
 Amy Johnson,1980,lab roster years,False,0,1
 Amy L. Carlile,2008,first paper in OpenAlex,False,0,1
 Amy L. Moran,1997,first paper in OpenAlex,True,10,0
+Amy Noel Van Buren,2012,lab roster years,False,0,1
+Amy Rutter,2023,lab roster years,False,0,1
+Amy Singer,2011,first census paper,False,0,1
+Amy Yumiko Olsen,2020,lab roster years,False,0,1
 Anastasia Ennis,2017,lab roster years,False,0,1
-Andrea B. Kohn,1956,first paper in OpenAlex,False,1,0
-Andrea Glockner Fagetti,2009,placed from their teachers,False,0,1
+Andi Delgado,2021,lab roster years,False,0,1
+Andrea B. Kohn,1956,first paper in OpenAlex,False,1,1
+Andrea Glockner Fagetti,2019,lab roster years,False,0,1
 Andrea L Graham,2016,placed from their teachers,False,0,1
 Andrea Mandella,1993,lab roster years,False,0,1
 Andrea Ward,2006,placed from their teachers,False,0,1
 Andreas Altenburger,2009,first paper in OpenAlex,False,0,1
 Andreas Hejnol,1998,first paper in OpenAlex,False,1,0
-Andreas Heyland,2002,first paper in OpenAlex,True,31,1
+Andreas Heyland,1997,year in a profile,True,32,3
 Andreas Wanninger,1999,first paper in OpenAlex,False,1,0
-Andressa de Abreu Mello,2012,placed from their teachers,False,0,1
+Andressa de Abreu Mello,2022,placed from their teachers,False,0,1
+Andrew Barton,1999,lab roster years,False,0,1
 Andrew Clark,2016,first census paper,False,0,2
 Andrew Cohen,2002,first census paper,False,0,1
-Andrew E. Christie,1994,first paper in OpenAlex,True,1,0
-Andrew Hunter,2012,placed from their teachers,False,0,1
+Andrew E. Christie,1994,first paper in OpenAlex,True,1,1
+Andrew Fischer,2007,lab roster years,False,0,1
+Andrew Hunter,2002,lab roster years,False,0,1
+Andrew Pershing,1995,lab roster years,False,0,1
+Andy Loomis,2007,placed from their teachers,False,0,1
+Andy Mahon,1997,placed from their teachers,False,0,1
 Angela Kita,2008,placed from their teachers,False,0,1
 Ani Michaud,2019,placed from their teachers,False,0,1
 Anja Kleinteich,2003,lab roster years,False,0,1
 Anja Studer,2021,placed from their teachers,False,0,1
+Ann Elizabeth Hillier,2015,lab roster years,False,0,1
 Ann Holmes,2007,placed from their teachers,False,0,1
 Ann Miller,2006,first census paper,False,0,1
 Ann Rouse,1996,placed from their teachers,False,0,1
@@ -68,169 +102,251 @@ Anna Wolff,2019,placed from their teachers,False,0,1
 Anne Sailer,2010,placed from their teachers,False,0,1
 Annette F. Govindarajan,2011,first census paper,False,0,1
 Annie Chu,2023,first census paper,False,0,1
+Annie Graham,2018,lab roster years,False,0,1
+Annie Thompson,2012,lab roster years,False,0,1
+Annika Nordin Saltman,2014,lab roster years,False,0,1
 Anthony Abruzzini,2018,lab roster years,False,0,1
+Anthony De Tomaso,2008,first census paper,False,1,0
 Antonio C. Marques,1995,first paper in OpenAlex,False,1,0
 April Blakeslee,2006,lab roster years,False,0,1
 Areej Alansari,2016,lab roster years,False,0,1
 Ariel Camp,2015,first census paper,False,0,1
+Arjun Hausner,2020,lab roster years,False,0,1
 Arthur H. Whiteley,1944,first paper in OpenAlex,True,5,0
+Ashley Bolwerk,2005,placed from their teachers,False,0,1
 Ashley Castelloe,2015,placed from their teachers,False,0,1
 Ashley Smith,2016,placed from their teachers,False,0,1
-Atta Ullah,2016,placed from their teachers,False,0,1
+Atta Ullah,2021,placed from their teachers,False,0,1
 Aubrey Taradash,2024,lab roster years,False,0,2
-Aurel Wintner,1928,birth year plus 25,False,1,2
+Aurel Wintner,1923,year in a profile,False,1,2
 Ava Mackay-Smith,2022,lab roster years,False,0,1
 Ayana Moore,2005,first census paper,False,0,1
 B. Rivest,1992,first census paper,False,0,1
 Baixue Yao,2013,placed from their teachers,False,0,1
+Beatriz Merino Antolín,2014,lab roster years,False,0,1
 Becca Maher,2025,first census paper,False,0,1
+Benjamin G. Miner,1998,lab roster years,False,0,1
+Benny Mather,2022,lab roster years,False,0,1
 Benson Chow,2017,lab roster years,False,0,1
 Berenice Baca-Ceballos,1996,placed from their teachers,False,0,1
 Berta Colom,2004,placed from their teachers,False,0,1
 Beth Sheets,2012,lab roster years,False,0,1
 Betul Senay Aras,2013,lab roster years,False,0,1
-Billie J. Swalla,1983,first paper in OpenAlex,True,49,0
+Billie J. Swalla,1981,year in a profile,True,49,1
 Bing Huey,2019,placed from their teachers,False,0,1
 Binh Nguyen,1972,placed from their teachers,False,0,1
+Bionda Morelissen,2011,lab roster years,False,0,1
 Blaine Griffen,2006,lab roster years,False,0,1
 Blerta Shtylla,2005,lab roster years,False,0,1
 Boris Masinovsky,1985,first paper in OpenAlex,False,0,1
-Brad Davidson,2001,first paper in OpenAlex,True,1,1
+Brad Davidson,1992,year in a profile,True,1,2
 Breanna Hall,2019,placed from their teachers,False,0,1
+Brenda Richardson Mallon,1995,lab roster years,False,0,1
 Brenda Schumpert,1997,lab roster years,False,0,1
 Brett Woodworth,2022,lab roster years,False,0,1
 Brian Badgley,1996,lab roster years,False,0,1
 Brian Burkel,2007,first census paper,False,0,1
-Brian Helmuth,1988,lab roster years,False,1,1
+Brian Burrows,2004,lab roster years,False,0,1
+Brian Helmuth,1988,lab roster years,False,1,4
 Brian Nowroozi,2017,placed from their teachers,False,0,1
-Brian Ort,2012,first census paper,False,0,1
-Brian S. Leander,2000,first paper in OpenAlex,False,1,0
+Brian S. Leander,2000,first paper in OpenAlex,False,2,0
+Brian S. Ort,2012,first census paper,False,0,2
+Britta Timpane-Padgham,2013,lab roster years,False,0,1
 Brock Roberts,2004,lab roster years,False,0,1
 Brook Swanson,1999,lab roster years,False,0,1
-Brooke Weigel,2022,first census paper,False,0,1
+Brooke Flammang,2008,first census paper,False,1,0
+Brooke L. Weigel,2015,first paper in OpenAlex,True,9,1
 Brooke Z. Torjman,2020,first paper in OpenAlex,False,0,1
+Bruce Alberts,1985,first census paper,False,1,0
+Bruce Monger,1987,lab roster years,False,0,1
 Bruce W. Frost,1967,first paper in OpenAlex,False,1,0
-Bruno José Teixeira de Melo,2013,placed from their teachers,False,0,1
-Bryan Nowroozi,2009,first census paper,False,0,1
+Bruno José Teixeira de Melo,2008,placed from their teachers,False,0,1
+Bryan N. Nowroozi,2010,lab roster years,False,0,2
 Bryanda Jerri Tiare Wippel,2012,thesis year minus five,False,0,1
-Bryce Wolcott,1986,placed from their teachers,False,0,1
+Bryce Wolcott,2021,placed from their teachers,False,0,1
 C. C. Ashley,1967,first paper in OpenAlex,False,1,0
 C. D. Harvell,1990,first census paper,False,0,1
-C. Drew Harvell,1979,birth year plus 25,True,33,0
+C. Drew Harvell,1979,birth year plus 25,True,36,2
 C. McFadden,1996,first census paper,False,0,1
-C. S. Cohen,1990,placed from their teachers,False,0,1
+C. S. Cohen,1998,placed from their teachers,False,0,1
 C. Shannon Briscoe,1985,lab roster years,False,0,1
-Caitlin Shishido,2018,lab roster years,False,0,1
+Caitlin Mariko Shishido,2012,lab roster years,False,0,2
+Caitlin Redak,1998,placed from their teachers,False,0,1
 Caitlyn Genovese,2023,lab roster years,False,0,1
+Caitlyn Shannon,2019,lab roster years,False,0,1
+Cally Harper,2012,lab roster years,False,0,1
 Calvin Lee,2017,lab roster years,False,0,1
 Camilla Nivison,2022,lab roster years,False,0,1
+Camille Vong,2025,lab roster years,False,0,1
+Candace J. Grimes,2007,placed from their teachers,False,0,1
 Carl Manner,2002,placed from their teachers,False,0,1
 Carla Narvaez,2022,first census paper,False,0,1
 Carlos Henrique Zanello Talarico,2015,placed from their teachers,False,0,1
+Carly Lo,2022,first census paper,False,0,1
 Carly Williamson,2014,lab roster years,False,0,1
-Carolina Bonilla,2011,placed from their teachers,False,0,1
+Carolina Bonilla,2021,placed from their teachers,False,0,1
+Caroline Rice,2024,placed from their teachers,False,0,1
 Carolyn Keogh,2015,lab roster years,False,0,1
-Carrie Craig,2003,placed from their teachers,False,0,1
+Carrie Craig,2003,placed from their teachers,False,0,2
+Carroll Williams,1937,placed from their students,False,1,0
 Carson Keever,2003,lab roster years,False,0,1
 Carter Kimsey,2005,lab roster years,False,0,1
+Casey Greufe,2019,lab roster years,False,0,1
 Cassandra Azeredo-Tseng,2014,placed from their teachers,False,0,1
-Cassandra M Donatelli,2015,first paper in OpenAlex,False,0,1
+Cassandra M. Donatelli,2009,year in a profile,False,0,2
 Cassie Vaniotis,2000,placed from their teachers,False,0,1
 Catherine Kim,2021,placed from their teachers,False,0,1
 Cecilia Hernández,2019,lab roster years,False,0,1
+Celina Scott-Buechler,2018,lab roster years,False,0,1
+Chantel Taylor,2015,first census paper,False,0,1
 Char Konikoff,2004,lab roster years,False,0,1
-Charles H. Greene,1981,first paper in OpenAlex,True,1,0
+Charles Bradley Shuster,1995,first paper in OpenAlex,True,9,0
+Charles H. Greene,1981,first paper in OpenAlex,True,40,0
+Charles Heller,2012,lab roster years,False,0,1
+Charles Laird,1971,first census paper,False,1,0
 Charles Lang,2018,placed from their teachers,False,0,1
 Charles Nelson,1968,placed from their teachers,False,0,1
+Charlotte Boyd,2012,lab roster years,False,0,1
+Charlotte Loring Dohrn,2019,lab roster years,False,0,1
+Chinyere Mary-Cynthia Awaogu,2026,lab roster years,False,0,1
 Chisato Kitazawa,2016,placed from their teachers,False,0,1
+Chloe Beck,2023,lab roster years,False,0,1
 Chloe Schwab,2024,lab roster years,False,0,1
 Chris Cameron,1997,lab roster years,False,0,1
 Chris Lowe,1997,lab roster years,False,0,1
 Chris Newfeld,2005,lab roster years,False,0,1
+Chris Wells,2005,placed from their teachers,False,0,1
 Christian Bojorquez,2019,lab roster years,False,0,1
+Christina Geierman,2006,lab roster years,False,0,1
 Christina Linkem,2014,first census paper,False,0,1
 Christina Mork,2001,first shared paper,False,0,1
-Christopher David Wells,2014,thesis year minus five,False,0,1
+Christopher David Wells,2013,lab roster years,False,0,2
 Christopher G. Reed,1982,first shared paper,False,0,1
 Christopher Goatley,2021,lab roster years,False,0,1
 Christopher Neufeld,2005,lab roster years,False,0,1
+Christopher Robert Dailey,2019,lab roster years,False,0,1
 Chung Nam Chung,2002,lab roster years,False,0,1
 Citlalli Aquino,2000,placed from their teachers,False,0,1
+Claire Fox,2020,first census paper,False,0,1
 Claire Hutchinson,2017,lab roster years,False,0,1
 Clara F. Asnes,1978,first shared paper,True,0,1
 Clare Ogle,2021,first census paper,False,0,1
+Claudia E. Mills,1974,year in a profile,True,0,2
 Colette J. Feehan,2010,first paper in OpenAlex,True,3,0
+Colin Beal,2005,lab roster years,False,0,1
 Colleen Burge,2015,first census paper,False,0,1
 Colleen Cavanaugh,1978,lab roster years,False,0,1
+Colton Miller,2004,placed from their teachers,False,0,1
+Connor Trexell,2020,lab roster years,False,0,1
 Constance Amanda Sullivan,2008,thesis year minus five,False,0,1
 Corrine Avidan,2023,placed from their teachers,False,0,1
 Courtney Babbitt,2014,placed from their teachers,False,0,1
 Courtney Couch,2015,placed from their teachers,False,0,1
+Courtney Greiner,2016,lab roster years,False,0,1
 Craig Mandato,2024,placed from their teachers,False,0,1
-D. Bertram,2024,placed from their teachers,False,0,1
+Cristina Quesada Candela,2020,lab roster years,False,0,1
+Cristina Villalobos,2012,lab roster years,False,0,1
+D. Bertram,2015,placed from their teachers,False,0,1
 D. Eernisse,2010,first census paper,False,0,1
 D. Vaughn,2006,first census paper,False,0,1
-Dan Nicolau,2015,placed from their teachers,False,0,1
+Damien S. Waits,2014,lab roster years,False,0,1
+Dan Nicolau,1977,placed from their teachers,False,0,1
 Dan Runcie,2011,lab roster years,False,0,1
 Dan Seufert,1992,lab roster years,False,0,1
 Dan Shapiro,1998,placed from their teachers,False,0,1
+Dan Thornhill,2000,placed from their teachers,False,0,1
 Daniel A. Janies,1993,first paper in OpenAlex,False,0,1
 Daniel Geldof,2014,first shared paper,False,0,1
-Daniel Grünbaum,1994,first paper in OpenAlex,True,3,2
+Daniel Grünbaum,1987,year in a profile,True,14,3
+Daniel H. van Hees,2010,lab roster years,False,0,1
 Daniel Harris,2024,lab roster years,False,0,1
 Daniel Hossfeld,2018,lab roster years,False,0,1
+Daniel Pendleton,2010,lab roster years,False,0,1
 Danielle Desmet,2015,lab roster years,False,0,1
 Danielle Paster,2002,lab roster years,False,0,1
 Danilo Pecorino,2011,placed from their teachers,False,0,1
+Danny Grünbaum,2011,first census paper,False,1,0
 Danny Sanchez,2023,placed from their teachers,False,0,1
 Darragh Clancy,2015,lab roster years,False,0,1
 Darren Fraser,2018,lab roster years,False,0,1
+Dave Williams,2012,lab roster years,False,0,1
+David Baier,2023,placed from their teachers,False,0,1
 David Baker,2003,placed from their teachers,False,0,1
 David Garfield,2010,lab roster years,False,0,1
+David Gifondorwa,2001,lab roster years,False,0,1
 David H. Gire,2008,first paper in OpenAlex,False,2,0
 David Ignacio,2014,lab roster years,False,0,1
+David Julian,1987,placed from their students,False,1,0
+David Kohler,2001,lab roster years,False,0,1
 David Lake,2009,placed from their teachers,False,0,1
-Dawn Vaughn,2005,lab roster years,True,0,1
+David O. Duggins,1979,first paper in OpenAlex,True,1,0
+David Rosenfeld,2000,lab roster years,False,0,1
+Dawn Vaughn,2004,year in a profile,True,0,2
+Dayanitha Damodaran,2019,lab roster years,False,0,1
+Dean Grubbs,2018,first census paper,False,1,0
+Dean Jacobson,1984,lab roster years,False,0,1
 Deborah L. Penry,1986,first shared paper,False,0,1
-Denisse Galarza,2015,placed from their teachers,False,0,1
-Derek Smith,2014,thesis year minus five,False,0,1
+Deborah Sills,2005,lab roster years,False,0,1
+Delany Rodriguez,2008,lab roster years,False,0,1
+Denisse Galarza,2005,placed from their teachers,False,0,1
+Dennis Dunninger,1961,year in a profile,False,0,1
+Derek Smith,2014,thesis year minus five,False,0,2
 Devjanee Swain-Lenz,2003,placed from their teachers,False,0,1
+Devya Hemraj-Naraine,2025,lab roster years,False,0,1
+Dhani Biscocho,2010,lab roster years,False,0,1
 Diana DiMarco,2016,lab roster years,False,0,1
 Diana White,2007,lab roster years,False,0,1
+Dianna Padilla,1987,first census paper,False,1,0
 Dilma Karunathilake,2013,placed from their teachers,False,0,1
 Dina F. Mandoli,1981,first paper in OpenAlex,False,2,0
+Dmitry Sakharov,1974,placed from their students,False,1,0
 Dom Chomchai,2010,placed from their teachers,False,0,1
-Dominic M. Sivitilli,2019,first paper in OpenAlex,False,0,1
+Dominic M. Sivitilli,2018,year in a profile,False,0,1
+Donovan Hesselroth,2021,lab roster years,False,0,1
 Dorhkas Ramos,2007,placed from their teachers,False,0,1
 Dosung Son,2009,lab roster years,False,0,1
+Doug Phinney,1996,lab roster years,False,0,1
 Douglas F. Bertram,1991,first paper in OpenAlex,False,0,1
 Douglas Updike,1987,lab roster years,False,0,1
 Drew Villeneuve,2020,lab roster years,False,0,1
 Dylan K. Wainwright,2011,first shared paper,False,0,1
 E. B. Kaczmarek,2016,first census paper,False,0,1
-E. Goldman,1980,placed from their teachers,False,0,1
+E. Goldman,2004,placed from their teachers,False,0,1
+E. J. Lund,1911,first paper in OpenAlex,True,1,0
 E. S. Branscomb,1978,first census paper,False,0,1
+E. Sanford Branscomb,1981,first FHL paper,True,0,1
 E. W. Misty Paig‐Tran,2011,first FHL paper,True,0,1
 Edgar Meyhöfer,1985,first paper in OpenAlex,False,0,1
 Edwin Munro,2000,first paper in OpenAlex,True,22,1
 Ehab Abouheif,2001,lab roster years,False,0,1
+Eileen Bates,2017,lab roster years,False,0,1
+Eleanor Lamont,2017,lab roster years,False,0,1
+Eleanor Rollins,2024,placed from their teachers,False,0,1
+Eli Meir,1992,lab roster years,False,0,1
 Elias Taylor,2024,first census paper,False,0,1
 Elijah K. Lowe,2014,first paper in OpenAlex,False,0,1
 Eliot Hall,2011,placed from their teachers,False,0,1
 Eliott Drucker,1995,lab roster years,False,0,1
-Eliza C. Heery,2009,first paper in OpenAlex,True,0,1
+Eliza C. Heery,2009,first paper in OpenAlex,True,0,2
 Elizabeth A. Ashley,2019,first paper in OpenAlex,False,0,1
+Elizabeth C. Cooney,2016,lab roster years,False,0,1
+Elizabeth D. Tobin,2013,lab roster years,False,0,1
 Elizabeth Diehl,2022,placed from their teachers,False,0,2
 Elizabeth G. Boulding,1984,first paper in OpenAlex,False,1,0
 Elizabeth Jewett,1997,lab roster years,False,0,1
-Elizabeth L. Brainerd,1989,first paper in OpenAlex,True,22,0
+Elizabeth L. Brainerd,1989,first paper in OpenAlex,True,49,0
+Elizabeth Wheat,2006,lab roster years,False,0,1
 Elizabeth White,2013,placed from their teachers,False,0,1
 Ella Maltby,2016,lab roster years,False,0,1
+Ella Woodruff,2025,first census paper,False,0,1
 Elora Chatain,2010,placed from their teachers,False,0,1
 Elska B. Kaczmarek,2015,first shared paper,False,0,2
+Emanuel Azizi,2004,lab roster years,False,0,1
 Emilie Knighton,2022,lab roster years,False,0,1
-Emily A. Roberts,2015,first FHL paper,True,0,1
-Emily Carrington,1989,first paper in OpenAlex,True,46,0
+Emily A. Roberts,2009,year in a profile,True,0,2
+Emily Buckner,2019,lab roster years,False,0,1
+Emily Burke,2014,lab roster years,False,0,1
+Emily Carrington,1987,year in a profile,True,53,2
 Emily Chapman,2024,lab roster years,False,0,1
 Emily Knott,2000,first census paper,False,0,1
 Emily McMahon,2023,lab roster years,False,0,1
@@ -241,142 +357,211 @@ Emily Vidušić,2024,placed from their teachers,False,0,2
 Emlyn Resetarits,2016,lab roster years,False,0,1
 Emma Lewis,2013,placed from their teachers,False,0,1
 Emma Stein,2022,placed from their teachers,False,0,1
-Emma Timmins-Schiffman,2012,first paper in OpenAlex,False,0,1
+Emma Timmins-Schiffman,2009,year in a profile,False,0,1
 Emma Wallace,2022,lab roster years,False,0,1
+Emmerson Sirk,2020,lab roster years,False,0,1
+Emmy Delekta,2025,lab roster years,False,0,1
 Emília P. Martins,1991,first paper in OpenAlex,False,1,0
 Enjian Chen,2017,lab roster years,False,0,1
 Eric Chen,2015,first census paper,False,0,1
 Eric D. Tytell,2000,first paper in OpenAlex,False,1,0
 Eric Hilton,2022,lab roster years,False,0,1
 Eric J. Sandoval,2004,lab roster years,False,0,1
+Eric Lopresti,2015,first census paper,False,0,1
 Eric Rosenthal,2004,placed from their teachers,False,0,1
+Erich Kähler,1919,placed from their teachers,False,0,1
+Erika Giblin,2023,placed from their teachers,False,0,1
 Erika Tavares,2023,placed from their teachers,False,0,1
 Erika V. Iyengar,2001,first paper in OpenAlex,False,2,1
 Erin Dollard,2021,placed from their teachers,False,0,1
-Erin Meyer-Gutbrod,2012,first paper in OpenAlex,False,0,1
-Erin Winters-Mist Paig-Tran,2008,thesis year minus five,False,0,1
+Erin Elaine Cooper,2010,lab roster years,False,0,1
+Erin Horkan,2016,lab roster years,False,0,1
+Erin Marie Chan Murray,2016,lab roster years,False,0,1
+Erin Meyer-Gutbrod,2010,lab roster years,False,0,1
+Erin Winters-Mist Paig-Tran,2007,year in a profile,False,0,1
+Ernst Hölder,2005,placed from their teachers,False,0,1
+Esperanza Irles Vidal,2015,lab roster years,False,0,1
+Esther M. Leise,1965,first paper in OpenAlex,True,10,0
 Ethan Nash,2024,lab roster years,False,0,1
+Eugenia del Pino,1987,placed from their students,False,1,0
+Eva Hasegawa,2018,lab roster years,False,0,1
+Eva María Bru Tarí,2019,lab roster years,False,0,1
+Eva Tudurí López,2008,lab roster years,False,0,1
+Evan Fiorenza,2017,lab roster years,False,0,1
 Evan Hopps,2026,first census paper,False,0,1
-Eve Robinson,1994,placed from their teachers,False,0,1
-Evelyn Hoover,2019,placed from their teachers,False,0,1
-F. Oyarzun,2004,placed from their teachers,False,0,1
-Federico D. Brown,2002,first paper in OpenAlex,True,17,1
+Eve Robinson,2021,placed from their teachers,False,0,1
+Evelyn Hoover,2014,placed from their teachers,False,0,1
+Evija Smite,1996,lab roster years,False,0,1
+F. Oyarzun,1972,placed from their teachers,False,0,1
+Federico D. Brown,1997,year in a profile,True,17,4
+Fernanda X. Oyarzún,2006,first FHL paper,True,0,1
 Fiona Harper,2003,lab roster years,False,0,1
 Fleur Anteau,2021,lab roster years,False,0,1
-Flora Vaught,2006,placed from their teachers,False,0,1
+Flora Vaught,2012,placed from their teachers,False,0,1
+Florencia Visconti,2014,placed from their teachers,False,0,1
 Francois Robin,2006,first census paper,False,0,1
 Frank H. Johnson,1931,first paper in OpenAlex,True,1,0
-Frederick D. Dooley,2012,first FHL paper,True,0,1
+Frederick D. Dooley,2008,year in a profile,True,0,2
+Frederick Dowell,2023,lab roster years,False,0,1
+Frederick Duerr,1953,placed from their students,False,1,0
 Frederike Klimm,2018,lab roster years,False,0,1
-Fu-Shiang Chia,1966,first paper in OpenAlex,False,2,0
-G. Wray,2017,placed from their teachers,False,0,1
+Fu-Shiang Chia,1966,first paper in OpenAlex,False,3,0
+G. Wray,1979,placed from their teachers,False,0,1
 Gabi Mukai,2024,lab roster years,False,0,1
 Gabriel Ng,2014,first census paper,False,0,1
+Gabriela Maria Carr,2021,lab roster years,False,0,1
+Gabrielle Haak,2012,lab roster years,False,0,1
 Gabrielle Rupert,2019,lab roster years,False,0,1
 Gareth J. Fraser,2004,first paper in OpenAlex,False,1,0
 Garrett M. Odell,1966,first paper in OpenAlex,True,2,0
+George B. Craig,1955,placed from their students,False,1,0
 George Czeck,2016,lab roster years,False,0,1
-George von Dassow,1993,first paper in OpenAlex,True,0,2
+George O. Mackie,1973,first census paper,False,1,0
+George von Dassow,1993,first paper in OpenAlex,True,5,2
 Gert-Jan Jeunen,2023,placed from their teachers,False,0,1
+Gideon Gal,1998,lab roster years,False,0,1
 Glen MacMaster,2006,lab roster years,False,0,1
 Glenda Niven,2003,placed from their teachers,False,0,1
-Glenys D. Gibson,1989,first paper in OpenAlex,False,0,1
+Glenys D. Gibson,1988,year in a profile,False,0,1
+Gordon Gunter,2024,placed from their teachers,False,0,1
 Grace A. Crandall,2023,first census paper,False,0,1
-Grace Leuchtenberger,2022,first census paper,False,0,1
+Grace Leuchtenberger,2020,lab roster years,False,0,2
 Grace Walls,2020,lab roster years,False,0,1
 Graham Hoyle,1952,first paper in OpenAlex,False,1,0
 Graham Lobert,2024,lab roster years,False,0,1
 Greg McCullagh,2004,placed from their teachers,False,0,1
-Gregory A. Wray,1986,first paper in OpenAlex,True,45,0
+Gregory A. Wray,1986,first paper in OpenAlex,True,45,1
 Gregory S. Gavelis,2009,first paper in OpenAlex,False,0,1
+Gregory Thorhaug,2000,lab roster years,False,0,1
 Gretchen M. Moeser,2006,first paper in OpenAlex,False,0,1
 Gretchen Moeser Binns,2003,lab roster years,False,0,1
-Guilherme Gainett,2024,placed from their teachers,False,0,1
+Guilherme Gainett,2014,placed from their teachers,False,0,1
+Gustav Kessel,2014,lab roster years,False,0,1
 H. A. Lessios,1979,first paper in OpenAlex,False,1,0
 H. Gary Greene,1969,first paper in OpenAlex,True,7,0
-H. Hess,2001,placed from their teachers,False,0,1
+H. Hess,2008,placed from their teachers,False,0,1
 Haibei Zhang,2018,placed from their teachers,False,0,1
-Hailey Loucks,2003,placed from their teachers,False,0,1
+Hailey Loucks,2009,placed from their teachers,False,0,1
 Haiyang Cui,1963,placed from their teachers,False,0,1
+Haluk Lacin,2004,lab roster years,False,0,1
 Hanna Miller,2015,thesis year minus five,False,0,1
 Hannah Devens,2022,lab roster years,False,0,1
 Hannah Hayes,2020,lab roster years,False,0,2
-Hannah Snow,1997,placed from their teachers,False,0,1
+Hannah Kieler,2020,lab roster years,False,0,1
+Hannah Ricioli,2024,placed from their teachers,False,0,1
+Hannah Snow,1999,placed from their teachers,False,0,1
 Hannah Stewart,2001,lab roster years,False,0,2
 Hannah Weller,2020,first census paper,False,0,1
 Hannah Wynen,2019,lab roster years,False,0,1
 Hans Bridiger Maucar Navarrete,2018,placed from their teachers,False,0,1
 Hans C P Kelstrup,2010,first census paper,False,0,1
 Hans Jorgen Fyhn,1970,first paper in OpenAlex,True,0,1
-Harold A. Scheraga,1946,birth year plus 25,False,1,0
+Harold A. Scheraga,1939,year in a profile,False,1,1
+Harrison Mancke,2022,placed from their teachers,False,0,1
 Harsimran Gill,2021,first census paper,False,0,1
 Harsimron Gill,2018,lab roster years,False,0,1
+Hayden Amidon,2019,lab roster years,False,0,1
 Heather Brown,2002,lab roster years,False,0,1
-Heather Counts,2015,placed from their teachers,False,0,1
+Heather Counts,2020,placed from their teachers,False,0,1
+Heather Lopes,2018,lab roster years,False,0,1
 Heather Shimamoto,2001,lab roster years,False,0,1
 Hee Sun Kim,2005,lab roster years,False,0,1
+Heidi Pye,1995,placed from their teachers,False,0,1
 Heidi Schwaninger,2000,placed from their teachers,False,0,1
 Heidi Weiskel,2005,lab roster years,False,0,1
 Helen Chea,2004,lab roster years,False,0,1
+Helen Cheng,2013,lab roster years,False,0,1
+Helia Megowan,2023,lab roster years,False,0,1
 Hidehiko Hashimoto,2013,placed from their teachers,False,0,1
-Hilary A. Hayford,2011,thesis year minus five,True,0,1
+Hilary A. Hayford,2010,lab roster years,True,0,2
+Hilary Frost Browning,2012,lab roster years,False,0,1
+Hilary J. Polis,2015,lab roster years,False,0,1
 Hironobu Ozaki,1965,first paper in OpenAlex,True,0,1
 Hoi-Ying Elsie Yu,2006,placed from their teachers,False,0,1
-Holly Belanco,2022,placed from their teachers,False,0,1
+Holly Barton Keammerer,2011,lab roster years,False,0,1
+Holly Belanco,2017,placed from their teachers,False,0,1
 Holly L. Lopez,2006,lab roster years,False,0,1
+Holly L. Suther,2024,lab roster years,False,0,1
+Hope Zimmerman,2021,lab roster years,False,0,1
+Howard Bern,1962,first census paper,False,1,0
+Hugh Forrest,1960,placed from their students,False,1,0
+Hugo von Seeliger,1869,placed from their students,False,1,0
 Hwan Su Yoon,1997,first paper in OpenAlex,False,2,0
 Hyuk Je Lee,2004,first paper in OpenAlex,False,0,1
 Hélène Benink,2005,first census paper,False,0,1
+Ian Brosnan,2013,lab roster years,False,0,1
+Imke Maiken Böök,2023,lab roster years,False,0,1
 Irit Altman,2008,lab roster years,False,0,1
-Isabel Graham,2010,placed from their teachers,False,0,1
-Ivan André Morillo Guerrero,2017,placed from their teachers,False,0,1
-Iván Quesada,1999,first paper in OpenAlex,True,0,1
+Isabel Graham,2008,placed from their teachers,False,0,1
+Isaiah Lary,2002,lab roster years,False,0,1
+Ivan André Morillo Guerrero,2012,placed from their teachers,False,0,1
+Iván Quesada,1999,first paper in OpenAlex,True,6,1
 J. Hoffman,2001,first census paper,False,0,1
 J. Muse Davis,2000,lab roster years,False,0,1
-J. Staver,2008,placed from their teachers,False,0,1
-J. Timothy Pennington,1984,first paper in OpenAlex,False,0,1
-J. West,2008,placed from their teachers,False,0,1
+J. Staver,1989,placed from their teachers,False,0,1
+J. Timothy Pennington,1981,year in a profile,False,0,1
+J. West,2019,placed from their teachers,False,0,1
 JJ Lomax,2014,lab roster years,False,0,2
 Jack Litle,2021,thesis year minus five,False,0,1
+Jack Rosen,2024,lab roster years,False,0,1
 Jackson Fennell,2018,lab roster years,False,0,2
 Jacob Wiess,2007,placed from their teachers,False,0,1
+Jaida Elcock,2022,first census paper,False,0,1
 Jalene Weatherholt,2016,lab roster years,False,0,1
 James B. McClintock,1981,first paper in OpenAlex,False,1,0
 James E. Byers,1999,first paper in OpenAlex,True,39,0
-James L. Dimond,2005,lab roster years,False,0,1
+James L. Dimond,2005,lab roster years,False,0,2
 James M. Newcomb,2001,first FHL paper,True,0,1
+James Murray,1993,lab roster years,False,0,1
+James O'Reilly,2007,placed from their teachers,False,0,1
 James S. Albert,1992,first paper in OpenAlex,False,2,0
-James W. Truman,2017,first census paper,True,1,1
+James Sikes,2002,lab roster years,False,0,1
+James Tarrant,2014,first census paper,False,0,1
+James William Truman,1965,year in a profile,True,5,2
 James Winton,1981,first paper in OpenAlex,False,1,0
 Jamie Bucholz,2016,lab roster years,False,0,1
+Jamie Kilgo,2011,lab roster years,False,0,1
 Jan Witting,1991,lab roster years,False,0,1
 Jane Swart,2018,lab roster years,False,0,1
 Janet Bair,2009,placed from their teachers,False,0,1
 Janet E. Tilden,2003,lab roster years,False,0,1
+Janine Mary Russell,2007,lab roster years,False,0,1
+Janis C. Weeks,1974,lab roster years,False,0,1
 Jaquan Horton,2015,thesis year minus five,True,0,2
 Jasleena Grewal,2012,lab roster years,False,0,1
 Jason Addison,2003,lab roster years,False,0,1
 Jason Andras,2013,placed from their teachers,False,0,1
-Jason Hodin,1993,first paper in OpenAlex,True,4,0
+Jason Hodin,1993,first paper in OpenAlex,True,6,1
 Jason Pitt,2001,lab roster years,False,0,1
 Jason Stumpff,2008,first census paper,False,0,1
+Jay Dimond,2005,placed from their teachers,False,0,1
 Jay Raveill,1989,lab roster years,False,0,1
 Jayna Devore,2007,lab roster years,False,0,1
+Jeannette Zamon,1992,lab roster years,False,0,1
+Jeannine Fischer,2011,lab roster years,False,0,1
 Jeff Beauvais,2022,lab roster years,False,0,1
+Jeff Brown,2001,lab roster years,False,0,1
 Jeffrey Maynard,2015,first census paper,False,0,1
-Jen Hsu,2013,placed from their teachers,False,0,1
+Jen Hsu,2017,placed from their teachers,False,0,1
 Jenn Huber,1996,lab roster years,False,0,1
+Jenna C. Rolf,2021,lab roster years,False,0,1
 Jennafer Malek,2014,lab roster years,False,0,1
 Jennie Beltrán,2013,first census paper,False,0,1
 Jennifer Israel,2001,placed from their teachers,False,0,1
+Jennifer L. Hahn,2021,lab roster years,False,0,1
+Jennifer L. Hill,2016,lab roster years,False,0,1
+Jennifer Lopez,2013,lab roster years,False,0,1
 Jennifer R. Hoffman,1995,first paper in OpenAlex,True,0,1
 Jennifer Ross,1997,lab roster years,False,0,1
+Jennifer Ruesink,2009,first census paper,False,3,0
 Jennifer Sunday,2004,lab roster years,False,0,1
+Jennifer Whiteis,2004,lab roster years,False,0,1
 Jenny Sider,2009,first census paper,False,0,1
 Jenny Tung,2009,lab roster years,False,0,1
 Jeremy Cooper,2008,first census paper,False,0,1
+Jeremy Johnson,2023,lab roster years,False,0,1
 Jesse Espinoza,2000,placed from their teachers,False,0,1
-Jessica E. Spiewak,2004,placed from their teachers,False,0,1
+Jessica E. Spiewak,1990,placed from their teachers,False,0,1
 Jessica M. Kendall-Bar,2014,first paper in OpenAlex,False,0,1
 Jessica Palmeri,2021,lab roster years,False,0,1
 Jessica Ward,2006,placed from their teachers,False,0,1
@@ -385,86 +570,137 @@ Jessie Masterman,2024,lab roster years,False,0,2
 Jeyna Perez,2018,lab roster years,False,0,1
 Jianguang Du,1985,placed from their teachers,False,0,1
 Jim Balhoff,2024,placed from their teachers,False,0,1
+Jim Cushing,1963,year in a profile,False,0,1
 Jin Hong,1994,first paper in OpenAlex,False,0,1
 Joann J. Otto,1976,first FHL paper,True,1,0
 Joaquim Garrabou,1992,lab roster years,False,0,1
 Joe Bizzarro,2018,placed from their teachers,False,0,1
-Joe Mello,2012,placed from their teachers,False,0,1
+Joe Mello,2006,placed from their teachers,False,0,1
 Joelle Tirindelli,1999,placed from their teachers,False,0,1
 Johanna Taylor Cannon,2008,first paper in OpenAlex,True,0,1
 John Abad,2020,lab roster years,False,0,1
 John Bruno,1996,first census paper,False,0,1
 John Capano,2000,placed from their teachers,False,0,1
+John Currey,1959,placed from their students,False,1,0
+John Edsall,1929,placed from their students,False,1,0
+John Ewer,1985,lab roster years,False,0,1
+John Gosline,2011,first census paper,False,1,0
+John H. Henson,1983,first paper in OpenAlex,True,2,0
 John Meyer,2004,lab roster years,False,0,1
 John Peloquin,1998,placed from their teachers,False,0,1
 John Spieth,1980,first paper in OpenAlex,False,0,1
+John Van der Sman,2006,lab roster years,False,0,1
 Joleah Lamb,1998,placed from their teachers,False,0,1
 Jon D. Witman,1979,lab roster years,False,0,1
 Jon L. Norenburg,1985,first paper in OpenAlex,False,1,0
+Jon Lew,2003,placed from their teachers,False,0,1
+Jon Schroeder,2019,lab roster years,False,0,1
 Jon Stone,1996,placed from their teachers,False,0,1
 Jon delEtoile,2015,lab roster years,False,0,1
+Jonathan B. Alberts,2004,first FHL paper,True,1,0
+Jonathan Chapman,2020,lab roster years,False,0,1
+Jonathan Frommeyer,2025,lab roster years,False,0,1
 Jonathan M. Huie,2017,first paper in OpenAlex,False,0,1
 Jonathan Michaux,2013,placed from their teachers,False,0,1
-Jordan Roszell,2018,placed from their teachers,False,0,1
+Jordan Omoto,2016,lab roster years,False,0,1
+Jordan Roszell,2013,placed from their teachers,False,0,1
 Jose Tavera,2023,lab roster years,False,0,1
 Joseph J. Bizzarro,2006,first paper in OpenAlex,False,0,1
 Joseph K. Gaydos,2002,first paper in OpenAlex,False,1,0
+Joseph Spaulding,1997,placed from their teachers,False,0,1
 Josh Nowlis,1988,placed from their teachers,False,0,1
 Josh Sandquist,2020,placed from their teachers,False,0,1
-Josh Waxman,2024,placed from their teachers,False,0,1
+Josh Waxman,2012,placed from their teachers,False,0,1
 Joshua Isaac Cummings,2010,thesis year minus five,False,0,1
+Joshua Pratt Lord,2010,lab roster years,False,0,1
 Juan-Jesus Vicente,2019,placed from their teachers,False,0,1
+Julia Couper Leo,1994,lab roster years,False,0,1
 Julia Knopf,2026,lab roster years,False,0,1
 Julia Kobelt,2018,lab roster years,False,0,3
 Julia S. Miles,1984,lab roster years,False,0,1
+Julie Ann Koehlinger,2017,lab roster years,False,0,1
 Julie Blaze,2023,lab roster years,False,0,1
 Julie Canman,2004,first census paper,False,0,1
 Julie Schram,2010,lab roster years,False,0,2
-Julio A. Rivera,2017,first paper in OpenAlex,False,0,1
-Julius Bauschinger,1885,birth year plus 25,False,1,0
+Julie Sexton,1983,lab roster years,False,0,1
+Julie Van De Weghe,1998,placed from their teachers,False,0,1
+Julio A. Rivera,2010,year in a profile,False,0,1
+Julius Bauschinger,1879,year in a profile,False,2,1
 Justin Decarreau,2012,first census paper,False,0,1
-Justin Schaefer,2005,first census paper,False,0,1
+Justin Schaefer,2005,first census paper,False,0,2
 K. A. McDonald,2006,first census paper,False,0,1
-K. M. Pos,2018,first census paper,False,0,1
+K. Banse,1963,first census paper,False,1,0
+K. M. Pos,2018,first census paper,False,0,2
 Kade Stewart,2008,placed from their teachers,False,0,1
+Kailee Bynum,2014,lab roster years,False,0,1
+Kainat Khan,2024,placed from their teachers,False,0,1
+Kaitlyn Whetstine,2018,lab roster years,False,0,1
 Kanoe Morishige,2024,lab roster years,False,0,1
 Kaper Greenfield,2024,first census paper,False,0,1
+Kara Robbins,2017,lab roster years,False,0,1
 Karen Alroy,2018,placed from their teachers,False,0,1
 Karen Burke da Silva,1993,lab roster years,False,0,1
 Karen E. Thomas,1995,lab roster years,False,0,1
+Karen Fisher,2001,lab roster years,False,0,1
 Karen Strunk,1996,lab roster years,False,0,1
 Kari Weber,1998,placed from their teachers,False,0,1
 Karla Heidelberg,1991,lab roster years,False,0,1
 Karly Elizabeth Cohen,2017,thesis year minus five,True,0,3
-Kassandra L. Ford,2018,first paper in OpenAlex,False,0,1
+Karrin Leazer,2022,lab roster years,False,0,1
+Kassandra L. Ford,2018,first paper in OpenAlex,False,0,2
 Kate Sparks,2013,placed from their teachers,False,0,1
 Katharine R. Hind,2012,first paper in OpenAlex,False,0,1
 Katherine A. Corn,2015,first shared paper,False,0,1
 Katherine A. Galloway,2015,first paper in OpenAlex,False,0,1
+Katherine Boehrer,2013,lab roster years,False,0,1
+Katherine Elizabeth Keil,2018,lab roster years,False,0,1
+Katherine Fagan,2006,lab roster years,False,0,1
+Katherine Graubard,2003,first census paper,False,1,0
+Katherine Kirk,2012,lab roster years,False,0,1
 Katherine Paull,1991,lab roster years,False,0,1
 Katherine Purvis,2020,lab roster years,False,0,1
 Kathleen Durante,1984,lab roster years,False,0,1
 Kathleen Nolan,2019,lab roster years,False,0,1
 Kathleen Rankin,2005,first census paper,False,0,1
+Kathrin Simone Hauptfeld,2012,lab roster years,False,0,1
+Kathrina Welborn,2023,placed from their teachers,False,0,1
+Kathryn A. McDonald,2003,first FHL paper,True,0,4
+Kathryn L. Van Alstyne,1985,first paper in OpenAlex,True,7,0
 Kathryn Nuessly,2012,lab roster years,False,0,1
+Katie A. Dobkowski,2007,year in a profile,True,0,3
+Katie Cieri,2015,lab roster years,False,0,1
+Katie Johnson,2020,lab roster years,False,0,1
+Katie Stanchak,2005,placed from their teachers,False,0,1
+Katrin Birk,2025,first census paper,False,0,1
 Kayla Butler,2011,placed from their teachers,False,0,1
 Kayla C. Hall,2018,first paper in OpenAlex,True,0,1
+Kayla Gunther,2018,lab roster years,False,0,1
+Kayla M. Schommer,2018,lab roster years,False,0,1
 Kaylie Flores,2023,lab roster years,False,0,1
 KeChaunte Johnson,2016,lab roster years,False,0,1
+Keats Conley,2017,lab roster years,False,0,1
+Keith Metzger,2012,placed from their teachers,False,0,1
 Kellen Nold,2001,lab roster years,False,0,1
 Kelly Agnew,2021,placed from their teachers,False,0,1
-Kelly Dorgan,1985,placed from their teachers,False,0,1
+Kelly Dorgan,2008,placed from their teachers,False,0,1
+Kelly Druzisky,2000,lab roster years,False,0,1
 Kelly Grant,2000,lab roster years,False,0,1
 Kelly Lee,1998,placed from their teachers,False,0,1
 Kelsey Carter,2024,placed from their teachers,False,0,1
+Kelsey Stilson,2010,placed from their teachers,False,0,1
 Kelton Clark,1992,lab roster years,False,0,1
+Ken Lohmann,1984,placed from their teachers,False,0,1
 Ken Yokoyama,2018,placed from their teachers,False,0,1
 Kendall Smith,2021,lab roster years,False,0,2
-Kenneth M. Halanych,1989,first paper in OpenAlex,True,7,0
-Kenneth P. Sebens,1975,birth year plus 25,True,45,0
+Kenneth Fowler,2004,lab roster years,False,0,1
+Kenneth Lohmann,1985,first census paper,False,1,0
+Kenneth M. Halanych,1989,first paper in OpenAlex,True,31,0
+Kenneth P. Sebens,1975,birth year plus 25,True,57,0
 Kent Redford,1976,lab roster years,False,0,1
+Keow Thavaradhara Essig,1999,lab roster years,False,0,1
 Kerri Hayden Mullen,1998,lab roster years,False,0,1
 Kerry L. McGowan,2011,first paper in OpenAlex,False,0,1
+Kerry Walton,2017,lab roster years,False,0,1
 Kersten Schnurle,2024,placed from their teachers,False,0,2
 Kevin Leempoel,2014,placed from their teachers,False,0,1
 Kevin M. Kocot,2008,first paper in OpenAlex,False,0,1
@@ -472,12 +708,15 @@ Kevin Miklasz,2006,lab roster years,False,0,1
 Kevin Richard Turner,2011,thesis year minus five,False,0,1
 Kevin Sonnemann,2007,placed from their teachers,False,0,1
 Kevin Staras,1995,first paper in OpenAlex,False,0,1
+Kevin W. Hager,2016,lab roster years,False,0,1
 Khalid Alqaisi,2007,placed from their teachers,False,0,1
 Kieran Murphy,2018,placed from their teachers,False,0,1
 Kiho Kim,2020,placed from their teachers,False,0,1
 Kimberley Benson,1996,lab roster years,False,0,1
-Kindall Murie,2021,thesis year minus five,False,0,1
-Kirk S. Zigler,2003,first paper in OpenAlex,False,0,2
+Kindall Murie,2021,thesis year minus five,False,0,2
+Kira Lemke,2022,lab roster years,False,0,1
+Kira Treibergs,2011,lab roster years,False,0,1
+Kirk S. Zigler,1995,year in a profile,False,0,2
 Kirk W McLean,1974,first shared paper,False,0,1
 Kirsten Copren,2017,placed from their teachers,False,0,1
 Kit Yu Karen Chan,2008,thesis year minus five,False,0,1
@@ -485,22 +724,31 @@ Kiyoshi Hiruma,1981,placed from their teachers,False,0,1
 Kjell Johansen,1958,first paper in OpenAlex,True,1,0
 Koen Verbrugghe,2009,first census paper,False,0,1
 Kory M. Evans,2017,first paper in OpenAlex,False,0,2
-Koya Basso,2022,placed from their teachers,False,0,1
+Koya Basso,2007,placed from their teachers,False,0,1
+Kris Skotheim,2021,placed from their teachers,False,0,1
 Krista Graham,1988,lab roster years,False,0,1
 Krista Pipho,1998,placed from their teachers,False,0,1
 Kristen Suling,1988,lab roster years,False,0,1
 Kristen Zemaitis,2022,lab roster years,False,0,1
-Kristian Fauchald,1974,first paper in OpenAlex,False,1,0
+Kristian Fauchald,1960,year in a profile,False,1,1
 Kristin Sherrard,2000,first paper in OpenAlex,False,0,1
-Kristina Mead,2014,placed from their teachers,False,0,1
+Kristin Stover,2016,lab roster years,False,0,1
+Kristina M. Sawyer,2011,lab roster years,False,0,1
+Kristina Mead,1994,placed from their teachers,False,0,1
 Krystal Rypien,2015,placed from their teachers,False,0,1
 Kyle A. Serikawa,1992,first paper in OpenAlex,False,0,1
+Kyle B. Donnelly,2010,placed from their teachers,False,0,1
+Kyle L. Antonelis,2012,lab roster years,False,0,1
+Kyle T. David,2021,lab roster years,False,0,1
+Kyra Amacker,2020,placed from their teachers,False,0,1
 L. D. Allhouse,1999,first paper in OpenAlex,False,0,1
 L. McEdward,1986,first census paper,False,0,1
 L. Patricia Hernandez,2000,first paper in OpenAlex,False,1,0
-Larry R. McEdward,1979,first paper in OpenAlex,True,1,1
+Larry R. McEdward,1979,first paper in OpenAlex,True,3,1
+Laura Elsberry,2007,placed from their teachers,False,0,1
 Laura Ginkel,1996,placed from their teachers,False,0,1
 Laura Hernandez,2009,lab roster years,False,0,1
+Laura Jordan,2009,placed from their teachers,False,0,1
 Laura Melroy,2015,lab roster years,False,0,1
 Laura Mydlarz,2020,placed from their teachers,False,0,1
 Laura Newcomb,2009,first paper in OpenAlex,True,0,1
@@ -509,70 +757,95 @@ Laura Petes,2016,first census paper,False,0,1
 Laura Romano,1994,lab roster years,False,0,1
 Laura S. Corley,1994,lab roster years,False,0,1
 Laura Savina,1988,lab roster years,False,0,1
+Laura Timm,2011,lab roster years,False,0,1
+Laura Wigand,2011,lab roster years,False,0,1
 Laurel Sky Hiebert,2025,first census paper,False,0,1
-Lauren E. Vandepas,2011,first paper in OpenAlex,False,0,1
+Laurel Speed,2015,lab roster years,False,0,1
+Lauren E. Vandepas,2011,first paper in OpenAlex,False,0,2
 Lauren May,2005,lab roster years,False,0,1
 Lauren Pintor,2004,lab roster years,False,0,1
 Lauren Simonitis,2016,lab roster years,False,0,1
-Laurie Raymundo,1997,placed from their teachers,False,0,1
+Laurie Raymundo,2000,lab roster years,False,0,2
 Lawrence Small,2010,lab roster years,False,0,1
 Leah Wallach,2009,placed from their teachers,False,0,1
-Leda Restrepo,2021,placed from their teachers,False,0,1
+Leda Gerber,2007,lab roster years,False,0,1
+Leda Restrepo,2016,placed from their teachers,False,0,1
 Leela Madhava,2025,first census paper,False,0,1
-Leon Lichtenstein,1903,birth year plus 25,False,1,0
+Leon Lichtenstein,1903,birth year plus 25,False,3,0
 Leona Loibl,2000,placed from their teachers,False,0,1
-Leonid L. Moroz,1992,first paper in OpenAlex,True,3,0
+Leonid L. Moroz,1984,year in a profile,True,4,1
 Leslie Sepaniac,2008,placed from their teachers,False,0,1
 Lexie Trevors,2020,lab roster years,False,0,1
-Lexy Reinhardt,2024,lab roster years,False,0,1
+Lexy Reinhardt,2023,lab roster years,False,0,1
+Li Hao Yeoh,2019,lab roster years,False,0,1
+Liana Cook-Auckram,2018,lab roster years,False,0,1
 Lila Hoachlander-Hobby,2021,placed from their teachers,False,0,1
 Lillian Aoki,2021,first census paper,False,0,1
-Linda G. Wordeman,1986,first paper in OpenAlex,True,16,0
+Linda G. Wordeman,1986,first paper in OpenAlex,True,25,0
 Lindsay Smith,2024,placed from their teachers,False,0,1
-Lindsay Waldrop,2021,placed from their teachers,False,0,1
+Lindsay Waldrop,2023,placed from their teachers,False,0,1
 Lingyu Wang,2023,placed from their teachers,False,0,1
 Linsey Haram,2017,lab roster years,False,0,1
 Lisa Kotowski,2001,placed from their teachers,False,0,1
 Lisa Pfefferle,2020,placed from their teachers,False,0,1
 Lisa Truong,2014,first census paper,False,0,1
-Liyun Zeng,2004,lab roster years,False,0,1
+Liyun Zeng,2003,lab roster years,False,0,1
+Liz Borda,1998,placed from their teachers,False,0,1
 Liz Stockwell,1996,placed from their teachers,False,0,1
 Loakeim Kaltsidis,2018,lab roster years,False,0,1
 Lomax Boyd,2005,placed from their teachers,False,0,1
+Loretta Reiss,2012,placed from their teachers,False,0,1
 Louis Graf,2014,first paper in OpenAlex,False,0,1
+Louise McGarry,2008,lab roster years,False,0,1
 Louise Sutters,2017,lab roster years,False,0,1
 Louise Tunnah,2015,lab roster years,False,0,1
 Lubna Al-Ameri,2006,lab roster years,False,0,1
 Lucília S. Miranda,2009,first paper in OpenAlex,False,0,1
 Ludwik Gąsiorowski,2016,first paper in OpenAlex,False,0,1
-Luiza Saad,2016,placed from their teachers,False,0,1
+Luiza Saad,2021,placed from their teachers,False,0,1
 Luke A. Hoekstra,2007,first paper in OpenAlex,False,0,1
-Lyda S.T. Harris,2016,thesis year minus five,True,10,1
+Luke Rose,2022,placed from their teachers,False,0,1
+Lyda S.T. Harris,2015,year in a profile,True,10,1
 Lydia Fregosi,2021,lab roster years,False,0,1
-Lynn M. Riddiford,1947,first paper in OpenAlex,True,9,2
-M. A. R. Koehl,1976,first paper in OpenAlex,True,16,1
-M. Lamare,1975,placed from their teachers,False,0,1
+Lynn M. Riddiford,1947,first paper in OpenAlex,True,10,3
+M. A. R. Koehl,1969,year in a profile,True,16,3
+M. Lamare,1983,placed from their teachers,False,0,1
 M. Patricia Morse,1976,first paper in OpenAlex,False,1,0
+M. R. Baker,1981,first paper in OpenAlex,True,38,0
 M. Rebecca Jones,1993,lab roster years,False,0,1
 M. W. Hart,1995,first census paper,False,0,1
 M. W. Jacobs,2006,first FHL paper,True,0,1
-Mackenzie E. Gerringer,2011,lab roster years,True,9,1
+MacKenna Hainey,2018,lab roster years,False,0,1
+Mackenzie Ann Nelson,2017,lab roster years,False,0,1
+Mackenzie E. Gerringer,2011,lab roster years,True,9,2
+Madeline Cox,2025,lab roster years,False,0,1
 Madelyn Hair,2012,placed from their teachers,False,0,1
 Madison Bullock,2017,lab roster years,False,0,1
+Madison DiGirolamo,2025,lab roster years,False,0,1
+Madison Gard,2025,lab roster years,False,0,1
+Madolyn Kelm,2024,placed from their teachers,False,0,1
 Manny Azizi,2022,placed from their teachers,False,0,1
 Manon Cassista,2005,lab roster years,False,0,1
 Marc Sturrock,2007,lab roster years,False,0,1
-Marcela Bolaños,2016,placed from their teachers,False,0,1
+Marcela Bolaños,2011,placed from their teachers,False,0,1
+Marcela Ewert Sarmiento,2013,lab roster years,False,0,1
 Marcus Singer,1939,birth year plus 25,False,1,0
 Margaret Johnson,2019,lab roster years,False,0,1
 Margaret Pizer,2024,placed from their teachers,False,0,1
+Margaret Salsbury,2005,lab roster years,False,0,1
 Margaret Staller,2023,placed from their teachers,False,0,1
+Margaret Turner,2016,first census paper,False,0,1
 Maria Abate,1991,lab roster years,False,0,1
-Maria de Jesus Costa do Nascimento,2018,placed from their teachers,False,0,1
+Maria de Jesus Costa do Nascimento,2013,placed from their teachers,False,0,1
 Mariana Padrón,2008,placed from their teachers,False,0,1
 Marianne E Porter,2005,first paper in OpenAlex,False,0,1
+Marielle Beaulieu,2015,lab roster years,False,0,1
+Maris Daleo,2020,lab roster years,False,0,1
+Mark Denny,2011,first census paper,False,2,0
 Mark Lupisella,1999,lab roster years,False,0,1
 Mark R. Patterson,1978,lab roster years,False,0,1
+Marla Feinstein,2004,lab roster years,False,0,1
+Mary Rood,2010,lab roster years,False,0,1
 Mason N. Dean,2004,first paper in OpenAlex,False,0,1
 Matt George,2017,lab roster years,False,0,1
 Matt Hahn,2002,lab roster years,False,0,1
@@ -580,164 +853,251 @@ Matt Kolmann,2010,lab roster years,False,0,1
 Matt Larson,2019,placed from their teachers,False,0,1
 Matt Mills,1992,lab roster years,False,0,1
 Matt Pierce,2025,lab roster years,False,0,1
-Matt Reidenbach,1985,placed from their teachers,False,0,1
+Matt Reidenbach,2004,placed from their teachers,False,0,1
 Matt Rockman,2003,lab roster years,False,0,1
-Matthew A. Kolmann,2009,first paper in OpenAlex,True,1,0
+Matthew A. Kolmann,2009,first paper in OpenAlex,True,9,1
 Matthew Brown,2014,lab roster years,False,0,1
+Matthew Connelly,2010,lab roster years,False,0,1
+Matthew Galaska,2016,lab roster years,False,0,1
+Matthew Mills,1992,lab roster years,False,0,1
 Matthew N. George,2013,first FHL paper,True,0,1
+Maureen Keller,1975,lab roster years,False,0,1
 Max Eugene Maliska,2008,thesis year minus five,False,0,1
 Maya Matsumoto,2021,lab roster years,False,0,1
+Maya Wolf,2010,lab roster years,False,0,1
 Meg Vandenberg,2015,placed from their teachers,False,0,1
+Megan Black,2008,lab roster years,False,0,1
+Megan Dawson,2001,placed from their teachers,False,0,1
+Megan Ewing,2020,lab roster years,False,0,1
+Megan L Vandenberg,2018,year in a profile,True,0,1
 Megan Mellinger,1998,placed from their teachers,False,0,1
-Megan N. Dethier,1980,first paper in OpenAlex,True,2,0
+Megan N. Dethier,1976,year in a profile,True,14,1
 Megan Potapa,2012,placed from their teachers,False,0,1
 Megan Tomamichel,2023,lab roster years,False,0,1
+Mei Knutson,2026,lab roster years,False,0,1
+Melanie Dohner,2015,lab roster years,False,0,1
+Melissa Albers,2023,placed from their teachers,False,0,1
+Melissa Delgado,1998,placed from their teachers,False,0,1
 Meredith Dirkman,2021,thesis year minus five,False,0,1
 Meredyth Duncan,2017,placed from their teachers,False,0,1
+Mesrob Yeterian,2014,lab roster years,False,0,1
+Miao-Fang Lin Altshuller,1994,lab roster years,False,0,1
 Micah Dailey,1997,placed from their teachers,False,0,1
 Michael A. Harkey,1980,first FHL paper,True,0,1
-Michael Barsamian,2012,placed from their teachers,False,0,1
+Michael Barsamian,2004,placed from their teachers,False,0,1
 Michael Boller,2004,lab roster years,False,0,1
-Michael G. Tassia,2015,first shared paper,False,0,1
+Michael Brett,2012,first census paper,False,1,0
+Michael G. Tassia,2015,first shared paper,False,0,2
+Michael J. O'Donnell,2001,lab roster years,False,0,2
 Michael LaBarbera,1970,first paper in OpenAlex,False,1,0
 Michael Murtaugh,2022,lab roster years,False,0,1
-Michael O'Donnell,2001,lab roster years,False,0,2
 Michael O'Toole,2011,placed from their teachers,False,0,1
-Michael T. Nishizaki,1999,first paper in OpenAlex,True,0,1
+Michael T. Nishizaki,1999,first paper in OpenAlex,True,11,1
 Michael W. Hart,1987,first paper in OpenAlex,True,7,1
+Michael Zhang,2015,lab roster years,False,0,1
+Michelle Hoge,2018,lab roster years,False,0,1
 Michelle Kelley,2008,placed from their teachers,False,0,1
+Mikala Capage,2022,lab roster years,False,0,1
 Mike Thomas,2016,lab roster years,False,0,2
 Mike Wagenbach,2002,placed from their teachers,False,0,1
-Miles Lamare,1998,first census paper,True,6,0
+Miles D. Lamare,1998,first paper in OpenAlex,True,6,1
 Miles Rough,2023,placed from their teachers,False,0,2
+Min Zhong,2008,lab roster years,False,0,1
 Minako S. Vickery,1998,first paper in OpenAlex,False,0,1
 Ming Wei Aaron Toh,2024,lab roster years,False,0,1
 Minna Hiltunen,2019,lab roster years,False,0,2
+Minsu Kim,2001,lab roster years,False,0,1
+Miranda Winningham,2017,lab roster years,False,0,1
+Mo Armstrong,2021,lab roster years,False,0,1
 Mohammed Islam,2010,lab roster years,False,0,1
+Molly Grear,2017,first census paper,False,0,1
+Molly J. Good,2012,lab roster years,False,0,1
 Molly Jacobs,2000,lab roster years,False,0,1
-Monroe H. Martin,1932,birth year plus 25,False,1,1
+Molly Roberts,2011,placed from their teachers,False,0,1
+Monica Orellana,1991,year in a profile,False,0,1
+Monique Francis Holmes,2018,lab roster years,False,0,1
+Monroe H. Martin,1927,year in a profile,False,3,1
 Morgan Eisenlord,2011,first census paper,False,0,1
 Morgan Mouchka,1989,placed from their teachers,False,0,1
+Myndee McNeill,2011,lab roster years,False,0,1
 Nan Trowbridge,2016,placed from their teachers,False,0,1
 Nancy Douglas,2000,placed from their teachers,False,0,1
+Nancy Sealover,2016,lab roster years,False,0,1
 Naomi Sladkus,2020,lab roster years,False,0,1
 Natalia Filip,2022,placed from their teachers,False,0,1
 Natalia Kravtsova,2011,lab roster years,False,0,1
 Natalia Taft,2021,lab roster years,False,0,1
 Natalie Rivlin,2016,first census paper,False,0,1
-Natalie Thompson,2018,lab roster years,False,0,1
+Natalie Thompson,2018,lab roster years,False,0,2
 Nataliya Budaeva,2006,first paper in OpenAlex,False,0,1
 Nathan Kley,1998,placed from their teachers,False,0,1
+Nathan Whelan,2019,placed from their teachers,False,0,1
+Nathaniel Durham,2001,lab roster years,False,0,1
+Nathaniel Greene,2013,lab roster years,False,0,1
 Natika Bock,2019,placed from their teachers,False,0,1
 Nell Baumgarten,2018,lab roster years,False,0,1
-Nicholas B. Colvard,2011,first paper in OpenAlex,False,0,1
+Nerida Wilson,2017,first census paper,False,0,1
+Niall Goard,2019,lab roster years,False,0,1
+Nicholas B. Colvard,2009,year in a profile,False,0,2
 Nicholas J. Gidmark,2011,first paper in OpenAlex,True,5,1
-Nick Burnett,1986,placed from their teachers,False,0,1
+Nick Burnett,1994,placed from their teachers,False,0,1
 Nick Cate,2012,placed from their teachers,False,0,1
 Nick Davenport,2003,placed from their teachers,False,0,1
 Nick Gidmark,2018,placed from their teachers,False,0,1
-Nick Schuh,2014,placed from their teachers,False,0,1
-Nicki LeBaron,1998,placed from their teachers,False,0,1
+Nick Schuh,2009,placed from their teachers,False,0,1
+Nick Sisson,2012,lab roster years,False,0,1
+Nicki LeBaron,2024,placed from their teachers,False,0,1
+Nicolai Truemper,2011,lab roster years,False,0,1
+Nicole Danos,2004,lab roster years,False,0,1
+Nicole E. Phillips,1996,first FHL paper,True,27,0
 Nicole Giannetti,2013,placed from their teachers,False,0,1
 Nicole L. Hack,2013,first shared paper,False,0,1
+Nicole Moss,2017,lab roster years,False,0,1
 Nicole N. Nakata,2023,first paper in OpenAlex,False,0,1
-Nicole Phillips,1996,first census paper,True,3,0
+Nicole Parris,2017,lab roster years,False,0,1
+Niels Van Steenkiste,2011,year in a profile,False,0,1
 Nina Lester Finley,2014,first shared paper,False,0,1
 Niraj Wagh,2013,lab roster years,False,0,1
 Noa Shenkar,2004,lab roster years,False,0,1
 Noah Jaffe,2019,lab roster years,False,0,1
+Noelia Martinez,1997,lab roster years,False,0,1
 Noraly Van Meer,1998,placed from their teachers,False,0,1
-Olivia J. Graham,2020,first paper in OpenAlex,False,0,1
+Olga Hartman,1950,placed from their students,False,1,0
+Olivia J. Graham,2014,lab roster years,False,0,2
+Olivia L. George,2002,lab roster years,False,0,1
 Olivia Turnross,2011,first census paper,False,0,1
 Olivier Fedrigo,2003,placed from their teachers,False,0,1
+Oluchi L. Aroh,2022,lab roster years,False,0,1
 Ondrej Maxian,2023,placed from their teachers,False,0,1
-Osamu Shimomura,1953,first paper in OpenAlex,True,0,1
-Oscar D. Pérez,2010,placed from their teachers,False,0,1
+Osamu Shimomura,1953,first paper in OpenAlex,True,0,2
+Oscar D. Pérez,2015,placed from their teachers,False,0,1
 Owen M. Woodward,2001,first paper in OpenAlex,False,0,1
-P. Kemp,2011,placed from their teachers,False,0,1
+P. Kemp,1988,placed from their teachers,False,0,1
+Pamela Brannock,2016,first census paper,False,0,1
 Patrick Flannery,2021,lab roster years,False,0,1
 Patrick J. Mitts,2002,lab roster years,False,0,1
 Patrick T. Martone,2006,first paper in OpenAlex,False,1,0
 Patrick Walsh,2017,lab roster years,False,0,1
-Patsy S. Dickinson,1978,first FHL paper,True,1,0
+Patsy S. Dickinson,1978,first FHL paper,True,1,1
 Paul Grant,2002,lab roster years,False,0,1
-Paul K. Dayton,1966,birth year plus 25,False,1,0
+Paul K. Dayton,1965,year in a profile,False,1,1
 Paul M. Anderson,1965,first paper in OpenAlex,False,1,0
+Paul Nival,1972,placed from their students,False,1,0
 Paul R. Benjamin,1968,first paper in OpenAlex,False,1,0
 Paul S. Hill,1988,first shared paper,False,0,1
+Paula Bucko,2020,lab roster years,False,0,1
 Paula Pappalardo,2009,lab roster years,False,0,1
-Pedro Verdugo,1972,first paper in OpenAlex,True,3,0
-Peter A. Getting,1971,first paper in OpenAlex,False,0,1
+Pedro Verdugo,1972,first paper in OpenAlex,True,4,0
+Peter A. Getting,1964,lab roster years,False,0,1
 Peter A. Jumars,1974,first paper in OpenAlex,False,2,0
 Peter D. Ward,1964,first paper in OpenAlex,False,1,0
 Peter Edmunds,1983,lab roster years,False,0,1
+Peter Garneau,2023,placed from their teachers,False,0,1
+Peter Gullickson,2022,first census paper,False,0,1
 Peter X. Wu,2010,lab roster years,False,0,1
-Petra Ditsche,2006,lab roster years,True,3,1
+Petra Ditsche,2006,lab roster years,True,3,3
+Philip F. Copenhaver,1984,lab roster years,False,0,1
 Philip S. Lobel,1976,lab roster years,False,0,1
 Phillip Davidson,2007,placed from their teachers,False,0,1
-Phoebe Dawkins,2019,first census paper,False,0,1
+Phoebe Dawkins,2016,lab roster years,False,0,1
+Priscila Fourzan,2023,lab roster years,False,0,1
 Qianzi Zhou,2023,lab roster years,False,0,1
 R. B. Emlet,1987,first census paper,False,0,1
 R. Collin,1997,first census paper,False,0,1
 R. L. Crane,2012,first shared paper,False,0,1
 R. Podolsky,1993,first census paper,False,0,1
-Rachel A. Merz,1984,first paper in OpenAlex,False,1,0
+Rachael C. Mallon,2018,lab roster years,False,0,1
+Rachel A. Merz,1984,first paper in OpenAlex,False,2,0
+Rachel Assink,2018,lab roster years,False,0,1
+Rachel Crane,2011,year in a profile,False,0,1
 Rachel Fleming,2012,placed from their teachers,False,0,1
 Rachel Kadzik,2012,placed from their teachers,False,0,1
-Rachel Pepper,2006,placed from their teachers,False,0,1
+Rachel Menegaz,2020,placed from their teachers,False,0,1
+Rachel Pepper,1982,placed from their teachers,False,0,1
+Rachel Simons,2001,placed from their teachers,False,0,1
 Rachel Smith,2018,lab roster years,False,0,1
 Rachel Watters,2025,lab roster years,False,0,1
 Rachel Webber,2018,lab roster years,False,0,1
 Rachel Weinberg,2018,lab roster years,False,0,1
-Rainah Sandstrom,2010,placed from their teachers,False,0,1
+Rainah Sandstrom,2014,placed from their teachers,False,0,1
+Ralf Sommer,1987,placed from their students,False,1,0
 Ralph Haygood,2020,placed from their teachers,False,0,1
+Ravi Sawhney,2001,lab roster years,False,0,1
+Raye Ophelia Evrard,2017,lab roster years,False,0,1
+Rayn Allen,2018,lab roster years,False,0,1
 Rebecca Bruders,2012,first shared paper,False,0,1
+Rebecca Gies,2017,lab roster years,False,0,1
+Rebecca Guenther,2011,first census paper,False,0,1
+Rebecca Hunter,2008,lab roster years,False,0,1
 Rebecca Mease,2004,lab roster years,False,0,1
 Reginald McGee,2010,lab roster years,False,0,1
-Renate Eberl,2023,placed from their teachers,False,0,1
+Rei Ueyama,2003,lab roster years,False,0,1
+Renate Eberl,2007,lab roster years,False,0,1
 René F. Kratz,1994,first paper in OpenAlex,False,0,1
 Rey Jacinto,2009,placed from their teachers,False,0,1
 Reyn Yoshioka,2020,lab roster years,False,0,3
+Reynald Tremblay,2010,placed from their teachers,False,0,1
 Rhea Keator,2023,placed from their teachers,False,0,1
 Rhodalyn Tetteh,2022,placed from their teachers,False,0,2
-Richard A. Cloney,1961,first paper in OpenAlex,True,2,0
+Rhonda Selvin,1977,lab roster years,False,0,1
+Richard A. Cloney,1961,first paper in OpenAlex,True,4,0
 Richard A. Heil-Chapdelaine,1996,first paper in OpenAlex,False,0,1
-Richard A. Roller,1984,first paper in OpenAlex,False,0,1
+Richard A. Roller,1982,year in a profile,False,0,1
 Richard A. Satterlie,1976,first paper in OpenAlex,True,2,0
 Richard Aronson,1978,lab roster years,False,0,1
-Richard B. Emlet,1982,first FHL paper,True,1,1
+Richard B. Emlet,1982,first FHL paper,True,14,1
+Richard N. Mariscal,1973,first census paper,False,1,0
 Richard R. Olson,1977,lab roster years,False,0,1
-Richard R. Strathmann,1965,first paper in OpenAlex,True,31,0
+Richard R. Strathmann,1964,year in a profile,True,38,2
+Rob Jennings,2001,placed from their teachers,False,0,1
+Robert A. Andersen,1982,first paper in OpenAlex,True,10,0
 Robert M. Jennings,2020,placed from their teachers,False,0,1
-Robert Max Levine,2017,thesis year minus five,False,0,1
-Robin B. Kodner,2000,first paper in OpenAlex,True,1,1
+Robert Max Levine,2002,lab roster years,False,0,3
+Robert Paul Wolf,2019,lab roster years,False,0,1
+Robert T. Paine,1969,first census paper,False,2,0
+Robin B. Kodner,2000,first paper in OpenAlex,True,11,1
 Robin Cappaert,2020,lab roster years,False,0,1
 Robin Elahi,2005,first paper in OpenAlex,False,0,1
-Robin J. Fales,2018,first paper in OpenAlex,True,0,1
-Robin M. Harris,2025,placed from their teachers,False,0,1
+Robin J. Fales,2014,year in a profile,True,0,1
+Robin M. Harris,2005,placed from their teachers,False,0,1
+Roger deRoos,1961,first paper in OpenAlex,True,0,1
+Ronald Chase,1984,placed from their teachers,False,0,1
 Rosalie E. Langelan Duncan,1980,first paper in OpenAlex,False,0,1
+Rose Rimler,2013,lab roster years,False,0,1
 Ross Whippo,2021,lab roster years,False,0,2
+Ruairi Brown,2023,lab roster years,False,0,1
 Rudolf A. Raff,1966,first paper in OpenAlex,False,1,0
-Russell C. Wyeth,1996,first paper in OpenAlex,True,21,0
+Russell C. Wyeth,1996,first paper in OpenAlex,True,21,1
 Ruth Kelty,1997,lab roster years,False,0,1
 Ryan Bergman,2023,lab roster years,False,0,1
 Ryan Epple,1998,lab roster years,False,0,1
-Ryan McLaughlin,2008,placed from their teachers,False,0,1
-Ryley S. Crow,2021,first shared paper,False,0,1
+Ryan J. McLaughlin,2015,lab roster years,False,0,2
+Ryan McCarthy,2023,lab roster years,False,0,1
+Ryley S. Crow,2021,first shared paper,False,0,2
+S. Arnette,2023,first census paper,False,0,1
+S. J. Watson,2023,placed from their teachers,False,0,1
 S. Y. Henderson,1997,first census paper,False,0,1
-Safra Altman,2006,lab roster years,False,0,1
+Sabine Moritz,2011,placed from their teachers,False,0,1
+Safra Altman,2002,lab roster years,False,0,2
+Sage Mitchell,2018,lab roster years,False,0,1
 Sam Bashevkin,2012,first shared paper,False,0,1
+Sam McClatchie,1984,lab roster years,False,0,1
 Samantha Persad,2021,lab roster years,False,0,2
 Samantha Shepard,2023,lab roster years,False,0,1
 Samuel Karelitz,2020,placed from their teachers,False,0,1
 Samuel M. Hulme,2004,lab roster years,False,0,1
-Sandy Wyllie‐Echeverria,1991,first paper in OpenAlex,True,1,0
+Samuel Nadell,2016,lab roster years,False,0,1
+Sandy Chang,2017,lab roster years,False,0,1
+Sandy Wyllie-Echeverria,2006,first census paper,False,3,0
+Sandy Wyllie‐Echeverria,1991,first paper in OpenAlex,True,2,0
+Sanjay Shrestha,2007,lab roster years,False,0,1
 Sara M. Lindsay,1990,first paper in OpenAlex,False,0,1
 Sara Rodriguez,2020,lab roster years,False,0,1
 Sarah A. Woodin,1972,first paper in OpenAlex,False,2,0
-Sarah Cohen,1988,first paper in OpenAlex,True,57,0
+Sarah Arnette,2025,first census paper,False,0,1
+Sarah Cohen,1988,first paper in OpenAlex,True,63,0
 Sarah Domnitz,2008,first census paper,False,0,1
-Sarah Gilman,1999,lab roster years,False,0,2
+Sarah E. Gilman,1995,first paper in OpenAlex,True,2,2
 Sarah Heerhartz,2008,first census paper,False,0,1
 Sarah Huber,2004,placed from their teachers,False,0,1
 Sarah K. Berke,2000,first paper in OpenAlex,False,0,1
@@ -747,41 +1107,63 @@ Sarah Suplicz,2023,lab roster years,False,0,1
 Sarah Woolner,1998,placed from their teachers,False,0,1
 Sarah Yde,2016,placed from their teachers,False,0,1
 Sarila Young,2001,placed from their teachers,False,0,1
-Sasha Katya Seroy,2016,thesis year minus five,True,0,1
+Sasha K. Seroy,2016,thesis year minus five,True,0,2
 Sasha Makohon-Moore,2001,placed from their teachers,False,0,1
 Savannah Benally,2009,lab roster years,False,0,1
 Scottie Y. Henderson,1997,first shared paper,False,0,1
+Seamus O'Mahony,2021,lab roster years,False,0,1
 Sean Corcoran,2021,placed from their teachers,False,0,1
 Sean Grace,2003,lab roster years,False,0,1
 Sean Neav,2023,lab roster years,False,0,1
 Sebastian Kruppert,2012,first paper in OpenAlex,True,0,1
+Sebastian Logan,2019,lab roster years,False,0,1
 Seif Adlan,2018,lab roster years,False,0,1
 Seok-Wan Choi,2021,first shared paper,False,0,1
+Sergio Antonio Carrasco Órdenes,2011,lab roster years,False,0,1
 Seth Donoughe,2020,placed from their teachers,False,0,1
 Sett Aung,2019,placed from their teachers,False,0,1
 Shanna Brazee Muise,2003,lab roster years,False,0,1
+Shannon Cefalu,2019,first census paper,False,0,1
 Shannon Smith Wallace,2002,lab roster years,False,0,1
-Shaun Mukherjee,2004,placed from their teachers,False,0,1
+Shaun D. Cain,2001,first paper in OpenAlex,True,0,1
+Shaun Mukherjee,2013,placed from their teachers,False,0,1
 Shauna Morrow,2019,placed from their teachers,False,0,1
 Shawn M. Luttrell,2012,first FHL paper,True,0,1
 Shayne Plourde,2015,lab roster years,False,0,1
 Sheh May Tam,2014,first census paper,False,0,1
-Sheina Koffler,2012,placed from their teachers,False,0,1
+Sheina Koffler,2022,placed from their teachers,False,0,1
 Shelby Ziegler,2018,lab roster years,False,0,1
+Shiree Palmer,2009,lab roster years,False,0,1
+Shonali Chandy,1996,lab roster years,False,0,1
 Sima Jonusaite,2015,lab roster years,False,0,1
-Simon A. Levin,1966,birth year plus 25,False,1,1
+Simon A. Levin,1959,year in a profile,False,1,1
 Sofia Chang,2011,first census paper,False,0,1
 Song Kim,2008,placed from their teachers,False,0,1
-Sonja Lee Miller,2018,placed from their teachers,False,0,1
-Sophie B. George,1982,first paper in OpenAlex,False,1,0
-Stefania Gutierrez,2019,placed from their teachers,False,0,1
-Stephanie B. Crofts,2006,first paper in OpenAlex,True,2,1
+Sonja Lee Miller,2007,lab roster years,False,0,1
+Sophia L. Boyd,2022,lab roster years,False,0,1
+Sophie B. George,1982,first paper in OpenAlex,False,1,1
+Soren Huber,2016,lab roster years,False,0,1
+Spencer Showalter,2018,lab roster years,False,0,1
+Staci McMahon,2021,lab roster years,False,0,1
+Stacy C. Farina,2010,year in a profile,True,6,2
+Stanislav Gorb,2009,first census paper,False,1,0
+Stefania Gutierrez,2024,placed from their teachers,False,0,1
+Steffen Buessecker,2023,placed from their teachers,False,0,1
+Stephan Froggett,1996,lab roster years,False,0,1
+Stephanie B. Crofts,2006,first paper in OpenAlex,True,3,2
 Stephanie Bilodeau,2008,placed from their teachers,False,0,1
+Stephanie Marinus,2015,lab roster years,False,0,1
+Stephanie Palacio-Betancur,2006,lab roster years,False,0,1
 Stephen A. Stricker,1981,first FHL paper,True,0,1
+Stephen A. Wainwright,1959,placed from their students,False,1,0
 Stephen Kajiura,1996,lab roster years,False,0,1
+Stephen Lalor Copps,2011,lab roster years,False,0,1
 Stephen M. Bollens,1988,first paper in OpenAlex,False,0,1
+Steve Brett,1988,lab roster years,False,0,1
+Steve Morton,1990,lab roster years,False,0,1
 Steven B. Roberts,1965,first paper in OpenAlex,False,1,0
 Steven G. Watt,2002,lab roster years,False,0,1
+Stuart Thompson,1973,first census paper,False,0,1
 Suhn Brown,2020,lab roster years,False,0,2
 Susana Patino del Olmo,2005,lab roster years,False,0,1
 Svetlana Maslakova,2000,lab roster years,False,0,2
@@ -790,30 +1172,46 @@ T E Schroeder,1967,first paper in OpenAlex,True,1,0
 Tania Guerrero Altamirano,1998,placed from their teachers,False,0,1
 Tanja Slota,1998,lab roster years,False,0,1
 Taylor Hughes,2020,thesis year minus five,False,0,1
+Taylor L. Clement,2016,lab roster years,False,0,1
+Taylor Landfair,2023,lab roster years,False,0,1
 Taylor Pantiga,1998,placed from their teachers,False,0,1
-Terrie Klinger,1981,birth year plus 25,True,9,1
+Terrie Klinger,1981,birth year plus 25,True,40,1
 Terry Dial,2015,lab roster years,False,0,1
+Tessa F. Beaver,2022,lab roster years,False,0,1
+Thaddeus Buser,2023,placed from their teachers,False,0,1
 Thanh Nguyen,2010,first census paper,False,0,1
 Thea Thezin Rogier,2011,thesis year minus five,False,0,1
+Thomas Daniel,1989,first census paper,False,1,0
+Thomas E. Schroeder,1960,year in a profile,True,0,1
+Thomas Eldridge,1998,lab roster years,False,0,1
 Thomas G. Dahlgren,2009,placed from their teachers,False,0,1
 Thomas J. Pirtle,2000,first FHL paper,True,0,1
 Thomas Kleinteich,2003,lab roster years,True,0,1
+Thomas Pham,2013,lab roster years,False,0,1
 Thomas Shyka,1992,lab roster years,False,0,1
+Thor Leighton Belle,2024,lab roster years,False,0,1
 Tiffany Lu,2009,placed from their teachers,False,0,1
 Tigran P. Norekian,1993,first FHL paper,True,0,2
+Tim Shank,2023,placed from their teachers,False,0,1
 Timothy Dwyer,2013,first census paper,False,0,1
 Timothy Fuller,2012,first census paper,False,0,1
+Tobias Landberg,2003,lab roster years,False,0,1
 Todd Clardy,2012,lab roster years,False,0,1
 Todd Maney,2009,placed from their teachers,False,0,1
 Tom Burke,2003,placed from their teachers,False,0,1
-Tom Hata,2009,placed from their teachers,False,0,1
+Tom Daniel,1993,placed from their students,False,1,0
+Tom Hata,1977,placed from their teachers,False,0,1
 Tomasz Owerkowicz,2002,lab roster years,False,0,1
+Torsten Struck,2005,first census paper,False,0,1
+Tracey Riggens,1976,lab roster years,False,0,1
 Trevor Bak,2023,placed from their teachers,False,0,1
-Trevor Gonzalinajec,2021,placed from their teachers,False,0,1
+Trevor Gonzalinajec,2020,placed from their teachers,False,0,1
+Trevor M. O'Brien,2001,placed from their teachers,False,0,1
 Tricia Goulding,1996,placed from their teachers,False,0,1
-Trysta Bastien,2015,placed from their teachers,False,0,1
+Trysta Bastien,2020,placed from their teachers,False,0,1
 Tyler J. Carrier,2013,first paper in OpenAlex,False,0,2
-Uma Pant,2013,placed from their teachers,False,0,1
+Tyler Spillane,2016,lab roster years,False,0,1
+Uma Pant,2009,placed from their teachers,False,0,1
 Valerie Coffman,2007,lab roster years,False,0,1
 Valerie Gartner,2018,lab roster years,False,0,1
 Vanessa Guerra,2016,placed from their teachers,False,0,1
@@ -821,36 +1219,54 @@ Vannessa Valdez,2024,lab roster years,False,0,1
 Verena Wang,2008,placed from their teachers,False,0,1
 Vern Lewis,2014,lab roster years,False,0,1
 Veronica Ciocanel,2011,lab roster years,False,0,1
+Victoria E. Foe,1970,year in a profile,True,0,3
 Vikram K. Iyengar,1998,first paper in OpenAlex,False,2,0
+Viktoria Bogantes,2019,lab roster years,False,0,1
 Virginia Schutte,2013,lab roster years,False,0,1
+Wallace O. Bennett,1999,lab roster years,False,0,1
 Wan Fatma Zuharah,2025,birth year plus 25,False,0,1
+Wan Fatma Zuharah Wan Musthapa,2010,lab roster years,False,0,1
 Wan-Jean Lee,2011,lab roster years,False,0,1
-Wei-Chun Chin,1998,first paper in OpenAlex,False,0,1
-Wendel W. Raymond,2014,first FHL paper,True,0,1
+Wanying Na,2023,first census paper,False,0,1
+Wei-Chun Chin,1993,year in a profile,False,0,1
+Wendel W. Raymond,2014,first FHL paper,True,0,2
+Wilhelm Barthlott,2015,first census paper,False,1,0
 Will Henry,2001,lab roster years,False,0,1
 Will Stedden,2008,placed from their teachers,False,0,1
-Willem Weertman,2021,first shared paper,True,0,1
-William B. Stickle,1970,first paper in OpenAlex,False,1,0
-William King,2013,lab roster years,False,0,1
+Willem Weertman,2017,year in a profile,True,0,1
+William B. Stickle,1963,year in a profile,False,1,1
+William E. Bemis,2018,first census paper,False,1,0
+William King,2013,lab roster years,False,0,2
 William M. Bement,1989,first paper in OpenAlex,True,27,0
 William McDowell,2013,lab roster years,False,0,1
 William Nielsen,2017,first census paper,False,0,1
-Winsor H. Watson,1978,first paper in OpenAlex,True,1,0
+William R. Jeffery,2023,first census paper,False,1,0
+Winsor H. Watson,1978,first paper in OpenAlex,True,3,0
 Wren Wagenbach,2021,first census paper,False,0,1
 Xenia Neal,2020,lab roster years,False,0,1
 Xiaofeng Zhou,1997,placed from their teachers,False,0,1
 Xuman Ariel Tang,2020,placed from their teachers,False,0,1
 Yahia Hassan,2011,placed from their teachers,False,0,1
 Yale J. Passamaneck,2001,first census paper,False,0,1
+Yianna Samuel,2007,lab roster years,False,0,1
 Yiru Sheng,2018,lab roster years,False,0,1
-Yonatan Munk,1996,placed from their teachers,False,0,1
+Yolimar Rivera Vázquez,2014,lab roster years,False,0,1
+Yonatan Munk,2008,placed from their teachers,False,0,1
 Yong-Xue Ding,2006,first paper in OpenAlex,False,0,1
 Yordano E. Jimenez,2015,first shared paper,False,0,1
+Yoshimasa Hirata,1943,placed from their students,False,1,0
 Younan Li,2020,placed from their teachers,False,0,1
+Yu Sun,2001,placed from their teachers,False,0,1
+Yuanning Li,2016,lab roster years,False,0,1
 Yuji Mizotani,2009,placed from their teachers,False,0,1
+Yuki Wilmerding,2022,lab roster years,False,0,1
 Yulia Ovechkina,2005,first census paper,False,0,1
 Yulia Reunova,2016,lab roster years,False,0,1
 Yun-Wei A. Hsu,2005,first paper in OpenAlex,False,0,1
 Zac Swider,2018,placed from their teachers,False,0,1
+Zach Child,2022,lab roster years,False,0,1
+Zane Baki,2023,lab roster years,False,0,1
+Zebib S. Abraha,2021,lab roster years,False,0,1
 Zer Vue,2006,lab roster years,False,0,1
+Zoe Irons,2018,lab roster years,False,0,1
 Zofia Knorek,2017,lab roster years,False,0,2

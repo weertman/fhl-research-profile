@@ -18,21 +18,22 @@ resolution_no,779,rejected
 resolution_uncertain,428,still undecided
 audited,380,records in the audit sample
 audit_full_text,260,audited records read in full text
-ai_runs,10,"AI runs (multi-agent workflows, the topic classification and the later checks, rosters and profiles)"
-ai_agents,238,AI agents run in those runs
+ai_runs,11,"AI runs (multi-agent workflows, the topic classification and the later checks, rosters and profiles)"
+ai_agents,300,AI agents run in those runs
 build_hours,8.7,wall-clock hours from the first prompt to the first complete version
 mentor_pairs,146,mentor links inferred from co-authorship
 mentor_checked,146,inferred links checked against public records
 mentor_confirmed,117,checked links confirmed as advisor or mentor
 mentor_peer,19,checked links that were collaborations between peers (removed)
 mentor_unclear,10,checked links that could not be settled
-mentor_doc_visible,66,documented pairs with the student first and the teacher last on a census paper
-mentor_doc_recovered,23,"of those, found by the co-authorship rule"
-roster_links,651,"links from lab, team and alumni pages and CVs"
-committee_links,0,graduate committee links
-roster_scientists,39,FHL scientists with a roster or committee list
-network_links,810,links in the mentoring network
-network_people,855,people in the mentoring network
+mentor_doc_visible,142,documented pairs with the student first and the teacher last on a census paper
+mentor_doc_recovered,66,"of those, found by the co-authorship rule"
+roster_links,967,"links from lab, team and alumni pages and CVs"
+committee_links,69,graduate committee links
+roster_scientists,63,FHL scientists with a roster or committee list
+network_links,1263,links in the mentoring network
+network_people,1271,people in the mentoring network
+profile_links,118,advisor links named in fact-checked profiles
 profiles,236,people profiles written and fact-checked
 profiles_revised,230,profiles the fact-checker revised
 dedup_dropped,137,duplicate records merged away

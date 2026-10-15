@@ -756,8 +756,10 @@
         and listed the graduate students, postdocs, technicians, interns and staff named there, and a second agent re-opened
         every page to confirm each entry. Undergraduates named on a home-university lab page are included only if they also
         appear as authors in the census, and the Star Lab team comes from FHL's own pages, read from Internet Archive copies.
-        A shortage of web-search capacity cut many roster searches short, so only <span data-source="methods_facts" data-field="value" data-where="fact=roster_scientists">—</span> scientists have a
-        roster so far. Each FHL scientist and each teacher in the network has a two-paragraph profile (<span data-source="methods_facts" data-field="value" data-where="fact=profiles">—</span>
+        Graduate committees listed in CVs add <span data-source="methods_facts" data-field="value" data-where="fact=committee_links">—</span> links, drawn dotted, and advisors and mentors named
+        in the fact-checked profiles (below) add <span data-source="methods_facts" data-field="value" data-where="fact=profile_links">—</span>. Web-search capacity ran short during the roster
+        searches, even on a second, slower pass, so only <span data-source="methods_facts" data-field="value" data-where="fact=roster_scientists">—</span> scientists have a roster or committee list
+        so far. Each FHL scientist and each teacher in the network has a two-paragraph profile (<span data-source="methods_facts" data-field="value" data-where="fact=profiles">—</span>
         in all), shown when the person is picked in "Find a person": an AI agent wrote it from the person's census record and
         public sources (faculty and lab pages, CVs, ORCID, obituaries), and a second agent checked every claim against
         those sources and revised <span data-source="methods_facts" data-field="value" data-where="fact=profiles_revised">—</span> of them. In all the network holds <span data-source="methods_facts" data-field="value" data-where="fact=network_links">—</span> links among <span data-source="methods_facts" data-field="value" data-where="fact=network_people">—</span> people. OpenAlex groups papers into
@@ -1529,7 +1531,7 @@
     const nStudents = (n) => (studentsOf.get(n) || []).length;
 
     const width = Math.max(260, el.clientWidth), drawW = Math.max(width, 760);
-    const height = Math.round(Math.max(520, Math.min(1500, 260 + names.length * 2.2)));
+    const height = Math.round(Math.max(520, Math.min(2100, 260 + names.length * 1.7)));
     const m = { top: 44, right: 150, bottom: 16, left: 14 };
     const years = names.map((n) => +info.get(n).year);
     const y0 = Math.min(d3.min(years), 1945), y1 = Math.max(d3.max(years), 2026);
@@ -1665,6 +1667,7 @@
       if (l.source === 'Co-authorship, confirmed') return `${l.relationship || 'mentor'}; confirmed in public records`;
       if (l.source === 'Lab roster') return `${l.relationship || 'trainee'} on their lab or team page${l.year ? `, ${l.year}` : ''}`;
       if (l.source === 'Graduate committee') return `graduate committee member${l.year ? `, ${l.year}` : ''}`;
+      if (l.source === 'Profile') return `${l.relationship || 'mentor'}${l.year ? `, ${l.year}` : ''} (named in a fact-checked profile)`;
       return `${l.source}${l.year ? `, ${l.year}` : ''}`;
     };
     const delaunay = d3.Delaunay.from(nodes, (d) => d.x, (d) => d.y);
