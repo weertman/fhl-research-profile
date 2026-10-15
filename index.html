@@ -1570,6 +1570,15 @@
       .force('collide', d3.forceCollide((d) => d.r + 2.2))
       .stop();
     for (let i = 0; i < 420; i += 1) sim.tick();
+    // Linked people pull together, which can leave empty bands where a group started out: close any vertical gap wider
+    // than a couple of rows (keeping everyone's order), then stretch the drawing to fill the figure.
+    const byY = nodes.slice().sort((a, b) => a.y - b.y);
+    const maxGap = 16;
+    let shift = 0;
+    byY.forEach((d, i) => {
+      if (i > 0) { const gap = d.y - byY[i - 1].y0c; shift += Math.max(0, gap - maxGap); }
+      d.y0c = d.y; d.y -= shift;
+    });
     const [ya, yb] = d3.extent(nodes, (d) => d.y), fit = d3.scaleLinear([ya, yb], [m.top + 8, height - m.bottom - 8]);
     nodes.forEach((d) => { d.x = d.fx0; d.y = fit(d.y); });
 
