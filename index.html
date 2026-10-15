@@ -217,6 +217,10 @@
   .fp-chart .lin-label { font-size: 10.5px; fill: var(--fp-ink); paint-order: stroke; stroke: var(--fp-paper); stroke-width: 3.5px; stroke-linejoin: round; pointer-events: none; }
   .fp-chart .lin-label.hub { font-weight: 700; }
   .fp-chart .lin-label.minor { font-size: 9.5px; fill: var(--fp-ink-2); }
+  .fp-legend .fp-keybtn { cursor: pointer; border-bottom: 1px solid transparent; }
+  .fp-legend .fp-keybtn:hover, .fp-legend .fp-keybtn:focus-visible { border-bottom-color: var(--fp-ink-2); outline: none; }
+  .fp-legend .fp-keybtn[aria-pressed="true"] { font-weight: 700; border-bottom-color: var(--fp-ink); }
+  .fp-legend.locked .fp-keybtn { cursor: not-allowed; opacity: .5; }
   .fp-chart .lin-leader { stroke: var(--fp-ink-2); stroke-width: .6; }
   .fp-chart .lin-label.self { font-weight: 700; text-decoration: underline; }
   .fp-chart .net-label.hit { text-decoration: underline; font-weight: 700; fill: var(--fp-ink); }
@@ -415,7 +419,8 @@
           scientist who is last author on at least two of a younger colleague's first-author FHL papers, early in that
           colleague's career (rules and checks in section X). Mark size shows the number of students. Hover over
           a mark, click it to keep it lit, or use "Find a person", to follow a lineage back through teachers and forward through
-          students. The network is a sample and far from complete.</p>
+          students. When no one is selected, click a part of the key to highlight it. The network is a sample and far from
+          complete.</p>
       </figcaption>
     </figure>
     <figure class="fp-fig">
@@ -1345,6 +1350,7 @@
   let treeLinks = 'all';
   document.querySelectorAll('[data-links]').forEach((b) => b.addEventListener('click', () => {
     treeLinks = b.dataset.links;
+    if (treeLinks === 'documented' && keyFilter === 'inferred') keyFilter = null;
     document.querySelectorAll('[data-links]').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.links === treeLinks)));
     safely(document.getElementById('ch-tree'), drawTree);
   }));
@@ -1375,7 +1381,8 @@
     const matches = lineage && on ? lineage.names.filter(hit) : [];
     if (lineage) {
       lineage.pinned = matches[0] || null;
-      if (matches[0]) lineage.focus(matches[0]); else lineage.clear();
+      lineage.syncKey();
+      if (matches[0]) lineage.focus(matches[0]); else lineage.rest();
     }
     const inNet = citeNet && on ? citeNet.names.filter(hit) : [];
     if (citeNet) { citeNet.pinned = inNet[0] || null; if (inNet[0]) citeNet.focus(inNet[0]); else citeNet.clear(); }
@@ -1508,17 +1515,11 @@
   // to a student runs forward in time; a force layout pulls connected people together vertically.
   let lineage = null; // the drawn network, for "Find a person": { focus(name), clear(), names }
   let citeNet = null; // the citation network (Fig. 9), likewise
+  let keyFilter = null; // a part of Fig. 8's key picked to highlight: 'fhl', 'other', 'documented', 'committee' or 'inferred'
   function drawTree() {
     const el = document.getElementById('ch-tree');
     const lg = document.getElementById('lg-tree');
     legend(lg, [['FHL scientist', FILL.solid], ['Other', FILL.open]]);
-    [['Documented advisor or lab', ''], ['Graduate committee', '1 2.5'], ['Inferred from co-authorship', '4 2.5']].forEach(([name, dash_]) => {
-      const sp = document.createElement('span');
-      sp.innerHTML = `<svg viewBox="0 0 22 10" aria-hidden="true"><line x1="0" y1="5" x2="22" y2="5" stroke="currentColor"
-        stroke-width="1.2" stroke-dasharray="${dash_}"/></svg>`;
-      sp.append(document.createTextNode(name));
-      lg.appendChild(sp);
-    });
     lineage = null;
     if (!state(el, ['lineage', 'lineage_people'])) return;
     const inferred = (l) => l.source === 'Co-authorship';
@@ -1649,6 +1650,18 @@
         .attr('class', (p) => `lin-label ${p.d.id === name ? 'self' : ''}`)
         .attr('x', (p) => p.d.x + p.d.r + 4).attr('y', (p) => p.y).attr('dy', '0.35em').text((p) => p.d.id);
     };
+    const linkKind = (l) => (inferred(l) ? 'inferred' : l.source === 'Graduate committee' ? 'committee' : 'documented');
+    // Line entries in the key, for the kinds of link the network has.
+    const LINE_KEYS = [['documented', 'Documented advisor or lab', ''], ['committee', 'Graduate committee', '1 2.5'], ['inferred', 'Inferred from co-authorship', '4 2.5']]
+      .filter(([k]) => L.some((l) => linkKind(l) === k));
+    LINE_KEYS.forEach(([, name, dash_]) => {
+      const sp = document.createElement('span');
+      sp.innerHTML = `<svg viewBox="0 0 22 10" aria-hidden="true"><line x1="0" y1="5" x2="22" y2="5" stroke="currentColor"
+        stroke-width="1.2" stroke-dasharray="${dash_}"/></svg>`;
+      sp.append(document.createTextNode(name));
+      lg.appendChild(sp);
+    });
+    if (keyFilter && !['fhl', 'other', ...LINE_KEYS.map(([k]) => k)].includes(keyFilter)) keyFilter = null;
     const clear = () => { lk.classed('on', false).classed('off', false); nd.classed('off', false).classed('self', false);
       labels.attr('opacity', 1); focusLabels.selectAll('*').remove(); };
     const pinned = () => lineage && lineage.pinned;
@@ -1663,22 +1676,60 @@
     svg.on('mousemove', (event) => {
       const [px, py] = d3.pointer(event, svg.node());
       const d = nodes[delaunay.find(px, py)];
-      if (!d || Math.hypot(d.x - px, d.y - py) > 14) { if (pinned()) focus(lineage.pinned); else clear(); hideTip(el); return; }
+      if (!d || Math.hypot(d.x - px, d.y - py) > 14) { rest(); hideTip(el); return; }
       focus(d.id);
       const nfo = info.get(d.id);
       showTip(el, event, d.id, [[null, null, `${isFhl(d.id) ? 'FHL scientist' : 'Teacher or student of FHL scientists'}; career began about ${nfo.year} (${nfo.year_basis})`],
         ...(teachersOf.get(d.id) || []).map((l) => [null, null, `Taught by ${l.advisor} (${evidence(l)})`]),
         ...((studentsOf.get(d.id) || []).length ? [[null, null, `${f(nStudents(d.id))} student${nStudents(d.id) === 1 ? '' : 's'} here: ${(studentsOf.get(d.id) || []).slice(0, 6).map((l) => l.student).join(', ')}${nStudents(d.id) > 6 ? ', …' : ''}`]] : [])]);
-    }).on('mouseleave', () => { hideTip(el); if (pinned()) focus(lineage.pinned); else clear(); })
+    }).on('mouseleave', () => { hideTip(el); rest(); })
       .on('click', (event) => {
         const [px, py] = d3.pointer(event, svg.node());
         const d = nodes[delaunay.find(px, py)];
         const near = d && Math.hypot(d.x - px, d.y - py) <= 14;
         lineage.pinned = near && lineage.pinned !== d.id ? d.id : null;
-        if (lineage.pinned) focus(lineage.pinned); else clear();
+        lineage.syncKey(); rest();
       });
     nd.style('cursor', 'pointer');
-    lineage = { focus, clear, names, pinned: null };
+    // Highlighting one part of the key: marks of that kind, or lines of that kind and the people they join.
+    const applyKey = () => {
+      if (!keyFilter) { clear(); return; }
+      clear();
+      if (keyFilter === 'fhl' || keyFilter === 'other') {
+        const on = new Set(nodes.filter((d) => isFhl(d.id) === (keyFilter === 'fhl')).map((d) => d.id));
+        nd.classed('off', (d) => !on.has(d.id));
+        lk.classed('off', (l) => !(on.has(l.advisor) && on.has(l.student)));
+      } else {
+        const match = (l) => linkKind(l) === keyFilter;
+        const on = new Set(L.filter(match).flatMap((l) => [l.advisor, l.student]));
+        lk.classed('on', match).classed('off', (l) => !match(l));
+        nd.classed('off', (d) => !on.has(d.id));
+      }
+      labels.attr('opacity', 0.35);
+    };
+    const rest = () => { if (pinned()) focus(lineage.pinned); else applyKey(); };
+    // The key works as a filter while no one is searched or pinned.
+    const keyParts = ['fhl', 'other', ...LINE_KEYS.map(([k]) => k)];
+    const keySpans = [...lg.querySelectorAll(':scope > span')];
+    const syncKey = () => {
+      const locked = !!(lineage && lineage.pinned);
+      lg.classList.toggle('locked', locked);
+      keySpans.forEach((sp, i) => {
+        sp.setAttribute('aria-pressed', String(keyFilter === keyParts[i]));
+        sp.title = locked ? 'Clear the search or pinned person to filter by the key' : 'Click to highlight; click again to clear';
+      });
+    };
+    keySpans.forEach((sp, i) => {
+      sp.classList.add('fp-keybtn'); sp.setAttribute('role', 'button'); sp.tabIndex = 0;
+      const pick = () => {
+        if (lineage && lineage.pinned) return;
+        keyFilter = keyFilter === keyParts[i] ? null : keyParts[i];
+        syncKey(); applyKey();
+      };
+      sp.addEventListener('click', pick);
+      sp.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+    });
+    lineage = { focus, clear, names, pinned: null, rest, syncKey };
     applyFind(false);
   }
 
@@ -2026,10 +2077,12 @@
         out.appendChild(el('text', { x: pad, y: y + 10, style: fKey }, 'KEY'));
         let x = pad + textW('KEY', fKey) + 14;
         for (const s of items) {
-          const label = s.textContent.trim(), fill = localUrl(getComputedStyle(s.querySelector('rect')).fill);
+          const label = s.textContent.trim(), sw = s.querySelector('rect'), ln = s.querySelector('line');
           const w = 22 + textW(label, f13) + 16;
           if (x + w - 16 > pad + inner && x > pad) { x = pad; y += 20; }
-          out.appendChild(el('rect', { x, y: y + 1, width: 16, height: 11, style: `fill:${fill};stroke:${ink};stroke-width:.8` }));
+          if (sw) out.appendChild(el('rect', { x, y: y + 1, width: 16, height: 11, style: `fill:${localUrl(getComputedStyle(sw).fill)};stroke:${ink};stroke-width:.8` }));
+          else if (ln) out.appendChild(el('line', { x1: x, y1: y + 6.5, x2: x + 16, y2: y + 6.5,
+            style: `stroke:${ink};stroke-width:1.2;stroke-dasharray:${ln.getAttribute('stroke-dasharray') || 'none'}` }));
           out.appendChild(el('text', { x: x + 22, y: y + 11, style: f13 }, label));
           x += w;
         }
