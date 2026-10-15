@@ -81,6 +81,7 @@
   .fp-toc .num { flex: none; width: 2.6rem; text-align: right; font-variant-numeric: lining-nums; letter-spacing: .06em; }
   .fp-toc .t { min-width: 0; }
   .fp-toc .dots { flex: 1; min-width: 1.2rem; border-bottom: 2px dotted var(--fp-ink-2); transform: translateY(-.3em); }
+  .fp-toc .tip { max-width: 40rem; margin: .8rem auto 0; font-size: .82rem; font-style: italic; color: var(--fp-ink-2); text-align: center; }
   .fp-toc .refs { flex: none; font-size: .85rem; font-style: italic; color: var(--fp-ink-2); }
   .fp-abstract.fp-closing { margin-top: 1rem; }
   .fp-end { margin-top: .5rem; }
@@ -182,6 +183,8 @@
   .fp-prompts .typed { font-family: "American Typewriter", "Courier Prime", "Courier New", Courier, monospace; font-size: .84rem;
                        line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
   .fp-prompts .said { font-style: italic; color: var(--fp-ink-2); }
+  .fp-prompts .pmeta { font-size: .76rem; font-style: italic; color: var(--fp-ink-2); margin-bottom: .2rem; font-variant-numeric: lining-nums; }
+  .fp-prompts .ptotal { margin: .8rem 0 0; font-size: .85rem; font-style: italic; }
 
   /* The people: map, mentoring network and citation network */
   .fp .fp-intro { max-width: 44em; margin-inline: auto; font-size: 1rem; text-align: center; text-wrap: balance; }
@@ -217,6 +220,7 @@
   .fp-chart .lin-label { font-size: 10.5px; fill: var(--fp-ink); paint-order: stroke; stroke: var(--fp-paper); stroke-width: 3.5px; stroke-linejoin: round; pointer-events: none; }
   .fp-chart .lin-label.hub { font-weight: 700; }
   .fp-chart .lin-label.minor { font-size: 9.5px; fill: var(--fp-ink-2); }
+  .fp-chart .key-dim { opacity: .14; }
   .fp-legend .fp-keybtn { cursor: pointer; border-bottom: 1px solid transparent; }
   .fp-legend .fp-keybtn:hover, .fp-legend .fp-keybtn:focus-visible { border-bottom-color: var(--fp-ink-2); outline: none; }
   .fp-legend .fp-keybtn[aria-pressed="true"] { font-weight: 700; border-bottom-color: var(--fp-ink); }
@@ -298,6 +302,8 @@
       <li><a href="#method"><span class="num">X.</span><span class="t">Technical methods</span><span class="dots"></span><span class="refs">Tables V–VI</span></a></li>
       <li><a href="#headline"><span class="num"></span><span class="t">Summary of results</span><span class="dots"></span><span class="refs"></span></a></li>
     </ol>
+    <p class="tip">Hover over a chart for values. Hover over an entry in a figure's key to highlight it, or click to keep it
+      highlighted. Every figure can be saved as PNG or SVG.</p>
   </nav>
 
 
@@ -804,63 +810,20 @@
         agreement rates above describe how often.
         Treat individual records as leads to check, and the totals as estimates with the stated uncertainty.</p>
       <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app.
-        Messages about signing in, saving files and progress are summarised rather than quoted. The agents worked from
+        Messages about signing in, saving files and progress are summarised rather than quoted. Each prompt shows when it
+        was typed (Pacific time) and the output tokens (text, reasoning and tool calls) it led to: those Claude generated in
+        the main session before the next prompt, and those of the agents started in that time; a workflow's agents count
+        toward the prompt during which the workflow was launched. Many agent records keep only the opening token count of
+        each response, so agent totals are estimated from the length of what the agents wrote (about 2.3 characters per
+        token, as measured on the main session) wherever that is larger. The agents worked from
         instructions that Claude wrote: a screening guide, a search specification, a topic guide and the workflow scripts, which
         hold every agent prompt. They are kept with the census files (docs/screening_guide.md, docs/harvest_spec.md,
         docs/topic_guide.md and docs/ai_workflows/).</p>
     </div>
     <details class="fp-prompts" id="prompts">
       <summary>The prompts, as typed</summary>
-      <ol>
-        <li><div class="typed">i have been given this task. Id like you to break the problem down into technical steps.
-
-* Create an FHL research profile info sheet. Target audiences: RIMB class, FHL website, FHL community
-   * Compile a spreadsheet of FHL research publications since the lab opened (including when it was called Puget Sound Biological Station and Puget Sound Marine Station). Reality-check it for false positives.
-   * Ideal data columns:
-      * Author names
-      * Publication year
-      * Publication title
-      * Publication type: peer-reviewed journal article, book chapter, book, report, editorial, letter, public dataset, news media…any other?
-      * Friday Harbor Laboratories (or PSBS or PSMS) appears in which sections of the publication: author affiliation, main text, or both
-      * Number of citations of each publication
-      * Anything else that seems important?
-   * Graphically summarize patterns of # publications and # citations over time, by publication type, by FHL affiliation vs. main text + anything else that seems interesting</div></li>
-        <li><div class="typed">do all steps</div></li>
-        <li><div class="said">Thirteen short messages while the work ran: a progress check, signing in to the UW Libraries,
-          Web of Science and Scopus (the Scopus sign-in failed), saving the exported files, and whether more help was needed
-          that night.</div></li>
-        <li><div class="typed">whats the best next step?</div></li>
-        <li><div class="typed">id like to have a style for the artifact that reflects the style of old school black and white type. what youd see in an old marine station report</div></li>
-        <li><div class="typed">i see no plots</div></li>
-        <li><div class="typed">is it a standalone html i could send? id like users to be able to export the plots at images</div></li>
-        <li><div class="typed">it needs a technical methods section with details for how the report was created. this should include a bit on the use of ai (the platform, the effort level, the prompts given)</div></li>
-        
-        <li><div class="typed">id like a figure which is research content over time. basically what the publications etc coming out of FHL were about content wise. i think this would be really interesting and AI would do a good job of classifying this.</div></li>
-        <li><div class="typed">delete duplicates and false records. whitely center should be labeled as whitely center + sub topics</div></li>
-        <li><div class="typed">What the research was about... I like the ratios. but i think the ratios could just be a stacked plot, not lots of smaller ones. and then the smaller ones could be raw publication counts.</div></li>
-        <li><div class="typed">I'd like to add a pedagogical tree of the scientists working at fhl. where they came from. how they are connected through citation and institution. where they went in the world. a map, a tree, and a diagram of your choosing.</div></li>
-        <li><div class="typed">i dont see the new figs in the report just blank spaces</div></li>
-        <li><div class="typed">you didnt find me 😞 willem weertman</div></li>
-        <li><div class="typed">looks like you also missed some folks connected to drew harvell. eg., olivia graham. I think a lot of these connections could be expanded dramatically. I understand this is tough. because it involves hunting through co-authorships.</div></li>
-        <li><div class="typed">do it</div></li>
-        <li><div class="typed">wait for the check then do it</div></li>
-        <li><div class="typed">do it. check the inferred links.</div></li>
-        <li><div class="typed">i think you pedagogy is missing jason hodin and the fhl star lab team</div></li>
-        <li><div class="typed">the pedagogy trees. i think they are connected in many cases. there must be a better way of doing this. maybe a series of trees is the wrong way of doing it. its more of a network. we have the network diagram... hmm this is tough. thoughts?</div></li>
-        <li><div class="typed">a timeline network makes sense</div></li>
-        <li><div class="typed">id like to see it</div></li>
-        <li><div class="typed">okay, add to the main document.</div></li>
-        <li><div class="typed">the search a person needs to offer suggestions for selection. also it shouldnt be case sensitive</div></li>
-        <li><div class="typed">I want to make this a public github page I can share. Id like it to underwrite a public html I can share based on githubs ability to share public webpages with data backing. I forget how those work specifically</div></li>
-        <li><div class="typed">Authorship for this document needs to be Claude Opus 5.5 and Willem Lee Weertman</div></li>
-        <li><div class="typed">the timeline network has a bunch of extra space in it that you could be labeling folks names. pop out prominent people</div></li>
-        <li><div class="typed">searching a person should highlight them in the network diagrams. (fig8 and fig9) also. each person should have a custom written (presearch) blurb (~2 paragraphs) about them that describes their work.</div></li>
-        <li><div class="typed">how is Jason Hodin not in the network? he is a classic fhler</div></li>
-        <li><div class="typed">I'm also surprised by how few people in the network are connected (in the timeline) to megan dethier, the current director of the labs.</div></li>
-        <li><div class="typed">https://staff.washington.edu/hodin/</div></li>
-        <li><div class="typed">thats totally fine. i think putting up the full records is fair and honest. this is the result of a claude search. we are very transparent about that</div></li>
-        <li><div class="typed">prompts as typed needs to be updated. when you finish this current round of workflows update the github</div></li>
-      </ol>
+      <p class="ptotal" id="prompt-total"></p>
+      <ol id="prompt-list" data-source="prompts" data-row-key="n"></ol>
     </details>
   </section>
 
@@ -895,7 +858,7 @@
 <script>
   // Stand-in for the dashboard runtime: fetches each dataset from data/ and serves it to the info sheet's code unchanged.
   window.dash = (() => {
-    const FILES = {"ai_workflows": "data/ai_workflows.csv", "audit_tiers": "data/audit_tiers.csv", "by_appears": "data/by_appears.csv", "by_era": "data/by_era.csv", "by_type": "data/by_type.csv", "by_year": "data/by_year.csv", "by_year_appears": "data/by_year_appears.csv", "by_year_tier": "data/by_year_tier.csv", "candidate_status": "data/candidate_status.csv", "eras": "data/eras.csv", "headline": "data/headline.csv", "lineage": "data/lineage.csv", "lineage_people": "data/lineage_people.csv", "methods_facts": "data/methods_facts.csv", "news_by_year": "data/news_by_year.csv", "organisms_by_decade": "data/organisms_by_decade.csv", "people": "data/people.csv", "people_links": "data/people_links.csv", "places": "data/places.csv", "profiles": "data/profiles.csv", "publications": "data/publications.csv", "recall_by_decade": "data/recall_by_decade.csv", "top_cited": "data/top_cited.csv", "top_venues": "data/top_venues.csv", "topics_by_decade": "data/topics_by_decade.csv", "whiteley_by_field": "data/whiteley_by_field.csv", "world_land": "data/world_land.json"};
+    const FILES = {"ai_workflows": "data/ai_workflows.csv", "audit_tiers": "data/audit_tiers.csv", "by_appears": "data/by_appears.csv", "by_era": "data/by_era.csv", "by_type": "data/by_type.csv", "by_year": "data/by_year.csv", "by_year_appears": "data/by_year_appears.csv", "by_year_tier": "data/by_year_tier.csv", "candidate_status": "data/candidate_status.csv", "eras": "data/eras.csv", "headline": "data/headline.csv", "lineage": "data/lineage.csv", "lineage_people": "data/lineage_people.csv", "methods_facts": "data/methods_facts.csv", "news_by_year": "data/news_by_year.csv", "organisms_by_decade": "data/organisms_by_decade.csv", "people": "data/people.csv", "people_links": "data/people_links.csv", "places": "data/places.csv", "profiles": "data/profiles.csv", "prompts": "data/prompts.csv", "publications": "data/publications.csv", "recall_by_decade": "data/recall_by_decade.csv", "top_cited": "data/top_cited.csv", "top_venues": "data/top_venues.csv", "topics_by_decade": "data/topics_by_decade.csv", "whiteley_by_field": "data/whiteley_by_field.csv", "world_land": "data/world_land.json"};
     const store = {}, calcs = {}, draws = [];
     const run = (fn) => { try { fn(); } catch (e) { console.error(e); } };
     let timer;
@@ -1014,12 +977,40 @@
       } else el.classList.remove('dash-skeleton');
       return ok;
     };
+    // A key entry highlights its series in the figure: marks carry data-key with the series name. Hover to look,
+    // click to keep the highlight (click again to release). Fig. 8's key has its own behaviour.
+    const keyShow = (fig, key) => {
+      fig.querySelectorAll('.fp-chart [data-key]').forEach((m) => {
+        m.classList.toggle('key-dim', !!key && m.dataset.key !== key);
+        m.classList.toggle('key-on', !!key && m.dataset.key === key);
+      });
+    };
     const legend = (el, items) => {
+      const fig = el.closest('.fp-fig');
       el.replaceChildren(...items.map(([name, fill]) => {
         const s = document.createElement('span');
+        s.dataset.key = name;
         s.append(swatch(fill), document.createTextNode(name));
+        if (fig && el.id !== 'lg-tree') {
+          s.classList.add('fp-keybtn'); s.setAttribute('role', 'button'); s.tabIndex = 0;
+          s.setAttribute('aria-pressed', String(fig.dataset.keyPin === name));
+          s.title = 'Hover to highlight; click to keep it highlighted';
+          const pick = () => {
+            fig.dataset.keyPin = fig.dataset.keyPin === name ? '' : name;
+            el.querySelectorAll(':scope > span').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.key === fig.dataset.keyPin)));
+            keyShow(fig, fig.dataset.keyPin);
+          };
+          s.addEventListener('mouseenter', () => keyShow(fig, name));
+          s.addEventListener('mouseleave', () => keyShow(fig, fig.dataset.keyPin));
+          s.addEventListener('focus', () => keyShow(fig, name));
+          s.addEventListener('blur', () => keyShow(fig, fig.dataset.keyPin));
+          s.addEventListener('click', pick);
+          s.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+        }
         return s;
       }));
+      // a kept highlight survives the figure being redrawn (the chart is drawn right after its key)
+      if (fig && fig.dataset.keyPin) requestAnimationFrame(() => keyShow(fig, fig.dataset.keyPin));
     };
     const svgFor = (el, height) => {
       el.querySelectorAll('svg').forEach((s) => s.remove());
@@ -1036,7 +1027,7 @@
       return w;
     };
     // Horizontal bars: one value per category, labels on the left, value at the bar end, hatched like an engraving.
-    const hbars = (el, rows, label, value, { fill = FILL.hatch, fmt = f, tipTitle = (d) => d[label] } = {}) => {
+    const hbars = (el, rows, label, value, { fill = FILL.hatch, fmt = f, tipTitle = (d) => d[label], keyOf = null } = {}) => {
       const bar = 13, gap = 11;
       const { svg, width, height } = svgFor(el, rows.length * (bar + gap) + 8);
       const lw = Math.min(width * 0.5, textWidth(svg, rows.map((d) => d[label])) + 10);
@@ -1044,6 +1035,7 @@
       const x = d3.scaleLinear([0, d3.max(rows, (d) => d[value]) || 1], [lw, width - vw]);
       const g = svg.selectAll('g.row').data(rows).join('g').attr('class', 'row')
         .attr('transform', (d, i) => `translate(0,${i * (bar + gap) + 4 + gap / 2})`);
+      if (keyOf) g.attr('data-key', keyOf);
       g.append('rect').attr('y', -gap / 2).attr('width', width).attr('height', bar + gap).style('fill', 'transparent');
       g.append('text').attr('class', 'lbl').attr('x', lw - 8).attr('y', bar / 2).attr('dy', '0.35em').attr('text-anchor', 'end')
         .text((d) => d[label])
@@ -1088,7 +1080,7 @@
         .call(d3.axisBottom(x).tickValues(xs.filter((v, i) => (band === 1 ? v % (step <= 10 ? 10 : 20) === 0 : i % step === 0)))
           .tickFormat(fmtX).tickSize(4).tickSizeOuter(0))
         .call(cleanAxis).call((g) => g.select('.domain').remove());
-      svg.append('g').selectAll('g').data(stack).join('g').style('fill', (s, i) => fills[i])
+      svg.append('g').selectAll('g').data(stack).join('g').attr('data-key', (s) => s.key).style('fill', (s, i) => fills[i])
         .selectAll('rect').data((s) => s.map((p) => Object.assign(p, { key: s.key }))).join('rect').attr('class', 'mark')
         .attr('x', (p) => x(p.data.x)).attr('width', x.bandwidth()).attr('y', (p) => y(p[1]))
         .attr('height', (p) => Math.max(0, y(p[0]) - y(p[1])))
@@ -1115,7 +1107,7 @@
       const yw = textWidth(svg, ticks.map(fmt)) + 6;
       const x = d3.scaleBand(decades, [yw, pw]).paddingInner(0.25);
       order.forEach((key, i) => {
-        const g = svg.append('g').attr('transform', `translate(${(i % cols) * (pw + gapX)},${Math.floor(i / cols) * (ph + gapY)})`);
+        const g = svg.append('g').attr('data-key', key).attr('transform', `translate(${(i % cols) * (pw + gapX)},${Math.floor(i / cols) * (ph + gapY)})`);
         const own = new Map((byKey.get(key) || []).map((r) => [r.decade, r]));
         const data = decades.map((d) => own.get(d) || { decade: d, key, share: 0, n: 0, total: 0 });
         const v = (r) => value(r) || 0;
@@ -1758,7 +1750,7 @@
       .attr('d', (l) => { const a = at(idx.get(l.source)), b = at(idx.get(l.target)); return `M${a}Q${cx},${cy} ${b}`; })
       .style('stroke-width', (l) => w(l.citations));
     const rr = d3.scaleSqrt([1, d3.max(people, (p) => p.fhl_works)], [2.5, 9]);
-    const nodes = svg.append('g').selectAll('g').data(people).join('g');
+    const nodes = svg.append('g').selectAll('g').data(people).join('g').attr('data-key', (p) => p.came_from_region);
     nodes.append('circle').attr('class', 'net-node').attr('cx', (p, i) => at(i)[0]).attr('cy', (p, i) => at(i)[1])
       .attr('r', (p) => rr(p.fhl_works)).style('fill', (p) => REGION_FILLS[p.came_from_region] || FILL.grayl);
     const lab = nodes.append('text').attr('class', 'net-label').attr('dy', '0.35em')
@@ -1849,7 +1841,7 @@
     if (state(elW, ['whiteley_by_field'])) {
       const rows = dash.data('whiteley_by_field').data.map((r) => ({ ...r, publications: +r.publications }))
         .sort((a, b) => b.publications - a.publications);
-      hbars(elW, rows, 'field', 'publications', { fill: (d) => wFills[d.group] || FILL.open, tipTitle: (d) => `${d.field} · ${d.group}` });
+      hbars(elW, rows, 'field', 'publications', { fill: (d) => wFills[d.group] || FILL.open, tipTitle: (d) => `${d.field} · ${d.group}`, keyOf: (d) => d.group });
     }
 
     // ---- the people -----------------------------------------------------------------------------------------
@@ -1975,10 +1967,29 @@
     }
     const aw = dash.data('ai_workflows');
     if (aw.status === 'ok') {
+      // (the AI runs table)
       document.querySelector('#tbl-ai tbody').replaceChildren(...aw.data.map((r) => {
         const tr = document.createElement('tr'); tr.dataset.key = r.workflow;
         fillRow(tr, [[r.workflow, ''], [r.purpose, ''], [String(r.agents), 'num'], [r.effort, ''], [r.started_utc, 'num']]);
         return tr;
+      }));
+    }
+
+    // ---- the prompts, as typed: when, and the output tokens each led to ----------------------------------------
+    const pr = dash.data('prompts');
+    if (pr.status === 'ok') {
+      const tot = (k) => d3.sum(pr.data, (r) => +r[k]);
+      document.getElementById('prompt-total').textContent = `${f(pr.data.length)} entries; in all ${f(tot('tokens_total'))} output tokens, `
+        + `${f(tot('tokens_claude'))} by Claude in the main session and ${f(tot('tokens_agents'))} by ${f(tot('agents'))} agents.`;
+      document.getElementById('prompt-list').replaceChildren(...pr.data.map((r) => {
+        const li = document.createElement('li'); li.dataset.key = r.n;
+        const meta = document.createElement('div'); meta.className = 'pmeta';
+        const n = +r.agents;
+        meta.textContent = `${r.typed_local} Pacific${+r.messages > 1 ? ` (${f(+r.messages)} messages)` : ''} · ${f(+r.tokens_total)} tokens`
+          + (n ? ` (${f(+r.tokens_claude)} by Claude, ${f(+r.tokens_agents)} by ${f(n)} agent${n === 1 ? '' : 's'})` : '');
+        const body = document.createElement('div'); body.className = r.kind === 'summary' ? 'said' : 'typed'; body.textContent = r.text;
+        li.append(meta, body);
+        return li;
       }));
     }
 

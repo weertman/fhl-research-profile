@@ -26,6 +26,7 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `people_links.csv`: Citations among the 60 most prolific FHL scientists.
 - `places.csv`: Institutions FHL scientists came from and went to, with locations.
 - `profiles.csv`: 
+- `prompts.csv`: 
 - `publications.csv`: The census: one row per publication (record id, evidence tier, year, authors, title, venue, type, where FHL appears, citations, DOI, research topic, organism group).
 - `recall_by_decade.csv`: How many of FHL's own listed papers the database searches found, by decade.
 - `top_cited.csv`: The most cited publications.

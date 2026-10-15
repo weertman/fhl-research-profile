@@ -1,0 +1,57 @@
+n,kind,typed_utc,typed_local,messages,text,tokens_claude,tokens_agents,agents,tokens_total
+1,typed,2026-10-13T22:34:56.874Z,2026-10-13 15:34,1,"i have been given this task. Id like you to break the problem down into technical steps.
+
+
+* Create an FHL research profile info sheet. Target audiences: RIMB class, FHL website, FHL community
+   * Compile a spreadsheet of FHL research publications since the lab opened (including when it was called Puget Sound Biological Station and Puget Sound Marine Station). Reality-check it for false positives. 
+   * Ideal data columns:
+      * Author names
+      * Publication year
+      * Publication title
+      * Publication type: peer-reviewed journal article, book chapter, book, report, editorial, letter, public dataset, news media…any other?
+      * Friday Harbor Laboratories (or PSBS or PSMS) appears in which sections of the publication: author affiliation, main text, or both
+      * Number of citations of each publication 
+      * Anything else that seems important?
+   * Graphically summarize patterns of # publications and # citations over time, by publication type, by FHL affiliation vs. main text + anything else that seems interesting",20030,0,0,20030
+2,typed,2026-10-13T22:37:29.543Z,2026-10-13 15:37,1,do all steps,158476,999114,9,1157590
+3,summary,2026-10-14T00:21:16.393Z,2026-10-13 17:21–18:32,13,"Short messages while the census was being built: a progress check, signing in to the UW Libraries, Web of Science and Scopus (the Scopus sign-in failed), saving the exported files, and whether more help was needed that night.",462737,5233266,76,5696003
+4,typed,2026-10-14T16:59:08.246Z,2026-10-14 09:59,1,whats the best next step?,3173,0,0,3173
+5,typed,2026-10-14T17:00:46.231Z,2026-10-14 10:00,1,id like to have a style for the artifact that reflects the style of old school black and white type. what youd see in an old marine station report,84817,0,0,84817
+6,typed,2026-10-14T17:16:06.490Z,2026-10-14 10:16,1,i see no plots,26622,0,0,26622
+7,typed,2026-10-14T17:54:12.407Z,2026-10-14 10:54,1,is it a standalone html i could send? id like users to be able to export the plots at images,23049,0,0,23049
+8,typed,2026-10-14T17:57:40.353Z,2026-10-14 10:57,1,"it needs a technical methods section with details for how the report was created. this should include a bit on the use of ai (the platform, the effort level, the prompts given)",48224,0,0,48224
+9,typed,2026-10-14T18:08:07.097Z,2026-10-14 11:08,1,id like a figure which is research content over time. basically what the publications etc coming out of FHL were about content wise. i think this would be really interesting and AI would do a good job of classifying this.,150168,1387063,17,1537231
+10,typed,2026-10-14T18:51:11.856Z,2026-10-14 11:51,1,delete duplicates and false records. whitely center should be labeled as whitely center + sub topics,85116,0,0,85116
+11,typed,2026-10-14T19:05:49.476Z,2026-10-14 12:05,1,"What the research was about... I like the ratios. but i think the ratios could just be a stacked plot, not lots of smaller ones. and then the smaller ones could be raw publication counts.",13328,0,0,13328
+12,typed,2026-10-14T19:07:46.805Z,2026-10-14 12:07,1,"I'd like to add a pedagogical tree of the scientists working at fhl. where they came from. how they are connected through citation and institution. where they went in the world. a map, a tree, and a diagram of your choosing.",166834,0,0,166834
+13,typed,2026-10-14T21:25:41.593Z,2026-10-14 14:25,1,i dont see the new figs in the report just blank spaces,49617,0,0,49617
+14,typed,2026-10-14T21:59:54.028Z,2026-10-14 14:59,1,you didnt find me 😞 willem weertman,11241,0,0,11241
+15,typed,2026-10-14T22:02:00.547Z,2026-10-14 15:02,1,"looks like you also missed some folks connected to drew harvell. eg., olivia graham. I think a lot of these connections could be expanded dramatically. I understand this is tough. because it involves hunting through co-authorships.",71507,40054,1,111561
+16,typed,2026-10-14T22:16:14.802Z,2026-10-14 15:16,1,do it,0,0,0,0
+17,typed,2026-10-14T22:16:38.082Z,2026-10-14 15:16,1,wait for the check then do it,14785,0,0,14785
+18,typed,2026-10-14T23:04:45.844Z,2026-10-14 16:04,1,do it. check the inferred links.,5826,0,0,5826
+19,typed,2026-10-14T23:05:55.900Z,2026-10-14 16:05,1,i think you pedagogy is missing jason hodin and the fhl star lab team,8907,0,0,8907
+20,typed,2026-10-14T23:07:35.229Z,2026-10-14 16:07,1,the pedagogy trees. i think they are connected in many cases. there must be a better way of doing this. maybe a series of trees is the wrong way of doing it. its more of a network. we have the network diagram... hmm this is tough. thoughts?,15365,859110,75,874475
+21,typed,2026-10-14T23:23:56.720Z,2026-10-14 16:23,1,a timeline network makes sense,35498,0,0,35498
+22,typed,2026-10-14T23:31:19.743Z,2026-10-14 16:31,1,id like to see it,1371,0,0,1371
+23,typed,2026-10-14T23:31:59.218Z,2026-10-14 16:31,1,"okay, add to the main document.",6745,0,0,6745
+24,typed,2026-10-14T23:33:53.695Z,2026-10-14 16:33,1,the search a person needs to offer suggestions for selection. also it shouldnt be case sensitive,8883,0,0,8883
+25,typed,2026-10-14T23:35:37.049Z,2026-10-14 16:35,1,I want to make this a public github page I can share. Id like it to underwrite a public html I can share based on githubs ability to share public webpages with data backing. I forget how those work specifically,5492,0,0,5492
+26,typed,2026-10-14T23:36:38.239Z,2026-10-14 16:36,1,Authorship for this document needs to be Claude Opus 5.5 and Willem Lee Weertman,8239,0,0,8239
+27,typed,2026-10-14T23:37:43.243Z,2026-10-14 16:37,1,the timeline network has a bunch of extra space in it that you could be labeling folks names. pop out prominent people,5832,0,0,5832
+28,typed,2026-10-14T23:38:48.477Z,2026-10-14 16:38,1,searching a person should highlight them in the network diagrams. (fig8 and fig9) also. each person should have a custom written (presearch) blurb (~2 paragraphs) about them that describes their work.,12460,1838115,45,1850575
+29,typed,2026-10-14T23:40:51.268Z,2026-10-14 16:40,1,how is Jason Hodin not in the network? he is a classic fhler,3711,0,0,3711
+30,typed,2026-10-14T23:41:53.307Z,2026-10-14 16:41,1,"I'm also surprised by how few people in the network are connected (in the timeline) to megan dethier, the current director of the labs.",0,0,0,0
+31,typed,2026-10-14T23:42:15.988Z,2026-10-14 16:42,1,https://staff.washington.edu/hodin/,28077,0,0,28077
+32,typed,2026-10-14T23:54:24.710Z,2026-10-14 16:54,1,thats totally fine. i think putting up the full records is fair and honest. this is the result of a claude search. we are very transparent about that,9254,0,0,9254
+33,typed,2026-10-14T23:57:30.937Z,2026-10-14 16:57,1,prompts as typed needs to be updated. when you finish this current round of workflows update the github,2370,0,0,2370
+34,typed,2026-10-14T23:58:10.134Z,2026-10-14 16:58,1,i think we need a better opening paragraph,5999,0,0,5999
+35,typed,2026-10-15T00:04:04.355Z,2026-10-14 17:04,1,looks great. make it live,1449,0,0,1449
+36,typed,2026-10-15T00:04:55.652Z,2026-10-14 17:04,1,the summary of results at the top feels out of place. it should be at the end. the top needs to have a table of contents.,3562,0,0,3562
+37,typed,2026-10-15T00:05:30.973Z,2026-10-14 17:05,1,why the scientist summaries finish push them to live,2841,0,0,2841
+38,typed,2026-10-15T00:06:23.955Z,2026-10-14 17:06,1,fig 9. when i click on a research id like it to have the connections stick for a bit so i can take an image of the figure.,5031,0,0,5031
+39,typed,2026-10-15T00:07:22.178Z,2026-10-14 17:07,1,"this bit ""Including work issued under the station's earlier names: the Puget Sound Marine Station, the Puget Sound Biological Station, and the University of Washington Oceanographic Laboratories."" at the top seems out of place. I think the title could use a little work.",20917,0,0,20917
+40,typed,2026-10-15T00:39:19.648Z,2026-10-14 17:39,1,yes im happy,3488,0,0,3488
+41,typed,2026-10-15T00:42:20.234Z,2026-10-14 17:42,1,id like to be able to filter the researcher timeline plot for the different parts of the key by clicking on those parts of the key. it should highlight the selection. it should only work if a reseracher isnt searched,12186,0,0,12186
+42,typed,2026-10-15T01:06:11.672Z,2026-10-14 18:06,1,"when you finish don't forget to update the prompts as typed. id like those to have datetimes for when they were typed and if possible, the number of tokens the prompts caused to be generated.",20984,0,0,20984
+43,typed,2026-10-15T01:09:57.436Z,2026-10-14 18:09,1,when i highlight components of keys in the figures. eg. fig2. id like them to highlight their corresponding part of their figure,11008,0,0,11008
