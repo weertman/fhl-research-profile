@@ -7,3 +7,4 @@ workflow,purpose,agents,effort,started_utc
 6. fhl-screen-delta,Screen the second-round candidates and calibrate against the first round,8,xhigh,2026-10-14 05:36
 7. topic classification,Label each publication's research topic and organism group in 16 random batches; one more agent re-labels a random 300 to measure agreement,17,max,2026-10-14 18:14
 8. mentor-link check,"Check a random 30 of the mentor links inferred from co-authorship against public records (theses, lab pages, CVs); links found to be between peers were removed",1,max,2026-10-14 22:09
+9. fhl-mentor-network,"Check every mentor link inferred from co-authorship against public records (with a second look and an adjudicator), and list the trainees on each FHL scientist's lab pages and CVs, re-checking every entry",75,max,2026-10-14 23:09

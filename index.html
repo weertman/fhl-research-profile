@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FHL Research Publications</title>
+<title>Friday Harbor Laboratories: a century of research</title>
 <meta name="description" content="A census of research published from the Friday Harbor Laboratories (University of Washington) since 1904, with the data behind every figure.">
 <meta name="author" content="Claude Opus 5.5 and Willem Lee Weertman">
 <style>
@@ -65,7 +65,6 @@
            font-size: clamp(1.6rem, 5.4cqi, 3rem); line-height: 1.12; margin: 0; text-wrap: balance; }
   .fp-mast .sub { font-style: italic; font-size: clamp(1.05rem, 2.4cqi, 1.3rem); text-wrap: balance; }
   .fp-mast .short { width: 4rem; border-top: 1px solid var(--fp-ink); margin: .4rem 0; }
-  .fp-mast .names { font-size: .92rem; max-width: 44ch; text-wrap: balance; margin-bottom: .7rem; }
   .fp-mast .byline { font-variant: small-caps; letter-spacing: .06em; font-size: .98rem; margin: -.2rem 0 .6rem; }
   .fp-mast .stamp { text-transform: uppercase; letter-spacing: .14em; font-size: .74rem; font-variant-numeric: lining-nums; }
 
@@ -229,7 +228,7 @@
   .fp-profile .para { margin: .6rem 0; line-height: 1.5; }
   .fp-profile .note { margin: .6rem 0 0; font-size: .78rem; color: var(--fp-ink-2); }
   .fp-profile .note a { color: inherit; }
-  .fp-chart #ch-net g.off > .net-node { opacity: .2; }
+  #ch-net.fp-chart g.off > .net-node { opacity: .2; }
   .fp-find .fp-combo { position: relative; flex: 0 1 26rem; min-width: min(100%, 18rem); }
   .fp-find .fp-combo input { width: 100%; box-sizing: border-box; }
   .fp-suggest { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 2px); margin: 0; padding: 0; list-style: none;
@@ -256,12 +255,10 @@
   <header class="fp-mast" id="top">
     <div class="imprint">University of Washington</div>
     <div class="fp-rule2" role="presentation"></div>
-    <div class="over">Research publications of the</div>
+    <div class="over">A century of research at</div>
     <h1>Friday Harbor Laboratories</h1>
-    <div class="sub">A census of the work published since the station opened in 1904</div>
+    <div class="sub">The publications and people of the University of Washington's marine station since 1904</div>
     <div class="short" role="presentation"></div>
-    <p class="names">Including work issued under the station's earlier names: the Puget Sound Marine Station, the Puget Sound
-      Biological Station, and the University of Washington Oceanographic Laboratories.</p>
     <p class="byline">By Claude Opus 5.5 and Willem Lee Weertman</p>
     <div class="fp-rule2 flip" role="presentation"></div>
     <div class="stamp">Data retrieved <span data-source="headline" data-field="retrieved">—</span></div>
@@ -269,7 +266,7 @@
 
   <p class="fp-lead" id="takeaway">
     For more than a century, scientists who came to Friday Harbor have written up what they found there. This report
-    counts that work. Since the first publication in
+    counts that work, including what appeared under the station's earlier names (Table V). Since the first publication in
     <span data-source="headline" data-field="first_year">—</span>, at least
     <b data-source="headline" data-field="verified" class="dash-skeleton">—</b> papers, books, theses and datasets show
     their tie to the station in the record itself; counting the candidates not yet confirmed, at their audited rates, the
@@ -412,12 +409,13 @@
         <h3 id="fig-tree"><span class="fig">Fig. 8.</span>—Teachers and students: the mentoring network.</h3>
         <p class="cap">Each mark is a scientist, placed left to right by the year their career began, so every line runs
           forward in time from a teacher to a student. Lineages that share people join up, and connected people sit
-          near each other. Solid lines are documented advisors: UW thesis records, which name the advisor, and Wikidata's
-          doctoral-advisor statements, which reach back several academic generations. Dashed lines are mentors inferred
-          from co-authorship: a scientist who is last author on at least two of a younger colleague's first-author FHL
-          papers, early in that colleague's career (rule in section X). Mark size shows the number of students. Hover over
-          a mark, or use "Find a person", to follow a lineage back through teachers and forward through students. The
-          network is a sample and far from complete.</p>
+          near each other. Solid lines are documented: UW thesis records, Wikidata's doctoral-advisor statements (which reach
+          back several academic generations), lab and team pages, and mentors first inferred from co-authorship and then
+          confirmed in public records. Dashed lines are mentors inferred from co-authorship that could not be confirmed: a
+          scientist who is last author on at least two of a younger colleague's first-author FHL papers, early in that
+          colleague's career (rules and checks in section X). Mark size shows the number of students. Hover over
+          a mark, click it to keep it lit, or use "Find a person", to follow a lineage back through teachers and forward through
+          students. The network is a sample and far from complete.</p>
       </figcaption>
     </figure>
     <figure class="fp-fig">
@@ -428,7 +426,8 @@
         <p class="cap">The sixty scientists with the most FHL-address publications, around the circle in the order they
           began publishing from FHL (clockwise from the top). A line joins two scientists when the FHL papers of one cite the
           FHL papers of the other; its weight shows how often. Marker area shows FHL publications, and the fill shows the
-          region the scientist came from. Hover over a name to pick out their links.</p>
+          region the scientist came from. Hover over a name to pick out their links; click it to keep them lit (for example to save
+          the figure), and click again or on empty space to release.</p>
       </figcaption>
     </figure>
     <div class="fp-fig" id="people-table">
@@ -737,10 +736,17 @@
         from OpenAlex affiliation histories, and people are matched by OpenAlex author ID or by surname and given name. The
         rule found <span data-source="methods_facts" data-field="value" data-where="fact=mentor_pairs">—</span> links. It recovers <span data-source="methods_facts" data-field="value" data-where="fact=mentor_doc_recovered">—</span> of the <span data-source="methods_facts" data-field="value" data-where="fact=mentor_doc_visible">—</span>
         documented advisor-student pairs that appear in the census with the student first and the advisor last; most of the
-        rest share only one paper. An AI agent checked a random <span data-source="methods_facts" data-field="value" data-where="fact=mentor_checked">—</span> inferred links against public records
-        (theses, lab pages, CVs): <span data-source="methods_facts" data-field="value" data-where="fact=mentor_confirmed">—</span> were advisor, postdoctoral or student-research mentors,
-        <span data-source="methods_facts" data-field="value" data-where="fact=mentor_peer">—</span> were collaborations between peers, and <span data-source="methods_facts" data-field="value" data-where="fact=mentor_unclear">—</span> could not be settled
-        (Table VI). The links found to be between peers were removed from the network. OpenAlex groups papers into
+        rest share only one paper. AI agents then checked every inferred link against public records (theses, lab
+        pages, CVs), with an independent second look at every verdict that did not rest on a direct source and an adjudicator
+        where the two looks disagreed: <span data-source="methods_facts" data-field="value" data-where="fact=mentor_confirmed">—</span> of the <span data-source="methods_facts" data-field="value" data-where="fact=mentor_checked">—</span> were advisor, postdoctoral or
+        student-research mentors and are drawn as documented, <span data-source="methods_facts" data-field="value" data-where="fact=mentor_peer">—</span> were collaborations between peers and were
+        removed, and <span data-source="methods_facts" data-field="value" data-where="fact=mentor_unclear">—</span> could not be settled and are drawn as inferred (Table VI). Lab rosters add
+        <span data-source="methods_facts" data-field="value" data-where="fact=roster_links">—</span> documented links: AI agents read each FHL scientist's public lab, team and alumni pages and CVs
+        and listed the graduate students, postdocs, technicians, interns and staff named there, and a second agent re-opened
+        every page to confirm each entry. Undergraduates named on a home-university lab page are included only if they also
+        appear as authors in the census, and the Star Lab team comes from FHL's own pages, read from Internet Archive copies.
+        A shortage of web-search capacity cut many roster searches short, so only <span data-source="methods_facts" data-field="value" data-where="fact=roster_scientists">—</span> scientists have a
+        roster so far. In all the network holds <span data-source="methods_facts" data-field="value" data-where="fact=network_links">—</span> links among <span data-source="methods_facts" data-field="value" data-where="fact=network_people">—</span> people. OpenAlex groups papers into
         people automatically and sometimes merges or splits people with similar names. Two such merges were corrected by
         hand: L. D. Partridge (FHL papers 1975–79) and Volker Schmid (1988–92) had each been merged with a different scientist
         of the same name, a biogerontologist and a statistician. Scientists from before about 1970 are under-represented because older papers carry no address
@@ -1663,7 +1669,15 @@
       showTip(el, event, d.id, [[null, null, `${isFhl(d.id) ? 'FHL scientist' : 'Teacher or student of FHL scientists'}; career began about ${nfo.year} (${nfo.year_basis})`],
         ...(teachersOf.get(d.id) || []).map((l) => [null, null, `Taught by ${l.advisor} (${evidence(l)})`]),
         ...((studentsOf.get(d.id) || []).length ? [[null, null, `${f(nStudents(d.id))} student${nStudents(d.id) === 1 ? '' : 's'} here: ${(studentsOf.get(d.id) || []).slice(0, 6).map((l) => l.student).join(', ')}${nStudents(d.id) > 6 ? ', …' : ''}`]] : [])]);
-    }).on('mouseleave', () => { hideTip(el); if (pinned()) focus(lineage.pinned); else clear(); });
+    }).on('mouseleave', () => { hideTip(el); if (pinned()) focus(lineage.pinned); else clear(); })
+      .on('click', (event) => {
+        const [px, py] = d3.pointer(event, svg.node());
+        const d = nodes[delaunay.find(px, py)];
+        const near = d && Math.hypot(d.x - px, d.y - py) <= 14;
+        lineage.pinned = near && lineage.pinned !== d.id ? d.id : null;
+        if (lineage.pinned) focus(lineage.pinned); else clear();
+      });
+    nd.style('cursor', 'pointer');
     lineage = { focus, clear, names, pinned: null };
     applyFind(false);
   }
@@ -1719,7 +1733,10 @@
       const out = d3.sum(links.filter((l) => l.source === p.name), (l) => l.citations), inn = d3.sum(links.filter((l) => l.target === p.name), (l) => l.citations);
       showTip(el, event, p.name, [[null, null, `${f(p.fhl_works)} FHL papers, ${p.first_fhl_year}–${p.last_fhl_year}`],
         [null, null, `Came from ${p.came_from || 'FHL itself'}`], [null, null, `Cites the others ${f(out)} times; cited by them ${f(inn)} times`]]);
-    }).on('mouseleave', () => { rest(); hideTip(el); });
+    }).on('mouseleave', () => { rest(); hideTip(el); })
+      .on('click', (event, p) => { event.stopPropagation(); citeNet.pinned = citeNet.pinned === p.name ? null : p.name; rest(); })
+      .style('cursor', 'pointer');
+    svg.on('click', () => { citeNet.pinned = null; rest(); });
     applyFind(false);
   }
 
@@ -1950,7 +1967,7 @@
   // Save a figure as a PNG or SVG image: its key, the chart and its caption, always in black ink on white paper.
   (() => {
     const NS = 'http://www.w3.org/2000/svg';
-    const PROPS = ['fill', 'stroke', 'stroke-width', 'stroke-dasharray', 'opacity', 'visibility', 'font-family', 'font-size',
+    const PROPS = ['fill', 'stroke', 'stroke-width', 'stroke-dasharray', 'opacity', 'stroke-opacity', 'fill-opacity', 'visibility', 'font-family', 'font-size',
                    'font-style', 'font-weight', 'letter-spacing', 'font-variant-numeric'];
     const localUrl = (v) => v.replace(/url\((['"]?)[^#)'"]*#([^)'"]+)\1\)/g, 'url(#$2)');
     const el = (name, attrs, text) => {
