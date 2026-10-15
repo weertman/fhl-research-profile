@@ -73,6 +73,18 @@
   .fp .fp-lead { font-size: 1.12rem; line-height: 1.6; max-width: 38em; margin-inline: auto; text-align: justify; hyphens: auto; }
   .fp-lead::first-letter { font-family: var(--fp-display); float: left; font-size: 3.5em; line-height: .8; padding: .07em .1em 0 0; }
 
+  /* Contents: section, title, dot leaders, the figures it holds */
+  .fp-toc { border-top: 1px solid var(--fp-ink); border-bottom: 1px solid var(--fp-ink); padding: 1rem 0 1.1rem; }
+  .fp-toc .head { text-align: center; text-transform: uppercase; letter-spacing: .22em; font-size: .76rem; margin-bottom: .6rem; }
+  .fp-toc ol { list-style: none; margin: 0 auto; padding: 0; max-width: 40rem; display: grid; gap: .35rem; }
+  .fp-toc a { display: flex; align-items: baseline; gap: .5rem; color: inherit; text-decoration: none; }
+  .fp-toc a:hover .t, .fp-toc a:focus-visible .t { text-decoration: underline; text-underline-offset: 3px; }
+  .fp-toc .num { flex: none; width: 2.6rem; text-align: right; font-variant-numeric: lining-nums; letter-spacing: .06em; }
+  .fp-toc .t { min-width: 0; }
+  .fp-toc .dots { flex: 1; min-width: 1.2rem; border-bottom: 2px dotted var(--fp-ink-2); transform: translateY(-.3em); }
+  .fp-toc .refs { flex: none; font-size: .85rem; font-style: italic; color: var(--fp-ink-2); }
+  .fp-abstract.fp-closing { margin-top: 1rem; }
+  .fp-end { margin-top: .5rem; }
   /* Summary of results: label, dot leaders, figure */
   .fp-abstract { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr)); gap: 1.15rem 3rem;
                  border-top: 1px solid var(--fp-ink); border-bottom: 1px solid var(--fp-ink); padding: 1rem 0 1.2rem; }
@@ -270,27 +282,23 @@
     methods and prompts are given in full, and the data are public.
   </p>
 
-  <section class="fp-abstract" id="headline" aria-label="Summary of results">
-    <div class="head">Summary of results</div>
-    <div class="fp-item"><div class="line"><span class="lab">Verified publications</span><span class="dots"></span>
-      <span class="val dash-skeleton" data-source="headline" data-field="verified">—</span></div>
-      <span class="note">FHL named in an author address, the text, or the station's own series</span></div>
-    <div class="fp-item"><div class="line"><span class="lab">Best estimate</span><span class="dots"></span>
-      <span class="val dash-skeleton" data-source="best_estimate" data-field="estimate">—</span></div>
-      <span class="note">each tier weighted by its audited accuracy</span></div>
-    <div class="fp-item"><div class="line"><span class="lab">Citations to verified work</span><span class="dots"></span>
-      <span class="val dash-skeleton" data-source="headline" data-field="verified_citations">—</span></div>
-      <span class="note">OpenAlex counts</span></div>
-    <div class="fp-item"><div class="line"><span class="lab">Verified per year, 2016–2025</span><span class="dots"></span>
-      <span class="val dash-skeleton" data-source="headline" data-field="verified_per_year_2016_2025">—</span></div>
-      <span class="note">average publications a year</span></div>
-    <div class="fp-item"><div class="line"><span class="lab">Audit: verified tier correct</span><span class="dots"></span>
-      <span class="val dash-skeleton" data-source="audit_tiers" data-field="precision" data-where="tier=Verified">—</span></div>
-      <span class="note">share confirmed against the papers</span></div>
-    <div class="fp-item"><div class="line"><span class="lab">FHL's own list found by searches</span><span class="dots"></span>
-      <span class="val dash-skeleton" data-source="headline" data-field="search_recall_vs_fhl_lists">—</span></div>
-      <span class="note">database searches miss many acknowledgment-only papers</span></div>
-  </section>
+  <nav class="fp-toc" id="contents" aria-label="Contents">
+    <div class="head">Contents</div>
+    <ol>
+      <li><a href="#per-year"><span class="num">I.</span><span class="t">Publications per year</span><span class="dots"></span><span class="refs">Fig. 1</span></a></li>
+      <li><a href="#content"><span class="num">II.</span><span class="t">What the research was about</span><span class="dots"></span><span class="refs">Figs. 2–6</span></a></li>
+      <li><a href="#people"><span class="num">III.</span><span class="t">The people</span><span class="dots"></span><span class="refs">Figs. 7–9, Table I</span></a></li>
+      <li><a href="#where"><span class="num">IV.</span><span class="t">Where FHL appears in the publication</span><span class="dots"></span><span class="refs">Figs. 10–11</span></a></li>
+      <li><a href="#kinds"><span class="num">V.</span><span class="t">What kinds of work</span><span class="dots"></span><span class="refs">Figs. 12–14</span></a></li>
+      <li><a href="#citations"><span class="num">VI.</span><span class="t">Citations</span><span class="dots"></span><span class="refs">Figs. 15–16, Table II</span></a></li>
+      <li><a href="#news"><span class="num">VII.</span><span class="t">In the news</span><span class="dots"></span><span class="refs">Fig. 17</span></a></li>
+      <li><a href="#reliability"><span class="num">VIII.</span><span class="t">How the census was built, and how far to trust it</span><span class="dots"></span><span class="refs">Figs. 18–19, Table III</span></a></li>
+      <li><a href="#all-publications"><span class="num">IX.</span><span class="t">Catalogue of publications</span><span class="dots"></span><span class="refs">Table IV</span></a></li>
+      <li><a href="#method"><span class="num">X.</span><span class="t">Technical methods</span><span class="dots"></span><span class="refs">Tables V–VI</span></a></li>
+      <li><a href="#headline"><span class="num"></span><span class="t">Summary of results</span><span class="dots"></span><span class="refs"></span></a></li>
+    </ol>
+  </nav>
+
 
   <section class="fp-section" id="per-year">
     <h2><span class="num">I.</span> Publications per year</h2>
@@ -843,8 +851,30 @@
         <li><div class="typed">prompts as typed needs to be updated. when you finish this current round of workflows update the github</div></li>
       </ol>
     </details>
-    <div class="fp-end" aria-hidden="true">⁂</div>
   </section>
+
+  <section class="fp-abstract fp-closing" id="headline" aria-label="Summary of results">
+    <div class="head">Summary of results</div>
+    <div class="fp-item"><div class="line"><span class="lab">Verified publications</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="headline" data-field="verified">—</span></div>
+      <span class="note">FHL named in an author address, the text, or the station's own series</span></div>
+    <div class="fp-item"><div class="line"><span class="lab">Best estimate</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="best_estimate" data-field="estimate">—</span></div>
+      <span class="note">each tier weighted by its audited accuracy</span></div>
+    <div class="fp-item"><div class="line"><span class="lab">Citations to verified work</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="headline" data-field="verified_citations">—</span></div>
+      <span class="note">OpenAlex counts</span></div>
+    <div class="fp-item"><div class="line"><span class="lab">Verified per year, 2016–2025</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="headline" data-field="verified_per_year_2016_2025">—</span></div>
+      <span class="note">average publications a year</span></div>
+    <div class="fp-item"><div class="line"><span class="lab">Audit: verified tier correct</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="audit_tiers" data-field="precision" data-where="tier=Verified">—</span></div>
+      <span class="note">share confirmed against the papers</span></div>
+    <div class="fp-item"><div class="line"><span class="lab">FHL's own list found by searches</span><span class="dots"></span>
+      <span class="val dash-skeleton" data-source="headline" data-field="search_recall_vs_fhl_lists">—</span></div>
+      <span class="note">database searches miss many acknowledgment-only papers</span></div>
+  </section>
+  <div class="fp-end" aria-hidden="true">⁂</div>
 </div>
 
 <p class="fp-sitenote">Published at <a href="https://weertman.github.io/fhl-research-profile/">https://weertman.github.io/fhl-research-profile/</a>. The data behind every figure and table are
