@@ -54,4 +54,5 @@ n,kind,typed_utc,typed_local,messages,text,tokens_claude,tokens_agents,agents,to
 40,typed,2026-10-15T00:39:19.648Z,2026-10-14 17:39,1,yes im happy,3488,0,0,3488
 41,typed,2026-10-15T00:42:20.234Z,2026-10-14 17:42,1,id like to be able to filter the researcher timeline plot for the different parts of the key by clicking on those parts of the key. it should highlight the selection. it should only work if a reseracher isnt searched,12186,0,0,12186
 42,typed,2026-10-15T01:06:11.672Z,2026-10-14 18:06,1,"when you finish don't forget to update the prompts as typed. id like those to have datetimes for when they were typed and if possible, the number of tokens the prompts caused to be generated.",20984,0,0,20984
-43,typed,2026-10-15T01:09:57.436Z,2026-10-14 18:09,1,when i highlight components of keys in the figures. eg. fig2. id like them to highlight their corresponding part of their figure,38192,940185,62,978377
+43,typed,2026-10-15T01:09:57.436Z,2026-10-14 18:09,1,when i highlight components of keys in the figures. eg. fig2. id like them to highlight their corresponding part of their figure,42599,940185,62,982784
+44,typed,2026-10-15T15:48:26.941Z,2026-10-15 08:48,1,update the prompts and complete the rosters,2678,0,0,2678
