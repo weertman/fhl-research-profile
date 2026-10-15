@@ -256,11 +256,18 @@
   </header>
 
   <p class="fp-lead" id="takeaway">
-    FHL research appears in at least <b data-source="headline" data-field="verified" class="dash-skeleton">—</b> publications
-    where we could see the connection in the record itself. Counting the unconfirmed candidates at their audited rates
-    gives a best estimate of about <b data-source="best_estimate" data-field="estimate" class="dash-skeleton">—</b>.
-    The verified publications have been cited
-    <b data-source="headline" data-field="verified_citations" class="dash-skeleton">—</b> times.
+    For more than a century, scientists who came to Friday Harbor have written up what they found there. This report
+    counts that work. Since the first publication in
+    <span data-source="headline" data-field="first_year">—</span>, at least
+    <b data-source="headline" data-field="verified" class="dash-skeleton">—</b> papers, books, theses and datasets show
+    their tie to the station in the record itself; counting the candidates not yet confirmed, at their audited rates, the
+    best estimate is about <b data-source="best_estimate" data-field="estimate" class="dash-skeleton">—</b>. They have been
+    cited <b data-source="headline" data-field="verified_citations" class="dash-skeleton">—</b> times, and the
+    station now adds about <span data-source="headline" data-field="verified_per_year_2016_2025">—</span> verified
+    publications a year. The sections that follow show what the work was about, the people who did it (where they came
+    from, whom they trained and where they went), and where the station appears in each publication. The census was
+    assembled by AI agents searching databases, archives and FHL's own lists; every figure states its uncertainty, the
+    methods and prompts are given in full, and the data are public.
   </p>
 
   <section class="fp-abstract" id="headline" aria-label="Summary of results">
@@ -816,6 +823,24 @@
         <li><div class="typed">i dont see the new figs in the report just blank spaces</div></li>
         <li><div class="typed">you didnt find me 😞 willem weertman</div></li>
         <li><div class="typed">looks like you also missed some folks connected to drew harvell. eg., olivia graham. I think a lot of these connections could be expanded dramatically. I understand this is tough. because it involves hunting through co-authorships.</div></li>
+        <li><div class="typed">do it</div></li>
+        <li><div class="typed">wait for the check then do it</div></li>
+        <li><div class="typed">do it. check the inferred links.</div></li>
+        <li><div class="typed">i think you pedagogy is missing jason hodin and the fhl star lab team</div></li>
+        <li><div class="typed">the pedagogy trees. i think they are connected in many cases. there must be a better way of doing this. maybe a series of trees is the wrong way of doing it. its more of a network. we have the network diagram... hmm this is tough. thoughts?</div></li>
+        <li><div class="typed">a timeline network makes sense</div></li>
+        <li><div class="typed">id like to see it</div></li>
+        <li><div class="typed">okay, add to the main document.</div></li>
+        <li><div class="typed">the search a person needs to offer suggestions for selection. also it shouldnt be case sensitive</div></li>
+        <li><div class="typed">I want to make this a public github page I can share. Id like it to underwrite a public html I can share based on githubs ability to share public webpages with data backing. I forget how those work specifically</div></li>
+        <li><div class="typed">Authorship for this document needs to be Claude Opus 5.5 and Willem Lee Weertman</div></li>
+        <li><div class="typed">the timeline network has a bunch of extra space in it that you could be labeling folks names. pop out prominent people</div></li>
+        <li><div class="typed">searching a person should highlight them in the network diagrams. (fig8 and fig9) also. each person should have a custom written (presearch) blurb (~2 paragraphs) about them that describes their work.</div></li>
+        <li><div class="typed">how is Jason Hodin not in the network? he is a classic fhler</div></li>
+        <li><div class="typed">I'm also surprised by how few people in the network are connected (in the timeline) to megan dethier, the current director of the labs.</div></li>
+        <li><div class="typed">https://staff.washington.edu/hodin/</div></li>
+        <li><div class="typed">thats totally fine. i think putting up the full records is fair and honest. this is the result of a claude search. we are very transparent about that</div></li>
+        <li><div class="typed">prompts as typed needs to be updated. when you finish this current round of workflows update the github</div></li>
       </ol>
     </details>
     <div class="fp-end" aria-hidden="true">⁂</div>
@@ -1673,8 +1698,10 @@
     // ---- headline -------------------------------------------------------------------------------------------
     const H = { verified: (v) => f(+v), publications: (v) => f(+v), total_citations: (v) => compact.format(+v),
       verified_citations: (v) => compact.format(+v), verified_per_year_2016_2025: (v) => f(Math.round(+v)),
-      search_recall_vs_fhl_lists: (v) => pct(+v), retrieved: (v) => v };
+      search_recall_vs_fhl_lists: (v) => pct(+v), retrieved: (v) => v, first_year: (v) => v };
     Object.entries(H).forEach(([field, fmt]) => setText(`[data-source="headline"][data-field="${field}"]`, 'headline', field, fmt));
+    // In the opening sentence the citation total is written out in full rather than compact ("134K").
+    setText('#takeaway [data-field="verified_citations"]', 'headline', 'verified_citations', (v) => f(+v));
     setText('[data-source="audit_tiers"][data-field="precision"]', 'audit_tiers', 'precision', (v) => pct(+v));
     setText('[data-source="best_estimate"][data-field="estimate"]', 'best_estimate', 'estimate', (v) => f(+v));
 
