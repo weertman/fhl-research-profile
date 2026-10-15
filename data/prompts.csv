@@ -39,7 +39,7 @@ n,kind,typed_utc,typed_local,messages,text,tokens_claude,tokens_agents,agents,to
 25,typed,2026-10-14T23:35:37.049Z,2026-10-14 16:35,1,I want to make this a public github page I can share. Id like it to underwrite a public html I can share based on githubs ability to share public webpages with data backing. I forget how those work specifically,5492,0,0,5492
 26,typed,2026-10-14T23:36:38.239Z,2026-10-14 16:36,1,Authorship for this document needs to be Claude Opus 5.5 and Willem Lee Weertman,8239,0,0,8239
 27,typed,2026-10-14T23:37:43.243Z,2026-10-14 16:37,1,the timeline network has a bunch of extra space in it that you could be labeling folks names. pop out prominent people,5832,0,0,5832
-28,typed,2026-10-14T23:38:48.477Z,2026-10-14 16:38,1,searching a person should highlight them in the network diagrams. (fig8 and fig9) also. each person should have a custom written (presearch) blurb (~2 paragraphs) about them that describes their work.,12460,1838115,45,1850575
+28,typed,2026-10-14T23:38:48.477Z,2026-10-14 16:38,1,searching a person should highlight them in the network diagrams. (fig8 and fig9) also. each person should have a custom written (presearch) blurb (~2 paragraphs) about them that describes their work.,12460,2654553,60,2667013
 29,typed,2026-10-14T23:40:51.268Z,2026-10-14 16:40,1,how is Jason Hodin not in the network? he is a classic fhler,3711,0,0,3711
 30,typed,2026-10-14T23:41:53.307Z,2026-10-14 16:41,1,"I'm also surprised by how few people in the network are connected (in the timeline) to megan dethier, the current director of the labs.",0,0,0,0
 31,typed,2026-10-14T23:42:15.988Z,2026-10-14 16:42,1,https://staff.washington.edu/hodin/,28077,0,0,28077
@@ -54,4 +54,4 @@ n,kind,typed_utc,typed_local,messages,text,tokens_claude,tokens_agents,agents,to
 40,typed,2026-10-15T00:39:19.648Z,2026-10-14 17:39,1,yes im happy,3488,0,0,3488
 41,typed,2026-10-15T00:42:20.234Z,2026-10-14 17:42,1,id like to be able to filter the researcher timeline plot for the different parts of the key by clicking on those parts of the key. it should highlight the selection. it should only work if a reseracher isnt searched,12186,0,0,12186
 42,typed,2026-10-15T01:06:11.672Z,2026-10-14 18:06,1,"when you finish don't forget to update the prompts as typed. id like those to have datetimes for when they were typed and if possible, the number of tokens the prompts caused to be generated.",20984,0,0,20984
-43,typed,2026-10-15T01:09:57.436Z,2026-10-14 18:09,1,when i highlight components of keys in the figures. eg. fig2. id like them to highlight their corresponding part of their figure,11008,0,0,11008
+43,typed,2026-10-15T01:09:57.436Z,2026-10-14 18:09,1,when i highlight components of keys in the figures. eg. fig2. id like them to highlight their corresponding part of their figure,16937,0,0,16937

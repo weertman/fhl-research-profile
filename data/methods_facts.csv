@@ -18,8 +18,8 @@ resolution_no,779,rejected
 resolution_uncertain,428,still undecided
 audited,380,records in the audit sample
 audit_full_text,260,audited records read in full text
-ai_runs,9,"AI runs (multi-agent workflows, the topic classification and the mentor check)"
-ai_agents,178,AI agents run in those runs
+ai_runs,10,"AI runs (multi-agent workflows, the topic classification and the later checks, rosters and profiles)"
+ai_agents,238,AI agents run in those runs
 build_hours,8.7,wall-clock hours from the first prompt to the first complete version
 mentor_pairs,146,mentor links inferred from co-authorship
 mentor_checked,146,inferred links checked against public records
@@ -33,6 +33,8 @@ committee_links,0,graduate committee links
 roster_scientists,39,FHL scientists with a roster or committee list
 network_links,810,links in the mentoring network
 network_people,855,people in the mentoring network
+profiles,236,people profiles written and fact-checked
+profiles_revised,230,profiles the fact-checker revised
 dedup_dropped,137,duplicate records merged away
 dedup_kept,119,records they were merged into
 false_excluded,160,records removed as not publications or false matches
