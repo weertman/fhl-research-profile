@@ -17,6 +17,9 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `candidate_status.csv`: What happened to every candidate record.
 - `eras.csv`: The station's names and their years.
 - `headline.csv`: Headline totals: verified publications, best estimate and the date the data were retrieved.
+- `history_eras.csv`: 
+- `history_events.csv`: 
+- `history_images.csv`: 
 - `lineage.csv`: Teacher-student links: UW theses, Wikidata, lab rosters and mentors inferred from co-authorship, with the source of each.
 - `lineage_people.csv`: Everyone in the mentoring network, with the year their career began and how it was estimated.
 - `methods_facts.csv`: Counts quoted in the technical methods.
