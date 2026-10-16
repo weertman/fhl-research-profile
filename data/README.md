@@ -17,9 +17,9 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `candidate_status.csv`: What happened to every candidate record.
 - `eras.csv`: The station's names and their years.
 - `headline.csv`: Headline totals: verified publications, best estimate and the date the data were retrieved.
-- `history_eras.csv`: 
-- `history_events.csv`: 
-- `history_images.csv`: 
+- `history_eras.csv`: Chronicle of the station: the eras under the station's successive names.
+- `history_events.csv`: Chronicle of the station: dated, sourced events from 1903 to today.
+- `history_images.csv`: Chronicle of the station: the public-domain and openly licensed images, with captions, credits, licences and sources.
 - `lineage.csv`: Teacher-student links: UW theses, Wikidata, lab rosters and mentors inferred from co-authorship, with the source of each.
 - `lineage_people.csv`: Everyone in the mentoring network, with the year their career began and how it was estimated.
 - `methods_facts.csv`: Counts quoted in the technical methods.
@@ -28,8 +28,8 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `people.csv`: FHL scientists (at least three FHL-address publications), where they came from and where they went (OpenAlex).
 - `people_links.csv`: Citations among the 60 most prolific FHL scientists.
 - `places.csv`: Institutions FHL scientists came from and went to, with locations.
-- `profiles.csv`: 
-- `prompts.csv`: 
+- `profiles.csv`: A two-paragraph, fact-checked account of each FHL scientist and network teacher.
+- `prompts.csv`: Every prompt typed for this report, with when it was typed and the output tokens it led to.
 - `publications.csv`: The census: one row per publication (record id, evidence tier, year, authors, title, venue, type, where FHL appears, citations, DOI, research topic, organism group).
 - `recall_by_decade.csv`: How many of FHL's own listed papers the database searches found, by decade.
 - `top_cited.csv`: The most cited publications.

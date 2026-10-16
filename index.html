@@ -72,7 +72,7 @@
   .fp .fp-lead { font-size: 1.12rem; line-height: 1.6; max-width: 38em; margin-inline: auto; text-align: justify; hyphens: auto; }
   .fp-lead::first-letter { font-family: var(--fp-display); float: left; font-size: 3.5em; line-height: .8; padding: .07em .1em 0 0; }
 
-  /* A visual history: era bands and dated events */
+  /* Chronicle of the station: era bands and dated events */
   .fp-history { display: grid; gap: 0; }
   .fp-hist-controls { justify-content: center; }
   .fp-era { border-top: 1.5px solid var(--fp-ink); border-bottom: 1px solid var(--fp-ink); margin: 1.6rem 0 .6rem; padding: .7rem 0 .8rem; text-align: center; }
@@ -87,10 +87,23 @@
   .fp-event .kind { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--fp-ink-2); }
   .fp-event p { margin: .25rem 0; line-height: 1.5; }
   .fp-event.turning h4::after { content: " ✦"; font-size: .8em; }
-  .fp-event figure { margin: .5rem 0; max-width: 28rem; }
-  .fp-event figure img { display: block; max-width: 100%; max-height: 20rem; width: auto; height: auto; border: 1px solid var(--fp-ink); filter: grayscale(1) contrast(1.05); background: var(--fp-paper); }
-  .fp-event figcaption { font-size: .8rem; line-height: 1.4; margin-top: .3rem; }
-  .fp-event figcaption .credit { color: var(--fp-ink-2); font-style: italic; }
+  .fp-figs { display: flex; flex-wrap: wrap; align-items: flex-start; gap: .8rem 1.1rem; margin: .5rem 0; }
+  .fp-figs figure { margin: 0; flex: 1 1 13rem; max-width: 28rem; }
+  .fp-figs.one figure { flex: 0 1 28rem; }
+  .fp-history figure img { display: block; max-width: 100%; max-height: 20rem; width: auto; height: auto; border: 1px solid var(--fp-ink); filter: grayscale(1) contrast(1.05); background: var(--fp-paper); cursor: zoom-in; }
+  .fp-history figcaption { font-size: .8rem; line-height: 1.4; margin-top: .3rem; }
+  .fp-history figcaption .credit { color: var(--fp-ink-2); font-style: italic; }
+  .fp-plates { margin: .2rem 0 1rem; padding-bottom: .9rem; border-bottom: 1px dotted var(--fp-ink-3); }
+  .fp-plates .lbl { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--fp-ink-2); text-align: center; margin: .5rem 0 .6rem; }
+  .fp-plates .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr)); gap: 1rem 1.1rem; align-items: start; }
+  .fp-plates figure { margin: 0; }
+  .fp-plates figure img { width: 100%; height: 12rem; object-fit: contain; }
+  .fp-zoom { max-width: min(64rem, 94vw); max-height: 94vh; padding: .9rem 1rem 1rem; border: 1.5px solid var(--fp-ink); background: var(--fp-paper); color: var(--fp-ink); }
+  .fp-zoom::backdrop { background: rgba(0, 0, 0, .72); }
+  .fp-zoom img { display: block; max-width: 100%; max-height: 78vh; margin: 0 auto; }
+  .fp-zoom p { font-size: .85rem; line-height: 1.45; margin: .6rem 0 0; max-width: 52rem; }
+  .fp-zoom .credit { color: var(--fp-ink-2); font-style: italic; }
+  .fp-zoom button { float: right; margin: 0 0 .4rem .6rem; font: inherit; font-size: .8rem; background: none; color: inherit; border: 1px solid var(--fp-ink); padding: .1rem .55rem; cursor: pointer; }
   .fp-event .links { font-size: .78rem; color: var(--fp-ink-2); }
   .fp-event .links a { color: inherit; }
   @media (max-width: 560px) { .fp-event { grid-template-columns: 3.4rem 1fr; gap: 0 .7rem; } .fp-event .when { font-size: 1.05rem; } }
@@ -279,6 +292,34 @@
     .fp .fp-lead, .fp-notes p { text-align: left; }
     .fp-item .val { font-size: 1.3rem; }
   }
+  /* Phones (560 px and narrower): more room for the figures; desktop and tablet layouts are untouched. */
+  @media (max-width: 560px), (pointer: coarse) and (max-height: 500px) {
+    body { padding-inline: 0 !important; }
+    .fp { border-inline: 0; padding-inline: .9rem; }
+    .fp-sitenote, .fp-offline { padding-inline: .9rem; }
+    .fp .fp-chart:has(svg) { min-height: 0; }
+    .fp-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .3rem .8rem; font-size: .78rem; line-height: 1.3; }
+    .fp-legend::before { grid-column: 1 / -1; margin: 0; }
+    .fp-legend span { align-items: flex-start; }
+    .fp-legend svg { margin-top: .12em; }
+    .fp-legend .fp-keybtn { padding-block: .2rem; }
+    .fp-toggle { gap: .4rem; }
+    .fp-toggle button { font-size: .66rem; letter-spacing: .07em; padding: .3rem .5rem; }
+    .fp-toggle .fp-gap { flex-basis: 100%; width: auto; height: 0; }
+    .fp-chart .lin-label { font-size: 9.5px; stroke-width: 3px; }
+    .fp-chart .lin-label.minor { font-size: 8.5px; }
+    .fp-chart .lin-axis text { font-size: 9.5px; }
+    .fp-chart .net-label { font-size: 9px; }
+    .fp-event { grid-template-columns: 1fr; gap: .1rem; }
+    .fp-event .when { text-align: left; font-size: 1.05rem; }
+    .fp-event .when small { display: inline; margin-left: .35rem; }
+    .fp-plates .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem .7rem; }
+    .fp-plates figure img { height: 8.5rem; }
+    .fp-plates figcaption { font-size: .74rem; }
+    .fp-zoom { box-sizing: border-box; max-width: calc(100vw - 1rem); max-height: calc(100vh - 1rem); max-height: calc(100dvh - 1rem); padding: .6rem .6rem .8rem; }
+    .fp-zoom .pan { overflow: auto; max-height: 72vh; max-height: 72dvh; }
+    .fp-zoom .pan img { max-width: none; max-height: none; margin: 0; }
+  }
 </style>
 
 <div class="fp" id="fhl-profile">
@@ -321,7 +362,7 @@
       <li><a href="#news"><span class="num">VII.</span><span class="t">In the news</span><span class="dots"></span><span class="refs">Fig. 17</span></a></li>
       <li><a href="#reliability"><span class="num">VIII.</span><span class="t">How the census was built, and how far to trust it</span><span class="dots"></span><span class="refs">Figs. 18–19, Table III</span></a></li>
       <li><a href="#all-publications"><span class="num">IX.</span><span class="t">Catalogue of publications</span><span class="dots"></span><span class="refs">Table IV</span></a></li>
-      <li><a href="#history"><span class="num">X.</span><span class="t">A visual history of the station</span><span class="dots"></span><span class="refs">Timeline</span></a></li>
+      <li><a href="#history"><span class="num">X.</span><span class="t">Chronicle of the station</span><span class="dots"></span><span class="refs">Timeline</span></a></li>
       <li><a href="#method"><span class="num">XI.</span><span class="t">Technical methods</span><span class="dots"></span><span class="refs">Tables V–VI</span></a></li>
       <li><a href="#headline"><span class="num"></span><span class="t">Summary of results</span><span class="dots"></span><span class="refs"></span></a></li>
     </ol>
@@ -634,12 +675,13 @@
   </section>
 
   <section class="fp-section" id="history">
-    <h2><span class="num">X.</span> A visual history of the station</h2>
+    <h2><span class="num">X.</span> Chronicle of the station</h2>
     <p class="fp-intro">From the first summer sessions on the shore at Friday Harbor to today's laboratories: the station's story
       in dated events, drawn from the local newspapers of the early years, FHL's own newsletters and pages, the centennial
       timeline compiled by Claudia Mills and Colin Hermans, news coverage and the University of Washington Libraries' photograph
-      collections. Images are shown where they are in the public domain or openly licensed; photographs the UW Libraries hold in
-      copyright are linked rather than reproduced.</p>
+      collections, and illustrated from public archives: photographs, newspaper clippings, the regents' minutes, maps and aerial
+      views. Images are shown where they are in the public domain or openly licensed, each with its source and licence;
+      photographs the UW Libraries hold in copyright are linked rather than reproduced. Click an image to enlarge it.</p>
     <div class="fp-controls fp-hist-controls">
       <div class="fp-toggle" role="group" aria-label="Which events">
         <button type="button" data-hist="all" aria-pressed="true">All events</button>
@@ -651,7 +693,8 @@
     <div class="fp-history" id="history-timeline" data-source="history_events history_images history_eras"></div>
     <p class="cap fp-narrow">Events were extracted from these sources by AI agents, merged into one timeline and fact-checked
       against the sources by further agents (section XI); each event lists its sources. Captions were written from each image's
-      catalogue record and what it shows. Dates marked "about" are uncertain.</p>
+      catalogue record and what it shows, and checked by a second agent. Images that illustrate no single event are set as
+      plates at the head of their era. Dates marked "about" are uncertain.</p>
   </section>
 
   <section class="fp-section" id="method">
@@ -813,17 +856,25 @@
         hand: L. D. Partridge (FHL papers 1975–79) and Volker Schmid (1988–92) had each been merged with a different scientist
         of the same name, a biogerontologist and a statistician. Scientists from before about 1970 are under-represented because older papers carry no address
         metadata.</p>
-      <p><span class="runin">The visual history.</span>—Sources for section X were gathered through public interfaces:
+      <p><span class="runin">The chronicle.</span>—Sources for section X were gathered through public interfaces:
         newspaper pages from Chronicling America (Library of Congress) that mention the station, mostly the San Juan Islander of
         1904–1914; FHL's annual newsletter Intertidal Tidings and its history and news pages, read from Internet Archive copies;
         the Historical Centennial Timeline compiled by Claudia Mills and Colin Hermans (used for facts, credited, not quoted at
         length); the census's news items; and catalogue records of the University of Washington Libraries' photographs. AI agents
-        extracted <span data-source="methods_facts" data-field="value" data-where="fact=history_extracted">—</span> dated events from these, another merged them into a timeline of
-        <span data-source="methods_facts" data-field="value" data-where="fact=history_events">—</span>, and four more checked each event against its sources, correcting <span data-source="methods_facts" data-field="value" data-where="fact=history_corrected">—</span>
-        (Table VI). Images (<span data-source="methods_facts" data-field="value" data-where="fact=history_images">—</span>) are shown only where they are in the public domain or openly licensed
-        (Wikimedia Commons, the Freshwater and Marine Image Bank, the station's own early publications); their captions were
-        written from each image's catalogue record and what it shows. The UW Libraries' photographs carry an "In Copyright"
-        statement and are linked rather than reproduced.</p>
+        extracted <span data-source="methods_facts" data-field="value" data-where="fact=history_extracted">—</span> dated events from these, another merged them into one timeline, and four more checked
+        each event against its sources, correcting <span data-source="methods_facts" data-field="value" data-where="fact=history_corrected">—</span> (Table VI); the timeline now holds
+        <span data-source="methods_facts" data-field="value" data-where="fact=history_events">—</span> events, <span data-source="methods_facts" data-field="value" data-where="fact=history_more_events">—</span> of them added later from the records of newly found images. A
+        second run looked for images: eight agents each searched one kind of source (Wikimedia Commons and Wikidata; openly
+        licensed photographs through Openverse; publications from before 1931 on the Internet Archive; University of Washington
+        Libraries items that are free to reuse, among them the Board of Regents' minutes, yearbooks and trade journals;
+        Chronicling America newspaper pages, cut to the story; USGS and NOAA maps and NAIP aerial imagery; federal and Library
+        of Congress collections; and sources for 1930–1999). They found <span data-source="methods_facts" data-field="value" data-where="fact=history_more_candidates">—</span> candidates; a second
+        agent opened each image and its record, confirmed the licence and wrote the caption, passing <span data-source="methods_facts" data-field="value" data-where="fact=history_more_passed">—</span>;
+        a picture editor chose <span data-source="methods_facts" data-field="value" data-where="fact=history_more_chosen">—</span> for balance across the eras; and fact-checkers checked every caption,
+        credit and licence again. Images (<span data-source="methods_facts" data-field="value" data-where="fact=history_images">—</span> in all) are shown only where they are in the public domain
+        (published in the United States before 1931, works of the US government, or marked so by the holding library) or
+        openly licensed (CC0, CC BY, CC BY-SA). The UW Libraries' photographs that carry an "In Copyright" statement are linked
+        rather than reproduced, and other promising images whose rights could not be confirmed were left out.</p>
       <p><span class="runin">Not searched.</span>—Google Scholar and Scopus (no automated access), BIOSIS Previews, Zoological
         Record and ASFA. Before about 2008 databases did not index acknowledgments, so counts are a lower bound, especially
         for 1985–2010 and before 1970.</p>
@@ -836,11 +887,12 @@
     <h3 class="fp-subhead" id="ai-use">The use of artificial intelligence</h3>
     <div class="fp-notes">
       <p><span class="runin">Platform.</span>—The census, its code, the spreadsheet, the figures and this page were produced
-        with Claude Code 2.1.295, Anthropic's coding agent, in the Claude desktop app on macOS, on 13–14 October 2026. The
+        with Claude Code 2.1.295, Anthropic's coding agent, in the Claude desktop app on macOS, on 13–16 October 2026. The
         coordinating session and every agent it started used the model Claude Opus 5.5 (claude-opus-5-5). The census and
         the first version of this page were produced at the "xhigh" reasoning-effort setting, the second highest of five
         (low, medium, high, xhigh, max); from the topic classification onward (14 October, 18:10 UTC), including the people
-        section and the check of inferred mentors, the setting was "max", the highest (Table VI). Claude Code's ultracode
+        section and the check of inferred mentors, the setting was "max", the highest; the chronicle's second image search and
+        a review of the page's phone layout (15–16 October) ran at "xhigh" (Table VI). Claude Code's ultracode
         mode was on while the census was built, so each substantive step ran as a scripted multi-agent workflow; the topic
         classification and the mentor check, added afterwards, ran as agents started directly. In all,
         <span data-source="methods_facts" data-field="value" data-where="fact=ai_runs">—</span> runs used
@@ -919,13 +971,19 @@
   searches found, with the decision on each and its evidence. By Claude Opus 5.5 and Willem Lee Weertman.</p>
 <script>
   // Stand-in for the dashboard runtime: fetches each dataset from data/ and serves it to the info sheet's code unchanged.
-  window.FP_SITE_BASE = ''; // images (the visual history) are files next to the page
+  window.FP_SITE_BASE = ''; // images (the chronicle of the station) are files next to the page
   window.dash = (() => {
     const FILES = {"ai_workflows": "data/ai_workflows.csv", "audit_tiers": "data/audit_tiers.csv", "by_appears": "data/by_appears.csv", "by_era": "data/by_era.csv", "by_type": "data/by_type.csv", "by_year": "data/by_year.csv", "by_year_appears": "data/by_year_appears.csv", "by_year_tier": "data/by_year_tier.csv", "candidate_status": "data/candidate_status.csv", "eras": "data/eras.csv", "headline": "data/headline.csv", "history_eras": "data/history_eras.csv", "history_events": "data/history_events.csv", "history_images": "data/history_images.csv", "lineage": "data/lineage.csv", "lineage_people": "data/lineage_people.csv", "methods_facts": "data/methods_facts.csv", "news_by_year": "data/news_by_year.csv", "organisms_by_decade": "data/organisms_by_decade.csv", "people": "data/people.csv", "people_links": "data/people_links.csv", "places": "data/places.csv", "profiles": "data/profiles.csv", "prompts": "data/prompts.csv", "publications": "data/publications.csv", "recall_by_decade": "data/recall_by_decade.csv", "top_cited": "data/top_cited.csv", "top_venues": "data/top_venues.csv", "topics_by_decade": "data/topics_by_decade.csv", "whiteley_by_field": "data/whiteley_by_field.csv", "world_land": "data/world_land.json"};
     const store = {}, calcs = {}, draws = [];
     const run = (fn) => { try { fn(); } catch (e) { console.error(e); } };
-    let timer;
-    window.addEventListener('resize', () => { clearTimeout(timer); timer = setTimeout(() => draws.forEach(run), 150); });
+    // Figures depend only on the width: redraw when it changes (not when a phone's toolbar hides, which changes the height).
+    let timer, lastW = document.documentElement.clientWidth;
+    window.FP_HOST_REDRAWS = true;
+    window.addEventListener('resize', () => {
+      const w = document.documentElement.clientWidth;
+      if (w === lastW) return;
+      lastW = w; clearTimeout(timer); timer = setTimeout(() => draws.forEach(run), 150);
+    });
     const api = {
       data(id) {
         const c = calcs[id];
@@ -1025,7 +1083,8 @@
       const x = event.clientX - b.left, y = event.clientY - b.top;
       const w = t.offsetWidth, hgt = t.offsetHeight;
       t.style.left = Math.max(0, Math.min(b.width - w, x + 12)) + 'px';
-      t.style.top = Math.max(0, y - hgt - 10) + 'px';
+      if (phone()) t.style.top = (event.clientY > window.innerHeight - event.clientY ? y - hgt - 16 : y + 28) + 'px';
+      else t.style.top = Math.max(0, y - hgt - 10) + 'px';
     };
     const hideTip = (box) => { const t = box.querySelector(':scope > .fp-tip'); if (t) t.hidden = true; };
     const state = (el, ids) => {
@@ -1076,11 +1135,14 @@
       if (fig && fig.dataset.keyPin) requestAnimationFrame(() => keyShow(fig, fig.dataset.keyPin));
     };
     const svgFor = (el, height) => {
+      hideTip(el);
       el.querySelectorAll('svg').forEach((s) => s.remove());
       const width = Math.max(260, el.clientWidth);
       const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${width} ${height}`).attr('height', height);
       return { svg, width, height };
     };
+    // Phones (narrow screens, or a touch screen turned sideways) get their own layouts for some figures (see the phone() branches); wider screens are unchanged.
+    const phone = () => window.matchMedia('(max-width: 560px), (pointer: coarse) and (max-height: 500px)').matches;
     const cleanAxis = (g) => g.attr('font-size', null).attr('font-family', null).classed('axis', true);
     const textWidth = (svg, strings) => {
       const t = svg.append('text').attr('font-size', 12);
@@ -1091,6 +1153,7 @@
     };
     // Horizontal bars: one value per category, labels on the left, value at the bar end, hatched like an engraving.
     const hbars = (el, rows, label, value, { fill = FILL.hatch, fmt = f, tipTitle = (d) => d[label], keyOf = null } = {}) => {
+      if (phone()) { hbarsStacked(el, rows, label, value, { fill, fmt, tipTitle, keyOf }); return; }
       const bar = 13, gap = 11;
       const { svg, width, height } = svgFor(el, rows.length * (bar + gap) + 8);
       const lw = Math.min(width * 0.5, textWidth(svg, rows.map((d) => d[label])) + 10);
@@ -1110,6 +1173,24 @@
         .attr('width', (d) => Math.max(1, x(d[value]) - lw));
       g.append('text').attr('x', (d) => x(d[value]) + 6).attr('y', bar / 2).attr('dy', '0.35em').text((d) => fmt(d[value]));
       svg.append('line').attr('class', 'base').attr('x1', lw).attr('x2', lw).attr('y1', 2).attr('y2', height - 2);
+      g.on('mousemove', (event, d) => showTip(el, event, tipTitle(d), [[null, null, fmt(d[value])]]))
+        .on('mouseleave', () => hideTip(el));
+    };
+    // The phone layout of hbars: the label on its own line above each bar, so long names need not be cut short.
+    const hbarsStacked = (el, rows, label, value, { fill, fmt, tipTitle, keyOf }) => {
+      const lh = 18, bar = 12, gap = 8, step = lh + bar + gap;
+      const { svg, width } = svgFor(el, rows.length * step + 2);
+      const vw = textWidth(svg, rows.map((d) => fmt(d[value]))) + 10;
+      const x = d3.scaleLinear([0, d3.max(rows, (d) => d[value]) || 1], [0, width - vw]);
+      const g = svg.selectAll('g.row').data(rows).join('g').attr('class', 'row').attr('transform', (d, i) => `translate(0,${i * step + 2})`);
+      if (keyOf) g.attr('data-key', keyOf);
+      g.append('rect').attr('width', width).attr('height', step).style('fill', 'transparent');
+      g.append('text').attr('class', 'lbl').attr('x', 0).attr('y', lh - 6).text((d) => d[label])
+        .each(function (d) { let t = String(d[label]); while (this.getComputedTextLength() > width - 2 && t.length > 4) { t = t.slice(0, -2); this.textContent = t + '…'; } });
+      g.append('rect').attr('class', 'mark').attr('y', lh).attr('height', bar).style('fill', (d) => (typeof fill === 'function' ? fill(d) : fill))
+        .attr('width', (d) => Math.max(1, x(d[value])));
+      g.append('line').attr('class', 'base').attr('x1', 0).attr('x2', 0).attr('y1', lh - 1).attr('y2', lh + bar + 1);
+      g.append('text').attr('x', (d) => x(d[value]) + 6).attr('y', lh + bar / 2).attr('dy', '0.35em').text((d) => fmt(d[value]));
       g.on('mousemove', (event, d) => showTip(el, event, tipTitle(d), [[null, null, fmt(d[value])]]))
         .on('mouseleave', () => hideTip(el));
     };
@@ -1161,7 +1242,7 @@
       const byKey = d3.group(rows, (r) => r.key);
       const width = Math.max(260, el.clientWidth);
       const gapX = 22, gapY = 24, titleH = 42, plotH = 60, axisH = 16;
-      const cols = Math.max(1, Math.min(order.length, Math.floor((width + gapX) / (185 + gapX))));
+      const cols = Math.max(1, Math.min(order.length, Math.floor((width + gapX) / ((phone() ? 140 : 185) + gapX))));
       const pw = (width - gapX * (cols - 1)) / cols, ph = titleH + plotH + axisH;
       const nRows = Math.ceil(order.length / cols);
       const { svg } = svgFor(el, nRows * ph + (nRows - 1) * gapY);
@@ -1212,7 +1293,7 @@
           .on('mouseleave', () => hideTip(el));
       });
     };
-    return { f, compact, pct, FILL, SERIES, SERIES_LONG, state, legend, hbars, stackedYears, multiples, svgFor, cleanAxis, textWidth, showTip, hideTip };
+    return { f, compact, pct, FILL, SERIES, SERIES_LONG, state, legend, hbars, stackedYears, multiples, svgFor, cleanAxis, textWidth, showTip, hideTip, phone };
   })();
 </script>
 
@@ -1284,7 +1365,7 @@
 </script>
 
 <script>
-  const { f, compact, pct, FILL, SERIES, SERIES_LONG, state, legend, hbars, stackedYears, multiples, svgFor, showTip, hideTip, textWidth } = window.FP;
+  const { f, compact, pct, FILL, SERIES, SERIES_LONG, state, legend, hbars, stackedYears, multiples, svgFor, showTip, hideTip, textWidth, phone } = window.FP;
   const TIER_KEYS = ['Verified', 'Listed by FHL', 'Probable'];
   const APPEARS_KEYS = ['Affiliation only', 'Affiliation and main text', 'Main text only', 'Affiliation (text not checked)',
                         'Main text (affiliation unknown)', 'Not determined'];
@@ -1553,22 +1634,33 @@
     const routes = svg.append('g');
     routes.selectAll('path').data(pts).join('path').attr('class', `route ${mapMode}`)
       .attr('d', (p) => linePath(proj, greatCircle([p.lon, p.lat], [fhl.lon, fhl.lat])))
-      .style('stroke-width', (p) => 0.6 + Math.sqrt(p.people) * 0.5);
-    const r = d3.scaleSqrt([1, d3.max(places.filter((p) => p.role !== 'FHL'), (p) => p.people) || 1], [2.6, mapView === 'world' ? 12 : 16]);
+      .style('stroke-width', (p) => (phone() ? 0.4 + Math.sqrt(p.people) * 0.3 : 0.6 + Math.sqrt(p.people) * 0.5));
+    const tipRows = (p) => [[null, null, [p.city, p.country].filter(Boolean).join(', ')],
+      [null, null, `${f(p.people)} scientist${p.people === 1 ? '' : 's'}: ${p.names}`]];
+    const r = d3.scaleSqrt([1, d3.max(places.filter((p) => p.role !== 'FHL'), (p) => p.people) || 1],
+      phone() ? [1.8, mapView === 'world' ? 7 : 10] : [2.6, mapView === 'world' ? 12 : 16]);
     svg.append('g').selectAll('circle').data(pts).join('circle').attr('class', `place ${mapMode}`)
       .attr('cx', (p) => proj([p.lon, p.lat])[0]).attr('cy', (p) => proj([p.lon, p.lat])[1]).attr('r', (p) => r(p.people))
-      .on('mousemove', (event, p) => showTip(el, event, p.institution, [[null, null, [p.city, p.country].filter(Boolean).join(', ')],
-        [null, null, `${f(p.people)} scientist${p.people === 1 ? '' : 's'}: ${p.names}`]]))
+      .on('mousemove', (event, p) => showTip(el, event, p.institution, tipRows(p)))
       .on('mouseleave', () => hideTip(el));
+    if (phone()) {
+      const xy = pts.map((p) => proj([p.lon, p.lat])), del = d3.Delaunay.from(xy);
+      svg.on('click', (event) => {
+        const [px, py] = d3.pointer(event, svg.node()), i = del.find(px, py);
+        if (i >= 0 && Math.hypot(xy[i][0] - px, xy[i][1] - py) <= r(pts[i].people) + 14) showTip(el, event, pts[i].institution, tipRows(pts[i]));
+        else hideTip(el);
+      });
+    }
     const [fx, fy] = proj([fhl.lon, fhl.lat]);
     svg.append('circle').attr('class', 'fhl-ring').attr('cx', fx).attr('cy', fy).attr('r', 7);
     svg.append('circle').attr('class', 'fhl-dot').attr('cx', fx).attr('cy', fy).attr('r', 2.6);
-    svg.append('text').attr('class', 'lbl maplabel').attr('x', fx - 10).attr('y', fy - 10).attr('text-anchor', 'end').text('Friday Harbor');
+    const fl = svg.append('text').attr('class', 'lbl maplabel').attr('x', fx - 10).attr('y', fy - 10).attr('text-anchor', 'end').text('Friday Harbor');
+    if (phone() && fx - 10 - fl.node().getComputedTextLength() < 4) fl.attr('x', fx + 10).attr('text-anchor', 'start');
   }
 
   // The mentoring network on a timeline: each person sits at the year their career began, so every line from a teacher
   // to a student runs forward in time; a force layout pulls connected people together vertically.
-  // A visual history: dated events in era bands, with openly licensed images and links to archive photographs.
+  // Chronicle of the station: dated events in era bands, with openly licensed images and links to archive photographs.
   let histMode = 'all';
   document.querySelectorAll('[data-hist]').forEach((b) => b.addEventListener('click', () => {
     histMode = b.dataset.hist;
@@ -1587,32 +1679,45 @@
     const sel = document.getElementById('hist-type');
     if (sel.options.length === 1) [...new Set(all.map((r) => r.type))].sort().forEach((t) => sel.append(new Option(t, t)));
     const shown = all.filter((r) => (histMode === 'all' || r.importance >= 5) && (!sel.value || r.type === sel.value));
-    document.getElementById('hist-count').textContent = `${f(shown.length)} of ${f(all.length)} events`;
     const pubs = dash.data('by_era').status === 'ok' ? new Map(dash.data('by_era').data.map((r) => [r.category, +r.publications])) : new Map();
     const make = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
     const link = (href, text) => { const a = make('a', null, text); a.href = href; a.target = '_blank'; a.rel = 'noopener'; return a; };
+    const byOrder = (a, b) => (+a.order || 1) - (+b.order || 1) || (+a.year || 0) - (+b.year || 0);
+    const figure = (im) => {
+      const fig = make('figure'); const img = make('img'); img.loading = 'lazy'; img.src = imgSrc(im); img.alt = im.alt || '';
+      img.tabIndex = 0; img.setAttribute('role', 'button'); img.title = 'Enlarge';
+      const open = () => zoom(im); img.addEventListener('click', open);
+      img.addEventListener('keydown', (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); open(); } });
+      const cap = make('figcaption'); cap.append(document.createTextNode(`${im.caption} `));
+      const cr = make('span', 'credit'); cr.append(document.createTextNode(im.credit + ' '), link(im.source_url, 'source'), document.createTextNode('.'));
+      cap.append(cr); fig.append(img, cap); return fig;
+    };
+    const plates = [...imgs.values()].filter((im) => im.placement === 'era' && String(im.year).trim() !== '');
+    const shownImgs = new Set();
     const out = [];
     eras.forEach((era) => {
       const evs = shown.filter((r) => r.year >= era.start && r.year <= era.end).sort((a, b) => a.year - b.year || String(a.date).localeCompare(String(b.date)));
-      if (!evs.length) return;
+      const pl = plates.filter((im) => +im.year >= era.start && +im.year <= era.end).sort((a, b) => (+a.year - +b.year) || byOrder(a, b));
+      if (!evs.length && !pl.length) return;
       const head = make('div', 'fp-era');
       head.append(make('div', 'yrs', `${era.start}–${era.end >= 2026 ? 'today' : era.end}`), make('h3', null, era.name), make('p', 'note', era.note));
       const n = pubs.get(era.census_name || era.name);
       if (n) head.append(make('div', 'pubs', `${f(n)} publications in the census from these years`));
       out.push(head);
+      if (pl.length) {
+        const box = make('div', 'fp-plates'); const grid = make('div', 'grid');
+        box.append(make('div', 'lbl', `Plates · ${era.name}`)); pl.forEach((im) => grid.append(figure(im))); box.append(grid);
+        out.push(box); pl.forEach((im) => shownImgs.add(im.image_id));
+      }
+      evs.forEach((r) => String(r.image_ids || '').split(';').filter((id) => imgs.has(id)).forEach((id) => shownImgs.add(id)));
       evs.forEach((r) => {
         const row = make('article', `fp-event${r.importance >= 5 ? ' turning' : ''}`); row.id = `hist-${r.id}`;
         const when = make('div', 'when', String(r.year));
         if (r.precision === 'decade') when.append(make('small', null, 'about'));
         const body = make('div');
         body.append(make('div', 'kind', r.type), make('h4', null, r.title), make('p', null, r.summary));
-        String(r.image_ids || '').split(';').filter(Boolean).forEach((id) => {
-          const im = imgs.get(id); if (!im) return;
-          const fig = make('figure'); const img = make('img'); img.loading = 'lazy'; img.src = imgSrc(im); img.alt = im.alt || '';
-          const cap = make('figcaption'); cap.append(document.createTextNode(`${im.caption} `));
-          const cr = make('span', 'credit'); cr.append(document.createTextNode(im.credit + ' '), link(im.source_url, 'source'), document.createTextNode('.'));
-          cap.append(cr); fig.append(img, cap); body.append(fig);
-        });
+        const own = String(r.image_ids || '').split(';').filter(Boolean).map((id) => imgs.get(id)).filter(Boolean).sort(byOrder);
+        if (own.length) { const box = make('div', `fp-figs${own.length === 1 ? ' one' : ''}`); own.forEach((im) => box.append(figure(im))); body.append(box); }
         const recs = parse(r.uw_records, []);
         const srcs = parse(r.sources, []);
         if (recs.length || srcs.length) {
@@ -1625,8 +1730,27 @@
         row.append(when, body); out.push(row);
       });
     });
+    document.getElementById('hist-count').textContent = `${f(shown.length)} of ${f(all.length)} events · ${f(shownImgs.size)} images`;
     el.classList.remove('dash-skeleton');
     el.replaceChildren(...out);
+  }
+  // A larger view of a history image, in its original colours, with its caption and credit.
+  function zoom(im) {
+    let dlg = document.getElementById('hist-zoom');
+    if (!dlg) {
+      dlg = document.createElement('dialog'); dlg.id = 'hist-zoom'; dlg.className = 'fp-zoom';
+      dlg.addEventListener('click', (ev) => { if (ev.target === dlg || ev.target.tagName === 'BUTTON' || ev.target.tagName === 'IMG') dlg.close(); });
+      (document.getElementById('fhl-profile') || document.body).append(dlg);
+    }
+    if (typeof dlg.showModal !== 'function') { window.open(imgSrc(im), '_blank', 'noopener'); return; }
+    const btn = document.createElement('button'); btn.type = 'button'; btn.textContent = 'Close';
+    const img = document.createElement('img'); img.src = imgSrc(im); img.alt = im.alt || '';
+    const p = document.createElement('p'); p.append(document.createTextNode(`${im.year ? im.year + '. ' : ''}${im.caption} `));
+    const cr = document.createElement('span'); cr.className = 'credit'; cr.textContent = im.credit; p.append(cr);
+    let pic = img;
+    if (phone()) { pic = document.createElement('div'); pic.className = 'pan'; pic.append(img); }
+    dlg.replaceChildren(btn, pic, p);
+    dlg.showModal();
   }
 
   let lineage = null; // the drawn network, for "Find a person": { focus(name), clear(), names }
@@ -1649,9 +1773,10 @@
     const teachersOf = d3.group(L, (l) => l.student), studentsOf = d3.group(L, (l) => l.advisor);
     const nStudents = (n) => (studentsOf.get(n) || []).length;
 
-    const width = Math.max(260, el.clientWidth), drawW = Math.max(width, 760);
+    const ph = phone(); // on a phone the network fits the screen's width, with fewer and smaller names
+    const width = Math.max(260, el.clientWidth), drawW = ph ? width : Math.max(width, 760);
     const height = Math.round(Math.max(520, Math.min(2800, 260 + names.length * 1.45)));
-    const m = { top: 44, right: 150, bottom: 16, left: 14 };
+    const m = ph ? { top: 44, right: 64, bottom: 16, left: 8 } : { top: 44, right: 150, bottom: 16, left: 14 };
     const years = names.map((n) => +info.get(n).year);
     const y0 = Math.min(d3.min(years), 1945), y1 = Math.max(d3.max(years), 2026);
     // Early generations are few, so the years before 1950 take a narrow strip at the left.
@@ -1676,7 +1801,9 @@
       ms.forEach(visit);
     });
     const slot = new Map(order.map((n, i) => [n, m.top + ((i + 0.5) / order.length) * (height - m.top - m.bottom)]));
-    const nodes = names.map((n) => ({ id: n, x: x(yearOf(n)), y: slot.get(n), y0: slot.get(n), fx0: x(yearOf(n)), r: 2.6 + Math.sqrt(nStudents(n)) * 1.25 }));
+    const nodes = names.map((n) => ({ id: n, x: x(yearOf(n)), y: slot.get(n), y0: slot.get(n), fx0: x(yearOf(n)),
+      r: ph ? 1.8 + Math.sqrt(nStudents(n)) * 0.8 : 2.6 + Math.sqrt(nStudents(n)) * 1.25 }));
+    if (ph) nodes.forEach((d) => { d.fx = d.fx0; }); // on a phone's short time axis, crowding resolves up and down only
     const byId = new Map(nodes.map((d) => [d.id, d]));
     const simLinks = L.map((l) => ({ source: byId.get(l.advisor), target: byId.get(l.student) }));
     const sim = d3.forceSimulation(nodes)
@@ -1684,7 +1811,7 @@
       .force('y', d3.forceY((d) => d.y0).strength(0.05))
       .force('link', d3.forceLink(simLinks).distance((k) => Math.abs(k.source.fx0 - k.target.fx0) + 6).strength(0.35))
       .force('charge', d3.forceManyBody().strength(-9).distanceMax(90))
-      .force('collide', d3.forceCollide((d) => d.r + 2.2))
+      .force('collide', d3.forceCollide((d) => d.r + (ph ? 1.2 : 2.2)))
       .stop();
     for (let i = 0; i < 420; i += 1) sim.tick();
     // Linked people pull together, which can leave empty bands where a group started out: close any vertical gap wider
@@ -1700,7 +1827,7 @@
     nodes.forEach((d) => { d.x = d.fx0; d.y = fit(d.y); });
 
     // Time axis along the top, with a faint line at each tick.
-    const ticks = [1900, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020].filter((t) => t >= y0 && t <= y1);
+    const ticks = (ph ? [1900, 1950, 1970, 1990, 2010] : [1900, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020]).filter((t) => t >= y0 && t <= y1);
     const ax = svg.append('g').attr('class', 'lin-axis');
     ax.selectAll('line').data(ticks).join('line').attr('x1', x).attr('x2', x).attr('y1', m.top - 8).attr('y2', height - m.bottom);
     ax.selectAll('text').data(ticks).join('text').attr('x', x).attr('y', m.top - 14).attr('text-anchor', 'middle').text((t) => t);
@@ -1727,8 +1854,8 @@
     const ranked = nodes.filter((d) => prominence(d) >= 3).sort((a, b) => prominence(b) - prominence(a) || d3.ascending(a.id, b.id));
     let nLabels = 0;
     for (const d of ranked) {
-      if (nLabels >= 90) break;
-      const hub = nStudents(d.id) >= 3, w = d.id.length * (hub ? 6.1 : 5.5) + 3, h = 12;
+      if (nLabels >= (ph ? 40 : 90)) break;
+      const hub = nStudents(d.id) >= 3, w = d.id.length * (hub ? 6.1 : 5.5) * (ph ? 0.88 : 1) + 3, h = ph ? 11 : 12;
       const spots = [[d.r + 3, 0, 'start'], [-d.r - 3, 0, 'end'], [d.r + 1, -d.r - 7, 'start'], [d.r + 1, d.r + 7, 'start'],
         [-d.r - 1, -d.r - 7, 'end'], [-d.r - 1, d.r + 7, 'end']];
       [14, -14, 24, -24, 36, -36].forEach((dy) => { spots.push([d.r + 10, dy, 'start', true]); spots.push([-d.r - 10, dy, 'end', true]); });
@@ -1761,19 +1888,29 @@
       labels.attr('opacity', 0.15);
       // Names beside each mark, moved up or down (with a leader line) where they would overlap.
       const boxes = [], spots = [];
-      nodes.filter((d) => on.has(d.id)).sort((a, b) => a.x - b.x || a.y - b.y).forEach((d) => {
-        const w = d.id.length * 5.6 + 4, x0 = d.x + d.r + 3;
+      let pool = nodes.filter((d) => on.has(d.id)).sort((a, b) => a.x - b.x || a.y - b.y);
+      if (ph) {
+        const direct = new Set([name, ...(teachersOf.get(name) || []).map((l) => l.advisor), ...(studentsOf.get(name) || []).map((l) => l.student)]);
+        pool = pool.filter((d) => direct.has(d.id)).sort((a, b) => (b.id === name) - (a.id === name) || prominence(b) - prominence(a)).slice(0, 25);
+        pool.forEach((d) => boxes.push({ x0: d.x - d.r - 1, x1: d.x + d.r + 1, y0: d.y - d.r - 1, y1: d.y + d.r + 1 }));
+      }
+      pool.forEach((d) => {
+        const w = d.id.length * (ph ? 5 : 5.6) + 4;
+        const left = ph && d.x + d.r + 3 + w > drawW - 2; // on a phone, names that would run off the right edge go to the left
+        const x0 = left ? d.x - d.r - 3 - w : d.x + d.r + 3;
         for (const dy of [0, 11, -11, 22, -22, 33, -33, 44, -44, 55, -55]) {
           const bx = { x0, x1: x0 + w, y0: d.y + dy - 6, y1: d.y + dy + 6 };
-          if (!boxes.some((b) => bx.x0 < b.x1 && bx.x1 > b.x0 && bx.y0 < b.y1 && bx.y1 > b.y0)) { boxes.push(bx); spots.push({ d, y: d.y + dy }); return; }
+          if (!boxes.some((b) => bx.x0 < b.x1 && bx.x1 > b.x0 && bx.y0 < b.y1 && bx.y1 > b.y0)) { boxes.push(bx); spots.push({ d, y: d.y + dy, left }); return; }
         }
-        spots.push({ d, y: d.y });
+        if (!ph) spots.push({ d, y: d.y, left });
       });
+      const side = (p) => (p.left ? -1 : 1);
       focusLabels.selectAll('line').data(spots.filter((p) => p.y !== p.d.y)).join('line').attr('class', 'lin-leader')
-        .attr('x1', (p) => p.d.x + p.d.r).attr('y1', (p) => p.d.y).attr('x2', (p) => p.d.x + p.d.r + 3).attr('y2', (p) => p.y);
+        .attr('x1', (p) => p.d.x + side(p) * p.d.r).attr('y1', (p) => p.d.y).attr('x2', (p) => p.d.x + side(p) * (p.d.r + 3)).attr('y2', (p) => p.y);
       focusLabels.selectAll('text').data(spots).join('text')
         .attr('class', (p) => `lin-label ${p.d.id === name ? 'self' : ''}`)
-        .attr('x', (p) => p.d.x + p.d.r + 4).attr('y', (p) => p.y).attr('dy', '0.35em').text((p) => p.d.id);
+        .attr('x', (p) => p.d.x + side(p) * (p.d.r + 4)).attr('y', (p) => p.y).attr('dy', '0.35em')
+        .attr('text-anchor', (p) => (p.left ? 'end' : null)).text((p) => p.d.id);
     };
     const linkKind = (l) => (inferred(l) ? 'inferred' : l.source === 'Graduate committee' ? 'committee' : 'documented');
     // Line entries in the key, for the kinds of link the network has.
@@ -1869,12 +2006,19 @@
     const idx = new Map(people.map((p, i) => [p.name, i]));
     const links = dash.data('people_links').data.map((r) => ({ ...r, citations: +r.citations }))
       .filter((l) => idx.has(l.source) && idx.has(l.target));
-    const width = Math.max(260, el.clientWidth), size = Math.max(520, Math.min(width, 860)), drawW = Math.max(width, size);
+    const ph = phone();
+    const width = Math.max(260, el.clientWidth), size = ph ? Math.min(width, 520) : Math.max(520, Math.min(width, 860)), drawW = Math.max(width, size);
+    const surname = (n) => { const t = String(n).replace(/,? (Jr|Sr|II|III)\.?$/, '').split(' ');
+      const i = t.length > 2 && /^(von|van|de|del|der|la|le|da|di|du)$/i.test(t[t.length - 2]) ? t.length - 2 : t.length - 1;
+      return t.slice(i).join(' '); };
+    const nSur = d3.rollup(people, (v) => v.length, (p) => surname(p.name));
+    const short = (s) => s.replace(/^([^‐-]+)[‐-](\S)\S*$/, '$1-$2.'); // Wyllie-Echeverria -> Wyllie-E.
+    const shown = (p) => (!ph ? p.name : nSur.get(surname(p.name)) > 1 ? `${p.name[0]}. ${short(surname(p.name))}` : short(surname(p.name)));
     const { svg } = svgFor(el, size);
     const probe = svg.append('text').attr('class', 'net-label');
-    const longest = d3.max(people, (p) => { probe.text(p.name); return probe.node().getComputedTextLength(); }) || 0;
+    const longest = d3.max(people, (p) => { probe.text(shown(p)); return probe.node().getComputedTextLength(); }) || 0;
     probe.remove();
-    const R = size / 2 - Math.min(150, longest + 22), cx = drawW / 2, cy = size / 2;
+    const R = size / 2 - Math.min(150, longest + (ph ? 14 : 22)), cx = drawW / 2, cy = size / 2;
     svg.attr('viewBox', `0 0 ${drawW} ${size}`).attr('width', drawW > width ? drawW : '100%');
     el.style.overflowX = drawW > width ? 'auto' : '';
     const ang = (i) => (i / people.length) * 2 * Math.PI - Math.PI / 2;
@@ -1883,17 +2027,17 @@
     const lk = svg.append('g').selectAll('path').data(links.sort((a, b) => a.citations - b.citations)).join('path').attr('class', 'net-link')
       .attr('d', (l) => { const a = at(idx.get(l.source)), b = at(idx.get(l.target)); return `M${a}Q${cx},${cy} ${b}`; })
       .style('stroke-width', (l) => w(l.citations));
-    const rr = d3.scaleSqrt([1, d3.max(people, (p) => p.fhl_works)], [2.5, 9]);
+    const rr = d3.scaleSqrt([1, d3.max(people, (p) => p.fhl_works)], ph ? [1.5, 4.5] : [2.5, 9]);
     const nodes = svg.append('g').selectAll('g').data(people).join('g').attr('data-key', (p) => p.came_from_region);
     nodes.append('circle').attr('class', 'net-node').attr('cx', (p, i) => at(i)[0]).attr('cy', (p, i) => at(i)[1])
       .attr('r', (p) => rr(p.fhl_works)).style('fill', (p) => REGION_FILLS[p.came_from_region] || FILL.grayl);
     const lab = nodes.append('text').attr('class', 'net-label').attr('dy', '0.35em')
       .attr('transform', (p, i) => {
-        const a = (ang(i) * 180) / Math.PI, [x, y] = at(i, R + 14);
+        const a = (ang(i) * 180) / Math.PI, [x, y] = at(i, R + (ph ? 9 : 14));
         return `translate(${x},${y}) rotate(${a > 90 && a < 270 ? a - 180 : a})`;
       })
       .attr('text-anchor', (p, i) => { const a = (ang(i) * 180) / Math.PI; return a > 90 && a < 270 ? 'end' : 'start'; })
-      .text((p) => p.name);
+      .text(shown);
     const hit = (p) => {
       const mine = new Set([p.name]);
       lk.attr('class', (l) => { const on = l.source === p.name || l.target === p.name; if (on) { mine.add(l.source); mine.add(l.target); } return `net-link ${on ? 'on' : 'off'}`; });
@@ -1918,7 +2062,9 @@
   }
 
 
-  dash.onData(() => {
+  let drawnW = 0, drawnPhone = null, redrawT = 0; // the width and layout the figures were last drawn for
+  const drawAll = () => {
+    drawnW = document.documentElement.clientWidth; drawnPhone = phone();
     // ---- headline -------------------------------------------------------------------------------------------
     const H = { verified: (v) => f(+v), publications: (v) => f(+v), total_citations: (v) => compact.format(+v),
       verified_citations: (v) => compact.format(+v), verified_per_year_2016_2025: (v) => f(Math.round(+v)),
@@ -2109,7 +2255,7 @@
       }));
     }
 
-    // ---- a visual history of the station ---------------------------------------------------------------------
+    // ---- chronicle of the station ------------------------------------------------------------------------------
     drawHistory();
 
     // ---- the prompts, as typed: when, and the output tokens each led to ----------------------------------------
@@ -2137,7 +2283,28 @@
       topicSel.append(...names.map((n) => new Option(n, n)));
     }
     drawPubs();
-  });
+  };
+  // Redrawing keeps a person picked by clicking or tapping in Fig. 8 or Fig. 9 (a search re-picks its own match).
+  const redraw = () => {
+    const p8 = lineage && lineage.pinned, p9 = citeNet && citeNet.pinned;
+    drawAll();
+    if (p8 && lineage && !lineage.pinned && lineage.names.includes(p8)) { lineage.pinned = p8; lineage.syncKey(); lineage.rest(); }
+    if (p9 && citeNet && !citeNet.pinned && citeNet.names.includes(p9)) { citeNet.pinned = p9; citeNet.focus(p9); }
+  };
+  dash.onData(redraw);
+  // Each figure is drawn for the width it has. The standalone and website copies redraw when the width changes; in the
+  // online sheet, redraw when the page switches between the phone and wider layouts, or when a phone's width changes
+  // (turning it). Wider screens keep their figures as first drawn.
+  if (!window.FP_HOST_REDRAWS) {
+    window.addEventListener('resize', () => {
+      clearTimeout(redrawT);
+      redrawT = setTimeout(() => {
+        const p = phone(), w = document.documentElement.clientWidth;
+        if (p === drawnPhone && (!p || Math.abs(w - drawnW) < 40)) return;
+        redraw();
+      }, 250);
+    });
+  }
 
   function drawPubs() {
     const body = document.querySelector('#tbl-pubs tbody');

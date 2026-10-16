@@ -18,8 +18,8 @@ resolution_no,779,rejected
 resolution_uncertain,428,still undecided
 audited,380,records in the audit sample
 audit_full_text,260,audited records read in full text
-ai_runs,13,"AI runs (multi-agent workflows, the topic classification and the later checks, rosters and profiles)"
-ai_agents,382,AI agents run in those runs
+ai_runs,15,"AI runs (multi-agent workflows, the topic classification and the later checks, rosters and profiles)"
+ai_agents,432,AI agents run in those runs
 build_hours,8.7,wall-clock hours from the first prompt to the first complete version
 mentor_pairs,146,mentor links inferred from co-authorship
 mentor_checked,146,inferred links checked against public records
@@ -39,9 +39,13 @@ roster_no_lab,36,"FHL scientists who lead no lab (students, early-career, staff)
 roster_historical,26,FHL scientists from before public lab pages
 roster_not_found,12,FHL scientists who taught but have no public trainee list
 history_extracted,744,dated events extracted from the history sources
-history_events,102,events in the visual history
-history_corrected,46,history events the fact-checkers corrected
-history_images,20,images shown in the visual history
+history_events,106,events in the chronicle of the station
+history_corrected,47,history events the fact-checkers corrected
+history_images,116,images shown in the chronicle of the station
+history_more_candidates,172,candidate images found by the second image search
+history_more_passed,135,"candidate images a second agent passed (licence, relevance, caption)"
+history_more_chosen,96,images the picture editor chose
+history_more_events,4,events added from the new images' records
 profiles,236,people profiles written and fact-checked
 profiles_revised,230,profiles the fact-checker revised
 dedup_dropped,137,duplicate records merged away
