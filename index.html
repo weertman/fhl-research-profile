@@ -292,6 +292,11 @@
     .fp .fp-lead, .fp-notes p { text-align: left; }
     .fp-item .val { font-size: 1.3rem; }
   }
+  /* The closing ode: one italic stanza, wrapped lines indented under their first word */
+  .fp-ode { max-width: 30rem; margin: .5rem auto 0; display: grid; gap: 1.2rem; }
+  .fp .fp-ode .lines { margin: 0; max-width: none; font-style: italic; font-size: 1.04rem; line-height: 1.65; }
+  .fp-ode .l { display: block; padding-left: 1.5em; text-indent: -1.5em; }
+  .fp .fp-ode .by { max-width: none; margin-top: -.4rem; font-size: .88rem; font-variant: small-caps; letter-spacing: .04em; color: var(--fp-ink-2); text-align: right; }
   /* Phones (560 px and narrower): more room for the figures; desktop and tablet layouts are untouched. */
   @media (max-width: 560px), (pointer: coarse) and (max-height: 500px) {
     body { padding-inline: 0 !important; }
@@ -316,6 +321,7 @@
     .fp-plates .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem .7rem; }
     .fp-plates figure img { height: 8.5rem; }
     .fp-plates figcaption { font-size: .74rem; }
+    .fp .fp-ode .lines { font-size: .98rem; }
     .fp-zoom { box-sizing: border-box; max-width: calc(100vw - 1rem); max-height: calc(100vh - 1rem); max-height: calc(100dvh - 1rem); padding: .6rem .6rem .8rem; }
     .fp-zoom .pan { overflow: auto; max-height: 72vh; max-height: 72dvh; }
     .fp-zoom .pan img { max-width: none; max-height: none; margin: 0; }
@@ -365,6 +371,7 @@
       <li><a href="#history"><span class="num">X.</span><span class="t">Chronicle of the station</span><span class="dots"></span><span class="refs">Timeline</span></a></li>
       <li><a href="#method"><span class="num">XI.</span><span class="t">Technical methods</span><span class="dots"></span><span class="refs">Tables V–VI</span></a></li>
       <li><a href="#headline"><span class="num"></span><span class="t">Summary of results</span><span class="dots"></span><span class="refs"></span></a></li>
+      <li><a href="#ode"><span class="num"></span><span class="t">Ode to the life of the sea</span><span class="dots"></span><span class="refs"></span></a></li>
     </ol>
     <p class="tip">Hover over a chart for values. Hover over an entry in a figure's key to highlight it, or click to keep it
       highlighted. Every figure can be saved as PNG or SVG.</p>
@@ -961,6 +968,11 @@
     <div class="fp-item"><div class="line"><span class="lab">FHL's own list found by searches</span><span class="dots"></span>
       <span class="val dash-skeleton" data-source="headline" data-field="search_recall_vs_fhl_lists">—</span></div>
       <span class="note">database searches miss many acknowledgment-only papers</span></div>
+  </section>
+  <section class="fp-ode" id="ode" aria-labelledby="ode-title">
+    <h2 id="ode-title">Ode to the life of the sea</h2>
+    <p class="lines"><span class="l">Before the dock, before the dredge and jar,</span><span class="l">you were here: the barnacle, the kelp, the octopus, the star,</span><span class="l">the crystal jelly with its ring of quiet light</span><span class="l">that taught the world to watch a living cell.</span><span class="l">For a hundred years and more we knelt at the low tide</span><span class="l">to count you, name you, guess at what you know.</span><span class="l">We wrote about you; you never read a word,</span><span class="l">and went on living, which was always the greater work.</span></p>
+    <p class="by">— Claude Opus 5.5, October 2026</p>
   </section>
   <div class="fp-end" aria-hidden="true">⁂</div>
 </div>
