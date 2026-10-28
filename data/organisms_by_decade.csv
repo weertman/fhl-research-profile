@@ -5,7 +5,7 @@ decade,organism,n
 1910,"Cnidarians, ctenophores & sponges",1
 1910,Crustaceans & other arthropods,6
 1910,Echinoderms,3
-1910,Fishes,7
+1910,Fishes,8
 1910,Many groups,4
 1910,Molluscs,2
 1910,No particular organism,7
@@ -19,26 +19,26 @@ decade,organism,n
 1920,Fishes,6
 1920,Many groups,10
 1920,Molluscs,9
-1920,No particular organism,20
+1920,No particular organism,21
 1920,Other invertebrates & tunicates,2
 1920,Phytoplankton & protists,2
 1920,"Seaweeds, seagrasses & plants",27
-1920,Worms,5
+1920,Worms,6
 1930,"Cnidarians, ctenophores & sponges",1
-1930,Crustaceans & other arthropods,7
+1930,Crustaceans & other arthropods,6
 1930,Echinoderms,1
 1930,Fishes,1
 1930,Many groups,5
-1930,Molluscs,2
-1930,No particular organism,13
+1930,Molluscs,3
+1930,No particular organism,15
 1930,Other invertebrates & tunicates,1
-1930,Phytoplankton & protists,10
+1930,Phytoplankton & protists,11
 1930,"Seaweeds, seagrasses & plants",7
 1940,"Bacteria, archaea, viruses & fungi",1
 1940,Crustaceans & other arthropods,5
-1940,Many groups,1
+1940,Many groups,2
 1940,No particular organism,10
-1940,"Seaweeds, seagrasses & plants",4
+1940,"Seaweeds, seagrasses & plants",3
 1940,Worms,3
 1950,"Bacteria, archaea, viruses & fungi",1
 1950,Birds & mammals,1
@@ -48,99 +48,99 @@ decade,organism,n
 1950,Fishes,4
 1950,Many groups,2
 1950,Molluscs,6
-1950,No particular organism,8
+1950,No particular organism,9
 1950,Other invertebrates & tunicates,1
-1950,Phytoplankton & protists,2
-1950,"Seaweeds, seagrasses & plants",1
-1950,Worms,7
+1950,Phytoplankton & protists,3
+1950,"Seaweeds, seagrasses & plants",2
+1950,Worms,8
 1960,"Bacteria, archaea, viruses & fungi",2
-1960,Birds & mammals,2
+1960,Birds & mammals,3
 1960,"Cnidarians, ctenophores & sponges",18
 1960,Crustaceans & other arthropods,21
-1960,Echinoderms,26
+1960,Echinoderms,27
 1960,Fishes,16
-1960,Many groups,5
+1960,Many groups,4
 1960,Molluscs,21
-1960,No particular organism,12
+1960,No particular organism,13
 1960,Other invertebrates & tunicates,4
 1960,Phytoplankton & protists,7
 1960,"Seaweeds, seagrasses & plants",6
-1960,Worms,18
+1960,Worms,19
 1970,"Bacteria, archaea, viruses & fungi",2
 1970,Birds & mammals,6
-1970,"Cnidarians, ctenophores & sponges",32
-1970,Crustaceans & other arthropods,35
+1970,"Cnidarians, ctenophores & sponges",33
+1970,Crustaceans & other arthropods,37
 1970,Echinoderms,42
 1970,Fishes,8
 1970,Many groups,15
 1970,Molluscs,70
-1970,No particular organism,17
+1970,No particular organism,18
 1970,Other invertebrates & tunicates,13
 1970,Phytoplankton & protists,16
-1970,"Seaweeds, seagrasses & plants",7
+1970,"Seaweeds, seagrasses & plants",8
 1970,Worms,17
-1980,"Bacteria, archaea, viruses & fungi",1
+1980,"Bacteria, archaea, viruses & fungi",2
 1980,Birds & mammals,5
-1980,"Cnidarians, ctenophores & sponges",60
-1980,Crustaceans & other arthropods,31
-1980,Echinoderms,98
-1980,Fishes,26
-1980,Many groups,38
-1980,Molluscs,85
-1980,No particular organism,21
-1980,Other invertebrates & tunicates,26
-1980,Phytoplankton & protists,9
+1980,"Cnidarians, ctenophores & sponges",67
+1980,Crustaceans & other arthropods,35
+1980,Echinoderms,99
+1980,Fishes,28
+1980,Many groups,44
+1980,Molluscs,93
+1980,No particular organism,23
+1980,Other invertebrates & tunicates,28
+1980,Phytoplankton & protists,13
 1980,"Seaweeds, seagrasses & plants",28
-1980,Worms,28
+1980,Worms,29
 1990,"Bacteria, archaea, viruses & fungi",1
 1990,Birds & mammals,5
-1990,"Cnidarians, ctenophores & sponges",23
-1990,Crustaceans & other arthropods,38
-1990,Echinoderms,36
-1990,Fishes,32
-1990,Many groups,47
-1990,Molluscs,77
-1990,No particular organism,33
-1990,Other invertebrates & tunicates,29
-1990,Phytoplankton & protists,3
-1990,"Seaweeds, seagrasses & plants",23
-1990,Worms,22
+1990,"Cnidarians, ctenophores & sponges",28
+1990,Crustaceans & other arthropods,39
+1990,Echinoderms,38
+1990,Fishes,37
+1990,Many groups,53
+1990,Molluscs,84
+1990,No particular organism,39
+1990,Other invertebrates & tunicates,40
+1990,Phytoplankton & protists,4
+1990,"Seaweeds, seagrasses & plants",26
+1990,Worms,28
 2000,"Bacteria, archaea, viruses & fungi",7
-2000,Birds & mammals,19
-2000,"Cnidarians, ctenophores & sponges",31
-2000,Crustaceans & other arthropods,58
-2000,Echinoderms,52
-2000,Fishes,31
-2000,Many groups,53
-2000,Molluscs,100
-2000,No particular organism,112
-2000,Other invertebrates & tunicates,75
-2000,Phytoplankton & protists,12
-2000,"Seaweeds, seagrasses & plants",36
-2000,Worms,41
-2010,"Bacteria, archaea, viruses & fungi",10
-2010,Birds & mammals,93
-2010,"Cnidarians, ctenophores & sponges",82
-2010,Crustaceans & other arthropods,122
-2010,Echinoderms,116
-2010,Fishes,232
-2010,Many groups,96
-2010,Molluscs,199
-2010,No particular organism,215
-2010,Other invertebrates & tunicates,97
-2010,Phytoplankton & protists,60
-2010,"Seaweeds, seagrasses & plants",114
-2010,Worms,35
+2000,Birds & mammals,25
+2000,"Cnidarians, ctenophores & sponges",36
+2000,Crustaceans & other arthropods,65
+2000,Echinoderms,58
+2000,Fishes,35
+2000,Many groups,61
+2000,Molluscs,116
+2000,No particular organism,115
+2000,Other invertebrates & tunicates,87
+2000,Phytoplankton & protists,13
+2000,"Seaweeds, seagrasses & plants",40
+2000,Worms,45
+2010,"Bacteria, archaea, viruses & fungi",12
+2010,Birds & mammals,94
+2010,"Cnidarians, ctenophores & sponges",92
+2010,Crustaceans & other arthropods,124
+2010,Echinoderms,118
+2010,Fishes,235
+2010,Many groups,99
+2010,Molluscs,205
+2010,No particular organism,226
+2010,Other invertebrates & tunicates,99
+2010,Phytoplankton & protists,61
+2010,"Seaweeds, seagrasses & plants",115
+2010,Worms,36
 2020,"Bacteria, archaea, viruses & fungi",19
-2020,Birds & mammals,68
-2020,"Cnidarians, ctenophores & sponges",50
-2020,Crustaceans & other arthropods,121
-2020,Echinoderms,66
-2020,Fishes,188
-2020,Many groups,61
-2020,Molluscs,95
-2020,No particular organism,119
+2020,Birds & mammals,70
+2020,"Cnidarians, ctenophores & sponges",54
+2020,Crustaceans & other arthropods,124
+2020,Echinoderms,67
+2020,Fishes,196
+2020,Many groups,65
+2020,Molluscs,100
+2020,No particular organism,122
 2020,Other invertebrates & tunicates,31
 2020,Phytoplankton & protists,31
-2020,"Seaweeds, seagrasses & plants",116
+2020,"Seaweeds, seagrasses & plants",118
 2020,Worms,15

@@ -1,7 +1,6 @@
 category,publications,citations,median_citations,median_citations_per_year,share
-Affiliation (text not checked),1743,70189.0,24.0,0.95,0.3746
-Main text only,1043,32707.0,10.0,0.85,0.2242
-Affiliation and main text,788,12238.0,4.0,0.34,0.1694
-Main text (affiliation unknown),617,1017.0,1.0,0.14500000000000002,0.1326
-Affiliation only,235,10865.0,24.5,2.9,0.0505
-Not determined,227,6604.0,16.5,0.7250000000000001,0.0488
+Author address,2890,95569.0,18.0,0.89,0.5876
+Text only: methods and elsewhere,985,17959.0,6.0,0.44,0.2003
+Text only: acknowledgments,691,22872.0,17.0,1.33,0.1405
+Other or not determined,229,6815.0,20.0,0.8,0.0466
+In the text; addresses not seen,123,411.0,1.0,0.12,0.025
