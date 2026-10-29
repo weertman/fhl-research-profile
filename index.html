@@ -422,7 +422,6 @@
   .fp-tabs a + a { border-left: 1px solid var(--fp-ink); }
   .fp-tabs a[aria-current="page"] { background: var(--fp-ink); color: var(--fp-paper); }
   .fp-feedback { font-size: .84rem; font-style: italic; color: var(--fp-ink); }
-  .fp-feedback-note { font-size: .74rem; color: var(--fp-ink-2); }
   /* The feedback form: opens over the report, sends without leaving the page */
   .fp-fb { box-sizing: border-box; width: min(36rem, 94vw); max-width: 94vw; max-height: 94vh; overflow: auto; padding: 1.1rem clamp(.8rem, 3vw, 1.3rem) 1.2rem; border: 1.5px solid var(--fp-ink);
     background: var(--fp-paper); color: var(--fp-ink); font-family: var(--fp-serif); }
@@ -562,7 +561,6 @@
            readers are sent to write a note (the online sheet cannot post one itself). -->
       <a class="fp-feedback" id="fb-open" data-site="https://weertman.github.io/fhl-research-profile/" data-endpoint="https://script.google.com/macros/s/AKfycbwHpKU4Z48fp9fPFRQ3kIrwwPyR38AMoNjXR1inHRU8PWHtOccX_b5gm5TtnTfjVydZnQ/exec" href="https://github.com/weertman/fhl-research-profile/issues/new?template=feedback.yml"
         target="_blank" rel="noopener">Send a correction or suggestion</a>
-      <span class="fp-feedback-note" id="fb-note">(a short form on GitHub; needs a free account; posts are public)</span>
     </div>
   </header>
   <dialog class="fp-fb" id="fb-dialog" aria-labelledby="fb-title">
@@ -3573,13 +3571,11 @@
     const open = document.getElementById('fb-open'), dlg = document.getElementById('fb-dialog');
     const endpoint = (open && open.dataset.endpoint || '').trim();
     if (!open || !dlg || !endpoint || typeof dlg.showModal !== 'function') return;
-    const note = document.getElementById('fb-note');
     if (window.FP_SITE_BASE == null) {
       // The online sheet: only the website and standalone copies set FP_SITE_BASE.
       const site = (open.dataset.site || '').trim();
       if (!site) return;
       open.href = site + '#feedback';
-      if (note) note.textContent = '(opens the report’s website in a new tab; no account needed; goes privately to the authors)';
       return;
     }
     const form = document.getElementById('fb-form'), what = document.getElementById('fb-what'), where = document.getElementById('fb-where');
@@ -3589,7 +3585,6 @@
     if (![form, what, where, status, send, done, cancel, close].every(Boolean)) return;
     open.removeAttribute('target');
     open.href = '#feedback';
-    if (note) note.textContent = '(no account needed; goes privately to the authors)';
     // The heading of the part of the report in view, to prefill "Where".
     const inView = () => {
       let best = '';
