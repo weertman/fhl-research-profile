@@ -403,7 +403,7 @@
   .fp-fb::backdrop { background: rgba(0, 0, 0, .6); }
   .fp-fb h2 { margin: 0 0 .3rem; font-size: 1.15rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; text-align: center; }
   .fp-fb .intro { margin: 0 0 .9rem; font-size: .92rem; line-height: 1.45; text-align: center; color: var(--fp-ink-2); }
-  .fp-fb form { display: grid; gap: .8rem; }
+  .fp-fb .fp-fb-form { display: grid; gap: .8rem; }
   .fp-fb label { display: grid; gap: .25rem; font-size: .95rem; }
   .fp-fb label .opt { font-style: italic; color: var(--fp-ink-2); font-size: .85rem; }
   .fp-fb input, .fp-fb select, .fp-fb textarea { font: inherit; font-size: 1rem; padding: .45rem .55rem; border: 1px solid var(--fp-ink);
@@ -424,7 +424,7 @@
     .fp-fb { max-height: 96vh; padding-block: .8rem; }
     .fp-fb h2 { font-size: 1rem; }
     .fp-fb .intro { margin-bottom: .6rem; font-size: .88rem; }
-    .fp-fb form { gap: .55rem; }
+    .fp-fb .fp-fb-form { gap: .55rem; }
     .fp-fb label { gap: .15rem; }
     .fp-fb label .opt { font-size: .8rem; }
     .fp-fb textarea { min-height: 6rem; }
@@ -538,8 +538,9 @@
         <a href="#history" data-tab="chronicle">Chronicle of the station</a>
       </nav>
       <!-- data-endpoint: the Google Apps Script web app that receives notes (scripts/feedback_apps_script.gs). While it is
-           empty, the link opens the public GitHub form instead. -->
-      <a class="fp-feedback" id="fb-open" data-endpoint="https://script.google.com/macros/s/AKfycbwHpKU4Z48fp9fPFRQ3kIrwwPyR38AMoNjXR1inHRU8PWHtOccX_b5gm5TtnTfjVydZnQ/exec" href="https://github.com/weertman/fhl-research-profile/issues/new?template=feedback.yml"
+           empty, the link opens the public GitHub form instead. data-site: the website copy, where the online sheet's
+           readers are sent to write a note (the online sheet cannot post one itself). -->
+      <a class="fp-feedback" id="fb-open" data-site="https://weertman.github.io/fhl-research-profile/" data-endpoint="https://script.google.com/macros/s/AKfycbwHpKU4Z48fp9fPFRQ3kIrwwPyR38AMoNjXR1inHRU8PWHtOccX_b5gm5TtnTfjVydZnQ/exec" href="https://github.com/weertman/fhl-research-profile/issues/new?template=feedback.yml"
         target="_blank" rel="noopener">Send a correction or suggestion</a>
       <span class="fp-feedback-note" id="fb-note">(a short form on GitHub; needs a free account; posts are public)</span>
     </div>
@@ -547,7 +548,7 @@
   <dialog class="fp-fb" id="fb-dialog" aria-labelledby="fb-title">
     <h2 id="fb-title">A correction or suggestion</h2>
     <p class="intro">No account needed. Your note goes privately to the report's authors; nothing you send is published.</p>
-    <form id="fb-form" novalidate>
+    <div class="fp-fb-form" id="fb-form" role="form" aria-labelledby="fb-title">
       <label>Kind of note
         <select name="kind">
           <option>Correction</option>
@@ -573,12 +574,12 @@
       <p class="status" id="fb-status" role="status" aria-live="polite"></p>
       <div class="row">
         <button type="button" class="cancel" id="fb-cancel">Cancel</button>
-        <button type="submit" class="send" id="fb-send">Send</button>
+        <button type="button" class="send" id="fb-send">Send</button>
       </div>
-    </form>
-    <div id="fb-done" hidden>
-      <p class="done">Thank you. Your note was sent to the report's authors.</p>
-      <div class="row"><button type="button" id="fb-close">Close</button></div>
+    </div>
+    <div id="fb-done" role="status" hidden>
+      <p class="done" id="fb-done-msg">Thank you. Your note was sent to the report's authors.</p>
+      <div class="row"><button type="button" id="fb-close" aria-describedby="fb-done-msg">Close</button></div>
     </div>
     <p class="alt">Prefer to post publicly? <a href="https://github.com/weertman/fhl-research-profile/issues/new?template=feedback.yml"
       target="_blank" rel="noopener">Use the form on GitHub</a> (a free GitHub account is needed).</p>
@@ -3010,7 +3011,8 @@
     t.scrollIntoView();
   };
   showTab(chronicleHash(location.hash) ? 'chronicle' : 'report');
-  window.addEventListener('hashchange', () => { pendingTarget = false; showTab(chronicleHash(location.hash) ? 'chronicle' : 'report'); openTarget(); });
+  // '#feedback' opens the feedback form over whichever tab is showing (its own script handles it), so it moves nothing here.
+  window.addEventListener('hashchange', () => { if (location.hash === '#feedback') return; pendingTarget = false; showTab(chronicleHash(location.hash) ? 'chronicle' : 'report'); openTarget(); });
 
   // The chronicle tab's directors and staff, classes, and artists in residence. Drawn with the rest, and again when the
   // tab is opened, since the charts need the tab on screen to measure their width.
@@ -3576,17 +3578,30 @@
 <script>
   // The feedback form (in the masthead): opens over the report and posts the note to the authors' Google Sheet through
   // a Google Apps Script web app (scripts/feedback_apps_script.gs), so the reader never leaves the page. Without an
-  // endpoint, or where the browser has no <dialog>, the link keeps opening the public GitHub form.
+  // endpoint, or where the browser has no <dialog>, the link keeps opening the public GitHub form. The online sheet
+  // drops <form> elements and lets the page make no network calls, so the fields sit in a plain block, and there the
+  // link opens the website copy with the form already open (address ending #feedback), in a new tab.
   (() => {
     const open = document.getElementById('fb-open'), dlg = document.getElementById('fb-dialog');
     const endpoint = (open && open.dataset.endpoint || '').trim();
     if (!open || !dlg || !endpoint || typeof dlg.showModal !== 'function') return;
+    const note = document.getElementById('fb-note');
+    if (window.FP_SITE_BASE == null) {
+      // The online sheet: only the website and standalone copies set FP_SITE_BASE.
+      const site = (open.dataset.site || '').trim();
+      if (!site) return;
+      open.href = site + '#feedback';
+      if (note) note.textContent = '(opens the report’s website in a new tab; no account needed; goes privately to the authors)';
+      return;
+    }
     const form = document.getElementById('fb-form'), what = document.getElementById('fb-what'), where = document.getElementById('fb-where');
     const status = document.getElementById('fb-status'), send = document.getElementById('fb-send');
-    const done = document.getElementById('fb-done');
+    const done = document.getElementById('fb-done'), cancel = document.getElementById('fb-cancel'), close = document.getElementById('fb-close');
+    // Any part missing (a page that dropped it): leave the link on the GitHub form rather than half-wire this one.
+    if (![form, what, where, status, send, done, cancel, close].every(Boolean)) return;
     open.removeAttribute('target');
     open.href = '#feedback';
-    document.getElementById('fb-note').textContent = '(no account needed; goes privately to the authors)';
+    if (note) note.textContent = '(no account needed; goes privately to the authors)';
     // The heading of the part of the report in view, to prefill "Where".
     const inView = () => {
       let best = '';
@@ -3599,30 +3614,41 @@
     const copy = () => /github\.io$/.test(location.hostname) ? 'website' : location.protocol === 'file:' || /^(localhost|127\.)/.test(location.hostname)
       ? 'standalone file' : 'online sheet';
     const show = (msg, err) => { status.textContent = msg; status.classList.toggle('err', !!err); };
-    open.addEventListener('click', (ev) => {
-      ev.preventDefault();
-      form.hidden = false; done.hidden = true; show('');
+    const fields = () => form.querySelectorAll('input[name], select[name], textarea[name]');
+    const reset = () => fields().forEach((el) => { if (el.tagName === 'SELECT') el.selectedIndex = 0; else el.value = ''; });
+    let sending = false;
+    const openForm = () => {
+      if (dlg.open) return;
+      // Closed and reopened while a note is still on its way: keep saying so, and let the reply decide what shows next.
+      if (sending) show('Sending…');
+      else { form.hidden = false; done.hidden = true; show(''); }
       if (!where.value) where.value = inView();
       dlg.showModal();
       what.focus();
-    });
-    document.getElementById('fb-cancel').addEventListener('click', () => dlg.close());
-    document.getElementById('fb-close').addEventListener('click', () => dlg.close());
-    form.addEventListener('submit', async (ev) => {
-      ev.preventDefault();
+      // An address ending #feedback (the online sheet's link here) opens the form; that ending is dropped once it has,
+      // so a reload does not open it again.
+      if (location.hash === '#feedback') history.replaceState(null, '', location.pathname + location.search);
+    };
+    open.addEventListener('click', (ev) => { ev.preventDefault(); openForm(); });
+    cancel.addEventListener('click', () => dlg.close());
+    close.addEventListener('click', () => dlg.close());
+    window.addEventListener('hashchange', () => { if (location.hash === '#feedback') openForm(); });
+    const submit = async () => {
+      if (sending) return;
       if (!what.value.trim()) { show('Please write your correction or suggestion first.', true); what.focus(); return; }
-      const body = new URLSearchParams(new FormData(form));
+      const body = new URLSearchParams();
+      fields().forEach((el) => body.set(el.name, el.value));
       body.set('page', `${copy()}${document.querySelector('.fp.tab-chronicle') ? ', chronicle tab' : ''}`);
-      send.disabled = true; show('Sending…');
+      sending = true; send.disabled = true; show('Sending…');
       const stop = new AbortController(), timer = setTimeout(() => stop.abort(), 20000);
       try {
         // A plain form post (no preflight); the receiver answers "ok", "busy" or "empty", readable across sites.
         const res = await fetch(endpoint, { method: 'POST', body, signal: stop.signal });
         const reply = (await res.text()).trim();
         if (reply === 'ok') {
-          form.reset(); where.value = '';
+          reset();
           form.hidden = true; done.hidden = false; show('');
-          document.getElementById('fb-close').focus();
+          close.focus();
         } else if (reply === 'busy') {
           show('Many notes are arriving just now. Please try again in a few minutes, or use the GitHub form below. Your text is kept.', true);
         } else {
@@ -3632,9 +3658,17 @@
         // Sent but unconfirmed is possible here (the reply was lost), so say so rather than inviting a duplicate at once.
         show('We could not confirm that your note arrived. Please wait a minute before trying again, or use the GitHub form below. Your text is kept.', true);
       } finally {
-        clearTimeout(timer); send.disabled = false;
+        clearTimeout(timer); sending = false; send.disabled = false;
       }
+    };
+    send.addEventListener('click', submit);
+    // Enter in a one-line field sends, as a form would; in the note itself, Ctrl or Cmd + Enter does.
+    form.addEventListener('keydown', (ev) => {
+      if (ev.key !== 'Enter' || ev.isComposing || ev.keyCode === 229) return; // 229: Enter that confirms an input-method word (Safari)
+      const t = ev.target;
+      if ((t.tagName === 'INPUT') || (t.tagName === 'TEXTAREA' && (ev.metaKey || ev.ctrlKey))) { ev.preventDefault(); submit(); }
     });
+    if (location.hash === '#feedback') openForm();
   })();
 </script>
 
