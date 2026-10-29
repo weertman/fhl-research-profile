@@ -233,7 +233,9 @@
   /* A slider through the decades (Fig. 10), beside an "All years" button */
   .fp-slider { display: inline-flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
   .fp-slider input[type="range"] { width: clamp(9rem, 28vw, 18rem); flex: none; min-width: 0; padding: 0; border: 0; background: none; accent-color: var(--fp-ink); cursor: pointer; }
-  .fp-strip-head { margin: .6rem 0 .2rem; }
+  .fp-strip-head { margin: 1.1rem 0 .1rem; padding-top: .7rem; border-top: 1px solid color-mix(in oklab, var(--fp-ink) 35%, var(--fp-paper)); }
+  .fp .fp-pool-label { margin: .5rem 0 .2rem; font-size: .85rem; font-style: italic; }
+  .fp-chart#ch-tree-staff { min-height: 0; }
   .fp-slider.all input[type="range"] { opacity: .45; }
   .fp-slider output { min-width: 4.5rem; font-variant-numeric: tabular-nums; font-size: .95rem; }
   .fp-toggle .fp-gap { width: 1.2rem; }
@@ -392,7 +394,7 @@
   /* Tabs and the feedback link under the masthead; the chronicle has its own tab */
   .fp-topbar { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .6rem 1.4rem; margin-top: .6rem; }
   .fp-tabs { display: flex; border: 1px solid var(--fp-ink); }
-  .fp-tabs a { padding: .5rem 1.1rem; font-size: .86rem; text-transform: uppercase; letter-spacing: .12em; color: var(--fp-ink); text-decoration: none; }
+  .fp-tabs a { display: flex; align-items: center; justify-content: center; text-align: center; padding: .5rem 1.1rem; font-size: .86rem; text-transform: uppercase; letter-spacing: .12em; color: var(--fp-ink); text-decoration: none; }
   .fp-tabs a + a { border-left: 1px solid var(--fp-ink); }
   .fp-tabs a[aria-current="page"] { background: var(--fp-ink); color: var(--fp-paper); }
   .fp-feedback { font-size: .84rem; font-style: italic; color: var(--fp-ink); }
@@ -433,6 +435,8 @@
   .fp-fb .done { text-align: center; font-size: 1.05rem; line-height: 1.5; margin: .8rem 0 1rem; }
   .fp.tab-chronicle > :not(.fp-mast):not(#history):not(.fp-end):not(dialog):not(.fp-defs) { display: none; }
   .fp:not(.tab-chronicle) > #history { display: none; }
+  .fp.tab-methods > :not(.fp-mast):not(#method):not(.fp-end):not(dialog):not(.fp-defs) { display: none; }
+  .fp:not(.tab-methods) > #method { display: none; }
   /* Who writes the papers (under the opening) */
   .fp-chart .seglbl { font-size: 11.5px; fill: var(--fp-ink); paint-order: stroke; stroke: var(--fp-paper); stroke-width: 3px; }
   .fp-chart .seglbl.on-ink { fill: var(--fp-paper); stroke: var(--fp-ink); }
@@ -447,15 +451,6 @@
   .fp-glance h3 { text-align: center; }
   .fp .fp-glance .fp-chart { min-height: 8rem; }
   /* The way into the chronicle from the report: a strip of its pictures */
-  .fp-teaser { max-width: 52rem; width: 100%; margin: 0 auto; border-top: 1.5px solid var(--fp-ink); border-bottom: 1.5px solid var(--fp-ink); padding: .9rem 0 1rem; display: grid; gap: .7rem; }
-  .fp-teaser .strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr)); gap: .5rem; }
-  .fp-teaser .strip a { display: block; aspect-ratio: 4 / 3; border: 1px solid var(--fp-ink); overflow: hidden; background: color-mix(in oklab, var(--fp-ink) 9%, var(--fp-paper)); }
-  .fp-teaser .strip img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
-  .fp-teaser .strip span { display: block; padding: .15rem .3rem; font-size: .72rem; text-align: center; }
-  .fp .fp-teaser p { margin: 0 auto; max-width: none; text-align: center; font-size: .95rem; line-height: 1.5; }
-  .fp-teaser .go { display: inline-block; margin-top: .35rem; padding: .5rem 1.3rem; border: 1.5px solid var(--fp-ink); background: var(--fp-ink); color: var(--fp-paper);
-    text-decoration: none; text-transform: uppercase; letter-spacing: .12em; font-size: .86rem; }
-  @media (max-width: 560px), (pointer: coarse) and (max-height: 500px) { .fp-teaser .strip { grid-template-columns: repeat(3, 1fr); } .fp-teaser .strip a:nth-child(n+4) { display: none; } }
   /* Land and waters acknowledgement, and the credit to the centennial timeline */
   .fp-land { max-width: 42rem; margin: 0 auto; padding: .8rem 1.1rem .9rem; border-top: 1px solid var(--fp-ink); border-bottom: 1px solid var(--fp-ink); text-align: center; }
   .fp-land .lbl { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--fp-ink-2); }
@@ -536,6 +531,7 @@
       <nav class="fp-tabs" aria-label="Parts of the report">
         <a href="#top" data-tab="report">The report</a>
         <a href="#history" data-tab="chronicle">Chronicle of the station</a>
+        <a href="#method" data-tab="methods">Methods</a>
       </nav>
       <!-- data-endpoint: the Google Apps Script web app that receives notes (scripts/feedback_apps_script.gs). While it is
            empty, the link opens the public GitHub form instead. data-site: the website copy, where the online sheet's
@@ -614,12 +610,6 @@
     </figcaption>
   </figure>
 
-  <aside class="fp-teaser" id="chron-teaser" aria-label="Chronicle of the station">
-    <div class="strip" id="chron-strip"></div>
-    <p><span id="chron-teaser-text">The station's history from 1903 to today, in dated events with historical photographs,
-      clippings and maps.</span><br><a class="go" href="#history">Open the chronicle of the station</a></p>
-  </aside>
-
   <nav class="fp-toc" id="contents" aria-label="Contents">
     <div class="head">Contents</div>
     <ol>
@@ -632,10 +622,10 @@
       <li><a href="#news"><span class="num">VII.</span><span class="t">In the news</span><span class="dots"></span><span class="refs">Fig. 18</span></a></li>
       <li><a href="#reliability"><span class="num">VIII.</span><span class="t">How the census was built, and how far to trust it</span><span class="dots"></span><span class="refs">Figs. 19–20, Table III</span></a></li>
       <li><a href="#all-publications"><span class="num">IX.</span><span class="t">Catalogue of publications</span><span class="dots"></span><span class="refs">Table IV</span></a></li>
-      <li><a href="#history"><span class="num">X.</span><span class="t">Chronicle of the station</span><span class="dots"></span><span class="refs">Separate tab</span></a></li>
-      <li><a href="#method"><span class="num">XI.</span><span class="t">Technical methods</span><span class="dots"></span><span class="refs">Figs. 21–28, Tables V–VI</span></a></li>
       <li><a href="#headline"><span class="num"></span><span class="t">Summary of results</span><span class="dots"></span><span class="refs"></span></a></li>
       <li><a href="#ode"><span class="num"></span><span class="t">Ode to the life of the sea</span><span class="dots"></span><span class="refs"></span></a></li>
+      <li><a href="#history"><span class="num">X.</span><span class="t">Chronicle of the station</span><span class="dots"></span><span class="refs">Separate tab</span></a></li>
+      <li><a href="#method"><span class="num">XI.</span><span class="t">Technical methods</span><span class="dots"></span><span class="refs">Separate tab · Figs. 21–28, Tables V–VI</span></a></li>
     </ol>
     <p class="tip">Hover over a chart for values. Hover over an entry in a figure's key to highlight it, or click to keep it
       highlighted. Every figure can be saved as PNG or SVG.</p>
@@ -843,10 +833,12 @@
           colleague's career (rules and checks in section XI). Mark size shows the number of students. Hover over
           a mark, click it to keep it lit, or use "Find a person", to follow a lineage back through teachers and forward through
           students. When no one is selected, click a part of the key to highlight it. The network is a sample and far from
-          complete. The strip below it shows the technicians and staff in the chronicle's staff archive (boat crews,
-          facilities, dining, office, library and research support) who have no documented link to any FHL scientist, at the first
-          year the sources show them; columns stand tall where a staff directory happens to survive. Much of the station's
-          work is done by people outside these lineages.</p>
+          complete. Set apart below it are the technicians and staff in the chronicle's staff archive (boat crews,
+          facilities, dining, office, library and research support) who have no documented link to any FHL scientist. They
+          are shown as a group, not on the time axis: about two in five are dated only by a staff list that happens to
+          survive from the station's website, most of them from 2000 or 2006, so their first year says more about the records than about
+          when they came. Hover over a mark for the person's role and years. Much of the station's work is done by people
+          outside these lineages.</p>
       </figcaption>
     </figure>
     <figure class="fp-fig">
@@ -1798,7 +1790,7 @@
     };
     const svgFor = (el, height) => {
       hideTip(el);
-      el.querySelectorAll('svg').forEach((s) => s.remove());
+      el.querySelectorAll(':scope svg, :scope > .fp-fail').forEach((s) => s.remove()); // and a failure note from an earlier draw
       const width = Math.max(260, el.clientWidth);
       const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${width} ${height}`).attr('height', height);
       return { svg, width, height };
@@ -2556,33 +2548,6 @@
     el.replaceChildren(...out);
     syncAllEras();
   }
-  // The way into the chronicle from the report (under "Who writes the papers"): one picture from each era, oldest first.
-  function drawTeaser() {
-    const strip = document.getElementById('chron-strip');
-    if (!strip || dash.data('history_images').status !== 'ok' || dash.data('history_events').status !== 'ok' || dash.data('history_eras').status !== 'ok') return;
-    const imgs = dash.data('history_images').data, events = dash.data('history_events').data;
-    const eras = dash.data('history_eras').data.map((r) => ({ name: r.name, start: +r.start, end: +r.end }));
-    const yearOf = new Map();
-    events.forEach((e) => String(e.image_ids || '').split(';').filter(Boolean).forEach((id) => { if (!yearOf.has(id)) yearOf.set(id, +e.year); }));
-    const dated = imgs.map((im) => ({ im, year: String(im.year).trim() !== '' ? +im.year : yearOf.get(im.image_id) })).filter((d) => d.year);
-    const pick = [];
-    eras.forEach((era) => {
-      const inEra = dated.filter((d) => d.year >= era.start && d.year <= era.end)
-        .sort((a, b) => (a.im.placement === 'era' ? 0 : 1) - (b.im.placement === 'era' ? 0 : 1) || (+a.im.order || 1) - (+b.im.order || 1) || a.year - b.year);
-      if (inEra.length) pick.push({ ...inEra[0], era });
-    });
-    // a sixth picture, from the longest era, so the strip fills a row of six on wide screens
-    const last = eras[eras.length - 1];
-    const extra = last && dated.filter((d) => d.year >= last.start && !pick.some((p) => p.im.image_id === d.im.image_id)).sort((a, b) => b.year - a.year)[0];
-    if (extra) pick.push({ ...extra, era: last });
-    strip.replaceChildren(...pick.map(({ im, year }) => {
-      const a = document.createElement('a'); a.href = '#history'; a.title = `${year}: ${im.caption}`;
-      const img = document.createElement('img'); img.loading = 'lazy'; img.src = thumbSrc(im); img.alt = im.alt || '';
-      a.append(img); return a;
-    }));
-    document.getElementById('chron-teaser-text').textContent = `The station's history from ${eras[0] ? eras[0].start : 1903} to today: ` +
-      `${f(events.length)} dated events with ${f(imgs.length)} historical photographs, clippings and maps.`;
-  }
   // A larger view of a history image, in its original colours, with its caption and credit.
   function zoom(im) {
     let dlg = document.getElementById('hist-zoom');
@@ -2604,10 +2569,16 @@
 
   // Under the mentoring network (Fig. 11), on its time axis: the technicians and staff from the chronicle's staff archive
   // who have no documented link to an FHL scientist, so the network is not read as covering everyone who worked there.
-  function drawStaffStrip(x, drawW, width) {
+  // Under Fig. 11, set apart from the network: the technicians and staff with no documented link to an FHL scientist, as two
+  // groups of marks (technical and research support; everyone else). Not on the time axis: many are dated only by a staff
+  // list that happens to survive, so a year would mislead.
+  function drawStaffStrip() {
     const el = document.getElementById('ch-tree-staff');
-    if (!el || dash.data('staff').status !== 'ok' || dash.data('lineage_people').status !== 'ok') { if (el) el.replaceChildren(); return; }
-    const key = (n) => { const w = String(n).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z\s-]/g, ' ').split(/\s+/).filter((t) => t.length > 1); return w.length ? `${w[0]} ${w[w.length - 1]}` : ''; };
+    if (!el) return;
+    hideTip(el);
+    el.replaceChildren();
+    if (dash.data('staff').status !== 'ok' || dash.data('lineage_people').status !== 'ok') return;
+    const key = (n) => { const w = String(n).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z\s-]/g, ' ').split(/\s+/).filter((t) => t.length > 1); return w.length ? `${w[0]} ${w[w.length - 1]}` : ''; };
     const known = new Set([...dash.data('lineage_people').data.map((r) => key(r.name)),
       ...(dash.data('people').status === 'ok' ? dash.data('people').data.map((r) => key(r.name)) : [])]);
     const SCIENCE = new Set(['director', 'associate or assistant director', 'resident faculty', 'research faculty or staff scientist']);
@@ -2619,28 +2590,26 @@
       const prev = seen.get(k);
       if (!prev || +r.start_year < prev.year) seen.set(k, { name: r.name, role: r.role, year: +r.start_year, end: r.end_year, tech: TECH.has(r.category) });
     });
-    const pts = [...seen.values()].sort((a, b) => a.year - b.year || (b.tech - a.tech));
-    const [lo, hi] = x.domain().length > 2 ? [x.domain()[0], x.domain()[x.domain().length - 1]] : x.domain();
-    const r = 3.3, step = 2 * r + 1.5;
-    const stackN = new Map();
-    pts.forEach((p) => { const yr = Math.min(hi, Math.max(lo, p.year)); const col = Math.round(x(yr) / step); p.cx = col * step; p.k = (stackN.get(col) || 0); stackN.set(col, p.k + 1); });
-    const maxK = d3.max(pts, (p) => p.k) || 0, head = 6;
-    const height = head + (maxK + 1) * step + 24;
-    const { svg } = svgFor(el, height);
-    svg.attr('viewBox', `0 0 ${drawW} ${height}`).attr('width', drawW > width ? drawW : '100%');
-    el.style.overflowX = drawW > width ? 'auto' : '';
-    const nTech = pts.filter((p) => p.tech).length;
-    const cap = document.createElement('p'); cap.className = 'cap fp-strip-head'; // HTML, so it wraps on a phone
-    cap.textContent = `Not in the network: ${f(pts.length)} technicians and staff with no documented link to an FHL scientist, at the first year the sources show them (filled: technical and research support, ${f(nTech)}; open: facilities, boats, dining, office, library and other staff, ${f(pts.length - nTech)}).`;
-    el.prepend(cap);
-    const ticks = [1910, 1930, 1950, 1970, 1990, 2010, 2020].filter((t) => t >= lo && t <= hi);
-    svg.append('g').selectAll('text').data(ticks).join('text').attr('class', 'lin-axis-note').attr('x', (t) => x(t)).attr('y', height - 4)
-      .attr('text-anchor', 'middle').text((t) => t);
-    svg.append('g').selectAll('circle').data(pts).join('circle').attr('class', 'lin-mark').attr('r', r)
-      .attr('cx', (p) => p.cx).attr('cy', (p) => height - 22 - r - p.k * step)
-      .style('fill', (p) => (p.tech ? 'var(--fp-ink)' : 'var(--fp-paper)')).style('stroke', 'var(--fp-ink)')
-      .on('mousemove', (event, p) => showTip(el, event, p.name, [[null, null, `${p.role} (${p.year}${p.end ? `–${p.end}` : ''})`]]))
-      .on('mouseleave', () => hideTip(el));
+    const pts = [...seen.values()].sort((a, b) => a.year - b.year || a.name.localeCompare(b.name));
+    if (!pts.length) return;
+    const head = document.createElement('p'); head.className = 'cap fp-strip-head'; // HTML, so it wraps on a phone
+    head.textContent = `Outside the network: ${f(pts.length)} technicians and staff with no documented link to an FHL scientist.`;
+    el.append(head);
+    const r = 4, step = 11, width = Math.max(260, el.clientWidth), cols = Math.max(10, Math.floor((width - 2) / step));
+    [[true, 'Technical and research support'], [false, 'Facilities, boats, dining, office, library and other staff']].forEach(([tech, label]) => {
+      const group = pts.filter((p) => p.tech === tech);
+      if (!group.length) return;
+      const lab = document.createElement('p'); lab.className = 'fp-pool-label'; lab.textContent = `${label} (${f(group.length)})`;
+      el.append(lab);
+      const height = Math.ceil(group.length / cols) * step + 2;
+      const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${width} ${height}`).attr('height', height)
+        .attr('role', 'img').attr('aria-label', `${label}: ${f(group.length)} people`);
+      svg.selectAll('circle').data(group).join('circle').attr('class', 'lin-mark').attr('r', r)
+        .attr('cx', (p, i) => 1 + r + (i % cols) * step).attr('cy', (p, i) => 1 + r + Math.floor(i / cols) * step)
+        .style('fill', tech ? 'var(--fp-ink)' : 'var(--fp-paper)').style('stroke', 'var(--fp-ink)')
+        .on('mousemove', (event, p) => showTip(el, event, p.name, [[null, null, `${p.role} (${p.year}${p.end ? `–${p.end}` : ''})`]]))
+        .on('mouseleave', () => hideTip(el));
+    });
   }
 
   let lineage = null; // the drawn network, for "Find a person": { focus(name), clear(), names }
@@ -2722,7 +2691,7 @@
     ax.selectAll('line').data(ticks).join('line').attr('x1', x).attr('x2', x).attr('y1', m.top - 8).attr('y2', height - m.bottom);
     ax.selectAll('text').data(ticks).join('text').attr('x', x).attr('y', m.top - 14).attr('text-anchor', 'middle').text((t) => t);
     ax.append('text').attr('class', 'lin-axis-note').attr('x', m.left).attr('y', 11).text('Year each career began →');
-    safely(document.getElementById('ch-tree-staff'), () => drawStaffStrip(x, drawW, width));
+    safely(document.getElementById('ch-tree-staff'), () => drawStaffStrip());
 
     const path = (l) => d3.linkHorizontal()({ source: [byId.get(l.advisor).x, byId.get(l.advisor).y], target: [byId.get(l.student).x, byId.get(l.student).y] });
     const lk = svg.append('g').selectAll('path').data(L).join('path')
@@ -2981,21 +2950,27 @@
       btn.setAttribute('aria-expanded', String(open)); act.textContent = open ? (fig.tagName === 'FIGURE' ? 'Hide figure' : 'Hide') : 'Show';
     });
   });
-  // Two tabs: the report, and the chronicle of the station (section X). The address picks the tab (#history, #hist-…,
-  // #land and #chronicle show the chronicle), so links and the contents keep working.
+  // Three tabs: the report, the chronicle of the station (section X) and the technical methods (section XI). The address
+  // picks the tab (#history, #hist-…, #land and #chronicle show the chronicle; #method and anything inside section XI
+  // show the methods), so links and the contents keep working.
   const fpRoot = document.getElementById('fhl-profile');
-  let reportDrawnHidden = false;
-  const chronicleHash = (h) => {
+  // The tabs whose figures drawAll drew while they were hidden (and so at the wrong width); opening one redraws.
+  const drawnHidden = new Set();
+  const tabOfEl = (t) => (t.closest('#history') ? 'chronicle' : t.closest('#method') ? 'methods' : 'report');
+  const tabOfHash = (h) => {
     const id = decodeURIComponent((h || '').slice(1));
     const t = id && document.getElementById(id);
-    return t ? !!t.closest('#history') : /^#(history|hist-|land|chronicle|arch-)/.test(h || '');
+    if (t) return tabOfEl(t);
+    return /^#(history|hist-|land|chronicle|arch-)/.test(h || '') ? 'chronicle' : /^#method/.test(h || '') ? 'methods' : 'report';
   };
+  const currentTab = () => (fpRoot.classList.contains('tab-chronicle') ? 'chronicle' : fpRoot.classList.contains('tab-methods') ? 'methods' : 'report');
   let pendingTarget = (location.hash || '').length > 1; // a link into the page, followed once its target is drawn
   const showTab = (tab) => {
     const chron = tab === 'chronicle';
     fpRoot.classList.toggle('tab-chronicle', chron);
+    fpRoot.classList.toggle('tab-methods', tab === 'methods');
     document.querySelectorAll('.fp-tabs a').forEach((a) => (a.dataset.tab === tab ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
-    if (!chron && reportDrawnHidden && typeof redraw === 'function') { reportDrawnHidden = false; redraw(); }
+    if (drawnHidden.has(tab) && typeof redraw === 'function') redraw();
     if (chron && typeof drawArchive === 'function' && dash.data('staff').status === 'ok') drawArchive();
   };
   // Open whatever folds the address points into (a folded figure, an era of the chronicle), then go there.
@@ -3003,16 +2978,16 @@
     const id = decodeURIComponent((location.hash || '').slice(1));
     const t = id && document.getElementById(id);
     if (!t) return;
-    showTab(t.closest('#history') ? 'chronicle' : 'report');
+    showTab(tabOfEl(t));
     const fig = t.closest('[data-collapsible].is-collapsed');
     if (fig) fig.querySelector('.fp-collapse-btn').click();
     const era = t.closest('details.fp-era-box');
     if (era && !era.open) era.open = true;
     t.scrollIntoView();
   };
-  showTab(chronicleHash(location.hash) ? 'chronicle' : 'report');
+  showTab(tabOfHash(location.hash));
   // '#feedback' opens the feedback form over whichever tab is showing (its own script handles it), so it moves nothing here.
-  window.addEventListener('hashchange', () => { if (location.hash === '#feedback') return; pendingTarget = false; showTab(chronicleHash(location.hash) ? 'chronicle' : 'report'); openTarget(); });
+  window.addEventListener('hashchange', () => { if (location.hash === '#feedback') return; pendingTarget = false; showTab(tabOfHash(location.hash)); openTarget(); });
 
   // The chronicle tab's directors and staff, classes, and artists in residence. Drawn with the rest, and again when the
   // tab is opened, since the charts need the tab on screen to measure their width.
@@ -3141,7 +3116,8 @@
   let drawnW = 0, drawnPhone = null, redrawT = 0; // the width and layout the figures were last drawn for
   const drawAll = () => {
     drawnW = document.documentElement.clientWidth; drawnPhone = phone();
-    if (fpRoot.classList.contains('tab-chronicle')) reportDrawnHidden = true; // the report's figures need their real width
+    // the report's and the methods' figures need their real width: note whichever of them is hidden now
+    drawnHidden.clear(); ['report', 'methods'].forEach((t) => { if (t !== currentTab()) drawnHidden.add(t); });
     // ---- headline -------------------------------------------------------------------------------------------
     const H = { verified: (v) => f(+v), probable: (v) => f(+v), listed_by_fhl: (v) => f(+v), publications: (v) => f(+v), total_citations: (v) => compact.format(+v),
       verified_citations: (v) => compact.format(+v), verified_per_year_2016_2025: (v) => f(Math.round(+v)),
@@ -3494,7 +3470,6 @@
 
     // ---- chronicle of the station ------------------------------------------------------------------------------
     drawHistory();
-    drawTeaser();
 
     // ---- the prompts, as typed: when, and the output tokens each led to ----------------------------------------
     const pr = dash.data('prompts');
@@ -3638,7 +3613,7 @@
       if (!what.value.trim()) { show('Please write your correction or suggestion first.', true); what.focus(); return; }
       const body = new URLSearchParams();
       fields().forEach((el) => body.set(el.name, el.value));
-      body.set('page', `${copy()}${document.querySelector('.fp.tab-chronicle') ? ', chronicle tab' : ''}`);
+      body.set('page', `${copy()}${document.querySelector('.fp.tab-chronicle') ? ', chronicle tab' : document.querySelector('.fp.tab-methods') ? ', methods tab' : ''}`);
       sending = true; send.disabled = true; show('Sending…');
       const stop = new AbortController(), timer = setTimeout(() => stop.abort(), 20000);
       try {
