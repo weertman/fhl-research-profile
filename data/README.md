@@ -1,12 +1,13 @@
 # Data
 
-The data behind https://weertman.github.io/fhl-research-profile/, by Claude Opus 5.5 and Willem Lee Weertman. CSV files have a header row; values are as the page reads them.
+The data behind https://weertman.github.io/fhl-research-profile/, by Claude Opus 5.5, Willem Lee Weertman and Marjorie Wonham. CSV files have a header row; values are as the page reads them.
 
 The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bibliographic databases, repositories, archives and FHL's own lists, screening every candidate against a written guide, and having separate AI agents audit a random sample against the publications themselves; the page's technical methods section gives the details, the prompts and the measured error rates. Records found only through the University of Washington's Web of Science subscription are included as bibliographic facts.
 
-- `census_all_candidates.csv`: the full census, 15,962 candidate records with the decision on each (status, evidence tier, where FHL appears, the evidence snippet, the basis and reason for the decision, confidence and notes). Phone numbers quoted in evidence snippets are removed.
+- `census_all_candidates.csv`: the full census, 15,962 candidate records with the decision on each (status, evidence tier, where FHL appears, the evidence snippet, the basis and reason for the decision, confidence and notes). Phone numbers, email addresses and street addresses quoted in evidence snippets are removed.
 
 - `ai_workflows.csv`: The AI runs that built the census.
+- `art_images.csv`: 
 - `artist_programs.csv`: The station's artist-in-residence programs, with years and sources.
 - `artists.csv`: Artists and writers in residence, with years, program, medium and sources.
 - `audit_tiers.csv`: The independent audit, by evidence tier.
@@ -15,10 +16,10 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `by_type.csv`: Publications by type.
 - `by_year.csv`: Publications per year.
 - `by_year_appears.csv`: Publications per year by where FHL appears.
-- `by_year_tier.csv`: Publications per year by evidence tier.
 - `candidate_status.csv`: What happened to every candidate record.
 - `classes.csv`: Classes taught at the station by year and term, with instructors, TAs and sources (public records, fact-checked).
 - `coauthor_places.csv`: Institutions whose researchers co-authored verified FHL publications, with locations and counts by decade (OpenAlex).
+- `course_topics.csv`: 
 - `eras.csv`: The station's names and their years.
 - `headline.csv`: Headline totals: verified publications, best estimate and the date the data were retrieved.
 - `history_eras.csv`: Chronicle of the station: the eras under the station's successive names.

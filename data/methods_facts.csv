@@ -18,8 +18,8 @@ resolution_no,779,rejected
 resolution_uncertain,428,still undecided
 audited,380,records in the audit sample
 audit_full_text,260,audited records read in full text
-ai_runs,21,"AI runs (multi-agent workflows, the topic classification and the later checks, rosters and profiles)"
-ai_agents,571,AI agents run in those runs
+ai_runs,25,"AI runs (multi-agent workflows, the topic classification and the later checks, rosters and profiles)"
+ai_agents,639,AI agents run in those runs
 build_hours,8.7,wall-clock hours from the first prompt to the first complete version
 mentor_pairs,146,mentor links inferred from co-authorship
 mentor_checked,146,inferred links checked against public records
@@ -41,11 +41,21 @@ roster_not_found,12,FHL scientists who taught but have no public trainee list
 history_extracted,744,dated events extracted from the history sources
 history_events,106,events in the chronicle of the station
 history_corrected,47,history events the fact-checkers corrected
-history_images,116,images shown in the chronicle of the station
+history_images,216,images shown in the chronicle of the station
 history_more_candidates,172,candidate images found by the second image search
 history_more_passed,135,"candidate images a second agent passed (licence, relevance, caption)"
 history_more_chosen,96,images the picture editor chose
 history_more_events,4,events added from the new images' records
+history_year_candidates,141,candidate images found by the year-by-year image search
+history_year_passed,120,year-by-year candidates a second agent passed
+history_year_added,105,images added by the year-by-year search
+history_fhl_archive_images,48,"chronicle images from FHL's own archives, used with FHL's permission"
+history_years_covered,111,years 1903-2026 with at least one image
+history_years_two,64,years 1903-2026 with two or more images
+course_titles,705,distinct course titles given a topic by AI agents
+course_review_changes,36,course topics changed by the consistency reviewer
+art_candidates,19,candidate images of art made in residence
+art_images,3,images of art made in residence shown
 push_queue,2175,records queued for the verification push
 push_records,2175,records the agents tried to read (verification push)
 push_read,624,read well enough to decide

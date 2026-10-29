@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Friday Harbor Laboratories: a century of research</title>
 <meta name="description" content="A census of research published from the Friday Harbor Laboratories (University of Washington) since 1904, with the data behind every figure.">
-<meta name="author" content="Claude Opus 5.5 and Willem Lee Weertman">
+<meta name="author" content="Claude Opus 5.5, Willem Lee Weertman and Marjorie Wonham">
 <style>
   /* Paper and ink for the standalone page; the info sheet's own styles read these tokens. */
   :root { --color-fg: #141413; --color-panel: #fffefb; --color-bg: #e9e7e1; color-scheme: light; }
@@ -90,7 +90,9 @@
   .fp-figs { display: flex; flex-wrap: wrap; align-items: flex-start; gap: .8rem 1.1rem; margin: .5rem 0; }
   .fp-figs figure { margin: 0; flex: 1 1 13rem; max-width: 28rem; }
   .fp-figs.one figure { flex: 0 1 28rem; }
-  .fp-history figure img { display: block; max-width: 100%; max-height: 20rem; width: auto; height: auto; border: 1px solid var(--fp-ink); filter: grayscale(1) contrast(1.05); background: var(--fp-paper); cursor: zoom-in; }
+  /* an event's image keeps its final shape while it loads (--w, --ar set from the preview's size) */
+  .fp-history .fp-figs figure img.sized { width: min(100%, var(--w)); aspect-ratio: var(--ar); height: auto; max-height: none; }
+  .fp-history figure img { display: block; max-width: 100%; max-height: 20rem; width: auto; height: auto; border: 1px solid var(--fp-ink); filter: grayscale(1) contrast(1.05); background: color-mix(in oklab, var(--fp-ink) 9%, var(--fp-paper)); cursor: zoom-in; }
   .fp-history figcaption { font-size: .8rem; line-height: 1.4; margin-top: .3rem; }
   .fp-history figcaption .credit { color: var(--fp-ink-2); font-style: italic; }
   .fp-plates { margin: .2rem 0 1rem; padding-bottom: .9rem; border-bottom: 1px dotted var(--fp-ink-3); }
@@ -228,6 +230,12 @@
                       border: 1px solid var(--fp-ink); border-radius: 0; background: var(--fp-paper); color: var(--fp-ink); cursor: pointer; }
   .fp-toggle button[aria-pressed="true"] { background: var(--fp-ink); color: var(--fp-paper); }
   .fp-toggle button:focus-visible { outline: 2px solid var(--fp-ink); outline-offset: 2px; }
+  /* A slider through the decades (Fig. 10), beside an "All years" button */
+  .fp-slider { display: inline-flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+  .fp-slider input[type="range"] { width: clamp(9rem, 28vw, 18rem); flex: none; min-width: 0; padding: 0; border: 0; background: none; accent-color: var(--fp-ink); cursor: pointer; }
+  .fp-strip-head { margin: .6rem 0 .2rem; }
+  .fp-slider.all input[type="range"] { opacity: .45; }
+  .fp-slider output { min-width: 4.5rem; font-variant-numeric: tabular-nums; font-size: .95rem; }
   .fp-toggle .fp-gap { width: 1.2rem; }
   .fp-chart .sphere { fill: var(--fp-paper); stroke: var(--fp-ink); stroke-width: .9; }
   .fp-chart .graticule { fill: none; stroke: var(--fp-ink-3); stroke-width: .5; stroke-dasharray: 1 3; }
@@ -309,7 +317,7 @@
   #tbl-pubs td.why { font-size: .78rem; color: var(--fp-ink-2); min-width: 14rem; }
   #tbl-pubs td.why summary { cursor: pointer; }
   #tbl-pubs td.why details[open] { color: var(--fp-ink); }
-  /* Methods diagrams (Figs. 21-22) */
+  /* Methods diagrams (Figs. 21-25, 28) */
   .fp-method-figs { align-items: start; }
   .fp-diagram { font-size: .86rem; line-height: 1.4; }
   .fp-flow { display: grid; justify-items: stretch; gap: .2rem; }
@@ -325,6 +333,41 @@
   .fp-flow .grey { background: color-mix(in oklab, var(--fp-ink) 18%, var(--fp-paper)); }
   .fp-flow .hatch { background: repeating-linear-gradient(45deg, var(--fp-ink) 0 1px, var(--fp-paper) 1px 4px); }
   .fp-flow .dots { background: radial-gradient(var(--fp-ink) 0.7px, var(--fp-paper) 0.9px) 0 0 / 4px 4px; }
+  /* Methods diagrams of how the agents searched (Figs. 21, 24, 25, 28): boxes, lanes and chains */
+  .fp-dg { display: grid; gap: .45rem; font-size: .84rem; line-height: 1.35; }
+  .fp-dg .box { border: 1px solid var(--fp-ink); padding: .4rem .6rem; background: var(--fp-paper); min-width: 0; }
+  .fp-dg .box.key { border-width: 2px; }
+  .fp-dg .box.dash { border-style: dashed; }
+  .fp-dg .n { font-family: var(--fp-display); font-size: 1.12rem; font-variant-numeric: lining-nums; }
+  .fp-dg .who { display: block; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--fp-ink-2); }
+  .fp-dg .d { display: block; color: var(--fp-ink-2); font-size: .78rem; margin-top: .1rem; }
+  .fp-dg .down { text-align: center; color: var(--fp-ink-2); line-height: 1; font-size: .9rem; }
+  .fp-dg .down i { font-size: .74rem; font-style: italic; }
+  .fp-dg .srcs { display: grid; grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr)); gap: .4rem; }
+  .fp-dg .mini { height: .45rem; margin-top: .3rem; background: var(--fp-ink); }
+  .fp-dg .mini.agent { background: repeating-linear-gradient(45deg, var(--fp-ink) 0 1px, var(--fp-paper) 1px 4px); border: 1px solid var(--fp-ink); }
+  .fp-dg .mini.person { background: radial-gradient(var(--fp-ink) 0.7px, var(--fp-paper) 0.9px) 0 0 / 4px 4px; border: 1px solid var(--fp-ink); }
+  .fp-dg .legend { display: flex; flex-wrap: wrap; gap: .2rem 1rem; font-size: .76rem; color: var(--fp-ink-2); }
+  .fp-dg .legend .mini { display: inline-block; width: 1.4rem; margin: 0 .35rem 0 0; vertical-align: .05rem; }
+  .fp-dg .two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .45rem 1.2rem; align-items: start; }
+  .fp-dg .col { display: grid; gap: .3rem; }
+  .fp-dg .outs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; }
+  .fp-dg .stack { display: flex; height: .9rem; border: 1px solid var(--fp-ink); margin: .3rem 0 .15rem; }
+  .fp-dg .stack span { height: 100%; } .fp-dg .stack span + span { border-left: 1px solid var(--fp-ink); }
+  .fp-dg .s1 { background: var(--fp-ink); } .fp-dg .s2 { background: repeating-linear-gradient(45deg, var(--fp-ink) 0 1px, var(--fp-paper) 1px 4px); }
+  .fp-dg .s3 { background: radial-gradient(var(--fp-ink) 0.7px, var(--fp-paper) 0.9px) 0 0 / 4px 4px; } .fp-dg .s4 { background: var(--fp-paper); }
+  .fp-dg .sw { display: inline-block; width: .9rem; height: .7rem; border: 1px solid var(--fp-ink); margin-right: .3rem; vertical-align: -.05rem; }
+  .fp-dg .lanes { display: grid; gap: .45rem; }
+  .fp-dg .lane { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: .6rem; align-items: stretch; border-top: 1px dotted var(--fp-ink-3); padding-top: .45rem; }
+  .fp-dg .lane > .lbl { font-variant: small-caps; letter-spacing: .04em; font-size: .95rem; align-self: center; }
+  .fp-dg .row { display: flex; flex-wrap: wrap; gap: .4rem; align-items: stretch; }
+  .fp-dg .row > .box { flex: 1 1 10rem; }
+  .fp-dg .row > .to { align-self: center; color: var(--fp-ink-2); }
+  @media (max-width: 560px), (pointer: coarse) and (max-height: 500px) {
+    .fp-dg .two, .fp-dg .lane { grid-template-columns: minmax(0, 1fr); }
+    .fp-dg .outs { grid-template-columns: minmax(0, 1fr); }
+    .fp-dg .row > .to { display: none; }
+  }
   .fp-tree { display: grid; gap: .35rem; }
   .fp-tree .q { display: grid; grid-template-columns: 1fr 11rem; gap: .2rem .9rem; border: 1px solid var(--fp-ink); padding: .45rem .7rem; }
   .fp-tree .q.end { grid-template-columns: 1fr; border-style: dashed; }
@@ -341,6 +384,7 @@
   .fp-arch .fp-scroll { max-height: 30rem; overflow: auto; border-top: 1.5px solid var(--fp-ink); border-bottom: 1.5px solid var(--fp-ink); }
   .fp-arch table td { font-size: .84rem; }
   .fp-artprog dl { margin: 0; display: grid; gap: .25rem; font-size: .88rem; }
+  .fp .fp-artgal figure img { filter: none; cursor: zoom-in; } /* art keeps its colours */
   .fp-artprog dt { font-variant: small-caps; letter-spacing: .03em; }
   .fp-artprog dd { margin: 0 0 .4rem; line-height: 1.45; }
   #tbl-classes td.courses { white-space: pre-line; min-width: 16rem; }
@@ -348,20 +392,70 @@
   /* Tabs and the feedback link under the masthead; the chronicle has its own tab */
   .fp-topbar { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .6rem 1.4rem; margin-top: .6rem; }
   .fp-tabs { display: flex; border: 1px solid var(--fp-ink); }
-  .fp-tabs a { padding: .32rem .85rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; color: var(--fp-ink); text-decoration: none; }
+  .fp-tabs a { padding: .5rem 1.1rem; font-size: .86rem; text-transform: uppercase; letter-spacing: .12em; color: var(--fp-ink); text-decoration: none; }
   .fp-tabs a + a { border-left: 1px solid var(--fp-ink); }
   .fp-tabs a[aria-current="page"] { background: var(--fp-ink); color: var(--fp-paper); }
   .fp-feedback { font-size: .84rem; font-style: italic; color: var(--fp-ink); }
   .fp-feedback-note { font-size: .74rem; color: var(--fp-ink-2); }
+  /* The feedback form: opens over the report, sends without leaving the page */
+  .fp-fb { box-sizing: border-box; width: min(36rem, 94vw); max-width: 94vw; max-height: 94vh; overflow: auto; padding: 1.1rem clamp(.8rem, 3vw, 1.3rem) 1.2rem; border: 1.5px solid var(--fp-ink);
+    background: var(--fp-paper); color: var(--fp-ink); font-family: var(--fp-serif); }
+  .fp-fb::backdrop { background: rgba(0, 0, 0, .6); }
+  .fp-fb h2 { margin: 0 0 .3rem; font-size: 1.15rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; text-align: center; }
+  .fp-fb .intro { margin: 0 0 .9rem; font-size: .92rem; line-height: 1.45; text-align: center; color: var(--fp-ink-2); }
+  .fp-fb form { display: grid; gap: .8rem; }
+  .fp-fb label { display: grid; gap: .25rem; font-size: .95rem; }
+  .fp-fb label .opt { font-style: italic; color: var(--fp-ink-2); font-size: .85rem; }
+  .fp-fb input, .fp-fb select, .fp-fb textarea { font: inherit; font-size: 1rem; padding: .45rem .55rem; border: 1px solid var(--fp-ink);
+    background: var(--fp-paper); color: var(--fp-ink); border-radius: 0; width: 100%; box-sizing: border-box; }
+  .fp-fb textarea { min-height: 8rem; resize: vertical; line-height: 1.45; }
+  .fp-fb input:focus-visible, .fp-fb select:focus-visible, .fp-fb textarea:focus-visible, .fp-fb button:focus-visible { outline: 2px solid var(--fp-ink); outline-offset: 2px; }
+  .fp-fb .trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+  .fp-fb .row { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: flex-end; align-items: center; }
+  .fp-fb button { font: inherit; font-size: 1rem; padding: .45rem 1.2rem; border: 1.5px solid var(--fp-ink); background: none; color: var(--fp-ink); cursor: pointer; }
+  .fp-fb button.send { background: var(--fp-ink); color: var(--fp-paper); }
+  .fp-fb button:disabled { opacity: .55; cursor: default; }
+  .fp-fb .status { min-height: 1.3em; margin: 0; font-size: .95rem; line-height: 1.45; }
+  .fp-fb .status.err { font-weight: 600; }
+  .fp-fb .alt { margin: .2rem 0 0; font-size: .8rem; color: var(--fp-ink-2); text-align: center; }
+  .fp-fb .alt a { color: inherit; }
+  .fp-fb [hidden] { display: none !important; }
+  @media (max-width: 560px), (pointer: coarse) and (max-height: 500px) {
+    .fp-fb { max-height: 96vh; padding-block: .8rem; }
+    .fp-fb h2 { font-size: 1rem; }
+    .fp-fb .intro { margin-bottom: .6rem; font-size: .88rem; }
+    .fp-fb form { gap: .55rem; }
+    .fp-fb label { gap: .15rem; }
+    .fp-fb label .opt { font-size: .8rem; }
+    .fp-fb textarea { min-height: 6rem; }
+    .fp-fb input, .fp-fb select { padding-block: .35rem; }
+  }
+  .fp-fb .done { text-align: center; font-size: 1.05rem; line-height: 1.5; margin: .8rem 0 1rem; }
   .fp.tab-chronicle > :not(.fp-mast):not(#history):not(.fp-end):not(dialog):not(.fp-defs) { display: none; }
   .fp:not(.tab-chronicle) > #history { display: none; }
   /* Who writes the papers (under the opening) */
   .fp-chart .seglbl { font-size: 11.5px; fill: var(--fp-ink); paint-order: stroke; stroke: var(--fp-paper); stroke-width: 3px; }
   .fp-chart .seglbl.on-ink { fill: var(--fp-paper); stroke: var(--fp-ink); }
   .fp-chart .shared { fill: none; stroke: var(--fp-ink); stroke-width: .8; stroke-dasharray: 3 3; }
+  #ch-split .fbox { fill: var(--fp-paper); stroke: var(--fp-ink); stroke-width: 1; }
+  #ch-split .fbox.shared-box { stroke-width: 2.2; }
+  #ch-split .fnum { fill: var(--fp-ink); font-family: var(--fp-display); }
+  #ch-split .flbl { fill: var(--fp-ink); }
+  #ch-split .fnote { fill: var(--fp-ink-2); font-style: italic; }
+  #ch-split .flow { fill: none; stroke: var(--fp-ink); stroke-width: 1.2; }
   .fp-glance { max-width: 48rem; width: 100%; margin-inline: auto; }
   .fp-glance h3 { text-align: center; }
   .fp .fp-glance .fp-chart { min-height: 8rem; }
+  /* The way into the chronicle from the report: a strip of its pictures */
+  .fp-teaser { max-width: 52rem; width: 100%; margin: 0 auto; border-top: 1.5px solid var(--fp-ink); border-bottom: 1.5px solid var(--fp-ink); padding: .9rem 0 1rem; display: grid; gap: .7rem; }
+  .fp-teaser .strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr)); gap: .5rem; }
+  .fp-teaser .strip a { display: block; aspect-ratio: 4 / 3; border: 1px solid var(--fp-ink); overflow: hidden; background: color-mix(in oklab, var(--fp-ink) 9%, var(--fp-paper)); }
+  .fp-teaser .strip img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+  .fp-teaser .strip span { display: block; padding: .15rem .3rem; font-size: .72rem; text-align: center; }
+  .fp .fp-teaser p { margin: 0 auto; max-width: none; text-align: center; font-size: .95rem; line-height: 1.5; }
+  .fp-teaser .go { display: inline-block; margin-top: .35rem; padding: .5rem 1.3rem; border: 1.5px solid var(--fp-ink); background: var(--fp-ink); color: var(--fp-paper);
+    text-decoration: none; text-transform: uppercase; letter-spacing: .12em; font-size: .86rem; }
+  @media (max-width: 560px), (pointer: coarse) and (max-height: 500px) { .fp-teaser .strip { grid-template-columns: repeat(3, 1fr); } .fp-teaser .strip a:nth-child(n+4) { display: none; } }
   /* Land and waters acknowledgement, and the credit to the centennial timeline */
   .fp-land { max-width: 42rem; margin: 0 auto; padding: .8rem 1.1rem .9rem; border-top: 1px solid var(--fp-ink); border-bottom: 1px solid var(--fp-ink); text-align: center; }
   .fp-land .lbl { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--fp-ink-2); }
@@ -374,9 +468,10 @@
   .fp-collapse-btn { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; width: 100%; font: inherit; text-align: left;
     background: none; color: var(--fp-ink); border: 0; border-top: 1px solid var(--fp-ink-3); border-bottom: 1px solid var(--fp-ink-3); padding: .45rem 0; cursor: pointer; }
   .fp-collapse-btn .title { font-size: .95rem; }
+  .fp-collapse-btn { position: relative; }
   .fp-collapse-btn .act { flex: none; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--fp-ink-2); }
   [data-collapsible]:not(.is-collapsed) > .fp-collapse-btn { border-bottom: 0; justify-content: flex-end; }
-  [data-collapsible]:not(.is-collapsed) > .fp-collapse-btn .title { display: none; }
+  [data-collapsible]:not(.is-collapsed) > .fp-collapse-btn .title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .fp-collapse-body { display: grid; gap: .65rem; min-width: 0; }
   [data-collapsible].is-collapsed > .fp-collapse-body { height: 0; overflow: hidden; visibility: hidden; }
   /* Folded eras of the chronicle */
@@ -434,7 +529,7 @@
     <h1>Friday Harbor Laboratories</h1>
     <div class="sub">The publications and people of the University of Washington's marine station since 1904</div>
     <div class="short" role="presentation"></div>
-    <p class="byline">By Claude Opus 5.5 and Willem Lee Weertman</p>
+    <p class="byline">By Claude Opus 5.5, Willem Lee Weertman and Marjorie Wonham</p>
     <div class="fp-rule2 flip" role="presentation"></div>
     <div class="stamp">Data retrieved <span data-source="headline" data-field="retrieved">—</span></div>
     <div class="fp-topbar">
@@ -442,11 +537,52 @@
         <a href="#top" data-tab="report">The report</a>
         <a href="#history" data-tab="chronicle">Chronicle of the station</a>
       </nav>
-      <a class="fp-feedback" href="https://github.com/weertman/fhl-research-profile/issues/new?template=feedback.yml" target="_blank" rel="noopener"
-        title="Opens a short form on GitHub (a free GitHub account is needed). Submissions are public.">Send a correction or suggestion</a>
-      <span class="fp-feedback-note">(a short form on GitHub; needs a free account; posts are public)</span>
+      <!-- data-endpoint: the Google Apps Script web app that receives notes (scripts/feedback_apps_script.gs). While it is
+           empty, the link opens the public GitHub form instead. -->
+      <a class="fp-feedback" id="fb-open" data-endpoint="" href="https://github.com/weertman/fhl-research-profile/issues/new?template=feedback.yml"
+        target="_blank" rel="noopener">Send a correction or suggestion</a>
+      <span class="fp-feedback-note" id="fb-note">(a short form on GitHub; needs a free account; posts are public)</span>
     </div>
   </header>
+  <dialog class="fp-fb" id="fb-dialog" aria-labelledby="fb-title">
+    <h2 id="fb-title">A correction or suggestion</h2>
+    <p class="intro">No account needed. Your note goes privately to the report's authors; nothing you send is published.</p>
+    <form id="fb-form" novalidate>
+      <label>Kind of note
+        <select name="kind">
+          <option>Correction</option>
+          <option>Missing publication or person</option>
+          <option>Suggestion</option>
+          <option>Question</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Your correction or suggestion
+        <textarea name="what" id="fb-what" required maxlength="5000"></textarea>
+      </label>
+      <label>Where in the report <span class="opt">(optional; filled in with the part you were reading)</span>
+        <input name="where" id="fb-where" maxlength="300" autocomplete="off">
+      </label>
+      <label>A source, if you have one <span class="opt">(optional: a link or a reference)</span>
+        <input name="source" maxlength="1000" autocomplete="off">
+      </label>
+      <label>Your name or email, if you would like a reply <span class="opt">(optional)</span>
+        <input name="contact" maxlength="200" autocomplete="email">
+      </label>
+      <div class="trap" aria-hidden="true"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <p class="status" id="fb-status" role="status" aria-live="polite"></p>
+      <div class="row">
+        <button type="button" class="cancel" id="fb-cancel">Cancel</button>
+        <button type="submit" class="send" id="fb-send">Send</button>
+      </div>
+    </form>
+    <div id="fb-done" hidden>
+      <p class="done">Thank you. Your note was sent to the report's authors.</p>
+      <div class="row"><button type="button" id="fb-close">Close</button></div>
+    </div>
+    <p class="alt">Prefer to post publicly? <a href="https://github.com/weertman/fhl-research-profile/issues/new?template=feedback.yml"
+      target="_blank" rel="noopener">Use the form on GitHub</a> (a free GitHub account is needed).</p>
+  </dialog>
 
   <p class="fp-lead" id="takeaway">
     For more than a century, scientists who came to Friday Harbor have written up what they found there. This report
@@ -467,16 +603,21 @@
   </p>
 
   <figure class="fp-fig fp-glance" id="glance">
-    <div class="fp-legend" id="lg-split"></div>
     <div class="fp-chart" id="ch-split" data-source="network_split"></div>
     <figcaption>
       <h3 id="fig-glance">Who writes the papers.—Publications a year, averaged over 2016–2025.</h3>
-      <p class="cap">Top: verified publications that name FHL, split by whether one of the 176 FHL scientists identified by
-        address (section IV) is an author. Bottom: everything those scientists published in the same years, wherever they were, whether or not
-        it names FHL (OpenAlex). The dashed outline marks what the two bars share: FHL scientists' papers that name the station. Authors are
-        matched by OpenAlex identifier, or by name where a record has none.</p>
+      <p class="cap">Left: verified publications that name FHL. Right: everything the FHL scientists identified by address
+        (section IV) published in the same years, wherever they were (OpenAlex). The two meet in the middle box, drawn
+        heavier: FHL scientists' papers that name the station. Authors are matched by OpenAlex identifier, or by name where
+        a record has none.</p>
     </figcaption>
   </figure>
+
+  <aside class="fp-teaser" id="chron-teaser" aria-label="Chronicle of the station">
+    <div class="strip" id="chron-strip"></div>
+    <p><span id="chron-teaser-text">The station's history from 1903 to today, in dated events with historical photographs,
+      clippings and maps.</span><br><a class="go" href="#history">Open the chronicle of the station</a></p>
+  </aside>
 
   <nav class="fp-toc" id="contents" aria-label="Contents">
     <div class="head">Contents</div>
@@ -491,7 +632,7 @@
       <li><a href="#reliability"><span class="num">VIII.</span><span class="t">How the census was built, and how far to trust it</span><span class="dots"></span><span class="refs">Figs. 19–20, Table III</span></a></li>
       <li><a href="#all-publications"><span class="num">IX.</span><span class="t">Catalogue of publications</span><span class="dots"></span><span class="refs">Table IV</span></a></li>
       <li><a href="#history"><span class="num">X.</span><span class="t">Chronicle of the station</span><span class="dots"></span><span class="refs">Separate tab</span></a></li>
-      <li><a href="#method"><span class="num">XI.</span><span class="t">Technical methods</span><span class="dots"></span><span class="refs">Figs. 21–25, Tables V–VI</span></a></li>
+      <li><a href="#method"><span class="num">XI.</span><span class="t">Technical methods</span><span class="dots"></span><span class="refs">Figs. 21–28, Tables V–VI</span></a></li>
       <li><a href="#headline"><span class="num"></span><span class="t">Summary of results</span><span class="dots"></span><span class="refs"></span></a></li>
       <li><a href="#ode"><span class="num"></span><span class="t">Ode to the life of the sea</span><span class="dots"></span><span class="refs"></span></a></li>
     </ol>
@@ -527,19 +668,21 @@
     </aside>
     <figure class="fp-fig">
       <div class="fp-legend" id="lg-tier"></div>
-      <div class="fp-chart tall" id="ch-tier" data-source="by_year_tier eras"></div>
+      <div class="fp-chart tall" id="ch-tier" data-source="publications eras"></div>
       <figcaption>
         <h3 id="fig-tier"><span class="fig">Fig. 1.</span>—Publications per year, by how directly the FHL connection was confirmed.</h3>
-        <p class="cap">Dashed rules mark changes in the station's name. Database coverage of older work is thin, and the most
-          recent year is partial.</p>
+        <p class="cap">Research papers (journal articles, reviews, letters, books and chapters) are shaded by how directly
+          their FHL connection was confirmed; all other work (student and course reports, theses, datasets, meeting
+          abstracts, agency reports, preprints, editorials, book reviews and other items) is the light layer on top. Much of the 2011–2014 peak is FHL's course papers,
+          deposited in UW ResearchWorks in those years. Dashed rules mark changes in the station's name. Database coverage of
+          older work is thin, and the most recent year is partial.</p>
       </figcaption>
     </figure>
   </section>
 
   <section class="fp-section" id="where">
     <h2><span class="num">II.</span> Where FHL appears in the publication</h2>
-    <div class="fp-grid">
-      <figure class="fp-fig">
+      <figure class="fp-fig" data-collapsible>
         <div class="fp-chart" id="ch-appears" data-source="by_appears"></div>
         <figcaption>
           <h3 id="fig-appears"><span class="fig">Fig. 2.</span>—Verified publications by where FHL is named.</h3>
@@ -550,7 +693,7 @@
             <i>Other</i>: the station's own series, dataset records, and records whose full text was not readable.</p>
         </figcaption>
       </figure>
-      <figure class="fp-fig">
+      <figure class="fp-fig" data-collapsible>
         <div class="fp-legend" id="lg-appears"></div>
         <div class="fp-chart" id="ch-appears-time" data-source="appears_share_by_decade"></div>
         <figcaption>
@@ -560,7 +703,6 @@
             acknowledgments, mostly from visiting researchers, grow from a few per cent before 1960 to 15–19% since 2000.</p>
         </figcaption>
       </figure>
-    </div>
   </section>
 
   <section class="fp-section" id="content">
@@ -571,8 +713,8 @@
       <figcaption>
         <h3 id="fig-topics"><span class="fig">Fig. 4.</span>—Research topics, as a share of each decade's publications.</h3>
         <p class="cap">Each verified publication was given one research topic by AI agents reading its title, journal and,
-          where available, abstract (see Technical methods). Layers are stacked from the topics whose share peaked
-          earliest (bottom) to those that peaked most recently (top); the key reads from the top layer down, and hovering
+          where available, abstract (see Technical methods). Layers are stacked from the topics whose share came
+          earliest on average (bottom) to the most recent (top); the key reads from the top layer down, and hovering
           over a bar gives every value. "Whiteley Center" gathers work whose only link to FHL is the station's study
           center for visiting scholars and writers (Fig. 6). "Other" covers education, history and records too vague to
           classify. Decades with fewer than 20 verified publications are left out.</p>
@@ -586,7 +728,7 @@
           is its total. The 2020s cover 2020–2026 only.</p>
       </figcaption>
     </figure>
-    <figure class="fp-fig">
+    <figure class="fp-fig" data-collapsible>
       <div class="fp-legend" id="lg-whiteley"></div>
       <div class="fp-chart" id="ch-whiteley" data-source="whiteley_by_field"></div>
       <figcaption>
@@ -666,7 +808,11 @@
         <button type="button" data-coview="world" aria-pressed="true">World</button>
         <button type="button" data-coview="na" aria-pressed="false">North America</button>
         <span class="fp-gap"></span>
-        <select id="co-decade" aria-label="Years"><option value="">All years</option></select>
+        <span class="fp-slider">
+          <button type="button" id="co-all" aria-pressed="true">All years</button>
+          <input type="range" id="co-decade" min="0" max="0" step="1" value="0" aria-label="Decade" aria-valuetext="All years">
+          <output id="co-decade-out" for="co-decade">All years</output>
+        </span>
       </div>
       <div class="fp-chart tall" id="ch-coauthors" data-source="coauthor_places world_land"></div>
       <figcaption>
@@ -684,6 +830,7 @@
       </div>
       <div class="fp-legend" id="lg-tree"></div>
       <div class="fp-chart" id="ch-tree" data-source="lineage lineage_people"></div>
+      <div class="fp-chart" id="ch-tree-staff" data-source="staff lineage_people people"></div>
       <figcaption>
         <h3 id="fig-tree"><span class="fig">Fig. 11.</span>—Researchers and their students, postdocs and technicians: the mentoring network.</h3>
         <p class="cap">Each mark is a scientist, placed left to right by the year their career began, so every line runs
@@ -695,7 +842,10 @@
           colleague's career (rules and checks in section XI). Mark size shows the number of students. Hover over
           a mark, click it to keep it lit, or use "Find a person", to follow a lineage back through teachers and forward through
           students. When no one is selected, click a part of the key to highlight it. The network is a sample and far from
-          complete.</p>
+          complete. The strip below it shows the technicians and staff in the chronicle's staff archive (boat crews,
+          facilities, dining, office, library and research support) who have no documented link to any FHL scientist, at the first
+          year the sources show them; columns stand tall where a staff directory happens to survive. Much of the station's
+          work is done by people outside these lineages.</p>
       </figcaption>
     </figure>
     <figure class="fp-fig">
@@ -735,7 +885,7 @@
 
   <section class="fp-section" id="kinds">
     <h2><span class="num">V.</span> What kinds of work</h2>
-    <figure class="fp-fig">
+    <figure class="fp-fig" data-collapsible>
       <div class="fp-chart" id="ch-type" data-source="by_type"></div>
       <figcaption>
         <h3 id="fig-type"><span class="fig">Fig. 13.</span>—Verified publications by type.</h3>
@@ -790,7 +940,7 @@
 
   <section class="fp-section" id="news">
     <h2><span class="num">VII.</span> In the news</h2>
-    <figure class="fp-fig">
+    <figure class="fp-fig" data-collapsible>
       <div class="fp-legend" id="lg-news"></div>
       <div class="fp-chart" id="ch-news" data-source="news_by_year"></div>
       <figcaption>
@@ -802,8 +952,7 @@
 
   <section class="fp-section" id="reliability">
     <h2><span class="num">VIII.</span> How the census was built, and how far to trust it</h2>
-    <div class="fp-grid">
-      <figure class="fp-fig">
+      <figure class="fp-fig" data-collapsible>
         <div class="fp-chart" id="ch-status" data-source="candidate_status"></div>
         <figcaption>
           <h3 id="fig-status"><span class="fig">Fig. 19.</span>—What happened to every candidate.</h3>
@@ -812,7 +961,7 @@
             mentions only in reference lists, and figures deposited from papers.</p>
         </figcaption>
       </figure>
-      <div class="fp-fig">
+      <div class="fp-fig" data-collapsible>
         <h3 id="tab-audit"><span class="fig">Table III.</span>—Independent audit.</h3>
         <div class="fp-scroll"><table id="tbl-audit" class="ruled" data-source="audit_tiers" data-row-key="tier">
           <thead><tr><th data-field="tier">Tier</th><th data-field="precision" class="num">Correct</th>
@@ -831,7 +980,6 @@
             address are invisible to searches. FHL-listed papers are included in the "Listed by FHL" tier.</p>
         </figcaption>
       </figure>
-    </div>
   </section>
 
   <section class="fp-section" id="all-publications">
@@ -875,8 +1023,9 @@
       in dated events, drawn from the local newspapers of the early years, FHL's own newsletters and pages, the centennial
       timeline compiled by Claudia Mills and Colin Hermans, news coverage and the University of Washington Libraries' photograph
       collections, and illustrated from public archives: photographs, newspaper clippings, the regents' minutes, maps and aerial
-      views. Images are shown where they are in the public domain or openly licensed, each with its source and licence;
-      photographs the UW Libraries hold in copyright are linked rather than reproduced. Click an image to enlarge it.</p>
+      views. Images are shown where they are in the public domain or openly licensed, or where they come from FHL's own
+      archives (its newsletters and web pages), which FHL staff have allowed with credit; each carries its source and
+      credit. Photographs the UW Libraries hold in copyright are linked rather than reproduced. Click an image to enlarge it.</p>
     <p class="fp-credit">This chronicle leans throughout on the <a href="https://faculty.washington.edu/cemills/FHLTimeline.html"
       target="_blank" rel="noopener">FHL Historical Centennial Timeline</a> compiled by Claudia Mills and Colin Hermans,
       cited on every event that draws on it. Read it for the fuller story.</p>
@@ -923,6 +1072,16 @@
             classes.</p>
         </figcaption>
       </figure>
+      <figure class="fp-fig">
+        <div class="fp-chart" id="ch-course-topics" data-source="course_topics"></div>
+        <figcaption>
+          <h3 id="fig-course-topics">What the classes taught.—Courses a decade, by topic.</h3>
+          <p class="cap">Each course is counted once a term it was taught. Topics were given by AI agents from the course titles,
+            following a written list of topics, and reviewed for consistency by another agent (section XI). Panels run from
+            topics taught mostly early to those taught mostly recently (by the average decade of their share); all share one
+            scale. "Other or not named" holds entries whose courses were not named.</p>
+        </figcaption>
+      </figure>
       <div class="fp-controls"><input type="search" id="cls-q" placeholder="Search courses, instructors or teaching assistants" aria-label="Search classes">
         <span class="cap" id="cls-count"></span></div>
       <div class="fp-scroll"><table id="tbl-classes" class="ruled" data-source="classes">
@@ -932,6 +1091,25 @@
     <div class="fp-arch" data-collapsible id="arch-artists">
       <h3 class="fold">Artists in residence <span class="cnt" id="n-artists"></span></h3>
       <div class="fp-artprog" id="art-programs" data-source="artist_programs"></div>
+      <figure class="fp-fig">
+        <div class="fp-legend" id="lg-art"></div>
+        <div class="fp-chart" id="ch-art" data-source="artists"></div>
+        <figcaption>
+          <h3 id="fig-art">Artists and writers in residence.—Residents a year, by kind of work.</h3>
+          <p class="cap">Each resident is counted in every year of their residency, so a long residency shows as a band.
+            Kinds of work were given by an AI agent from the archive's description of each resident's medium. The record
+            is fuller since the residency programs began in the 2000s; earlier artists are those the sources happen to name.</p>
+        </figcaption>
+      </figure>
+      <figure class="fp-fig fp-artgal">
+        <div class="fp-plates"><div class="grid" id="art-gallery" data-source="art_images"></div></div>
+        <figcaption>
+          <h3 id="fig-art-gallery">Artists at work in residence.</h3>
+          <p class="cap">Photographs Friday Harbor Laboratories published of artists at work in its Macfarlane Art Studio, used
+            with FHL's permission and credited as FHL credits them. Images of the finished works belong to the artists and
+            will be shown once they agree. Click an image to enlarge it.</p>
+        </figcaption>
+      </figure>
       <div class="fp-scroll"><table id="tbl-artists" class="ruled" data-source="artists">
         <thead><tr><th>Years</th><th>Name</th><th>Medium</th><th>Program</th><th>Work</th><th>Sources</th></tr></thead><tbody></tbody>
       </table></div>
@@ -956,11 +1134,44 @@
         <tbody></tbody>
       </table></div>
     </div>
+    <figure class="fp-fig">
+      <div class="fp-diagram fp-dg" id="dg-search">
+        <div class="box key"><span class="who">One shared name list, used by every search</span>Friday Harbor Laboratories (and Laboratory, Labs, Lab,
+          Marine Laboratory, "Harbour"), Puget Sound Marine Station, Puget Sound Biological Station, UW Oceanographic Laboratories,
+          and the citation forms of the station's own series. Most searches also ran plain "Friday Harbor", which also finds
+          the town and its other organisations; screening removed those later. The bare acronym "FHL" was never searched (it
+          is also a human gene).</div>
+        <div class="down">↓ <i>ten families of sources, searched in parallel</i></div>
+        <div class="srcs">
+          <div class="box"><span class="who">script</span>OpenAlex<br><span class="n">5,045</span> rows<span class="d">20 queries: author addresses, the FHL institution record, full text, titles and abstracts</span><div class="mini " style="width:77%"></div></div>
+          <div class="box"><span class="who">person</span>Web of Science<br><span class="n">2,543</span> rows<span class="d">one search, exported through UW Libraries</span><div class="mini person" style="width:39%"></div></div>
+          <div class="box"><span class="who">agent</span>Historical archives (archive.org)<br><span class="n">6,585</span> rows<span class="d">scanned books and journals, 1904 on; two rounds</span><div class="mini agent" style="width:100%"></div></div>
+          <div class="box"><span class="who">agent + script</span>FHL's own publication lists<br><span class="n">6,146</span> rows<span class="d">611 archived FHL web pages; listed citations matched to DOIs</span><div class="mini agent" style="width:93%"></div></div>
+          <div class="box"><span class="who">agent + script</span>Theses and reports<br><span class="n">1,682</span> rows<span class="d">UW ResearchWorks, other repositories, OSTI, USGS</span><div class="mini agent" style="width:26%"></div></div>
+          <div class="box"><span class="who">agent</span>Europe PMC<br><span class="n">1,251</span> rows<span class="d">390 queries, each name in each part of a paper</span><div class="mini agent" style="width:19%"></div></div>
+          <div class="box"><span class="who">agent</span>PubMed and PubMed Central<br><span class="n">1,230</span> rows<span class="d">148 queries</span><div class="mini agent" style="width:19%"></div></div>
+          <div class="box"><span class="who">agent</span>News<br><span class="n">1,025</span> rows<span class="d">200 queries; a sample, not a census</span><div class="mini agent" style="width:16%"></div></div>
+          <div class="box"><span class="who">agent</span>Crossref<br><span class="n">660</span> rows<span class="d">27 queries: addresses, titles and series names</span><div class="mini agent" style="width:10%"></div></div>
+          <div class="box"><span class="who">agent</span>Datasets<br><span class="n">592</span> rows<span class="d">142 queries in 8 repositories</span><div class="mini agent" style="width:9%"></div></div>
+        </div>
+        <div class="legend"><span><span class="mini"></span>searched by a script</span><span><span class="mini agent"></span>by an AI agent (alone or with a script)</span><span><span class="mini person"></span>by a person</span><span>Bar length: rows returned.</span></div>
+        <div class="down">↓ <i>a ninth agent reviewed all eight agent searches for gaps; two more agents (one also ran Crossref's FHL funder and ROR filters) and five more OpenAlex queries filled them</i></div>
+        <div class="box key"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=source_rows">—</span></span> rows from 14 files, merged into <span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=candidates">—</span></span>
+          candidate records (<span><span data-source="methods_facts" data-field="value" data-where="fact=with_doi">—</span></span> with a DOI)<span class="d">Rows were joined when they shared a DOI or a PubMed,
+          PubMed Central or OpenAlex identifier, or had near-identical titles a year or less apart. Fig. 22 follows the candidates from here.</span></div>
+      </div>
+      <figcaption>
+        <h3 id="fig-search"><span class="fig">Fig. 21.</span>—Where the searches looked.</h3>
+        <p class="cap">Every search used one shared list of the station's names. Eight AI agents each searched one family of
+          sources in parallel, a script searched OpenAlex, and the compiler ran one Web of Science search; each agent wrote a
+          rerunnable script and logged its queries and hit counts. Many records were found by more than one source.</p>
+      </figcaption>
+    </figure>
     <div class="fp-grid fp-method-figs">
       <figure class="fp-fig">
         <div class="fp-diagram fp-flow" id="dg-flow" data-source="methods_facts candidate_status"></div>
         <figcaption>
-          <h3 id="fig-flow"><span class="fig">Fig. 21.</span>—How the census was built.</h3>
+          <h3 id="fig-flow"><span class="fig">Fig. 22.</span>—How the census was built.</h3>
           <p class="cap">From the records the searches returned to the decision on every candidate and the independent audit.
             The paragraphs below describe each step.</p>
         </figcaption>
@@ -968,12 +1179,53 @@
       <figure class="fp-fig">
         <div class="fp-diagram fp-tree" id="dg-tiers" data-source="headline audit_tiers"></div>
         <figcaption>
-          <h3 id="fig-tiers"><span class="fig">Fig. 22.</span>—How a publication gets its evidence tier.</h3>
+          <h3 id="fig-tiers"><span class="fig">Fig. 23.</span>—How a publication gets its evidence tier.</h3>
           <p class="cap">Each candidate is asked these questions in turn; the first "yes" decides. The share confirmed is the
-            independent audit's estimate for the tier (Fig. 23).</p>
+            independent audit's estimate for the tier (Fig. 26).</p>
         </figcaption>
       </figure>
     </div>
+    <figure class="fp-fig">
+      <div class="fp-diagram fp-dg" id="dg-routes">
+        <div class="box key"><span class="who">One record from the queue</span><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=push_records">—</span></span> records not yet
+          verified, in batches of up to 45; each came with its known links and any earlier text snippets.</div>
+        <div class="two">
+          <div class="col">
+            <div class="box"><span class="who">Routes 1–2</span>The record's own links, then doi.org</div>
+            <div class="down">↓ <i>no readable text</i></div>
+            <div class="box"><span class="who">Route 3</span>Europe PMC and PubMed Central full text</div>
+            <div class="down">↓ <i>no readable text</i></div>
+            <div class="box"><span class="who">Routes 4–5</span>Open-access copies listed by OpenAlex and Semantic Scholar</div>
+            <div class="down">↓ <i>no readable text</i></div>
+            <div class="box"><span class="who">Routes 6–7</span>Biodiversity Heritage Library, Internet Archive, JSTOR's free early
+              journals, repositories; web search only as a last resort</div>
+            <div class="box dash"><span class="who">Stop rules</span>No logins, CAPTCHAs, bot-check or paywall workarounds; no email
+              address in any request; at most one request a second per site; about three attempts per record.</div>
+          </div>
+          <div class="col">
+            <div class="box"><span class="who">Text reached, by any route</span>Search it for every name of the station (and tell the
+              town of Friday Harbor from the laboratory)</div>
+            <div class="outs">
+              <div class="box"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=push_named">—</span></span><span class="d">name FHL: verified</span></div>
+              <div class="box"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=push_not_named">—</span></span><span class="d">do not name FHL</span></div>
+              <div class="box"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=push_read_undecided">—</span></span><span class="d">read, not settled</span></div>
+            </div>
+            <div class="box"><span class="who">Could not be read, by any route</span><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=push_unreadable">—</span></span> left as they were,
+              not guessed from the title
+              <div class="stack"><span class="s1" style="width:42.1%"></span><span class="s2" style="width:38.9%"></span><span class="s3" style="width:14.0%"></span><span class="s4" style="width:5.0%"></span></div>
+              <span class="d legend"><span><span class="sw s1"></span>paywall <span data-source="methods_facts" data-field="value" data-where="fact=push_paywall">—</span></span><span><span class="sw s2"></span>bot check <span data-source="methods_facts" data-field="value" data-where="fact=push_bot_check">—</span></span><span><span class="sw s3"></span>no copy online <span data-source="methods_facts" data-field="value" data-where="fact=push_no_copy">—</span></span><span><span class="sw s4"></span>other <span data-source="methods_facts" data-field="value" data-where="fact=push_other_barrier">—</span></span></span></div>
+            <div class="box key"><span class="who">Written for every record</span>The decision, where FHL appears, a quoted line of
+              evidence, how much was read and what stopped the reading. A validator had to pass every batch file.</div>
+          </div>
+        </div>
+      </div>
+      <figcaption>
+        <h3 id="fig-routes"><span class="fig">Fig. 24.</span>—What a reading agent did with one record.</h3>
+        <p class="cap">The verification push (28 October 2026): for each record an agent tried public, open routes in a fixed
+          order and stopped at any login, paywall or bot check rather than get around it. The earlier resolution pass and the
+          audit used similar routes. The stacked bar splits the unreadable records by what stopped the reading.</p>
+      </figcaption>
+    </figure>
     <div class="fp-notes">
       <p><span class="runin">Search.</span>—Candidates came from OpenAlex (author-affiliation strings searched for every name
         variant, the FHL institution record, full text, titles and abstracts); the Web of Science Core Collection (an export of
@@ -1053,11 +1305,46 @@
         verification push could read the paper (the audit precision where fewer than 20 were read). The
         audit was done by AI agents, not by people; a human check of a sample would strengthen it.</p>
     </div>
+    <figure class="fp-fig">
+      <div class="fp-diagram fp-dg" id="dg-checks">
+        <div class="lanes">
+          <div class="lane"><div class="lbl">Automatic</div><div class="row">
+            <div class="box">Format check on every batch file<span class="d">each agent re-ran a validator until it printed OK: every record
+              exactly once, only allowed values, a reason given</span></div></div></div>
+          <div class="lane"><div class="lbl">A second agent</div><div class="row">
+            <div class="box">Completeness critic for the eight searches<span class="d">re-ran its own counts on every file; its gaps led to a
+              second round of searching</span></div>
+            <div class="box">Calibration reviewers<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=calibration_overrides">—</span></span> screening calls changed, of
+              <span data-source="methods_facts" data-field="value" data-where="fact=screened_round1">—</span> and <span data-source="methods_facts" data-field="value" data-where="fact=screened_round2">—</span> judged in two rounds</span></div>
+            <div class="box">Re-check of the reading agents<span class="d"><span class="n">152</span> of 159 publication readings and
+              <span class="n">96</span> of 103 address readings agreed</span></div></div></div>
+          <div class="lane"><div class="lbl">Sampled audit</div><div class="row">
+            <div class="box">Independent audit<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=audited">—</span></span> records in all, drawn at random in strata;
+              auditors went to the publication itself and tried to prove each decision wrong (<span data-source="methods_facts" data-field="value" data-where="fact=audit_full_text">—</span> read in full text)</span></div>
+            <span class="to">→</span>
+            <div class="box">Second judge on every disagreement<span class="d">ruled whether the census, the auditor or neither was right</span></div>
+            <span class="to">→</span>
+            <div class="box">Share correct by tier, with 95% intervals<span class="d">Fig. 26 and Table III</span></div></div></div>
+          <div class="lane"><div class="lbl">Which call wins</div><div class="row">
+            <div class="box">Written rule &lt; AI screening &lt; calibration review &lt; a reading of the paper itself<span class="d">an audit
+              verdict replaces a field only where the auditor could verify it</span></div>
+            <span class="to">→</span>
+            <div class="box key">One decision for each of <span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=candidates">—</span></span> candidates<span class="d"><span data-source="methods_facts" data-field="value" data-where="fact=decided_audit">—</span> of them
+              rest on the audit</span></div></div></div>
+        </div>
+      </div>
+      <figcaption>
+        <h3 id="fig-checks"><span class="fig">Fig. 25.</span>—How every agent's work was checked.</h3>
+        <p class="cap">No agent's output was taken on trust: every batch passed an automatic check, a second agent reviewed
+          or re-checked a sample, an independent audit with a second judge measured accuracy, and a fixed order decided
+          which judgement counts when two disagree.</p>
+      </figcaption>
+    </figure>
     <div class="fp-grid fp-method-figs">
       <figure class="fp-fig">
         <div class="fp-chart" id="ch-audit" data-source="audit_tiers"></div>
         <figcaption>
-          <h3 id="fig-audit"><span class="fig">Fig. 23.</span>—How often the audit confirmed each tier.</h3>
+          <h3 id="fig-audit"><span class="fig">Fig. 26.</span>—How often the audit confirmed each tier.</h3>
           <p class="cap">The share of sampled decisions the audit confirmed against the publication itself, with its 95%
             interval; the number checked is beside each tier. Narrow intervals come from larger samples.</p>
         </figcaption>
@@ -1065,7 +1352,7 @@
       <figure class="fp-fig">
         <div class="fp-chart" id="ch-linksrc" data-source="lineage"></div>
         <figcaption>
-          <h3 id="fig-linksrc"><span class="fig">Fig. 24.</span>—Where the links of the mentoring network come from.</h3>
+          <h3 id="fig-linksrc"><span class="fig">Fig. 27.</span>—Where the links of the mentoring network come from.</h3>
           <p class="cap">Links in Fig. 11 by the source that documents them. Lab rosters and CVs, re-checked against their
             pages, give most links; links inferred from co-authorship were checked one by one, and those not confirmed are
             drawn dashed. A pair documented by more than one source is counted once, under the source that documented it
@@ -1074,6 +1361,44 @@
         </figcaption>
       </figure>
     </div>
+    <figure class="fp-fig">
+      <div class="fp-diagram fp-dg" id="dg-people">
+        <div class="lanes">
+          <div class="lane"><div class="lbl">People</div><div class="row">
+            <div class="box">Mentors guessed from co-authorship (script)<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=mentor_pairs">—</span></span> pairs</span></div>
+            <span class="to">→</span>
+            <div class="box">Each pair checked in public records<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=mentor_confirmed">—</span></span> confirmed, <span data-source="methods_facts" data-field="value" data-where="fact=mentor_peer">—</span>
+              peers removed, <span data-source="methods_facts" data-field="value" data-where="fact=mentor_unclear">—</span> unclear; a second agent and an adjudicator settled disputes</span></div>
+            <span class="to">+</span>
+            <div class="box">Lab rosters, three rounds<span class="d"><span data-source="methods_facts" data-field="value" data-where="fact=roster_found">—</span> found for the FHL scientists; a verifier re-opened every
+              page</span></div>
+            <span class="to">+</span>
+            <div class="box">Profiles: a writer and a fact-checker<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=profiles">—</span></span> profiles, <span data-source="methods_facts" data-field="value" data-where="fact=profiles_revised">—</span>
+              revised by the checker</span></div>
+            <span class="to">→</span>
+            <div class="box key">Mentoring network<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=network_people">—</span></span> people, <span data-source="methods_facts" data-field="value" data-where="fact=network_links">—</span> links (Fig. 11)</span></div></div></div>
+          <div class="lane"><div class="lbl">History</div><div class="row">
+            <div class="box">Sources gathered (script)<span class="d">historic newspapers, FHL newsletters and web pages, news items, the
+              centennial timeline</span></div>
+            <span class="to">→</span>
+            <div class="box">Historian agents list dated events<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=history_extracted">—</span></span> events, each with a
+              source and a quotation</span></div>
+            <span class="to">→</span>
+            <div class="box">Merged, then fact-checkers<span class="d"><span data-source="methods_facts" data-field="value" data-where="fact=history_corrected">—</span> events corrected</span></div>
+            <span class="to">→</span>
+            <div class="box">Image finders, then a second check<span class="d">licence or FHL permission confirmed on the record page</span></div>
+            <span class="to">→</span>
+            <div class="box key">Chronicle of the station<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=history_events">—</span></span> events, <span data-source="methods_facts" data-field="value" data-where="fact=history_images">—</span> images</span></div></div></div>
+        </div>
+      </div>
+      <figcaption>
+        <h3 id="fig-people-search"><span class="fig">Fig. 28.</span>—How people and the station's history were searched and checked.</h3>
+        <p class="cap">Mentors inferred from co-authorship, lab rosters, profiles, the chronicle's events and its images were
+          each checked by a second agent (or settled by an adjudicator) before use; thesis and Wikidata links come from those
+          structured records. Inferred mentors that could not be confirmed are kept but drawn dashed in Fig. 11, and the
+          archive lists of staff, classes and artists were fact-checked in samples, the least certain entries first.</p>
+      </figcaption>
+    </figure>
     <div class="fp-notes">
       <p><span class="runin">Recall.</span>—FHL's own publication lists serve as an independent sample of FHL work. For each
         decade, recall is the share of listed papers that the database searches found on their own (Fig. 20). Listed papers
@@ -1183,9 +1508,25 @@
         agent opened each image and its record, confirmed the licence and wrote the caption, passing <span data-source="methods_facts" data-field="value" data-where="fact=history_more_passed">—</span>;
         a picture editor chose <span data-source="methods_facts" data-field="value" data-where="fact=history_more_chosen">—</span> for balance across the eras; and fact-checkers checked every caption,
         credit and licence again. Images (<span data-source="methods_facts" data-field="value" data-where="fact=history_images">—</span> in all) are shown only where they are in the public domain
-        (published in the United States before 1931, works of the US government, or marked so by the holding library) or
-        openly licensed (CC0, CC BY, CC BY-SA). The UW Libraries' photographs that carry an "In Copyright" statement are linked
-        rather than reproduced, and other promising images whose rights could not be confirmed were left out.</p>
+        (published in the United States before 1931, works of the US government, or marked so by the holding library),
+        openly licensed (CC0, CC BY, CC BY-SA), or taken from FHL's own archives with FHL's permission
+        (<span data-source="methods_facts" data-field="value" data-where="fact=history_fhl_archive_images">—</span> of them; below). The UW Libraries' photographs that carry an "In Copyright" statement are linked
+        rather than reproduced, and other promising images whose rights could not be confirmed were left out. A third search
+        (two rounds) aimed at one or two images for every year from 1903 to 2026. With FHL staff's agreement that images from
+        FHL's own archives may be used with credit, it also drew on FHL's newsletters and web pages, read from Internet
+        Archive copies. Its finders proposed <span data-source="methods_facts" data-field="value" data-where="fact=history_year_candidates">—</span> dated images; second agents confirmed the provenance
+        or licence and the year of <span data-source="methods_facts" data-field="value" data-where="fact=history_year_passed">—</span>; picture editors chose up to two a year; and fact-checkers added
+        <span data-source="methods_facts" data-field="value" data-where="fact=history_year_added">—</span> (<span data-source="methods_facts" data-field="value" data-where="fact=history_fhl_archive_images">—</span> chronicle images now come from FHL's archives). Of the
+        years 1903–2026, <span data-source="methods_facts" data-field="value" data-where="fact=history_years_covered">—</span> now have at least one image and <span data-source="methods_facts" data-field="value" data-where="fact=history_years_two">—</span> have two or more.
+        Images that a newspaper, magazine, company or outside photographer holds, even where FHL reprinted them, and
+        close-ups of identifiable schoolchildren from FHL's outreach programs were left out until permission is confirmed.</p>
+      <p><span class="runin">Classes and art.</span>—The lists of classes, staff and artists in residence in section X were
+        gathered from public records by AI agents and fact-checked by others. For the figure of course topics, agents gave
+        each of the <span data-source="methods_facts" data-field="value" data-where="fact=course_titles">—</span> distinct course titles one topic from a fixed list, and a further agent reviewed
+        them all for consistency, changing <span data-source="methods_facts" data-field="value" data-where="fact=course_review_changes">—</span>. The artists' kinds of work were given
+        by a single AI agent, from a fixed list and the archive's descriptions, without a separate review. The gallery shows
+        FHL's photographs of artists at work in its studio (<span data-source="methods_facts" data-field="value" data-where="fact=art_images">—</span> shown), used with FHL's permission;
+        images of the finished works are the artists' own and wait for their permission.</p>
       <p><span class="runin">Not searched.</span>—Google Scholar and Scopus (no automated access), BIOSIS Previews, Zoological
         Record and ASFA. Before about 2008 databases did not index acknowledgments, so counts are a lower bound, especially
         for 1985–2010 and before 1970.</p>
@@ -1198,13 +1539,15 @@
     <h3 class="fp-subhead" id="ai-use">The use of artificial intelligence</h3>
     <div class="fp-notes">
       <p><span class="runin">Platform.</span>—The census, its code, the spreadsheet, the figures and this page were produced
-        with Claude Code 2.1.295, Anthropic's coding agent, in the Claude desktop app on macOS, on 13–16 and 28 October 2026. The
+        with Claude Code (version 2.1.295 and later), Anthropic's coding agent, in the Claude desktop app on macOS, on 13–16
+        and 28–29 October 2026 (UTC). The
         coordinating session and every agent it started used the model Claude Opus 5.5 (claude-opus-5-5). The census and
         the first version of this page were produced at the "xhigh" reasoning-effort setting, the second highest of five
         (low, medium, high, xhigh, max); from the topic classification onward (14 October, 18:10 UTC), including the people
         section and the check of inferred mentors, the setting was "max", the highest; the chronicle's second image search and
-        a review of the page's phone layout (15–16 October), and the verification push, the archive searches and the review of
-        28 October ran at "xhigh" (Table VI). Claude Code's ultracode
+        a review of the page's phone layout (15–16 October), the verification push, the archive searches and the review of
+        28 October, and the later searches for images, course topics and art and the research for the methods diagrams
+        (28–29 October) ran at "xhigh" (Table VI). Claude Code's ultracode
         mode was on while the census was built, so each substantive step ran as a scripted multi-agent workflow; the topic
         classification and the mentor check, added afterwards, ran as agents started directly. In all,
         <span data-source="methods_facts" data-field="value" data-where="fact=ai_runs">—</span> runs used
@@ -1213,15 +1556,6 @@
         <span data-source="methods_facts" data-field="value" data-where="fact=build_hours">—</span> hours of wall-clock time,
         most of it unattended.</p>
     </div>
-    <figure class="fp-fig fp-narrow">
-      <div class="fp-legend" id="lg-airuns"></div>
-      <div class="fp-chart" id="ch-airuns" data-source="ai_workflows"></div>
-      <figcaption>
-        <h3 id="fig-airuns"><span class="fig">Fig. 25.</span>—The AI runs, by number of agents.</h3>
-        <p class="cap">Each run of Table VI, in order, with the number of AI agents it started and its reasoning-effort
-          setting.</p>
-      </figcaption>
-    </figure>
     <div class="fp-fig fp-narrow" id="ai-workflows">
       <h3 id="tab-ai"><span class="fig">Table VI.</span>—The AI runs.</h3>
       <div class="fp-scroll"><table id="tbl-ai" class="ruled" data-source="ai_workflows" data-row-key="workflow">
@@ -1295,12 +1629,12 @@
 <p class="fp-sitenote">Published at <a href="https://weertman.github.io/fhl-research-profile/">https://weertman.github.io/fhl-research-profile/</a>. The data behind every figure and table are
   CSV and JSON files in the <a href="https://github.com/weertman/fhl-research-profile/tree/main/data">data folder</a> of <a href="https://github.com/weertman/fhl-research-profile">the repository</a>,
   including <a href="https://github.com/weertman/fhl-research-profile/blob/main/data/census_all_candidates.csv">the full census</a>: every candidate record the
-  searches found, with the decision on each and its evidence. By Claude Opus 5.5 and Willem Lee Weertman.</p>
+  searches found, with the decision on each and its evidence. By Claude Opus 5.5, Willem Lee Weertman and Marjorie Wonham.</p>
 <script>
   // Stand-in for the dashboard runtime: fetches each dataset from data/ and serves it to the info sheet's code unchanged.
   window.FP_SITE_BASE = ''; // images (the chronicle of the station) are files next to the page
   window.dash = (() => {
-    const FILES = {"ai_workflows": "data/ai_workflows.csv", "artist_programs": "data/artist_programs.csv", "artists": "data/artists.csv", "audit_tiers": "data/audit_tiers.csv", "by_appears": "data/by_appears.csv", "by_era": "data/by_era.csv", "by_type": "data/by_type.csv", "by_year": "data/by_year.csv", "by_year_appears": "data/by_year_appears.csv", "by_year_tier": "data/by_year_tier.csv", "candidate_status": "data/candidate_status.csv", "classes": "data/classes.csv", "coauthor_places": "data/coauthor_places.csv", "eras": "data/eras.csv", "headline": "data/headline.csv", "history_eras": "data/history_eras.csv", "history_events": "data/history_events.csv", "history_images": "data/history_images.csv", "lineage": "data/lineage.csv", "lineage_people": "data/lineage_people.csv", "methods_facts": "data/methods_facts.csv", "network_split": "data/network_split.csv", "news_by_year": "data/news_by_year.csv", "organisms_by_decade": "data/organisms_by_decade.csv", "people": "data/people.csv", "people_links": "data/people_links.csv", "places": "data/places.csv", "profiles": "data/profiles.csv", "prompts": "data/prompts.csv", "publications": "data/publications.csv", "recall_by_decade": "data/recall_by_decade.csv", "staff": "data/staff.csv", "top_cited": "data/top_cited.csv", "top_venues": "data/top_venues.csv", "topics_by_decade": "data/topics_by_decade.csv", "whiteley_by_field": "data/whiteley_by_field.csv", "world_land": "data/world_land.json"};
+    const FILES = {"ai_workflows": "data/ai_workflows.csv", "art_images": "data/art_images.csv", "artist_programs": "data/artist_programs.csv", "artists": "data/artists.csv", "audit_tiers": "data/audit_tiers.csv", "by_appears": "data/by_appears.csv", "by_era": "data/by_era.csv", "by_type": "data/by_type.csv", "by_year": "data/by_year.csv", "by_year_appears": "data/by_year_appears.csv", "candidate_status": "data/candidate_status.csv", "classes": "data/classes.csv", "coauthor_places": "data/coauthor_places.csv", "course_topics": "data/course_topics.csv", "eras": "data/eras.csv", "headline": "data/headline.csv", "history_eras": "data/history_eras.csv", "history_events": "data/history_events.csv", "history_images": "data/history_images.csv", "lineage": "data/lineage.csv", "lineage_people": "data/lineage_people.csv", "methods_facts": "data/methods_facts.csv", "network_split": "data/network_split.csv", "news_by_year": "data/news_by_year.csv", "organisms_by_decade": "data/organisms_by_decade.csv", "people": "data/people.csv", "people_links": "data/people_links.csv", "places": "data/places.csv", "profiles": "data/profiles.csv", "prompts": "data/prompts.csv", "publications": "data/publications.csv", "recall_by_decade": "data/recall_by_decade.csv", "staff": "data/staff.csv", "top_cited": "data/top_cited.csv", "top_venues": "data/top_venues.csv", "topics_by_decade": "data/topics_by_decade.csv", "whiteley_by_field": "data/whiteley_by_field.csv", "world_land": "data/world_land.json"};
     const store = {}, calcs = {}, draws = [];
     const run = (fn) => { try { fn(); } catch (e) { console.error(e); } };
     // Figures depend only on the width: redraw when it changes (not when a phone's toolbar hides, which changes the height).
@@ -1436,22 +1770,22 @@
     };
     const legend = (el, items) => {
       const fig = el.closest('.fp-fig');
-      el.replaceChildren(...items.map(([name, fill]) => {
+      el.replaceChildren(...items.map(([name, fill, key = name]) => { // key: the series key, when the label differs
         const s = document.createElement('span');
-        s.dataset.key = name;
+        s.dataset.key = key;
         s.append(swatch(fill), document.createTextNode(name));
         if (fig && el.id !== 'lg-tree') {
           s.classList.add('fp-keybtn'); s.setAttribute('role', 'button'); s.tabIndex = 0;
-          s.setAttribute('aria-pressed', String(fig.dataset.keyPin === name));
+          s.setAttribute('aria-pressed', String(fig.dataset.keyPin === key));
           s.title = 'Hover to highlight; click to keep it highlighted';
           const pick = () => {
-            fig.dataset.keyPin = fig.dataset.keyPin === name ? '' : name;
+            fig.dataset.keyPin = fig.dataset.keyPin === key ? '' : key;
             el.querySelectorAll(':scope > span').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.key === fig.dataset.keyPin)));
             keyShow(fig, fig.dataset.keyPin);
           };
-          s.addEventListener('mouseenter', () => keyShow(fig, name));
+          s.addEventListener('mouseenter', () => keyShow(fig, key));
           s.addEventListener('mouseleave', () => keyShow(fig, fig.dataset.keyPin));
-          s.addEventListener('focus', () => keyShow(fig, name));
+          s.addEventListener('focus', () => keyShow(fig, key));
           s.addEventListener('blur', () => keyShow(fig, fig.dataset.keyPin));
           s.addEventListener('click', pick);
           s.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
@@ -1522,7 +1856,8 @@
         .on('mouseleave', () => hideTip(el));
     };
     // Stacked columns over time inside a ruled frame, with optional dashed rules where the station's name changed.
-    const stackedYears = (el, rows, keys, fills, { eras = null, height = 300, band = 1, fmtX = (d) => d, yFmt = f, valFmt = f } = {}) => {
+    // more(x): extra tooltip lines for a year (e.g. the names of that year's courses).
+    const stackedYears = (el, rows, keys, fills, { eras = null, height = 300, band = 1, fmtX = (d) => d, yFmt = f, valFmt = f, more = null } = {}) => {
       const byX = d3.rollup(rows, (v) => Object.fromEntries(keys.map((k) => [k, d3.sum(v.filter((r) => r.k === k), (r) => r.n)])), (r) => r.x);
       const xs = Array.from(byX.keys()).sort((a, b) => a - b);
       const data = xs.map((x) => ({ x, ...byX.get(x) }));
@@ -1560,7 +1895,7 @@
       svg.append('g').selectAll('rect').data(data).join('rect').attr('x', (d) => x(d.x) - x.step() * x.paddingInner() / 2)
         .attr('width', x.step()).attr('y', 0).attr('height', base).style('fill', 'transparent')
         .on('mousemove', (event, d) => showTip(el, event, String(fmtX(d.x)),
-          keys.map((k, i) => [fills[i], k, valFmt(d[k])]).filter((r, i) => d[keys[i]] > 0)))
+          [...keys.map((k, i) => [fills[i], k, valFmt(d[k])]).filter((r, i) => d[keys[i]] > 0), ...(more ? more(d.x) : [])]))
         .on('mouseleave', () => hideTip(el));
     };
     // Small multiples: one panel per category with a bar per decade, every panel on one scale.
@@ -2042,23 +2377,40 @@
     document.querySelectorAll('[data-coview]').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.coview === coView)));
     safely(document.getElementById('ch-coauthors'), drawCoauthors);
   }));
-  document.getElementById('co-decade').addEventListener('change', () => safely(document.getElementById('ch-coauthors'), drawCoauthors));
+  // The decade shown: '' for all years. Dragging the slider picks a decade; "All years" goes back to the whole record.
+  let coDecade = '', coDecades = [], coFrame = 0;
+  const coSlider = document.getElementById('co-decade'), coAll = document.getElementById('co-all'), coOut = document.getElementById('co-decade-out');
+  const setCoDecade = (d) => {
+    coDecade = d;
+    coAll.setAttribute('aria-pressed', String(!d));
+    coSlider.closest('.fp-slider').classList.toggle('all', !d);
+    coOut.textContent = d ? `${d}s` : 'All years';
+    coSlider.setAttribute('aria-valuetext', d ? `${d}s` : 'All years');
+    clearTimeout(coFrame); // redraw once the slider pauses briefly, not on every step
+    coFrame = setTimeout(() => safely(document.getElementById('ch-coauthors'), drawCoauthors), 30);
+  };
+  coSlider.addEventListener('input', () => setCoDecade(coDecades[+coSlider.value] || ''));
+  // From "All years" the thumb rests on the last decade; a click or key there picks it even though the value is unchanged.
+  const coPick = () => { if (!coDecade && coDecades.length) setCoDecade(coDecades[+coSlider.value] || ''); };
+  coSlider.addEventListener('click', coPick);
+  coSlider.addEventListener('keyup', (e) => { if (/^(Arrow|Home|End|Page)/.test(e.key)) coPick(); });
+  coAll.addEventListener('click', () => setCoDecade(''));
   function drawCoauthors() {
     const el = document.getElementById('ch-coauthors');
     if (!state(el, ['coauthor_places', 'world_land'])) return;
     const land = dash.data('world_land').data;
-    const sel = document.getElementById('co-decade');
     const all = dash.data('coauthor_places').data.map((r) => {
       let dec = {}; try { dec = JSON.parse(r.by_decade || '{}'); } catch (e) { dec = {}; }
       return { ...r, papers: +r.papers, lat: +r.lat, lon: +r.lon, dec };
     });
-    if (sel.options.length === 1) {
-      [...new Set(all.flatMap((r) => Object.keys(r.dec)))].sort().forEach((d) => sel.append(new Option(`${d}s`, d)));
+    if (!coDecades.length) {
+      coDecades = [...new Set(all.flatMap((r) => Object.keys(r.dec)))].sort();
+      coSlider.max = String(Math.max(0, coDecades.length - 1)); coSlider.value = coSlider.max;
     }
-    const n = (r) => (sel.value ? +(r.dec[sel.value] || 0) : r.papers);
+    const n = (r) => (coDecade ? +(r.dec[coDecade] || 0) : r.papers);
     const pts = all.filter((r) => n(r) > 0 && Number.isFinite(r.lat) && Number.isFinite(r.lon)).sort((a, b) => n(b) - n(a));
     const countries = new Set(pts.map((r) => r.country).filter(Boolean));
-    document.getElementById('co-summary').textContent = `${sel.value ? `In the ${sel.value}s: ` : 'In all: '}${f(pts.length)} institutions in ${f(countries.size)} countries.`;
+    document.getElementById('co-summary').textContent = `${coDecade ? `In the ${coDecade}s: ` : 'In all: '}${f(pts.length)} institution${pts.length === 1 ? '' : 's'} in ${f(countries.size)} countr${countries.size === 1 ? 'y' : 'ies'}.`;
     const fhl = { lon: -123.0121, lat: 48.5459 };
     const width = Math.max(260, el.clientWidth);
     const height = Math.round(width * (coView === 'world' ? 0.52 : 0.62));
@@ -2078,7 +2430,7 @@
       .attr('d', (p) => linePath(proj, greatCircle([p.lon, p.lat], [fhl.lon, fhl.lat])))
       .style('stroke-width', (p) => 0.3 + Math.sqrt(n(p)) * 0.12).style('stroke-opacity', 0.25);
     const tipRows = (p) => [[null, null, [p.city, p.country].filter(Boolean).join(', ')],
-      [null, null, `${f(n(p))} verified FHL publication${n(p) === 1 ? '' : 's'} co-authored${sel.value ? ` in the ${sel.value}s` : ` (${p.first_year}–${p.last_year})`}`]];
+      [null, null, `${f(n(p))} verified FHL publication${n(p) === 1 ? '' : 's'} co-authored${coDecade ? ` in the ${coDecade}s` : ` (${p.first_year}–${p.last_year})`}`]];
     svg.append('g').selectAll('circle').data(pts.slice().reverse()).join('circle').attr('class', 'place to')
       .attr('cx', (p) => proj([p.lon, p.lat])[0]).attr('cy', (p) => proj([p.lon, p.lat])[1]).attr('r', (p) => r(n(p)))
       .on('mousemove', (event, p) => showTip(el, event, p.institution, tipRows(p)))
@@ -2100,7 +2452,7 @@
 
   // The mentoring network on a timeline: each person sits at the year their career began, so every line from a teacher
   // to a student runs forward in time; a force layout pulls connected people together vertically.
-  // Chronicle of the station: dated events in era bands, with openly licensed images and links to archive photographs.
+  // Chronicle of the station: dated events in era bands, with free and FHL-archive images and links to archive photographs.
   let histMode = 'all';
   document.querySelectorAll('[data-hist]').forEach((b) => b.addEventListener('click', () => {
     histMode = b.dataset.hist;
@@ -2108,8 +2460,9 @@
     drawHistory();
   }));
   document.getElementById('hist-type').addEventListener('change', () => drawHistory());
-  // Each era of the chronicle folds away; which ones are open survives redrawing (filters, a turned phone).
-  const openEras = new Set();
+  // Each era of the chronicle is open at first and folds away; which ones a reader closed survives redrawing (filters, a
+  // turned phone).
+  const closedEras = new Set();
   const histAll = document.getElementById('hist-openall');
   histAll.addEventListener('click', () => {
     const boxes = [...document.querySelectorAll('#history-timeline details.fp-era-box')];
@@ -2121,7 +2474,10 @@
     const b = [...document.querySelectorAll('#history-timeline details.fp-era-box')];
     histAll.textContent = b.length && b.every((d) => d.open) ? 'Close every era' : 'Open every era';
   }
-  const imgSrc = (r) => (window.FP_SITE_BASE != null ? window.FP_SITE_BASE + r.file : (r.blob || r.file));
+  const SITE_URL = 'https://weertman.github.io/fhl-research-profile/';
+  const imgSrc = (r) => (window.FP_SITE_BASE != null ? window.FP_SITE_BASE + r.file : (r.blob || SITE_URL + r.file));
+  // The page shows small greyscale previews (quick to load); the full image opens when a reader enlarges one.
+  const thumbSrc = (r) => (!r.thumb ? imgSrc(r) : window.FP_SITE_BASE != null ? window.FP_SITE_BASE + r.thumb : (r.thumb_blob || r.blob || SITE_URL + r.thumb));
   function drawHistory() {
     const el = document.getElementById('history-timeline');
     if (!state(el, ['history_events', 'history_images', 'history_eras'])) return;
@@ -2137,7 +2493,11 @@
     const link = (href, text) => { const a = make('a', null, text); a.href = href; a.target = '_blank'; a.rel = 'noopener'; return a; };
     const byOrder = (a, b) => (+a.order || 1) - (+b.order || 1) || (+a.year || 0) - (+b.year || 0);
     const figure = (im) => {
-      const fig = make('figure'); const img = make('img'); img.loading = 'lazy'; img.src = imgSrc(im); img.alt = im.alt || '';
+      const fig = make('figure'); const img = make('img'); img.loading = 'lazy'; img.src = thumbSrc(im); img.alt = im.alt || '';
+      const tw = +im.thumb_w, th = +im.thumb_h;
+      if (tw && th) { // keeps the space while it loads: as wide as fits, at most 20rem (320 px) tall
+        img.classList.add('sized'); img.style.setProperty('--ar', `${tw} / ${th}`); img.style.setProperty('--w', `${Math.round(Math.min(tw, 320 * tw / th))}px`);
+      }
       img.tabIndex = 0; img.setAttribute('role', 'button'); img.title = 'Enlarge';
       const open = () => zoom(im); img.addEventListener('click', open);
       img.addEventListener('keydown', (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); open(); } });
@@ -2152,8 +2512,8 @@
       const evs = shown.filter((r) => r.year >= era.start && r.year <= era.end).sort((a, b) => a.year - b.year || String(a.date).localeCompare(String(b.date)));
       const pl = plates.filter((im) => +im.year >= era.start && +im.year <= era.end).sort((a, b) => (+a.year - +b.year) || byOrder(a, b));
       if (!evs.length && !pl.length) return;
-      const box = make('details', 'fp-era-box'); box.open = openEras.has(era.start);
-      box.addEventListener('toggle', () => { if (box.open) openEras.add(era.start); else openEras.delete(era.start); syncAllEras(); });
+      const box = make('details', 'fp-era-box'); box.open = !closedEras.has(era.start);
+      box.addEventListener('toggle', () => { if (box.open) closedEras.delete(era.start); else closedEras.add(era.start); syncAllEras(); });
       const sum = make('summary');
       const head = make('div', 'fp-era');
       head.append(make('div', 'yrs', `${era.start}–${era.end >= 2026 ? 'today' : era.end}`), make('h3', null, era.name), make('p', 'note', era.note));
@@ -2195,6 +2555,33 @@
     el.replaceChildren(...out);
     syncAllEras();
   }
+  // The way into the chronicle from the report (under "Who writes the papers"): one picture from each era, oldest first.
+  function drawTeaser() {
+    const strip = document.getElementById('chron-strip');
+    if (!strip || dash.data('history_images').status !== 'ok' || dash.data('history_events').status !== 'ok' || dash.data('history_eras').status !== 'ok') return;
+    const imgs = dash.data('history_images').data, events = dash.data('history_events').data;
+    const eras = dash.data('history_eras').data.map((r) => ({ name: r.name, start: +r.start, end: +r.end }));
+    const yearOf = new Map();
+    events.forEach((e) => String(e.image_ids || '').split(';').filter(Boolean).forEach((id) => { if (!yearOf.has(id)) yearOf.set(id, +e.year); }));
+    const dated = imgs.map((im) => ({ im, year: String(im.year).trim() !== '' ? +im.year : yearOf.get(im.image_id) })).filter((d) => d.year);
+    const pick = [];
+    eras.forEach((era) => {
+      const inEra = dated.filter((d) => d.year >= era.start && d.year <= era.end)
+        .sort((a, b) => (a.im.placement === 'era' ? 0 : 1) - (b.im.placement === 'era' ? 0 : 1) || (+a.im.order || 1) - (+b.im.order || 1) || a.year - b.year);
+      if (inEra.length) pick.push({ ...inEra[0], era });
+    });
+    // a sixth picture, from the longest era, so the strip fills a row of six on wide screens
+    const last = eras[eras.length - 1];
+    const extra = last && dated.filter((d) => d.year >= last.start && !pick.some((p) => p.im.image_id === d.im.image_id)).sort((a, b) => b.year - a.year)[0];
+    if (extra) pick.push({ ...extra, era: last });
+    strip.replaceChildren(...pick.map(({ im, year }) => {
+      const a = document.createElement('a'); a.href = '#history'; a.title = `${year}: ${im.caption}`;
+      const img = document.createElement('img'); img.loading = 'lazy'; img.src = thumbSrc(im); img.alt = im.alt || '';
+      a.append(img); return a;
+    }));
+    document.getElementById('chron-teaser-text').textContent = `The station's history from ${eras[0] ? eras[0].start : 1903} to today: ` +
+      `${f(events.length)} dated events with ${f(imgs.length)} historical photographs, clippings and maps.`;
+  }
   // A larger view of a history image, in its original colours, with its caption and credit.
   function zoom(im) {
     let dlg = document.getElementById('hist-zoom');
@@ -2212,6 +2599,47 @@
     if (phone()) { pic = document.createElement('div'); pic.className = 'pan'; pic.append(img); }
     dlg.replaceChildren(btn, pic, p);
     dlg.showModal();
+  }
+
+  // Under the mentoring network (Fig. 11), on its time axis: the technicians and staff from the chronicle's staff archive
+  // who have no documented link to an FHL scientist, so the network is not read as covering everyone who worked there.
+  function drawStaffStrip(x, drawW, width) {
+    const el = document.getElementById('ch-tree-staff');
+    if (!el || dash.data('staff').status !== 'ok' || dash.data('lineage_people').status !== 'ok') { if (el) el.replaceChildren(); return; }
+    const key = (n) => { const w = String(n).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z\s-]/g, ' ').split(/\s+/).filter((t) => t.length > 1); return w.length ? `${w[0]} ${w[w.length - 1]}` : ''; };
+    const known = new Set([...dash.data('lineage_people').data.map((r) => key(r.name)),
+      ...(dash.data('people').status === 'ok' ? dash.data('people').data.map((r) => key(r.name)) : [])]);
+    const SCIENCE = new Set(['director', 'associate or assistant director', 'resident faculty', 'research faculty or staff scientist']);
+    const TECH = new Set(['technical and research support']);
+    const seen = new Map();
+    dash.data('staff').data.filter((r) => !SCIENCE.has(r.category) && +r.start_year).forEach((r) => {
+      const k = key(r.name);
+      if (!k || known.has(k)) return;
+      const prev = seen.get(k);
+      if (!prev || +r.start_year < prev.year) seen.set(k, { name: r.name, role: r.role, year: +r.start_year, end: r.end_year, tech: TECH.has(r.category) });
+    });
+    const pts = [...seen.values()].sort((a, b) => a.year - b.year || (b.tech - a.tech));
+    const [lo, hi] = x.domain().length > 2 ? [x.domain()[0], x.domain()[x.domain().length - 1]] : x.domain();
+    const r = 3.3, step = 2 * r + 1.5;
+    const stackN = new Map();
+    pts.forEach((p) => { const yr = Math.min(hi, Math.max(lo, p.year)); const col = Math.round(x(yr) / step); p.cx = col * step; p.k = (stackN.get(col) || 0); stackN.set(col, p.k + 1); });
+    const maxK = d3.max(pts, (p) => p.k) || 0, head = 6;
+    const height = head + (maxK + 1) * step + 24;
+    const { svg } = svgFor(el, height);
+    svg.attr('viewBox', `0 0 ${drawW} ${height}`).attr('width', drawW > width ? drawW : '100%');
+    el.style.overflowX = drawW > width ? 'auto' : '';
+    const nTech = pts.filter((p) => p.tech).length;
+    const cap = document.createElement('p'); cap.className = 'cap fp-strip-head'; // HTML, so it wraps on a phone
+    cap.textContent = `Not in the network: ${f(pts.length)} technicians and staff with no documented link to an FHL scientist, at the first year the sources show them (filled: technical and research support, ${f(nTech)}; open: facilities, boats, dining, office, library and other staff, ${f(pts.length - nTech)}).`;
+    el.prepend(cap);
+    const ticks = [1910, 1930, 1950, 1970, 1990, 2010, 2020].filter((t) => t >= lo && t <= hi);
+    svg.append('g').selectAll('text').data(ticks).join('text').attr('class', 'lin-axis-note').attr('x', (t) => x(t)).attr('y', height - 4)
+      .attr('text-anchor', 'middle').text((t) => t);
+    svg.append('g').selectAll('circle').data(pts).join('circle').attr('class', 'lin-mark').attr('r', r)
+      .attr('cx', (p) => p.cx).attr('cy', (p) => height - 22 - r - p.k * step)
+      .style('fill', (p) => (p.tech ? 'var(--fp-ink)' : 'var(--fp-paper)')).style('stroke', 'var(--fp-ink)')
+      .on('mousemove', (event, p) => showTip(el, event, p.name, [[null, null, `${p.role} (${p.year}${p.end ? `–${p.end}` : ''})`]]))
+      .on('mouseleave', () => hideTip(el));
   }
 
   let lineage = null; // the drawn network, for "Find a person": { focus(name), clear(), names }
@@ -2293,6 +2721,7 @@
     ax.selectAll('line').data(ticks).join('line').attr('x1', x).attr('x2', x).attr('y1', m.top - 8).attr('y2', height - m.bottom);
     ax.selectAll('text').data(ticks).join('text').attr('x', x).attr('y', m.top - 14).attr('text-anchor', 'middle').text((t) => t);
     ax.append('text').attr('class', 'lin-axis-note').attr('x', m.left).attr('y', 11).text('Year each career began →');
+    safely(document.getElementById('ch-tree-staff'), () => drawStaffStrip(x, drawW, width));
 
     const path = (l) => d3.linkHorizontal()({ source: [byId.get(l.advisor).x, byId.get(l.advisor).y], target: [byId.get(l.student).x, byId.get(l.student).y] });
     const lk = svg.append('g').selectAll('path').data(L).join('path')
@@ -2640,7 +3069,14 @@
       if (state(elCl, ['classes'])) {
         const byYear = d3.rollup(all, (v) => d3.sum(v, (r) => r.courses), (r) => r.year);
         const per = d3.range(1904, d3.max(all, (r) => r.year) + 1).map((x) => ({ x, k: 'Courses', n: byYear.get(x) || 0 }));
-        stackedYears(elCl, per, ['Courses'], [FILL.solid], { height: 200, band: 1, valFmt: (v) => `${f(v)} course${v === 1 ? '' : 's'}` });
+        // Hovering a year lists its courses (names without the instructors in brackets), up to 14.
+        const names = d3.rollup(all, (v) => [...new Set(v.flatMap((r) => split(r.title).filter((t) => !notCourse.test(t))
+          .map((t) => t.replace(/\s*\([^)]*\)\s*$/, '').replace(/^\[[^\]]*\]\s*/g, '').trim())))], (r) => r.year);
+        const more = (yr) => {
+          const n = names.get(yr) || [];
+          return [...n.slice(0, 14).map((t) => [null, null, t]), ...(n.length > 14 ? [[null, null, `and ${f(n.length - 14)} more (see the table below)`]] : [])];
+        };
+        stackedYears(elCl, per, ['Courses'], [FILL.solid], { height: 200, band: 1, valFmt: (v) => `${f(v)} course${v === 1 ? '' : 's'}`, more });
       }
     }
     const ap = dash.data('artist_programs'), ad = dash.data('artists');
@@ -2653,6 +3089,50 @@
     if (ad.status === 'ok') {
       document.querySelectorAll('#arch-artists .cnt').forEach((e) => { e.textContent = `(${f(ad.data.length)} artists and writers)`; });
       document.querySelector('#tbl-artists tbody').replaceChildren(...ad.data.map((r) => cellRow([[r.years], [r.name], [r.medium], [r.program], [r.works], [srcLinks(r.sources)]])));
+      // Residents a year by kind of work: each counted in every year from start to end of their residency.
+      const KIND = { 'writing: poetry': 'Poetry', 'writing: prose and nonfiction': 'Prose and nonfiction',
+        'visual art: painting and drawing': 'Painting, drawing and prints', 'visual art: printmaking and mixed media': 'Painting, drawing and prints',
+        photography: 'Photography and film', 'film, video and sound': 'Photography and film' };
+      const KINDS = ['Poetry', 'Prose and nonfiction', 'Painting, drawing and prints', 'Photography and film', 'Sculpture, music, performance and other'];
+      const kFills = [FILL.solid, FILL.hatch, FILL.dots, FILL.grayl, FILL.open];
+      legend(document.getElementById('lg-art'), KINDS.map((k, i) => [k, kFills[i]]));
+      const elArt = document.getElementById('ch-art');
+      if (state(elArt, ['artists'])) {
+        const rows = [];
+        ad.data.filter((r) => +r.start_year).forEach((r) => {
+          const a = +r.start_year, b = Math.max(a, +r.end_year || a);
+          for (let y = a; y <= Math.min(b, 2026); y++) rows.push({ x: y, k: KIND[r.kind] || KINDS[4], n: 1, name: r.name });
+        });
+        const lo = d3.min(rows, (r) => r.x) || 1924;
+        d3.range(lo, 2027).forEach((y) => rows.push({ x: y, k: KINDS[0], n: 0 }));
+        const who = d3.group(rows.filter((r) => r.n), (r) => r.x);
+        stackedYears(elArt, rows, KINDS, kFills, { height: 190, band: 1, valFmt: (v) => `${f(v)}`,
+          more: (yr) => (who.get(yr) || []).slice(0, 12).map((r) => [null, null, r.name]) });
+      }
+    }
+    const ai = dash.data('art_images');
+    const gal = document.getElementById('art-gallery');
+    if (gal && ai.status === 'ok') {
+      gal.replaceChildren(...ai.data.map((im) => {
+        const fig = mk('figure'); const img = mk('img'); img.loading = 'lazy'; img.src = thumbSrc(im); img.alt = im.alt || '';
+        img.tabIndex = 0; img.setAttribute('role', 'button'); img.title = 'Enlarge';
+        const open = () => zoom(im); img.addEventListener('click', open);
+        img.addEventListener('keydown', (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); open(); } });
+        const cap = mk('figcaption', null, `${im.caption} `); cap.append(mk('span', 'credit', im.credit));
+        fig.append(img, cap); return fig;
+      }));
+    }
+    // What the classes taught: courses a decade by topic, one small panel per topic, in order of the share-weighted mean decade.
+    const ct = dash.data('course_topics');
+    const elCt = document.getElementById('ch-course-topics');
+    if (elCt && state(elCt, ['course_topics'])) {
+      const rows = ct.data.map((r) => ({ decade: +r.decade, key: r.topic, n: +r.n }));
+      const tot = d3.rollup(rows, (v) => d3.sum(v, (r) => r.n), (r) => r.decade);
+      rows.forEach((r) => { r.total = tot.get(r.decade); r.share = r.n / r.total; });
+      const peak = d3.rollup(rows, (v) => d3.sum(v, (r) => r.share * r.decade) / d3.sum(v, (r) => r.share), (r) => r.key);
+      const order = [...peak.keys()].filter((k) => k !== 'Other or not named').sort((a, b) => peak.get(a) - peak.get(b));
+      if (peak.has('Other or not named')) order.push('Other or not named');
+      multiples(elCt, rows, order, { value: (r) => r.n, fmt: f, tip: (r) => `${f(r.n)} course${r.n === 1 ? '' : 's'} in the ${r.decade}s` });
     }
   }
 
@@ -2674,50 +3154,92 @@
     const elSp = document.getElementById('ch-split');
     const SPLIT = [['With an FHL scientist among the authors', FILL.solid], ['By visitors, students and other collaborators', FILL.dots],
       ['Authors not known', FILL.grayl], ['Do not name FHL', FILL.hatch]];
-    legend(document.getElementById('lg-split'), SPLIT);
     if (state(elSp, ['network_split'])) {
       const yrs = dash.data('network_split').data.filter((r) => +r.year >= 2016 && +r.year <= 2025);
       const avg = (k) => d3.mean(yrs, (r) => +r[k]) || 0;
       const A = avg('by_fhl_scientists'), B = avg('by_others'), U = avg('no_author_data'), T = avg('fhl_scientists_all');
       const r0 = (v) => f(Math.round(v));
       [['split-fhl', A], ['split-others', B], ['split-all', T]].forEach(([id, v]) => { const e = document.getElementById(id); if (e) e.textContent = r0(v); });
-      const bar = 26, lh = 18;
-      const { svg, width } = svgFor(elSp, lh + 2 * bar + 20 + 22);
-      const vw = textWidth(svg, [`${r0(T)} a year`, `${r0(A + B + U)} a year`]) + 10;
-      const x = d3.scaleLinear([0, Math.max(T, A + B + U)], [0, width - vw]);
-      const rows = [
-        { label: 'Papers that name FHL', y: lh, segs: [[SPLIT[0], 0, A], [SPLIT[1], A, A + B], [SPLIT[2], A + B, A + B + U]], total: A + B + U },
-        { label: `Everything the ${f(dash.data('people').status === 'ok' ? dash.data('people').data.filter((p) => (p.basis || 'address') === 'address').length : 176)} FHL scientists published, wherever they were`,
-          y: lh + bar + 20, below: true, segs: [[SPLIT[0], 0, A], [SPLIT[3], A, T]], total: T },
+      // A flow chart: the papers that name FHL (left) and everything FHL scientists publish (right) meet in the middle,
+      // where FHL scientists' papers name the station.
+      const nSci = dash.data('people').status === 'ok' ? dash.data('people').data.filter((p) => (p.basis || 'address') === 'address').length : 176;
+      const W = Math.max(260, elSp.clientWidth), small = W < 560;
+      const fs = small ? 10.5 : 13, numFs = small ? 18 : 24, pad = small ? 6 : 10, lineH = fs * 1.25;
+      const colW = W / 3, bw = colW - (small ? 8 : 16), tw = Math.min(W * 0.46, small ? W * 0.48 : 330);
+      const probe = svgFor(elSp, 10).svg;
+      const wrap = (text, width, size) => { // greedy word wrap measured in the page's font
+        const t = probe.append('text').style('font-size', `${size}px`);
+        const out = []; let line = '';
+        for (const w of String(text).split(' ')) {
+          const tryLine = line ? `${line} ${w}` : w;
+          t.text(tryLine);
+          if (t.node().getComputedTextLength() > width && line) { out.push(line); line = w; } else line = tryLine;
+        }
+        if (line) out.push(line); t.remove(); return out;
+      };
+      const boxH = (lines, notes) => pad * 2 + numFs + 6 + lines.length * lineH + (notes.length ? 4 + notes.length * lineH * 0.9 : 0);
+      const tops = [
+        { cx: W * 0.25, w: tw, num: `${r0(A + B + U)} a year`, label: 'publications name FHL (verified, 2016–2025 average)',
+          note: U >= 0.5 ? `${r0(U)} of them have no author data` : '' },
+        { cx: W * 0.75, w: tw, num: `${r0(T)} a year`, label: `papers by the ${f(nSci)} FHL scientists, wherever they were`,
+          note: 'FHL scientists: FHL is their address on at least three verified publications (section IV)' },
       ];
-      rows.forEach((r) => {
-        svg.append('text').attr('class', 'lbl').attr('x', 0).attr('y', r.below ? r.y + bar + 15 : r.y - 6).text(r.label);
-        const g = svg.append('g');
-        r.segs.forEach(([[name, fill], a, b]) => {
-          if (b - a <= 0) return;
-          const seg = g.append('g').attr('data-key', name);
-          seg.append('rect').attr('class', 'mark').attr('x', x(a)).attr('y', r.y).attr('width', Math.max(1, x(b) - x(a))).attr('height', bar).style('fill', fill);
-          if (x(b) - x(a) > 30) {
-            seg.append('text').attr('x', (x(a) + x(b)) / 2).attr('y', r.y + bar / 2).attr('dy', '0.35em').attr('text-anchor', 'middle')
-              .attr('class', 'seglbl').classed('on-ink', fill === FILL.solid).text(r0(b - a));
-          }
-          seg.on('mousemove', (event) => showTip(elSp, event, name, [[fill, null, `${r0(b - a)} a year (2016–2025 average)`]]))
-            .on('mouseleave', () => hideTip(elSp));
-        });
-        svg.append('text').attr('x', x(r.total) + 6).attr('y', r.y + bar / 2).attr('dy', '0.35em').text(`${r0(r.total)} a year`);
+      const bots = [
+        { cx: colW * 0.5, fill: SPLIT[1][1], name: SPLIT[1][0], num: r0(B), label: 'by visitors, students and other collaborators', from: [0] },
+        { cx: colW * 1.5, fill: SPLIT[0][1], name: SPLIT[0][0], num: r0(A), label: 'by FHL scientists, naming FHL', from: [0, 1], shared: true },
+        { cx: colW * 2.5, fill: SPLIT[3][1], name: 'By FHL scientists, not naming FHL', num: r0(T - A), label: 'by FHL scientists, not naming FHL', from: [1] },
+      ];
+      [...tops, ...bots].forEach((d) => {
+        d.w = d.w || bw;
+        d.lines = wrap(d.label, d.w - pad * 2 - (d.fill ? 0 : 0), fs);
+        d.notes = d.note ? wrap(d.note, d.w - pad * 2, fs * 0.88) : [];
+        d.h = boxH(d.lines, d.notes);
       });
-      // the shared part: the same papers in both bars
-      svg.append('rect').attr('class', 'shared').attr('x', 0).attr('y', rows[0].y - 2).attr('width', x(A)).attr('height', rows[1].y + bar - rows[0].y + 4);
+      const topH = d3.max(tops, (d) => d.h), botH = d3.max(bots, (d) => d.h), gap = small ? 34 : 44;
+      elSp.replaceChildren();
+      const { svg } = svgFor(elSp, topH + gap + botH + 2);
+      tops.forEach((d) => { d.y = 1; d.h = topH; });
+      bots.forEach((d) => { d.y = topH + gap; d.h = botH; });
+      svg.append('defs').append('marker').attr('id', 'split-arrow').attr('viewBox', '0 0 10 10').attr('refX', 9).attr('refY', 5)
+        .attr('markerWidth', 7).attr('markerHeight', 7).attr('orient', 'auto-start-reverse')
+        .append('path').attr('d', 'M0,0L10,5L0,10z').style('fill', 'var(--fp-ink)');
+      bots.forEach((d) => d.from.forEach((i) => {
+        const t = tops[i];
+        const x1 = t.cx + (d.cx - t.cx) * 0.35, y1 = t.y + t.h, x2 = d.cx + (t.cx - d.cx) * 0.12, y2 = d.y - 2;
+        svg.append('path').attr('class', 'flow').attr('d', `M${x1},${y1} C${x1},${(y1 + y2) / 2} ${x2},${(y1 + y2) / 2} ${x2},${y2}`)
+          .attr('marker-end', 'url(#split-arrow)');
+      }));
+      const box = (d, isTop) => {
+        const g = svg.append('g').attr('transform', `translate(${d.cx - d.w / 2},${d.y})`).attr('data-key', d.name || null);
+        g.append('rect').attr('class', `fbox${d.shared ? ' shared-box' : ''}`).attr('width', d.w).attr('height', d.h);
+        let y = pad;
+        if (d.fill) g.append('rect').attr('class', 'mark').attr('x', pad).attr('y', y + 4).attr('width', numFs * 0.8).attr('height', numFs * 0.8).style('fill', d.fill);
+        g.append('text').attr('class', 'fnum').attr('x', d.fill ? pad + numFs : pad).attr('y', y + numFs * 0.85).style('font-size', `${numFs}px`).text(d.num);
+        y += numFs + 6;
+        d.lines.forEach((l) => { y += lineH; g.append('text').attr('class', 'flbl').attr('x', pad).attr('y', y - lineH * 0.25).style('font-size', `${fs}px`).text(l); });
+        if (d.notes.length) { y += 4; d.notes.forEach((l) => { y += lineH * 0.9; g.append('text').attr('class', 'fnote').attr('x', pad).attr('y', y - lineH * 0.25).style('font-size', `${fs * 0.88}px`).text(l); }); }
+        g.on('mousemove', (event) => showTip(elSp, event, isTop ? d.label : d.name, [[d.fill || null, null, `${d.num}${isTop ? '' : ' a year'} (2016–2025 average)`]]))
+          .on('mouseleave', () => hideTip(elSp));
+      };
+      tops.forEach((d) => box(d, true));
+      bots.forEach((d) => box(d, false));
     }
 
     // ---- publications per year by tier ------------------------------------------------------------------------
     const elTier = document.getElementById('ch-tier');
-    const tierFills = [FILL.solid, FILL.hatch, FILL.dots];
-    legend(document.getElementById('lg-tier'), TIER_KEYS.map((k, i) => [k, tierFills[i]]));
-    if (state(elTier, ['by_year_tier', 'eras'])) {
+    // Research papers and books are shaded by tier; everything else (student and course reports, theses, datasets,
+    // meeting abstracts, preprints, agency reports and the rest) is one lighter layer on top.
+    const RESEARCH = new Set(['Journal article', 'Review article', 'Book', 'Book chapter', 'Letter']);
+    const OTHER_WORK = 'Other work, all tiers';
+    const tierKeys = [...TIER_KEYS, OTHER_WORK];
+    const tierFills = [FILL.solid, FILL.hatch, FILL.dots, FILL.grayl];
+    legend(document.getElementById('lg-tier'), tierKeys.map((k, i) => [i < TIER_KEYS.length ? `Research papers and books: ${k.toLowerCase() === 'listed by fhl' ? 'listed by FHL' : k.toLowerCase()}` : 'Other work (student reports, theses, datasets, abstracts, agency reports and more): all tiers', tierFills[i], k]));
+    if (state(elTier, ['publications', 'eras'])) {
       const eras = dash.data('eras').data.map((e) => ({ start: +e.start, end: +e.end, name: e.name, short: ERA_SHORT[e.name] || e.name }));
-      const rows = dash.data('by_year_tier').data.map((r) => ({ x: +r.year, k: r.tier, n: +r.n }));
-      stackedYears(elTier, rows, TIER_KEYS, tierFills, { eras, height: 330 });
+      const rows = dash.data('publications').data.filter((r) => +r.year)
+        .map((r) => ({ x: Math.round(+r.year), k: RESEARCH.has(r.publication_type) ? r.evidence_tier : OTHER_WORK, n: 1 }))
+        .filter((r) => tierKeys.includes(r.k));
+      stackedYears(elTier, rows, tierKeys, tierFills, { eras, height: 330 });
     }
 
     // ---- what the research was about -----------------------------------------------------------------------
@@ -2901,7 +3423,7 @@
       }));
     }
 
-    // ---- methods figures (Figs. 21-25) --------------------------------------------------------------------------
+    // ---- methods figures (Figs. 21-28) --------------------------------------------------------------------------
     const mk = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
     const dgFlow = document.getElementById('dg-flow');
     if (state(dgFlow, ['methods_facts', 'candidate_status'])) {
@@ -2965,19 +3487,12 @@
       const rows = d3.rollups(dash.data('lineage').data, (v) => v.length, (l) => l.source).map(([source, n]) => ({ source, n })).sort((a, b) => b.n - a.n);
       hbars(elLs, rows, 'source', 'n', { fill: FILL.hatch });
     }
-    const elAi = document.getElementById('ch-airuns');
-    const EFF = [['xhigh', FILL.hatch], ['max', FILL.solid]];
-    legend(document.getElementById('lg-airuns'), EFF.map(([k, fl]) => [`Effort ${k}`, fl]));
-    if (state(elAi, ['ai_workflows'])) {
-      const rows = dash.data('ai_workflows').data.map((r) => ({ run: r.workflow, agents: +r.agents, effort: r.effort }));
-      hbars(elAi, rows, 'run', 'agents', { fill: (d) => (d.effort === 'max' ? FILL.solid : FILL.hatch), keyOf: (d) => `Effort ${d.effort}`,
-        tipTitle: (d) => `${d.run} (effort ${d.effort})` });
-    }
 
     drawArchive();
 
     // ---- chronicle of the station ------------------------------------------------------------------------------
     drawHistory();
+    drawTeaser();
 
     // ---- the prompts, as typed: when, and the output tokens each led to ----------------------------------------
     const pr = dash.data('prompts');
@@ -3058,6 +3573,71 @@
   tierSel.addEventListener('change', drawPubs);
   topicSel.addEventListener('change', drawPubs);
 </script>
+<script>
+  // The feedback form (in the masthead): opens over the report and posts the note to the authors' Google Sheet through
+  // a Google Apps Script web app (scripts/feedback_apps_script.gs), so the reader never leaves the page. Without an
+  // endpoint, or where the browser has no <dialog>, the link keeps opening the public GitHub form.
+  (() => {
+    const open = document.getElementById('fb-open'), dlg = document.getElementById('fb-dialog');
+    const endpoint = (open && open.dataset.endpoint || '').trim();
+    if (!open || !dlg || !endpoint || typeof dlg.showModal !== 'function') return;
+    const form = document.getElementById('fb-form'), what = document.getElementById('fb-what'), where = document.getElementById('fb-where');
+    const status = document.getElementById('fb-status'), send = document.getElementById('fb-send');
+    const done = document.getElementById('fb-done');
+    open.removeAttribute('target');
+    open.href = '#feedback';
+    document.getElementById('fb-note').textContent = '(no account needed; goes privately to the authors)';
+    // The heading of the part of the report in view, to prefill "Where".
+    const inView = () => {
+      let best = '';
+      for (const h of document.querySelectorAll('#fhl-profile h2, #fhl-profile h3')) {
+        if (!h.offsetParent || h.closest('dialog, .fp-mast')) continue;
+        if (h.getBoundingClientRect().top < 140) best = h.textContent; else break;
+      }
+      return best.replace(/\s+/g, ' ').trim().slice(0, 200);
+    };
+    const copy = () => /github\.io$/.test(location.hostname) ? 'website' : location.protocol === 'file:' || /^(localhost|127\.)/.test(location.hostname)
+      ? 'standalone file' : 'online sheet';
+    const show = (msg, err) => { status.textContent = msg; status.classList.toggle('err', !!err); };
+    open.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      form.hidden = false; done.hidden = true; show('');
+      if (!where.value) where.value = inView();
+      dlg.showModal();
+      what.focus();
+    });
+    document.getElementById('fb-cancel').addEventListener('click', () => dlg.close());
+    document.getElementById('fb-close').addEventListener('click', () => dlg.close());
+    form.addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      if (!what.value.trim()) { show('Please write your correction or suggestion first.', true); what.focus(); return; }
+      const body = new URLSearchParams(new FormData(form));
+      body.set('page', `${copy()}${document.querySelector('.fp.tab-chronicle') ? ', chronicle tab' : ''}`);
+      send.disabled = true; show('Sending…');
+      const stop = new AbortController(), timer = setTimeout(() => stop.abort(), 20000);
+      try {
+        // A plain form post (no preflight); the receiver answers "ok", "busy" or "empty", readable across sites.
+        const res = await fetch(endpoint, { method: 'POST', body, signal: stop.signal });
+        const reply = (await res.text()).trim();
+        if (reply === 'ok') {
+          form.reset(); where.value = '';
+          form.hidden = true; done.hidden = false; show('');
+          document.getElementById('fb-close').focus();
+        } else if (reply === 'busy') {
+          show('Many notes are arriving just now. Please try again in a few minutes, or use the GitHub form below. Your text is kept.', true);
+        } else {
+          show('Your note could not be saved. Please try again, or use the GitHub form below. Your text is kept.', true);
+        }
+      } catch (err) {
+        // Sent but unconfirmed is possible here (the reply was lost), so say so rather than inviting a duplicate at once.
+        show('We could not confirm that your note arrived. Please wait a minute before trying again, or use the GitHub form below. Your text is kept.', true);
+      } finally {
+        clearTimeout(timer); send.disabled = false;
+      }
+    });
+  })();
+</script>
+
 
 <script>
   // Save a figure as a PNG or SVG image: its key, the chart and its caption, always in black ink on white paper.
@@ -3105,11 +3685,12 @@
       try { return fn(); } finally { if (prev === null) html.removeAttribute('data-theme'); else html.setAttribute('data-theme', prev); }
     };
     const build = (fig) => {
-      const chart = fig.querySelector('.fp-chart svg');
+      // every chart in the figure, top to bottom (Fig. 11 has the network and the staff strip below it)
+      const charts = Array.from(fig.querySelectorAll('.fp-chart svg')).filter((c) => c.viewBox.baseVal && c.viewBox.baseVal.width);
       const page = document.getElementById('fhl-profile'), pcs = getComputedStyle(page);
       const ink = pcs.color, paper = pcs.backgroundColor, serif = pcs.fontFamily;
       const ink2 = getComputedStyle(fig.querySelector('figcaption .cap') || page).color;
-      const vb = chart.viewBox.baseVal, pad = 28, W = Math.round(vb.width + pad * 2), inner = W - pad * 2;
+      const pad = 28, W = Math.round(Math.max(...charts.map((c) => c.viewBox.baseVal.width)) + pad * 2), inner = W - pad * 2;
       const font = (size, color, extra = '') => `font-family:${serif};font-size:${size}px;fill:${color};${extra}`;
       const out = el('svg', { xmlns: NS, version: '1.1' });
       const defsSrc = document.querySelector('.fp-defs defs'), defs = defsSrc.cloneNode(true);
@@ -3133,15 +3714,18 @@
         }
         y += 30;
       }
-      const clone = chart.cloneNode(true); inline(chart, clone);
-      clone.querySelectorAll('rect').forEach((r) => { // drop the invisible hover targets
-        const st = r.getAttribute('style') || '';
-        if (st.includes('fill:rgba(0, 0, 0, 0)') && st.includes('stroke:none')) r.remove();
-      });
-      const g = el('g', { transform: `translate(${pad},${y})` });
-      while (clone.firstChild) g.appendChild(clone.firstChild);
-      out.appendChild(g);
-      y += vb.height + 12;
+      for (const c of charts) {
+        const vb = c.viewBox.baseVal;
+        const clone = c.cloneNode(true); inline(c, clone);
+        clone.querySelectorAll('rect').forEach((r) => { // drop the invisible hover targets
+          const st = r.getAttribute('style') || '';
+          if (st.includes('fill:rgba(0, 0, 0, 0)') && st.includes('stroke:none')) r.remove();
+        });
+        const g = el('g', { transform: `translate(${pad},${y})` });
+        while (clone.firstChild) g.appendChild(clone.firstChild);
+        out.appendChild(g);
+        y += vb.height + 12;
+      }
       const h3 = fig.querySelector('h3'), label = (h3.querySelector('.fig')?.textContent || '').trim();
       const title = h3.textContent.replace(label, '').replace(/^\s*—\s*/, '').trim();
       const fCap = font(14, ink);

@@ -1,6 +1,6 @@
 # Research publications of the Friday Harbor Laboratories
 
-By Claude Opus 5.5 and Willem Lee Weertman.
+By Claude Opus 5.5, Willem Lee Weertman and Marjorie Wonham.
 
 A census of the work published from Friday Harbor Laboratories (FHL), the University of Washington's marine
 station on San Juan Island, since it opened in 1904. It includes work published under the station's earlier names: the Puget

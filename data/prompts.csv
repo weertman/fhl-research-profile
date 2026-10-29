@@ -61,7 +61,7 @@ n,kind,typed_utc,typed_local,messages,text,tokens_claude,tokens_agents,agents,to
 47,typed,2026-10-15T20:49:01.772Z,2026-10-15 13:49,1,"i have an idea to add a section towards the bottom, a visual history of the laboratory pulling from historic images and news stories scraped from the internet. please redescribe in technicals terms",2205,0,0,2205
 48,typed,2026-10-15T20:51:51.571Z,2026-10-15 13:51,1,do it,31213,0,0,31213
 49,typed,2026-10-15T21:31:24.903Z,2026-10-15 14:31,1,how is the visual story going?,36284,1079607,20,1115891
-50,typed,2026-10-15T23:10:55.559Z,2026-10-15 16:10,1,push it,19402,0,0,19402
+50,typed,2026-10-15T23:10:55.559Z,2026-10-15 16:10,1,push it,19263,0,0,19263
 51,typed,2026-10-15T23:41:56.585Z,2026-10-15 16:41,1,its amazing! looks like it could use more images,63059,1651167,44,1714226
 52,typed,2026-10-15T23:59:12.265Z,2026-10-15 16:59,1,push when its done,153,0,0,153
 53,typed,2026-10-16T00:00:28.974Z,2026-10-15 17:00,1,"id like to make the visualizations format better on mobile. currently. it works amazingly on my computer. but on mobile its bunched. i want the same behavior on desktop, but better behavior on mobile",45834,210221,6,256055
@@ -69,7 +69,10 @@ n,kind,typed_utc,typed_local,messages,text,tokens_claude,tokens_agents,agents,to
 55,typed,2026-10-16T03:05:22.130Z,2026-10-15 20:05,1,Id like you to add an ode to marine life at the very bottom of the report in your own words.,12009,15306,1,27315
 56,typed,2026-10-16T03:08:29.012Z,2026-10-15 20:08,1,i think this is far to long. i was imagining something shorter.,4227,0,0,4227
 57,typed,2026-10-16T03:10:51.723Z,2026-10-15 20:10,1,okay quote yourself at the end of it and push it.,3671,0,0,3671
-58,typed,2026-10-28T16:02:54.905Z,2026-10-28 09:02,1,"Claude Wishlist
+58,typed,2026-10-28T16:04:00.164Z,2026-10-28 09:04,1,"Mar and I, Ma is who we are making this project for, sat down and went over things we'd like different in this report. here is a the list. please redescribe in technical detail
+
+
+Claude Wishlist
 Inbox
 Summarize this email
 
@@ -108,4 +111,41 @@ Link to territorial lands/waters acknowledgement and statement of location in Co
  
 
 
-[signature removed]",0,0,0,0
+[signature removed]",24383,0,0,24383
+59,typed,2026-10-28T16:20:02.257Z,2026-10-28 09:20,1,"A few comments. if not mentioned otherwise i approve the plan.
+
+1. i think its important to split. papers from the fhl scientists directly and the network. this is useful information and easy to confuse. a little simple graphic at the top could help. 
+2. Land acknowledgement. UW has official wordage on this. I think it would probably be best at the top of the visual historical archive.
+3. for the w7 fig rescales. scale to the tallest bars not 250. 
+4. for text not readable, make it clear that it was because you hit a pay or wall or something like that in the methods.
+5. Libbie, ... hmmm... yes... maybe we need to loosen the fhl scientist rule a bit for historical fhlers who helped make the institute but were non-typical to modern standards.
+6. feedback button should be at the top. i think use the github to store the feedback.
+7. i think the methods section could use so graphcs to help with interpretability. 
+8. for the historical visual archive, it should be collapsable. also some of the more minor plots. eg., counts of pubs. those should be collapse able.",154360,8122037,134,8276397
+60,typed,2026-10-28T16:56:11.022Z,2026-10-28 09:56,1,push it when its done,4462,0,0,4462
+61,typed,2026-10-28T18:49:02.812Z,2026-10-28 11:49,1,had to close my laptop for a sec. please check stuff is continuing,155211,1107588,11,1262799
+62,typed,2026-10-28T22:41:22.710Z,2026-10-28 15:41,1,status?,962,0,0,962
+63,typed,2026-10-28T22:42:29.004Z,2026-10-28 15:42,1,is the public github updated?,528,0,0,528
+64,typed,2026-10-28T22:43:22.466Z,2026-10-28 15:43,1,is there a way for the suggestion to be sent that doesnt require a github account? that is a big point of friction for older users,1080,0,0,1080
+65,typed,2026-10-28T22:44:25.356Z,2026-10-28 15:44,1,i want it to be such that users don't leave the page,1469,0,0,1469
+66,typed,2026-10-28T22:45:26.738Z,2026-10-28 15:45,1,okay google sheet,18322,0,0,18322
+67,typed,2026-10-28T22:49:21.240Z,2026-10-28 15:49,1,what happened to all the images in the visual history?,912,0,0,912
+68,typed,2026-10-28T22:49:47.521Z,2026-10-28 15:49,1,oh i see. i have to click that little button. that visual chronicle needs to be more prominent,2950,0,0,2950
+69,typed,2026-10-28T22:50:29.243Z,2026-10-28 15:50,1,a lot of the images seem to not work anymore,900,0,0,900
+70,typed,2026-10-28T22:50:53.622Z,2026-10-28 15:50,1,or atleast they take awhile to load,3714,0,0,3714
+71,typed,2026-10-28T22:51:51.046Z,2026-10-28 15:51,1,"Fig. 1.—Publications per year, by how directly the FHL connection was confirmed.
+
+needs to have scientific reports seperated somehow. i like the single panel figure.",5943,0,0,5943
+72,typed,2026-10-28T22:52:53.341Z,2026-10-28 15:52,1,the world time selection should be a slider,3886,0,0,3886
+73,typed,2026-10-28T22:53:54.009Z,2026-10-28 15:53,1,not all technicians and staff have a connection to an fhl scientist. somehow our graph needs to reflect this.,4514,0,0,4514
+74,typed,2026-10-28T22:56:57.155Z,2026-10-28 15:56,1,"these figs should be collapsable with default being collapsed. 
+
+fig 2, fig 3, fig 6, fig 13, fig 18, fig 19, tab 3, get rid of fig 25, the methods need more diagrams around how the agents searched",6101,97791,5,103892
+75,typed,2026-10-28T22:58:10.010Z,2026-10-28 15:58,1,"i think. we need atleast 1 or 2 images for every year in the chronicle. for later years where this is harder, ive talk to the fhl staff, its okay if we use images sourced from fhl archives so long as we attribute them.",7106,0,0,7106
+76,typed,2026-10-28T22:59:26.712Z,2026-10-28 15:59,1,The classes at the station. id like an added figure that shows the topics of the courses over the years. also. when i drag over the classes at the station figure i want to see the counts but also the names of the courses.,9842,0,0,9842
+77,typed,2026-10-28T23:00:25.576Z,2026-10-28 16:00,1,the artists in residence section needs some images of art that was made and a figure of its timeline which helps the reader understand amount and kind of art being made,0,0,0,0
+78,typed,2026-10-28T23:00:51.845Z,2026-10-28 16:00,1,the very first who is an fhl scientist key. i think it could be more clear. like a flow chart or something. i like the numbers,41479,693022,41,734501
+79,typed,2026-10-28T23:08:08.769Z,2026-10-28 16:08,1,"im making this in colab with [link to her profile] marjorie wonham of the uwfhl
+
+she should be a co-author.",12849,0,0,12849
+80,typed,2026-10-28T23:17:00.253Z,2026-10-28 16:17,1,ill need very clear step by step instructions on the google slides,40505,644997,26,685502
