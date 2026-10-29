@@ -3682,6 +3682,8 @@
   const el = (id) => document.getElementById(id);
   const mk = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
   const n = (v) => (v === '' || v == null ? 0 : +v);
+  // the online runtime types CSV cells ("16" arrives as 16, an empty cell as null); the other copies keep text
+  const str = (v) => (v == null ? '' : String(v));
   const words = (x) => { // a share as words where it is close to a simple fraction
     const fr = [[1 / 4, 'a quarter'], [1 / 3, 'a third'], [1 / 2, 'half'], [2 / 3, 'two-thirds'], [3 / 4, 'three-quarters']];
     const hit = fr.find(([v]) => Math.abs(x - v) < 0.012);
@@ -3694,9 +3696,10 @@
   const load = () => {
     const facts = new Map(dash.data('methods_facts').data.map((r) => [r.fact, +r.value]));
     const runs = new Map(dash.data('ai_workflows').data.map((r) => [+r.run, { ...r, run: +r.run, agents: +r.agents,
+      logged: str(r.logged), patterns: str(r.patterns), follows_run: str(r.follows_run), prompt_n: str(r.prompt_n), effort_logged: str(r.effort_logged),
       name: String(r.workflow).replace(/^\d+\.\s*/, '').replace(/^fhl-/, ''), t: Date.parse(String(r.started_utc).replace(' ', 'T') + ':00Z') }]));
     const agents = dash.data('agents').data.map((r) => {
-      const a = { run: +r.run, stage: r.stage, stage_i: +r.stage_i, lane: r.lane, role: r.role, status: r.status, logged: r.logged === '1',
+      const a = { run: +r.run, stage: str(r.stage), stage_i: +r.stage_i, lane: str(r.lane), role: r.role, status: r.status, logged: str(r.logged) === '1',
         t: r.start_utc ? Date.parse(r.start_utc) : null, dur: n(r.dur_min), out: n(r.out_tokens) };
       ['search', 'fetch', 'web_script', 'local_script', 'read'].forEach((k) => { a[k] = n(r[k]); });
       a.wo = n(r.write) + n(r.other);
@@ -3831,7 +3834,7 @@
   const picked = {}; // the run each panel shows, kept across redraws
   const drawRun = (panel, D, rn, ln) => {
     const body = panel.querySelector('.fm-chain');
-    const stages = dash.data('agent_stages').data.filter((s) => +s.run === rn && (!ln || s.lane === ln))
+    const stages = dash.data('agent_stages').data.filter((s) => +s.run === rn && (!ln || str(s.lane) === ln))
       .sort((a, b) => +a.stage_i - +b.stage_i);
     const r = D.runs.get(rn);
     const head = mk('p', 'fm-runhead');
@@ -4058,8 +4061,8 @@
   const drawCensus = (box, D) => {
     const ph = phone();
     const rows = dash.data('census_steps').data.map((r) => ({ ...r, step_i: +r.step_i, value: +r.value }));
-    const steps = d3.groups(rows, (r) => r.step_i).map(([i, segs]) => ({ i, step: segs[0].step, actors: segs[0].actors.split(' ').filter(Boolean),
-      runs: segs[0].runs.split(' ').filter(Boolean).map(Number), only: String(segs[0].only || '').split(';').filter(Boolean).map((x) => x.split(':')), segs }));
+    const steps = d3.groups(rows, (r) => r.step_i).map(([i, segs]) => ({ i, step: segs[0].step, actors: str(segs[0].actors).split(' ').filter(Boolean),
+      runs: str(segs[0].runs).split(' ').filter(Boolean).map(Number), only: str(segs[0].only).split(';').filter(Boolean).map((x) => x.split(':')), segs }));
     // an agent belongs to a step when its run does, unless the step names only some of that run's stages
     const inStep = (s, a) => s.runs.includes(a.run) && (!s.only.some(([r]) => +r === a.run) || s.only.some(([r, st]) => +r === a.run && st === a.stage));
     const max = d3.max(steps, (s) => d3.sum(s.segs, (x) => x.value));
@@ -4204,7 +4207,7 @@
   // ---- Fig. 26: what the checking agents changed -----------------------------------------------------------------
   const drawChecks = (box) => {
     const ph = phone();
-    const rows = dash.data('methods_checks').data.map((r) => ({ ...r, made: +r.made, checked: +r.checked, confirmed: +r.confirmed, corrected: +r.corrected, dropped: +r.dropped, unsettled: +r.unsettled }));
+    const rows = dash.data('methods_checks').data.map((r) => ({ ...r, runs: str(r.runs), made: +r.made, checked: +r.checked, confirmed: +r.confirmed, corrected: +r.corrected, dropped: +r.dropped, unsettled: +r.unsettled }));
     const OUT = [['confirmed', PAPER], ['corrected', FILL.hatch], ['dropped', FILL.solid], ['unsettled', FILL.dots]];
     const W = Math.max(260, box.clientWidth), lw = ph ? 0 : 230, rw = ph ? 0 : 92, bw = W - lw - rw - (ph ? 0 : 12);
     const groups = d3.groups(rows, (r) => r.group);
