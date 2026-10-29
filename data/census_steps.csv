@@ -1,0 +1,38 @@
+step_i,step,actors,runs,only,segment,value,who,label
+1,Search,agent script claude,1 4,,historical archives,6585,agent,rows found
+1,Search,agent script claude,1 4,,FHL's own lists,6146,agent,rows found
+1,Search,agent script claude,1 4,,theses and reports,1682,agent,rows found
+1,Search,agent script claude,1 4,,Europe PMC,1251,agent,rows found
+1,Search,agent script claude,1 4,,PubMed and PMC,1230,agent,rows found
+1,Search,agent script claude,1 4,,Crossref,660,agent,rows found
+1,Search,agent script claude,1 4,,datasets,592,agent,rows found
+1,Search,agent script claude,1 4,,news,1025,agent,rows found
+1,Search,agent script claude,1 4,,OpenAlex,5045,script,rows found
+1,Search,agent script claude,1 4,,Web of Science,2543,claude,rows exported by Claude after the compiler signed in
+2,Merge,script,,,candidates,15962,script,candidate records
+3,Written rules,script,,,decided by a rule,8377,script,records decided by a written rule
+4,Screening,agent review,2 6,,first round,4201,agent,records judged in the first round
+4,Screening,agent review,2 6,,second round,1297,agent,records judged in the second round
+4,Screening,agent review,2 6,,calibration changes,275,review,decisions changed by the calibrators
+5,Audit,check review,3 5,5:Audit listed,random sample,340,check,decisions in the stratified random sample
+5,Audit,check review,3 5,5:Audit listed,FHL's lists only,40,check,"records only on FHL's lists, audited by the resolution run"
+6,Resolution,agent,5,5:Resolve,confirmed,189,agent,confirmed as FHL work
+6,Resolution,agent,5,5:Resolve,rejected,779,agent,rejected
+6,Resolution,agent,5,5:Resolve,undecided,428,agent,could not be decided
+7,Topics,agent claude,7 21,,labelled by agents,6501,agent,publications given a topic by the labelling agents
+7,Topics,agent claude,7 21,,labelled later,39,claude,publications labelled later in the coordinating session
+8,Clean-up,claude,,,duplicates merged,162,claude,duplicate records merged away
+8,Clean-up,claude,,,removed,160,claude,not publications or false matches
+8,Clean-up,claude,,,moved to Mention only,50,claude,obituaries and similar pieces
+9,Re-reading,agent check,16,,read,624,agent,read well enough to decide
+9,Re-reading,agent check,16,,"read, unsettled",119,agent,"read, but not settled"
+9,Re-reading,agent check,16,,could not be read,1432,none,could not be read
+10,Address check,agent check,17,,FHL an address,74,agent,give FHL as an author address
+10,Address check,agent check,17,,FHL not an address,659,agent,addresses read; none is FHL
+10,Address check,agent check,17,,addresses not seen,171,none,addresses could not be seen
+11,Final decision,,,,written rule,8377,script,decided by a written rule
+11,Final decision,,,,AI screening,6081,agent,decided by AI screening
+11,Final decision,,,,calibration,259,review,decided by the calibrators
+11,Final decision,,,,audit,365,check,decided by the audit
+11,Final decision,,,,re-reading,508,agent,decided by the re-reading
+11,Final decision,,,,clean-up,372,claude,merged or removed in the clean-up

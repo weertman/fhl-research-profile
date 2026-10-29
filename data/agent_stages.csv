@@ -1,0 +1,60 @@
+run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
+1,,0,Harvest,make,8,,,,the search plan and the station's names,searches one family of sources for every name
+1,,1,Critique,review,1,,,,all eight searches' files and logs,re-counts every file; lists gaps for a second round
+2,,0,Screen,make,23,4201,records,,a batch of records the rules could not decide,judges each record against the screening guide
+2,,1,Calibrate,review,1,,,,every batch's decisions,re-judges a sample across batches; overrides inconsistent calls
+3,,0,Audit,check,9,340,decisions,,"a random sample of decisions, by stratum",opens each publication and tries to prove the decision wrong
+3,,1,Adjudicate,review,9,,,,only the batch's disagreements,re-checks each disputed record and rules
+4,,0,Harvest,make,2,,,,the critic's list of gaps,extends one earlier search
+5,,0,Resolve,make,23,1396,records,189 confirmed · 779 rejected · 428 undecided,"unverified candidates, never seen in the text",opens each record and looks for the station
+5,,1,Audit listed,check,1,40,records,,records only on FHL's own lists,judges a random sample of them
+6,,0,Screen,make,7,1297,records,,the second round's candidates,judges each record against the screening guide
+6,,1,Calibrate,review,1,,,,round-two and round-one decisions,compares the rounds; overrides inconsistent calls
+7,,0,Label,make,16,6501,publications,,a random batch of publications and the topic guide,gives each a research topic and organism group
+7,,1,Second labeller,check,1,300,publications,282 given the same topic,"a random sample, without the first labels",labels them again to measure agreement
+8,,0,Check,make,1,,,,a random sample of inferred mentor links,"searches theses, lab pages and CVs for each pair"
+9,links,0,Check,make,16,146,links,56 settled on a direct source; the rest to a second look,a batch of mentor links inferred from co-authorship,"searches public records; mentor, peer or unclear"
+9,links,1,Second look,check,16,90,verdicts,68 agreed · 16 settled by a deeper search · 6 disputed,verdicts not resting on a direct source,"judges them again, independently"
+9,links,2,Adjudicate,review,4,6,links,"1 kept · 5 removed; in all, 117 kept · 19 removed · 10 unsettled",only the links where the two looks disagree,weighs both looks' evidence and rules
+9,rosters,3,Rosters,make,22,,,,a batch of FHL scientists,"lists trainees from lab pages, alumni pages and CVs"
+9,rosters,4,Verify rosters,check,17,,,,that batch's roster entries,re-opens each page; confirms or removes every entry
+10,,0,Write,make,30,236,people,,a batch of people's census records,researches each person; drafts two sourced paragraphs
+10,,1,Fact-check,check,30,,,230 of 236 revised,that batch's drafts,checks every claim against its sources; revises
+11,,0,Profile advisors,make,4,,,,the fact-checked profiles,lists advisors the profiles state plainly
+11,,1,Rosters,make,30,,,,a batch of FHL scientists (five agents at a time),"lists trainees, co-supervised students and committees"
+11,,2,Verify rosters,check,28,,,,that batch's roster entries,re-opens each page; confirms or removes every entry
+12,,0,Rosters,make,33,,,,"scientists without a roster, or with an incomplete one","finds or completes a roster, or records why there is none"
+12,,1,Verify rosters,check,29,,,,that batch's new entries,re-opens each page; confirms or removes every entry
+13,,0,Extract events,make,12,,,744 dated events,one group of history sources,"lists dated events, each with its source"
+13,,1,Images,make,3,,,,openly licensed images,writes a caption and alt text for each
+13,,2,Synthesise,review,1,,,,every extracted event,merges duplicates and conflicts into one timeline
+13,,3,Fact-check,check,4,,,46 of 102 events corrected,a quarter of the timeline,checks each event's date and summary against sources
+14,,0,Find,make,8,,,172 candidate images,the chronicle's events and current images,searches one kind of source for images
+14,,1,Check,check,24,,,135 passed,eight of a finder's candidates,"confirms licence, relevance and quality; writes the caption"
+14,,2,Curate,review,1,,,96 chosen,every candidate that passed,picks a balanced set; removes near-duplicates
+14,,3,Fact-check,check,11,,,,ten of the chosen images,"checks every caption, credit and licence"
+15,,0,Review,make,3,,,,the page's changes,reviews them through one lens; lists findings
+15,,1,Verify,check,3,,,,that lens's findings,checks each finding against the code
+16,,0,Read,make,49,2175,records,"624 read · 1,432 could not be read",one batch of not-yet-verified records,opens each by open routes; records evidence or barrier
+16,,1,Re-check,check,25,159,readings,152 agreed · 2 changed · from 32 of 49 batches,two finished batches,re-opens five records per batch; agrees or not
+17,,0,Read,make,21,904,publications,,one batch of verified publications,"reads the author addresses, footnotes included"
+17,,1,Re-check,check,11,103,readings,96 agreed · 7 changed · from 21 of 21 batches,two finished batches,re-opens five records per batch; checks the addresses
+18,,0,Research,make,11,,,,public archives and the chronicle,"builds one list: scientists, staff, classes or artists"
+18,,1,Fact-check,check,11,,,,that list,checks its least certain entries against sources
+19,,0,Curate,review,5,,,,the lists with their fact-check verdicts,"applies fixes, merges duplicates, keeps professional facts"
+20,,0,Review,make,3,,,,the page's changes,reviews them through one lens; lists findings
+20,,1,Verify,check,3,,,,that lens's findings,checks each finding against the code and data
+22,,0,Read,make,4,,,,the archived workflow scripts and pipeline notes,"extracts how one census stage searched, with citations"
+22,,1,Design,review,1,,,,all four readers' facts,drafts the methods diagrams
+23,,0,Find,make,6,,,,years still needing images,searches one kind of source for those years
+23,,1,Check,check,9,,,,eight of a finder's candidates,confirms provenance or licence and year; writes the caption
+23,,2,Curate,review,4,,,,the checked images of one period,picks up to two images a year
+23,,3,Fact-check,check,6,,,,ten of the chosen images,"checks every caption, year and credit"
+24,,0,Courses,make,6,705,titles,,a share of the course titles,gives each title one topic from a fixed list
+24,,1,Course review,review,1,,,36 changed,all six labellers' topics,reviews every label for consistency
+24,,2,Art,make,3,,,,the list of artists in residence,sorts kinds of work; looks for images of art
+24,,3,Check,check,2,,,,the candidate images of art,"checks provenance, caption and credit"
+25,,0,Find,make,4,,,,years still empty after run 23,searches one kind of source for those years
+25,,1,Check,check,11,,,,eight of a finder's candidates,confirms provenance or licence and year; writes the caption
+25,,2,Curate,review,5,,,,the checked images of one period,picks up to two images a year
+25,,3,Fact-check,check,6,,,,ten of the chosen images,"checks every caption, year and credit"

@@ -9,6 +9,7 @@ decided_calibration,259,final decisions resting on calibration review
 decided_audit,365,final decisions resting on the audit
 decided_dedup,162,records merged into another record of the same work
 decided_cleanup,210,records removed or moved to Mention only by the clean-up review
+decided_push,508,final decisions resting on the verification push
 screened_round1,4201,records judged in the first screening round
 screened_round2,1297,records judged in the second screening round
 calibration_overrides,275,decisions changed by calibration reviewers
@@ -17,6 +18,8 @@ resolution_yes,189,confirmed as FHL work
 resolution_no,779,rejected
 resolution_uncertain,428,still undecided
 audited,380,records in the audit sample
+audited_sample,340,audited records of the stratified random sample (the audit run)
+audited_listed,40,audited records found only on FHL's own lists (the resolution run's audit agent)
 audit_full_text,260,audited records read in full text
 ai_runs,25,"AI runs (multi-agent workflows, the topic classification and the later checks, rosters and profiles)"
 ai_agents,639,AI agents run in those runs
@@ -26,6 +29,12 @@ mentor_checked,146,inferred links checked against public records
 mentor_confirmed,117,checked links confirmed as advisor or mentor
 mentor_peer,19,checked links that were collaborations between peers (removed)
 mentor_unclear,10,checked links that could not be settled
+mentor_via_check,56,links settled by the first check
+mentor_via_agree,68,links the second look agreed on
+mentor_via_deeper,16,links settled by the second look's deeper search
+mentor_adjudicated,6,"links where the two looks disagreed, ruled by an adjudicator"
+mentor_adjudicated_kept,1,"of those, kept as mentor links"
+mentor_adjudicated_removed,5,"of those, removed as peers"
 mentor_doc_visible,175,documented pairs with the student first and the teacher last on a census paper
 mentor_doc_recovered,69,"of those, found by the co-authorship rule"
 roster_links,1370,"links from lab, team and alumni pages and CVs"
@@ -41,6 +50,8 @@ roster_not_found,12,FHL scientists who taught but have no public trainee list
 history_extracted,744,dated events extracted from the history sources
 history_events,106,events in the chronicle of the station
 history_corrected,47,history events the fact-checkers corrected
+history_events_first,102,"events of the first timeline, fact-checked by its own run"
+history_corrected_first,46,"of those, events the fact-checkers corrected"
 history_images,216,images shown in the chronicle of the station
 history_more_candidates,172,candidate images found by the second image search
 history_more_passed,135,"candidate images a second agent passed (licence, relevance, caption)"
@@ -71,6 +82,17 @@ aff_records,904,verified publications whose author addresses were checked (affil
 aff_yes,74,found to give FHL as an author address
 aff_no,659,addresses read; none is FHL
 aff_unknown,171,addresses could not be seen
+push_batches,49,"batches of the verification push, one reading agent each"
+push_batch_max,45,records in the largest batch
+aff_batches,21,"batches of the affiliation push, one reading agent each"
+push_recheck_n,159,readings a second agent re-checked (verification push)
+push_recheck_agree,152,re-checked readings the second agent agreed with (verification push)
+push_recheck_applied,2,disputed readings changed to the second agent's verdict (verification push)
+push_recheck_batches,32,batches with at least one re-checked reading (verification push)
+aff_recheck_n,103,readings a second agent re-checked (affiliation push)
+aff_recheck_agree,96,re-checked readings the second agent agreed with (affiliation push)
+aff_recheck_applied,7,disputed readings changed to the second agent's verdict (affiliation push)
+aff_recheck_batches,21,batches with at least one re-checked reading (affiliation push)
 profiles,236,people profiles written and fact-checked
 profiles_revised,230,profiles the fact-checker revised
 dedup_dropped,162,duplicate records merged away
@@ -80,6 +102,8 @@ mention_moved,50,obituaries and similar pieces moved to Mention only
 whiteley_records,122,included publications labelled Whiteley Center
 whiteley_inferred,2,"of those, probable (full-text match on non-marine work)"
 topic_classified,6501,publications given a research topic
+topic_labelled_agents,6501,publications given a topic by the labelling agents (batches 1-16)
+topic_labelled_session,39,publications given a topic later in the coordinating session (batch 17)
 topic_with_abstract,4128,"of those, classified with an abstract"
 topic_sample,300,"publications classified twice, independently"
 topic_agreement_pct,94,percent agreeing on the topic
@@ -87,5 +111,9 @@ topic_kappa,0.93,Cohen's kappa for the topic
 organism_agreement_pct,98,percent agreeing on the organism group
 organism_kappa,0.98,Cohen's kappa for the organism group
 topic_harmonized,223,labels changed by the consistency review
+topic_sample_agree,282,"of the sample, publications given the same topic twice"
 topic_batches,16,random batches classified
 topic_batches_within_chance,15,batches whose topic mix matched the whole within the range expected by chance
+agents_launched,650,"AI agents launched, including those stopped or never returned"
+prompts_launching,17,prompts that launched agents
+agents_aborted,4,agents of a first launch that was stopped and launched again (not counted)

@@ -332,64 +332,75 @@
   #tbl-pubs td.why { font-size: .78rem; color: var(--fp-ink-2); min-width: 14rem; }
   #tbl-pubs td.why summary { cursor: pointer; }
   #tbl-pubs td.why details[open] { color: var(--fp-ink); }
-  /* Methods diagrams (Figs. 21-25, 28) */
-  .fp-method-figs { align-items: start; }
-  .fp-diagram { font-size: .86rem; line-height: 1.4; }
-  .fp-flow { display: grid; justify-items: stretch; gap: .2rem; }
-  .fp-flow .step { display: grid; grid-template-columns: 5.2rem 1fr; gap: .2rem .8rem; align-items: baseline; border: 1px solid var(--fp-ink); padding: .45rem .7rem; }
-  .fp-flow .step .n { font-size: 1.25rem; text-align: right; font-variant-numeric: lining-nums; }
-  .fp-flow .arrow { text-align: center; color: var(--fp-ink-2); line-height: 1; }
-  .fp-flow .bar { grid-column: 1 / -1; display: flex; height: .9rem; border: 1px solid var(--fp-ink); margin-top: .3rem; }
-  .fp-flow .seg, .fp-flow .sw { display: inline-block; height: 100%; }
-  .fp-flow .seg + .seg { border-left: 1px solid var(--fp-ink); }
-  .fp-flow .key { grid-column: 1 / -1; list-style: none; margin: .35rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .15rem 1rem; font-size: .78rem; }
-  .fp-flow .sw { width: .9rem; height: .7rem; border: 1px solid var(--fp-ink); margin-right: .35rem; vertical-align: -.05rem; }
-  .fp-flow .solid { background: var(--fp-ink); } .fp-flow .open { background: var(--fp-paper); }
-  .fp-flow .grey { background: color-mix(in oklab, var(--fp-ink) 18%, var(--fp-paper)); }
-  .fp-flow .hatch { background: repeating-linear-gradient(45deg, var(--fp-ink) 0 1px, var(--fp-paper) 1px 4px); }
-  .fp-flow .dots { background: radial-gradient(var(--fp-ink) 0.7px, var(--fp-paper) 0.9px) 0 0 / 4px 4px; }
-  /* Methods diagrams of how the agents searched (Figs. 21, 24, 25, 28): boxes, lanes and chains */
-  .fp-dg { display: grid; gap: .45rem; font-size: .84rem; line-height: 1.35; }
-  .fp-dg .box { border: 1px solid var(--fp-ink); padding: .4rem .6rem; background: var(--fp-paper); min-width: 0; }
-  .fp-dg .box.key { border-width: 2px; }
-  .fp-dg .box.dash { border-style: dashed; }
-  .fp-dg .n { font-family: var(--fp-display); font-size: 1.12rem; font-variant-numeric: lining-nums; }
-  .fp-dg .who { display: block; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--fp-ink-2); }
-  .fp-dg .d { display: block; color: var(--fp-ink-2); font-size: .78rem; margin-top: .1rem; }
-  .fp-dg .down { text-align: center; color: var(--fp-ink-2); line-height: 1; font-size: .9rem; }
-  .fp-dg .down i { font-size: .74rem; font-style: italic; }
-  .fp-dg .srcs { display: grid; grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr)); gap: .4rem; }
-  .fp-dg .mini { height: .45rem; margin-top: .3rem; background: var(--fp-ink); }
-  .fp-dg .mini.agent { background: repeating-linear-gradient(45deg, var(--fp-ink) 0 1px, var(--fp-paper) 1px 4px); border: 1px solid var(--fp-ink); }
-  .fp-dg .mini.person { background: radial-gradient(var(--fp-ink) 0.7px, var(--fp-paper) 0.9px) 0 0 / 4px 4px; border: 1px solid var(--fp-ink); }
-  .fp-dg .legend { display: flex; flex-wrap: wrap; gap: .2rem 1rem; font-size: .76rem; color: var(--fp-ink-2); }
-  .fp-dg .legend .mini { display: inline-block; width: 1.4rem; margin: 0 .35rem 0 0; vertical-align: .05rem; }
-  .fp-dg .two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .45rem 1.2rem; align-items: start; }
-  .fp-dg .col { display: grid; gap: .3rem; }
-  .fp-dg .outs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; }
-  .fp-dg .stack { display: flex; height: .9rem; border: 1px solid var(--fp-ink); margin: .3rem 0 .15rem; }
-  .fp-dg .stack span { height: 100%; } .fp-dg .stack span + span { border-left: 1px solid var(--fp-ink); }
-  .fp-dg .s1 { background: var(--fp-ink); } .fp-dg .s2 { background: repeating-linear-gradient(45deg, var(--fp-ink) 0 1px, var(--fp-paper) 1px 4px); }
-  .fp-dg .s3 { background: radial-gradient(var(--fp-ink) 0.7px, var(--fp-paper) 0.9px) 0 0 / 4px 4px; } .fp-dg .s4 { background: var(--fp-paper); }
-  .fp-dg .sw { display: inline-block; width: .9rem; height: .7rem; border: 1px solid var(--fp-ink); margin-right: .3rem; vertical-align: -.05rem; }
-  .fp-dg .lanes { display: grid; gap: .45rem; }
-  .fp-dg .lane { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: .6rem; align-items: stretch; border-top: 1px dotted var(--fp-ink-3); padding-top: .45rem; }
-  .fp-dg .lane > .lbl { font-variant: small-caps; letter-spacing: .04em; font-size: .95rem; align-self: center; }
-  .fp-dg .row { display: flex; flex-wrap: wrap; gap: .4rem; align-items: stretch; }
-  .fp-dg .row > .box { flex: 1 1 10rem; }
-  .fp-dg .row > .to { align-self: center; color: var(--fp-ink-2); }
-  @media (max-width: 560px), (pointer: coarse) and (max-height: 500px) {
-    .fp-dg .two, .fp-dg .lane { grid-template-columns: minmax(0, 1fr); }
-    .fp-dg .outs { grid-template-columns: minmax(0, 1fr); }
-    .fp-dg .row > .to { display: none; }
-  }
-  .fp-tree { display: grid; gap: .35rem; }
-  .fp-tree .q { display: grid; grid-template-columns: 1fr 11rem; gap: .2rem .9rem; border: 1px solid var(--fp-ink); padding: .45rem .7rem; }
-  .fp-tree .q.end { grid-template-columns: 1fr; border-style: dashed; }
-  .fp-tree .ans { display: grid; align-content: start; gap: .1rem; }
-  .fp-tree .ans .yes { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--fp-ink-2); }
-  .fp-tree .ans b { font-variant: small-caps; font-weight: 400; font-size: 1rem; letter-spacing: .03em; }
-  .fp-tree .ans .n { font-size: .78rem; color: var(--fp-ink-2); }
+  /* Methods figures of how the AI agents were used (Figs. 21-27; drawn by methods.js). One square = one agent. */
+  .fm-chart { min-height: 6rem; }
+  .fp-chart .fm-sq { stroke: var(--fp-ink); stroke-width: .6; }
+  .fp-chart .fm-nr, .fm-shapes .fm-nr { stroke-dasharray: 1.6 1.2; }
+  .fp-chart .fm-slash, .fm-shapes .fm-slash { stroke-width: 1.2; }
+  .fp-chart .fm-unlogged { fill: none; stroke: var(--fp-ink); stroke-width: .8; stroke-dasharray: 1 2; }
+  .fp-chart .fm-head { fill: var(--fp-ink); font-variant: small-caps; letter-spacing: .05em; font-size: 13px; }
+  .fp-chart .fm-rule, .fp-chart .fm-rowline { stroke: var(--fp-ink-3); stroke-width: .6; }
+  .fp-chart .fm-rowline { stroke-dasharray: 1 3; }
+  .fp-chart .fm-fam { font-size: 12.5px; }
+  .fp-chart .fm-n, .fp-chart .fm-it { font-style: italic; fill: var(--fp-ink-2); }
+  .fp-chart .fm-small { font-size: 10.5px; }
+  .fp-chart .fm-rn { font-size: 10px; fill: var(--fp-ink-2); }
+  .fp-chart .fm-run { cursor: pointer; }
+  .fp-chart .fm-run.fm-inert { cursor: default; }
+  .fp-chart .fm-run:hover .fm-rn, .fp-chart .fm-run:focus .fm-rn { fill: var(--fp-ink); text-decoration: underline; }
+  .fp-chart .fm-run:focus { outline: none; }
+  .fp-chart .fm-run:focus-visible .fm-rn { font-weight: 700; }
+  .fp-chart .fm-glyph { fill: var(--fp-ink-2); font-size: 11px; }
+  .fp-chart .fm-in { font-size: 10px; fill: var(--fp-ink); paint-order: stroke; stroke: var(--fp-paper); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+  .fp-chart .fm-in.inv { fill: var(--fp-paper); stroke: var(--fp-ink); }
+  .fp-chart .fm-strip { stroke: none; }
+  .fp-chart .fm-area { stroke-width: .4; }
+  .fp-chart .fm-peak { stroke: var(--fp-ink); stroke-width: .8; stroke-dasharray: 1 2; }
+  .fp-chart .fm-zig { fill: none; stroke: var(--fp-ink-2); stroke-width: .8; }
+  .fp-chart .fm-drop { fill: none; stroke: var(--fp-ink-2); stroke-width: .7; stroke-dasharray: 1 2; }
+  .fp-chart .fm-tick rect:first-child { fill: var(--fp-ink); }
+  .fp-chart .fm-tick.sum rect:first-child { fill: var(--fp-paper); stroke: var(--fp-ink); stroke-width: .8; }
+  .fp-chart .fm-day { font-size: 10.5px; font-style: italic; fill: var(--fp-ink); }
+  .fp-chart .fm-dot { fill: var(--fp-paper); stroke: var(--fp-ink); }
+  .fp-chart .fm-col { stroke: var(--fp-ink); stroke-width: .25; }
+  .fp-chart .fm-cov { fill: var(--fp-ink-3); opacity: .45; }
+  .fp-chart .fm-covon { fill: var(--fp-ink); }
+  .fm-shapes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr)); gap: 1.4rem 2rem; align-items: start; }
+  .fm-panel { position: relative; border-top: 1px solid var(--fp-ink); padding-top: .5rem; display: grid; gap: .35rem; font-size: .84rem; line-height: 1.35; transition: background .4s; }
+  .fm-panel.fm-flash { background: color-mix(in oklab, var(--fp-ink) 8%, var(--fp-paper)); }
+  .fm-panel .fm-ptitle { margin: 0; font-variant: small-caps; letter-spacing: .05em; font-size: 1rem; font-weight: 400; }
+  .fm-panel .fm-runhead { margin: 0; font-style: italic; color: var(--fp-ink-2); }
+  .fm-panel .fm-runhead b { font-style: normal; color: var(--fp-ink); }
+  .fm-stage { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: .6rem; align-items: start; }
+  .fm-stage svg { display: block; overflow: visible; }
+  .fm-stage .fm-sname b { font-weight: 600; }
+  .fm-stage .fm-given, .fm-stage .fm-does { color: var(--fp-ink-2); font-size: .8rem; }
+  .fm-stage .fm-given { font-style: italic; }
+  .fm-stage .fm-result { font-variant-numeric: lining-nums; }
+  .fm-shapes .fm-sq { stroke: var(--fp-ink); stroke-width: .6; }
+  .fm-arrow { color: var(--fp-ink-2); padding-left: 1.3rem; line-height: 1; }
+  .fm-note { margin: 0; font-style: italic; color: var(--fp-ink-2); }
+  .fm-chiplbl { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--fp-ink-2); margin-top: .2rem; }
+  .fm-chips { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .fm-chip { font: inherit; font-size: .8rem; min-width: 2.2rem; padding: .2rem .45rem; border: 1px solid var(--fp-ink); background: var(--fp-paper); color: var(--fp-ink); cursor: pointer; font-variant-numeric: lining-nums; }
+  .fm-chip[aria-pressed="true"] { background: var(--fp-ink); color: var(--fp-paper); }
+  .fm-chip:focus-visible { outline: 2px solid var(--fp-ink); outline-offset: 2px; }
+  .fm-rounds { margin: 0; font-size: .84rem; font-style: italic; color: var(--fp-ink-2); text-align: center; }
+  .fm-push { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 4fr) minmax(0, 3fr); gap: 1.4rem; align-items: start; }
+  .fm-push h4 { margin: 0 0 .35rem; font-variant: small-caps; letter-spacing: .05em; font-weight: 400; font-size: .98rem; }
+  .fm-push > div { min-width: 0; display: grid; gap: .3rem; align-content: start; }
+  .fm-card { border: 1px solid var(--fp-ink); padding: .55rem .75rem; font-size: .82rem; line-height: 1.35; }
+  .fm-card ul, .fm-card ol { margin: 0 0 .35rem; padding-left: 1.3em; display: grid; gap: .1rem; }
+  .fm-card .fm-k { margin: .25rem 0 .15rem; font-style: italic; }
+  .fm-push .fm-chart { min-height: 0; }
+  .fm-push .fp-legend { font-size: .76rem; gap: .2rem .7rem; }
+  .fm-push .fp-legend::before { content: none; }
+  .fm-table, .fm-more { max-width: 52rem; width: 100%; margin-inline: auto; box-sizing: border-box; font-size: .9rem; }
+  .fm-table > summary, .fm-more > summary { cursor: pointer; text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; padding: .3rem 0; }
+  .fm-table > summary .fig { text-transform: none; letter-spacing: 0; font-size: .9rem; }
+  .fm-more > .fp-notes { margin-top: .6rem; }
+  .fm-lead { font-size: 1.02rem; }
+  @media (max-width: 860px) { .fm-push { grid-template-columns: minmax(0, 1fr); } }
   /* The chronicle tab's archive sections (staff, classes, artists), folded like the minor figures */
   .fp-arch { max-width: 60rem; width: 100%; margin: 0 auto; display: grid; gap: .6rem; }
   .fp-arch > .fp-collapse-body { gap: 1rem; }
@@ -508,7 +519,6 @@
     .fp-legend .fp-keybtn { padding-block: .2rem; }
     .fp-tabs a { padding: .6rem .55rem; letter-spacing: .05em; }
     .fp-defbox dl { grid-template-columns: 1fr; gap: 0 0; }
-    .fp-tree .q { grid-template-columns: 1fr; }
     .fp-defbox dd { margin-bottom: .35rem; }
     .fp-toggle { gap: .4rem; }
     .fp-toggle button { font-size: .66rem; letter-spacing: .07em; padding: .3rem .5rem; }
@@ -1142,6 +1152,11 @@
   <section class="fp-section" id="method">
     <h2><span class="num">XI.</span> Technical methods</h2>
     <div class="fp-notes">
+      <p class="fm-lead">The census and its companions were built by <span data-fm="agents-counted">—</span> AI agents in <span data-fm="runs-agents">—</span> runs,
+        plus <span data-fm="runs-none">—</span> run done in the coordinating session (Table VI); <span data-fm="prompts-launching">—</span> of the
+        compiler's prompts launched them (Fig. 23). Figs. 21–23 show where the agents went, how each run was
+        built and when they worked; Figs. 24 and 25 follow the publication census and one agent's job inside it; Figs. 26 and
+        27 show how the agents' work was checked and how far it can be trusted.</p>
       <p><span class="runin">Definition.</span>—A publication is counted when Friday Harbor Laboratories, or the station under
         one of its earlier names (Table V), appears in the publication or its record: in an author address, in the main text
         (methods, acknowledgments, figure captions or anywhere else except the reference list), in the station's own
@@ -1157,142 +1172,87 @@
         <tbody></tbody>
       </table></div>
     </div>
-    <figure class="fp-fig">
-      <div class="fp-diagram fp-dg" id="dg-search">
-        <div class="box key"><span class="who">One shared name list, used by every search</span>Friday Harbor Laboratories (and Laboratory, Labs, Lab,
-          Marine Laboratory, "Harbour"), Puget Sound Marine Station, Puget Sound Biological Station, UW Oceanographic Laboratories,
-          and the citation forms of the station's own series. Most searches also ran plain "Friday Harbor", which also finds
-          the town and its other organisations; screening removed those later. The bare acronym "FHL" was never searched (it
-          is also a human gene).</div>
-        <div class="down">↓ <i>ten families of sources, searched in parallel</i></div>
-        <div class="srcs">
-          <div class="box"><span class="who">script</span>OpenAlex<br><span class="n">5,045</span> rows<span class="d">20 queries: author addresses, the FHL institution record, full text, titles and abstracts</span><div class="mini " style="width:77%"></div></div>
-          <div class="box"><span class="who">person</span>Web of Science<br><span class="n">2,543</span> rows<span class="d">one search, exported through UW Libraries</span><div class="mini person" style="width:39%"></div></div>
-          <div class="box"><span class="who">agent</span>Historical archives (archive.org)<br><span class="n">6,585</span> rows<span class="d">scanned books and journals, 1904 on; two rounds</span><div class="mini agent" style="width:100%"></div></div>
-          <div class="box"><span class="who">agent + script</span>FHL's own publication lists<br><span class="n">6,146</span> rows<span class="d">611 archived FHL web pages; listed citations matched to DOIs</span><div class="mini agent" style="width:93%"></div></div>
-          <div class="box"><span class="who">agent + script</span>Theses and reports<br><span class="n">1,682</span> rows<span class="d">UW ResearchWorks, other repositories, OSTI, USGS</span><div class="mini agent" style="width:26%"></div></div>
-          <div class="box"><span class="who">agent</span>Europe PMC<br><span class="n">1,251</span> rows<span class="d">390 queries, each name in each part of a paper</span><div class="mini agent" style="width:19%"></div></div>
-          <div class="box"><span class="who">agent</span>PubMed and PubMed Central<br><span class="n">1,230</span> rows<span class="d">148 queries</span><div class="mini agent" style="width:19%"></div></div>
-          <div class="box"><span class="who">agent</span>News<br><span class="n">1,025</span> rows<span class="d">200 queries; a sample, not a census</span><div class="mini agent" style="width:16%"></div></div>
-          <div class="box"><span class="who">agent</span>Crossref<br><span class="n">660</span> rows<span class="d">27 queries: addresses, titles and series names</span><div class="mini agent" style="width:10%"></div></div>
-          <div class="box"><span class="who">agent</span>Datasets<br><span class="n">592</span> rows<span class="d">142 queries in 8 repositories</span><div class="mini agent" style="width:9%"></div></div>
-        </div>
-        <div class="legend"><span><span class="mini"></span>searched by a script</span><span><span class="mini agent"></span>by an AI agent (alone or with a script)</span><span><span class="mini person"></span>by a person</span><span>Bar length: rows returned.</span></div>
-        <div class="down">↓ <i>a ninth agent reviewed all eight agent searches for gaps; two more agents (one also ran Crossref's FHL funder and ROR filters) and five more OpenAlex queries filled them</i></div>
-        <div class="box key"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=source_rows">—</span></span> rows from 14 files, merged into <span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=candidates">—</span></span>
-          candidate records (<span><span data-source="methods_facts" data-field="value" data-where="fact=with_doi">—</span></span> with a DOI)<span class="d">Rows were joined when they shared a DOI or a PubMed,
-          PubMed Central or OpenAlex identifier, or had near-identical titles a year or less apart. Fig. 22 follows the candidates from here.</span></div>
-      </div>
+    <h3 class="fp-subhead" id="agents-how">How the agents were used</h3>
+    <figure class="fp-fig fm-fig">
+      <div class="fp-legend" id="lg-agents"></div>
+      <div class="fp-legend" id="lg-tools"></div>
+      <div class="fp-chart fm-chart" id="ch-agents" data-source="methods_facts ai_workflows agents"></div>
       <figcaption>
-        <h3 id="fig-search"><span class="fig">Fig. 21.</span>—Where the searches looked.</h3>
-        <p class="cap">Every search used one shared list of the station's names. Eight AI agents each searched one family of
-          sources in parallel, a script searched OpenAlex, and the compiler ran one Web of Science search; each agent wrote a
-          rerunnable script and logged its queries and hit counts. Many records were found by more than one source.</p>
+        <h3 id="fig-agents"><span class="fig">Fig. 21.</span>—Where the agents went.</h3>
+        <p class="cap">Each square is one AI agent, grouped by run (numbered as in Table VI) and set in the order its run's stages ran.
+          Solid: did the work. Hatched: checked earlier work (another agent's, a script's or a rule's), re-opening its sources or
+          redoing it blind. Crossed: worked across other agents' results (critiquing, calibrating, adjudicating, merging, curating
+          or drafting from them). Dashed and open: never returned
+          (drawn, not counted); a slash: stopped by an error. Dotted boxes mark the <span data-fm="runs-unlogged">—</span> runs
+          with no log, drawn from their design. Bars at right sort each family's tool calls by kind.
+          <span data-fm="census-agents">—</span> of the <span data-fm="all-agents">—</span> agents built the publication census. Pick a run to see how it
+          was built (Fig. 22).</p>
       </figcaption>
     </figure>
-    <div class="fp-grid fp-method-figs">
-      <figure class="fp-fig">
-        <div class="fp-diagram fp-flow" id="dg-flow" data-source="methods_facts candidate_status"></div>
-        <figcaption>
-          <h3 id="fig-flow"><span class="fig">Fig. 22.</span>—How the census was built.</h3>
-          <p class="cap">From the records the searches returned to the decision on every candidate and the independent audit.
-            The paragraphs below describe each step.</p>
-        </figcaption>
-      </figure>
-      <figure class="fp-fig">
-        <div class="fp-diagram fp-tree" id="dg-tiers" data-source="headline audit_tiers"></div>
-        <figcaption>
-          <h3 id="fig-tiers"><span class="fig">Fig. 23.</span>—How a publication gets its evidence tier.</h3>
-          <p class="cap">Each candidate is asked these questions in turn; the first "yes" decides. The share confirmed is the
-            independent audit's estimate for the tier (Fig. 26).</p>
-        </figcaption>
-      </figure>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-diagram fp-dg" id="dg-routes">
-        <div class="box key"><span class="who">One record from the queue</span><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=push_records">—</span></span> records not yet
-          verified, in batches of up to 45; each came with its known links and any earlier text snippets.</div>
-        <div class="two">
-          <div class="col">
-            <div class="box"><span class="who">Routes 1–2</span>The record's own links, then doi.org</div>
-            <div class="down">↓ <i>no readable text</i></div>
-            <div class="box"><span class="who">Route 3</span>Europe PMC and PubMed Central full text</div>
-            <div class="down">↓ <i>no readable text</i></div>
-            <div class="box"><span class="who">Routes 4–5</span>Open-access copies listed by OpenAlex and Semantic Scholar</div>
-            <div class="down">↓ <i>no readable text</i></div>
-            <div class="box"><span class="who">Routes 6–7</span>Biodiversity Heritage Library, Internet Archive, JSTOR's free early
-              journals, repositories; web search only as a last resort</div>
-            <div class="box dash"><span class="who">Stop rules</span>No logins, CAPTCHAs, bot-check or paywall workarounds; no email
-              address in any request; at most one request a second per site; about three attempts per record.</div>
-          </div>
-          <div class="col">
-            <div class="box"><span class="who">Text reached, by any route</span>Search it for every name of the station (and tell the
-              town of Friday Harbor from the laboratory)</div>
-            <div class="outs">
-              <div class="box"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=push_named">—</span></span><span class="d">name FHL: verified</span></div>
-              <div class="box"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=push_not_named">—</span></span><span class="d">do not name FHL</span></div>
-              <div class="box"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=push_read_undecided">—</span></span><span class="d">read, not settled</span></div>
-            </div>
-            <div class="box"><span class="who">Could not be read, by any route</span><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=push_unreadable">—</span></span> left as they were,
-              not guessed from the title
-              <div class="stack"><span class="s1" style="width:42.1%"></span><span class="s2" style="width:38.9%"></span><span class="s3" style="width:14.0%"></span><span class="s4" style="width:5.0%"></span></div>
-              <span class="d legend"><span><span class="sw s1"></span>paywall <span data-source="methods_facts" data-field="value" data-where="fact=push_paywall">—</span></span><span><span class="sw s2"></span>bot check <span data-source="methods_facts" data-field="value" data-where="fact=push_bot_check">—</span></span><span><span class="sw s3"></span>no copy online <span data-source="methods_facts" data-field="value" data-where="fact=push_no_copy">—</span></span><span><span class="sw s4"></span>other <span data-source="methods_facts" data-field="value" data-where="fact=push_other_barrier">—</span></span></span></div>
-            <div class="box key"><span class="who">Written for every record</span>The decision, where FHL appears, a quoted line of
-              evidence, how much was read and what stopped the reading. A validator had to pass every batch file.</div>
-          </div>
-        </div>
-      </div>
+    <details class="fm-table" id="ai-workflows">
+      <summary><span class="fig" id="tab-ai">Table VI.</span>—The AI runs, as a table</summary>
+      <div class="fp-scroll"><table id="tbl-ai" class="ruled" data-source="ai_workflows" data-row-key="workflow">
+        <thead><tr><th data-field="workflow">Run</th><th data-field="purpose">Purpose</th>
+          <th data-field="agents" class="num">Agents</th><th data-field="effort">Session effort</th>
+          <th data-field="effort_logged">Agents' effort (logged)</th>
+          <th data-field="started_utc" class="num">Started (UTC)</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </details>
+    <figure class="fp-fig fm-fig">
+      <div class="fm-shapes" id="ch-shapes" data-source="agent_stages"></div>
+      <p class="fm-rounds" id="fm-rounds"></p>
       <figcaption>
-        <h3 id="fig-routes"><span class="fig">Fig. 24.</span>—What a reading agent did with one record.</h3>
-        <p class="cap">The verification push (28 October 2026): for each record an agent tried public, open routes in a fixed
-          order and stopped at any login, paywall or bot check rather than get around it. The earlier resolution pass and the
-          audit used similar routes. The stacked bar splits the unreadable records by what stopped the reading.</p>
+        <h3 id="fig-shapes"><span class="fig">Fig. 22.</span>—How a run is built: four shapes.</h3>
+        <p class="cap">Most runs combine these four shapes, drawn here from real runs. Squares are agents, as in Fig. 21; each step
+          says what its agents were given, what they did and, where it was counted, what they handed on. In every shape, later
+          agents check the earlier agents' work instead of taking it on trust; the last panel holds the few runs that fit no single
+          shape. Pick a run under a panel to draw it.</p>
+      </figcaption>
+    </figure>
+    <figure class="fp-fig fm-fig">
+      <div class="fp-legend" id="lg-timeline"></div>
+      <div class="fp-chart fm-chart" id="ch-timeline" data-source="prompts"></div>
+      <figcaption>
+        <h3 id="fig-timeline"><span class="fig">Fig. 23.</span>—When the agents worked, and when a person typed.</h3>
+        <p class="cap">Each row is one run; its height is how many of its agents were working at that moment, never more than
+          <span data-fm="peak-run">—</span> in one run. The top strip adds all runs together: at most <span data-fm="peak-all">—</span> at once. Ticks above are
+          the prompts the compiler typed (Pacific time), and a dotted line joins each prompt to the runs it launched.
+          Stretches of more than <span data-fm="gap-h">—</span> hours with no agent at work and no prompt typed are cut out, leaving
+          <span data-fm="sessions">—</span> working sessions.</p>
+      </figcaption>
+    </figure>
+    <h3 class="fp-subhead" id="census-how">The publication census</h3>
+    <figure class="fp-fig fm-fig">
+      <div class="fp-legend" id="lg-census"></div>
+      <div class="fp-chart fm-chart" id="ch-census" data-source="census_steps"></div>
+      <figcaption>
+        <h3 id="fig-census"><span class="fig">Fig. 24.</span>—The census, step by step: who did each step, and how many records it handled.</h3>
+        <p class="cap">Each row is a step of the census, in order. Squares are the agents that did it, as in Fig. 21; ◆ marks Claude
+          working in the main session and □ a script. Bars count the records each step handled, all on one scale,
+          and their fills say who handled them. The last bar shows what settled each candidate in the end.</p>
       </figcaption>
     </figure>
     <div class="fp-notes">
-      <p><span class="runin">Search.</span>—Candidates came from OpenAlex (author-affiliation strings searched for every name
-        variant, the FHL institution record, full text, titles and abstracts); the Web of Science Core Collection (an export of
-        <span data-source="methods_facts" data-field="value" data-where="fact=wos_records">—</span> records matching
-        addresses, funding acknowledgments and topics, run through the University of Washington Libraries under the
-        compiler's own sign-in); PubMed and PubMed Central (affiliations and full text); Europe PMC (searches of the
-        affiliation, methods and acknowledgment sections); Crossref (affiliation, bibliographic and funder queries);
-        DataCite, Zenodo, Dryad, GBIF, NCBI BioProject and BCO-DMO for datasets; UW ResearchWorks and other repositories for
-        theses and student papers; OSTI and USGS for reports; archive.org full-text scans, including the Biodiversity
-        Heritage Library, BioStor and JSTOR Early Journal Content, for the station-era literature; FHL's own publication lists,
-        recovered from the Internet Archive; and news coverage found by web search. Name variants were matched with patterns
-        that tolerate hyphenation, line breaks and the British spelling "Harbour", and with the citation forms of the
-        station's own series. The searches ran on <span data-source="headline" data-field="retrieved">—</span>.</p>
-      <p><span class="runin">Merging.</span>—The searches returned
-        <span data-source="methods_facts" data-field="value" data-where="fact=source_rows">—</span> rows, merged into
-        <span data-source="methods_facts" data-field="value" data-where="fact=candidates">—</span> candidate records
-        (<span data-source="methods_facts" data-field="value" data-where="fact=with_doi">—</span> with a DOI). Two rows were
-        joined when they shared a DOI or a PubMed, PubMed Central or OpenAlex identifier, or when their titles matched
-        closely (a fuzzy similarity of at least 93 out of 100), their years differed by no more than one, and their first
-        authors shared a surname.</p>
-      <p><span class="runin">Screening.</span>—Unambiguous candidates were decided by written rules, such as an author
-        address that names the laboratory, or a match that falls only in a reference list. The rest were judged by AI agents
-        against a written screening guide that defines every field, lists the station's names and describes the common false
-        positives: the town, the ferry, other Friday Harbor organizations (the Center for Whale Research, The Whale Museum and
-        others), Seattle-campus oceanography, and bound journal volumes that merely contain a station paper. For each record
-        an agent recorded whether it is FHL-connected, the kind of connection, whether FHL appears in the affiliation and in
-        the main text (and in which sections), the publication type, its confidence, a reason and a short quotation of the
-        evidence. <span data-source="methods_facts" data-field="value" data-where="fact=screened_round1">—</span> records
-        were judged in a first round and <span data-source="methods_facts" data-field="value" data-where="fact=screened_round2">—</span>
-        in a second, after the search was extended and an address classifier corrected. Calibration agents then re-judged
-        samples across batches and changed <span data-source="methods_facts" data-field="value" data-where="fact=calibration_overrides">—</span>
-        inconsistent calls. Of the final decisions,
-        <span data-source="methods_facts" data-field="value" data-where="fact=decided_rules">—</span> rest on rules,
-        <span data-source="methods_facts" data-field="value" data-where="fact=decided_screening">—</span> on AI screening,
-        <span data-source="methods_facts" data-field="value" data-where="fact=decided_calibration">—</span> on calibration
-        review, <span data-source="methods_facts" data-field="value" data-where="fact=decided_audit">—</span> on the audit, <span data-source="methods_facts" data-field="value" data-where="fact=decided_dedup">—</span> on de-duplication and
-        <span data-source="methods_facts" data-field="value" data-where="fact=decided_cleanup">—</span> on the clean-up review described below.</p>
-      <p><span class="runin">Resolution.</span>—The
-        <span data-source="methods_facts" data-field="value" data-where="fact=resolution_opened">—</span> candidates with no
-        visible evidence were opened one at a time, reading the full text or landing page wherever it was freely available:
-        <span data-source="methods_facts" data-field="value" data-where="fact=resolution_yes">—</span> were confirmed,
-        <span data-source="methods_facts" data-field="value" data-where="fact=resolution_no">—</span> rejected, and
-        <span data-source="methods_facts" data-field="value" data-where="fact=resolution_uncertain">—</span> could not be
-        decided; they stay among the unverified candidates.</p>
+      <p><span class="runin">Search and screening.</span>—Every search used one list of the station's names: Friday Harbor
+        Laboratories (and Laboratory, Labs, Lab, Marine Laboratory, "Harbour"), Puget Sound Marine Station, Puget Sound
+        Biological Station, UW Oceanographic Laboratories, and the citation forms of the station's own series. Most searches
+        also ran plain "Friday Harbor", which also finds the town and its other organizations; screening removed those. The bare
+        acronym "FHL" was never searched (it is also a human gene). <span data-fm="n-harvest">—</span> AI agents each searched one family of free sources
+        (PubMed and PubMed Central, Europe PMC, Crossref, eight data repositories, UW ResearchWorks and other thesis and report
+        repositories, archive.org scans including the Biodiversity Heritage Library, FHL's own publication lists recovered from
+        the Internet Archive, and news) and wrote a rerunnable script; a script searched OpenAlex; and Claude exported
+        <span data-source="methods_facts" data-field="value" data-where="fact=wos_records">—</span> Web of Science records through the UW Libraries in a browser, after the compiler signed in
+        (Fig. 24, row 1). <span data-fm="n-critique">—</span> more agent looked for gaps, and <span data-fm="n-gapfill">—</span> more filled them. Rows were joined into one candidate when they shared a DOI or a
+        PubMed, PubMed Central or OpenAlex identifier, or when their titles matched closely (a fuzzy similarity of at least 93
+        of 100), their years differed by no more than one and their first authors shared a surname. Written rules decided the
+        clear cases. AI agents judged the rest against a written screening guide that lists the station's names and the common
+        false positives (the town, the ferry, other Friday Harbor organizations, Seattle-campus oceanography, bound volumes
+        that merely contain a station paper), recording for each record the kind of connection, where FHL appears, the type,
+        a confidence, a reason and a quotation of the evidence. A validator had to pass every batch file: every record once,
+        only allowed values, a reason given. Where two judgements disagree, the closer reading wins (a written rule, then AI
+        screening, then calibration review, then a reading of the paper itself), and an audit verdict replaces a field only
+        where the auditor could verify it. The searches ran on <span data-source="headline" data-field="retrieved">—</span>.</p>
       <p><span class="runin">Where FHL appears.</span>—Section II pools the evidence into five kinds: an author address naming
         the station (whether or not the text names it too); text only, with the addresses read and none naming FHL, split into
         the acknowledgments and the rest (methods, title, abstract, figures); text where the author addresses could not be
@@ -1301,128 +1261,97 @@
         of the <span data-source="methods_facts" data-field="value" data-where="fact=aff_records">—</span> verified publications whose addresses had never been seen: <span data-source="methods_facts" data-field="value" data-where="fact=aff_yes">—</span> give FHL as an
         address, in <span data-source="methods_facts" data-field="value" data-where="fact=aff_no">—</span> the addresses were read and none is FHL (visitors typically gave their home university), and
         <span data-source="methods_facts" data-field="value" data-where="fact=aff_unknown">—</span> could not be seen.</p>
-      <p><span class="runin">The verification push.</span>—Every included record not yet verified (probable, or listed by FHL)
-        and every unverified candidate was then read again, one by one, by AI agents looking for the station in the
-        publication itself: <span data-source="methods_facts" data-field="value" data-where="fact=push_records">—</span> records. <span data-source="methods_facts" data-field="value" data-where="fact=push_read">—</span> could be read well enough to decide: <span data-source="methods_facts" data-field="value" data-where="fact=push_named">—</span>
-        name FHL and are now verified, and <span data-source="methods_facts" data-field="value" data-where="fact=push_not_named">—</span> do not (papers on FHL's own lists that do not name the station
-        stay in the listed tier, marked as checked). <span data-source="methods_facts" data-field="value" data-where="fact=push_read_undecided">—</span> were read but could not be settled, usually
-        because the text names Friday Harbor but not the laboratory. The rest, <span data-source="methods_facts" data-field="value" data-where="fact=push_unreadable">—</span>, could not be read:
-        <span data-source="methods_facts" data-field="value" data-where="fact=push_paywall">—</span> are behind a publisher's paywall, <span data-source="methods_facts" data-field="value" data-where="fact=push_bot_check">—</span> are on sites that block automated reading,
-        <span data-source="methods_facts" data-field="value" data-where="fact=push_no_copy">—</span> have no copy online, and <span data-source="methods_facts" data-field="value" data-where="fact=push_other_barrier">—</span> are library copies that can only be borrowed or
-        unreadable scans. The agents did not log in anywhere or get around a paywall or bot check, so "not readable" means
-        exactly that, not that the station is absent; a person with library access could check them (Table IV gives the
-        reason for each). A second agent re-checked a sample of every batch.</p>
+    </div>
+    <figure class="fp-fig fm-fig">
+      <div class="fm-push" id="ch-push">
+        <div class="fm-card">
+          <h4>(a) Given to each reading agent</h4>
+          <ul>
+            <li>the shared reading guide: what counts as naming FHL, and how to tell the town from the laboratory</li>
+            <li>the station's names, old and new</li>
+            <li>a batch of up to <span data-source="methods_facts" data-field="value" data-where="fact=push_batch_max">—</span> records, with their known links and any earlier snippets</li>
+          </ul>
+          <p class="fm-k">Open routes, tried in order</p>
+          <ol>
+            <li>the record's own links</li>
+            <li>doi.org</li>
+            <li>Europe PMC and PubMed Central full text</li>
+            <li>open copies listed by OpenAlex</li>
+            <li>open copies listed by Semantic Scholar</li>
+            <li>Biodiversity Heritage Library, Internet Archive, JSTOR's free early journals</li>
+            <li>a web search, as a last resort</li>
+          </ol>
+          <p class="fm-k">Stop at any login, paywall, bot check or CAPTCHA; never guess from the title.</p>
+          <p class="fm-k">Written for every record: the decision, where FHL appears, a quoted line of evidence and what
+            stopped the reading.</p>
+        </div>
+        <div class="fm-pb">
+          <h4>(b) What each agent did</h4>
+          <div class="fp-legend" id="lg-push-tools"></div>
+          <div class="fp-chart fm-chart" id="ch-push-did" data-source="agents methods_facts"></div>
+        </div>
+        <div class="fm-pc">
+          <h4>(c) What came back</h4>
+          <div class="fp-legend" id="lg-push"></div>
+          <div class="fp-chart fm-chart" id="ch-push-back" data-source="methods_facts"></div>
+        </div>
+      </div>
+      <figcaption>
+        <h3 id="fig-push"><span class="fig">Fig. 25.</span>—Inside one agent's job: the verification push.</h3>
+        <p class="cap">The verification push of 28 October 2026. (a) What each reading agent was given. (b) What each did: one column
+          per agent, its tool calls stacked by kind; dashed stubs never returned, and the re-check agents with a slash stopped
+          at the account's spend limit. (c) What came back, one square per <span data-fm="waffle-n">—</span> records: <span data-fm="push-unread-share">—</span>
+          could not be read and were left as they were, not guessed from the title; a person with library access could check
+          them (Table IV gives the reason for each one in the catalogue; the census file has the rest). Papers on FHL's lists that do not name the station stay in the listed
+          tier. Below the squares, second agents' re-reading of a sample from <span data-fm="push-recheck-batches">—</span> of
+          the <span data-fm="push-batches">—</span> batches (the other batches' re-check agents stopped at the spend limit or
+          never returned).</p>
+      </figcaption>
+    </figure>
+    <div class="fp-notes">
       <p><span class="runin">Evidence tiers.</span>—<i>Verified</i>: FHL was seen in the record (an author address, a passage
         of text, the station's own series, or dataset metadata). <i>Probable</i>: a full-text index names the lab, but the
         passage could not be read, almost always because the paper is behind a publisher's paywall or no readable copy is online.
         <i>Listed by FHL</i>: on an FHL-maintained publication list but not independently confirmed, either because the paper
         could not be read or because it does not name the station; the audit found an FHL connection in only about a third,
         so these are not added to the verified count.</p>
+    </div>
+    <figure class="fp-fig fm-fig">
+      <div class="fp-legend" id="lg-checks"></div>
+      <div class="fp-chart fm-chart" id="ch-checks" data-source="methods_checks"></div>
+      <figcaption>
+        <h3 id="fig-checks"><span class="fig">Fig. 26.</span>—What the checking agents changed.</h3>
+        <p class="cap">Rounds in which checking agents re-opened other agents' (or a script's) work; the audit of the census
+          decisions is in Fig. 27 and the screening calibration in Fig. 24. Each row shows what the checking agents did with
+          the items they re-opened (■ an agent, □ a script, ▨ a checking agent, ⊠ a reviewer). The thin line under each bar
+          shows what share of all the items was re-opened. <span data-fm="checks-claim" hidden>Checkers rewrote nearly every
+          profile but rarely overturned a reading.</span></p>
+      </figcaption>
+    </figure>
+    <figure class="fp-fig fm-fig">
+      <div class="fp-legend" id="lg-trust"></div>
+      <div class="fp-controls fp-toggle" id="fm-trust-toggle" role="group" aria-label="View"><button type="button" data-view="decided" aria-pressed="true">By who decided</button><button type="button" data-view="tier" aria-pressed="false">By evidence tier</button></div>
+      <div class="fp-chart fm-chart" id="ch-trust" data-source="audit_by_stratum audit_tiers"></div>
+      <figcaption>
+        <h3 id="fig-trust"><span class="fig">Fig. 27.</span>—How far each kind of decision can be trusted.</h3>
+        <p class="cap">The share of audited decisions the audit agreed with, with 95% intervals, grouped by how each record was decided;
+          bars at right give each stratum's size when the audit sample was drawn, before the verification push and the
+          clean-up (so they differ from the final decisions in Fig. 24). The auditors were themselves AI agents, with an adjudicator on
+          disagreements in the stratified sample (not on the <span data-source="methods_facts" data-field="value" data-where="fact=audited_listed">—</span> extra records from FHL's lists). <span data-fm="trust-claim" hidden>Records an agent screened held up as well as those decided by
+          written rules; records resting only on FHL's own lists did not.</span> The second view gives the evidence tiers
+          (Table III).</p>
+      </figcaption>
+    </figure>
+    <div class="fp-notes">
       <p><span class="runin">Audit.</span>—A stratified random sample of
-        <span data-source="methods_facts" data-field="value" data-where="fact=audited">—</span> decisions, drawn from every
+        <span data-source="methods_facts" data-field="value" data-where="fact=audited_sample">—</span> decisions, drawn from every
         tier and from the excluded and unverified records, was re-checked by separate AI agents told to try to prove each
-        decision wrong from the publication itself (<span data-source="methods_facts" data-field="value" data-where="fact=audit_full_text">—</span>
-        read in full text). A second agent adjudicated every disagreement. Precision is the share confirmed, weighted by
+        decision wrong from the publication itself; a second agent adjudicated every disagreement. A further <span data-source="methods_facts" data-field="value" data-where="fact=audited_listed">—</span> records found only
+        on FHL's own lists were judged by one agent, without adjudication (<span data-source="methods_facts" data-field="value" data-where="fact=audited">—</span> audited in all, <span data-source="methods_facts" data-field="value" data-where="fact=audit_full_text">—</span> of them read in full text). Precision is the share confirmed, weighted by
         stratum size, with Wilson 95% intervals (Table III). The best estimate counts verified records at their audited
         precision, and probable and listed records that could not be read at the share of their tier that named FHL when the
         verification push could read the paper (the audit precision where fewer than 20 were read). The
         audit was done by AI agents, not by people; a human check of a sample would strengthen it.</p>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-diagram fp-dg" id="dg-checks">
-        <div class="lanes">
-          <div class="lane"><div class="lbl">Automatic</div><div class="row">
-            <div class="box">Format check on every batch file<span class="d">each agent re-ran a validator until it printed OK: every record
-              exactly once, only allowed values, a reason given</span></div></div></div>
-          <div class="lane"><div class="lbl">A second agent</div><div class="row">
-            <div class="box">Completeness critic for the eight searches<span class="d">re-ran its own counts on every file; its gaps led to a
-              second round of searching</span></div>
-            <div class="box">Calibration reviewers<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=calibration_overrides">—</span></span> screening calls changed, of
-              <span data-source="methods_facts" data-field="value" data-where="fact=screened_round1">—</span> and <span data-source="methods_facts" data-field="value" data-where="fact=screened_round2">—</span> judged in two rounds</span></div>
-            <div class="box">Re-check of the reading agents<span class="d"><span class="n">152</span> of 159 publication readings and
-              <span class="n">96</span> of 103 address readings agreed</span></div></div></div>
-          <div class="lane"><div class="lbl">Sampled audit</div><div class="row">
-            <div class="box">Independent audit<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=audited">—</span></span> records in all, drawn at random in strata;
-              auditors went to the publication itself and tried to prove each decision wrong (<span data-source="methods_facts" data-field="value" data-where="fact=audit_full_text">—</span> read in full text)</span></div>
-            <span class="to">→</span>
-            <div class="box">Second judge on every disagreement<span class="d">ruled whether the census, the auditor or neither was right</span></div>
-            <span class="to">→</span>
-            <div class="box">Share correct by tier, with 95% intervals<span class="d">Fig. 26 and Table III</span></div></div></div>
-          <div class="lane"><div class="lbl">Which call wins</div><div class="row">
-            <div class="box">Written rule &lt; AI screening &lt; calibration review &lt; a reading of the paper itself<span class="d">an audit
-              verdict replaces a field only where the auditor could verify it</span></div>
-            <span class="to">→</span>
-            <div class="box key">One decision for each of <span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=candidates">—</span></span> candidates<span class="d"><span data-source="methods_facts" data-field="value" data-where="fact=decided_audit">—</span> of them
-              rest on the audit</span></div></div></div>
-        </div>
-      </div>
-      <figcaption>
-        <h3 id="fig-checks"><span class="fig">Fig. 25.</span>—How every agent's work was checked.</h3>
-        <p class="cap">No agent's output was taken on trust: every batch passed an automatic check, a second agent reviewed
-          or re-checked a sample, an independent audit with a second judge measured accuracy, and a fixed order decided
-          which judgement counts when two disagree.</p>
-      </figcaption>
-    </figure>
-    <div class="fp-grid fp-method-figs">
-      <figure class="fp-fig">
-        <div class="fp-chart" id="ch-audit" data-source="audit_tiers"></div>
-        <figcaption>
-          <h3 id="fig-audit"><span class="fig">Fig. 26.</span>—How often the audit confirmed each tier.</h3>
-          <p class="cap">The share of sampled decisions the audit confirmed against the publication itself, with its 95%
-            interval; the number checked is beside each tier. Narrow intervals come from larger samples.</p>
-        </figcaption>
-      </figure>
-      <figure class="fp-fig">
-        <div class="fp-chart" id="ch-linksrc" data-source="lineage"></div>
-        <figcaption>
-          <h3 id="fig-linksrc"><span class="fig">Fig. 27.</span>—Where the links of the mentoring network come from.</h3>
-          <p class="cap">Links in Fig. 11 by the source that documents them. Lab rosters and CVs, re-checked against their
-            pages, give most links; links inferred from co-authorship were checked one by one, and those not confirmed are
-            drawn dashed. A pair documented by more than one source is counted once, under the source that documented it
-            first (theses, Wikidata, rosters, committees and profiles before co-authorship), so most confirmed co-authorship
-            links appear here under another source.</p>
-        </figcaption>
-      </figure>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-diagram fp-dg" id="dg-people">
-        <div class="lanes">
-          <div class="lane"><div class="lbl">People</div><div class="row">
-            <div class="box">Mentors guessed from co-authorship (script)<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=mentor_pairs">—</span></span> pairs</span></div>
-            <span class="to">→</span>
-            <div class="box">Each pair checked in public records<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=mentor_confirmed">—</span></span> confirmed, <span data-source="methods_facts" data-field="value" data-where="fact=mentor_peer">—</span>
-              peers removed, <span data-source="methods_facts" data-field="value" data-where="fact=mentor_unclear">—</span> unclear; a second agent and an adjudicator settled disputes</span></div>
-            <span class="to">+</span>
-            <div class="box">Lab rosters, three rounds<span class="d"><span data-source="methods_facts" data-field="value" data-where="fact=roster_found">—</span> found for the FHL scientists; a verifier re-opened every
-              page</span></div>
-            <span class="to">+</span>
-            <div class="box">Profiles: a writer and a fact-checker<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=profiles">—</span></span> profiles, <span data-source="methods_facts" data-field="value" data-where="fact=profiles_revised">—</span>
-              revised by the checker</span></div>
-            <span class="to">→</span>
-            <div class="box key">Mentoring network<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=network_people">—</span></span> people, <span data-source="methods_facts" data-field="value" data-where="fact=network_links">—</span> links (Fig. 11)</span></div></div></div>
-          <div class="lane"><div class="lbl">History</div><div class="row">
-            <div class="box">Sources gathered (script)<span class="d">historic newspapers, FHL newsletters and web pages, news items, the
-              centennial timeline</span></div>
-            <span class="to">→</span>
-            <div class="box">Historian agents list dated events<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=history_extracted">—</span></span> events, each with a
-              source and a quotation</span></div>
-            <span class="to">→</span>
-            <div class="box">Merged, then fact-checkers<span class="d"><span data-source="methods_facts" data-field="value" data-where="fact=history_corrected">—</span> events corrected</span></div>
-            <span class="to">→</span>
-            <div class="box">Image finders, then a second check<span class="d">licence or FHL permission confirmed on the record page</span></div>
-            <span class="to">→</span>
-            <div class="box key">Chronicle of the station<span class="d"><span class="n"><span data-source="methods_facts" data-field="value" data-where="fact=history_events">—</span></span> events, <span data-source="methods_facts" data-field="value" data-where="fact=history_images">—</span> images</span></div></div></div>
-        </div>
-      </div>
-      <figcaption>
-        <h3 id="fig-people-search"><span class="fig">Fig. 28.</span>—How people and the station's history were searched and checked.</h3>
-        <p class="cap">Mentors inferred from co-authorship, lab rosters, profiles, the chronicle's events and its images were
-          each checked by a second agent (or settled by an adjudicator) before use; thesis and Wikidata links come from those
-          structured records. Inferred mentors that could not be confirmed are kept but drawn dashed in Fig. 11, and the
-          archive lists of staff, classes and artists were fact-checked in samples, the least certain entries first.</p>
-      </figcaption>
-    </figure>
-    <div class="fp-notes">
       <p><span class="runin">Recall.</span>—FHL's own publication lists serve as an independent sample of FHL work. For each
         decade, recall is the share of listed papers that the database searches found on their own (Fig. 20). Listed papers
         that the searches missed make up the "Listed by FHL" tier.</p>
@@ -1477,6 +1406,18 @@
         of classes instead. They are marked "Historical" in Table I; their roles and sources are on their card (Find a
         person).</p>
       <p><span class="runin">People.</span>—FHL scientists are the authors who list FHL, or the station under an earlier
+        name, as their address on at least three verified publications, identified through OpenAlex's author records. The
+        mentoring network (Fig. 11) joins them to their students and teachers through UW thesis records, Wikidata, lab rosters
+        and CVs read by AI agents and re-checked entry by entry, graduate committees, fact-checked profiles, and mentors
+        inferred from co-authorship and then checked by agents (Figs. 22, 26 and 28). Of the FHL scientists,
+        <span data-source="methods_facts" data-field="value" data-where="fact=roster_found">—</span> have a roster, CV list or committee list, <span data-source="methods_facts" data-field="value" data-where="fact=roster_no_lab">—</span> lead no lab of their own,
+        <span data-source="methods_facts" data-field="value" data-where="fact=roster_historical">—</span> worked before public lab pages, and for <span data-source="methods_facts" data-field="value" data-where="fact=roster_not_found">—</span> who taught no list of
+        trainees was found.</p>
+    </div>
+    <details class="fm-more">
+      <summary>How people, mentoring links and profiles were found, in detail</summary>
+      <div class="fp-notes">
+      <p><span class="runin">People.</span>—FHL scientists are the authors who list FHL, or the station under an earlier
         name, as their address on at least three verified publications, identified through OpenAlex's author records. For
         each, OpenAlex's history of the institutions on their papers gives where they came from (the earliest institution
         with a paper before or in their first FHL year) and where they went (the institution with papers in the most years
@@ -1515,13 +1456,37 @@
         hand: L. D. Partridge (FHL papers 1975–79) and Volker Schmid (1988–92) had each been merged with a different scientist
         of the same name, a biogerontologist and a statistician. Scientists from before about 1970 are under-represented because older papers carry no address
         metadata.</p>
+      </div>
+    </details>
+    <figure class="fp-fig fm-fig">
+      <div class="fp-chart" id="ch-linksrc" data-source="lineage"></div>
+      <figcaption>
+        <h3 id="fig-linksrc"><span class="fig">Fig. 28.</span>—Where the links of the mentoring network come from.</h3>
+        <p class="cap">Links in Fig. 11 by the source that documents them. <span data-fm="links-agent">—</span> of the <span data-fm="links-all">—</span> were found by
+          AI agents reading lab rosters, CVs, committee lists and profiles (runs 9 to 12; Fig. 22), each re-checked; the rest
+          come from UW thesis records, Wikidata and the co-authorship rule, whose links agents checked one by one (Fig. 26). A
+          pair documented by more than one source is counted once, under the source that documented it first.</p>
+      </figcaption>
+    </figure>
+    <div class="fp-notes">
+      <p><span class="runin">The chronicle.</span>—The events and images of section X come from public sources (Chronicling
+        America newspaper pages, FHL's newsletters and web pages read from Internet Archive copies, the Historical Centennial
+        Timeline, the census's news items and UW Libraries catalogue records) and from FHL's own archives, used with FHL's
+        permission. AI agents extracted <span data-source="methods_facts" data-field="value" data-where="fact=history_extracted">—</span> dated events, another merged them into one timeline, and
+        fact-checkers checked every event; three image searches proposed candidates that second agents checked for licence
+        and year before picture editors chose among them and fact-checkers checked every caption (Figs. 22 and 26). Images
+        are shown only where they are in the public domain, openly licensed, or FHL's own.</p>
+    </div>
+    <details class="fm-more">
+      <summary>How the chronicle was gathered, in detail</summary>
+      <div class="fp-notes">
       <p><span class="runin">The chronicle.</span>—Sources for section X were gathered through public interfaces:
         newspaper pages from Chronicling America (Library of Congress) that mention the station, mostly the San Juan Islander of
         1904–1914; FHL's annual newsletter Intertidal Tidings and its history and news pages, read from Internet Archive copies;
         the Historical Centennial Timeline compiled by Claudia Mills and Colin Hermans (used for facts, credited, not quoted at
         length); the census's news items; and catalogue records of the University of Washington Libraries' photographs. AI agents
         extracted <span data-source="methods_facts" data-field="value" data-where="fact=history_extracted">—</span> dated events from these, another merged them into one timeline, and four more checked
-        each event against its sources, correcting <span data-source="methods_facts" data-field="value" data-where="fact=history_corrected">—</span> (Table VI); the timeline now holds
+        each of the <span data-source="methods_facts" data-field="value" data-where="fact=history_events_first">—</span> events against its sources, correcting <span data-source="methods_facts" data-field="value" data-where="fact=history_corrected_first">—</span> (Table VI); the timeline now holds
         <span data-source="methods_facts" data-field="value" data-where="fact=history_events">—</span> events, <span data-source="methods_facts" data-field="value" data-where="fact=history_more_events">—</span> of them added later from the records of newly found images. A
         second run looked for images: eight agents each searched one kind of source (Wikimedia Commons and Wikidata; openly
         licensed photographs through Openverse; publications from before 1931 on the Internet Archive; University of Washington
@@ -1543,6 +1508,9 @@
         years 1903–2026, <span data-source="methods_facts" data-field="value" data-where="fact=history_years_covered">—</span> now have at least one image and <span data-source="methods_facts" data-field="value" data-where="fact=history_years_two">—</span> have two or more.
         Images that a newspaper, magazine, company or outside photographer holds, even where FHL reprinted them, and
         close-ups of identifiable schoolchildren from FHL's outreach programs were left out until permission is confirmed.</p>
+      </div>
+    </details>
+    <div class="fp-notes">
       <p><span class="runin">Classes and art.</span>—The lists of classes, staff and artists in residence in section X were
         gathered from public records by AI agents and fact-checked by others. For the figure of course topics, agents gave
         each of the <span data-source="methods_facts" data-field="value" data-where="fact=course_titles">—</span> distinct course titles one topic from a fixed list, and a further agent reviewed
@@ -1570,25 +1538,21 @@
         section and the check of inferred mentors, the setting was "max", the highest; the chronicle's second image search and
         a review of the page's phone layout (15–16 October), the verification push, the archive searches and the review of
         28 October, and the later searches for images, course topics and art and the research for the methods diagrams
-        (28–29 October) ran at "xhigh" (Table VI). Claude Code's ultracode
+        (28–29 October) ran at "xhigh" (Table VI). These are the settings of the coordinating session; the agents' own logs
+        record the setting each agent ran at, one step lower for the runs at "max" (runs 9–13, logged "xhigh") and for the
+        runs of 28–29 October that started after 22:00 UTC (runs 22–25, logged "high"), as Table VI shows. Claude Code's ultracode
         mode was on while the census was built, so each substantive step ran as a scripted multi-agent workflow; the topic
         classification and the mentor check, added afterwards, ran as agents started directly. In all,
-        <span data-source="methods_facts" data-field="value" data-where="fact=ai_runs">—</span> runs used
+        <span data-source="methods_facts" data-field="value" data-where="fact=ai_runs">—</span> runs (<span data-fm="runs-agents">—</span> of them with agents) used
         <span data-source="methods_facts" data-field="value" data-where="fact=ai_agents">—</span> agents (Table VI).
         The first complete version took
         <span data-source="methods_facts" data-field="value" data-where="fact=build_hours">—</span> hours of wall-clock time,
         most of it unattended.</p>
-    </div>
-    <div class="fp-fig fp-narrow" id="ai-workflows">
-      <h3 id="tab-ai"><span class="fig">Table VI.</span>—The AI runs.</h3>
-      <div class="fp-scroll"><table id="tbl-ai" class="ruled" data-source="ai_workflows" data-row-key="workflow">
-        <thead><tr><th data-field="workflow">Run</th><th data-field="purpose">Purpose</th>
-          <th data-field="agents" class="num">Agents</th><th data-field="effort">Effort</th>
-          <th data-field="started_utc" class="num">Started (UTC)</th></tr></thead>
-        <tbody></tbody>
-      </table></div>
-    </div>
-    <div class="fp-notes">
+      <p><span class="runin">Agents counted.</span>—Agents launched: <span data-fm="agents-launched">—</span>; counted:
+        <span data-fm="agents-counted">—</span>. <span data-fm="agents-unreturned">—</span> reading and re-checking agents of run 16 never returned after the
+        run was stopped, and the other <span data-fm="agents-other">—</span> were a first launch of run 24
+        (<span data-fm="agents-aborted">—</span> agents, stopped within minutes and launched again) and
+        <span data-fm="agents-unlinked">—</span> agent not linked to any run.</p>
       <p><span class="runin">Division of labour.</span>—Claude planned the pipeline, wrote all the code, queried the public
         sources through their programming interfaces, judged ambiguous records, ran the audit, and drafted and designed this
         page. The compiler set the task and the later requests listed below, signed in to the UW Libraries and Web of
@@ -1657,7 +1621,7 @@
   // Stand-in for the dashboard runtime: fetches each dataset from data/ and serves it to the info sheet's code unchanged.
   window.FP_SITE_BASE = ''; // images (the chronicle of the station) are files next to the page
   window.dash = (() => {
-    const FILES = {"ai_workflows": "data/ai_workflows.csv", "art_images": "data/art_images.csv", "artist_programs": "data/artist_programs.csv", "artists": "data/artists.csv", "audit_tiers": "data/audit_tiers.csv", "by_appears": "data/by_appears.csv", "by_era": "data/by_era.csv", "by_type": "data/by_type.csv", "by_year": "data/by_year.csv", "by_year_appears": "data/by_year_appears.csv", "candidate_status": "data/candidate_status.csv", "classes": "data/classes.csv", "coauthor_places": "data/coauthor_places.csv", "course_topics": "data/course_topics.csv", "eras": "data/eras.csv", "headline": "data/headline.csv", "history_eras": "data/history_eras.csv", "history_events": "data/history_events.csv", "history_images": "data/history_images.csv", "lineage": "data/lineage.csv", "lineage_people": "data/lineage_people.csv", "methods_facts": "data/methods_facts.csv", "network_split": "data/network_split.csv", "news_by_year": "data/news_by_year.csv", "organisms_by_decade": "data/organisms_by_decade.csv", "people": "data/people.csv", "people_links": "data/people_links.csv", "places": "data/places.csv", "profiles": "data/profiles.csv", "prompts": "data/prompts.csv", "publications": "data/publications.csv", "recall_by_decade": "data/recall_by_decade.csv", "staff": "data/staff.csv", "top_cited": "data/top_cited.csv", "top_venues": "data/top_venues.csv", "topics_by_decade": "data/topics_by_decade.csv", "whiteley_by_field": "data/whiteley_by_field.csv", "world_land": "data/world_land.json"};
+    const FILES = {"agent_stages": "data/agent_stages.csv", "agents": "data/agents.csv", "ai_workflows": "data/ai_workflows.csv", "art_images": "data/art_images.csv", "artist_programs": "data/artist_programs.csv", "artists": "data/artists.csv", "audit_by_stratum": "data/audit_by_stratum.csv", "audit_tiers": "data/audit_tiers.csv", "by_appears": "data/by_appears.csv", "by_era": "data/by_era.csv", "by_type": "data/by_type.csv", "by_year": "data/by_year.csv", "by_year_appears": "data/by_year_appears.csv", "candidate_status": "data/candidate_status.csv", "census_steps": "data/census_steps.csv", "classes": "data/classes.csv", "coauthor_places": "data/coauthor_places.csv", "course_topics": "data/course_topics.csv", "eras": "data/eras.csv", "headline": "data/headline.csv", "history_eras": "data/history_eras.csv", "history_events": "data/history_events.csv", "history_images": "data/history_images.csv", "lineage": "data/lineage.csv", "lineage_people": "data/lineage_people.csv", "methods_checks": "data/methods_checks.csv", "methods_facts": "data/methods_facts.csv", "network_split": "data/network_split.csv", "news_by_year": "data/news_by_year.csv", "organisms_by_decade": "data/organisms_by_decade.csv", "people": "data/people.csv", "people_links": "data/people_links.csv", "places": "data/places.csv", "profiles": "data/profiles.csv", "prompts": "data/prompts.csv", "publications": "data/publications.csv", "recall_by_decade": "data/recall_by_decade.csv", "staff": "data/staff.csv", "top_cited": "data/top_cited.csv", "top_venues": "data/top_venues.csv", "topics_by_decade": "data/topics_by_decade.csv", "whiteley_by_field": "data/whiteley_by_field.csv", "world_land": "data/world_land.json"};
     const store = {}, calcs = {}, draws = [];
     const run = (fn) => { try { fn(); } catch (e) { console.error(e); } };
     // Figures depend only on the width: redraw when it changes (not when a phone's toolbar hides, which changes the height).
@@ -3502,70 +3466,13 @@
       // (the AI runs table)
       document.querySelector('#tbl-ai tbody').replaceChildren(...aw.data.map((r) => {
         const tr = document.createElement('tr'); tr.dataset.key = r.workflow;
-        fillRow(tr, [[r.workflow, ''], [r.purpose, ''], [String(r.agents), 'num'], [r.effort, ''], [r.started_utc, 'num']]);
+        fillRow(tr, [[r.workflow, ''], [r.purpose, ''], [String(r.agents), 'num'], [r.effort, ''], [r.effort_logged || (+r.agents ? 'not logged' : '—'), ''], [r.started_utc, 'num']]);
         return tr;
       }));
     }
 
-    // ---- methods figures (Figs. 21-28) --------------------------------------------------------------------------
-    const mk = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
-    const dgFlow = document.getElementById('dg-flow');
-    if (state(dgFlow, ['methods_facts', 'candidate_status'])) {
-      const mf = new Map(dash.data('methods_facts').data.map((r) => [r.fact, +r.value]));
-      const st = dash.data('candidate_status').data.map((r) => ({ k: r.status, n: +r.records })).sort((a, b) => b.n - a.n);
-      const total = d3.sum(st, (r) => r.n);
-      const step = (n, t) => { const d = mk('div', 'step'); d.append(mk('div', 'n', f(n)), mk('div', 't', t)); return d; };
-      const out = [step(mf.get('source_rows'), 'records returned by searches of bibliographic databases, repositories, archives and FHL\'s own publication lists'),
-        mk('div', 'arrow', '↓'), step(mf.get('candidates'), 'candidate publications once duplicates were merged'),
-        mk('div', 'arrow', '↓'),
-        step(['decided_rules', 'decided_screening', 'decided_calibration', 'decided_audit', 'decided_dedup', 'decided_cleanup'].reduce((a, k) => a + (mf.get(k) || 0), 0),
-          `decided: ${f(mf.get('decided_rules'))} by written rules, ${f(mf.get('decided_screening'))} by AI agents reading each record against a screening guide, ${f(mf.get('decided_calibration'))} by calibration review, ${f(mf.get('decided_audit'))} by the audit, ${f(mf.get('decided_dedup'))} merged as duplicates and ${f(mf.get('decided_cleanup'))} by the clean-up review`),
-        mk('div', 'arrow', '↓')];
-      const res = mk('div', 'step result'); res.append(mk('div', 'n', f(total)), mk('div', 't', 'outcomes'));
-      const bar = mk('div', 'bar'), key = mk('ul', 'key');
-      const fills = { 'Included': 'solid', 'Archive mention (volume-level)': 'hatch', 'Excluded': 'open', 'Mention only': 'dots', 'Unverified candidate': 'grey' };
-      st.forEach((r) => {
-        const seg = mk('span', `seg ${fills[r.k] || 'open'}`); seg.style.width = `${(100 * r.n) / total}%`; seg.title = `${r.k}: ${f(r.n)}`; bar.append(seg);
-        const li = mk('li'); li.append(mk('span', `sw ${fills[r.k] || 'open'}`), document.createTextNode(`${r.k}: ${f(r.n)}`)); key.append(li);
-      });
-      res.append(bar, key);
-      out.push(res, mk('div', 'arrow', '↓'), step(mf.get('audited'), `decisions re-checked against the publications by separate AI agents (${f(mf.get('audit_full_text'))} in full text)`));
-      dgFlow.classList.remove('dash-skeleton'); dgFlow.replaceChildren(...out);
-    }
-    const dgTiers = document.getElementById('dg-tiers');
-    if (state(dgTiers, ['headline', 'audit_tiers'])) {
-      const h = dash.data('headline').data[0] || {};
-      const prec = new Map(dash.data('audit_tiers').data.map((r) => [r.tier, +r.precision]));
-      const rows = [
-        ['Is it an FHL publication (not a passing mention, citation, obituary, the town, or a whole archive volume), and is FHL, or the station under an earlier name, seen in it: an author\'s address, a passage of the text (acknowledgments, methods, funding or elsewhere), the station\'s own series, or dataset metadata?', 'Verified', h.verified, prec.get('Verified')],
-        ['If not: does a full-text search index find the station\'s name, although no one could read the passage (a publisher\'s paywall, or no readable copy online)?', 'Probable', h.probable, prec.get('Probable')],
-        ['If not: is it on one of FHL\'s own publication lists?', 'Listed by FHL', h.listed_by_fhl, prec.get('Listed by FHL')],
-      ];
-      const out = rows.map(([q, tier, n, p]) => {
-        const r = mk('div', 'q'); r.append(mk('div', 'ask', q));
-        const a = mk('div', 'ans'); a.append(mk('span', 'yes', 'yes →'), mk('b', null, tier), mk('span', 'n', `${f(+n || 0)} publications${p ? `; audit confirmed ${pct(p)}` : ''}`));
-        r.append(a); return r;
-      });
-      const last = mk('div', 'q end'); last.append(mk('div', 'ask', 'None of these: left out. The town of Friday Harbor or another organization there, a passing mention or a citation, a mention of a whole archive volume, or not confirmed. Each keeps its reason in the full census file.'));
-      out.push(last);
-      dgTiers.classList.remove('dash-skeleton'); dgTiers.replaceChildren(...out);
-    }
-    const elAud = document.getElementById('ch-audit');
-    if (state(elAud, ['audit_tiers'])) {
-      const rows = dash.data('audit_tiers').data.map((r) => { const [lo, hi] = String(r.interval).split('–').map(Number); return { tier: r.tier, p: +r.precision, n: +r.checked, lo, hi }; });
-      const rowH = 34, { svg, width, height } = svgFor(elAud, rows.length * rowH + 30);
-      const lw = textWidth(svg, rows.map((r) => r.tier)) + 14, nw = textWidth(svg, rows.map((r) => `${f(r.n)} checked`)) + 10;
-      const x = d3.scaleLinear([0, 1], [lw, width - nw]);
-      svg.append('g').attr('class', 'grid').attr('transform', `translate(0,${height - 22})`)
-        .call(d3.axisBottom(x).ticks(5).tickFormat(pct).tickSize(-(height - 26))).call(cleanAxis).call((g) => g.select('.domain').remove());
-      const g = svg.selectAll('g.row').data(rows).join('g').attr('class', 'row').attr('transform', (d, i) => `translate(0,${i * rowH + rowH / 2 + 2})`);
-      g.append('text').attr('class', 'lbl').attr('x', lw - 10).attr('dy', '0.35em').attr('text-anchor', 'end').text((d) => d.tier);
-      g.append('line').attr('class', 'base').attr('x1', (d) => x(d.lo)).attr('x2', (d) => x(d.hi));
-      g.append('circle').attr('class', 'mark').attr('cx', (d) => x(d.p)).attr('r', 5).style('fill', FILL.solid);
-      g.append('text').attr('x', width - nw + 8).attr('dy', '0.35em').text((d) => `${f(d.n)} checked`);
-      g.on('mousemove', (event, d) => showTip(elAud, event, d.tier, [[null, null, `${pct(d.p)} confirmed (95% interval ${pct(d.lo)}–${pct(d.hi)}), ${f(d.n)} checked`]]))
-        .on('mouseleave', () => hideTip(elAud));
-    }
+    // ---- methods figures: Figs. 21-27 are drawn by methods.js (loaded after this script); Fig. 28 here ----------------
+    if (window.FPM) window.FPM.draw();
     const elLs = document.getElementById('ch-linksrc');
     if (state(elLs, ['lineage'])) {
       const rows = d3.rollups(dash.data('lineage').data, (v) => v.length, (l) => l.source).map(([source, n]) => ({ source, n })).sort((a, b) => b.n - a.n);
@@ -3752,7 +3659,731 @@
     if (location.hash === '#feedback') openForm();
   })();
 </script>
+<script>
+// The Methods figures that show how the AI agents were used (Figs. 21-27). Loaded after the page's main script; uses
+// window.FP for fills, keys, tooltips and the phone test. One square is one agent everywhere, filled by its role.
+(() => {
+  const { f, pct, FILL, state, legend, svgFor, showTip, hideTip, textWidth, phone } = window.FP;
+  const GAP_H = 2; // hours with no agent working and no prompt typed that cut the time axis of Fig. 23
+  const WAFFLE_N = 5; // records per square in Fig. 25
+  const PAPER = 'var(--fp-paper)', INK = 'var(--fp-ink)';
+  const ROLE = { make: FILL.solid, check: FILL.hatch, review: FILL.cross };
+  const ROLE_NAME = { make: 'did the work', check: 'checked earlier work', review: "worked across other agents' results" };
+  const TOOLS = [['search', 'web search', FILL.solid], ['fetch', 'page fetch', FILL.cross],
+    ['web_script', 'web request from a script', FILL.hatch], ['local_script', 'local script', FILL.dots],
+    ['read', 'file read', FILL.horiz], ['wo', 'write and other', FILL.open]];
+  const WHO = { agent: [FILL.solid, 'AI agents'], check: [FILL.hatch, 'checking agents'], review: [FILL.cross, 'reviewing agents'],
+    claude: [FILL.dots, 'Claude in the main session'], script: [FILL.open, 'a script'], person: [FILL.grayl, 'a person'],
+    none: [FILL.horiz, 'could not be read'] };
+  const GLYPH = { agent: '■', check: '■', review: '■', claude: '◆', script: '□', person: '●' };
+  const PACIFIC = 'America/Los_Angeles';
+  const hm = new Intl.DateTimeFormat('en-US', { timeZone: PACIFIC, hour: 'numeric', minute: '2-digit' });
+  const dayf = new Intl.DateTimeFormat('en-US', { timeZone: PACIFIC, weekday: 'short', month: 'short', day: 'numeric' });
+  const el = (id) => document.getElementById(id);
+  const mk = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const n = (v) => (v === '' || v == null ? 0 : +v);
+  const words = (x) => { // a share as words where it is close to a simple fraction
+    const fr = [[1 / 4, 'a quarter'], [1 / 3, 'a third'], [1 / 2, 'half'], [2 / 3, 'two-thirds'], [3 / 4, 'three-quarters']];
+    const hit = fr.find(([v]) => Math.abs(x - v) < 0.012);
+    return hit ? hit[1] : pct(x);
+  };
+  const fill = (id, text) => document.querySelectorAll(`[data-fm="${id}"]`).forEach((e) => { e.textContent = text; });
+  const safely = (box, fn) => { try { if (box) fn(box); } catch (e) { console.error(e); if (box) { box.replaceChildren(); box.append(mk('div', 'fp-fail', 'Failed to draw')); } } };
 
+  // ---- the data, shaped once per draw
+  const load = () => {
+    const facts = new Map(dash.data('methods_facts').data.map((r) => [r.fact, +r.value]));
+    const runs = new Map(dash.data('ai_workflows').data.map((r) => [+r.run, { ...r, run: +r.run, agents: +r.agents,
+      name: String(r.workflow).replace(/^\d+\.\s*/, '').replace(/^fhl-/, ''), t: Date.parse(String(r.started_utc).replace(' ', 'T') + ':00Z') }]));
+    const agents = dash.data('agents').data.map((r) => {
+      const a = { run: +r.run, stage: r.stage, stage_i: +r.stage_i, lane: r.lane, role: r.role, status: r.status, logged: r.logged === '1',
+        t: r.start_utc ? Date.parse(r.start_utc) : null, dur: n(r.dur_min), out: n(r.out_tokens) };
+      ['search', 'fetch', 'web_script', 'local_script', 'read'].forEach((k) => { a[k] = n(r[k]); });
+      a.wo = n(r.write) + n(r.other);
+      a.calls = a.search + a.fetch + a.web_script + a.local_script + a.read + a.wo;
+      a.web = a.search + a.fetch + a.web_script;
+      a.end = a.t == null ? null : a.t + a.dur * 60000;
+      return a;
+    });
+    const families = [];
+    runs.forEach((r) => { let fm = families.find((x) => x.id === r.family); if (!fm) families.push(fm = { id: r.family, name: r.family_name, runs: [] }); fm.runs.push(r.run); });
+    families.sort((a, b) => a.id.localeCompare(b.id));
+    return { facts, runs, agents, families };
+  };
+  const counted = (a) => a.status === 'c' || a.status === 'f';
+
+  // One square per agent: role fill; never returned = open and dashed; stopped by an error = a slash.
+  const squares = (g, list, size, cols, step = size + 1) => {
+    const s = g.selectAll('g.fm-a').data(list).join('g').attr('class', 'fm-a').attr('data-key', (a) => (a.status === 'n' ? 'never returned' : a.role))
+      .attr('transform', (a, i) => `translate(${(i % cols) * step},${Math.floor(i / cols) * step})`);
+    s.append('rect').attr('class', (a) => `fm-sq${a.status === 'n' ? ' fm-nr' : ''}`).attr('width', size).attr('height', size)
+      .style('fill', (a) => (a.status === 'n' ? PAPER : ROLE[a.role]));
+    s.filter((a) => a.status === 'f').append('line').attr('class', 'fm-slash').attr('x1', 0).attr('y1', size).attr('x2', size).attr('y2', 0)
+      .style('stroke', (a) => (a.role === 'make' ? PAPER : INK));
+    return Math.ceil(list.length / cols) * step;
+  };
+  const agentTip = (box, event, a, runs) => {
+    const r = runs.get(a.run);
+    const rows = [[ROLE[a.role], 'role', ROLE_NAME[a.role]], [null, 'stage', a.stage],
+      [null, 'status', { c: 'completed', f: 'stopped by an error', n: 'never returned (not counted)' }[a.status]]];
+    if (!a.logged) rows.push([null, null, 'not logged: drawn from the run\'s design']);
+    else rows.push([null, 'minutes', f(Math.round(a.dur))], [null, 'tool calls', `${f(a.calls)} (web ${f(a.web)}, local scripts ${f(a.local_script)}, files ${f(a.read + a.wo)})`],
+      [null, 'output tokens', f(a.out)]);
+    showTip(box, event, `Run ${a.run} · ${r ? r.name : ''}`, rows);
+  };
+  const roleLegend = (id, extra = true) => legend(el(id), [[ROLE_NAME.make, ROLE.make, 'make'], [ROLE_NAME.check, ROLE.check, 'check'],
+    [ROLE_NAME.review, ROLE.review, 'review'], ...(extra ? [['never returned (drawn, not counted)', PAPER, 'never returned']] : [])]);
+  const WORD = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+  const word = (k, cap) => { const w = WORD[k] || f(k); return cap ? w[0].toUpperCase() + w.slice(1) : w; };
+
+  // ---- Fig. 21: where the agents went ----------------------------------------------------------------------------
+  const drawAgents = (box, D) => {
+    const ph = phone(), size = ph ? 5 : 7, step = size + 1, maxCols = 10;
+    const W = Math.max(260, box.clientWidth);
+    const lw = ph ? 0 : 150, bw = ph ? W : 170, sw = ph ? W : W - lw - bw - 24;
+    const { svg } = svgFor(box, 10); // resized below
+    const g0 = svg.append('g');
+    let y = 0;
+    const census = D.families.filter((fm) => ['F1', 'F2', 'F3'].includes(fm.id));
+    const nCensus = D.agents.filter((a) => counted(a) && census.some((fm) => fm.runs.includes(a.run))).length;
+    const nAll = D.agents.filter(counted).length;
+    fill('census-agents', f(nCensus)); fill('census-share', pct(nCensus / nAll)); fill('all-agents', f(nAll));
+    D.families.forEach((fm) => {
+      if (fm.id === 'F1' || fm.id === 'F4') {
+        const t = fm.id === 'F1' ? `The publication census · ${f(nCensus)} agents (${pct(nCensus / nAll)})` : `The people, the history and the report · ${f(nAll - nCensus)} agents`;
+        g0.append('text').attr('class', 'fm-head').attr('x', 0).attr('y', y + 12).text(t);
+        g0.append('line').attr('class', 'fm-rule').attr('x1', 0).attr('x2', W).attr('y1', y + 17).attr('y2', y + 17);
+        y += 26;
+      }
+      const list = D.agents.filter((a) => fm.runs.includes(a.run));
+      const nf = list.filter(counted).length;
+      const g = g0.append('g').attr('transform', `translate(0,${y})`);
+      const name = g.append('text').attr('class', 'lbl fm-fam').attr('x', 0).attr('y', 12);
+      if (ph) { name.text(`${fm.name} · ${f(nf)}`); } else {
+        // wrap the family name into the label column
+        let line = name.append('tspan').attr('x', 0), k = 1;
+        String(fm.name).split(' ').forEach((w) => {
+          const prev = line.text(); line.text(prev ? `${prev} ${w}` : w);
+          if (prev && line.node().getComputedTextLength() > lw - 12) { line.text(prev); line = name.append('tspan').attr('x', 0).attr('dy', '1.15em').text(w); k += 1; }
+        });
+        name.append('tspan').attr('x', 0).attr('dy', '1.25em').attr('class', 'fm-n').text(`${f(nf)} agents`);
+      }
+      // run clusters, flowed left to right
+      const x0 = lw, top = ph ? 20 : 0;
+      let cx = 0, cy = 0, lineH = 0;
+      fm.runs.slice().sort((a, b) => a - b).forEach((rn) => {
+        const ra = list.filter((a) => a.run === rn).sort((a, b) => a.stage_i - b.stage_i || (a.t || 0) - (b.t || 0));
+        const r = D.runs.get(rn);
+        const cols = Math.min(maxCols, Math.max(1, ra.length));
+        const label = ra.length ? String(rn) : `${rn} · no agents`;
+        const cw = Math.max(cols * step - 1, textWidth(svg, [label]) * 0.85);
+        const ch = 13 + Math.ceil(ra.length / cols) * step;
+        if (cx > 0 && cx + cw > sw) { cx = 0; cy += lineH + 6; lineH = 0; }
+        const c = g.append('g').attr('class', 'fm-run').attr('transform', `translate(${x0 + cx},${top + cy})`);
+        if (ra.length) c.attr('role', 'button').attr('tabindex', 0).attr('aria-label', `Run ${rn}: ${r ? r.name : ''}; show it in Fig. 22`);
+        else c.classed('fm-inert', true).attr('aria-label', `Run ${rn}: ${r ? r.name : ''}; no agents`);
+        c.append('text').attr('class', 'fm-rn').attr('y', 9).text(label);
+        const sq = c.append('g').attr('transform', 'translate(0,13)');
+        squares(sq, ra, size, cols, step);
+        if (ra.length && !ra[0].logged) {
+          c.append('rect').attr('class', 'fm-unlogged').attr('x', -2).attr('y', 11).attr('width', cols * step + 3).attr('height', ch - 10);
+        }
+        sq.selectAll('g.fm-a').on('mousemove', (event, a) => agentTip(box, event, a, D.runs)).on('mouseleave', () => hideTip(box));
+        const go = () => { if (window.FPM) window.FPM.showRun(rn); };
+        if (ra.length) c.on('click', go).on('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); go(); } });
+        cx += cw + 9; lineH = Math.max(lineH, ch);
+      });
+      let h = top + cy + lineH;
+      // the family's tool calls by kind, as a 100% bar
+      const tot = Object.fromEntries(TOOLS.map(([k]) => [k, d3.sum(list, (a) => a[k])]));
+      const all = d3.sum(TOOLS, ([k]) => tot[k]);
+      const bx = ph ? 0 : W - bw, by = ph ? h + 8 : 2, bh = ph ? 8 : 12, barW = bw - (ph ? 70 : 64);
+      if (all > 0) {
+        const tb = g.append('g').attr('transform', `translate(${bx},${by})`);
+        let acc = 0;
+        TOOLS.forEach(([k, label, fl]) => {
+          const w = (barW * tot[k]) / all;
+          if (w <= 0) return;
+          tb.append('rect').attr('class', 'mark').attr('x', acc).attr('width', Math.max(0.5, w - 1)).attr('height', bh).style('fill', fl).attr('data-key', label)
+            .on('mousemove', (event) => showTip(box, event, fm.name, [[fl, label, `${f(tot[k])} calls (${pct(tot[k] / all)})`],
+              ...(k === 'web_script' ? [[null, null, 'found by matching the command text; approximate']] : [])]))
+            .on('mouseleave', () => hideTip(box));
+          acc += w;
+        });
+        tb.append('text').attr('x', barW + 6).attr('y', bh / 2).attr('dy', '0.35em').attr('class', 'fm-small').text(`${f(all)} calls`);
+        if (!ph) tb.append('text').attr('class', 'fm-small').attr('y', bh + 12).text(`web ${pct((tot.search + tot.fetch + tot.web_script) / all)}`);
+        if (ph) h = by + bh;
+      } else if (!ph) {
+        g.append('text').attr('class', 'fm-small').attr('x', bx).attr('y', 11).text('not logged');
+      }
+      y += Math.max(h, ph ? 0 : 40) + (ph ? 18 : 16);
+    });
+    svg.attr('viewBox', `0 0 ${W} ${y}`).attr('height', y);
+    roleLegend('lg-agents');
+    legend(el('lg-tools'), TOOLS.map(([, label, fl]) => [label, fl]));
+  };
+
+  // ---- Fig. 22: how a run is built, four shapes ------------------------------------------------------------------
+  const SHAPES = [['P1', 'Maker, then checker', 10, ''], ['P2', 'Many, then one reviewer', 2, ''],
+    ['P3', 'Two judges and a tie-breaker', 9, 'links'], ['P4', 'The image funnel', 14, ''], ['P0', 'Runs of no single shape', 5, '']];
+  // the panel a run belongs to: its first shape, or the last panel when it has agents but no shape
+  const ofShape = (r, pid) => (pid === 'P0' ? !String(r.patterns || '').trim() && +r.agents > 0 : String(r.patterns).split(' ').includes(pid));
+  const picked = {}; // the run each panel shows, kept across redraws
+  const drawRun = (panel, D, rn, ln) => {
+    const body = panel.querySelector('.fm-chain');
+    const stages = dash.data('agent_stages').data.filter((s) => +s.run === rn && (!ln || s.lane === ln))
+      .sort((a, b) => +a.stage_i - +b.stage_i);
+    const r = D.runs.get(rn);
+    const head = mk('p', 'fm-runhead');
+    head.append(mk('b', null, `Run ${rn}`), document.createTextNode(` · ${r ? r.name : ''}${ln ? ` (${ln === 'links' ? 'mentor links' : 'lab rosters'})` : ''} · ${f(d3.sum(stages, (s) => +s.agents))} agents`));
+    const out = [head];
+    if (!stages.length) out.push(mk('p', 'fm-note', 'No agents: done in the coordinating session.'));
+    stages.forEach((s, i) => {
+      if (i) out.push(mk('div', 'fm-arrow', '↓'));
+      const row = mk('div', 'fm-stage');
+      const list = D.agents.filter((a) => a.run === rn && a.stage === s.stage && (!ln || a.lane === ln));
+      const cols = 6, size = 7, step = 8;
+      const svgw = cols * step, svgh = Math.max(step, Math.ceil(list.length / cols) * step);
+      const sv = d3.create('svg').attr('width', svgw).attr('height', svgh).attr('viewBox', `0 0 ${svgw} ${svgh}`).attr('aria-hidden', 'true');
+      squares(sv.append('g'), list, size, cols, step);
+      sv.selectAll('g.fm-a').on('mousemove', (event, a) => agentTip(panel, event, a, D.runs)).on('mouseleave', () => hideTip(panel));
+      const sqbox = mk('div', 'fm-sqbox'); sqbox.append(sv.node());
+      const txt = mk('div', 'fm-stxt');
+      const nm = mk('div', 'fm-sname'); nm.append(mk('b', null, s.stage), document.createTextNode(` · ${f(+s.agents)} agent${+s.agents === 1 ? '' : 's'}`));
+      txt.append(nm);
+      const given = s.given_n ? `${f(+s.given_n)} ${s.given_unit}: ${s.given}` : s.given;
+      txt.append(mk('div', 'fm-given', `given ${given}`), mk('div', 'fm-does', s.does));
+      if (s.result) txt.append(mk('div', 'fm-result', `→ ${s.result}`));
+      row.append(sqbox, txt);
+      out.push(row);
+    });
+    if (r && r.logged === '0' && r.agents) out.push(mk('p', 'fm-note', 'Not logged: drawn from the run\'s design.'));
+    body.replaceChildren(...out);
+    panel.querySelectorAll('.fm-chip').forEach((b) => b.setAttribute('aria-pressed', String(+b.dataset.run === rn && (b.dataset.lane || '') === (ln || ''))));
+  };
+  const drawShapes = (box, D) => {
+    const panels = SHAPES.map(([pid, title, def, defLane]) => {
+      const p = mk('div', 'fm-panel'); p.dataset.pattern = pid;
+      p.append(mk('h4', 'fm-ptitle', title));
+      const chips = mk('div', 'fm-chips'); chips.setAttribute('role', 'group'); chips.setAttribute('aria-label', `Runs of the shape "${title}"`);
+      const runs = [...D.runs.values()].filter((r) => ofShape(r, pid)).sort((a, b) => a.run - b.run);
+      runs.forEach((r) => {
+        const lane = r.run === 9 ? (pid === 'P3' ? 'links' : 'rosters') : '';
+        const b = mk('button', 'fm-chip', String(r.run)); b.type = 'button'; b.dataset.run = r.run; b.dataset.lane = lane;
+        b.title = `Run ${r.run}: ${r.purpose}`;
+        b.addEventListener('click', () => { picked[pid] = [r.run, lane]; drawRun(p, D, r.run, lane); });
+        chips.append(b);
+      });
+      p.append(mk('div', 'fm-chain'), mk('div', 'fm-chiplbl', 'Runs of this shape:'), chips);
+      return p;
+    });
+    box.replaceChildren(...panels);
+    panels.forEach((p, i) => { const [rn, ln] = picked[SHAPES[i][0]] || [SHAPES[i][2], SHAPES[i][3]]; drawRun(p, D, rn, ln); });
+    // second rounds: each run that completed an earlier one
+    const strip = el('fm-rounds');
+    if (strip) {
+      const pairs = [...D.runs.values()].filter((r) => r.follows_run).sort((a, b) => a.run - b.run);
+      const items = pairs.map((r) => `${String(r.follows_run).split(' ').join(' and ')} → ${r.run}`);
+      strip.textContent = `Second rounds, each completing the work of an earlier run: ${items.join(' · ')}.`;
+    }
+  };
+
+  // ---- Fig. 23: when the agents worked, and when a person typed --------------------------------------------------
+  const drawTimeline = (box, D) => {
+    const ph = phone();
+    const prompts = dash.data('prompts').data.map((p) => ({ n: +p.n, kind: p.kind, t: Date.parse(p.typed_utc), agents: n(p.agents), tokens: n(p.tokens_total), msgs: n(p.messages) }));
+    const live = D.agents.filter((a) => a.t != null);
+    // sessions: cut wherever GAP_H hours pass with no agent working, no prompt typed and no unlogged run starting
+    const iv = [...live.map((a) => [a.t, a.end]), ...prompts.map((p) => [p.t, p.t]),
+      ...[...D.runs.values()].filter((r) => r.logged === '0').map((r) => [r.t, r.t])].sort((a, b) => a[0] - b[0]);
+    const sessions = [];
+    iv.forEach(([a, b]) => {
+      const s = sessions[sessions.length - 1];
+      if (s && a - s.end <= GAP_H * 3600e3) s.end = Math.max(s.end, b); else sessions.push({ start: a, end: b });
+    });
+    sessions.forEach((s) => { s.start -= 5 * 60e3; s.end += 5 * 60e3; });
+    // concurrency per minute, per run and overall
+    const MIN = 60e3;
+    // agents working in each minute, sampled at the minute's middle (for drawing)
+    const conc = (list) => {
+      const m = new Map();
+      list.forEach((a) => {
+        for (let t = Math.floor(a.t / MIN) * MIN; t < a.end; t += MIN) {
+          const mid = t + MIN / 2;
+          if (a.t > mid || a.end <= mid) continue;
+          const v = m.get(t) || { make: 0, check: 0, review: 0, all: 0 }; v[a.role] += 1; v.all += 1; m.set(t, v);
+        }
+      });
+      return m;
+    };
+    // the exact most at once: a sweep over starts and ends (an end before a start at the same moment)
+    const peak = (list) => {
+      let c = 0, best = 0, at = 0;
+      list.flatMap((a) => [[a.t, 1], [a.end, -1]]).sort((x, y) => x[0] - y[0] || x[1] - y[1])
+        .forEach(([t, d]) => { c += d; if (c > best) { best = c; at = t; } });
+      return [best, at];
+    };
+    const total = conc(live);
+    const [peakAll, peakT] = peak(live);
+    const perRun = new Map(d3.groups(live, (a) => a.run).map(([rn, list]) => [rn, conc(list)]));
+    const peakRun = d3.max(d3.groups(live, (a) => a.run), ([, list]) => peak(list)[0]) || 0;
+    fill('peak-run', f(peakRun)); fill('peak-all', f(peakAll)); fill('gap-h', String(GAP_H));
+    fill('sessions', f(sessions.length));
+    const runList = [...D.runs.values()].sort((a, b) => a.run - b.run);
+    const W = Math.max(260, box.clientWidth);
+    const lw = ph ? 34 : 118, rowH = 16, stripH = 30, tickH = 16, axisH = ph ? 20 : 34;
+    const panels = ph ? sessions.map((s) => [s]) : [sessions];
+    // the runs drawn in each panel: on a phone, only those active in its session
+    const inPanel = (ss, r) => ss.some((s) => (r.t >= s.start - 60e3 && r.t <= s.end) || live.some((a) => a.run === r.run && a.t >= s.start && a.t <= s.end));
+    const layout = panels.map((ss) => ({ ss, runs: runList.filter((r) => inPanel(ss, r)) }));
+    const heights = layout.map((p) => (ph ? 18 : 0) + tickH + stripH + 6 + p.runs.length * rowH + axisH);
+    const { svg } = svgFor(box, d3.sum(heights) + (layout.length - 1) * 18);
+    let y0 = 0;
+    layout.forEach((p, pi) => {
+      const g = svg.append('g').attr('transform', `translate(0,${y0})`);
+      let top = 0;
+      if (ph) { g.append('text').attr('class', 'fm-head').attr('y', 12).text(`Session ${pi + 1} · ${dayf.format(p.ss[0].start)}`); top = 18; }
+      const zig = 10, avail = W - lw - zig * (p.ss.length - 1);
+      const tot = d3.sum(p.ss, (s) => s.end - s.start);
+      let x = lw;
+      p.ss.forEach((s) => { s.x0 = x; s.w = (avail * (s.end - s.start)) / tot; s.x = d3.scaleLinear([s.start, s.end], [x, x + s.w]); x += s.w + zig; });
+      const xOf = (t) => { const s = p.ss.find((q) => t >= q.start && t <= q.end) || p.ss.reduce((b, q) => (Math.abs(q.start - t) < Math.abs(b.start - t) ? q : b)); return s.x(Math.max(s.start, Math.min(s.end, t))); };
+      const yStrip = top + tickH, yRows = yStrip + stripH + 6, yAxis = yRows + p.runs.length * rowH;
+      // the overall strip
+      const ys = d3.scaleLinear([0, peakAll], [yStrip + stripH, yStrip]);
+      p.ss.forEach((s) => {
+        const pts = [];
+        for (let t = Math.floor(s.start / MIN) * MIN; t <= s.end; t += MIN) pts.push([t, (total.get(t) || { all: 0 }).all]);
+        g.append('path').attr('class', 'fm-strip').style('fill', FILL.grayl)
+          .attr('d', d3.area().x((d) => s.x(d[0])).y0(yStrip + stripH).y1((d) => ys(d[1])).curve(d3.curveStepAfter)(pts));
+        g.append('rect').attr('x', s.x0).attr('y', yStrip).attr('width', s.w).attr('height', stripH).style('fill', 'transparent')
+          .on('mousemove', (event) => {
+            const t = s.x.invert(d3.pointer(event, g.node())[0]), v = total.get(Math.floor(t / MIN) * MIN) || { all: 0 };
+            showTip(box, event, `${dayf.format(t)}, ${hm.format(t)} Pacific`, [[FILL.grayl, 'agents working', f(v.all)]]);
+          }).on('mouseleave', () => hideTip(box));
+        // the time axis of the session
+        const hours = (s.end - s.start) / 3600e3, every = [1, 2, 3, 4, 6, 12].find((h) => s.w / (hours / h) > 46) || 12;
+        const ticks = [];
+        for (let t = Math.ceil(s.start / (every * 3600e3)) * every * 3600e3; t <= s.end; t += every * 3600e3) ticks.push(t);
+        const ax = g.append('g').attr('class', 'fm-axis');
+        ax.append('line').attr('class', 'base').attr('x1', s.x0).attr('x2', s.x0 + s.w).attr('y1', yAxis).attr('y2', yAxis);
+        ticks.forEach((t) => {
+          ax.append('line').attr('class', 'base').attr('x1', s.x(t)).attr('x2', s.x(t)).attr('y1', yAxis).attr('y2', yAxis + 3);
+          ax.append('line').attr('class', 'gridline').attr('x1', s.x(t)).attr('x2', s.x(t)).attr('y1', yStrip).attr('y2', yAxis);
+          ax.append('text').attr('class', 'fm-small').attr('x', s.x(t)).attr('y', yAxis + 13).attr('text-anchor', 'middle').text(hm.format(t).replace(':00', '').replace(' ', '').toLowerCase());
+        });
+        if (!ph && s.w > 58) g.append('text').attr('class', 'fm-day').attr('x', s.x0 + 2).attr('y', yAxis + 27).text(dayf.format(s.start));
+      });
+      // breaks between sessions
+      p.ss.slice(1).forEach((s) => {
+        const xm = s.x0 - zig / 2;
+        g.append('path').attr('class', 'fm-zig').attr('d', `M${xm - 3},${yStrip} ` + d3.range(yStrip, yAxis, 8).map((yy, i) => `L${xm + (i % 2 ? -3 : 3)},${yy + 8}`).join(' '));
+      });
+      if (peakAll) {
+        const pk = p.ss.some((s) => peakT >= s.start && peakT <= s.end);
+        g.append('line').attr('class', 'fm-peak').attr('x1', lw).attr('x2', W).attr('y1', ys(peakAll)).attr('y2', ys(peakAll));
+        if (pk || !ph) g.append('text').attr('class', 'fm-small fm-in').attr('x', pk ? Math.min(W - 60, xOf(peakT) + 4) : W).attr('text-anchor', pk ? 'start' : 'end').attr('y', ys(peakAll) + 9).text(`${f(peakAll)} at once`);
+        g.append('text').attr('class', 'fm-small').attr('x', lw - 6).attr('y', yStrip + stripH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text(ph ? 'all' : 'all runs');
+      }
+      // one row per run: how many of its agents were working, stacked by role
+      const yr = d3.scaleLinear([0, peakRun || 1], [rowH - 2, 1]);
+      p.runs.forEach((r, i) => {
+        const yy = yRows + i * rowH, rg = g.append('g').attr('transform', `translate(0,${yy})`);
+        const lbl = ph ? String(r.run) : `${r.run} · ${r.name}`;
+        rg.append('text').attr('class', 'lbl fm-small').attr('x', lw - 6).attr('y', rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text(lbl)
+          .each(function () { let t = lbl; while (this.getComputedTextLength() > lw - 8 && t.length > 4) { t = t.slice(0, -2); this.textContent = t + '…'; } });
+        rg.append('line').attr('class', 'fm-rowline').attr('x1', lw).attr('x2', W).attr('y1', rowH - 1).attr('y2', rowH - 1);
+        const m = perRun.get(r.run);
+        if (m) {
+          const ts = [...m.keys()].sort((a, b) => a - b);
+          const t0 = ts[0], t1 = ts[ts.length - 1] + MIN;
+          const pts = [];
+          for (let t = t0; t <= t1; t += MIN) pts.push({ t, ...(m.get(t) || { make: 0, check: 0, review: 0 }) });
+          const st = d3.stack().keys(['make', 'check', 'review'])(pts);
+          p.ss.forEach((s) => {
+            const clip = pts.filter((q) => q.t >= s.start && q.t <= s.end);
+            if (!clip.length) return;
+            st.forEach((layer) => {
+              const seg = layer.filter((q) => q.data.t >= s.start && q.data.t <= s.end);
+              rg.append('path').attr('class', 'mark fm-area').attr('data-key', layer.key).style('fill', ROLE[layer.key])
+                .attr('d', d3.area().x((q) => s.x(q.data.t)).y0((q) => yr(q[0])).y1((q) => yr(q[1])).curve(d3.curveStepAfter)(seg));
+            });
+          });
+        } else if (+r.agents) {
+          rg.append('rect').attr('class', 'fm-unlogged').attr('x', xOf(r.t) - 1).attr('y', 2).attr('width', 3).attr('height', rowH - 5);
+          rg.append('text').attr('class', 'fm-small fm-it').attr('x', xOf(r.t) + 6).attr('y', rowH / 2).attr('dy', '0.35em').text('not logged');
+        } else {
+          rg.append('circle').attr('cx', xOf(r.t)).attr('cy', rowH / 2).attr('r', 2.5).attr('class', 'fm-dot');
+          rg.append('text').attr('class', 'fm-small fm-it').attr('x', xOf(r.t) + 6).attr('y', rowH / 2).attr('dy', '0.35em').text('no agents');
+        }
+        rg.append('rect').attr('x', 0).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+          .on('mousemove', (event) => {
+            const rows = [[null, 'agents', `${f(r.agents)} counted`], [null, 'started', `${dayf.format(r.t)}, ${hm.format(r.t)} Pacific`]];
+            if (r.logged === '1') rows.push([null, 'wall-clock', `${f(Math.round(+r.wall_min))} minutes`], [null, 'agent-hours', String(r.agent_hours)],
+              [null, 'most at once', String(r.peak_parallel)], [null, 'tool calls', `${f(+r.tool_calls)} (web ${f(+r.web_calls)})`]);
+            else if (+r.agents) rows.push([null, null, 'not logged: start time only']);
+            rows.push([null, 'session effort', r.effort]);
+            if (r.effort_logged && r.effort_logged !== r.effort) rows.push([null, 'agents logged', r.effort_logged]);
+            showTip(box, event, `Run ${r.run} · ${r.name}`, rows);
+          }).on('mouseleave', () => hideTip(box));
+      });
+      // the prompts, with a dotted line to the first agent of each run a prompt launched
+      prompts.filter((q) => p.ss.some((s) => q.t >= s.start && q.t <= s.end)).forEach((q) => {
+        const x = xOf(q.t);
+        const launched = p.runs.filter((r) => +r.prompt_n === q.n);
+        launched.forEach((r) => {
+          const i = p.runs.indexOf(r), first = live.filter((a) => a.run === r.run).reduce((m, a) => Math.min(m, a.t), Infinity);
+          const xr = Number.isFinite(first) ? xOf(first) : xOf(r.t);
+          g.append('path').attr('class', 'fm-drop').attr('d', `M${x},${top + tickH - 2} L${x},${yStrip + stripH + 3} L${xr},${yRows + i * rowH + rowH / 2}`);
+        });
+        const tk = g.append('g').attr('class', `fm-tick${q.kind === 'typed' ? '' : ' sum'}`).attr('transform', `translate(${x},${top + 2})`);
+        tk.append('rect').attr('x', -1.5).attr('width', 3).attr('height', tickH - 5);
+        tk.append('rect').attr('x', -5).attr('y', -2).attr('width', 10).attr('height', tickH).style('fill', 'transparent')
+          .on('mousemove', (event) => {
+            const runsN = launched.reduce((s, r) => s + r.agents, 0);
+            const rows = [[null, 'typed', `${dayf.format(q.t)}, ${hm.format(q.t)} Pacific${q.msgs > 1 ? ` (${f(q.msgs)} short messages)` : ''}`],
+              [null, 'output tokens', f(q.tokens)]];
+            if (q.agents) rows.push([null, 'agents launched', `${f(q.agents)}${runsN !== q.agents ? `, ${f(runsN)} of them counted` : ''}`],
+              [null, 'runs', launched.length ? launched.map((r) => r.run).join(', ') : 'none']);
+            showTip(box, event, q.kind === 'typed' ? `Prompt ${q.n}` : `Prompt ${q.n} (summarised)`, rows);
+          }).on('mouseleave', () => hideTip(box));
+      });
+      g.append('text').attr('class', 'fm-small').attr('x', lw - 6).attr('y', top + tickH - 6).attr('text-anchor', 'end').text(ph ? '' : 'prompts');
+      y0 += heights[pi] + 18;
+    });
+    roleLegend('lg-timeline', false);
+  };
+
+  // ---- Fig. 24: the census, step by step -------------------------------------------------------------------------
+  const drawCensus = (box, D) => {
+    const ph = phone();
+    const rows = dash.data('census_steps').data.map((r) => ({ ...r, step_i: +r.step_i, value: +r.value }));
+    const steps = d3.groups(rows, (r) => r.step_i).map(([i, segs]) => ({ i, step: segs[0].step, actors: segs[0].actors.split(' ').filter(Boolean),
+      runs: segs[0].runs.split(' ').filter(Boolean).map(Number), only: String(segs[0].only || '').split(';').filter(Boolean).map((x) => x.split(':')), segs }));
+    // an agent belongs to a step when its run does, unless the step names only some of that run's stages
+    const inStep = (s, a) => s.runs.includes(a.run) && (!s.only.some(([r]) => +r === a.run) || s.only.some(([r, st]) => +r === a.run && st === a.stage));
+    const max = d3.max(steps, (s) => d3.sum(s.segs, (x) => x.value));
+    const W = Math.max(260, box.clientWidth);
+    const size = ph ? 5 : 6, step = size + 1;
+    const nw = ph ? W : 170, qw = ph ? W : 196, bx = ph ? 0 : nw + qw + 12, bwid = W - bx - 52;
+    const x = d3.scaleLinear([0, max], [0, bwid]);
+    const layout = steps.map((s) => {
+      const list = D.agents.filter((a) => inStep(s, a));
+      const cols = Math.max(1, Math.floor(qw / step));
+      const qh = list.length ? Math.ceil(list.length / cols) * step : 0;
+      return { ...s, list, cols, qh, h: ph ? 16 + (qh ? qh + 4 : 0) + 14 + 8 : Math.max(qh, s.runs.length ? 28 : 16) + 12 };
+    });
+    const total = d3.sum(layout, (s) => s.h);
+    const { svg } = svgFor(box, total + 4);
+    let y = 0;
+    const last = layout.length - 1;
+    layout.forEach((s, k) => {
+      const g = svg.append('g').attr('transform', `translate(0,${y})`);
+      if (k === last) g.append('line').attr('class', 'fm-rule').attr('x1', 0).attr('x2', W).attr('y1', -4).attr('y2', -4);
+      const glyphs = [...new Set(s.actors.map((a) => GLYPH[a]).filter(Boolean))].join('');
+      g.append('text').attr('class', 'lbl').attr('y', 12).text(`${s.i}. ${s.step}`).append('tspan').attr('class', 'fm-glyph').text(glyphs ? `  ${glyphs}` : '');
+      if (s.runs.length && !ph) g.append('text').attr('class', 'fm-small').attr('y', 26).text(`run${s.runs.length > 1 ? 's' : ''} ${s.runs.join(', ')}`);
+      const qy = ph ? 16 : 2, qx = ph ? 0 : nw;
+      if (s.list.length) {
+        const q = g.append('g').attr('transform', `translate(${qx},${qy})`);
+        squares(q, s.list, size, s.cols, step);
+        // this figure's key names who handled the records: the agents that did the work are 'AI agents'
+        q.selectAll('g.fm-a').attr('data-key', (a) => (a.status === 'n' ? 'never returned' : a.role === 'make' ? 'agent' : a.role))
+          .on('mousemove', (event, a) => agentTip(box, event, a, D.runs)).on('mouseleave', () => hideTip(box));
+      }
+      const by = ph ? 16 + (s.qh ? s.qh + 4 : 0) : 3, bh = ph ? 10 : 12;
+      const bg = g.append('g').attr('transform', `translate(${bx},${by})`);
+      let acc = 0;
+      const sum = d3.sum(s.segs, (q) => q.value);
+      g.attr('role', 'img').attr('aria-label', `${s.i}. ${s.step}: ${s.segs.map((q) => `${q.segment} ${f(q.value)}`).join('; ')}`);
+      s.segs.forEach((q) => {
+        const w = x(q.value);
+        const [fl] = WHO[q.who] || [FILL.open];
+        bg.append('rect').attr('class', 'mark').attr('x', acc).attr('height', bh).attr('width', Math.max(1, w - (s.segs.length > 1 ? 1 : 0)))
+          .style('fill', fl).attr('data-key', q.who)
+          .on('mousemove', (event) => showTip(box, event, `${s.step}: ${q.segment}`, [[fl, (WHO[q.who] || [, ''])[1], `${f(q.value)} ${q.label}`],
+            [null, 'share of the step', pct(q.value / sum)]]))
+          .on('mouseleave', () => hideTip(box));
+        if (w > textWidth(svg, [q.segment]) * 0.85 + 8 && s.segs.length > 1) {
+          bg.append('text').attr('class', `fm-in${q.who === 'agent' ? ' inv' : ''}`).attr('x', acc + 4).attr('y', bh / 2).attr('dy', '0.35em').text(q.segment);
+        }
+        acc += Math.max(1, w);
+      });
+      bg.append('text').attr('class', 'fm-small').attr('x', acc + 5).attr('y', bh / 2).attr('dy', '0.35em').text(f(sum));
+      y += s.h;
+    });
+    const used = new Set(rows.map((r) => r.who));
+    legend(el('lg-census'), Object.entries(WHO).filter(([k]) => used.has(k)).map(([k, [fl, label]]) => [label, fl, k]));
+  };
+
+  // ---- Fig. 25: inside one agent's job, the verification push ----------------------------------------------------
+  const drawPush = (box, D) => {
+    const run = D.agents.filter((a) => a.run === 16);
+    const fct = D.facts;
+    const ph = phone();
+    // (b) one column per agent, its tool calls stacked by kind
+    const elB = box;
+    const read = run.filter((a) => a.stage === 'Read').sort((a, b) => (a.status === 'n') - (b.status === 'n') || b.calls - a.calls);
+    const rech = run.filter((a) => a.stage !== 'Read').sort((a, b) => (a.status === 'n') - (b.status === 'n') || b.calls - a.calls);
+    const W = Math.max(240, elB.clientWidth), H = 190, gap = 14, top = 30, base = H - 22;
+    const cw = Math.max(2, Math.floor((W - gap) / (read.length + rech.length)) - 1);
+    const { svg } = svgFor(elB, H);
+    const yMax = d3.max(run, (a) => a.calls) || 1;
+    const y = d3.scaleLinear([0, yMax], [base, top]);
+    const done = read.filter((a) => a.status === 'c');
+    const med = { web: d3.median(done, (a) => a.web), calls: d3.median(done, (a) => a.calls), min: d3.median(done, (a) => a.dur) };
+    const colX = (i, second) => i * (cw + 1) + (second ? read.length * (cw + 1) + gap : 0);
+    [[read, false], [rech, true]].forEach(([list, second]) => {
+      const g = svg.append('g');
+      list.forEach((a, i) => {
+        const cg = g.append('g').attr('transform', `translate(${colX(i, second)},0)`);
+        if (a.status === 'n') {
+          cg.append('rect').attr('class', 'fm-sq fm-nr').attr('y', base - 12).attr('width', cw).attr('height', 12).style('fill', PAPER);
+        } else if (!a.calls) { // stopped by an error before its first tool call
+          cg.append('rect').attr('class', 'fm-sq').attr('y', base - 12).attr('width', cw).attr('height', 12).style('fill', PAPER);
+          cg.append('line').attr('class', 'fm-slash').attr('x1', 0).attr('x2', cw).attr('y1', base).attr('y2', base - 12).style('stroke', INK);
+        } else {
+          let acc = 0;
+          TOOLS.forEach(([k, label, fl]) => { if (!a[k]) return; cg.append('rect').attr('class', 'fm-col').attr('data-key', label).attr('y', y(acc + a[k])).attr('width', cw).attr('height', Math.max(0.5, y(acc) - y(acc + a[k]))).style('fill', fl); acc += a[k]; });
+          if (a.status === 'f') cg.append('line').attr('class', 'fm-slash').attr('x1', 0).attr('x2', cw).attr('y1', base).attr('y2', y(a.calls)).style('stroke', INK);
+        }
+        cg.append('rect').attr('y', top - 10).attr('width', cw + 1).attr('height', base - top + 10).style('fill', 'transparent')
+          .on('mousemove', (event) => showTip(elB, event, `${a.stage === 'Read' ? 'Reading' : 'Re-checking'} agent`,
+            a.status === 'n' ? [[null, null, 'never returned: the run was stopped (not counted)']]
+              : [[null, 'minutes', f(Math.round(a.dur))], ...TOOLS.filter(([k]) => a[k]).map(([k, label, fl]) => [fl, label, f(a[k])]),
+                [null, 'status', a.status === 'f' ? 'stopped by an error (the account\'s spend limit)' : 'completed']]))
+          .on('mouseleave', () => hideTip(elB));
+      });
+      const x0 = colX(0, second), x1 = colX(list.length - 1, second) + cw;
+      svg.append('line').attr('class', 'base').attr('x1', x0).attr('x2', x1).attr('y1', base).attr('y2', base);
+      svg.append('text').attr('class', 'fm-small').attr('x', x0).attr('y', base + 14)
+        .text(second ? `re-check (${f(list.filter(counted).length)})` : `reading agents (${f(list.filter(counted).length)})`);
+    });
+    const ym = y(med.calls);
+    svg.append('line').attr('class', 'fm-peak').attr('x1', 0).attr('x2', colX(read.length - 1) + cw).attr('y1', ym).attr('y2', ym);
+    svg.append('text').attr('class', 'fm-small').attr('x', 0).attr('y', 12)
+      .text(`median reader: ${f(med.web)} web requests, ${f(med.calls)} tool calls, ${f(Math.round(med.min))} min`);
+    // (c) what came back, one square per WAFFLE_N records
+    const elC = el('ch-push-back');
+    const outcomes = [['names FHL', 'push_named', FILL.solid], ['does not name FHL', 'push_not_named', PAPER], ['read, not settled', 'push_read_undecided', FILL.dots],
+      ['paywall', 'push_paywall', FILL.hatch], ['bot check', 'push_bot_check', FILL.cross], ['no copy online', 'push_no_copy', FILL.horiz], ['other barrier', 'push_other_barrier', FILL.vert]]
+      .map(([label, key, fl]) => ({ label, key, fl, v: fct.get(key) || 0 }));
+    const totalRec = fct.get('push_records');
+    const cells = Math.round(totalRec / WAFFLE_N);
+    outcomes.forEach((o) => { o.raw = (o.v / totalRec) * cells; o.k = Math.floor(o.raw); });
+    let left = cells - d3.sum(outcomes, (o) => o.k);
+    outcomes.slice().sort((a, b) => (b.raw - b.k) - (a.raw - a.k)).forEach((o) => { if (left > 0) { o.k += 1; left -= 1; } });
+    const sq = [];
+    outcomes.forEach((o) => { for (let i = 0; i < o.k; i += 1) sq.push(o); });
+    const cols = 15, CW = Math.max(160, elC.clientWidth), s = Math.max(5, Math.min(10, Math.floor(CW / cols) - 1)), stp = s + 1;
+    const wH = Math.ceil(sq.length / cols) * stp, barY = wH + 18;
+    const { svg: sv2 } = svgFor(elC, barY + 34);
+    sv2.append('g').selectAll('rect').data(sq).join('rect').attr('class', 'mark').attr('data-key', (o) => o.label)
+      .attr('x', (o, i) => (i % cols) * stp).attr('y', (o, i) => Math.floor(i / cols) * stp).attr('width', s).attr('height', s).style('fill', (o) => o.fl)
+      .on('mousemove', (event, o) => showTip(elC, event, o.label, [[o.fl, null, `${f(o.v)} records (${pct(o.v / totalRec)} of ${f(totalRec)})`]]))
+      .on('mouseleave', () => hideTip(elC));
+    const nR = fct.get('push_recheck_n'), nA = fct.get('push_recheck_agree'), nC = fct.get('push_recheck_applied') || 0;
+    const bw = cols * stp - 1;
+    const parts = [['agreed', nA, PAPER], ["changed to the re-check's reading", nC, FILL.hatch], ['disagreed; first reading kept', nR - nA - nC, FILL.dots]];
+    let xa = 0;
+    parts.forEach(([, v, fl]) => { if (!v) return; const w = (bw * v) / nR; sv2.append('rect').attr('class', 'mark').attr('x', xa).attr('y', barY).attr('width', Math.max(1, w - 1)).attr('height', 9).style('fill', fl); xa += w; });
+    sv2.append('text').attr('class', 'fm-small').attr('y', barY + 22).text(`re-checked ${f(nR)}: ${f(nA)} agreed, ${f(nC)} changed`);
+    const tipTitle = `A second agent re-read a sample from ${f(fct.get('push_recheck_batches'))} of the ${f(fct.get('push_batches'))} batches`;
+    sv2.append('rect').attr('y', barY - 2).attr('width', bw).attr('height', 26).style('fill', 'transparent')
+      .on('mousemove', (event) => showTip(elC, event, tipTitle, parts.map(([label, v, fl]) => [fl, label, f(v)])))
+      .on('mouseleave', () => hideTip(elC));
+    sv2.attr('role', 'img').attr('aria-label', `${outcomes.map((o) => `${o.label} ${f(o.v)}`).join('; ')}. ${tipTitle}: ${parts.map(([label, v]) => `${label} ${f(v)}`).join('; ')}.`);
+    legend(el('lg-push'), outcomes.map((o) => [`${o.label} · ${f(o.v)}`, o.fl, o.label]));
+    legend(el('lg-push-tools'), TOOLS.map(([, label, fl]) => [label, fl]));
+    fill('push-unread-share', words(fct.get('push_unreadable') / totalRec));
+    fill('push-recheck-batches', f(fct.get('push_recheck_batches'))); fill('push-batches', f(fct.get('push_batches')));
+    fill('waffle-n', String(WAFFLE_N));
+    if (ph) elB.classList.add('fm-ph'); else elB.classList.remove('fm-ph');
+  };
+
+  // ---- Fig. 26: what the checking agents changed -----------------------------------------------------------------
+  const drawChecks = (box) => {
+    const ph = phone();
+    const rows = dash.data('methods_checks').data.map((r) => ({ ...r, made: +r.made, checked: +r.checked, confirmed: +r.confirmed, corrected: +r.corrected, dropped: +r.dropped, unsettled: +r.unsettled }));
+    const OUT = [['confirmed', PAPER], ['corrected', FILL.hatch], ['dropped', FILL.solid], ['unsettled', FILL.dots]];
+    const W = Math.max(260, box.clientWidth), lw = ph ? 0 : 230, rw = ph ? 0 : 92, bw = W - lw - rw - (ph ? 0 : 12);
+    const groups = d3.groups(rows, (r) => r.group);
+    const rowH = ph ? 50 : 34, headH = 22;
+    const { svg } = svgFor(box, groups.length * headH + rows.length * rowH + 4);
+    let y = 0;
+    groups.forEach(([grp, list]) => {
+      svg.append('text').attr('class', 'fm-head').attr('y', y + 14).text(grp);
+      y += headH;
+      list.forEach((r) => {
+        const g = svg.append('g').attr('transform', `translate(0,${y})`);
+        const glyph = `${r.maker === 'script' ? '□' : '■'} → ${r.checker === 'review' ? '⊠' : '▨'}`;
+        g.append('text').attr('class', 'lbl').attr('y', 12).text(r.label).each(function () {
+          const max = ph ? W - 60 : lw - 54; let t = r.label;
+          while (this.getComputedTextLength() > max && t.length > 4) { t = t.slice(0, -2); this.textContent = t + '…'; }
+        });
+        g.append('text').attr('class', 'fm-small').attr('x', ph ? W : lw - 8).attr('text-anchor', 'end').attr('y', 12).text(glyph);
+        const bx = ph ? 0 : lw, by = ph ? 18 : 3, bh = 12;
+        let acc = 0;
+        OUT.forEach(([k, fl]) => {
+          if (!r[k]) return;
+          const w = (bw * r[k]) / r.checked;
+          g.append('rect').attr('class', 'mark').attr('x', bx + acc).attr('y', by).attr('width', Math.max(1, w - 1)).attr('height', bh).style('fill', fl).attr('data-key', k)
+            .on('mousemove', (event) => showTip(box, event, r.label, [[fl, r[`${k}_word`], `${f(r[k])} of ${f(r.checked)} re-opened (${pct(r[k] / r.checked)})`], [null, 'run', r.runs]]))
+            .on('mouseleave', () => hideTip(box));
+          if (w > textWidth(svg, [r[`${k}_word`]]) + 10 && r[`${k}_word`].length < 24) g.append('text').attr('class', `fm-in${k === 'dropped' ? ' inv' : ''}`).attr('x', bx + acc + 4).attr('y', by + bh / 2).attr('dy', '0.35em').text(r[`${k}_word`]);
+          acc += w;
+        });
+        const cov = (bw * r.checked) / r.made;
+        g.append('rect').attr('class', 'fm-cov').attr('x', bx).attr('y', by + bh + 3).attr('width', bw).attr('height', 3);
+        g.append('rect').attr('class', 'fm-covon').attr('x', bx).attr('y', by + bh + 3).attr('width', Math.max(1, cov)).attr('height', 3)
+          .on('mousemove', (event) => showTip(box, event, r.label, [[null, null, `re-opened ${f(r.checked)} of ${f(r.made)} ${r.unit} (${pct(r.checked / r.made)})`]]))
+          .on('mouseleave', () => hideTip(box));
+        g.append('text').attr('class', 'fm-small').attr('x', ph ? bw : W).attr('text-anchor', 'end').attr('y', ph ? by + bh + 17 : by + bh / 2).attr('dy', ph ? 0 : '0.35em')
+          .text(r.checked === r.made ? `all ${f(r.made)}` : `${f(r.checked)} of ${f(r.made)}`);
+        y += rowH;
+      });
+    });
+    legend(el('lg-checks'), [['confirmed or agreed', PAPER, 'confirmed'], ['corrected or revised', FILL.hatch, 'corrected'], ['dropped', FILL.solid, 'dropped'], ['unsettled or disagreed', FILL.dots, 'unsettled']]);
+    const prof = rows.find((r) => r.runs === '10'), push = rows.find((r) => r.runs === '16');
+    const claim = prof && push && prof.corrected / prof.checked >= 0.9 && push.confirmed / push.checked >= 0.9;
+    document.querySelectorAll('[data-fm="checks-claim"]').forEach((e) => { e.hidden = !claim; });
+  };
+
+  // ---- Fig. 27: how far each kind of decision can be trusted -----------------------------------------------------
+  const DECIDED = { inc_rule_affiliation: ['written rule', 'address names FHL'], inc_rule_text_structured: ['written rule', 'text names FHL (structured)'],
+    inc_rule_datasets_grey: ['written rule', 'datasets and grey literature'], inc_rule_fulltext_lab: ['written rule', 'full-text index match'],
+    inc_screened: ['AI screening agent', 'included by screening'], exc_screened: ['AI screening agent', 'excluded by screening'],
+    inc_historical: ['agents reading archives', 'archive records'], inc_news: ['news search (a sample)', 'news items'],
+    inc_fhl_bibliography: ["FHL's own lists only", "on FHL's lists"], unverified: ['not yet decided', 'unverified candidates'] };
+  const DOT = { 'written rule': PAPER, 'AI screening agent': FILL.solid, 'agents reading archives': FILL.hatch, 'news search (a sample)': FILL.cross,
+    "FHL's own lists only": FILL.dots, 'not yet decided': PAPER };
+  let trustView = 'decided';
+  const drawTrust = (box) => {
+    const ph = phone();
+    const W = Math.max(260, box.clientWidth);
+    document.querySelectorAll('#fm-trust-toggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === trustView)));
+    if (trustView === 'tier') { // the evidence tiers, as in Table III
+      const rows = dash.data('audit_tiers').data.map((r) => { const [lo, hi] = String(r.interval).split('–').map(Number); return { tier: r.tier, p: +r.precision, n: +r.checked, lo, hi }; });
+      const rowH = 34, { svg, width, height } = svgFor(box, rows.length * rowH + 30);
+      const lw = textWidth(svg, rows.map((r) => r.tier)) + 14, nw = textWidth(svg, rows.map((r) => `${f(r.n)} checked`)) + 10;
+      const x = d3.scaleLinear([0, 1], [lw, width - nw]);
+      svg.append('g').attr('class', 'grid').attr('transform', `translate(0,${height - 22})`)
+        .call(d3.axisBottom(x).ticks(5).tickFormat(pct).tickSize(-(height - 26))).call((g) => g.attr('font-size', null).attr('font-family', null).classed('axis', true)).call((g) => g.select('.domain').remove());
+      const g = svg.selectAll('g.row').data(rows).join('g').attr('class', 'row').attr('transform', (d, i) => `translate(0,${i * rowH + rowH / 2 + 2})`);
+      g.append('text').attr('class', 'lbl').attr('x', lw - 10).attr('dy', '0.35em').attr('text-anchor', 'end').text((d) => d.tier);
+      g.append('line').attr('class', 'base').attr('x1', (d) => x(d.lo)).attr('x2', (d) => x(d.hi));
+      g.append('circle').attr('class', 'mark').attr('cx', (d) => x(d.p)).attr('r', 5).style('fill', FILL.solid);
+      g.append('text').attr('x', width - nw + 8).attr('dy', '0.35em').text((d) => `${f(d.n)} checked`);
+      g.on('mousemove', (event, d) => showTip(box, event, d.tier, [[null, null, `${pct(d.p)} confirmed (95% interval ${pct(d.lo)}–${pct(d.hi)}), ${f(d.n)} checked`]]))
+        .on('mouseleave', () => hideTip(box));
+      el('lg-trust').replaceChildren();
+      return;
+    }
+    const rows = dash.data('audit_by_stratum').data.map((r) => {
+      const [lo, hi] = String(r.agree_connected_ci).split('–').map(Number);
+      const [by, label] = DECIDED[r.stratum] || ['other', r.stratum];
+      // agree_connected_n counts the audited records with a verdict on the connection; the rate is the share of those that agreed
+      const j = +r.agree_connected_n, p = +r.agree_connected_rate;
+      return { stratum: r.stratum, by, label, pop: +r.population, n: +r.sampled, j, k: Math.round(p * j), p, lo, hi };
+    });
+    const order = Object.keys(DOT);
+    rows.sort((a, b) => order.indexOf(a.by) - order.indexOf(b.by) || b.p - a.p);
+    const groups = d3.groups(rows, (r) => r.by);
+    const rowH = ph ? 34 : 22, headH = 20, lw = ph ? 0 : 200, pw = ph ? 0 : 110;
+    const H = groups.length * headH + rows.length * rowH + 26;
+    const { svg } = svgFor(box, H);
+    const x = d3.scaleLinear([0.3, 1], [lw + 6, W - pw - 14]);
+    const pmax = d3.max(rows, (r) => r.pop);
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(0,${H - 20})`)
+      .call(d3.axisBottom(x).tickValues([0.3, 0.5, 0.7, 0.9, 1]).tickFormat(pct).tickSize(-(H - 24))).call((g) => g.attr('font-size', null).attr('font-family', null).classed('axis', true)).call((g) => g.select('.domain').remove());
+    let y = 0;
+    groups.forEach(([by, list]) => {
+      svg.append('text').attr('class', 'fm-head').attr('y', y + 14).text(by);
+      y += headH;
+      list.forEach((r) => {
+        const g = svg.append('g').attr('transform', `translate(0,${y})`).attr('data-key', by);
+        const cy = ph ? 24 : rowH / 2;
+        g.append('text').attr('class', 'lbl fm-small').attr('x', ph ? 0 : 12).attr('y', ph ? 10 : cy).attr('dy', ph ? 0 : '0.35em').text(r.label);
+        g.append('line').attr('class', 'base').attr('x1', x(Math.max(0.3, r.lo))).attr('x2', x(r.hi)).attr('y1', cy).attr('y2', cy);
+        g.append('circle').attr('class', `mark${by === 'not yet decided' ? ' fm-nr' : ''}`).attr('cx', x(Math.max(0.3, r.p))).attr('cy', cy).attr('r', 5).style('fill', DOT[by]);
+        if (ph) g.append('text').attr('class', 'fm-small').attr('x', W).attr('y', 10).attr('text-anchor', 'end').text(`${f(r.pop)} at the audit`);
+        else {
+          g.append('rect').attr('class', 'mark').attr('x', W - pw).attr('y', cy - 4).attr('width', Math.max(1, ((pw - 44) * r.pop) / pmax)).attr('height', 8).style('fill', FILL.grayl);
+          g.append('text').attr('class', 'fm-small').attr('x', W - pw + ((pw - 44) * r.pop) / pmax + 4).attr('y', cy).attr('dy', '0.35em').text(f(r.pop));
+        }
+        g.append('rect').attr('width', W).attr('height', rowH).style('fill', 'transparent')
+          .on('mousemove', (event) => showTip(box, event, r.label, [[DOT[by], 'decided by', by], [null, 'records at the audit', f(r.pop)],
+            [null, 'audited', `${f(r.n)}, ${f(r.j)} with a verdict`], [null, 'agreed', `${f(r.k)} of ${f(r.j)} (${pct(r.p)}, 95% interval ${pct(r.lo)}–${pct(r.hi)})`]]))
+          .on('mouseleave', () => hideTip(box));
+        y += rowH;
+      });
+    });
+    if (!ph) svg.append('text').attr('class', 'fm-small').attr('x', W).attr('y', 10).attr('text-anchor', 'end').text('records at the audit');
+    legend(el('lg-trust'), order.map((k) => [k, DOT[k]]));
+    const scr = rows.filter((r) => r.by === 'AI screening agent'), rule = rows.filter((r) => r.by === 'written rule');
+    const bib = rows.find((r) => r.stratum === 'inc_fhl_bibliography');
+    const claim = scr.length && rule.length && bib && d3.min(scr, (r) => r.p) >= d3.max(rule, (r) => r.p) - 0.01 && bib.hi < 0.6;
+    document.querySelectorAll('[data-fm="trust-claim"]').forEach((e) => { e.hidden = !claim; });
+  };
+
+  // ---- counts in the prose: agents launched and counted
+  const drawCounts = (D) => {
+    const launched = D.facts.get('agents_launched'), counted_ = D.facts.get('ai_agents');
+    const nr = D.agents.filter((a) => a.status === 'n').length;
+    fill('agents-launched', f(launched)); fill('agents-counted', f(counted_)); fill('agents-unreturned', f(nr));
+    const aborted = D.facts.get('agents_aborted') || 0;
+    fill('agents-other', f(launched - counted_ - nr)); fill('agents-aborted', f(aborted));
+    fill('agents-unlinked', word(launched - counted_ - nr - aborted));
+    const withAgents = [...D.runs.values()].filter((r) => r.agents > 0);
+    fill('runs-agents', f(withAgents.length)); fill('runs-n', f(D.runs.size));
+    fill('runs-none', word(D.runs.size - withAgents.length));
+    fill('runs-unlogged', word(withAgents.filter((r) => r.logged === '0').length));
+    fill('prompts-launching', f(new Set(withAgents.map((r) => String(r.prompt_n || '')).filter(Boolean)).size)); // the prompts that launched the counted agents
+    const st = dash.data('agent_stages');
+    if (st.status === 'ok') { // the searches of runs 1 and 4
+      const ag = (rn, stage) => d3.sum(st.data.filter((s) => +s.run === rn && s.stage === stage), (s) => +s.agents);
+      fill('n-harvest', word(ag(1, 'Harvest'), true)); fill('n-critique', word(ag(1, 'Critique'), true)); fill('n-gapfill', word(ag(4, 'Harvest')));
+    }
+    const ln = dash.data('lineage');
+    if (ln.status === 'ok') { // Fig. 28: links found by agents reading rosters, CVs, committee lists and profiles
+      const AGENT_FOUND = ['Lab roster', 'Graduate committee', 'Profile'];
+      const k = ln.data.filter((l) => AGENT_FOUND.includes(l.source)).length;
+      fill('links-agent', `${f(k)} (${pct(k / ln.data.length)})`); fill('links-all', f(ln.data.length));
+    }
+  };
+
+  const IDS = ['methods_facts', 'ai_workflows', 'agents'];
+  const draw = () => {
+    const sec = el('method');
+    if (!sec || !sec.offsetParent) return; // the methods tab is hidden; opening it redraws
+    const ok = IDS.every((id) => dash.data(id).status === 'ok');
+    const D = ok ? load() : null;
+    const fig = (id, more, fn) => safely(el(id), (box) => { if (state(box, [...IDS, ...more])) fn(box, D); });
+    if (D) { try { drawCounts(D); } catch (e) { console.error(e); } } // a failed count leaves its dash, not the section
+    fig('ch-agents', [], drawAgents);
+    fig('ch-shapes', ['agent_stages'], drawShapes);
+    fig('ch-timeline', ['prompts'], drawTimeline);
+    fig('ch-census', ['census_steps'], drawCensus);
+    fig('ch-push-did', [], drawPush);
+    fig('ch-checks', ['methods_checks'], drawChecks);
+    fig('ch-trust', ['audit_by_stratum', 'audit_tiers'], drawTrust);
+  };
+  const showRun = (rn) => {
+    if (!dash.data('ai_workflows').data.length) return;
+    const r = dash.data('ai_workflows').data.find((x) => +x.run === rn);
+    const sh = r && SHAPES.find(([pid]) => ofShape(r, pid));
+    if (!sh) return;
+    const ln = rn === 9 ? (sh[0] === 'P3' ? 'links' : 'rosters') : '';
+    picked[sh[0]] = [rn, ln];
+    const panel = document.querySelector(`#ch-shapes .fm-panel[data-pattern="${sh[0]}"]`);
+    if (panel) { drawRun(panel, load(), rn, ln); panel.scrollIntoView({ behavior: 'smooth', block: 'center' }); panel.classList.add('fm-flash'); setTimeout(() => panel.classList.remove('fm-flash'), 1200); }
+  };
+  const toggle = el('fm-trust-toggle');
+  if (toggle) toggle.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; trustView = b.dataset.view; safely(el('ch-trust'), drawTrust); });
+  window.FPM = { draw, showRun };
+  if (dash.data('methods_facts').status === 'ok') draw();
+})();
+</script>
 
 <script>
   // Save a figure as a PNG or SVG image: its key, the chart and its caption, always in black ink on white paper.

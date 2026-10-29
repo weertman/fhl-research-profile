@@ -6,10 +6,13 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 
 - `census_all_candidates.csv`: the full census, 15,962 candidate records with the decision on each (status, evidence tier, where FHL appears, the evidence snippet, the basis and reason for the decision, confidence and notes). Phone numbers, email addresses and street addresses quoted in evidence snippets are removed.
 
-- `ai_workflows.csv`: The AI runs that built the census.
-- `art_images.csv`: 
+- `agent_stages.csv`: Each stage of each AI run: its agents, what they were given, what they did and what they handed on.
+- `agents.csv`: One row per AI agent of the runs: run, stage, role, status, start, minutes and tool calls by kind (no ids or text).
+- `ai_workflows.csv`: The AI runs that built the census, with their family, shape, prompt, the session's effort setting and the effort the agents logged, and logged times.
+- `art_images.csv`: Images of art made in residence, with artist, year, caption, alt text, credit and licence.
 - `artist_programs.csv`: The station's artist-in-residence programs, with years and sources.
 - `artists.csv`: Artists and writers in residence, with years, program, medium and sources.
+- `audit_by_stratum.csv`: The independent audit by how each record was decided: the stratum's size when the sample was drawn, the records audited, how many had a verdict on the FHL connection, and the share that agreed with the census (95% interval).
 - `audit_tiers.csv`: The independent audit, by evidence tier.
 - `by_appears.csv`: Publications by where FHL appears.
 - `by_era.csv`: Publications under each of the station's names.
@@ -17,9 +20,10 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `by_year.csv`: Publications per year.
 - `by_year_appears.csv`: Publications per year by where FHL appears.
 - `candidate_status.csv`: What happened to every candidate record.
+- `census_steps.csv`: The steps of the publication census, the runs (or run stages) and who did each, and the records each handled.
 - `classes.csv`: Classes taught at the station by year and term, with instructors, TAs and sources (public records, fact-checked).
 - `coauthor_places.csv`: Institutions whose researchers co-authored verified FHL publications, with locations and counts by decade (OpenAlex).
-- `course_topics.csv`: 
+- `course_topics.csv`: Course titles by decade and topic (AI classification of the course list).
 - `eras.csv`: The station's names and their years.
 - `headline.csv`: Headline totals: verified publications, best estimate and the date the data were retrieved.
 - `history_eras.csv`: Chronicle of the station: the eras under the station's successive names.
@@ -27,6 +31,7 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `history_images.csv`: Chronicle of the station: the public-domain and openly licensed images, with captions, credits, licences and sources.
 - `lineage.csv`: Teacher-student links: UW theses, Wikidata, lab rosters and mentors inferred from co-authorship, with the source of each.
 - `lineage_people.csv`: Everyone in the mentoring network, with the year their career began and how it was estimated.
+- `methods_checks.csv`: Rounds of checking agents' work: items made, re-opened, confirmed, corrected (changed to the checker's verdict), dropped and unsettled.
 - `methods_facts.csv`: Counts quoted in the technical methods.
 - `network_split.csv`: Publications naming FHL per year, split into those with an FHL scientist among the authors and those by others, beside the FHL scientists' total output (OpenAlex counts).
 - `news_by_year.csv`: News items per year.
