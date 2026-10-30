@@ -423,6 +423,10 @@
   .fp-tabs a + a { border-left: 1px solid var(--fp-ink); }
   .fp-tabs a[aria-current="page"] { background: var(--fp-ink); color: var(--fp-paper); }
   .fp-feedback { font-size: .84rem; font-style: italic; color: var(--fp-ink); }
+  /* the feedback link sits at the top right of the page; where it would run into the centred imprint, on its own line */
+  .fp-mast { position: relative; }
+  .fp-mast > .fp-feedback { position: absolute; top: 0; right: 0; }
+  @media (max-width: 760px) { .fp-mast > .fp-feedback { position: static; justify-self: end; } }
   /* The feedback form: opens over the report, sends without leaving the page */
   .fp-fb { box-sizing: border-box; width: min(36rem, 94vw); max-width: 94vw; max-height: 94vh; overflow: auto; padding: 1.1rem clamp(.8rem, 3vw, 1.3rem) 1.2rem; border: 1.5px solid var(--fp-ink);
     background: var(--fp-paper); color: var(--fp-ink); font-family: var(--fp-serif); }
@@ -542,6 +546,11 @@
 
 <div class="fp" id="fhl-profile">
   <header class="fp-mast" id="top">
+    <!-- data-endpoint: the Google Apps Script web app that receives notes (scripts/feedback_apps_script.gs). While it is
+         empty, the link opens the public GitHub form instead. data-site: the website copy, where the online sheet's
+         readers are sent to write a note (the online sheet cannot post one itself). -->
+    <a class="fp-feedback" id="fb-open" data-site="https://weertman.github.io/fhl-research-profile/" data-endpoint="https://script.google.com/macros/s/AKfycbwHpKU4Z48fp9fPFRQ3kIrwwPyR38AMoNjXR1inHRU8PWHtOccX_b5gm5TtnTfjVydZnQ/exec" href="https://github.com/weertman/fhl-research-profile/issues/new?template=feedback.yml"
+      target="_blank" rel="noopener">Send a correction or suggestion</a>
     <div class="imprint">University of Washington</div>
     <div class="fp-rule2" role="presentation"></div>
     <div class="over">A century of research at</div>
@@ -556,11 +565,6 @@
         <a href="#history" data-tab="chronicle">Chronicle of the station</a>
         <a href="#method" data-tab="methods">Methods</a>
       </nav>
-      <!-- data-endpoint: the Google Apps Script web app that receives notes (scripts/feedback_apps_script.gs). While it is
-           empty, the link opens the public GitHub form instead. data-site: the website copy, where the online sheet's
-           readers are sent to write a note (the online sheet cannot post one itself). -->
-      <a class="fp-feedback" id="fb-open" data-site="https://weertman.github.io/fhl-research-profile/" data-endpoint="https://script.google.com/macros/s/AKfycbwHpKU4Z48fp9fPFRQ3kIrwwPyR38AMoNjXR1inHRU8PWHtOccX_b5gm5TtnTfjVydZnQ/exec" href="https://github.com/weertman/fhl-research-profile/issues/new?template=feedback.yml"
-        target="_blank" rel="noopener">Send a correction or suggestion</a>
     </div>
   </header>
   <dialog class="fp-fb" id="fb-dialog" aria-labelledby="fb-title">
