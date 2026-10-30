@@ -21,9 +21,9 @@ audited,380,records in the audit sample
 audited_sample,340,audited records of the stratified random sample (the audit run)
 audited_listed,40,audited records found only on FHL's own lists (the resolution run's audit agent)
 audit_full_text,260,audited records read in full text
-ai_runs,25,"AI runs (multi-agent workflows, the topic classification and the later checks, rosters and profiles)"
+ai_runs,25,"AI runs (multi-agent workflows, the topic classification, and the checks, rosters and profiles)"
 ai_agents,639,AI agents run in those runs
-build_hours,8.7,wall-clock hours from the first prompt to the first complete version
+build_hours,8.7,wall-clock hours from the first prompt to a complete census and page
 mentor_pairs,146,mentor links inferred from co-authorship
 mentor_checked,146,inferred links checked against public records
 mentor_confirmed,117,checked links confirmed as advisor or mentor

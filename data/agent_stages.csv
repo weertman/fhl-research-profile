@@ -29,11 +29,11 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 13,,1,Images,make,3,,,,openly licensed images,writes a caption and alt text for each
 13,,2,Synthesise,review,1,,,,every extracted event,merges duplicates and conflicts into one timeline
 13,,3,Fact-check,check,4,,,46 of 102 events corrected,a quarter of the timeline,checks each event's date and summary against sources
-14,,0,Find,make,8,,,172 candidate images,the chronicle's events and current images,searches one kind of source for images
+14,,0,Find,make,8,,,172 candidate images,the chronicle's events and the images from run 13,searches one kind of source for images
 14,,1,Check,check,24,,,135 passed,eight of a finder's candidates,"confirms licence, relevance and quality; writes the caption"
 14,,2,Curate,review,1,,,96 chosen,every candidate that passed,picks a balanced set; removes near-duplicates
 14,,3,Fact-check,check,11,,,,ten of the chosen images,"checks every caption, credit and licence"
-15,,0,Review,make,3,,,,the page's changes,reviews them through one lens; lists findings
+15,,0,Review,make,3,,,,the page's phone layout and image galleries,reviews them through one lens; lists findings
 15,,1,Verify,check,3,,,,that lens's findings,checks each finding against the code
 16,,0,Read,make,49,2175,records,"624 read · 1,432 could not be read",one batch of not-yet-verified records,opens each by open routes; records evidence or barrier
 16,,1,Re-check,check,25,159,readings,152 agreed · 2 changed · from 32 of 49 batches,two finished batches,re-opens five records per batch; agrees or not
@@ -42,11 +42,11 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 18,,0,Research,make,11,,,,public archives and the chronicle,"builds one list: scientists, staff, classes or artists"
 18,,1,Fact-check,check,11,,,,that list,checks its least certain entries against sources
 19,,0,Curate,review,5,,,,the lists with their fact-check verdicts,"applies fixes, merges duplicates, keeps professional facts"
-20,,0,Review,make,3,,,,the page's changes,reviews them through one lens; lists findings
+20,,0,Review,make,3,,,,the page's code and data,reviews them through one lens; lists findings
 20,,1,Verify,check,3,,,,that lens's findings,checks each finding against the code and data
 22,,0,Read,make,4,,,,the archived workflow scripts and pipeline notes,"extracts how one census stage searched, with citations"
 22,,1,Design,review,1,,,,all four readers' facts,drafts the methods diagrams
-23,,0,Find,make,6,,,,years still needing images,searches one kind of source for those years
+23,,0,Find,make,6,,,,the years without an image after runs 13 and 14,searches one kind of source for those years
 23,,1,Check,check,9,,,,eight of a finder's candidates,confirms provenance or licence and year; writes the caption
 23,,2,Curate,review,4,,,,the checked images of one period,picks up to two images a year
 23,,3,Fact-check,check,6,,,,ten of the chosen images,"checks every caption, year and credit"
