@@ -651,12 +651,12 @@
     <div class="fp-chart" id="ch-split" data-source="network_split"></div>
     <figcaption>
       <h3 id="fig-glance">Who writes the research papers.—Research papers a year, averaged over 2016–2025.</h3>
-      <p class="cap">Research papers only: journal articles, reviews and letters, with books and chapters (the lower four layers of Fig. 1). Left:
+      <p class="cap">Research papers only: journal articles, reviews and letters (the lower three layers of Fig. 1). Left:
         verified research papers that name FHL. Right: every research paper the FHL scientists identified by address
-        (section IV) published in the same years, wherever they were (OpenAlex's article, review, book, chapter and letter
+        (section IV) published in the same years, wherever they were (OpenAlex's article, review and letter
         types). The two meet in the middle box, drawn heavier: FHL scientists' papers that name the station. Authors are
-        matched by OpenAlex identifier, or by name where a record has none. Student reports, theses, datasets and other
-        work are counted in the summary below.</p>
+        matched by OpenAlex identifier, or by name where a record has none. Books and chapters, student reports, theses,
+        datasets and other work are counted in the summary below.</p>
     </figcaption>
   </figure>
 
@@ -1995,11 +1995,11 @@
     inputs: ['publications', 'network_split', 'news_by_year', 'coauthor_places'],
     fn: (publications, network_split, news_by_year, coauthor_places) => {
       const Y0 = 2016, Y1 = 2025, N = Y1 - Y0 + 1, inY = (r) => +r.year >= Y0 && +r.year <= Y1;
-      const RESEARCH = ['Journal article', 'Review article', 'Book', 'Book chapter', 'Letter'];
+      const RESEARCH = ['Journal article', 'Review article', 'Letter'], BOOKS = ['Book', 'Book chapter']; // as in Fig. 1
       const THESES = ['Thesis / dissertation'], REPORTS = ['Student / course report'], DATA = ['Dataset / software'];
       const ver = publications.filter((r) => r.evidence_tier === 'Verified'), verY = ver.filter(inY);
       const perYear = (types) => verY.filter((r) => types.includes(r.publication_type)).length / N;
-      const known = [...RESEARCH, ...THESES, ...REPORTS, ...DATA];
+      const known = [...RESEARCH, ...BOOKS, ...THESES, ...REPORTS, ...DATA];
       const other = verY.filter((r) => !known.includes(r.publication_type)).length / N;
       const split = (k) => network_split.filter(inY).reduce((t, r) => t + Number(r[k] || 0), 0) / N;
       const res = ver.filter((r) => RESEARCH.includes(r.publication_type)), resY = res.filter(inY);
@@ -2007,7 +2007,8 @@
       const median = (rs) => { const v = rs.map((r) => Number(r.citations || 0)).sort((a, b) => a - b), m = v.length >> 1; return !v.length ? 0 : v.length % 2 ? v[m] : (v[m - 1] + v[m]) / 2; };
       const news = news_by_year.filter(inY).reduce((t, r) => t + Number(r.n || 0), 0) / N;
       return [
-        { group: 'Research output', measure: 'research_naming', value: perYear(RESEARCH), unit: 'a year', label: 'research papers name FHL', note: 'journal articles, reviews, books, chapters and letters', kind: 'research' },
+        { group: 'Research output', measure: 'research_naming', value: perYear(RESEARCH), unit: 'a year', label: 'research papers name FHL', note: 'journal articles, reviews and letters', kind: 'research' },
+        { group: 'Research output', measure: 'books', value: perYear(BOOKS), unit: 'a year', label: 'books and book chapters name FHL', note: '', kind: 'books' },
         { group: 'Research impact', measure: 'citations_recent', value: cites(resY), unit: '', label: 'citations so far to the research papers of 2016–2025 that name FHL', note: '' },
         { group: 'Research impact', measure: 'citations_median', value: median(resY), unit: '', label: 'median citations per such paper', note: '' },
         { group: 'Research impact', measure: 'citations_all', value: cites(res), unit: '', label: 'citations to all research papers that name FHL, every year', note: '' },
@@ -3175,7 +3176,7 @@
         });
         return box;
       }));
-      const KINDS = [['research', 'Research papers', FILL.solid], ['training', 'Theses and student reports', FILL.hatch],
+      const KINDS = [['research', 'Research papers', FILL.solid], ['books', 'Books and chapters', FILL.cross], ['training', 'Theses and student reports', FILL.hatch],
         ['data', 'Datasets and software', FILL.dots], ['other', 'Other work', FILL.grayl]];
       const parts = KINDS.map(([k, name, fill]) => ({ name, fill, n: d3.sum(rows.filter((r) => r.kind === k), (r) => +r.value) }));
       const total = d3.sum(parts, (d) => d.n);
