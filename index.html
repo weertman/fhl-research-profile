@@ -502,7 +502,6 @@
   .fp-era-box > summary::-webkit-details-marker { display: none; }
   .fp-era .fold { margin-top: .4rem; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--fp-ink-2); }
   .fp-era .fold::after { content: " ▸ open"; font-weight: 700; color: var(--fp-ink); }
-  #hist-openall { font-weight: 700; }
   .fp-era-box[open] .fp-era .fold::after { content: " ▾ close"; }
   .fp-era-box:not([open]) .fp-era { margin-bottom: 0; }
   /* The closing ode: one italic stanza, wrapped lines indented under their first word */
@@ -1072,8 +1071,6 @@
         <button type="button" data-hist="turning" aria-pressed="false">Turning points</button>
       </div>
       <select id="hist-type" aria-label="Kind of event"><option value="">Every kind of event</option></select>
-      <button type="button" class="fp-linkbtn" id="hist-openall">Open every era</button>
-      <span class="cap" id="hist-count"></span>
     </div>
     <div class="fp-history" id="history-timeline" data-source="history_events history_images history_eras"></div>
     <p class="cap fp-narrow">Events were extracted from these sources by AI agents, merged into one timeline and fact-checked
@@ -2499,17 +2496,6 @@
   // Each era of the chronicle starts folded and opens on a click; which ones a reader opened survives redrawing (filters, a
   // turned phone).
   const openEras = new Set();
-  const histAll = document.getElementById('hist-openall');
-  histAll.addEventListener('click', () => {
-    const boxes = [...document.querySelectorAll('#history-timeline details.fp-era-box')];
-    const openAll = boxes.some((d) => !d.open);
-    boxes.forEach((d) => { d.open = openAll; });
-    syncAllEras();
-  });
-  function syncAllEras() {
-    const b = [...document.querySelectorAll('#history-timeline details.fp-era-box')];
-    histAll.textContent = b.length && b.every((d) => d.open) ? 'Close every era' : 'Open every era';
-  }
   const SITE_URL = 'https://weertman.github.io/fhl-research-profile/';
   const imgSrc = (r) => (window.FP_SITE_BASE != null ? window.FP_SITE_BASE + r.file : (r.blob || SITE_URL + r.file));
   // The page shows small greyscale previews (quick to load); the full image opens when a reader enlarges one.
@@ -2542,14 +2528,13 @@
       cap.append(cr); fig.append(img, cap); return fig;
     };
     const plates = [...imgs.values()].filter((im) => im.placement === 'era' && String(im.year).trim() !== '');
-    const shownImgs = new Set();
     const out = [];
     eras.forEach((era) => {
       const evs = shown.filter((r) => r.year >= era.start && r.year <= era.end).sort((a, b) => a.year - b.year || String(a.date).localeCompare(String(b.date)));
       const pl = plates.filter((im) => +im.year >= era.start && +im.year <= era.end).sort((a, b) => (+a.year - +b.year) || byOrder(a, b));
       if (!evs.length && !pl.length) return;
       const box = make('details', 'fp-era-box'); box.open = openEras.has(era.start);
-      box.addEventListener('toggle', () => { if (box.open) openEras.add(era.start); else openEras.delete(era.start); syncAllEras(); });
+      box.addEventListener('toggle', () => { if (box.open) openEras.add(era.start); else openEras.delete(era.start); });
       const sum = make('summary');
       const head = make('div', 'fp-era');
       head.append(make('div', 'yrs', `${era.start}–${era.end >= 2026 ? 'today' : era.end}`), make('h3', null, era.name), make('p', 'note', era.note));
@@ -2557,7 +2542,6 @@
       if (n) head.append(make('div', 'pubs', `${f(n)} publications in the census from these years`));
       const eraImgs = new Set(pl.map((im) => im.image_id));
       evs.forEach((r) => String(r.image_ids || '').split(';').filter((id) => imgs.has(id)).forEach((id) => eraImgs.add(id)));
-      eraImgs.forEach((id) => shownImgs.add(id));
       head.append(make('div', 'fold', `${f(evs.length)} event${evs.length === 1 ? '' : 's'} · ${f(eraImgs.size)} image${eraImgs.size === 1 ? '' : 's'}`));
       sum.append(head); box.append(sum); out.push(box);
       const inner = make('div', 'fp-era-body'); box.append(inner);
@@ -2586,10 +2570,8 @@
         row.append(when, body); inner.append(row);
       });
     });
-    document.getElementById('hist-count').textContent = `${f(shown.length)} of ${f(all.length)} events · ${f(shownImgs.size)} images`;
     el.classList.remove('dash-skeleton');
     el.replaceChildren(...out);
-    syncAllEras();
   }
   // A larger view of a history image, in its original colours, with its caption and credit.
   function zoom(im) {
