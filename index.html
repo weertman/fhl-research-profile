@@ -66,7 +66,6 @@
   .fp-mast .sub { font-style: italic; font-size: clamp(1.05rem, 2.4cqi, 1.3rem); text-wrap: balance; }
   .fp-mast .short { width: 4rem; border-top: 1px solid var(--fp-ink); margin: .4rem 0; }
   .fp-mast .byline { font-variant: small-caps; letter-spacing: .06em; font-size: .98rem; margin: -.2rem 0 .6rem; }
-  .fp-mast .stamp { text-transform: uppercase; letter-spacing: .14em; font-size: .74rem; font-variant-numeric: lining-nums; }
 
   /* Opening paragraph with a drop capital */
   .fp .fp-lead { font-size: 1.12rem; line-height: 1.6; max-width: 38em; margin-inline: auto; text-align: justify; hyphens: auto; }
@@ -549,7 +548,6 @@
     <div class="short" role="presentation"></div>
     <p class="byline">By Claude Opus 5.5, Willem Lee Weertman and Marjorie Wonham</p>
     <div class="fp-rule2 flip" role="presentation"></div>
-    <div class="stamp">Data retrieved <span data-source="headline" data-field="retrieved">—</span></div>
     <div class="fp-topbar">
       <nav class="fp-tabs" aria-label="Parts of the report">
         <a href="#top" data-tab="report">The report</a>
@@ -644,11 +642,11 @@
       highlighted. Every figure can be saved as PNG or SVG.</p>
   </nav>
 
-  <figure class="fp-fig fp-glance" id="glance">
+  <figure class="fp-fig fp-glance" id="glance" data-collapsible>
     <div class="fp-chart" id="ch-split" data-source="network_split"></div>
     <figcaption>
       <h3 id="fig-glance">Who writes the research papers.—Research papers a year, averaged over 2016–2025.</h3>
-      <p class="cap">Research papers only: journal articles, reviews, books, chapters and letters, as in Fig. 1. Left:
+      <p class="cap">Research papers only: journal articles, reviews and letters, with books and chapters (the lower four layers of Fig. 1). Left:
         verified research papers that name FHL. Right: every research paper the FHL scientists identified by address
         (section IV) published in the same years, wherever they were (OpenAlex's article, review, book, chapter and letter
         types). The two meet in the middle box, drawn heavier: FHL scientists' papers that name the station. Authors are
@@ -657,7 +655,7 @@
     </figcaption>
   </figure>
 
-  <figure class="fp-fig fp-scorecard" id="scorecard">
+  <figure class="fp-fig fp-scorecard" id="scorecard" data-collapsible>
     <div class="fp-chart" id="ch-score-bar" data-source="scorecard"></div>
     <div class="fp-legend" id="lg-score"></div>
     <div class="fp-score" id="score-groups" data-source="scorecard"></div>
@@ -701,9 +699,10 @@
       <div class="fp-chart tall" id="ch-tier" data-source="publications eras"></div>
       <figcaption>
         <h3 id="fig-tier"><span class="fig">Fig. 1.</span>—Publications per year, by how directly the FHL connection was confirmed.</h3>
-        <p class="cap">Research papers (journal articles, reviews, letters, books and chapters) are shaded by how directly
-          their FHL connection was confirmed; all other work (student and course reports, theses, datasets, meeting
-          abstracts, agency reports, preprints, editorials, book reviews and other items) is the light layer on top. Much of the 2011–2014 peak is FHL's course papers,
+        <p class="cap">Research papers (journal articles, reviews and letters) are shaded by how directly their FHL
+          connection was confirmed; books and chapters, of every tier, are the cross-hatched layer above them; all other work
+          (student and course reports, theses, datasets, meeting abstracts, agency reports, preprints, editorials, book
+          reviews and other items) is the light layer on top. Much of the 2011–2014 peak is FHL's course papers,
           deposited in UW ResearchWorks in those years. Dashed rules mark changes in the station's name. Database coverage of
           older work is thin, and the most recent year is partial.</p>
       </figcaption>
@@ -3272,17 +3271,20 @@
 
     // ---- publications per year by tier ------------------------------------------------------------------------
     const elTier = document.getElementById('ch-tier');
-    // Research papers and books are shaded by tier; everything else (student and course reports, theses, datasets,
-    // meeting abstracts, preprints, agency reports and the rest) is one lighter layer on top.
-    const RESEARCH = new Set(['Journal article', 'Review article', 'Book', 'Book chapter', 'Letter']);
-    const OTHER_WORK = 'Other work, all tiers';
-    const tierKeys = [...TIER_KEYS, OTHER_WORK];
-    const tierFills = [FILL.solid, FILL.hatch, FILL.dots, FILL.grayl];
-    legend(document.getElementById('lg-tier'), tierKeys.map((k, i) => [i < TIER_KEYS.length ? `Research papers and books: ${k.toLowerCase() === 'listed by fhl' ? 'listed by FHL' : k.toLowerCase()}` : 'Other work (student reports, theses, datasets, abstracts, agency reports and more): all tiers', tierFills[i], k]));
+    // Research papers are shaded by tier; books and chapters are one layer above them, and everything else (student and
+    // course reports, theses, datasets, meeting abstracts, preprints, agency reports and the rest) one lighter layer on top.
+    const PAPERS = new Set(['Journal article', 'Review article', 'Letter']), BOOKS = new Set(['Book', 'Book chapter']);
+    const BOOK_WORK = 'Books and chapters, all tiers', OTHER_WORK = 'Other work, all tiers';
+    const tierKeys = [...TIER_KEYS, BOOK_WORK, OTHER_WORK];
+    const tierFills = [FILL.solid, FILL.hatch, FILL.dots, FILL.cross, FILL.grayl];
+    const tierLabel = (k) => (k === BOOK_WORK ? 'Books and chapters: all tiers'
+      : k === OTHER_WORK ? 'Other work (student reports, theses, datasets, abstracts, agency reports and more): all tiers'
+        : `Research papers: ${k.toLowerCase() === 'listed by fhl' ? 'listed by FHL' : k.toLowerCase()}`);
+    legend(document.getElementById('lg-tier'), tierKeys.map((k, i) => [tierLabel(k), tierFills[i], k]));
     if (state(elTier, ['publications', 'eras'])) {
       const eras = dash.data('eras').data.map((e) => ({ start: +e.start, end: +e.end, name: e.name, short: ERA_SHORT[e.name] || e.name }));
       const rows = dash.data('publications').data.filter((r) => +r.year)
-        .map((r) => ({ x: Math.round(+r.year), k: RESEARCH.has(r.publication_type) ? r.evidence_tier : OTHER_WORK, n: 1 }))
+        .map((r) => ({ x: Math.round(+r.year), k: PAPERS.has(r.publication_type) ? r.evidence_tier : BOOKS.has(r.publication_type) ? BOOK_WORK : OTHER_WORK, n: 1 }))
         .filter((r) => tierKeys.includes(r.k));
       stackedYears(elTier, rows, tierKeys, tierFills, { eras, height: 330 });
     }
@@ -4478,10 +4480,11 @@
         const fNote = font(12, ink2); y += 3;
         wrap(note.textContent.trim(), fNote, inner).forEach((line) => { y += 16; out.appendChild(el('text', { x: pad, y, style: fNote }, line)); });
       }
-      const stamp = (document.querySelector('.fp-mast .stamp')?.textContent || '').replace(/\s+/g, ' ').trim();
+      const hd = window.dash && dash.data('headline').data[0];  // the date the data were retrieved, for the credit line
+      const stamp = hd && hd.retrieved ? ` Data retrieved ${hd.retrieved}.` : '';
       const by = (document.querySelector('.fp-mast .byline')?.textContent || '').replace(/^By\s+/, '').trim();
       y += 22;
-      wrap(`Friday Harbor Laboratories, University of Washington: research publications census${by ? `, by ${by}` : ''}. ${stamp}.`,
+      wrap(`Friday Harbor Laboratories, University of Washington: research publications census${by ? `, by ${by}` : ''}.${stamp}`,
         font(10.5, ink2, 'font-style:italic'), inner).forEach((line, i) => {
         if (i) y += 14;
         out.appendChild(el('text', { x: pad, y, style: font(10.5, ink2, 'font-style:italic') }, line));
