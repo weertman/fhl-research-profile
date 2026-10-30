@@ -243,7 +243,7 @@
   .fp-score .row.sub .v { font-size: 1.1rem; }
   .fp-score .row.sub .l { padding-left: .8rem; }
   .fp-score .row .l { font-size: .9rem; line-height: 1.35; }
-  .fp-score .row .l .u { font-style: italic; }
+  .fp-score .row .l .u { font-weight: 700; }
   .fp-score .row .l .n { display: block; font-size: .8rem; color: var(--fp-ink-2); font-style: italic; }
   #ch-score-bar { min-height: 0; }
   .fp-strip-head { margin: 1.1rem 0 .1rem; padding-top: .7rem; border-top: 1px solid color-mix(in oklab, var(--fp-ink) 35%, var(--fp-paper)); }
@@ -622,18 +622,6 @@
   </p>
 
 
-  <figure class="fp-fig fp-scorecard" id="scorecard">
-    <div class="fp-chart" id="ch-score-bar" data-source="scorecard"></div>
-    <div class="fp-legend" id="lg-score"></div>
-    <div class="fp-score" id="score-groups" data-source="scorecard"></div>
-    <figcaption>
-      <h3 id="fig-score">At a glance.—What the station produces, sorted by the measures a university uses.</h3>
-      <p class="cap">Verified work that names FHL, as a yearly average over 2016–2025 unless marked. The bar splits that
-        work by kind; the boxes below sort it into research, its impact, training, open data, public reach and
-        collaboration. Citations are OpenAlex counts as of October 2026, so recent papers have had less time to gather
-        them. Hover over the bar for each part.</p>
-    </figcaption>
-  </figure>
 
   <nav class="fp-toc" id="contents" aria-label="Contents">
     <div class="head">Contents</div>
@@ -665,7 +653,20 @@
         (section IV) published in the same years, wherever they were (OpenAlex's article, review, book, chapter and letter
         types). The two meet in the middle box, drawn heavier: FHL scientists' papers that name the station. Authors are
         matched by OpenAlex identifier, or by name where a record has none. Student reports, theses, datasets and other
-        work are counted in the summary at the top.</p>
+        work are counted in the summary below.</p>
+    </figcaption>
+  </figure>
+
+  <figure class="fp-fig fp-scorecard" id="scorecard">
+    <div class="fp-chart" id="ch-score-bar" data-source="scorecard"></div>
+    <div class="fp-legend" id="lg-score"></div>
+    <div class="fp-score" id="score-groups" data-source="scorecard"></div>
+    <figcaption>
+      <h3 id="fig-score">At a glance.—What the station produces, sorted by the measures a university uses.</h3>
+      <p class="cap"><b>Every number marked "a year" is a yearly average over 2016–2025</b>; the others are totals. The bar
+        splits the verified work that names FHL by kind; the boxes below sort it into research, its impact, training, open
+        data, public reach and collaboration. Who wrote the research papers is in the chart above. Citations are OpenAlex counts as of October 2026, so recent papers have had less time to gather
+        them. Hover over the bar for each part.</p>
     </figcaption>
   </figure>
 
@@ -1975,7 +1976,7 @@
   });
   dash.calc('scorecard', {
     title: 'What the station produces, by measure',
-    description: 'Yearly averages over 2016–2025 of verified work that names FHL, sorted by kind (research papers, training, open data, other); citations to the research papers; news stories; co-author institutions; and research papers by the FHL scientists wherever they were.',
+    description: 'Yearly averages over 2016–2025 of verified work that names FHL, sorted by kind (research papers, training, open data, other); citations to the research papers; news stories; and co-author institutions.',
     inputs: ['publications', 'network_split', 'news_by_year', 'coauthor_places'],
     fn: (publications, network_split, news_by_year, coauthor_places) => {
       const Y0 = 2016, Y1 = 2025, N = Y1 - Y0 + 1, inY = (r) => +r.year >= Y0 && +r.year <= Y1;
@@ -1992,9 +1993,6 @@
       const news = news_by_year.filter(inY).reduce((t, r) => t + Number(r.n || 0), 0) / N;
       return [
         { group: 'Research output', measure: 'research_naming', value: perYear(RESEARCH), unit: 'a year', label: 'research papers name FHL', note: 'journal articles, reviews, books, chapters and letters', kind: 'research' },
-        { group: 'Research output', measure: 'research_fhl', value: split('by_fhl_scientists_research'), unit: 'a year', label: 'of them with an FHL scientist among the authors', note: '' },
-        { group: 'Research output', measure: 'research_visitors', value: split('by_others_research'), unit: 'a year', label: 'of them by visitors, students and other collaborators', note: '' },
-        { group: 'Research output', measure: 'research_scientists_all', value: split('fhl_scientists_all_research'), unit: 'a year', label: 'research papers by the FHL scientists, wherever they were', note: 'OpenAlex' },
         { group: 'Research impact', measure: 'citations_recent', value: cites(resY), unit: '', label: 'citations so far to the research papers of 2016–2025 that name FHL', note: '' },
         { group: 'Research impact', measure: 'citations_median', value: median(resY), unit: '', label: 'median citations per such paper', note: '' },
         { group: 'Research impact', measure: 'citations_all', value: cites(res), unit: '', label: 'citations to all research papers that name FHL, every year', note: '' },
@@ -3171,7 +3169,7 @@
           Object.assign(v.dataset, { source: 'scorecard', field: 'value', where: `measure=${r.measure}` });
           const l = document.createElement('span'); l.className = 'l';
           l.append(document.createTextNode(r.label));
-          if (r.unit) { const u = document.createElement('span'); u.className = 'u'; u.textContent = ` ${r.unit}`; l.append(u); }
+          if (r.unit) { const u = document.createElement('span'); u.className = 'u'; u.textContent = ` ${r.unit} on average`; l.append(u); }
           if (r.note) { const n = document.createElement('span'); n.className = 'n'; n.textContent = r.note; l.append(n); }
           row.append(v, l); box.append(row);
         });
@@ -3184,7 +3182,8 @@
       legend(document.getElementById('lg-score'), parts.map((d) => [`${fmtV({ value: d.n, unit: 'a year' })} ${d.name.toLowerCase()}`, d.fill, d.name]));
       const lead = elScB.querySelector(':scope > p') || elScB.appendChild(document.createElement('p'));
       lead.className = 'cap fp-strip-head'; lead.style.borderTop = '0';
-      lead.textContent = `Of the ${f(Math.round(total))} verified works a year that name FHL (2016–2025):`;
+      lead.replaceChildren(Object.assign(document.createElement('b'), { textContent: 'Yearly averages, 2016–2025. ' }),
+        `Of the ${f(Math.round(total))} verified works a year that name FHL, on average:`);
       const { svg, width } = svgFor(elScB, 26);
       const x = d3.scaleLinear([0, total], [0, width]);
       let acc = 0;
@@ -3202,7 +3201,7 @@
     if (state(elSp, ['network_split'])) {
       const yrs = dash.data('network_split').data.filter((r) => +r.year >= 2016 && +r.year <= 2025);
       const avg = (k) => d3.mean(yrs, (r) => +r[k]) || 0;
-      // research papers only: other kinds of work are different outputs, counted in the summary at the top
+      // research papers only: other kinds of work are different outputs, counted in the summary below
       const A = avg('by_fhl_scientists_research'), B = avg('by_others_research'), U = avg('no_author_data_research'), T = avg('fhl_scientists_all_research');
       const r0 = (v) => f(Math.round(v));
       [['split-research', A + B + U], ['split-fhl', A], ['split-others', B], ['split-all', T]].forEach(([id, v]) => { const e = document.getElementById(id); if (e) e.textContent = r0(v); });
