@@ -1,0 +1,45 @@
+name: Correction or suggestion
+description: Point out an error or something missing, or suggest an improvement to the FHL research report.
+title: "[Feedback] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve *A century of research at Friday Harbor Laboratories*. This form is public, so please
+        do not include private information (phone numbers, email addresses, health or personal details).
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback is it?
+      options:
+        - A correction (something is wrong)
+        - A missing publication
+        - A missing or misdescribed person
+        - An event or image for the chronicle of the station
+        - A suggestion for the report
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where in the report?
+      description: The section, figure or table, or the person or publication concerned.
+      placeholder: "e.g. Table I, Libbie Hyman; or Fig. 3"
+  - type: textarea
+    id: what
+    attributes:
+      label: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source or evidence
+      description: A link, citation or document that supports the change, if you have one.
+  - type: input
+    id: who
+    attributes:
+      label: Your name and role (optional)
+      description: So the authors can credit you or follow up. Your GitHub username is shown either way.

@@ -1,0 +1,616 @@
+year,appears,n
+1904,Author address,0
+1905,Author address,0
+1906,Author address,0
+1907,Author address,0
+1908,Author address,0
+1909,Author address,0
+1910,Author address,0
+1911,Author address,0
+1912,Author address,1
+1913,Author address,0
+1914,Author address,0
+1915,Author address,2
+1916,Author address,1
+1917,Author address,1
+1918,Author address,1
+1919,Author address,1
+1920,Author address,0
+1921,Author address,2
+1922,Author address,1
+1923,Author address,1
+1924,Author address,1
+1925,Author address,5
+1926,Author address,4
+1927,Author address,1
+1928,Author address,4
+1929,Author address,0
+1930,Author address,0
+1931,Author address,3
+1932,Author address,0
+1933,Author address,2
+1934,Author address,4
+1935,Author address,3
+1936,Author address,0
+1937,Author address,0
+1938,Author address,1
+1939,Author address,0
+1940,Author address,2
+1941,Author address,1
+1942,Author address,0
+1943,Author address,1
+1944,Author address,0
+1945,Author address,1
+1946,Author address,0
+1947,Author address,0
+1948,Author address,0
+1949,Author address,0
+1950,Author address,3
+1951,Author address,5
+1952,Author address,6
+1953,Author address,1
+1954,Author address,2
+1955,Author address,1
+1956,Author address,0
+1957,Author address,4
+1958,Author address,5
+1959,Author address,6
+1960,Author address,7
+1961,Author address,4
+1962,Author address,7
+1963,Author address,8
+1964,Author address,9
+1965,Author address,12
+1966,Author address,12
+1967,Author address,10
+1968,Author address,6
+1969,Author address,12
+1970,Author address,17
+1971,Author address,10
+1972,Author address,11
+1973,Author address,28
+1974,Author address,19
+1975,Author address,17
+1976,Author address,16
+1977,Author address,21
+1978,Author address,25
+1979,Author address,24
+1980,Author address,32
+1981,Author address,36
+1982,Author address,37
+1983,Author address,29
+1984,Author address,51
+1985,Author address,31
+1986,Author address,30
+1987,Author address,24
+1988,Author address,40
+1989,Author address,26
+1990,Author address,31
+1991,Author address,35
+1992,Author address,21
+1993,Author address,33
+1994,Author address,28
+1995,Author address,21
+1996,Author address,27
+1997,Author address,15
+1998,Author address,20
+1999,Author address,37
+2000,Author address,30
+2001,Author address,36
+2002,Author address,35
+2003,Author address,37
+2004,Author address,48
+2005,Author address,57
+2006,Author address,61
+2007,Author address,45
+2008,Author address,57
+2009,Author address,49
+2010,Author address,55
+2011,Author address,142
+2012,Author address,109
+2013,Author address,99
+2014,Author address,146
+2015,Author address,74
+2016,Author address,51
+2017,Author address,65
+2018,Author address,78
+2019,Author address,100
+2020,Author address,60
+2021,Author address,95
+2022,Author address,100
+2023,Author address,98
+2024,Author address,60
+2025,Author address,95
+2026,Author address,51
+1904,In the text; addresses not seen,0
+1905,In the text; addresses not seen,0
+1906,In the text; addresses not seen,0
+1907,In the text; addresses not seen,0
+1908,In the text; addresses not seen,0
+1909,In the text; addresses not seen,0
+1910,In the text; addresses not seen,0
+1911,In the text; addresses not seen,0
+1912,In the text; addresses not seen,1
+1913,In the text; addresses not seen,0
+1914,In the text; addresses not seen,0
+1915,In the text; addresses not seen,0
+1916,In the text; addresses not seen,0
+1917,In the text; addresses not seen,0
+1918,In the text; addresses not seen,0
+1919,In the text; addresses not seen,0
+1920,In the text; addresses not seen,0
+1921,In the text; addresses not seen,0
+1922,In the text; addresses not seen,0
+1923,In the text; addresses not seen,0
+1924,In the text; addresses not seen,0
+1925,In the text; addresses not seen,0
+1926,In the text; addresses not seen,0
+1927,In the text; addresses not seen,0
+1928,In the text; addresses not seen,0
+1929,In the text; addresses not seen,3
+1930,In the text; addresses not seen,1
+1931,In the text; addresses not seen,0
+1932,In the text; addresses not seen,0
+1933,In the text; addresses not seen,0
+1934,In the text; addresses not seen,0
+1935,In the text; addresses not seen,0
+1936,In the text; addresses not seen,1
+1937,In the text; addresses not seen,0
+1938,In the text; addresses not seen,1
+1939,In the text; addresses not seen,0
+1940,In the text; addresses not seen,0
+1941,In the text; addresses not seen,0
+1942,In the text; addresses not seen,0
+1943,In the text; addresses not seen,0
+1944,In the text; addresses not seen,0
+1945,In the text; addresses not seen,0
+1946,In the text; addresses not seen,0
+1947,In the text; addresses not seen,0
+1948,In the text; addresses not seen,0
+1949,In the text; addresses not seen,1
+1950,In the text; addresses not seen,0
+1951,In the text; addresses not seen,0
+1952,In the text; addresses not seen,0
+1953,In the text; addresses not seen,0
+1954,In the text; addresses not seen,0
+1955,In the text; addresses not seen,0
+1956,In the text; addresses not seen,0
+1957,In the text; addresses not seen,0
+1958,In the text; addresses not seen,0
+1959,In the text; addresses not seen,3
+1960,In the text; addresses not seen,0
+1961,In the text; addresses not seen,1
+1962,In the text; addresses not seen,1
+1963,In the text; addresses not seen,2
+1964,In the text; addresses not seen,0
+1965,In the text; addresses not seen,0
+1966,In the text; addresses not seen,4
+1967,In the text; addresses not seen,1
+1968,In the text; addresses not seen,0
+1969,In the text; addresses not seen,0
+1970,In the text; addresses not seen,1
+1971,In the text; addresses not seen,2
+1972,In the text; addresses not seen,0
+1973,In the text; addresses not seen,3
+1974,In the text; addresses not seen,2
+1975,In the text; addresses not seen,1
+1976,In the text; addresses not seen,2
+1977,In the text; addresses not seen,0
+1978,In the text; addresses not seen,2
+1979,In the text; addresses not seen,1
+1980,In the text; addresses not seen,2
+1981,In the text; addresses not seen,5
+1982,In the text; addresses not seen,1
+1983,In the text; addresses not seen,3
+1984,In the text; addresses not seen,0
+1985,In the text; addresses not seen,0
+1986,In the text; addresses not seen,1
+1987,In the text; addresses not seen,2
+1988,In the text; addresses not seen,3
+1989,In the text; addresses not seen,0
+1990,In the text; addresses not seen,1
+1991,In the text; addresses not seen,2
+1992,In the text; addresses not seen,0
+1993,In the text; addresses not seen,2
+1994,In the text; addresses not seen,3
+1995,In the text; addresses not seen,2
+1996,In the text; addresses not seen,4
+1997,In the text; addresses not seen,2
+1998,In the text; addresses not seen,2
+1999,In the text; addresses not seen,0
+2000,In the text; addresses not seen,1
+2001,In the text; addresses not seen,1
+2002,In the text; addresses not seen,2
+2003,In the text; addresses not seen,2
+2004,In the text; addresses not seen,2
+2005,In the text; addresses not seen,1
+2006,In the text; addresses not seen,0
+2007,In the text; addresses not seen,1
+2008,In the text; addresses not seen,3
+2009,In the text; addresses not seen,0
+2010,In the text; addresses not seen,5
+2011,In the text; addresses not seen,3
+2012,In the text; addresses not seen,7
+2013,In the text; addresses not seen,4
+2014,In the text; addresses not seen,4
+2015,In the text; addresses not seen,4
+2016,In the text; addresses not seen,3
+2017,In the text; addresses not seen,4
+2018,In the text; addresses not seen,0
+2019,In the text; addresses not seen,1
+2020,In the text; addresses not seen,0
+2021,In the text; addresses not seen,1
+2022,In the text; addresses not seen,1
+2023,In the text; addresses not seen,0
+2024,In the text; addresses not seen,0
+2025,In the text; addresses not seen,1
+2026,In the text; addresses not seen,1
+1904,Other or not determined,0
+1905,Other or not determined,0
+1906,Other or not determined,0
+1907,Other or not determined,0
+1908,Other or not determined,0
+1909,Other or not determined,0
+1910,Other or not determined,0
+1911,Other or not determined,0
+1912,Other or not determined,0
+1913,Other or not determined,0
+1914,Other or not determined,0
+1915,Other or not determined,2
+1916,Other or not determined,6
+1917,Other or not determined,4
+1918,Other or not determined,4
+1919,Other or not determined,5
+1920,Other or not determined,0
+1921,Other or not determined,1
+1922,Other or not determined,4
+1923,Other or not determined,0
+1924,Other or not determined,0
+1925,Other or not determined,8
+1926,Other or not determined,1
+1927,Other or not determined,4
+1928,Other or not determined,7
+1929,Other or not determined,7
+1930,Other or not determined,16
+1931,Other or not determined,1
+1932,Other or not determined,2
+1933,Other or not determined,1
+1934,Other or not determined,3
+1935,Other or not determined,2
+1936,Other or not determined,2
+1937,Other or not determined,2
+1938,Other or not determined,1
+1939,Other or not determined,0
+1940,Other or not determined,3
+1941,Other or not determined,2
+1942,Other or not determined,2
+1943,Other or not determined,0
+1944,Other or not determined,0
+1945,Other or not determined,0
+1946,Other or not determined,0
+1947,Other or not determined,0
+1948,Other or not determined,0
+1949,Other or not determined,0
+1950,Other or not determined,0
+1951,Other or not determined,0
+1952,Other or not determined,0
+1953,Other or not determined,0
+1954,Other or not determined,0
+1955,Other or not determined,0
+1956,Other or not determined,0
+1957,Other or not determined,0
+1958,Other or not determined,0
+1959,Other or not determined,3
+1960,Other or not determined,1
+1961,Other or not determined,1
+1962,Other or not determined,1
+1963,Other or not determined,0
+1964,Other or not determined,1
+1965,Other or not determined,0
+1966,Other or not determined,0
+1967,Other or not determined,1
+1968,Other or not determined,0
+1969,Other or not determined,1
+1970,Other or not determined,0
+1971,Other or not determined,1
+1972,Other or not determined,0
+1973,Other or not determined,1
+1974,Other or not determined,0
+1975,Other or not determined,0
+1976,Other or not determined,0
+1977,Other or not determined,1
+1978,Other or not determined,0
+1979,Other or not determined,0
+1980,Other or not determined,0
+1981,Other or not determined,0
+1982,Other or not determined,1
+1983,Other or not determined,2
+1984,Other or not determined,0
+1985,Other or not determined,3
+1986,Other or not determined,2
+1987,Other or not determined,1
+1988,Other or not determined,1
+1989,Other or not determined,1
+1990,Other or not determined,3
+1991,Other or not determined,0
+1992,Other or not determined,2
+1993,Other or not determined,0
+1994,Other or not determined,0
+1995,Other or not determined,2
+1996,Other or not determined,1
+1997,Other or not determined,2
+1998,Other or not determined,2
+1999,Other or not determined,1
+2000,Other or not determined,1
+2001,Other or not determined,3
+2002,Other or not determined,3
+2003,Other or not determined,0
+2004,Other or not determined,0
+2005,Other or not determined,1
+2006,Other or not determined,1
+2007,Other or not determined,2
+2008,Other or not determined,3
+2009,Other or not determined,4
+2010,Other or not determined,3
+2011,Other or not determined,6
+2012,Other or not determined,6
+2013,Other or not determined,6
+2014,Other or not determined,6
+2015,Other or not determined,4
+2016,Other or not determined,3
+2017,Other or not determined,3
+2018,Other or not determined,3
+2019,Other or not determined,3
+2020,Other or not determined,4
+2021,Other or not determined,8
+2022,Other or not determined,2
+2023,Other or not determined,5
+2024,Other or not determined,11
+2025,Other or not determined,7
+2026,Other or not determined,4
+1904,Text only: acknowledgments,0
+1905,Text only: acknowledgments,0
+1906,Text only: acknowledgments,0
+1907,Text only: acknowledgments,0
+1908,Text only: acknowledgments,0
+1909,Text only: acknowledgments,0
+1910,Text only: acknowledgments,0
+1911,Text only: acknowledgments,0
+1912,Text only: acknowledgments,0
+1913,Text only: acknowledgments,0
+1914,Text only: acknowledgments,0
+1915,Text only: acknowledgments,1
+1916,Text only: acknowledgments,1
+1917,Text only: acknowledgments,0
+1918,Text only: acknowledgments,0
+1919,Text only: acknowledgments,1
+1920,Text only: acknowledgments,0
+1921,Text only: acknowledgments,0
+1922,Text only: acknowledgments,0
+1923,Text only: acknowledgments,0
+1924,Text only: acknowledgments,0
+1925,Text only: acknowledgments,0
+1926,Text only: acknowledgments,1
+1927,Text only: acknowledgments,0
+1928,Text only: acknowledgments,1
+1929,Text only: acknowledgments,0
+1930,Text only: acknowledgments,0
+1931,Text only: acknowledgments,0
+1932,Text only: acknowledgments,0
+1933,Text only: acknowledgments,0
+1934,Text only: acknowledgments,0
+1935,Text only: acknowledgments,0
+1936,Text only: acknowledgments,0
+1937,Text only: acknowledgments,0
+1938,Text only: acknowledgments,0
+1939,Text only: acknowledgments,0
+1940,Text only: acknowledgments,0
+1941,Text only: acknowledgments,0
+1942,Text only: acknowledgments,0
+1943,Text only: acknowledgments,0
+1944,Text only: acknowledgments,0
+1945,Text only: acknowledgments,0
+1946,Text only: acknowledgments,0
+1947,Text only: acknowledgments,0
+1948,Text only: acknowledgments,1
+1949,Text only: acknowledgments,0
+1950,Text only: acknowledgments,0
+1951,Text only: acknowledgments,0
+1952,Text only: acknowledgments,0
+1953,Text only: acknowledgments,0
+1954,Text only: acknowledgments,0
+1955,Text only: acknowledgments,1
+1956,Text only: acknowledgments,0
+1957,Text only: acknowledgments,0
+1958,Text only: acknowledgments,0
+1959,Text only: acknowledgments,0
+1960,Text only: acknowledgments,2
+1961,Text only: acknowledgments,1
+1962,Text only: acknowledgments,1
+1963,Text only: acknowledgments,1
+1964,Text only: acknowledgments,1
+1965,Text only: acknowledgments,1
+1966,Text only: acknowledgments,1
+1967,Text only: acknowledgments,0
+1968,Text only: acknowledgments,2
+1969,Text only: acknowledgments,2
+1970,Text only: acknowledgments,2
+1971,Text only: acknowledgments,3
+1972,Text only: acknowledgments,1
+1973,Text only: acknowledgments,6
+1974,Text only: acknowledgments,1
+1975,Text only: acknowledgments,4
+1976,Text only: acknowledgments,1
+1977,Text only: acknowledgments,4
+1978,Text only: acknowledgments,1
+1979,Text only: acknowledgments,0
+1980,Text only: acknowledgments,4
+1981,Text only: acknowledgments,3
+1982,Text only: acknowledgments,1
+1983,Text only: acknowledgments,7
+1984,Text only: acknowledgments,5
+1985,Text only: acknowledgments,7
+1986,Text only: acknowledgments,7
+1987,Text only: acknowledgments,5
+1988,Text only: acknowledgments,8
+1989,Text only: acknowledgments,1
+1990,Text only: acknowledgments,1
+1991,Text only: acknowledgments,2
+1992,Text only: acknowledgments,1
+1993,Text only: acknowledgments,4
+1994,Text only: acknowledgments,6
+1995,Text only: acknowledgments,4
+1996,Text only: acknowledgments,6
+1997,Text only: acknowledgments,8
+1998,Text only: acknowledgments,6
+1999,Text only: acknowledgments,3
+2000,Text only: acknowledgments,7
+2001,Text only: acknowledgments,7
+2002,Text only: acknowledgments,4
+2003,Text only: acknowledgments,10
+2004,Text only: acknowledgments,8
+2005,Text only: acknowledgments,5
+2006,Text only: acknowledgments,3
+2007,Text only: acknowledgments,8
+2008,Text only: acknowledgments,28
+2009,Text only: acknowledgments,25
+2010,Text only: acknowledgments,28
+2011,Text only: acknowledgments,32
+2012,Text only: acknowledgments,33
+2013,Text only: acknowledgments,22
+2014,Text only: acknowledgments,37
+2015,Text only: acknowledgments,25
+2016,Text only: acknowledgments,30
+2017,Text only: acknowledgments,22
+2018,Text only: acknowledgments,23
+2019,Text only: acknowledgments,30
+2020,Text only: acknowledgments,23
+2021,Text only: acknowledgments,38
+2022,Text only: acknowledgments,28
+2023,Text only: acknowledgments,19
+2024,Text only: acknowledgments,18
+2025,Text only: acknowledgments,22
+2026,Text only: acknowledgments,25
+1904,Text only: methods and elsewhere,0
+1905,Text only: methods and elsewhere,0
+1906,Text only: methods and elsewhere,0
+1907,Text only: methods and elsewhere,0
+1908,Text only: methods and elsewhere,0
+1909,Text only: methods and elsewhere,2
+1910,Text only: methods and elsewhere,0
+1911,Text only: methods and elsewhere,1
+1912,Text only: methods and elsewhere,1
+1913,Text only: methods and elsewhere,2
+1914,Text only: methods and elsewhere,1
+1915,Text only: methods and elsewhere,9
+1916,Text only: methods and elsewhere,10
+1917,Text only: methods and elsewhere,5
+1918,Text only: methods and elsewhere,10
+1919,Text only: methods and elsewhere,6
+1920,Text only: methods and elsewhere,5
+1921,Text only: methods and elsewhere,9
+1922,Text only: methods and elsewhere,3
+1923,Text only: methods and elsewhere,2
+1924,Text only: methods and elsewhere,2
+1925,Text only: methods and elsewhere,9
+1926,Text only: methods and elsewhere,1
+1927,Text only: methods and elsewhere,7
+1928,Text only: methods and elsewhere,13
+1929,Text only: methods and elsewhere,3
+1930,Text only: methods and elsewhere,2
+1931,Text only: methods and elsewhere,0
+1932,Text only: methods and elsewhere,2
+1933,Text only: methods and elsewhere,0
+1934,Text only: methods and elsewhere,0
+1935,Text only: methods and elsewhere,0
+1936,Text only: methods and elsewhere,1
+1937,Text only: methods and elsewhere,0
+1938,Text only: methods and elsewhere,0
+1939,Text only: methods and elsewhere,0
+1940,Text only: methods and elsewhere,1
+1941,Text only: methods and elsewhere,2
+1942,Text only: methods and elsewhere,1
+1943,Text only: methods and elsewhere,0
+1944,Text only: methods and elsewhere,2
+1945,Text only: methods and elsewhere,0
+1946,Text only: methods and elsewhere,1
+1947,Text only: methods and elsewhere,0
+1948,Text only: methods and elsewhere,2
+1949,Text only: methods and elsewhere,1
+1950,Text only: methods and elsewhere,3
+1951,Text only: methods and elsewhere,0
+1952,Text only: methods and elsewhere,1
+1953,Text only: methods and elsewhere,1
+1954,Text only: methods and elsewhere,3
+1955,Text only: methods and elsewhere,0
+1956,Text only: methods and elsewhere,0
+1957,Text only: methods and elsewhere,2
+1958,Text only: methods and elsewhere,5
+1959,Text only: methods and elsewhere,0
+1960,Text only: methods and elsewhere,5
+1961,Text only: methods and elsewhere,8
+1962,Text only: methods and elsewhere,3
+1963,Text only: methods and elsewhere,3
+1964,Text only: methods and elsewhere,2
+1965,Text only: methods and elsewhere,5
+1966,Text only: methods and elsewhere,2
+1967,Text only: methods and elsewhere,7
+1968,Text only: methods and elsewhere,6
+1969,Text only: methods and elsewhere,6
+1970,Text only: methods and elsewhere,7
+1971,Text only: methods and elsewhere,6
+1972,Text only: methods and elsewhere,4
+1973,Text only: methods and elsewhere,4
+1974,Text only: methods and elsewhere,5
+1975,Text only: methods and elsewhere,9
+1976,Text only: methods and elsewhere,7
+1977,Text only: methods and elsewhere,4
+1978,Text only: methods and elsewhere,8
+1979,Text only: methods and elsewhere,3
+1980,Text only: methods and elsewhere,8
+1981,Text only: methods and elsewhere,4
+1982,Text only: methods and elsewhere,10
+1983,Text only: methods and elsewhere,3
+1984,Text only: methods and elsewhere,8
+1985,Text only: methods and elsewhere,10
+1986,Text only: methods and elsewhere,7
+1987,Text only: methods and elsewhere,12
+1988,Text only: methods and elsewhere,6
+1989,Text only: methods and elsewhere,14
+1990,Text only: methods and elsewhere,8
+1991,Text only: methods and elsewhere,8
+1992,Text only: methods and elsewhere,6
+1993,Text only: methods and elsewhere,13
+1994,Text only: methods and elsewhere,7
+1995,Text only: methods and elsewhere,9
+1996,Text only: methods and elsewhere,9
+1997,Text only: methods and elsewhere,7
+1998,Text only: methods and elsewhere,12
+1999,Text only: methods and elsewhere,3
+2000,Text only: methods and elsewhere,9
+2001,Text only: methods and elsewhere,10
+2002,Text only: methods and elsewhere,9
+2003,Text only: methods and elsewhere,8
+2004,Text only: methods and elsewhere,15
+2005,Text only: methods and elsewhere,10
+2006,Text only: methods and elsewhere,8
+2007,Text only: methods and elsewhere,6
+2008,Text only: methods and elsewhere,18
+2009,Text only: methods and elsewhere,19
+2010,Text only: methods and elsewhere,10
+2011,Text only: methods and elsewhere,31
+2012,Text only: methods and elsewhere,27
+2013,Text only: methods and elsewhere,21
+2014,Text only: methods and elsewhere,32
+2015,Text only: methods and elsewhere,21
+2016,Text only: methods and elsewhere,20
+2017,Text only: methods and elsewhere,18
+2018,Text only: methods and elsewhere,21
+2019,Text only: methods and elsewhere,36
+2020,Text only: methods and elsewhere,33
+2021,Text only: methods and elsewhere,36
+2022,Text only: methods and elsewhere,34
+2023,Text only: methods and elsewhere,33
+2024,Text only: methods and elsewhere,37
+2025,Text only: methods and elsewhere,28
+2026,Text only: methods and elsewhere,34

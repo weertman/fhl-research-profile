@@ -1,0 +1,52 @@
+# Data
+
+The data behind https://weertman.github.io/fhl-research-profile/, by Claude Opus 5.5, Willem Lee Weertman and Marjorie Wonham. CSV files have a header row; values are as the page reads them.
+
+The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bibliographic databases, repositories, archives and FHL's own lists, with written rules deciding the clear cases, AI agents judging the ambiguous ones against a written guide (`docs/screening_guide.md`), and separate AI agents auditing a random sample against the publications themselves; the page's technical methods section gives the details, the prompts and the measured error rates. Records found only through the University of Washington's Web of Science subscription are included as bibliographic facts.
+
+- `census_all_candidates.csv`: the full census, 15,962 candidate records with the decision on each (status, evidence tier, where FHL appears, the evidence snippet, the basis and reason for the decision, confidence and notes). Phone numbers, email addresses, and private street and mailing addresses quoted in evidence snippets and reasons are removed (institutional addresses such as FHL's own are kept); a few directory and member-list snippets are replaced whole.
+- `FHL_publications_census.xlsx`: the census workbook, 14 sheets (README, Publications, News media, Mention only, Unverified, Excluded, Archive mentions, By year, By category, Topics by decade, Audit, Coverage, Sources, Columns), with contact details removed in the same way. The `Columns` sheet defines every column and the `Sources` sheet lists the sources searched.
+
+- `agent_stages.csv`: Each stage of each AI run: its agents, what they were given, what they did and what they handed on.
+- `agents.csv`: One row per AI agent of the runs: run, stage, role, status, start, minutes and tool calls by kind (no ids or text).
+- `ai_workflows.csv`: The AI runs that built the census, with their family, shape, prompt, the session's effort setting and the effort the agents logged, and logged times.
+- `art_images.csv`: Photographs, published by FHL, of artists at work in its Macfarlane Art Studio, used with FHL's permission and not openly licensed: artist, year, caption, alt text, credit and license. The finished works are not reproduced.
+- `artist_programs.csv`: The station's artist-in-residence programs, with years and sources.
+- `artists.csv`: Artists and writers in residence, with years, program, medium and sources.
+- `audit_by_stratum.csv`: The independent audit by how each record was decided: the stratum's size when the sample was drawn, the records audited, how many had a verdict on the FHL connection, and the share that agreed with the census (95% interval).
+- `audit_tiers.csv`: The independent audit, by evidence tier.
+- `by_appears.csv`: Publications by where FHL appears.
+- `by_era.csv`: Publications under each of the station's names.
+- `by_type.csv`: Publications by type.
+- `by_year.csv`: Publications per year.
+- `by_year_appears.csv`: Publications per year by where FHL appears.
+- `candidate_status.csv`: What happened to every candidate record.
+- `census_steps.csv`: The steps of the publication census, the runs (or run stages) and who did each, and the records each handled.
+- `classes.csv`: Classes taught at the station by year and term, with instructors, TAs and sources (public records, fact-checked).
+- `coauthor_places.csv`: Institutions whose researchers co-authored verified FHL publications, with locations and counts by decade (OpenAlex).
+- `course_topics.csv`: Course titles by decade and topic (AI classification of the course list).
+- `eras.csv`: The station's names and their years.
+- `headline.csv`: Headline totals: publications by evidence tier, citations, yearly averages for 2016–2025, screening outcomes, search recall against FHL's lists, the audited precision of all included records taken together (audit_precision; each tier's precision is in audit_tiers.csv), the read rates the page uses for its best estimate, and the date the data were retrieved.
+- `history_eras.csv`: Chronicle of the station: the eras under the station's successive names.
+- `history_events.csv`: Chronicle of the station: dated, sourced events from 1903 to 2026.
+- `history_images.csv`: Chronicle of the station: the images shown, with captions, credits, licenses and sources. Most are public domain or openly licensed; those from FHL's own archives are used with FHL's permission and are not free to reuse (see the license column).
+- `lineage.csv`: Teacher-student links: lab rosters and CVs, graduate committees, advisors named in the fact-checked profiles, UW theses, Wikidata, and mentors inferred from co-authorship (confirmed or not), with the source of each.
+- `lineage_people.csv`: Everyone in the mentoring network, with the year their career began and how it was estimated.
+- `methods_checks.csv`: Rounds of checking agents' work: items made, re-opened, confirmed, corrected (changed to the checker's verdict), dropped and unsettled.
+- `methods_facts.csv`: Counts quoted in the technical methods.
+- `network_split.csv`: Publications naming FHL per year, split into those with an FHL scientist among the authors and those by others, beside the FHL scientists' total output (OpenAlex counts). Columns ending in _research count research papers only (journal articles, reviews and letters; for the FHL scientists' total, OpenAlex's article, review and letter types), as on the page.
+- `news_by_year.csv`: News items per year.
+- `organisms_by_decade.csv`: Organism groups by decade (AI classification).
+- `people.csv`: FHL scientists (at least three FHL-address publications, or a documented role at the station in its early decades), where they came from and where they went (OpenAlex), their publications by kind, and death years from public sources.
+- `people_links.csv`: Citations among the 60 most prolific FHL scientists.
+- `places.csv`: Institutions FHL scientists came from and went to, with locations.
+- `profiles.csv`: A two-paragraph, fact-checked account of each FHL scientist identified by address and of 56 other people, most of them teachers in the mentoring network.
+- `prompts.csv`: The prompts typed from 13 to 28 October 2026 that built the census and the page (messages about signing in, saving files and progress summarized in one row), with when each was typed and the output tokens it led to.
+- `publications.csv`: The census: one row per publication (record id, evidence tier, year, authors, title, venue, type, where FHL appears, citations, DOI, research topic, organism group, why the record was counted and the passage that names FHL, with contact details removed).
+- `recall_by_decade.csv`: How many of FHL's own listed papers the database searches found, by decade.
+- `staff.csv`: Directors and staff through time: roles, categories, years and sources (public records, fact-checked).
+- `top_cited.csv`: The most cited publications.
+- `top_venues.csv`: The commonest journals and venues.
+- `topics_by_decade.csv`: Research topics by decade (AI classification).
+- `whiteley_by_field.csv`: Whiteley Center publications by field.
+- `world_land.json`: World land outline for the map (Natural Earth, public domain), as GeoJSON features.

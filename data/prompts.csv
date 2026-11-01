@@ -1,0 +1,151 @@
+n,kind,typed_utc,typed_local,messages,text,tokens_claude,tokens_agents,agents,tokens_total
+1,typed,2026-10-13T22:34:56.874Z,2026-10-13 15:34,1,"i have been given this task. Id like you to break the problem down into technical steps.
+
+
+* Create an FHL research profile info sheet. Target audiences: RIMB class, FHL website, FHL community
+   * Compile a spreadsheet of FHL research publications since the lab opened (including when it was called Puget Sound Biological Station and Puget Sound Marine Station). Reality-check it for false positives. 
+   * Ideal data columns:
+      * Author names
+      * Publication year
+      * Publication title
+      * Publication type: peer-reviewed journal article, book chapter, book, report, editorial, letter, public dataset, news media…any other?
+      * Friday Harbor Laboratories (or PSBS or PSMS) appears in which sections of the publication: author affiliation, main text, or both
+      * Number of citations of each publication 
+      * Anything else that seems important?
+   * Graphically summarize patterns of # publications and # citations over time, by publication type, by FHL affiliation vs. main text + anything else that seems interesting",20030,0,0,20030
+2,typed,2026-10-13T22:37:29.543Z,2026-10-13 15:37,1,do all steps,158476,999114,9,1157590
+3,summary,2026-10-14T00:21:16.393Z,2026-10-13 17:21–18:32,13,"Short messages while the census was being built: a progress check, signing in to the UW Libraries, Web of Science and Scopus (the Scopus sign-in failed), saving the exported files, and whether more help was needed that night.",462737,5233266,76,5696003
+4,typed,2026-10-14T16:59:08.246Z,2026-10-14 09:59,1,whats the best next step?,3173,0,0,3173
+5,typed,2026-10-14T17:00:46.231Z,2026-10-14 10:00,1,id like to have a style for the artifact that reflects the style of old school black and white type. what youd see in an old marine station report,84817,0,0,84817
+6,typed,2026-10-14T17:16:06.490Z,2026-10-14 10:16,1,i see no plots,26622,0,0,26622
+7,typed,2026-10-14T17:54:12.407Z,2026-10-14 10:54,1,is it a standalone html i could send? id like users to be able to export the plots at images,23049,0,0,23049
+8,typed,2026-10-14T17:57:40.353Z,2026-10-14 10:57,1,"it needs a technical methods section with details for how the report was created. this should include a bit on the use of ai (the platform, the effort level, the prompts given)",48224,0,0,48224
+9,typed,2026-10-14T18:08:07.097Z,2026-10-14 11:08,1,id like a figure which is research content over time. basically what the publications etc coming out of FHL were about content wise. i think this would be really interesting and AI would do a good job of classifying this.,150168,1387063,17,1537231
+10,typed,2026-10-14T18:51:11.856Z,2026-10-14 11:51,1,delete duplicates and false records. whitely center should be labeled as whitely center + sub topics,85116,0,0,85116
+11,typed,2026-10-14T19:05:49.476Z,2026-10-14 12:05,1,"What the research was about... I like the ratios. but i think the ratios could just be a stacked plot, not lots of smaller ones. and then the smaller ones could be raw publication counts.",13328,0,0,13328
+12,typed,2026-10-14T19:07:46.805Z,2026-10-14 12:07,1,"I'd like to add a pedagogical tree of the scientists working at fhl. where they came from. how they are connected through citation and institution. where they went in the world. a map, a tree, and a diagram of your choosing.",166834,0,0,166834
+13,typed,2026-10-14T21:25:41.593Z,2026-10-14 14:25,1,i dont see the new figs in the report just blank spaces,49617,0,0,49617
+14,typed,2026-10-14T21:59:54.028Z,2026-10-14 14:59,1,you didnt find me 😞 willem weertman,11241,0,0,11241
+15,typed,2026-10-14T22:02:00.547Z,2026-10-14 15:02,1,"looks like you also missed some folks connected to drew harvell. eg., olivia graham. I think a lot of these connections could be expanded dramatically. I understand this is tough. because it involves hunting through co-authorships.",71507,40054,1,111561
+16,typed,2026-10-14T22:16:14.802Z,2026-10-14 15:16,1,do it,0,0,0,0
+17,typed,2026-10-14T22:16:38.082Z,2026-10-14 15:16,1,wait for the check then do it,14785,0,0,14785
+18,typed,2026-10-14T23:04:45.844Z,2026-10-14 16:04,1,do it. check the inferred links.,5826,0,0,5826
+19,typed,2026-10-14T23:05:55.900Z,2026-10-14 16:05,1,i think you pedagogy is missing jason hodin and the fhl star lab team,8907,0,0,8907
+20,typed,2026-10-14T23:07:35.229Z,2026-10-14 16:07,1,the pedagogy trees. i think they are connected in many cases. there must be a better way of doing this. maybe a series of trees is the wrong way of doing it. its more of a network. we have the network diagram... hmm this is tough. thoughts?,15365,859110,75,874475
+21,typed,2026-10-14T23:23:56.720Z,2026-10-14 16:23,1,a timeline network makes sense,35498,0,0,35498
+22,typed,2026-10-14T23:31:19.743Z,2026-10-14 16:31,1,id like to see it,1371,0,0,1371
+23,typed,2026-10-14T23:31:59.218Z,2026-10-14 16:31,1,"okay, add to the main document.",6745,0,0,6745
+24,typed,2026-10-14T23:33:53.695Z,2026-10-14 16:33,1,the search a person needs to offer suggestions for selection. also it shouldnt be case sensitive,8883,0,0,8883
+25,typed,2026-10-14T23:35:37.049Z,2026-10-14 16:35,1,I want to make this a public github page I can share. Id like it to underwrite a public html I can share based on githubs ability to share public webpages with data backing. I forget how those work specifically,5492,0,0,5492
+26,typed,2026-10-14T23:36:38.239Z,2026-10-14 16:36,1,Authorship for this document needs to be Claude Opus 5.5 and Willem Lee Weertman,8239,0,0,8239
+27,typed,2026-10-14T23:37:43.243Z,2026-10-14 16:37,1,the timeline network has a bunch of extra space in it that you could be labeling folks names. pop out prominent people,5832,0,0,5832
+28,typed,2026-10-14T23:38:48.477Z,2026-10-14 16:38,1,searching a person should highlight them in the network diagrams. (fig8 and fig9) also. each person should have a custom written (presearch) blurb (~2 paragraphs) about them that describes their work.,12460,2654553,60,2667013
+29,typed,2026-10-14T23:40:51.268Z,2026-10-14 16:40,1,how is Jason Hodin not in the network? he is a classic fhler,3711,0,0,3711
+30,typed,2026-10-14T23:41:53.307Z,2026-10-14 16:41,1,"I'm also surprised by how few people in the network are connected (in the timeline) to megan dethier, the current director of the labs.",0,0,0,0
+31,typed,2026-10-14T23:42:15.988Z,2026-10-14 16:42,1,https://staff.washington.edu/hodin/,28077,0,0,28077
+32,typed,2026-10-14T23:54:24.710Z,2026-10-14 16:54,1,thats totally fine. i think putting up the full records is fair and honest. this is the result of a claude search. we are very transparent about that,9254,0,0,9254
+33,typed,2026-10-14T23:57:30.937Z,2026-10-14 16:57,1,prompts as typed needs to be updated. when you finish this current round of workflows update the github,2370,0,0,2370
+34,typed,2026-10-14T23:58:10.134Z,2026-10-14 16:58,1,i think we need a better opening paragraph,5999,0,0,5999
+35,typed,2026-10-15T00:04:04.355Z,2026-10-14 17:04,1,looks great. make it live,1449,0,0,1449
+36,typed,2026-10-15T00:04:55.652Z,2026-10-14 17:04,1,the summary of results at the top feels out of place. it should be at the end. the top needs to have a table of contents.,3562,0,0,3562
+37,typed,2026-10-15T00:05:30.973Z,2026-10-14 17:05,1,why the scientist summaries finish push them to live,2841,0,0,2841
+38,typed,2026-10-15T00:06:23.955Z,2026-10-14 17:06,1,fig 9. when i click on a research id like it to have the connections stick for a bit so i can take an image of the figure.,5031,0,0,5031
+39,typed,2026-10-15T00:07:22.178Z,2026-10-14 17:07,1,"this bit ""Including work issued under the station's earlier names: the Puget Sound Marine Station, the Puget Sound Biological Station, and the University of Washington Oceanographic Laboratories."" at the top seems out of place. I think the title could use a little work.",20917,0,0,20917
+40,typed,2026-10-15T00:39:19.648Z,2026-10-14 17:39,1,yes im happy,3488,0,0,3488
+41,typed,2026-10-15T00:42:20.234Z,2026-10-14 17:42,1,id like to be able to filter the researcher timeline plot for the different parts of the key by clicking on those parts of the key. it should highlight the selection. it should only work if a reseracher isnt searched,12186,0,0,12186
+42,typed,2026-10-15T01:06:11.672Z,2026-10-14 18:06,1,"when you finish don't forget to update the prompts as typed. id like those to have datetimes for when they were typed and if possible, the number of tokens the prompts caused to be generated.",20984,0,0,20984
+43,typed,2026-10-15T01:09:57.436Z,2026-10-14 18:09,1,when i highlight components of keys in the figures. eg. fig2. id like them to highlight their corresponding part of their figure,42599,940185,62,982784
+44,typed,2026-10-15T15:48:26.941Z,2026-10-15 08:48,1,update the prompts and complete the rosters,14348,1166794,62,1181142
+45,typed,2026-10-15T18:59:42.601Z,2026-10-15 11:59,1,status?,2234,0,0,2234
+46,typed,2026-10-15T20:47:27.566Z,2026-10-15 13:47,1,great. please continue,184,0,0,184
+47,typed,2026-10-15T20:49:01.772Z,2026-10-15 13:49,1,"i have an idea to add a section towards the bottom, a visual history of the laboratory pulling from historic images and news stories scraped from the internet. please redescribe in technicals terms",2205,0,0,2205
+48,typed,2026-10-15T20:51:51.571Z,2026-10-15 13:51,1,do it,31213,0,0,31213
+49,typed,2026-10-15T21:31:24.903Z,2026-10-15 14:31,1,how is the visual story going?,36284,1079607,20,1115891
+50,typed,2026-10-15T23:10:55.559Z,2026-10-15 16:10,1,push it,19263,0,0,19263
+51,typed,2026-10-15T23:41:56.585Z,2026-10-15 16:41,1,its amazing! looks like it could use more images,63059,1651167,44,1714226
+52,typed,2026-10-15T23:59:12.265Z,2026-10-15 16:59,1,push when its done,153,0,0,153
+53,typed,2026-10-16T00:00:28.974Z,2026-10-15 17:00,1,"id like to make the visualizations format better on mobile. currently. it works amazingly on my computer. but on mobile its bunched. i want the same behavior on desktop, but better behavior on mobile",45834,210221,6,256055
+54,typed,2026-10-16T00:16:16.893Z,2026-10-15 17:16,1,"i think this ""A visual history of the station"" needs to be a different title. decide and update it",81350,0,0,81350
+55,typed,2026-10-16T03:05:22.130Z,2026-10-15 20:05,1,Id like you to add an ode to marine life at the very bottom of the report in your own words.,12009,15306,1,27315
+56,typed,2026-10-16T03:08:29.012Z,2026-10-15 20:08,1,i think this is far to long. i was imagining something shorter.,4227,0,0,4227
+57,typed,2026-10-16T03:10:51.723Z,2026-10-15 20:10,1,okay quote yourself at the end of it and push it.,3671,0,0,3671
+58,typed,2026-10-28T16:04:00.164Z,2026-10-28 09:04,1,"Mar and I, Ma is who we are making this project for, sat down and went over things we'd like different in this report. here is a the list. please redescribe in technical detail
+
+
+Claude Wishlist
+Inbox
+Summarize this email
+
+Marjorie Wonham
+Tue, Oct 27, 10:28 AM (22 hours ago)
+to Willem
+
+Claude wishlist
+
+Specify how/why each person is connected
+NETWORK produces 137 papers/y (not at FHL necessarily)
+Push it to double check all the unverified ones from FHL sources
+Define verified, listed (not verified), probable; push it on all of these
+Graph would be more informative if: authorship + text/acknowledgements
+Separate tab for history
+Rescale topic panels to 250? Also orgnaissms
+Add Artists in Residence
+Staff through time
+Co-authors map – highlight global network
+Explicit define “FHL scientist”
+Feedback/input button
+Teachers and students: the mentoring network -> Researchers and their students and techs?
+Build a record of FHL classes!! Faculty, TAs, students. Student indexed reports from FHL library
+Table 1 what is first and last
+Consider status column. Some people are still at FHL. 
+Combine Still At/Went To
+Add deceased
+Add papers/chapters/books/dissertations/datasets
+IV: pool all FHL affiliations; the main text only, main text affiliation unknown (what means?), not determined; move these figures up. Push it on affiliations: in older papers they’re often at the end of the paper. 
+Add reasoning for filtering: probable means what and why?
+Is there a way to add manual confirmations? (e.g., could task students with a few every quarter…)
+Libbie Hyman?
+Pass to the future/second pass using archives to check for missing people
+Worth adding a shout out to Claudia’s page more prominently
+Link to territorial lands/waters acknowledgement and statement of location in Coast Salish territories up front
+ 
+
+
+[signature removed]",24383,0,0,24383
+59,typed,2026-10-28T16:20:02.257Z,2026-10-28 09:20,1,"A few comments. if not mentioned otherwise i approve the plan.
+
+1. i think its important to split. papers from the fhl scientists directly and the network. this is useful information and easy to confuse. a little simple graphic at the top could help. 
+2. Land acknowledgement. UW has official wordage on this. I think it would probably be best at the top of the visual historical archive.
+3. for the w7 fig rescales. scale to the tallest bars not 250. 
+4. for text not readable, make it clear that it was because you hit a pay or wall or something like that in the methods.
+5. Libbie, ... hmmm... yes... maybe we need to loosen the fhl scientist rule a bit for historical fhlers who helped make the institute but were non-typical to modern standards.
+6. feedback button should be at the top. i think use the github to store the feedback.
+7. i think the methods section could use so graphcs to help with interpretability. 
+8. for the historical visual archive, it should be collapsable. also some of the more minor plots. eg., counts of pubs. those should be collapse able.",154360,8122037,134,8276397
+60,typed,2026-10-28T16:56:11.022Z,2026-10-28 09:56,1,push it when its done,4462,0,0,4462
+61,typed,2026-10-28T18:49:02.812Z,2026-10-28 11:49,1,had to close my laptop for a sec. please check stuff is continuing,155211,1107588,11,1262799
+62,typed,2026-10-28T22:41:22.710Z,2026-10-28 15:41,1,status?,962,0,0,962
+63,typed,2026-10-28T22:42:29.004Z,2026-10-28 15:42,1,is the public github updated?,528,0,0,528
+64,typed,2026-10-28T22:43:22.466Z,2026-10-28 15:43,1,is there a way for the suggestion to be sent that doesnt require a github account? that is a big point of friction for older users,1080,0,0,1080
+65,typed,2026-10-28T22:44:25.356Z,2026-10-28 15:44,1,i want it to be such that users don't leave the page,1469,0,0,1469
+66,typed,2026-10-28T22:45:26.738Z,2026-10-28 15:45,1,okay google sheet,18322,0,0,18322
+67,typed,2026-10-28T22:49:21.240Z,2026-10-28 15:49,1,what happened to all the images in the visual history?,912,0,0,912
+68,typed,2026-10-28T22:49:47.521Z,2026-10-28 15:49,1,oh i see. i have to click that little button. that visual chronicle needs to be more prominent,2950,0,0,2950
+69,typed,2026-10-28T22:50:29.243Z,2026-10-28 15:50,1,a lot of the images seem to not work anymore,900,0,0,900
+70,typed,2026-10-28T22:50:53.622Z,2026-10-28 15:50,1,or atleast they take awhile to load,3714,0,0,3714
+71,typed,2026-10-28T22:51:51.046Z,2026-10-28 15:51,1,"Fig. 1.—Publications per year, by how directly the FHL connection was confirmed.
+
+needs to have scientific reports seperated somehow. i like the single panel figure.",5943,0,0,5943
+72,typed,2026-10-28T22:52:53.341Z,2026-10-28 15:52,1,the world time selection should be a slider,3886,0,0,3886
+73,typed,2026-10-28T22:53:54.009Z,2026-10-28 15:53,1,not all technicians and staff have a connection to an fhl scientist. somehow our graph needs to reflect this.,4514,0,0,4514
+74,typed,2026-10-28T22:56:57.155Z,2026-10-28 15:56,1,"these figs should be collapsable with default being collapsed. 
+
+fig 2, fig 3, fig 6, fig 13, fig 18, fig 19, tab 3, get rid of fig 25, the methods need more diagrams around how the agents searched",6101,97791,5,103892
+75,typed,2026-10-28T22:58:10.010Z,2026-10-28 15:58,1,"i think. we need atleast 1 or 2 images for every year in the chronicle. for later years where this is harder, ive talk to the fhl staff, its okay if we use images sourced from fhl archives so long as we attribute them.",7106,0,0,7106
+76,typed,2026-10-28T22:59:26.712Z,2026-10-28 15:59,1,The classes at the station. id like an added figure that shows the topics of the courses over the years. also. when i drag over the classes at the station figure i want to see the counts but also the names of the courses.,9842,0,0,9842
+77,typed,2026-10-28T23:00:25.576Z,2026-10-28 16:00,1,the artists in residence section needs some images of art that was made and a figure of its timeline which helps the reader understand amount and kind of art being made,0,0,0,0
+78,typed,2026-10-28T23:00:51.845Z,2026-10-28 16:00,1,the very first who is an fhl scientist key. i think it could be more clear. like a flow chart or something. i like the numbers,41479,693022,41,734501
+79,typed,2026-10-28T23:08:08.769Z,2026-10-28 16:08,1,"im making this in colab with [link to her profile] marjorie wonham of the uwfhl
+
+she should be a co-author.",12849,0,0,12849
+80,typed,2026-10-28T23:17:00.253Z,2026-10-28 16:17,1,ill need very clear step by step instructions on the google slides,40505,644997,26,685502
