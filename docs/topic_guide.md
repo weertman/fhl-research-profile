@@ -45,11 +45,11 @@ Choose the topic that matches the work's **central question**, not its methods o
 
 | Code | Label | Includes |
 |---|---|---|
-| `taxonomy` | Taxonomy & natural history | Naming, describing, classifying and cataloguing species; faunal and floral surveys and checklists; distribution records; identification keys and guides; descriptive natural history of a species with no experimental question; biodiversity inventories. |
-| `ecology` | Ecology | Distribution and abundance in relation to the environment; populations; communities; species interactions (predation, grazing, competition, facilitation); food webs; behavioural ecology; recruitment and settlement in the field; plankton ecology; habitat use; field experiments. |
+| `taxonomy` | Taxonomy & natural history | Naming, describing, classifying and cataloging species; faunal and floral surveys and checklists; distribution records; identification keys and guides; descriptive natural history of a species with no experimental question; biodiversity inventories. |
+| `ecology` | Ecology | Distribution and abundance in relation to the environment; populations; communities; species interactions (predation, grazing, competition, facilitation); food webs; behavioral ecology; recruitment and settlement in the field; plankton ecology; habitat use; field experiments. |
 | `development` | Development, larvae & reproduction | Embryology; fertilization at the organism level; larval form, feeding and development; metamorphosis; life histories; reproduction and spawning; regeneration; developmental mechanisms; evolution of development (evo-devo). |
-| `cell` | Cell & molecular biology | Cell biology; biochemistry; molecular mechanisms; proteins and enzymes; bioluminescence chemistry and fluorescent proteins; cytoskeleton and cell division; cell signalling; molecular and imaging tools. |
-| `neuro` | Neurobiology & behaviour | Nervous systems; neurophysiology; neural circuits; sensory biology; the mechanisms and control of behaviour (neuroethology). Behaviour studied for its ecological role is `ecology`. |
+| `cell` | Cell & molecular biology | Cell biology; biochemistry; molecular mechanisms; proteins and enzymes; bioluminescence chemistry and fluorescent proteins; cytoskeleton and cell division; cell signaling; molecular and imaging tools. |
+| `neuro` | Neurobiology & behavior | Nervous systems; neurophysiology; neural circuits; sensory biology; the mechanisms and control of behavior (neuroethology). Behavior studied for its ecological role is `ecology`. |
 | `physiology` | Physiology | Organismal and comparative physiology; metabolism; respiration; osmoregulation; thermal biology; endocrinology; nutrition and growth rates; photosynthesis and algal physiology; stress responses. |
 | `biomechanics` | Biomechanics & form | Biomechanics; the fluid dynamics of organisms; locomotion; feeding mechanics; material properties of tissues; functional morphology; anatomy and morphology that is not aimed at classification. |
 | `evolution` | Evolution, genetics & genomics | Evolutionary biology; phylogenetics and relationships among groups; population genetics; speciation and hybridization; adaptation; genomes and transcriptomes; molecular evolution; bioinformatic methods for these. |
@@ -57,7 +57,7 @@ Choose the topic that matches the work's **central question**, not its methods o
 | `global_change` | Climate change & ocean acidification | Work framed around climate change, warming trends, marine heatwaves, ocean acidification or deoxygenation, and their effects on organisms or ecosystems. Use it when a global-change driver is the central question, even if the methods are physiological or ecological; then put that discipline in `topic2`. |
 | `applied` | Fisheries, conservation & human impacts | Fisheries and stock biology; aquaculture; conservation; protected areas; restoration; invasive species; pollution and contaminants (oil, plastics, toxins); harmful algal blooms as a public-health or management problem; coastal management and policy. |
 | `microbes` | Microbes, symbiosis & disease | Microbiology and microbial ecology; symbioses; microbiomes; parasites; pathogens and disease outbreaks (sea star wasting, eelgrass wasting disease); immunology; viruses. |
-| `other` | Other | Education and teaching; the history of the station or of science; announcements, catalogues and directories; meeting reports; editorials and essays with no research subject; methods or instruments with no subject focus; records whose subject cannot be told from the information given. |
+| `other` | Other | Education and teaching; the history of the station or of science; announcements, catalogs and directories; meeting reports; editorials and essays with no research subject; methods or instruments with no subject focus; records whose subject cannot be told from the information given. |
 
 Rules for the topic:
 
@@ -65,7 +65,7 @@ Rules for the topic:
   infer relationships or evolutionary history are `evolution`.
 * **Development or physiology.** Growth rates and physiological performance are `physiology`. Developmental processes
   and stages are `development`.
-* **Behaviour.** How behaviour is generated or controlled is `neuro`. Behaviour as part of ecology (foraging, mating
+* **Behavior.** How behavior is generated or controlled is `neuro`. Behavior as part of ecology (foraging, mating
   systems, territoriality, group dynamics) is `ecology`.
 * **Plankton.** Plankton production as an ecosystem or biogeochemical rate is `oceanography`. Plankton populations,
   grazing and community composition are `ecology`.
@@ -93,7 +93,7 @@ Choose the group the work is **chiefly about**:
 | `microbes` | Bacteria, archaea, viruses & fungi | Prokaryotes, viruses and fungi. |
 | `cnidarians` | Cnidarians, ctenophores & sponges | Jellyfish, hydroids, anemones, corals, siphonophores, comb jellies, sponges. |
 | `worms` | Worms | Annelids (including polychaetes), flatworms, nemerteans, nematodes, sipunculans and other worm-like groups. |
-| `molluscs` | Molluscs | Snails, slugs and nudibranchs (including Aplysia and Tritonia), chitons, bivalves, squid and octopus. |
+| `molluscs` | Mollusks | Snails, slugs and nudibranchs (including Aplysia and Tritonia), chitons, bivalves, squid and octopus. |
 | `arthropods` | Crustaceans & other arthropods | Barnacles, copepods, crabs, shrimps, amphipods, isopods, krill, sea spiders, insects. |
 | `echinoderms` | Echinoderms | Sea urchins, sea stars, sea cucumbers, brittle stars, crinoids. |
 | `other_inverts` | Other invertebrates & tunicates | Bryozoans, brachiopods, phoronids, tunicates and ascidians, hemichordates, lancelets, rotifers, tardigrades and others. |
@@ -127,7 +127,7 @@ Choose the group the work is **chiefly about**:
 | Influential interactions: group dynamics of the maritime earwig, *Anisolabis maritima* | ecology | | arthropods |
 | Catalogue 1910–1911, Announcements 1911–1912 | other | | none |
 
-## Consistency rules (added after the first pass)
+## Consistency rules (applied after the first classification pass)
 
 The classifiers' reports showed three places where the guide left room for different readings. A review of every
 affected record applied these rules; the changes are kept separately in `data/interim/topic_results/harmonize.jsonl`,

@@ -1,0 +1,93 @@
+fact,value,display,unit,dollar_year,scope,source_file,source_url,check_status
+wa_output,9105905,$9.1 million,dollars,2024,"Estimated yearly contribution of FHL activity, 2024 dollars, from public sources",model/build/results.csv,,model
+wa_output_range,8365084–11893741,$8.4–11.9 million,dollars,2024,"10th to 90th percentiles of 10,000 simulations",model/build/results.csv,,model
+wa_jobs,54.4205,54,jobs,,Jobs supported and sustained (full- and part-time; FHL's own counted as annual-average full-time equivalents),model/build/results.csv,,model
+wa_jobs_range,49.9761–62.9092,50–63,jobs,,"10th to 90th percentiles of 10,000 simulations",model/build/results.csv,,model
+wa_ratio,1.805851,1.81,ratio,,Total output per dollar of direct output,model/build/results.csv,,model
+wa_nm_output,2974415,$3.0 million,dollars,2024,The part paid for from outside the region (new money),model/build/results.csv,,model
+wa_nm_jobs,18.6744,19,jobs,,The part paid for from outside the region (new money),model/build/results.csv,,model
+sjc_output,6666406,$6.7 million,dollars,2024,"Estimated yearly contribution of FHL activity, 2024 dollars, from public sources",model/build/results.csv,,model
+sjc_output_range,6010628–8605039,$6.0–8.6 million,dollars,2024,"10th to 90th percentiles of 10,000 simulations",model/build/results.csv,,model
+sjc_jobs,47.901,48,jobs,,Jobs supported and sustained (full- and part-time; FHL's own counted as annual-average full-time equivalents),model/build/results.csv,,model
+sjc_jobs_range,42.8752–54.8653,43–55,jobs,,"10th to 90th percentiles of 10,000 simulations",model/build/results.csv,,model
+sjc_ratio,1.362277,1.36,ratio,,Total output per dollar of direct output,model/build/results.csv,,model
+sjc_nm_output,6335195,$6.3 million,dollars,2024,The part paid for from outside the region (new money),model/build/results.csv,,model
+sjc_nm_jobs,45.6104,46,jobs,,The part paid for from outside the region (new money),model/build/results.csv,,model
+wa_labor_income,4627083,$4.6 million,dollars,2024,"Estimated yearly contribution of FHL activity, 2024 dollars, from public sources",model/build/results.csv,,model
+wa_value_added,5420528,$5.4 million,dollars,2024,"Estimated yearly contribution of FHL activity, 2024 dollars, from public sources",model/build/results.csv,,model
+wa_taxes,358221,$0.36 million,dollars,2024,"Estimated yearly contribution of FHL activity, 2024 dollars, from public sources",model/build/results.csv,,model
+wa_research_output,673642,$0.7 million,dollars,2024,"Output supported by research done at FHL, Washington",model/build/results.csv,,model
+wa_users_output,913494,$0.9 million,dollars,2024,"Output supported by the off-station spending of students and visitors, Washington",model/build/results.csv,,model
+wa_ops_share,0.825703,four-fifths,share,,Operations' share of Washington output,model/build/results.csv,,model
+wa_nm_share,0.326647,a third,share,,New money as a share of the Washington contribution,model/build/results.csv,,model
+constr_spend,2189757,$2.2 million,dollars,2024,Construction spending 2015–2024 (one-time),model/build/inputs.csv,,model
+wa_constr_output,3746031,$3.7 million,dollars,2024,"One-time output of construction 2015–2024, Washington",model/build/results.csv,,model
+wa_constr_jobyears,12.2822,12,job-years,,One job-year is one job for one year,model/build/results.csv,,model
+wa_constr_jobs_per_year,1.2282,1,jobs,,Construction job-years spread over 2015–2024,model/build/results.csv,,model
+nsf_total,14795534,$14.8 million,dollars,nominal,"Awards for FHL facilities, for research and training done at FHL and for meetings held there; as awarded",nsf_fhl_awards/awards.csv; pre_api_grants.csv,https://www.nsf.gov/awardsearch/,verified
+nsf_total_2024,35744936,$35.7 million,dollars,2024,"Awards for FHL facilities, for research and training done at FHL and for meetings held there; as awarded, in 2024 dollars",nsf_fhl_awards/awards.csv; pre_api_grants.csv,https://www.nsf.gov/awardsearch/,verified
+nsf_years,1957–2026,1957–2026,years,,"Awards for FHL facilities, for research and training done at FHL and for meetings held there; as awarded",nsf_fhl_awards/awards.csv; pre_api_grants.csv,https://www.nsf.gov/awardsearch/,verified
+first_award_year,1957,1957,year,,First grant for work at FHL in public records,nsf_fhl_awards/awards.csv; pre_api_grants.csv,https://www.nsf.gov/awardsearch/,verified
+nih_total,12305922,$12.3 million,dollars,nominal,Awards whose NIH record places the work at FHL; as awarded,other_federal/nih_fhl_projects.csv,https://reporter.nih.gov/,verified
+nih_years,1987–2010,1987–2010,years,,Fiscal years of those awards,other_federal/nih_fhl_projects.csv,https://reporter.nih.gov/,verified
+research_per_year,402630–809530,$0.4–0.8 million,dollars,2024,"Grants for work at FHL spread over their award periods, average of UW fiscal 2022–2024",model/research_construction/research_by_uw_fy.csv,,verified
+counted_total,27215639,$27.2 million,dollars,nominal,Counted grants for work at FHL; a floor,econ_money_sources.csv (counted rows),,verified
+matched_papers,3613,"3,613",papers,,Census papers with a DOI matched to OpenAlex; the 1935 OpenAlex artifact excluded,funders_in_census/paper_funders.csv,https://openalex.org/,corrected
+funder_papers,1823,"1,823",papers,,"Papers that name the funder; a count of acknowledgments, not of money; the 1935 OpenAlex artifact excluded",funders_in_census/paper_funders.csv,https://openalex.org/,corrected
+nsf_papers,845,845,papers,,"Papers that name the funder; a count of acknowledgments, not of money; the 1935 OpenAlex artifact excluded",funders_in_census/paper_funders.csv,https://openalex.org/,corrected
+nih_papers,403,403,papers,,"Papers that name the funder; a count of acknowledgments, not of money; the 1935 OpenAlex artifact excluded",funders_in_census/paper_funders.csv,https://openalex.org/,verified
+noaa_papers,146,146,papers,,"Papers that name the funder; a count of acknowledgments, not of money; the 1935 OpenAlex artifact excluded",funders_in_census/paper_funders.csv,https://openalex.org/,verified
+federal_papers,1305,"1,300",papers,,"Papers that name the funder; a count of acknowledgments, not of money (any U.S. federal agency; about); the 1935 OpenAlex artifact excluded",funders_in_census/paper_funders.csv,https://openalex.org/,verified
+assoc_usd,1464246813,$1.46 billion,dollars,nominal,"Funding associated with research at FHL, mostly spent elsewhere; not FHL income; as awarded",award_pricing/totals_subsets.csv,,verified
+assoc_awards,645,645,awards,,"Funding associated with research at FHL, mostly spent elsewhere; not FHL income; as awarded",award_pricing/totals_subsets.csv,,verified
+assoc_states,41,41,states,,States where the awardees of the 645 research-project awards are (plus DC and GU),award_pricing/priced_awards.csv,,corrected
+assoc_other,DC; GU,the District of Columbia and Guam,places,,Places other than states where the awardees of the 645 research-project awards are; 3 awards carry no state (National Human Genome Research Institute; National Institute Of Environmental Health Sciences; University Of Florence),award_pricing/priced_awards.csv,,corrected
+sited_awards_n,11,11,awards,,Research-project awards named by verified papers that are placed at FHL,award_pricing/priced_awards.csv,,corrected
+sited_awards_usd,7678004,$7.7 million,dollars,nominal,Research-project awards named by verified papers that are placed at FHL; as awarded,award_pricing/priced_awards.csv,,corrected
+uw_awards_n,86,86,awards,,Research-project awards named by verified papers that went to the University of Washington,award_pricing/priced_awards.csv,,verified
+uw_awards_usd,93236942,$93.2 million,dollars,nominal,Research-project awards named by verified papers that went to the University of Washington; as awarded,award_pricing/priced_awards.csv,,verified
+named_awards_n,944,944,awards,,All NSF and NIH awards named by census papers that could be priced,award_pricing/totals_subsets.csv,,verified
+sited_all_n,19,19,awards,,"Of all NSF and NIH awards named, those placed at FHL (centers, training and instrument awards included)",award_pricing/totals_subsets.csv,,verified
+sited_all_usd,22030678,$22.0 million,dollars,nominal,"Of all NSF and NIH awards named, those placed at FHL; as awarded",award_pricing/totals_subsets.csv,,verified
+fte,30.583,31,jobs (FTE),,Estimated (no published count),model/build/inputs.csv,,model
+fte_range,21.333–41.333,21–41,jobs (FTE),,Estimated (no published count),model/build/inputs.csv,,model
+headcount,49,49,people,,Estimated (no published count),model/operations/operations_inputs.csv,,model
+obfs_yearround,21,21,people,,As listed (21 or more),people_and_local/fhl_users_and_capacity.csv,https://obfs.org/field-station/friday-harbor-laboratories/,verified
+obfs_seasonal,6-10,6–10,people,,As listed,people_and_local/fhl_users_and_capacity.csv,https://obfs.org/field-station/friday-harbor-laboratories/,verified
+visiting_researchers,100,100,people,,“Each year over 100 researchers visit”,people_and_local/fhl_users_and_capacity.csv,https://www.washington.edu/staterelations/web/friday-harbor-laboratories/,verified
+enroll_2018,140,140,enrollments,,Published statement,uw_classifications/UW_CLASSIFICATIONS.md,https://techfee.uw.edu/proposal/upgrading-technical-support-for-marine-science-research,verified
+enroll_2022,206,206,enrollments,,Published statement,uw_classifications/UW_CLASSIFICATIONS.md,https://techfee.uw.edu/proposal/upgrading-technical-support-for-marine-science-research,verified
+visitor_days,16183,"16,000",person-days,,"Model estimate; students and visitors from outside the county, 2024",model/users/user_inputs.csv,,model
+nsf_lab_1961,350000,"$350,000",dollars,nominal,NSF grant for the main laboratory,nsf_fhl_awards/pre_api_grants.csv,https://digitalcollections.lib.washington.edu/digital/collection/borminutes/id/9978,verified
+lab_budget_1961,427870,"$427,870",dollars,nominal,Budget of the main laboratory (NSF grant plus state money),model/research_construction/capital_projects.csv,https://digitalcollections.lib.washington.edu/digital/collection/borminutes/id/11704,corrected
+legislature_1909,6000,"$6,000",dollars,nominal,State appropriation for buildings,model/research_construction/capital_projects.csv,https://faculty.washington.edu/cemills/FHLTimeline.html,verified
+nsf_facility_n,19,19,awards,,"NSF facility, instrument and housing awards",nsf_fhl_awards/awards.csv,https://www.nsf.gov/awardsearch/,verified
+nsf_facility_years,1977–2022,1977–2022,years,,Years of those awards,nsf_fhl_awards/awards.csv,https://www.nsf.gov/awardsearch/,verified
+nsf_facility_2024,8318806,$8.3 million,dollars,2024,Those awards in 2024 dollars,nsf_fhl_awards/awards.csv,https://www.nsf.gov/awardsearch/,verified
+cedar_rock,781900,"$781,900",dollars,nominal,Assessed value of the 1983 bequest; not cash,institution_finances/finance_items.csv,https://digitalcollections.lib.washington.edu/digital/collection/borminutes/id/22216,corrected
+whiteley_gift,2300000,$2.3 million,dollars,nominal,Stated value of the real estate; not cash,institution_finances/finance_items.csv,https://www.washington.edu/news/2001/09/20/uw-breaks-gifts-and-grants-record-second-year-in-a-row/,verified
+endowment,16000000,$16 million,dollars,nominal,"Endowment, “$16+ million” (2023); a source of funds, already inside operations",institution_finances/finance_items.csv,https://fhl.uw.edu/about/news-and-events/2023/03/21/tide-bite-april-2023/,verified
+endowment_year,2023,2023,year,,Year of the endowment statement,institution_finances/finance_items.csv,https://fhl.uw.edu/about/news-and-events/2023/03/21/tide-bite-april-2023/,verified
+donor_share,0.24,a quarter,share,,"Share of the money FHL spends each year that comes from donors (“almost 25%”, FHL estimate published March 2023)",model/build/inputs.csv,https://web.archive.org/web/20240118033054/https://fhl.uw.edu/about/news-and-events/2023/03/21/tide-bite-april-2023/,corrected
+donor_share_year,2023,2023,year,,Year FHL published the donor-share estimate (March 2023),model/build/inputs.csv,https://web.archive.org/web/20240118033054/https://fhl.uw.edu/about/news-and-events/2023/03/21/tide-bite-april-2023/,corrected
+gfp_pubmed,51568,"51,568",records,,PubMed records under the subject heading Green Fluorescent Proteins (retrieved 2 Nov 2026),innovation_downstream/pubmed_counts.csv,https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&rettype=count&term=%22Green%20Fluorescent%20Proteins%22%5BMeSH%20Terms%5D,verified
+gfp_pubmed_date,2026-11,November 2026,month,,Month the PubMed counts were retrieved,innovation_downstream/pubmed_counts.csv,https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&rettype=count&term=%22Green%20Fluorescent%20Proteins%22%5BMeSH%20Terms%5D,verified
+gfp_pubmed_years_sum,51180,"51,180",records,,"Sum of the yearly counts of Fig. 24 (1962–2025, by Entrez date, one year per record); the total also holds later records",innovation_downstream/pubmed_counts.csv,,verified
+jellyfish_1961,10000,"10,000",jellyfish,,Jellyfish processed at FHL in summer 1961,innovation_downstream/items.json,https://www.nobelprize.org/uploads/2018/06/shimomura_lecture.pdf,verified
+sjc_jobs_2024,6097,"6,097",jobs,,Covered jobs in San Juan County (QCEW),people_and_local/san_juan_county_qcew.csv,https://data.bls.gov/cew/data/api/2024/a/area/53055.csv,verified
+sjc_pay,53170,"$53,170",dollars,2024,Average yearly pay per covered job (QCEW),people_and_local/san_juan_county_qcew.csv,https://data.bls.gov/cew/data/api/2024/a/area/53055.csv,verified
+fhl_job_share,0.004991,0.5%,share,,FHL's own jobs (FTE) against county covered jobs plus FHL; estimate,model/build/results.json (context),,model
+fhl_own_share_total,0.002553,0.3%,share,,"FHL's own jobs (FTE) against total employment in the county including the self-employed (BEA 2022), the denominator of fhl_related_share; estimate",model/build/inputs.csv; model/build/raw/bea/CAEMP25N_WA_2001_2022.csv,,model
+fhl_related_share,0.003999,0.4%,share,,All jobs FHL activity supports in the county against total employment including the self-employed (BEA 2022); estimate,model/build/results.json (context),,model
+fhl_related_one_in,250,250,jobs,,Roughly one job in this many,model/build/results.json,,model
+ops_spend,4100000,$4.1 million,dollars,2024,"Estimated FHL operating spending a year, excluding scholarships",model/build/results.csv,,model
+ops_payroll,2900000,$2.9 million,dollars,2024,Estimated FHL payroll including benefits,model/build/inputs.csv,,model
+n_inputs,160,160,inputs,,"Model inputs (fixed, memo and ranged)",model/build/inputs.csv,,model
+n_inputs_ranged,106,106,inputs,,"Model inputs with a low–high range that are varied in the simulations (bounds, neutral and Monte Carlo-only inputs)",model/build/inputs.csv,,model
+n_inputs_fixed,36,36,inputs,,"Fixed inputs (measured or definitional values and sector mappings), not varied",model/build/inputs.csv,,model
+n_inputs_memo,18,18,inputs,,"Memo inputs, reported for context or checks and outside the totals",model/build/inputs.csv,,model
+n_draws,10000,"10,000",draws,,Monte Carlo draws behind the 10th–90th percentile ranges,model/build/results.json,,model
+n_input_groups,72,72,groups,,Input groups tested one at a time (Fig. 20),model/build/sensitivity.csv,,model
+io_year,2012,2012,year,,Year of the state input-output table,model/build/METHOD.md,,model
+io_industries,52,52,industries,,Industries in the state input-output table,model/build/METHOD.md,,model
+induced_vs_implan,1.947153,twice,ratio,,Household-spending effects of the state table against the IMPLAN calibration,model/build/results.json (model_meta),,model

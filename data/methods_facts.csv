@@ -4,15 +4,15 @@ wos_records,2543,Web of Science records exported
 candidates,15962,candidate records after merging
 with_doi,6913,candidates with a DOI
 decided_rules,8377,final decisions resting on written rules
-decided_screening,6081,final decisions resting on AI screening
-decided_calibration,259,final decisions resting on calibration review
+decided_screening,6080,final decisions resting on AI screening
+decided_calibration,260,final decisions resting on calibration review
 decided_audit,365,final decisions resting on the audit
 decided_dedup,162,records merged into another record of the same work
 decided_cleanup,210,records removed or moved to Mention only by the clean-up review
 decided_push,508,final decisions resting on the verification push
 screened_round1,4201,records judged in the first screening round
 screened_round2,1297,records judged in the second screening round
-calibration_overrides,275,decisions changed by calibration reviewers
+calibration_overrides,276,decisions changed by calibration reviewers
 resolution_opened,1396,unverified candidates opened one by one
 resolution_yes,189,confirmed as FHL work
 resolution_no,779,rejected
@@ -52,7 +52,7 @@ history_events,106,events in the chronicle of the station
 history_corrected,47,history events the fact-checkers corrected
 history_events_first,102,"events of the first timeline, fact-checked by its own run"
 history_corrected_first,46,"of those, events the fact-checkers corrected"
-history_images,206,images shown in the chronicle of the station
+history_images,212,images shown in the chronicle of the station
 history_more_candidates,172,candidate images found by the second image search
 history_more_passed,135,"candidate images a second agent passed (license, relevance, caption)"
 history_more_chosen,96,images the picture editor chose
@@ -60,13 +60,13 @@ history_more_events,4,events added from the new images' records
 history_year_candidates,141,candidate images found by the year-by-year image search
 history_year_passed,120,year-by-year candidates a second agent passed
 history_year_added,105,images added by the year-by-year search
-history_fhl_archive_images,43,"chronicle images from FHL's own archives, used with FHL's permission"
+history_fhl_archive_images,44,"chronicle images from FHL's own archives, used with FHL's permission"
 history_years_covered,111,years 1903-2026 with at least one image
-history_years_two,59,years 1903-2026 with two or more images
+history_years_two,61,years 1903-2026 with two or more images
 course_titles,705,distinct course titles given a topic by AI agents
 course_review_changes,36,course topics changed by the consistency reviewer
 art_candidates,19,candidate images of art made in residence
-art_images,2,photographs of artists at work in the studio shown
+art_images,3,photographs of artists at work in the studio shown
 push_queue,2175,records queued for the verification push
 push_records,2175,records the agents tried to read (verification push)
 push_read,624,read well enough to decide
@@ -118,5 +118,6 @@ topic_sample_agree,282,"of the sample, publications given the same topic twice"
 topic_batches,16,random batches classified
 topic_batches_within_chance,15,batches whose topic mix matched the whole within the range expected by chance
 agents_launched,650,"AI agents launched, including those stopped or never returned"
-prompts_launching,17,prompts that launched agents
+prompts_launching,17,"prompts that launched agents, including the one whose agent is linked to no run"
+prompts_launching_runs,16,prompts that launched the agents of the runs (Table X)
 agents_aborted,4,agents of a first launch that was stopped and launched again (not counted)

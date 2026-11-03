@@ -1,0 +1,926 @@
+region,impact_basis,source,measure,effect,central,mc_p10,mc_p50,mc_p90,extreme_low,extreme_high,unit
+Washington State,contribution,operations,output,direct,4100000.0,3654260.0,4177136.0,5388458.0,3342828.0,5400000.0,USD 2024
+Washington State,contribution,operations,jobs,direct,30.583,25.5886,30.8683,36.6716,21.333,41.333,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,operations,labor_income,direct,2900000.0,2558304.0,2905372.0,3309347.0,2550000.0,3300000.0,USD 2024
+Washington State,contribution,operations,value_added,direct,2900000.0,2706988.0,3108914.0,3588576.0,2550000.0,4005210.0,USD 2024
+Washington State,contribution,operations,taxes,direct,148830.0,142078.0,166345.0,214717.0,121345.0,248940.0,USD 2024
+Washington State,contribution,operations,output,indirect,995724.0,646166.0,1008768.0,2061851.0,557040.0,1969105.0,USD 2024
+Washington State,contribution,operations,jobs,indirect,2.7827,1.7736,2.8234,5.7742,1.337,6.2903,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,operations,labor_income,indirect,297663.0,193106.0,301495.0,616048.0,166628.0,587977.0,USD 2024
+Washington State,contribution,operations,value_added,indirect,462589.0,300101.0,468978.0,959458.0,260737.0,907347.0,USD 2024
+Washington State,contribution,operations,taxes,indirect,36145.0,24903.0,39827.0,81631.0,20221.0,90776.0,USD 2024
+Washington State,contribution,operations,output,induced,2423044.0,2296071.0,2604992.0,2963301.0,1997322.0,5840556.0,USD 2024
+Washington State,contribution,operations,jobs,induced,10.6025,9.9504,11.4121,13.0736,7.9297,28.3129,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,operations,labor_income,induced,759014.0,719240.0,816009.0,928248.0,625657.0,1829543.0,USD 2024
+Washington State,contribution,operations,value_added,induced,1175350.0,1113759.0,1263608.0,1437413.0,968845.0,2833088.0,USD 2024
+Washington State,contribution,operations,taxes,induced,87957.0,88985.0,102548.0,119454.0,72503.0,269250.0,USD 2024
+Washington State,contribution,operations,output,total,7518769.0,6755910.0,7753417.0,10251068.0,5897191.0,13209660.0,USD 2024
+Washington State,contribution,operations,jobs,total,43.9682,39.7694,45.6075,52.2634,30.5996,75.9362,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,operations,labor_income,total,3956677.0,3632702.0,4082556.0,4588073.0,3342285.0,5717520.0,USD 2024
+Washington State,contribution,operations,value_added,total,4537939.0,4346941.0,4925437.0,5595861.0,3779581.0,7745645.0,USD 2024
+Washington State,contribution,operations,taxes,total,272931.0,262331.0,309430.0,407557.0,214068.0,608965.0,USD 2024
+Washington State,new_money,operations,output,direct,1020853.0,833476.0,1033316.0,1357249.0,507032.0,1812923.0,USD 2024
+Washington State,new_money,operations,jobs,direct,7.6148,5.8946,7.4941,9.3355,3.2357,13.8766,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,operations,labor_income,direct,722067.0,580808.0,707849.0,851285.0,386777.0,1107897.0,USD 2024
+Washington State,new_money,operations,value_added,direct,722067.0,616451.0,756972.0,918427.0,386777.0,1344655.0,USD 2024
+Washington State,new_money,operations,taxes,direct,37057.0,32640.0,40877.0,54144.0,18405.0,83576.0,USD 2024
+Washington State,new_money,operations,output,indirect,247924.0,149759.0,245530.0,506244.0,84490.0,661081.0,USD 2024
+Washington State,new_money,operations,jobs,indirect,0.6929,0.4167,0.6856,1.4243,0.2028,2.1118,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,operations,labor_income,indirect,74115.0,44755.0,73433.0,151326.0,25274.0,197399.0,USD 2024
+Washington State,new_money,operations,value_added,indirect,115179.0,69592.0,114266.0,235313.0,39548.0,304620.0,USD 2024
+Washington State,new_money,operations,taxes,indirect,9000.0,5883.0,9692.0,20009.0,3067.0,30476.0,USD 2024
+Washington State,new_money,operations,output,induced,603310.0,520586.0,633897.0,763879.0,302949.0,1960829.0,USD 2024
+Washington State,new_money,operations,jobs,induced,2.6399,2.2658,2.7719,3.3681,1.2028,9.5054,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,operations,labor_income,induced,188986.0,163072.0,198567.0,239284.0,94898.0,614226.0,USD 2024
+Washington State,new_money,operations,value_added,induced,292649.0,252521.0,307486.0,370536.0,146952.0,951143.0,USD 2024
+Washington State,new_money,operations,taxes,induced,21900.0,20335.0,25004.0,30579.0,10997.0,90394.0,USD 2024
+Washington State,new_money,operations,output,total,1872088.0,1543350.0,1922796.0,2573028.0,894471.0,4434833.0,USD 2024
+Washington State,new_money,operations,jobs,total,10.9476,9.0434,11.0848,13.4329,4.6413,25.4938,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,operations,labor_income,total,985168.0,821998.0,994752.0,1187367.0,506949.0,1919523.0,USD 2024
+Washington State,new_money,operations,value_added,total,1129895.0,986181.0,1198913.0,1447903.0,573277.0,2600418.0,USD 2024
+Washington State,new_money,operations,taxes,total,67957.0,60321.0,76113.0,102422.0,32469.0,204446.0,USD 2024
+Washington State,contribution,research,output,direct,409528.0,332188.0,423274.0,523473.0,187031.0,728092.0,USD 2024
+Washington State,contribution,research,jobs,direct,4.1126,3.0524,3.9083,4.917,1.724,7.7478,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,research,labor_income,direct,291794.0,234911.0,291211.0,351286.0,163476.0,450255.0,USD 2024
+Washington State,contribution,research,value_added,direct,291794.0,249107.0,310659.0,379598.0,163476.0,546475.0,USD 2024
+Washington State,contribution,research,taxes,direct,14866.0,12982.0,16714.0,20910.0,6789.0,33565.0,USD 2024
+Washington State,contribution,research,output,indirect,33209.0,23802.0,37014.0,54807.0,2223.0,155874.0,USD 2024
+Washington State,contribution,research,jobs,indirect,0.1395,0.0996,0.1554,0.2329,0.0079,0.7593,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,research,labor_income,indirect,16830.0,11737.0,18559.0,27974.0,1084.0,80596.0,USD 2024
+Washington State,contribution,research,value_added,indirect,23469.0,16646.0,26026.0,38878.0,1549.0,111116.0,USD 2024
+Washington State,contribution,research,taxes,indirect,1206.0,938.0,1461.0,2178.0,81.0,7186.0,USD 2024
+Washington State,contribution,research,output,induced,230905.0,194983.0,244339.0,298355.0,115087.0,811725.0,USD 2024
+Washington State,contribution,research,jobs,induced,1.0104,0.8482,1.0694,1.3151,0.4569,3.935,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,research,labor_income,induced,72331.0,61078.0,76539.0,93459.0,36051.0,254271.0,USD 2024
+Washington State,contribution,research,value_added,induced,112005.0,94581.0,118522.0,144724.0,55826.0,393745.0,USD 2024
+Washington State,contribution,research,taxes,induced,8382.0,7622.0,9630.0,11949.0,4178.0,37421.0,USD 2024
+Washington State,contribution,research,output,total,673642.0,556273.0,706786.0,871128.0,304341.0,1695691.0,USD 2024
+Washington State,contribution,research,jobs,total,5.2624,4.0607,5.143,6.3814,2.1888,12.442,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,research,labor_income,total,380954.0,310328.0,386920.0,469644.0,200612.0,785122.0,USD 2024
+Washington State,contribution,research,value_added,total,427269.0,364773.0,456937.0,558536.0,220851.0,1051335.0,USD 2024
+Washington State,contribution,research,taxes,total,24453.0,21745.0,27845.0,34731.0,11048.0,78171.0,USD 2024
+Washington State,new_money,research,output,direct,409528.0,332188.0,423274.0,523473.0,187031.0,728092.0,USD 2024
+Washington State,new_money,research,jobs,direct,4.1126,3.0524,3.9083,4.917,1.724,7.7478,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,research,labor_income,direct,291794.0,234911.0,291211.0,351286.0,163476.0,450255.0,USD 2024
+Washington State,new_money,research,value_added,direct,291794.0,249107.0,310659.0,379598.0,163476.0,546475.0,USD 2024
+Washington State,new_money,research,taxes,direct,14866.0,12982.0,16714.0,20910.0,6789.0,33565.0,USD 2024
+Washington State,new_money,research,output,indirect,33209.0,23802.0,37014.0,54807.0,2223.0,155874.0,USD 2024
+Washington State,new_money,research,jobs,indirect,0.1395,0.0996,0.1554,0.2329,0.0079,0.7593,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,research,labor_income,indirect,16830.0,11737.0,18559.0,27974.0,1084.0,80596.0,USD 2024
+Washington State,new_money,research,value_added,indirect,23469.0,16646.0,26026.0,38878.0,1549.0,111116.0,USD 2024
+Washington State,new_money,research,taxes,indirect,1206.0,938.0,1461.0,2178.0,81.0,7186.0,USD 2024
+Washington State,new_money,research,output,induced,230905.0,194983.0,244339.0,298355.0,115087.0,811725.0,USD 2024
+Washington State,new_money,research,jobs,induced,1.0104,0.8482,1.0694,1.3151,0.4569,3.935,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,research,labor_income,induced,72331.0,61078.0,76539.0,93459.0,36051.0,254271.0,USD 2024
+Washington State,new_money,research,value_added,induced,112005.0,94581.0,118522.0,144724.0,55826.0,393745.0,USD 2024
+Washington State,new_money,research,taxes,induced,8382.0,7622.0,9630.0,11949.0,4178.0,37421.0,USD 2024
+Washington State,new_money,research,output,total,673642.0,556273.0,706786.0,871128.0,304341.0,1695691.0,USD 2024
+Washington State,new_money,research,jobs,total,5.2624,4.0607,5.143,6.3814,2.1888,12.442,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,research,labor_income,total,380954.0,310328.0,386920.0,469644.0,200612.0,785122.0,USD 2024
+Washington State,new_money,research,value_added,total,427269.0,364773.0,456937.0,558536.0,220851.0,1051335.0,USD 2024
+Washington State,new_money,research,taxes,total,24453.0,21745.0,27845.0,34731.0,11048.0,78171.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,output,direct,81454.0,35693.0,79952.0,128931.0,108710.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,jobs,direct,0.3133,0.1381,0.3076,0.4957,0.3809,0.0,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,labor_income,direct,30486.0,13359.0,29925.0,48256.0,40688.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,value_added,direct,37003.0,16214.0,36321.0,58571.0,49385.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,taxes,direct,2957.0,1408.0,3155.0,5101.0,3946.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,output,indirect,38510.0,16875.0,37801.0,60957.0,51397.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,jobs,indirect,0.1353,0.0595,0.1327,0.215,0.1619,0.0,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,labor_income,indirect,11518.0,5047.0,11305.0,18231.0,15372.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,value_added,indirect,17503.0,7670.0,17180.0,27705.0,23360.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,taxes,indirect,1398.0,665.0,1491.0,2412.0,1866.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,output,induced,32986.0,15186.0,34137.0,55038.0,43530.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,jobs,induced,0.1443,0.0666,0.1492,0.2418,0.1728,0.0,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,labor_income,induced,10333.0,4757.0,10693.0,17241.0,13636.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,value_added,induced,16000.0,7366.0,16559.0,26698.0,21115.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,taxes,induced,1197.0,597.0,1342.0,2183.0,1580.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,output,total,152950.0,67859.0,152122.0,244792.0,203637.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,jobs,total,0.5929,0.2649,0.5901,0.9537,0.7156,0.0,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,labor_income,total,52337.0,23200.0,51997.0,83690.0,69695.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,value_added,total,70506.0,31292.0,70169.0,112946.0,93860.0,0.0,USD 2024
+Washington State,contribution,memo_research_FA_uw_seattle_not_in_totals,taxes,total,5552.0,2675.0,5989.0,9701.0,7392.0,0.0,USD 2024
+Washington State,contribution,students,output,direct,196033.0,154592.0,195415.0,241260.0,33227.0,443652.0,USD 2024
+Washington State,contribution,students,jobs,direct,1.3807,1.0765,1.3787,1.7183,0.2168,3.4637,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,students,labor_income,direct,64268.0,50679.0,64069.0,79059.0,10905.0,145502.0,USD 2024
+Washington State,contribution,students,value_added,direct,100448.0,79209.0,100125.0,123571.0,17027.0,227472.0,USD 2024
+Washington State,contribution,students,taxes,direct,14804.0,11748.0,14855.0,18354.0,2807.0,32568.0,USD 2024
+Washington State,contribution,students,spending,direct,230510.0,181949.0,229935.0,283877.0,40850.0,509549.0,USD 2024 (purchaser prices)
+Washington State,contribution,students,output,indirect,75648.0,59676.0,75426.0,93130.0,12729.0,171722.0,USD 2024
+Washington State,contribution,students,jobs,indirect,0.2551,0.1994,0.2549,0.3172,0.0387,0.6515,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,students,labor_income,indirect,20897.0,16485.0,20831.0,25720.0,3565.0,47101.0,USD 2024
+Washington State,contribution,students,value_added,indirect,32450.0,25602.0,32350.0,39941.0,5526.0,73206.0,USD 2024
+Washington State,contribution,students,taxes,indirect,2746.0,2336.0,2982.0,3737.0,462.0,7916.0,USD 2024
+Washington State,contribution,students,output,induced,66879.0,55136.0,70140.0,87115.0,11236.0,294510.0,USD 2024
+Washington State,contribution,students,jobs,induced,0.2926,0.2398,0.3067,0.3839,0.0446,1.4277,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,students,labor_income,induced,20950.0,17271.0,21971.0,27289.0,3520.0,92255.0,USD 2024
+Washington State,contribution,students,value_added,induced,32441.0,26745.0,34023.0,42257.0,5450.0,142858.0,USD 2024
+Washington State,contribution,students,taxes,induced,2428.0,2161.0,2767.0,3492.0,408.0,13577.0,USD 2024
+Washington State,contribution,students,output,total,338561.0,269622.0,340951.0,421090.0,57192.0,909884.0,USD 2024
+Washington State,contribution,students,jobs,total,1.9285,1.518,1.9414,2.4172,0.3001,5.5429,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,students,labor_income,total,106114.0,84517.0,106869.0,131987.0,17989.0,284858.0,USD 2024
+Washington State,contribution,students,value_added,total,165340.0,131683.0,166495.0,205630.0,28003.0,443536.0,USD 2024
+Washington State,contribution,students,taxes,total,19977.0,16301.0,20601.0,25561.0,3677.0,54061.0,USD 2024
+Washington State,new_money,students,output,direct,50623.0,39939.0,50464.0,62305.0,6225.0,152023.0,USD 2024
+Washington State,new_money,students,jobs,direct,0.354,0.2761,0.3535,0.4406,0.0405,1.1836,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,students,labor_income,direct,16587.0,13085.0,16537.0,20407.0,2043.0,49847.0,USD 2024
+Washington State,new_money,students,value_added,direct,25927.0,20453.0,25845.0,31892.0,3190.0,77929.0,USD 2024
+Washington State,new_money,students,taxes,direct,3761.0,2989.0,3778.0,4668.0,524.0,11100.0,USD 2024
+Washington State,new_money,students,spending,direct,59286.0,46810.0,59138.0,73010.0,7645.0,174350.0,USD 2024 (purchaser prices)
+Washington State,new_money,students,output,indirect,19566.0,15442.0,19509.0,24091.0,2386.0,58879.0,USD 2024
+Washington State,new_money,students,jobs,indirect,0.0658,0.0515,0.0658,0.0818,0.0073,0.2232,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,students,labor_income,indirect,5396.0,4258.0,5379.0,6642.0,668.0,16140.0,USD 2024
+Washington State,new_money,students,value_added,indirect,8381.0,6614.0,8355.0,10315.0,1035.0,25087.0,USD 2024
+Washington State,new_money,students,taxes,indirect,710.0,604.0,771.0,967.0,87.0,2714.0,USD 2024
+Washington State,new_money,students,output,induced,17263.0,14237.0,18105.0,22487.0,2105.0,100900.0,USD 2024
+Washington State,new_money,students,jobs,induced,0.0755,0.0619,0.0792,0.0991,0.0084,0.4891,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,students,labor_income,induced,5408.0,4460.0,5671.0,7044.0,659.0,31607.0,USD 2024
+Washington State,new_money,students,value_added,induced,8374.0,6906.0,8782.0,10908.0,1021.0,48944.0,USD 2024
+Washington State,new_money,students,taxes,induced,627.0,558.0,714.0,901.0,76.0,4651.0,USD 2024
+Washington State,new_money,students,output,total,87452.0,69660.0,88073.0,108771.0,10715.0,311802.0,USD 2024
+Washington State,new_money,students,jobs,total,0.4954,0.39,0.4987,0.6209,0.0562,1.8959,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,students,labor_income,total,27391.0,21820.0,27584.0,34067.0,3370.0,97593.0,USD 2024
+Washington State,new_money,students,value_added,total,42681.0,34000.0,42978.0,53077.0,5246.0,151960.0,USD 2024
+Washington State,new_money,students,taxes,total,5098.0,4164.0,5263.0,6532.0,687.0,18466.0,USD 2024
+Washington State,contribution,visitors,output,direct,336883.0,265999.0,335467.0,413995.0,23543.0,1638471.0,USD 2024
+Washington State,contribution,visitors,jobs,direct,2.3307,1.8223,2.326,2.8964,0.1529,12.5971,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,visitors,labor_income,direct,112402.0,88748.0,111931.0,138113.0,7912.0,545973.0,USD 2024
+Washington State,contribution,visitors,value_added,direct,180769.0,142691.0,179987.0,222097.0,12789.0,876734.0,USD 2024
+Washington State,contribution,visitors,taxes,direct,32218.0,25526.0,32257.0,39902.0,2590.0,153975.0,USD 2024
+Washington State,contribution,visitors,spending,direct,398762.0,314957.0,397786.0,491068.0,29263.0,1907649.0,USD 2024 (purchaser prices)
+Washington State,contribution,visitors,output,indirect,122499.0,96823.0,122033.0,150565.0,8343.0,599773.0,USD 2024
+Washington State,contribution,visitors,jobs,indirect,0.4251,0.3327,0.4244,0.5288,0.0263,2.3473,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,visitors,labor_income,indirect,34739.0,27439.0,34608.0,42701.0,2421.0,168894.0,USD 2024
+Washington State,contribution,visitors,value_added,indirect,53161.0,41993.0,52960.0,65343.0,3684.0,258871.0,USD 2024
+Washington State,contribution,visitors,taxes,indirect,4447.0,3786.0,4824.0,6045.0,303.0,27650.0,USD 2024
+Washington State,contribution,visitors,output,induced,115550.0,95352.0,121106.0,150354.0,8024.0,1093104.0,USD 2024
+Washington State,contribution,visitors,jobs,induced,0.5056,0.4152,0.5297,0.6634,0.0319,5.299,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,visitors,labor_income,induced,36196.0,29869.0,37936.0,47098.0,2514.0,342413.0,USD 2024
+Washington State,contribution,visitors,value_added,induced,56050.0,46253.0,58745.0,72933.0,3892.0,530234.0,USD 2024
+Washington State,contribution,visitors,taxes,induced,4194.0,3739.0,4780.0,6025.0,291.0,50392.0,USD 2024
+Washington State,contribution,visitors,output,total,574933.0,458303.0,578792.0,714701.0,39910.0,3331348.0,USD 2024
+Washington State,contribution,visitors,jobs,total,3.2614,2.5719,3.2788,4.0862,0.2111,20.2433,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,visitors,labor_income,total,183337.0,146098.0,184526.0,227839.0,12847.0,1057280.0,USD 2024
+Washington State,contribution,visitors,value_added,total,289980.0,230975.0,291734.0,360220.0,20365.0,1665839.0,USD 2024
+Washington State,contribution,visitors,taxes,total,40859.0,33125.0,41884.0,51898.0,3184.0,232017.0,USD 2024
+Washington State,new_money,visitors,output,direct,200316.0,158101.0,199512.0,246238.0,11085.0,1134902.0,USD 2024
+Washington State,new_money,visitors,jobs,direct,1.415,1.1049,1.4122,1.7588,0.0728,8.8788,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,visitors,labor_income,direct,67041.0,52905.0,66781.0,82421.0,3732.0,379171.0,USD 2024
+Washington State,new_money,visitors,value_added,direct,108049.0,85248.0,107608.0,132817.0,6038.0,609973.0,USD 2024
+Washington State,new_money,visitors,taxes,direct,20249.0,15998.0,20227.0,25026.0,1252.0,111313.0,USD 2024
+Washington State,new_money,visitors,spending,direct,240181.0,189714.0,239583.0,295768.0,13878.0,1335157.0,USD 2024 (purchaser prices)
+Washington State,new_money,visitors,output,indirect,72086.0,56938.0,71825.0,88651.0,3906.0,411850.0,USD 2024
+Washington State,new_money,visitors,jobs,indirect,0.2529,0.1975,0.2526,0.3145,0.0124,1.6269,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,visitors,labor_income,indirect,20607.0,16270.0,20528.0,25338.0,1139.0,116733.0,USD 2024
+Washington State,new_money,visitors,value_added,indirect,31468.0,24848.0,31347.0,38693.0,1731.0,178609.0,USD 2024
+Washington State,new_money,visitors,taxes,indirect,2617.0,2228.0,2839.0,3557.0,142.0,18986.0,USD 2024
+Washington State,new_money,visitors,output,induced,68830.0,56774.0,72187.0,89576.0,3782.0,758288.0,USD 2024
+Washington State,new_money,visitors,jobs,induced,0.3012,0.247,0.3154,0.395,0.015,3.6759,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,visitors,labor_income,induced,21561.0,17784.0,22612.0,28060.0,1185.0,237532.0,USD 2024
+Washington State,new_money,visitors,value_added,induced,33388.0,27540.0,35016.0,43451.0,1834.0,367824.0,USD 2024
+Washington State,new_money,visitors,taxes,induced,2499.0,2225.0,2847.0,3590.0,137.0,34957.0,USD 2024
+Washington State,new_money,visitors,output,total,341232.0,271941.0,343568.0,424129.0,18774.0,2305040.0,USD 2024
+Washington State,new_money,visitors,jobs,total,1.969,1.551,1.9814,2.4651,0.1002,14.1816,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,visitors,labor_income,total,109210.0,86993.0,109930.0,135707.0,6055.0,733437.0,USD 2024
+Washington State,new_money,visitors,value_added,total,172905.0,137690.0,173981.0,214774.0,9603.0,1156406.0,USD 2024
+Washington State,new_money,visitors,taxes,total,25365.0,20501.0,25916.0,32119.0,1531.0,165257.0,USD 2024
+Washington State,contribution,construction_2015_2024_one_time,output,direct,2080269.0,1994439.0,2078781.0,2166793.0,1856809.0,2316393.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,jobs,direct,5.5274,5.1995,5.5259,5.8679,4.538,6.6913,job-years over 2015-2024
+Washington State,contribution,construction_2015_2024_one_time,labor_income,direct,520456.0,498982.0,520083.0,542103.0,464549.0,579531.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,value_added,direct,530520.0,508631.0,530141.0,552586.0,473532.0,590738.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,taxes,direct,75514.0,75640.0,81603.0,90066.0,67402.0,106786.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,output,indirect,1026275.0,983931.0,1025541.0,1068960.0,916033.0,1142763.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,jobs,indirect,3.9566,3.6993,3.9567,4.2306,3.202,4.8893,job-years over 2015-2024
+Washington State,contribution,construction_2015_2024_one_time,labor_income,indirect,293867.0,281742.0,293657.0,306090.0,262300.0,327223.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,value_added,indirect,469096.0,449742.0,468761.0,488607.0,418707.0,522342.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,taxes,indirect,37254.0,37316.0,40258.0,44433.0,33252.0,52681.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,output,induced,639488.0,631380.0,670307.0,719421.0,564398.0,1386517.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,jobs,induced,2.7982,2.7128,2.941,3.2021,2.2407,6.7213,job-years over 2015-2024
+Washington State,contribution,construction_2015_2024_one_time,labor_income,induced,200318.0,197778.0,209972.0,225357.0,176797.0,434324.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,value_added,induced,310197.0,306264.0,325147.0,348971.0,273774.0,672560.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,taxes,induced,23213.0,24093.0,26434.0,29495.0,20488.0,63918.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,output,total,3746031.0,3620705.0,3775638.0,3941559.0,3337240.0,4845673.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,jobs,total,12.2822,11.6463,12.4306,13.257,9.9807,18.3019,job-years over 2015-2024
+Washington State,contribution,construction_2015_2024_one_time,labor_income,total,1014641.0,981843.0,1024134.0,1069300.0,903646.0,1341077.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,value_added,total,1309814.0,1269432.0,1324627.0,1384197.0,1166012.0,1785640.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,construction_2015_2024_one_time,taxes,total,135981.0,137392.0,148251.0,163675.0,121142.0,223386.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,output,direct,223217.0,216745.0,223153.0,229744.0,211468.0,234965.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,jobs,direct,0.5931,0.5627,0.5931,0.6251,0.5168,0.6787,job-years over 2015-2024
+Washington State,new_money,construction_2015_2024_one_time,labor_income,direct,55846.0,54227.0,55830.0,57479.0,52907.0,58785.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,value_added,direct,56926.0,55275.0,56910.0,58590.0,53930.0,59922.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,taxes,direct,8103.0,8172.0,8750.0,9623.0,7676.0,10832.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,output,indirect,110121.0,106928.0,110090.0,113341.0,104325.0,115917.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,jobs,indirect,0.4246,0.3997,0.4246,0.4517,0.3647,0.4959,job-years over 2015-2024
+Washington State,new_money,construction_2015_2024_one_time,labor_income,indirect,31532.0,30618.0,31523.0,32455.0,29873.0,33192.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,value_added,indirect,50335.0,48876.0,50321.0,51807.0,47686.0,52984.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,taxes,indirect,3997.0,4032.0,4317.0,4747.0,3787.0,5344.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,output,induced,68618.0,68297.0,71891.0,76858.0,64278.0,140642.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,jobs,induced,0.3003,0.2928,0.3156,0.3421,0.2552,0.6818,job-years over 2015-2024
+Washington State,new_money,construction_2015_2024_one_time,labor_income,induced,21495.0,21394.0,22520.0,24076.0,20135.0,44056.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,value_added,induced,33285.0,33129.0,34872.0,37281.0,31180.0,68222.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,taxes,induced,2491.0,2600.0,2837.0,3151.0,2333.0,6484.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,output,total,401956.0,393394.0,405347.0,417942.0,380072.0,491524.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,jobs,total,1.3179,1.2594,1.3336,1.4134,1.1367,1.8565,job-years over 2015-2024
+Washington State,new_money,construction_2015_2024_one_time,labor_income,total,108873.0,106669.0,109944.0,113401.0,102915.0,136033.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,value_added,total,140545.0,137907.0,142237.0,146808.0,132795.0,181128.0,USD 2024 (total over 2015-2024)
+Washington State,new_money,construction_2015_2024_one_time,taxes,total,14591.0,14837.0,15896.0,17479.0,13797.0,22659.0,USD 2024 (total over 2015-2024)
+Washington State,contribution,memo_resident_faculty_not_in_totals,output,direct,516579.0,516579.0,516579.0,516579.0,516579.0,516579.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,jobs,direct,4.0,4.0,4.0,4.0,4.0,4.0,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,memo_resident_faculty_not_in_totals,labor_income,direct,516579.0,516579.0,516579.0,516579.0,516579.0,516579.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,value_added,direct,516579.0,522411.0,549099.0,591975.0,516579.0,626972.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,taxes,direct,18752.0,19003.0,20239.0,22202.0,18752.0,23814.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,output,indirect,0.0,0.0,0.0,0.0,0.0,0.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,jobs,indirect,0.0,0.0,0.0,0.0,0.0,0.0,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,memo_resident_faculty_not_in_totals,labor_income,indirect,0.0,0.0,0.0,0.0,0.0,0.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,value_added,indirect,0.0,0.0,0.0,0.0,0.0,0.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,taxes,indirect,0.0,0.0,0.0,0.0,0.0,0.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,output,induced,405669.0,407272.0,424477.0,452371.0,401124.0,789901.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,jobs,induced,1.7751,1.7409,1.866,2.0128,1.5925,3.8292,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,memo_resident_faculty_not_in_totals,labor_income,induced,127075.0,127577.0,132967.0,141704.0,125651.0,247435.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,value_added,induced,196779.0,197556.0,205902.0,219432.0,194574.0,383159.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,taxes,induced,14726.0,15429.0,16762.0,18559.0,14561.0,36414.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,output,total,922248.0,923851.0,941056.0,968950.0,917703.0,1306480.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,jobs,total,5.7751,5.7409,5.866,6.0128,5.5925,7.8292,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,memo_resident_faculty_not_in_totals,labor_income,total,643654.0,644156.0,649546.0,658283.0,642230.0,764014.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,value_added,total,713358.0,727837.0,756491.0,799854.0,711153.0,1010131.0,USD 2024
+Washington State,contribution,memo_resident_faculty_not_in_totals,taxes,total,33478.0,34583.0,36983.0,40620.0,33313.0,60229.0,USD 2024
+Washington State,contribution,annual_total,output,direct,5042445.0,4604365.0,5147559.0,6356993.0,3586628.0,8210216.0,USD 2024
+Washington State,contribution,annual_total,jobs,direct,38.4069,33.1833,38.543,44.5165,23.4266,65.1415,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,annual_total,labor_income,direct,3368463.0,3019491.0,3376637.0,3784770.0,2732294.0,4441731.0,USD 2024
+Washington State,contribution,annual_total,value_added,direct,3473011.0,3281437.0,3706161.0,4196422.0,2743292.0,5655892.0,USD 2024
+Washington State,contribution,annual_total,taxes,direct,210717.0,203127.0,231795.0,280726.0,133530.0,469048.0,USD 2024
+Washington State,contribution,annual_total,output,indirect,1227081.0,873660.0,1247059.0,2298205.0,580335.0,2896473.0,USD 2024
+Washington State,contribution,annual_total,jobs,indirect,3.6024,2.5777,3.6787,6.6045,1.41,10.0483,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,annual_total,labor_income,indirect,370130.0,265064.0,377262.0,691870.0,173698.0,884568.0,USD 2024
+Washington State,contribution,annual_total,value_added,indirect,571670.0,408653.0,581519.0,1071405.0,271495.0,1350539.0,USD 2024
+Washington State,contribution,annual_total,taxes,indirect,44543.0,33842.0,49311.0,91376.0,21066.0,133527.0,USD 2024
+Washington State,contribution,annual_total,output,induced,2836379.0,2717217.0,3044531.0,3420188.0,2131669.0,8039894.0,USD 2024
+Washington State,contribution,annual_total,jobs,induced,12.4111,11.7895,13.3327,15.1168,8.463,38.9745,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,annual_total,labor_income,induced,888490.0,851163.0,953694.0,1071367.0,667741.0,2518481.0,USD 2024
+Washington State,contribution,annual_total,value_added,induced,1375847.0,1318045.0,1476816.0,1659036.0,1034013.0,3899925.0,USD 2024
+Washington State,contribution,annual_total,taxes,induced,102961.0,105152.0,119990.0,138278.0,77380.0,370639.0,USD 2024
+Washington State,contribution,annual_total,output,total,9105905.0,8365084.0,9412466.0,11893741.0,6298633.0,19146583.0,USD 2024
+Washington State,contribution,annual_total,jobs,total,54.4205,49.9761,56.077,62.9092,33.2997,114.1644,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,contribution,annual_total,labor_income,total,4627083.0,4295997.0,4766270.0,5281919.0,3573733.0,7844780.0,USD 2024
+Washington State,contribution,annual_total,value_added,total,5420528.0,5246819.0,5848517.0,6536980.0,4048800.0,10906356.0,USD 2024
+Washington State,contribution,annual_total,taxes,total,358221.0,349431.0,402015.0,501619.0,231976.0,973214.0,USD 2024
+Washington State,new_money,annual_total,output,direct,1681320.0,1487442.0,1716634.0,2053514.0,711372.0,3827939.0,USD 2024
+Washington State,new_money,annual_total,jobs,direct,13.4963,11.351,13.2483,15.3127,5.073,31.6868,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,annual_total,labor_income,direct,1097490.0,944507.0,1084585.0,1237966.0,556028.0,1987171.0,USD 2024
+Washington State,new_money,annual_total,value_added,direct,1147837.0,1044508.0,1204574.0,1386394.0,559482.0,2579033.0,USD 2024
+Washington State,new_money,annual_total,taxes,direct,75933.0,71137.0,82303.0,97107.0,26970.0,239554.0,USD 2024
+Washington State,new_money,annual_total,output,indirect,372785.0,275673.0,378493.0,637012.0,93005.0,1287684.0,USD 2024
+Washington State,new_money,annual_total,jobs,indirect,1.1511,0.8698,1.1745,1.9095,0.2304,4.7211,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,annual_total,labor_income,indirect,116947.0,88019.0,119700.0,197158.0,28165.0,410868.0,USD 2024
+Washington State,new_money,annual_total,value_added,indirect,178498.0,133705.0,182532.0,303492.0,43863.0,619432.0,USD 2024
+Washington State,new_money,annual_total,taxes,indirect,13532.0,10755.0,14907.0,25277.0,3376.0,59362.0,USD 2024
+Washington State,new_money,annual_total,output,induced,920309.0,841620.0,970378.0,1114935.0,423923.0,3631741.0,USD 2024
+Washington State,new_money,annual_total,jobs,induced,4.027,3.649,4.2458,4.9267,1.683,17.6054,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,annual_total,labor_income,induced,288285.0,263636.0,303969.0,349251.0,132793.0,1137636.0,USD 2024
+Washington State,new_money,annual_total,value_added,induced,446416.0,408246.0,470703.0,540823.0,205633.0,1761655.0,USD 2024
+Washington State,new_money,annual_total,taxes,induced,33407.0,32669.0,38286.0,44888.0,15388.0,167423.0,USD 2024
+Washington State,new_money,annual_total,output,total,2974415.0,2656122.0,3078135.0,3750790.0,1228300.0,8747365.0,USD 2024
+Washington State,new_money,annual_total,jobs,total,18.6744,16.3587,18.811,21.5009,6.9865,54.0133,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+Washington State,new_money,annual_total,labor_income,total,1502722.0,1330476.0,1521216.0,1732244.0,716986.0,3535675.0,USD 2024
+Washington State,new_money,annual_total,value_added,total,1772750.0,1638208.0,1877008.0,2152083.0,808977.0,4960120.0,USD 2024
+Washington State,new_money,annual_total,taxes,total,122873.0,116852.0,136179.0,164449.0,45735.0,466340.0,USD 2024
+San Juan County,contribution,operations,output,direct,4100000.0,3654260.0,4177136.0,5388458.0,3342828.0,5400000.0,USD 2024
+San Juan County,contribution,operations,jobs,direct,30.583,25.5886,30.8683,36.6716,21.333,41.333,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,operations,labor_income,direct,2900000.0,2558304.0,2905372.0,3309347.0,2550000.0,3300000.0,USD 2024
+San Juan County,contribution,operations,value_added,direct,2900000.0,2706988.0,3108914.0,3588576.0,2550000.0,4005210.0,USD 2024
+San Juan County,contribution,operations,taxes,direct,148830.0,142078.0,166345.0,214717.0,121345.0,248940.0,USD 2024
+San Juan County,contribution,operations,output,indirect,531639.0,339513.0,535782.0,1098663.0,260323.0,1165062.0,USD 2024
+San Juan County,contribution,operations,jobs,indirect,1.7709,1.113,1.7995,3.6501,0.6949,4.6531,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,operations,labor_income,indirect,159580.0,101997.0,160847.0,329463.0,78417.0,348883.0,USD 2024
+San Juan County,contribution,operations,value_added,indirect,245515.0,157366.0,248498.0,507680.0,122447.0,530882.0,USD 2024
+San Juan County,contribution,operations,taxes,indirect,19298.0,13225.0,21282.0,43468.0,9450.0,53709.0,USD 2024
+San Juan County,contribution,operations,output,induced,1078897.0,916209.0,1091398.0,1287630.0,436309.0,2462741.0,USD 2024
+San Juan County,contribution,operations,jobs,induced,7.1395,6.0213,7.2295,8.5874,2.6127,18.1094,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,operations,labor_income,induced,346226.0,294075.0,350214.0,413212.0,140206.0,788916.0,USD 2024
+San Juan County,contribution,operations,value_added,induced,544010.0,462073.0,550311.0,649227.0,220263.0,1239782.0,USD 2024
+San Juan County,contribution,operations,taxes,induced,39164.0,35756.0,43074.0,51672.0,15838.0,113532.0,USD 2024
+San Juan County,contribution,operations,output,total,5710536.0,5045012.0,5795585.0,7619701.0,4039461.0,9027804.0,USD 2024
+San Juan County,contribution,operations,jobs,total,39.4934,34.7615,40.2525,46.4553,24.6406,64.0954,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,operations,labor_income,total,3405806.0,3076927.0,3449123.0,3877484.0,2768623.0,4437799.0,USD 2024
+San Juan County,contribution,operations,value_added,total,3689525.0,3501916.0,3961022.0,4490758.0,2892710.0,5775874.0,USD 2024
+San Juan County,contribution,operations,taxes,total,207292.0,195859.0,231217.0,304043.0,146632.0,416182.0,USD 2024
+San Juan County,new_money,operations,output,direct,3862200.0,3443095.0,3937320.0,5081791.0,3035288.0,5270400.0,USD 2024
+San Juan County,new_money,operations,jobs,direct,28.8092,24.1156,29.1186,34.56,19.3704,40.341,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,operations,labor_income,direct,2731800.0,2409165.0,2740822.0,3123099.0,2315400.0,3220800.0,USD 2024
+San Juan County,new_money,operations,value_added,direct,2731800.0,2547007.0,2931723.0,3386138.0,2315400.0,3909085.0,USD 2024
+San Juan County,new_money,operations,taxes,direct,140198.0,133894.0,156925.0,202183.0,110181.0,242965.0,USD 2024
+San Juan County,new_money,operations,output,indirect,500804.0,319760.0,504995.0,1033079.0,236374.0,1137101.0,USD 2024
+San Juan County,new_money,operations,jobs,indirect,1.6682,1.0485,1.6934,3.4433,0.631,4.5414,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,operations,labor_income,indirect,150324.0,96131.0,151715.0,310406.0,71203.0,340510.0,USD 2024
+San Juan County,new_money,operations,value_added,indirect,231275.0,148211.0,233839.0,477964.0,111182.0,518141.0,USD 2024
+San Juan County,new_money,operations,taxes,indirect,18179.0,12459.0,20063.0,40951.0,8580.0,52420.0,USD 2024
+San Juan County,new_money,operations,output,induced,1016321.0,862596.0,1028919.0,1214306.0,396169.0,2403636.0,USD 2024
+San Juan County,new_money,operations,jobs,induced,6.7254,5.6667,6.8199,8.1052,2.3723,17.6747,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,operations,labor_income,induced,326145.0,276733.0,330221.0,389697.0,127307.0,769982.0,USD 2024
+San Juan County,new_money,operations,value_added,induced,512458.0,434840.0,518861.0,612343.0,199999.0,1210027.0,USD 2024
+San Juan County,new_money,operations,taxes,induced,36892.0,33648.0,40580.0,48725.0,14381.0,110808.0,USD 2024
+San Juan County,new_money,operations,output,total,5379325.0,4747830.0,5468255.0,7188029.0,3667830.0,8811136.0,USD 2024
+San Juan County,new_money,operations,jobs,total,37.2028,32.7611,37.952,43.8076,22.3737,62.5571,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,operations,labor_income,total,3208269.0,2895932.0,3255585.0,3660145.0,2513910.0,4331292.0,USD 2024
+San Juan County,new_money,operations,value_added,total,3475532.0,3298894.0,3733942.0,4235181.0,2626581.0,5637253.0,USD 2024
+San Juan County,new_money,operations,taxes,total,195269.0,184483.0,218126.0,286521.0,133142.0,406193.0,USD 2024
+San Juan County,contribution,research,output,direct,409528.0,332188.0,423274.0,523473.0,187031.0,728092.0,USD 2024
+San Juan County,contribution,research,jobs,direct,4.1126,3.0524,3.9083,4.917,1.724,7.7478,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,research,labor_income,direct,291794.0,234911.0,291211.0,351286.0,163476.0,450255.0,USD 2024
+San Juan County,contribution,research,value_added,direct,291794.0,249107.0,310659.0,379598.0,163476.0,546475.0,USD 2024
+San Juan County,contribution,research,taxes,direct,14866.0,12982.0,16714.0,20910.0,6789.0,33565.0,USD 2024
+San Juan County,contribution,research,output,indirect,5755.0,4313.0,7272.0,11681.0,248.0,39384.0,USD 2024
+San Juan County,contribution,research,jobs,indirect,0.0422,0.0314,0.0534,0.0863,0.0016,0.3316,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,research,labor_income,indirect,3059.0,2220.0,3836.0,6293.0,140.0,21242.0,USD 2024
+San Juan County,contribution,research,value_added,indirect,4205.0,3094.0,5286.0,8615.0,188.0,28973.0,USD 2024
+San Juan County,contribution,research,taxes,indirect,209.0,169.0,286.0,464.0,9.0,1816.0,USD 2024
+San Juan County,contribution,research,output,induced,83287.0,61383.0,82669.0,108464.0,15824.0,320281.0,USD 2024
+San Juan County,contribution,research,jobs,induced,0.5511,0.4044,0.5463,0.7235,0.0948,2.3551,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,research,labor_income,induced,26728.0,19696.0,26528.0,34800.0,5085.0,102599.0,USD 2024
+San Juan County,contribution,research,value_added,induced,41996.0,30947.0,41682.0,54680.0,7988.0,161234.0,USD 2024
+San Juan County,contribution,research,taxes,induced,3023.0,2407.0,3264.0,4325.0,574.0,14765.0,USD 2024
+San Juan County,contribution,research,output,total,498571.0,403949.0,515229.0,636244.0,203102.0,1087757.0,USD 2024
+San Juan County,contribution,research,jobs,total,4.7059,3.5554,4.5148,5.6431,1.8203,10.4345,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,research,labor_income,total,321580.0,258975.0,322130.0,388903.0,168701.0,574097.0,USD 2024
+San Juan County,contribution,research,value_added,total,337994.0,287379.0,358646.0,437408.0,171653.0,736682.0,USD 2024
+San Juan County,contribution,research,taxes,total,18098.0,15791.0,20278.0,25381.0,7373.0,50146.0,USD 2024
+San Juan County,new_money,research,output,direct,409528.0,332188.0,423274.0,523473.0,187031.0,728092.0,USD 2024
+San Juan County,new_money,research,jobs,direct,4.1126,3.0524,3.9083,4.917,1.724,7.7478,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,research,labor_income,direct,291794.0,234911.0,291211.0,351286.0,163476.0,450255.0,USD 2024
+San Juan County,new_money,research,value_added,direct,291794.0,249107.0,310659.0,379598.0,163476.0,546475.0,USD 2024
+San Juan County,new_money,research,taxes,direct,14866.0,12982.0,16714.0,20910.0,6789.0,33565.0,USD 2024
+San Juan County,new_money,research,output,indirect,5755.0,4313.0,7272.0,11681.0,248.0,39384.0,USD 2024
+San Juan County,new_money,research,jobs,indirect,0.0422,0.0314,0.0534,0.0863,0.0016,0.3316,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,research,labor_income,indirect,3059.0,2220.0,3836.0,6293.0,140.0,21242.0,USD 2024
+San Juan County,new_money,research,value_added,indirect,4205.0,3094.0,5286.0,8615.0,188.0,28973.0,USD 2024
+San Juan County,new_money,research,taxes,indirect,209.0,169.0,286.0,464.0,9.0,1816.0,USD 2024
+San Juan County,new_money,research,output,induced,83287.0,61383.0,82669.0,108464.0,15824.0,320281.0,USD 2024
+San Juan County,new_money,research,jobs,induced,0.5511,0.4044,0.5463,0.7235,0.0948,2.3551,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,research,labor_income,induced,26728.0,19696.0,26528.0,34800.0,5085.0,102599.0,USD 2024
+San Juan County,new_money,research,value_added,induced,41996.0,30947.0,41682.0,54680.0,7988.0,161234.0,USD 2024
+San Juan County,new_money,research,taxes,induced,3023.0,2407.0,3264.0,4325.0,574.0,14765.0,USD 2024
+San Juan County,new_money,research,output,total,498571.0,403949.0,515229.0,636244.0,203102.0,1087757.0,USD 2024
+San Juan County,new_money,research,jobs,total,4.7059,3.5554,4.5148,5.6431,1.8203,10.4345,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,research,labor_income,total,321580.0,258975.0,322130.0,388903.0,168701.0,574097.0,USD 2024
+San Juan County,new_money,research,value_added,total,337994.0,287379.0,358646.0,437408.0,171653.0,736682.0,USD 2024
+San Juan County,new_money,research,taxes,total,18098.0,15791.0,20278.0,25381.0,7373.0,50146.0,USD 2024
+San Juan County,contribution,students,output,direct,154020.0,121144.0,153555.0,189575.0,30255.0,326628.0,USD 2024
+San Juan County,contribution,students,jobs,direct,1.2884,1.0023,1.2862,1.6036,0.2241,3.086,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,students,labor_income,direct,50776.0,39935.0,50624.0,62503.0,9952.0,107915.0,USD 2024
+San Juan County,contribution,students,value_added,direct,78514.0,61741.0,78275.0,96639.0,15376.0,166925.0,USD 2024
+San Juan County,contribution,students,taxes,direct,13737.0,10818.0,13702.0,16921.0,2757.0,28614.0,USD 2024
+San Juan County,contribution,students,spending,direct,195341.0,153828.0,194849.0,240616.0,39203.0,406893.0,USD 2024 (purchaser prices)
+San Juan County,contribution,students,output,indirect,9912.0,7462.0,9860.0,12789.0,1446.0,27580.0,USD 2024
+San Juan County,contribution,students,jobs,indirect,0.0556,0.0417,0.0554,0.0716,0.0073,0.1703,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,students,labor_income,indirect,2614.0,1969.0,2597.0,3354.0,381.0,7184.0,USD 2024
+San Juan County,contribution,students,value_added,indirect,4252.0,3205.0,4224.0,5452.0,622.0,11645.0,USD 2024
+San Juan County,contribution,students,taxes,indirect,360.0,292.0,389.0,511.0,53.0,1271.0,USD 2024
+San Juan County,contribution,students,output,induced,20180.0,15244.0,19994.0,25663.0,1758.0,86440.0,USD 2024
+San Juan County,contribution,students,jobs,induced,0.1335,0.1005,0.1326,0.1712,0.0105,0.6356,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,students,labor_income,induced,6476.0,4893.0,6415.0,8234.0,565.0,27690.0,USD 2024
+San Juan County,contribution,students,value_added,induced,10175.0,7688.0,10079.0,12939.0,887.0,43515.0,USD 2024
+San Juan County,contribution,students,taxes,induced,733.0,596.0,791.0,1026.0,64.0,3985.0,USD 2024
+San Juan County,contribution,students,output,total,184112.0,144644.0,183728.0,226787.0,33459.0,440647.0,USD 2024
+San Juan County,contribution,students,jobs,total,1.4775,1.1492,1.4742,1.8391,0.2419,3.8919,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,students,labor_income,total,59865.0,47024.0,59728.0,73719.0,10898.0,142789.0,USD 2024
+San Juan County,contribution,students,value_added,total,92941.0,72995.0,92716.0,114454.0,16885.0,222086.0,USD 2024
+San Juan County,contribution,students,taxes,total,14829.0,11763.0,14891.0,18402.0,2873.0,33870.0,USD 2024
+San Juan County,new_money,students,output,direct,154020.0,121144.0,153555.0,189575.0,30255.0,326628.0,USD 2024
+San Juan County,new_money,students,jobs,direct,1.2884,1.0023,1.2862,1.6036,0.2241,3.086,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,students,labor_income,direct,50776.0,39935.0,50624.0,62503.0,9952.0,107915.0,USD 2024
+San Juan County,new_money,students,value_added,direct,78514.0,61741.0,78275.0,96639.0,15376.0,166925.0,USD 2024
+San Juan County,new_money,students,taxes,direct,13737.0,10818.0,13702.0,16921.0,2757.0,28614.0,USD 2024
+San Juan County,new_money,students,spending,direct,195341.0,153828.0,194849.0,240616.0,39203.0,406893.0,USD 2024 (purchaser prices)
+San Juan County,new_money,students,output,indirect,9912.0,7462.0,9860.0,12789.0,1446.0,27580.0,USD 2024
+San Juan County,new_money,students,jobs,indirect,0.0556,0.0417,0.0554,0.0716,0.0073,0.1703,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,students,labor_income,indirect,2614.0,1969.0,2597.0,3354.0,381.0,7184.0,USD 2024
+San Juan County,new_money,students,value_added,indirect,4252.0,3205.0,4224.0,5452.0,622.0,11645.0,USD 2024
+San Juan County,new_money,students,taxes,indirect,360.0,292.0,389.0,511.0,53.0,1271.0,USD 2024
+San Juan County,new_money,students,output,induced,20180.0,15244.0,19994.0,25663.0,1758.0,86440.0,USD 2024
+San Juan County,new_money,students,jobs,induced,0.1335,0.1005,0.1326,0.1712,0.0105,0.6356,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,students,labor_income,induced,6476.0,4893.0,6415.0,8234.0,565.0,27690.0,USD 2024
+San Juan County,new_money,students,value_added,induced,10175.0,7688.0,10079.0,12939.0,887.0,43515.0,USD 2024
+San Juan County,new_money,students,taxes,induced,733.0,596.0,791.0,1026.0,64.0,3985.0,USD 2024
+San Juan County,new_money,students,output,total,184112.0,144644.0,183728.0,226787.0,33459.0,440647.0,USD 2024
+San Juan County,new_money,students,jobs,total,1.4775,1.1492,1.4742,1.8391,0.2419,3.8919,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,students,labor_income,total,59865.0,47024.0,59728.0,73719.0,10898.0,142789.0,USD 2024
+San Juan County,new_money,students,value_added,total,92941.0,72995.0,92716.0,114454.0,16885.0,222086.0,USD 2024
+San Juan County,new_money,students,taxes,total,14829.0,11763.0,14891.0,18402.0,2873.0,33870.0,USD 2024
+San Juan County,contribution,visitors,output,direct,230029.0,180883.0,229171.0,282861.0,19321.0,1093982.0,USD 2024
+San Juan County,contribution,visitors,jobs,direct,1.945,1.5145,1.9415,2.4172,0.1451,10.4192,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,visitors,labor_income,direct,78171.0,61455.0,77892.0,96153.0,6560.0,372147.0,USD 2024
+San Juan County,contribution,visitors,value_added,direct,125815.0,98916.0,125341.0,154715.0,10558.0,598796.0,USD 2024
+San Juan County,contribution,visitors,taxes,direct,29831.0,23390.0,29615.0,36569.0,2511.0,140259.0,USD 2024
+San Juan County,contribution,visitors,spending,direct,305641.0,240688.0,304872.0,376481.0,26104.0,1437085.0,USD 2024 (purchaser prices)
+San Juan County,contribution,visitors,output,indirect,12293.0,9287.0,12215.0,15684.0,772.0,74518.0,USD 2024
+San Juan County,contribution,visitors,jobs,indirect,0.0749,0.0563,0.0745,0.0953,0.0042,0.4961,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,visitors,labor_income,indirect,3490.0,2641.0,3465.0,4428.0,220.0,20749.0,USD 2024
+San Juan County,contribution,visitors,value_added,indirect,5644.0,4275.0,5602.0,7152.0,356.0,33380.0,USD 2024
+San Juan County,contribution,visitors,taxes,indirect,446.0,363.0,482.0,627.0,28.0,3435.0,USD 2024
+San Juan County,contribution,visitors,output,induced,30866.0,23297.0,30564.0,39204.0,1153.0,295064.0,USD 2024
+San Juan County,contribution,visitors,jobs,induced,0.2043,0.1537,0.2026,0.2614,0.0069,2.1697,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,visitors,labor_income,induced,9905.0,7476.0,9809.0,12581.0,371.0,94521.0,USD 2024
+San Juan County,contribution,visitors,value_added,induced,15563.0,11746.0,15412.0,19768.0,582.0,148540.0,USD 2024
+San Juan County,contribution,visitors,taxes,induced,1120.0,911.0,1209.0,1568.0,42.0,13602.0,USD 2024
+San Juan County,contribution,visitors,output,total,273188.0,214556.0,272254.0,336004.0,21246.0,1463564.0,USD 2024
+San Juan County,contribution,visitors,jobs,total,2.2242,1.7303,2.2188,2.7631,0.1562,13.085,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,visitors,labor_income,total,91566.0,71930.0,91245.0,112604.0,7151.0,487416.0,USD 2024
+San Juan County,contribution,visitors,value_added,total,147022.0,115516.0,146487.0,180776.0,11496.0,780716.0,USD 2024
+San Juan County,contribution,visitors,taxes,total,31397.0,24723.0,31319.0,38707.0,2581.0,157297.0,USD 2024
+San Juan County,new_money,visitors,output,direct,230029.0,180883.0,229171.0,282861.0,19321.0,1093982.0,USD 2024
+San Juan County,new_money,visitors,jobs,direct,1.945,1.5145,1.9415,2.4172,0.1451,10.4192,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,visitors,labor_income,direct,78171.0,61455.0,77892.0,96153.0,6560.0,372147.0,USD 2024
+San Juan County,new_money,visitors,value_added,direct,125815.0,98916.0,125341.0,154715.0,10558.0,598796.0,USD 2024
+San Juan County,new_money,visitors,taxes,direct,29831.0,23390.0,29615.0,36569.0,2511.0,140259.0,USD 2024
+San Juan County,new_money,visitors,spending,direct,305641.0,240688.0,304872.0,376481.0,26104.0,1437085.0,USD 2024 (purchaser prices)
+San Juan County,new_money,visitors,output,indirect,12293.0,9287.0,12215.0,15684.0,772.0,74518.0,USD 2024
+San Juan County,new_money,visitors,jobs,indirect,0.0749,0.0563,0.0745,0.0953,0.0042,0.4961,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,visitors,labor_income,indirect,3490.0,2641.0,3465.0,4428.0,220.0,20749.0,USD 2024
+San Juan County,new_money,visitors,value_added,indirect,5644.0,4275.0,5602.0,7152.0,356.0,33380.0,USD 2024
+San Juan County,new_money,visitors,taxes,indirect,446.0,363.0,482.0,627.0,28.0,3435.0,USD 2024
+San Juan County,new_money,visitors,output,induced,30866.0,23297.0,30564.0,39204.0,1153.0,295064.0,USD 2024
+San Juan County,new_money,visitors,jobs,induced,0.2043,0.1537,0.2026,0.2614,0.0069,2.1697,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,visitors,labor_income,induced,9905.0,7476.0,9809.0,12581.0,371.0,94521.0,USD 2024
+San Juan County,new_money,visitors,value_added,induced,15563.0,11746.0,15412.0,19768.0,582.0,148540.0,USD 2024
+San Juan County,new_money,visitors,taxes,induced,1120.0,911.0,1209.0,1568.0,42.0,13602.0,USD 2024
+San Juan County,new_money,visitors,output,total,273188.0,214556.0,272254.0,336004.0,21246.0,1463564.0,USD 2024
+San Juan County,new_money,visitors,jobs,total,2.2242,1.7303,2.2188,2.7631,0.1562,13.085,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,visitors,labor_income,total,91566.0,71930.0,91245.0,112604.0,7151.0,487416.0,USD 2024
+San Juan County,new_money,visitors,value_added,total,147022.0,115516.0,146487.0,180776.0,11496.0,780716.0,USD 2024
+San Juan County,new_money,visitors,taxes,total,31397.0,24723.0,31319.0,38707.0,2581.0,157297.0,USD 2024
+San Juan County,contribution,construction_2015_2024_one_time,output,direct,1094878.0,853095.0,1089807.0,1331833.0,618936.0,1621475.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,jobs,direct,4.3813,3.4042,4.3702,5.3474,2.2782,7.0542,job-years over 2015-2024
+San Juan County,contribution,construction_2015_2024_one_time,labor_income,direct,273924.0,213433.0,272655.0,333207.0,154850.0,405672.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,value_added,direct,279221.0,217560.0,277928.0,339650.0,157844.0,413516.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,taxes,direct,39744.0,33347.0,42973.0,53316.0,22467.0,74750.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,output,indirect,44727.0,33292.0,44439.0,57866.0,18504.0,90830.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,jobs,indirect,0.2763,0.2052,0.2748,0.3594,0.1042,0.6196,job-years over 2015-2024
+San Juan County,contribution,construction_2015_2024_one_time,labor_income,indirect,13571.0,10104.0,13481.0,17555.0,5617.0,27540.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,value_added,indirect,22223.0,16551.0,22078.0,28741.0,9204.0,45059.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,taxes,indirect,1624.0,1303.0,1759.0,2301.0,672.0,4187.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,output,induced,108666.0,82104.0,107594.0,136221.0,27296.0,325342.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,jobs,induced,0.7191,0.5405,0.7132,0.9086,0.1635,2.3923,job-years over 2015-2024
+San Juan County,contribution,construction_2015_2024_one_time,labor_income,induced,34872.0,26351.0,34527.0,43702.0,8771.0,104220.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,value_added,induced,54792.0,41401.0,54250.0,68667.0,13780.0,163782.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,taxes,induced,3945.0,3209.0,4248.0,5441.0,991.0,14998.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,output,total,1248271.0,972711.0,1242582.0,1520893.0,664736.0,2037648.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,jobs,total,5.3768,4.1801,5.3656,6.5796,2.5458,10.0662,job-years over 2015-2024
+San Juan County,contribution,construction_2015_2024_one_time,labor_income,total,322367.0,251259.0,321041.0,392988.0,169238.0,537432.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,value_added,total,356236.0,277552.0,355025.0,434981.0,180828.0,622357.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,construction_2015_2024_one_time,taxes,total,45312.0,37991.0,49041.0,60744.0,24130.0,93936.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,output,direct,1094878.0,853095.0,1089807.0,1331833.0,618936.0,1621475.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,jobs,direct,4.3813,3.4042,4.3702,5.3474,2.2782,7.0542,job-years over 2015-2024
+San Juan County,new_money,construction_2015_2024_one_time,labor_income,direct,273924.0,213433.0,272655.0,333207.0,154850.0,405672.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,value_added,direct,279221.0,217560.0,277928.0,339650.0,157844.0,413516.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,taxes,direct,39744.0,33347.0,42973.0,53316.0,22467.0,74750.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,output,indirect,44727.0,33292.0,44439.0,57866.0,18504.0,90830.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,jobs,indirect,0.2763,0.2052,0.2748,0.3594,0.1042,0.6196,job-years over 2015-2024
+San Juan County,new_money,construction_2015_2024_one_time,labor_income,indirect,13571.0,10104.0,13481.0,17555.0,5617.0,27540.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,value_added,indirect,22223.0,16551.0,22078.0,28741.0,9204.0,45059.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,taxes,indirect,1624.0,1303.0,1759.0,2301.0,672.0,4187.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,output,induced,108666.0,82104.0,107594.0,136221.0,27296.0,325342.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,jobs,induced,0.7191,0.5405,0.7132,0.9086,0.1635,2.3923,job-years over 2015-2024
+San Juan County,new_money,construction_2015_2024_one_time,labor_income,induced,34872.0,26351.0,34527.0,43702.0,8771.0,104220.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,value_added,induced,54792.0,41401.0,54250.0,68667.0,13780.0,163782.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,taxes,induced,3945.0,3209.0,4248.0,5441.0,991.0,14998.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,output,total,1248271.0,972711.0,1242582.0,1520893.0,664736.0,2037648.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,jobs,total,5.3768,4.1801,5.3656,6.5796,2.5458,10.0662,job-years over 2015-2024
+San Juan County,new_money,construction_2015_2024_one_time,labor_income,total,322367.0,251259.0,321041.0,392988.0,169238.0,537432.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,value_added,total,356236.0,277552.0,355025.0,434981.0,180828.0,622357.0,USD 2024 (total over 2015-2024)
+San Juan County,new_money,construction_2015_2024_one_time,taxes,total,45312.0,37991.0,49041.0,60744.0,24130.0,93936.0,USD 2024 (total over 2015-2024)
+San Juan County,contribution,memo_resident_faculty_not_in_totals,output,direct,516579.0,516579.0,516579.0,516579.0,516579.0,516579.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,jobs,direct,4.0,4.0,4.0,4.0,4.0,4.0,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,memo_resident_faculty_not_in_totals,labor_income,direct,516579.0,516579.0,516579.0,516579.0,516579.0,516579.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,value_added,direct,516579.0,522411.0,549099.0,591975.0,516579.0,626972.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,taxes,direct,18752.0,19003.0,20239.0,22202.0,18752.0,23814.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,output,indirect,0.0,0.0,0.0,0.0,0.0,0.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,jobs,indirect,0.0,0.0,0.0,0.0,0.0,0.0,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,memo_resident_faculty_not_in_totals,labor_income,indirect,0.0,0.0,0.0,0.0,0.0,0.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,value_added,indirect,0.0,0.0,0.0,0.0,0.0,0.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,taxes,indirect,0.0,0.0,0.0,0.0,0.0,0.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,output,induced,181440.0,158234.0,181358.0,205062.0,85685.0,344500.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,jobs,induced,1.2007,1.0364,1.1997,1.3705,0.5131,2.5332,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,memo_resident_faculty_not_in_totals,labor_income,induced,58226.0,50776.0,58193.0,65806.0,27535.0,110357.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,value_added,induced,91487.0,79784.0,91432.0,103397.0,43257.0,173427.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,taxes,induced,6586.0,6147.0,7146.0,8257.0,3110.0,15881.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,output,total,698019.0,674813.0,697937.0,721641.0,602264.0,861079.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,jobs,total,5.2007,5.0364,5.1997,5.3705,4.5131,6.5332,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,memo_resident_faculty_not_in_totals,labor_income,total,574805.0,567355.0,574772.0,582385.0,544114.0,626936.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,value_added,total,608066.0,611989.0,640623.0,684533.0,559836.0,800399.0,USD 2024
+San Juan County,contribution,memo_resident_faculty_not_in_totals,taxes,total,25338.0,25501.0,27375.0,30139.0,21862.0,39696.0,USD 2024
+San Juan County,contribution,annual_total,output,direct,4893577.0,4462031.0,4995194.0,6207752.0,3579434.0,7548702.0,USD 2024
+San Juan County,contribution,annual_total,jobs,direct,37.929,32.7267,38.0697,44.0164,23.4263,62.586,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,annual_total,labor_income,direct,3320740.0,2973689.0,3328459.0,3736892.0,2729989.0,4230318.0,USD 2024
+San Juan County,contribution,annual_total,value_added,direct,3396122.0,3206606.0,3628685.0,4117458.0,2739410.0,5317406.0,USD 2024
+San Juan County,contribution,annual_total,taxes,direct,207263.0,199699.0,227721.0,276790.0,133402.0,451379.0,USD 2024
+San Juan County,contribution,annual_total,output,indirect,559600.0,369232.0,566986.0,1128480.0,262789.0,1306544.0,USD 2024
+San Juan County,contribution,annual_total,jobs,indirect,1.9436,1.2966,1.9896,3.8416,0.708,5.6511,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,annual_total,labor_income,indirect,168742.0,112147.0,171631.0,340065.0,79158.0,398058.0,USD 2024
+San Juan County,contribution,annual_total,value_added,indirect,259615.0,172569.0,263841.0,523228.0,123613.0,604880.0,USD 2024
+San Juan County,contribution,annual_total,taxes,indirect,20313.0,14374.0,22502.0,44642.0,9539.0,60232.0,USD 2024
+San Juan County,contribution,annual_total,output,induced,1213229.0,1037806.0,1226928.0,1437589.0,455044.0,3164526.0,USD 2024
+San Juan County,contribution,annual_total,jobs,induced,8.0285,6.8066,8.1202,9.6086,2.7249,23.2698,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,annual_total,labor_income,induced,389334.0,332974.0,393701.0,461136.0,146227.0,1013726.0,USD 2024
+San Juan County,contribution,annual_total,value_added,induced,611745.0,523214.0,618606.0,724563.0,229721.0,1593071.0,USD 2024
+San Juan County,contribution,annual_total,taxes,induced,44040.0,40409.0,48363.0,57778.0,16518.0,145885.0,USD 2024
+San Juan County,contribution,annual_total,output,total,6666406.0,6010628.0,6787443.0,8605039.0,4297268.0,12019771.0,USD 2024
+San Juan County,contribution,annual_total,jobs,total,47.901,42.8752,48.5333,54.8653,26.8591,91.5069,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,contribution,annual_total,labor_income,total,3878817.0,3539404.0,3925080.0,4361262.0,2955373.0,5642102.0,USD 2024
+San Juan County,contribution,annual_total,value_added,total,4267482.0,4087363.0,4560658.0,5107403.0,3092745.0,7515358.0,USD 2024
+San Juan County,contribution,annual_total,taxes,total,271617.0,260527.0,299065.0,371864.0,159459.0,657495.0,USD 2024
+San Juan County,new_money,annual_total,output,direct,4655777.0,4244523.0,4757261.0,5895216.0,3271894.0,7419102.0,USD 2024
+San Juan County,new_money,annual_total,jobs,direct,36.1552,31.2428,36.2743,41.913,21.4636,61.594,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,annual_total,labor_income,direct,3152540.0,2824810.0,3162300.0,3550202.0,2495389.0,4151118.0,USD 2024
+San Juan County,new_money,annual_total,value_added,direct,3227922.0,3050339.0,3449421.0,3915814.0,2504810.0,5221281.0,USD 2024
+San Juan County,new_money,annual_total,taxes,direct,198631.0,191378.0,218210.0,264457.0,122238.0,445404.0,USD 2024
+San Juan County,new_money,annual_total,output,indirect,528765.0,349265.0,535276.0,1064370.0,238839.0,1278582.0,USD 2024
+San Juan County,new_money,annual_total,jobs,indirect,1.8409,1.2327,1.8854,3.6319,0.644,5.5394,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,annual_total,labor_income,indirect,159486.0,106068.0,161969.0,320877.0,71944.0,389684.0,USD 2024
+San Juan County,new_money,annual_total,value_added,indirect,245375.0,163513.0,249588.0,494159.0,112348.0,592139.0,USD 2024
+San Juan County,new_money,annual_total,taxes,indirect,19194.0,13620.0,21259.0,42157.0,8670.0,58943.0,USD 2024
+San Juan County,new_money,annual_total,output,induced,1150653.0,984362.0,1164350.0,1365840.0,414904.0,3105420.0,USD 2024
+San Juan County,new_money,annual_total,jobs,induced,7.6144,6.4526,7.7066,9.1216,2.4845,22.8352,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,annual_total,labor_income,induced,369253.0,315979.0,373631.0,438249.0,133328.0,994792.0,USD 2024
+San Juan County,new_money,annual_total,value_added,induced,580192.0,496465.0,587064.0,688560.0,209457.0,1563317.0,USD 2024
+San Juan County,new_money,annual_total,taxes,induced,41769.0,38301.0,45911.0,54809.0,15061.0,143160.0,USD 2024
+San Juan County,new_money,annual_total,output,total,6335195.0,5710558.0,6459020.0,8163649.0,3925637.0,11803104.0,USD 2024
+San Juan County,new_money,annual_total,jobs,total,45.6104,40.8306,46.2159,52.1927,24.5921,89.9686,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE)"
+San Juan County,new_money,annual_total,labor_income,total,3681280.0,3360800.0,3729774.0,4143500.0,2700660.0,5535594.0,USD 2024
+San Juan County,new_money,annual_total,value_added,total,4053490.0,3881816.0,4331646.0,4857528.0,2826615.0,7376737.0,USD 2024
+San Juan County,new_money,annual_total,taxes,total,259594.0,248780.0,286089.0,354603.0,145969.0,647507.0,USD 2024
+Washington State,contribution,construction_2015_2024_annual_average,output,direct,208027.0,199444.0,207878.0,216679.0,185681.0,231639.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,jobs,direct,0.5527,0.52,0.5526,0.5868,0.4538,0.6691,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) per year (decade total / 10)"
+Washington State,contribution,construction_2015_2024_annual_average,labor_income,direct,52046.0,49898.0,52008.0,54210.0,46455.0,57953.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,value_added,direct,53052.0,50863.0,53014.0,55259.0,47353.0,59074.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,taxes,direct,7551.0,7564.0,8160.0,9007.0,6740.0,10679.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,output,indirect,102627.0,98393.0,102554.0,106896.0,91603.0,114276.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,jobs,indirect,0.3957,0.3699,0.3957,0.4231,0.3202,0.4889,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) per year (decade total / 10)"
+Washington State,contribution,construction_2015_2024_annual_average,labor_income,indirect,29387.0,28174.0,29366.0,30609.0,26230.0,32722.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,value_added,indirect,46910.0,44974.0,46876.0,48861.0,41871.0,52234.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,taxes,indirect,3725.0,3732.0,4026.0,4443.0,3325.0,5268.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,output,induced,63949.0,63138.0,67031.0,71942.0,56440.0,138652.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,jobs,induced,0.2798,0.2713,0.2941,0.3202,0.2241,0.6721,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) per year (decade total / 10)"
+Washington State,contribution,construction_2015_2024_annual_average,labor_income,induced,20032.0,19778.0,20997.0,22536.0,17680.0,43432.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,value_added,induced,31020.0,30626.0,32515.0,34897.0,27377.0,67256.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,taxes,induced,2321.0,2409.0,2643.0,2949.0,2049.0,6392.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,output,total,374603.0,362071.0,377564.0,394156.0,333724.0,484567.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,jobs,total,1.2282,1.1646,1.2431,1.3257,0.9981,1.8302,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) per year (decade total / 10)"
+Washington State,contribution,construction_2015_2024_annual_average,labor_income,total,101464.0,98184.0,102413.0,106930.0,90365.0,134108.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,value_added,total,130981.0,126943.0,132463.0,138420.0,116601.0,178564.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,construction_2015_2024_annual_average,taxes,total,13598.0,13739.0,14825.0,16367.0,12114.0,22339.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,output,direct,109488.0,85309.0,108981.0,133183.0,61894.0,162148.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,jobs,direct,0.4381,0.3404,0.437,0.5347,0.2278,0.7054,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) per year (decade total / 10)"
+San Juan County,contribution,construction_2015_2024_annual_average,labor_income,direct,27392.0,21343.0,27266.0,33321.0,15485.0,40567.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,value_added,direct,27922.0,21756.0,27793.0,33965.0,15784.0,41352.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,taxes,direct,3974.0,3335.0,4297.0,5332.0,2247.0,7475.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,output,indirect,4473.0,3329.0,4444.0,5787.0,1850.0,9083.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,jobs,indirect,0.0276,0.0205,0.0275,0.0359,0.0104,0.062,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) per year (decade total / 10)"
+San Juan County,contribution,construction_2015_2024_annual_average,labor_income,indirect,1357.0,1010.0,1348.0,1756.0,562.0,2754.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,value_added,indirect,2222.0,1655.0,2208.0,2874.0,920.0,4506.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,taxes,indirect,162.0,130.0,176.0,230.0,67.0,419.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,output,induced,10867.0,8210.0,10759.0,13622.0,2730.0,32534.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,jobs,induced,0.0719,0.0541,0.0713,0.0909,0.0163,0.2392,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) per year (decade total / 10)"
+San Juan County,contribution,construction_2015_2024_annual_average,labor_income,induced,3487.0,2635.0,3453.0,4370.0,877.0,10422.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,value_added,induced,5479.0,4140.0,5425.0,6867.0,1378.0,16378.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,taxes,induced,394.0,321.0,425.0,544.0,99.0,1500.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,output,total,124827.0,97271.0,124258.0,152089.0,66474.0,203765.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,jobs,total,0.5377,0.418,0.5366,0.658,0.2546,1.0066,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) per year (decade total / 10)"
+San Juan County,contribution,construction_2015_2024_annual_average,labor_income,total,32237.0,25126.0,32104.0,39299.0,16924.0,53743.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,value_added,total,35624.0,27755.0,35503.0,43498.0,18083.0,62236.0,USD 2024 per year (decade total / 10)
+San Juan County,contribution,construction_2015_2024_annual_average,taxes,total,4531.0,3799.0,4904.0,6074.0,2413.0,9394.0,USD 2024 per year (decade total / 10)
+Washington State,contribution,annual_total_tax_method_B_crosscheck,taxes,total,419152.0,390615.0,431226.0,475410.0,287614.0,829571.0,USD 2024 (ITEP household rate x resident wages + direct taxes on user spending)
+San Juan County,contribution,annual_total_tax_method_B_crosscheck,taxes,total,326732.0,299201.0,330931.0,365409.0,212967.0,601132.0,USD 2024 (ITEP household rate x resident wages + direct taxes on user spending)
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,direct,5042445.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,direct,38.4069,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,direct,3368463.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,direct,3473011.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,direct,210717.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,indirect,1227081.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,indirect,3.6024,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,indirect,370130.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,indirect,571670.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,indirect,44543.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,induced,5522864.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,induced,24.1663,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,induced,1730026.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,induced,2678985.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,induced,200480.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,total,11792390.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,total,66.1757,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,total,5468619.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,total,6723666.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,total,455741.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,direct,1681320.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,direct,13.4963,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,direct,1097490.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,direct,1147837.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,direct,75933.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,indirect,372785.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,indirect,1.1511,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,indirect,116947.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,indirect,178498.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,indirect,13532.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,induced,1791983.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,induced,7.8411,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,induced,561335.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,induced,869240.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,induced,65049.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,total,3846088.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,total,22.4886,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,total,1775772.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,total,2195575.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,total,154514.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,direct,4893577.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,direct,37.929,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,direct,3320740.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,direct,3396122.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,direct,207263.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,indirect,559600.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,indirect,1.9436,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,indirect,168742.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,indirect,259615.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,indirect,20313.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,induced,2228632.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,induced,14.7478,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,induced,715185.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,induced,1123740.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,induced,80899.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,total,7681809.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,total,54.6204,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,total,4204667.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,total,4779477.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,contribution,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,total,308476.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,direct,4655777.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,direct,36.1552,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,direct,3152540.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,direct,3227922.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,direct,198631.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,indirect,528765.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,indirect,1.8409,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,indirect,159486.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,indirect,245375.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,indirect,19194.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,induced,2113684.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,induced,13.9872,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,induced,678297.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,induced,1065780.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,induced,76727.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,output,total,7298226.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,jobs,total,51.9832,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))"
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,labor_income,total,3990324.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,value_added,total,4539077.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+San Juan County,new_money,annual_total__VARIANT_OFM_CLOSURE_AS_BUILT,taxes,total,294552.0,,,,,,USD 2024 (variant: Both regions: household closures as built (WA OFM s = 1; county SLQ households unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,direct,5042445.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,direct,38.4069,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,direct,3368463.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,direct,3473011.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,direct,210717.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,indirect,1227081.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,indirect,3.6024,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,indirect,370130.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,indirect,571670.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,indirect,44543.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,induced,2836379.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,induced,12.4111,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,induced,888490.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,induced,1375847.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,induced,102961.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,total,9105905.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,total,54.4205,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,total,4627083.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,total,5420528.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,total,358221.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,direct,1681320.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,direct,13.4963,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,direct,1097490.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,direct,1147837.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,direct,75933.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,indirect,372785.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,indirect,1.1511,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,indirect,116947.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,indirect,178498.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,indirect,13532.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,induced,920309.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,induced,4.027,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,induced,288285.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,induced,446416.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,induced,33407.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,total,2974415.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,total,18.6744,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,total,1502722.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,total,1772750.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,total,122873.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,direct,4893577.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,direct,37.929,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,direct,3320740.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,direct,3396122.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,direct,207263.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,indirect,559600.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,indirect,1.9436,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,indirect,168742.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,indirect,259615.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,indirect,20313.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,induced,579176.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,induced,3.8772,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,induced,181096.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,induced,300528.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,induced,21024.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,total,6032353.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,total,43.7498,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,total,3670578.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,total,3956265.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,contribution,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,total,248601.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,direct,4655777.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,direct,36.1552,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,direct,3152540.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,direct,3227922.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,direct,198631.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,indirect,528765.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,indirect,1.8409,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,indirect,159486.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,indirect,245375.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,indirect,19194.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,induced,549303.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,induced,3.6772,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,induced,171755.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,induced,285027.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,induced,19940.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,output,total,5733845.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,jobs,total,41.6733,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: FLQ-scaled household closure (unscaled))"
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,labor_income,total,3483782.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,value_added,total,3758325.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+San Juan County,new_money,annual_total__VARIANT_SJC_FLQ_HOUSEHOLDS,taxes,total,237765.0,,,,,,USD 2024 (variant: County: FLQ-scaled household closure (unscaled))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,direct,5042445.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,direct,38.4069,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,direct,3368463.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,direct,3473011.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,direct,210717.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,indirect,1227081.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,indirect,3.6024,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,indirect,370130.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,indirect,571670.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,indirect,44543.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,induced,2836379.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,induced,12.4111,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,induced,888490.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,induced,1375847.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,induced,102961.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,total,9105905.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,total,54.4205,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,total,4627083.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,total,5420528.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,total,358221.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,direct,1681320.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,direct,13.4963,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,direct,1097490.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,direct,1147837.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,direct,75933.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,indirect,372785.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,indirect,1.1511,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,indirect,116947.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,indirect,178498.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,indirect,13532.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,induced,920309.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,induced,4.027,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,induced,288285.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,induced,446416.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,induced,33407.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,total,2974415.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,total,18.6744,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,total,1502722.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,total,1772750.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,total,122873.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,direct,4893577.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,direct,37.929,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,direct,3320740.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,direct,3396122.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,direct,207263.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,indirect,559643.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,indirect,1.9431,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,indirect,168758.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,indirect,259649.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,indirect,20315.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,induced,1213236.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,induced,8.207,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,induced,382415.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,induced,618451.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,induced,44040.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,total,6666456.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,total,48.0791,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,total,3871914.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,total,4274223.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,contribution,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,total,271619.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,direct,4655777.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,direct,36.1552,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,direct,3152540.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,direct,3227922.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,direct,198631.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,indirect,528801.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,indirect,1.8404,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,indirect,159501.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,indirect,245406.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,indirect,19195.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,induced,1150659.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,induced,7.7837,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,induced,362691.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,induced,586553.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,induced,41769.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,output,total,6335237.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,jobs,total,45.7792,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: no hospital imputation into IO-47 (QCEW as published))"
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,labor_income,total,3674732.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,value_added,total,4059881.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+San Juan County,new_money,annual_total__VARIANT_SJC_QCEW_AS_PUBLISHED,taxes,total,259596.0,,,,,,USD 2024 (variant: County: no hospital imputation into IO-47 (QCEW as published))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,direct,5042445.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,direct,38.4069,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,direct,3368463.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,direct,3473011.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,direct,210717.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,indirect,1227081.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,indirect,3.6024,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,indirect,370130.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,indirect,571670.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,indirect,44543.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,induced,2836379.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,induced,12.4111,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,induced,888490.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,induced,1375847.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,induced,102961.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,total,9105905.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,total,54.4205,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,total,4627083.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,total,5420528.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,total,358221.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,direct,1681320.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,direct,13.4963,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,direct,1097490.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,direct,1147837.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,direct,75933.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,indirect,372785.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,indirect,1.1511,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,indirect,116947.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,indirect,178498.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,indirect,13532.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,induced,920309.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,induced,4.027,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,induced,288285.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,induced,446416.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,induced,33407.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,total,2974415.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,total,18.6744,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,total,1502722.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,total,1772750.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+Washington State,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,total,122873.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,direct,4893577.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,direct,37.929,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,direct,3320740.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,direct,3396122.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,direct,207263.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,indirect,559654.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,indirect,1.944,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,indirect,168754.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,indirect,259643.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,indirect,20315.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,induced,1213234.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,induced,8.0303,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,induced,388765.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,induced,611808.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,induced,44040.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,total,6666465.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,total,47.9033,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,total,3878259.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,total,4267574.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,contribution,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,total,271619.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,direct,4655777.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,direct,36.1552,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,direct,3152540.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,direct,3227922.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,direct,198631.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,indirect,528817.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,indirect,1.8412,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,indirect,159498.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,indirect,245402.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,indirect,19196.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,induced,1150658.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,induced,7.6162,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,induced,368713.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,induced,580252.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,induced,41769.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,output,total,6335252.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,jobs,total,45.6125,,,,,,"jobs (annual-average, full- and part-time; direct FHL jobs are FTE) (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))"
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,labor_income,total,3680752.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,value_added,total,4053577.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,new_money,annual_total__VARIANT_SJC_IO30_AS_MODULE,taxes,total,259596.0,,,,,,USD 2024 (variant: County: non-store retail (IO-30) borrows the store-retail LQ (multipliers module mapping))
+San Juan County,context,context_ratio,FHL direct annual-average jobs (FTE) / (SJC QCEW covered employment + FHL),,0.005,,,,0.0035,0.0067,ratio
+San Juan County,context,context_ratio,FHL headcount (people employed during the year) / (SJC QCEW covered employment + FHL headcount) [memo; not like-for-like],,0.008,,,,0.006,0.0105,ratio
+San Juan County,context,context_ratio,FHL wages (operations) / (SJC QCEW covered wages + FHL wages),,0.0067,,,,0.006,0.0077,ratio
+San Juan County,context,context_ratio,FHL wages per annual-average job (USD),,71935.0,,,,47178.0,117189.0,USD 2024
+San Juan County,context,context_ratio,FHL wages per headcount (USD),,44898.0,,,,30000.0,67568.0,USD 2024
+San Juan County,context,context_ratio,"SJC average annual pay per job, QCEW 2024 (USD)",,53170.0,,,,53170.0,53170.0,USD 2024
+San Juan County,context,context_ratio,FHL wages per annual-average job / SJC average pay per job (QCEW concept),,1.3529,,,,0.8873,2.2041,ratio
+San Juan County,context,context_ratio,FHL wages per headcount / SJC average pay per job [memo; seasonal and part-year people counted whole],,0.8444,,,,0.5642,1.2708,ratio
+San Juan County,context,context_ratio,"QCEW 2022 state-university cell in SJC (23 jobs, wages in 2024 USD): measured public lower bound of FHL in-county wages (USD)",,1009735.0,,,,1009735.0,1009735.0,USD 2024
+San Juan County,context,context_ratio,QCEW 2022 state-university cell average pay (2024 USD),,43902.0,,,,43902.0,43902.0,USD 2024
+San Juan County,context,context_ratio,"All FHL-related jobs in SJC (annual total, contribution; incl. proprietors) / BEA 2022 total employment incl. proprietors (11,979)",,0.004,,,,0.0022,0.0076,ratio
+San Juan County,context,context_ratio,All FHL-related labor income in SJC / BEA 2024 earnings by place of work (compensation + proprietors income),,0.0058,,,,0.0044,0.0084,ratio
+San Juan County,context,context_ratio,"Operations new-money share, SJC",,0.942,,,,0.908,0.976,ratio
+Washington State,context,context_ratio,"Operations new-money share, WA",,0.249,,,,0.1517,0.3357,ratio
+Washington State,context,context_ratio,WA resident share of FHL operations payroll,,0.9613,,,,0.9434,0.9793,ratio

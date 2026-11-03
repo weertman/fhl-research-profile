@@ -7,7 +7,7 @@ decade,organism,n
 1910,Echinoderms,3
 1910,Fishes,8
 1910,Many groups,4
-1910,Molluscs,2
+1910,Mollusks,2
 1910,No particular organism,7
 1910,Other invertebrates & tunicates,1
 1910,"Seaweeds, seagrasses & plants",41
@@ -18,7 +18,7 @@ decade,organism,n
 1920,Echinoderms,6
 1920,Fishes,6
 1920,Many groups,10
-1920,Molluscs,9
+1920,Mollusks,9
 1920,No particular organism,21
 1920,Other invertebrates & tunicates,2
 1920,Phytoplankton & protists,2
@@ -29,7 +29,7 @@ decade,organism,n
 1930,Echinoderms,1
 1930,Fishes,1
 1930,Many groups,5
-1930,Molluscs,3
+1930,Mollusks,3
 1930,No particular organism,15
 1930,Other invertebrates & tunicates,1
 1930,Phytoplankton & protists,11
@@ -47,7 +47,7 @@ decade,organism,n
 1950,Echinoderms,12
 1950,Fishes,4
 1950,Many groups,2
-1950,Molluscs,6
+1950,Mollusks,6
 1950,No particular organism,9
 1950,Other invertebrates & tunicates,1
 1950,Phytoplankton & protists,3
@@ -60,7 +60,7 @@ decade,organism,n
 1960,Echinoderms,27
 1960,Fishes,16
 1960,Many groups,4
-1960,Molluscs,21
+1960,Mollusks,21
 1960,No particular organism,13
 1960,Other invertebrates & tunicates,4
 1960,Phytoplankton & protists,7
@@ -73,7 +73,7 @@ decade,organism,n
 1970,Echinoderms,42
 1970,Fishes,8
 1970,Many groups,15
-1970,Molluscs,70
+1970,Mollusks,70
 1970,No particular organism,18
 1970,Other invertebrates & tunicates,13
 1970,Phytoplankton & protists,16
@@ -86,7 +86,7 @@ decade,organism,n
 1980,Echinoderms,99
 1980,Fishes,28
 1980,Many groups,44
-1980,Molluscs,93
+1980,Mollusks,93
 1980,No particular organism,23
 1980,Other invertebrates & tunicates,28
 1980,Phytoplankton & protists,13
@@ -99,7 +99,7 @@ decade,organism,n
 1990,Echinoderms,38
 1990,Fishes,37
 1990,Many groups,53
-1990,Molluscs,84
+1990,Mollusks,84
 1990,No particular organism,39
 1990,Other invertebrates & tunicates,40
 1990,Phytoplankton & protists,4
@@ -112,7 +112,7 @@ decade,organism,n
 2000,Echinoderms,58
 2000,Fishes,35
 2000,Many groups,61
-2000,Molluscs,116
+2000,Mollusks,116
 2000,No particular organism,115
 2000,Other invertebrates & tunicates,87
 2000,Phytoplankton & protists,13
@@ -125,7 +125,7 @@ decade,organism,n
 2010,Echinoderms,118
 2010,Fishes,235
 2010,Many groups,99
-2010,Molluscs,205
+2010,Mollusks,205
 2010,No particular organism,226
 2010,Other invertebrates & tunicates,99
 2010,Phytoplankton & protists,61
@@ -138,7 +138,7 @@ decade,organism,n
 2020,Echinoderms,67
 2020,Fishes,196
 2020,Many groups,65
-2020,Molluscs,100
+2020,Mollusks,100
 2020,No particular organism,122
 2020,Other invertebrates & tunicates,31
 2020,Phytoplankton & protists,31

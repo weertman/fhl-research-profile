@@ -27,7 +27,7 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 12,,1,Verify rosters,check,29,,,,that batch's new entries,re-opens each page; confirms or removes every entry
 13,,0,Extract events,make,12,,,744 dated events,one group of history sources,"lists dated events, each with its source"
 13,,1,Images,make,3,,,,openly licensed images,writes a caption and alt text for each
-13,,2,Synthesise,review,1,,,,every extracted event,merges duplicates and conflicts into one timeline
+13,,2,Synthesize,review,1,,,,every extracted event,merges duplicates and conflicts into one timeline
 13,,3,Fact-check,check,4,,,46 of 102 events corrected,a quarter of the timeline,checks each event's date and summary against sources
 14,,0,Find,make,8,,,172 candidate images,the chronicle's events and the images from run 13,searches one kind of source for images
 14,,1,Check,check,24,,,135 passed,eight of a finder's candidates,"confirms license, relevance and quality; writes the caption"

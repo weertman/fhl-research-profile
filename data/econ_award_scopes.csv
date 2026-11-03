@@ -1,0 +1,6 @@
+scope,label,n_awards,usd_nominal,n_papers,n_sited_at_fhl,usd_sited_at_fhl,spent_at_fhl,dollar_year,source
+all_plausible,All awards named,944,5169545513,784,19,22030678,partly,as awarded (nominal),"award_pricing/totals_subsets.csv (NSF+NIH), priced_awards.csv"
+research_projects,Research projects,771,1881790715,694,12,7701004,partly,as awarded (nominal),"award_pricing/totals_subsets.csv (NSF+NIH), priced_awards.csv"
+research_verified,Named by verified papers,645,1464246813,629,11,7678004,partly,as awarded (nominal),"award_pricing/totals_subsets.csv (NSF+NIH), priced_awards.csv"
+uw_awardee,Awarded to UW,86,93236942,193,11,7678004,partly,as awarded (nominal),"award_pricing/priced_awards.csv (verified research projects, awardee University of Washington)"
+sited_at_fhl,Carried out at FHL,11,7678004,78,11,7678004,yes,as awarded (nominal),"award_pricing/priced_awards.csv (verified research projects, awardee University of Washington, sited at FHL)"

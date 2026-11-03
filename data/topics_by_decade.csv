@@ -7,7 +7,7 @@ decade,topic,n
 1910,Ecology,7
 1910,"Fisheries, conservation & human impacts",4
 1910,"Microbes, symbiosis & disease",1
-1910,Neurobiology & behaviour,1
+1910,Neurobiology & behavior,1
 1910,Other,7
 1910,Physiology,18
 1910,Taxonomy & natural history,24
@@ -16,7 +16,7 @@ decade,topic,n
 1920,"Development, larvae & reproduction",22
 1920,Ecology,9
 1920,"Microbes, symbiosis & disease",1
-1920,Neurobiology & behaviour,1
+1920,Neurobiology & behavior,1
 1920,Oceanography & environment,15
 1920,Other,3
 1920,Physiology,18
@@ -41,7 +41,7 @@ decade,topic,n
 1950,"Evolution, genetics & genomics",2
 1950,"Fisheries, conservation & human impacts",2
 1950,"Microbes, symbiosis & disease",5
-1950,Neurobiology & behaviour,1
+1950,Neurobiology & behavior,1
 1950,Oceanography & environment,7
 1950,Other,3
 1950,Physiology,13
@@ -53,7 +53,7 @@ decade,topic,n
 1960,"Evolution, genetics & genomics",2
 1960,"Fisheries, conservation & human impacts",1
 1960,"Microbes, symbiosis & disease",5
-1960,Neurobiology & behaviour,15
+1960,Neurobiology & behavior,15
 1960,Oceanography & environment,4
 1960,Other,6
 1960,Physiology,33
@@ -65,7 +65,7 @@ decade,topic,n
 1970,"Evolution, genetics & genomics",7
 1970,"Fisheries, conservation & human impacts",1
 1970,"Microbes, symbiosis & disease",6
-1970,Neurobiology & behaviour,60
+1970,Neurobiology & behavior,60
 1970,Oceanography & environment,1
 1970,Other,9
 1970,Physiology,34
@@ -77,7 +77,7 @@ decade,topic,n
 1980,"Evolution, genetics & genomics",13
 1980,"Fisheries, conservation & human impacts",10
 1980,"Microbes, symbiosis & disease",5
-1980,Neurobiology & behaviour,52
+1980,Neurobiology & behavior,52
 1980,Oceanography & environment,8
 1980,Other,8
 1980,Paleobiology & taphonomy,4
@@ -91,7 +91,7 @@ decade,topic,n
 1990,"Evolution, genetics & genomics",20
 1990,"Fisheries, conservation & human impacts",14
 1990,"Microbes, symbiosis & disease",5
-1990,Neurobiology & behaviour,56
+1990,Neurobiology & behavior,56
 1990,Oceanography & environment,17
 1990,Other,19
 1990,Paleobiology & taphonomy,1
@@ -105,7 +105,7 @@ decade,topic,n
 2000,"Evolution, genetics & genomics",61
 2000,"Fisheries, conservation & human impacts",45
 2000,"Microbes, symbiosis & disease",15
-2000,Neurobiology & behaviour,72
+2000,Neurobiology & behavior,72
 2000,Oceanography & environment,35
 2000,Other,34
 2000,Paleobiology & taphonomy,8
@@ -120,7 +120,7 @@ decade,topic,n
 2010,"Evolution, genetics & genomics",116
 2010,"Fisheries, conservation & human impacts",89
 2010,"Microbes, symbiosis & disease",32
-2010,Neurobiology & behaviour,76
+2010,Neurobiology & behavior,76
 2010,Oceanography & environment,64
 2010,Other,76
 2010,Paleobiology & taphonomy,7
@@ -135,7 +135,7 @@ decade,topic,n
 2020,"Evolution, genetics & genomics",85
 2020,"Fisheries, conservation & human impacts",88
 2020,"Microbes, symbiosis & disease",60
-2020,Neurobiology & behaviour,60
+2020,Neurobiology & behavior,60
 2020,Oceanography & environment,40
 2020,Other,43
 2020,Paleobiology & taphonomy,6
