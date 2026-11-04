@@ -72,7 +72,7 @@ donor_share,0.24,a quarter,share,,"Share of the money FHL spends each year that 
 donor_share_year,2023,2023,year,,Year FHL published the donor-share estimate (March 2023),model/build/inputs.csv,https://web.archive.org/web/20240118033054/https://fhl.uw.edu/about/news-and-events/2023/03/21/tide-bite-april-2023/,corrected
 gfp_pubmed,51568,"51,568",records,,PubMed records under the subject heading Green Fluorescent Proteins (retrieved 2 Nov 2026),innovation_downstream/pubmed_counts.csv,https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&rettype=count&term=%22Green%20Fluorescent%20Proteins%22%5BMeSH%20Terms%5D,verified
 gfp_pubmed_date,2026-11,November 2026,month,,Month the PubMed counts were retrieved,innovation_downstream/pubmed_counts.csv,https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&rettype=count&term=%22Green%20Fluorescent%20Proteins%22%5BMeSH%20Terms%5D,verified
-gfp_pubmed_years_sum,51180,"51,180",records,,"Sum of the yearly counts of Fig. 24 (1962–2025, by Entrez date, one year per record); the total also holds later records",innovation_downstream/pubmed_counts.csv,,verified
+gfp_pubmed_years_sum,51180,"51,180",records,,"Sum of the yearly counts of Fig. 23 (1962–2025, by Entrez date, one year per record); the total also holds later records",innovation_downstream/pubmed_counts.csv,,verified
 jellyfish_1961,10000,"10,000",jellyfish,,Jellyfish processed at FHL in summer 1961,innovation_downstream/items.json,https://www.nobelprize.org/uploads/2018/06/shimomura_lecture.pdf,verified
 sjc_jobs_2024,6097,"6,097",jobs,,Covered jobs in San Juan County (QCEW),people_and_local/san_juan_county_qcew.csv,https://data.bls.gov/cew/data/api/2024/a/area/53055.csv,verified
 sjc_pay,53170,"$53,170",dollars,2024,Average yearly pay per covered job (QCEW),people_and_local/san_juan_county_qcew.csv,https://data.bls.gov/cew/data/api/2024/a/area/53055.csv,verified
@@ -87,7 +87,7 @@ n_inputs_ranged,106,106,inputs,,"Model inputs with a low–high range that are v
 n_inputs_fixed,36,36,inputs,,"Fixed inputs (measured or definitional values and sector mappings), not varied",model/build/inputs.csv,,model
 n_inputs_memo,18,18,inputs,,"Memo inputs, reported for context or checks and outside the totals",model/build/inputs.csv,,model
 n_draws,10000,"10,000",draws,,Monte Carlo draws behind the 10th–90th percentile ranges,model/build/results.json,,model
-n_input_groups,72,72,groups,,Input groups tested one at a time (Fig. 20),model/build/sensitivity.csv,,model
+n_input_groups,72,72,groups,,Input groups tested one at a time (Fig. 35),model/build/sensitivity.csv,,model
 io_year,2012,2012,year,,Year of the state input-output table,model/build/METHOD.md,,model
 io_industries,52,52,industries,,Industries in the state input-output table,model/build/METHOD.md,,model
 induced_vs_implan,1.947153,twice,ratio,,Household-spending effects of the state table against the IMPLAN calibration,model/build/results.json (model_meta),,model

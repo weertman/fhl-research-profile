@@ -249,6 +249,8 @@
   .fp-strip-head { margin: 1.1rem 0 .1rem; padding-top: .7rem; border-top: 1px solid color-mix(in oklab, var(--fp-ink) 35%, var(--fp-paper)); }
   .fp .fp-pool-label { margin: .5rem 0 .2rem; font-size: .85rem; font-style: italic; }
   .fp-chart#ch-tree-staff { min-height: 0; }
+  #ch-status, #ch-recall, #ch-linksrc, #ch-econ, #ch-econ-scopes { min-height: 0; }
+  @media (max-width: 560px) { #tbl-audit th, #tbl-econ-sources th { white-space: normal; } #tbl-econ-sources th, #tbl-econ-sources td { padding-left: .25rem; padding-right: .25rem; } }
   .fp-slider.all input[type="range"] { opacity: .45; }
   .fp-slider output { min-width: 4.5rem; font-variant-numeric: tabular-nums; font-size: .95rem; }
   .fp-toggle .fp-gap { width: 1.2rem; }
@@ -332,7 +334,7 @@
   #tbl-pubs td.why { font-size: .78rem; color: var(--fp-ink-2); min-width: 14rem; }
   #tbl-pubs td.why summary { cursor: pointer; }
   #tbl-pubs td.why details[open] { color: var(--fp-ink); }
-  /* Methods figures of how the AI agents were used (Figs. 27-34; drawn by methods.js). One square = one agent. */
+  /* Methods figures of how the AI agents were used (Figs. 24-28 and 30-32; drawn by methods.js). One square = one agent. */
   .fm-chart { min-height: 6rem; }
   .fm-cartoon svg { display: block; width: 100%; height: auto; }
   .fm-cartoon.fm-tall svg { max-width: 30rem; margin: 0 auto; }
@@ -407,10 +409,12 @@
   .fp-arch { max-width: 60rem; width: 100%; margin: 0 auto; display: grid; gap: .6rem; }
   .fp-arch > .fp-collapse-body { gap: 1rem; }
   .fp-arch h3.fold { font-weight: 400; letter-spacing: .1em; text-transform: uppercase; font-size: .95rem; }
+  .fp-arch h4 { margin: .5rem 0 0; font-weight: 400; font-variant: small-caps; letter-spacing: .05em; font-size: .98rem; }
   .fp-arch h3.fold .cnt, .fp-collapse-btn .cnt { font-size: .8rem; letter-spacing: 0; text-transform: none; color: var(--fp-ink-2); font-style: italic; }
   .fp-arch .srcs a { display: inline-block; padding: .15rem .2rem; font-size: .78rem; color: inherit; }
   .fp-arch .fp-scroll { max-height: 30rem; overflow: auto; border-top: 1.5px solid var(--fp-ink); border-bottom: 1.5px solid var(--fp-ink); }
   .fp-arch table td { font-size: .84rem; }
+  #economics .fp-scroll { max-height: none; border: 0; }
   .fp-artprog dl { margin: 0; display: grid; gap: .25rem; font-size: .88rem; }
   .fp .fp-artgal figure img { filter: none; cursor: zoom-in; } /* art keeps its colors */
   .fp-artprog dt { font-variant: small-caps; letter-spacing: .03em; }
@@ -609,7 +613,7 @@
 
   <p class="fp-lead" id="takeaway">
     For more than a century, scientists who came to Friday Harbor have written up what they found there. This report
-    counts that work, including what appeared under the station's earlier names (Table IX). Of the papers, books, theses
+    counts that work, including what appeared under the station's earlier names (Table VII, in the Methods tab). Of the papers, books, theses
     and datasets published since <span data-source="headline" data-field="first_year">—</span>,
     <b data-source="headline" data-field="verified" class="dash-skeleton">—</b> were verified from the record itself as
     tied to the station; counting the verified ones at the precision the audit measured and the candidates that could not be read at the share of their tier that named FHL when the paper could be read, the
@@ -620,10 +624,10 @@
     with one of FHL's own scientists among the authors, and about <span id="split-others">—</span> by visiting
     researchers, students and other collaborators, much of it written elsewhere. In all, the 173 FHL scientists identified by address (section IV; 41 of them still publishing from FHL), wherever they were,
     published about <span id="split-all">—</span> research papers a year over 2016–2025; most of these do not name the station. The sections below show what the work was about, who did it (where they came
-    from, whom they trained and where they went), where the station appears in each publication, and what the station's
-    activity contributes to the economy of the island and the state. AI agents
-    assembled the census by searching databases, archives and FHL's own lists. Every figure states its uncertainty; the
-    methods and the prompts that built the census are given in full; and the data are <a href="https://github.com/weertman/fhl-research-profile/tree/main/data" target="_blank" rel="noopener">public</a>.
+    from, whom they trained and where they went) and where the station appears in each publication; the Chronicle tab tells
+    the station's history and what its activity contributes to the economy of the island and the state. AI agents
+    assembled the census by searching databases, archives and FHL's own lists. How far to trust it, the
+    methods and the prompts that built it are given in the Methods tab, and the data are <a href="https://github.com/weertman/fhl-research-profile/tree/main/data" target="_blank" rel="noopener">public</a>.
   </p>
 
 
@@ -638,16 +642,15 @@
       <li><a href="#kinds"><span class="num">V.</span><span class="t">What kinds of work</span><span class="dots"></span><span class="refs">Figs. 13–15</span></a></li>
       <li><a href="#citations"><span class="num">VI.</span><span class="t">Citations</span><span class="dots"></span><span class="refs">Figs. 16–17, Table II</span></a></li>
       <li><a href="#news"><span class="num">VII.</span><span class="t">In the news</span><span class="dots"></span><span class="refs">Fig. 18</span></a></li>
-      <li><a href="#economics"><span class="num">VIII.</span><span class="t">Economic contribution</span><span class="dots"></span><span class="refs">Figs. 19–24, Tables III–VI</span></a></li>
-      <li><a href="#reliability"><span class="num">IX.</span><span class="t">How the census was built, and how far to trust it</span><span class="dots"></span><span class="refs">Figs. 25–26, Table VII</span></a></li>
-      <li><a href="#all-publications"><span class="num">X.</span><span class="t">Catalog of publications</span><span class="dots"></span><span class="refs">Table VIII</span></a></li>
+      <li><a href="#all-publications"><span class="num">VIII.</span><span class="t">Catalog of publications</span><span class="dots"></span><span class="refs">Table III</span></a></li>
       <li><a href="#headline"><span class="num"></span><span class="t">Summary of results</span><span class="dots"></span><span class="refs"></span></a></li>
       <li><a href="#ode"><span class="num"></span><span class="t">Ode to the life of the sea</span><span class="dots"></span><span class="refs"></span></a></li>
-      <li><a href="#history"><span class="num">XI.</span><span class="t">Chronicle of the station</span><span class="dots"></span><span class="refs">Separate tab</span></a></li>
-      <li><a href="#method"><span class="num">XII.</span><span class="t">Technical methods</span><span class="dots"></span><span class="refs">Separate tab · Figs. 27–35, Tables IX–X</span></a></li>
+      <li><a href="#history"><span class="num">IX.</span><span class="t">Chronicle of the station</span><span class="dots"></span><span class="refs">Separate tab</span></a></li>
+      <li><a href="#economics"><span class="num"></span><span class="t">Economic contribution and discoveries, in the Chronicle</span><span class="dots"></span><span class="refs">Figs. 19–23, Tables IV–VI</span></a></li>
+      <li><a href="#method"><span class="num">X.</span><span class="t">Technical methods, in a separate tab</span><span class="dots"></span><span class="refs">Figs. 24–35, Tables VII–X</span></a></li>
     </ol>
     <p class="tip">Hover over a chart for values. Hover over an entry in a figure's key to highlight it, or click to keep it
-      highlighted. In the downloadable and website copies, every chart except Figs. 29 and 32 can be saved as PNG or SVG.</p>
+      highlighted. In the downloadable and website copies, every chart except Figs. 26 and 30 can be saved as PNG or SVG.</p>
   </nav>
 
   <figure class="fp-fig fp-glance" id="glance" data-collapsible>
@@ -701,8 +704,8 @@
       </dl>
       <p class="note">Every probable and listed publication was reread where possible (the verification push,
         technical methods); those that named FHL count as verified. Those that could not be read are not in the verified count.
-        The best estimate counts them at the share of readable papers in their tier that named FHL, and the verified ones at the precision the audit measured (Table VII). The catalog
-        (Table VIII) gives the reason for every record.</p>
+        The best estimate counts them at the share of readable papers in their tier that named FHL, and the verified ones at the precision the audit measured (Table IX, in the Methods tab). The catalog
+        (Table III) gives the reason for every record.</p>
     </aside>
     <figure class="fp-fig">
       <div class="fp-legend" id="lg-tier"></div>
@@ -876,7 +879,7 @@
           back several academic generations), lab and team pages, and mentors first inferred from co-authorship and then
           confirmed in public records. Dashed lines are mentors inferred from co-authorship that could not be confirmed: a
           scientist who is last author on at least two of a younger colleague's first-author FHL papers, early in that
-          colleague's career (rules and checks in section XII). Mark size shows the number of students. Hover over
+          colleague's career (rules and checks in section X). Mark size shows the number of students. Hover over
           a mark, click it to keep it lit, or use "Find a person", to follow a lineage back through teachers and forward through
           students. When no one is selected, click a part of the key to highlight it. The network is a sample and far from
           complete. Set apart below it are the technicians and staff in the chronicle's staff archive (boat crews,
@@ -989,305 +992,14 @@
     </figure>
   </section>
 
-  <section class="fp-section" id="economics">
-    <h2><span class="num">VIII.</span> Economic contribution</h2>
-    <aside class="fp-defbox" id="econ-method" aria-label="How the contribution was estimated">
-      <div class="lbl">How the contribution was estimated</div>
-      <dl>
-        <dt>What is counted</dt><dd>The method of the University of Washington's own economic impact reports: the spending of
-          the station, of research done there and of its students and visitors, with its supply-chain (indirect) and
-          household-spending (induced) effects. Construction is a one-time total. Grants acknowledged by papers, gifts and the
-          value of discoveries are reported beside the totals and never added to them.</dd>
-        <dt>Spending</dt><dd>FHL publishes no budget, so its operating spending was estimated three ways and reconciled: a
-          staff roster priced at occupation-level wages for the area (Bureau of Labor Statistics) plus university benefit rates;
-          revenue by source; and the station's statement that about a quarter of its spending comes from donors. The result is
-          about <span data-source="econ_facts" data-field="display" data-where="fact=ops_spend">—</span> a year excluding scholarships, of which <span data-source="econ_facts" data-field="display" data-where="fact=ops_payroll">—</span> is payroll. Room, board and fees paid to
-          FHL are counted once, in operations. Research is federal awards for work at FHL, averaged over 2022–2024, direct
-          costs only. Students and visitors count only the spending off the station of people from outside the county: in
-          the county and, for the state figures, on their travel through Washington (ferry, shuttles, meals and Seattle
-          lodging), estimated from published course and visitor numbers and daily spending profiles.</dd>
-        <dt>Model</dt><dd>The Washington Office of Financial Management's input-output table for 2012 (52 industries) gives
-          the state model; it is scaled to San Juan County with federal employment data. Household-spending effects in that
-          table are about twice those of the commercial IMPLAN model, so they are calibrated per dollar of labor income to two
-          published IMPLAN results: the university's research enterprise for the state, and the Friday Harbor ferry route
-          for the county. Taxes use the university's IMPLAN tax ratio and the state's tourism tax ratios.</dd>
-        <dt>Contribution and new money</dt><dd>The contribution counts all FHL-related activity in a region; the new-money
-          impact counts only the part paid for from outside it.</dd>
-        <dt>Ranges</dt><dd>The model has <span data-source="econ_facts" data-field="display" data-where="fact=n_inputs">—</span> inputs; most carry a low, central and high value and are varied
-          together, while the rest are fixed shares, mappings or memo values. The stated range is the 10th to
-          90th percentile of <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> random draws; most ranges are skewed upward.</dd>
-        <dt>Dollars</dt><dd>2024 dollars (CPI-U). Grant amounts are as awarded unless marked otherwise.</dd>
-      </dl>
-      <p class="note">FHL's budget, payroll and user records are not published, so every station figure here is an estimate
-        from public sources, not the station's accounts. The full method, inputs and code are described under Technical
-        methods.</p>
-    </aside>
-    <div class="fp-notes">
-      <p>The University of Washington measures its economic contribution in a standard way: it traces the spending of its
-        operations, its students and its visitors through the supply chain and through household spending, and reports the
-        output, jobs, labor income, value added and state and local taxes that result (Parker Strategy Group, 2024). This
-        section applies that method to FHL. Each input is estimated from public sources, and the uncertain ones carry a range.
-        Results are for a typical recent year, fiscal 2024, in 2024 dollars; ranges are the 10th to 90th percentiles of
-        <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> simulations.</p>
-      <p>In Washington, FHL activity supports about <span data-source="econ_facts" data-field="display" data-where="fact=wa_output">—</span> of output a year (<span data-source="econ_facts" data-field="display" data-where="fact=wa_output_range">—</span>) and <span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs">—</span> jobs
-        (<span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs_range">—</span>), with <span data-source="econ_facts" data-field="display" data-where="fact=wa_labor_income">—</span> of labor income, <span data-source="econ_facts" data-field="display" data-where="fact=wa_value_added">—</span> of value added and <span data-source="econ_facts" data-field="display" data-where="fact=wa_taxes">—</span> of
-        state and local taxes (Table III, Fig. 19). The station's own payroll and purchases account for about four-fifths of
-        this; research done at FHL adds <span data-source="econ_facts" data-field="display" data-where="fact=wa_research_output">—</span>, and the spending of students and visitors off the station
-        <span data-source="econ_facts" data-field="display" data-where="fact=wa_users_output">—</span>. Within San Juan County the figures are <span data-source="econ_facts" data-field="display" data-where="fact=sjc_output">—</span> of output (<span data-source="econ_facts" data-field="display" data-where="fact=sjc_output_range">—</span>) and
-        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs">—</span> jobs (<span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs_range">—</span>). The county is part of the state, so the two are not summed. Each dollar spent
-        directly supports about <span data-source="econ_facts" data-field="display" data-where="fact=wa_ratio">—</span> dollars of output in the state but <span data-source="econ_facts" data-field="display" data-where="fact=sjc_ratio">—</span> in the county, because an island
-        economy imports most of what it buys.</p>
-      <p>These are contribution figures: they count all activity linked to FHL, whoever pays for it. A narrower measure counts
-        only money from outside the region that would not be spent there without the station. For San Juan County almost all
-        of FHL's activity passes this test, since its funding comes from state, university, federal and donor sources off the
-        island and the users counted come from elsewhere; the county's new-money impact, <span data-source="econ_facts" data-field="display" data-where="fact=sjc_nm_output">—</span> and
-        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_nm_jobs">—</span> jobs, is close to its contribution. For Washington it is about a third: <span data-source="econ_facts" data-field="display" data-where="fact=wa_nm_output">—</span> and
-        <span data-source="econ_facts" data-field="display" data-where="fact=wa_nm_jobs">—</span> jobs, from federal grants, out-of-state users and out-of-state donors. State and university funds would
-        otherwise be spent elsewhere in Washington.</p>
-      <p>Construction is one-time and reported separately. Projects worth <span data-source="econ_facts" data-field="display" data-where="fact=constr_spend">—</span> in 2015–2024, among them the
-        Fernald Laboratory basement, the sewer lift station and the genomics laboratory in Lab 2, supported
-        <span data-source="econ_facts" data-field="display" data-where="fact=wa_constr_output">—</span> of output and <span data-source="econ_facts" data-field="display" data-where="fact=wa_constr_jobyears">—</span> job-years in Washington, about one job a year. Yearly output
-        depends most on FHL's purchases other than payroll, which public sources pin down least, and on which model of
-        household-spending effects is used; the job count depends most on the number of FHL's own jobs (Fig. 20).</p>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-controls fp-toggle" role="group" aria-label="Measure shown in Fig. 19">
-        <button type="button" data-econ="output" aria-pressed="true">Output</button>
-        <button type="button" data-econ="jobs" aria-pressed="false">Jobs</button>
-        <button type="button" data-econ="labor_income" aria-pressed="false">Labor income</button>
-        <button type="button" data-econ="value_added" aria-pressed="false">Value added</button>
-      </div>
-      <div class="fp-legend" id="lg-econ"></div>
-      <div class="fp-chart" id="ch-econ" data-source="econ_model_by_source"></div>
-      <figcaption>
-        <h3 id="fig-econ"><span class="fig">Fig. 19.</span>—The economic contribution of FHL activity in a typical year.</h3>
-        <p class="cap">Output supported in Washington and in San Juan County by the station's operations, by research done at
-          FHL, and by the spending of its students and visitors off the station; the buttons show jobs, labor income or value
-          added instead. Each bar separates direct, supply-chain (indirect) and household-spending (induced) effects. Whiskers
-          span the 10th to 90th percentiles of <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> simulations; open diamonds mark the part paid for from outside the
-          region (new money). 2024 dollars. The county is part of the state, so the two panels are not summed. Construction is
-          in Table III; grants acknowledged by papers are not part of these totals, and gifts count only through the spending
-          they pay for.</p>
-      </figcaption>
-    </figure>
-    <div class="fp-fig" id="econ-totals">
-      <h3 id="tab-econ"><span class="fig">Table III.</span>—The economic contribution of FHL activity.</h3>
-      <div class="fp-scroll"><table id="tbl-econ" class="ruled" data-source="econ_model_totals">
-        <thead><tr><th>Region and basis</th><th class="num">Output</th><th class="num">Jobs</th><th class="num">Labor income</th>
-          <th class="num">Value added</th><th class="num">State and local taxes</th></tr></thead>
-        <tbody></tbody>
-      </table></div>
-      <p class="cap">Yearly effects of the station's operations, research done at FHL and the spending of its students and
-        visitors off the station, with construction over 2015–2024 as a one-time total, in 2024 dollars; the 10th–90th
-        percentile range is in parentheses. Jobs are full- and part-time jobs supported and sustained; the station's own are
-        counted as annual-average full-time equivalents (about 31); for construction they are job-years. New money is the part paid for from outside the region. County taxes are
-        state and local taxes generated by activity in the county, mostly state revenue. Output, labor income and value added
-        are nested measures and are not summed. The italic rows are outside the totals: pay that UW departments give faculty
-        who work at FHL, and the university's overhead on FHL research, spent in Seattle.</p>
-    </div>
-    <figure class="fp-fig" data-collapsible>
-      <div class="fp-controls fp-toggle" role="group" aria-label="Measure shown in Fig. 20">
-        <button type="button" data-sens="output" aria-pressed="true">Output</button>
-        <button type="button" data-sens="jobs" aria-pressed="false">Jobs</button>
-      </div>
-      <div class="fp-chart" id="ch-econ-sens" data-source="econ_model_sensitivity"></div>
-      <figcaption>
-        <h3 id="fig-econ-sens"><span class="fig">Fig. 20.</span>—What the estimate depends on.</h3>
-        <p class="cap">Yearly output (or jobs) when one input (Table IV) moves from its low to its high value (for household-spending effects, over the range used in the
-          simulations) and every other input stays
-          at its central value; the rule marks the central estimate. The most influential inputs are shown for each region;
-          hatched bars are alternative model structures rather than inputs. FHL publishes no purchasing records, so for output its
-          purchases matter most in both regions, and for jobs the count of the station's own jobs does; household-spending
-          effects matter mainly if the uncalibrated tables are used instead (hatched bars). Swings are
-          not additive: the range in Fig. 19 combines all inputs at once.</p>
-      </figcaption>
-    </figure>
-    <div class="fp-fig" id="econ-inputs" data-collapsible>
-      <h3 id="tab-econ-inputs"><span class="fig">Table IV.</span>—What goes into the estimate.</h3>
-      <div class="fp-scroll"><table id="tbl-econ-inputs" class="ruled" data-source="econ_model_inputs">
-        <thead><tr><th>Input</th><th class="num">Central</th><th class="num">Low–high</th><th>Basis</th></tr></thead>
-        <tbody></tbody>
-      </table></div>
-      <p class="cap">The main inputs, each with a low, central and high value and its basis: <i>measured</i> (a published
-        figure), <i>derived</i> (computed from published figures) or <i>assumption</i> (a stated judgment with a range). The
-        station's figures are estimates, not its accounts. The full list of <span data-source="econ_facts" data-field="display" data-where="fact=n_inputs">—</span> inputs, with sources, is in the model
-        files.</p>
-    </div>
+  
 
-    <h3 class="fp-subhead" id="econ-funding">Research funding</h3>
-    <div class="fp-notes">
-      <p>Grants for work at FHL appear in public records from 1957 on (Fig. 21, Table V). The National Science Foundation has
-        awarded <span data-source="econ_facts" data-field="display" data-where="fact=nsf_total">—</span> for FHL facilities, for research and training done there and for meetings held there
-        (1957–2026; <span data-source="econ_facts" data-field="display" data-where="fact=nsf_total_2024">—</span> in 2024 dollars; about $5 million of it placed at FHL with medium or low confidence), and the National Institutes of Health <span data-source="econ_facts" data-field="display" data-where="fact=nih_total">—</span> for projects whose
-        records name FHL (1987–2010), nearly all of it for the Center for Cell Dynamics. These are awards, not yearly spending,
-        and they are floors, because federal databases file most FHL grants under the university's Seattle address. Spread
-        over their award periods, grants for work at FHL came to <span data-source="econ_facts" data-field="display" data-where="fact=research_per_year">—</span> a year in 2022–2024; the model's research
-        line counts the direct costs of these awards, about 87% of them.</p>
-      <p>The census papers name a far larger body of funding. Of <span data-source="econ_facts" data-field="display" data-where="fact=matched_papers">—</span> papers matched to OpenAlex,
-        <span data-source="econ_facts" data-field="display" data-where="fact=funder_papers">—</span> name a funder: the National Science Foundation in <span data-source="econ_facts" data-field="display" data-where="fact=nsf_papers">—</span>, the National Institutes of Health
-        in <span data-source="econ_facts" data-field="display" data-where="fact=nih_papers">—</span> and NOAA in <span data-source="econ_facts" data-field="display" data-where="fact=noaa_papers">—</span> (Fig. 22). The <span data-source="econ_facts" data-field="display" data-where="fact=assoc_awards">—</span> research-project awards from the first
-        two that verified papers name total <span data-source="econ_facts" data-field="display" data-where="fact=assoc_usd">—</span> as awarded, paid to institutions in <span data-source="econ_facts" data-field="display" data-where="fact=assoc_states">—</span> states,
-        <span data-source="econ_facts" data-field="display" data-where="fact=assoc_other">—</span>, and to one in Italy. This is funding associated with research at FHL, mostly spent elsewhere: only
-        <span data-source="econ_facts" data-field="display" data-where="fact=sited_awards_n">—</span> of these awards, worth <span data-source="econ_facts" data-field="display" data-where="fact=sited_awards_usd">—</span>, can be placed at FHL. Only the 2022–2024 share of those awards enters the model's research line; the rest of this
-        funding is not part of the modeled contribution.</p>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-legend" id="lg-econ-res"></div>
-      <div class="fp-chart" id="ch-econ-res" data-source="econ_research_by_fy"></div>
-      <figcaption>
-        <h3 id="fig-econ-res"><span class="fig">Fig. 21.</span>—Federal awards for work at FHL, by year.</h3>
-        <p class="cap">National Science Foundation and National Institutes of Health awards, and a few from other agencies,
-          for research, training and meetings at FHL and for its facilities and instruments, by University of Washington
-          fiscal year, in 2024 dollars. Each award is spread evenly over its award period. The light layer adds a share of
-          awards carried out partly at FHL and of awards to scientists based there. Dashed rules mark where the federal award databases begin
-          (fiscal 1975) and fiscal 2022–2024, the years behind the research line in Fig. 19. Amounts are as awarded, not expenditures. NSF grants before 1975 come
-          from the regents' minutes and NSF's annual reports; NIH records begin in 1985. Federal databases file most FHL grants
-          under the university's Seattle address, so the bars are a floor.</p>
-      </figcaption>
-    </figure>
-    <div class="fp-fig" id="econ-sources" data-collapsible>
-      <h3 id="tab-econ-sources"><span class="fig">Table V.</span>—Grants for work at FHL, by source.</h3>
-      <div class="fp-scroll"><table id="tbl-econ-sources" class="ruled" data-source="econ_money_sources">
-        <thead><tr><th>Source</th><th>Years</th><th class="num">Number</th><th class="num">As awarded</th>
-          <th class="num">2024 dollars</th></tr></thead>
-        <tbody></tbody>
-      </table></div>
-      <p class="cap">Awards for FHL facilities, for research and training done at FHL and for meetings held there; numbers
-        are awards unless marked. Italic rows
-        are linked to FHL less directly and are not in the total. Federal databases list most FHL grants under the
-        university's Seattle address, so the counted rows are a floor. Grants acknowledged by census papers but carried out
-        elsewhere are in Fig. 22, not here.</p>
-    </div>
-    <figure class="fp-fig" data-collapsible>
-      <div class="fp-legend" id="lg-econ-fund"></div>
-      <div class="fp-chart" id="ch-econ-fund" data-source="econ_funders_by_decade"></div>
-      <div class="fp-chart" id="ch-econ-scopes" data-source="econ_award_scopes"></div>
-      <figcaption>
-        <h3 id="fig-econ-fund"><span class="fig">Fig. 22.</span>—Funding named by FHL-connected papers: associated, not spent at FHL.</h3>
-        <p class="cap">Above: the share of each decade's census papers, among those matched to OpenAlex by DOI, that name each
-          funder. The gray band is the share that name any funder: few acknowledgments were recorded before about 2008, so part
-          of every rise is a rise in recording. Below: National Science Foundation and National Institutes of Health awards
-          named by those papers, as awarded, at successively narrower scopes (log scale). This is research funding associated
-          with work at FHL, paid to institutions across the country; only the black row was spent at FHL, and only its 2022–2024
-          share is part of Fig. 19.</p>
-      </figcaption>
-    </figure>
-
-    <h3 class="fp-subhead" id="econ-people">People</h3>
-    <div class="fp-notes">
-      <p>By this estimate FHL employs about <span data-source="econ_facts" data-field="display" data-where="fact=fte">—</span> people on an annual-average basis (<span data-source="econ_facts" data-field="display" data-where="fact=fte_range">—</span>), counting seasonal staff,
-        summer instructors and teaching assistants for the months they work; about <span data-source="econ_facts" data-field="display" data-where="fact=headcount">—</span> different people are paid
-        during a year. Its field-station profile lists <span data-source="econ_facts" data-field="display" data-where="fact=obfs_yearround">—</span> or more year-round and <span data-source="econ_facts" data-field="display" data-where="fact=obfs_seasonal">—</span> seasonal
-        staff. More than 100 visiting researchers come each year, and course enrollment rose from <span data-source="econ_facts" data-field="display" data-where="fact=enroll_2018">—</span> in 2018 to
-        <span data-source="econ_facts" data-field="display" data-where="fact=enroll_2022">—</span> in 2022. Students and visitors from outside the county spent an estimated <span data-source="econ_facts" data-field="display" data-where="fact=visitor_days">—</span> days in
-        the county in 2024.</p>
-    </div>
-
-    <h3 class="fp-subhead" id="econ-capital">Capital and gifts</h3>
-    <div class="fp-notes">
-      <p>The campus was built in bursts (Fig. 23). The legislature gave $6,000 for buildings in 1909. The research campus of
-        the 1960s rested on the National Science Foundation, whose <span data-source="econ_facts" data-field="display" data-where="fact=nsf_lab_1961">—</span> grant paid most of the <span data-source="econ_facts" data-field="display" data-where="fact=lab_budget_1961">—</span>
-        budget for the main laboratory in 1961; NSF made <span data-source="econ_facts" data-field="display" data-where="fact=nsf_facility_n">—</span> more facility, instrument and housing awards from
-        1977 to 2022 (<span data-source="econ_facts" data-field="display" data-where="fact=nsf_facility_2024">—</span> in 2024 dollars). Gifts of land include Cedar Rock Preserve on Shaw Island,
-        completed by a bequest assessed at <span data-source="econ_facts" data-field="display" data-where="fact=cedar_rock">—</span> in 1983, and the Whiteley Center property, <span data-source="econ_facts" data-field="display" data-where="fact=whiteley_gift">—</span> in 2001.
-        In 2023 FHL estimated that almost a quarter of the money it spends each year comes ultimately from donors, and its
-        endowment exceeded <span data-source="econ_facts" data-field="display" data-where="fact=endowment">—</span>. Gifts are sources of funds and already sit inside the spending modeled above.</p>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-legend" id="lg-econ-cap"></div>
-      <div class="fp-chart" id="ch-econ-cap" data-source="econ_capital_timeline"></div>
-      <figcaption>
-        <h3 id="fig-econ-cap"><span class="fig">Fig. 23.</span>—Building the station, 1909–2022.</h3>
-        <p class="cap">Each mark is one building, utility, housing, land, vessel or instrument project at its budget, grant or stated
-          value, in 2024 dollars on a log scale; projects before 1913, which have no consumer price index, are drawn at their
-          dollar amount and marked with a ring. The five largest are numbered and named below the chart. Open marks are gifts: land at its assessed or stated value, and buildings, vessels and equipment paid for by donors. Early amounts are the
-          regents' ceilings, not costs. Funding sources that paid for projects already shown are not drawn again. The shaded
-          years are the period whose construction is counted in Table III; of the marks there, only the Fernald Laboratory
-          basement, the sewer lift station and Lab 2 are counted. Sources: UW Board of Regents minutes, NSF award records and the
-          Historical Centennial Timeline (Mills and Hermans).</p>
-      </figcaption>
-    </figure>
-
-    <h3 class="fp-subhead" id="econ-gfp">Discoveries that left the station</h3>
-    <div class="fp-notes">
-      <p>In summer 1961 Osamu Shimomura and Frank Johnson extracted aequorin from about 10,000 <i>Aequorea</i> jellyfish at
-        FHL, and green fluorescent protein (GFP) turned up in the same extracts. The genes for both proteins were cloned from
-        Friday Harbor jellyfish, and the GFP clone led to the 2008 Nobel Prize in Chemistry (Table VI). As of <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed_date">—</span>,
-        PubMed held <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed">—</span> records under the heading for GFP (Fig. 24). No dollar value of this work can be assigned to FHL, and
-        none is included here.</p>
-    </div>
-    <figure class="fp-fig" data-collapsible>
-      <div class="fp-legend" id="lg-econ-gfp"></div>
-      <div class="fp-chart" id="ch-econ-gfp" data-source="econ_gfp_pubmed"></div>
-      <figcaption>
-        <h3 id="fig-econ-gfp"><span class="fig">Fig. 24.</span>—From the dock to the bench.</h3>
-        <p class="cap">PubMed records a year indexed under the subject headings Green Fluorescent Proteins and Aequorin, counted by the
-          year each record entered PubMed, on a scale that is close to linear below about 10 and logarithmic above, so both lines can be read. Both
-          proteins were first extracted from jellyfish collected and processed at FHL in 1961, and the genes for both were cloned
-          from Friday Harbor jellyfish. Indexing misses most papers that use GFP as a routine tool, so
-          the counts are a floor, and their fall after about 2012 need not mean less use.</p>
-      </figcaption>
-    </figure>
-    <div class="fp-fig" id="econ-chain" data-collapsible>
-      <h3 id="tab-econ-gfp"><span class="fig">Table VI.</span>—The aequorin and GFP chain.</h3>
-      <div class="fp-scroll"><table id="tbl-econ-gfp" class="ruled" data-source="econ_gfp_chain">
-        <thead><tr><th class="num">Year</th><th>Step</th><th>Where</th><th>Evidence</th></tr></thead>
-        <tbody></tbody>
-      </table></div>
-      <p class="cap">Each step and the primary source that places it. Steps after 1992 used the cloned gene, not the jellyfish.</p>
-    </div>
-
-    <h3 class="fp-subhead" id="econ-county">The station in the county economy</h3>
-    <div class="fp-notes">
-      <p>San Juan County had <span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs_2024">—</span> jobs covered by unemployment insurance in 2024, at an average pay of
-        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_pay">—</span>. FHL's own jobs equal about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_own_share_total">—</span> of the county's total employment including the
-        self-employed, and all the jobs that FHL activity supports there about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_related_share">—</span>, roughly one job in
-        250.</p>
-    </div>
-  </section>
-
-  <section class="fp-section" id="reliability">
-    <h2><span class="num">IX.</span> How the census was built, and how far to trust it</h2>
-      <figure class="fp-fig" data-collapsible>
-        <div class="fp-chart" id="ch-status" data-source="candidate_status"></div>
-        <figcaption>
-          <h3 id="fig-status"><span class="fig">Fig. 25.</span>—What happened to every candidate.</h3>
-          <p class="cap">Every record that matched "Friday Harbor" or a station name, after screening. Excluded records are
-            mostly the town, the ferry or other Friday Harbor organizations (Center for Whale Research, Whale Museum),
-            mentions only in reference lists, and figures deposited from papers. "Included" counts the
-            <span data-source="headline" data-field="publications">—</span> publications and
-            <span data-source="headline" data-field="news_items">—</span> news items. "Archive mention (volume-level)" are
-            scanned volumes, mostly from archive.org, that mention the station but could not be tied to a single
-            publication.</p>
-        </figcaption>
-      </figure>
-      <div class="fp-fig" data-collapsible>
-        <h3 id="tab-audit"><span class="fig">Table VII.</span>—Independent audit.</h3>
-        <div class="fp-scroll"><table id="tbl-audit" class="ruled" data-source="audit_tiers" data-row-key="tier">
-          <thead><tr><th data-field="tier">Tier</th><th data-field="precision" class="num">Correct</th>
-            <th data-field="checked" class="num">Records checked</th><th data-field="interval" class="num">95% interval</th></tr></thead>
-          <tbody></tbody>
-        </table></div>
-        <p class="cap">Auditors checked a random sample of each tier against the publications themselves. "Correct" is the share
-          they confirmed as genuinely FHL-connected; within a tier, each audited group (how the record was decided) counts in
-          proportion to its size.</p>
-      </div>
-      <figure class="fp-fig">
-        <div class="fp-chart" id="ch-recall" data-source="recall_by_decade"></div>
-        <figcaption>
-          <h3 id="fig-recall"><span class="fig">Fig. 26.</span>—What the searches miss.</h3>
-          <p class="cap">Share of papers on FHL's own publication lists that the database searches found independently.
-            Before about 2008, databases did not index acknowledgments, so papers that thank FHL without listing it in an
-            address are invisible to searches. FHL-listed papers that could not be verified form the "Listed by FHL" tier; most of the rest are counted as verified or
-            probable.</p>
-        </figcaption>
-      </figure>
-  </section>
+  
 
   <section class="fp-section" id="all-publications">
-    <h2><span class="num">X.</span> Catalog of publications</h2>
+    <h2><span class="num">VIII.</span> Catalog of publications</h2>
     <div class="fp-fig">
-      <h3 id="tab-pubs"><span class="fig">Table VIII.</span>—All publications, newest first.</h3>
+      <h3 id="tab-pubs"><span class="fig">Table III.</span>—All publications, newest first.</h3>
       <p class="cap">Search titles, authors and venues, or pick a research topic. Showing up to 300 matches; the full list with evidence for each
         record is in the <a href="https://github.com/weertman/fhl-research-profile/blob/main/data/FHL_publications_census.xlsx" target="_blank" rel="noopener">census workbook</a>.</p>
       <div class="fp-controls">
@@ -1310,7 +1022,7 @@
   </section>
 
   <section class="fp-section" id="history">
-    <h2><span class="num">XI.</span> Chronicle of the station</h2>
+    <h2><span class="num">IX.</span> Chronicle of the station</h2>
     <aside class="fp-land" id="land" aria-label="Land and waters acknowledgment">
       <div class="lbl">Land and waters acknowledgment</div>
       <blockquote>The Friday Harbor Laboratories, College of the Environment, University of Washington, acknowledges the
@@ -1340,7 +1052,7 @@
     </div>
     <div class="fp-history" id="history-timeline" data-source="history_events history_images history_eras"></div>
     <p class="cap fp-narrow">AI agents extracted the events from these sources; further agents merged them into one timeline and
-      fact-checked them against the sources (section XII). Each event lists its sources. Captions were written from each image's
+      fact-checked them against the sources (section X). Each event lists its sources. Captions were written from each image's
       catalog record and what it shows, then checked by a second agent. Images that illustrate no single event are set as
       plates at the head of their era. Dates marked "about" are uncertain.</p>
     <div class="fp-arch" data-collapsible id="arch-staff">
@@ -1377,7 +1089,7 @@
         <figcaption>
           <h3 id="fig-course-topics">What the classes taught.—Courses a decade, by topic.</h3>
           <p class="cap">Each course is counted once for each term it was taught. AI agents assigned topics from the course titles,
-            following a written list of topics; another agent reviewed them for consistency (section XII). Panels run from
+            following a written list of topics; another agent reviewed them for consistency (section X). Panels run from
             topics taught mostly early to those taught mostly recently (by the average decade of their share); all share one
             scale. "Other or not named" holds entries whose courses were not named.</p>
         </figcaption>
@@ -1414,14 +1126,214 @@
         <thead><tr><th>Years</th><th>Name</th><th>Medium</th><th>Program</th><th>Work</th><th>Sources</th></tr></thead><tbody></tbody>
       </table></div>
     </div>
+    <div class="fp-arch" data-collapsible id="economics">
+      <h3 class="fold">Economic contribution and discoveries</h3>
+      <div class="fp-notes">
+      <p>The University of Washington measures its economic contribution in a standard way: it traces the spending of its
+        operations, its students and its visitors through the supply chain and through household spending, and reports the
+        output, jobs, labor income, value added and state and local taxes that result (Parker Strategy Group, 2024). This
+        part applies that method to FHL through an economic model; its results are modeled estimates, not measured amounts. FHL's budget, payroll and user records are not published, so the model's inputs
+        come from public sources, not the station's accounts: operating spending, for example, is estimated at about
+        <span data-source="econ_facts" data-field="display" data-where="fact=ops_spend">—</span> a year excluding scholarships, of which
+        <span data-source="econ_facts" data-field="display" data-where="fact=ops_payroll">—</span> is payroll.
+        Results are for a typical recent year, fiscal 2024, in 2024 dollars; ranges are the 10th to 90th percentiles of
+        <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> simulations. The method and inputs are described in the Methods tab.</p>
+      <p>In Washington, FHL activity supports about <span data-source="econ_facts" data-field="display" data-where="fact=wa_output">—</span> of output a year (<span data-source="econ_facts" data-field="display" data-where="fact=wa_output_range">—</span>) and <span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs">—</span> jobs
+        (<span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs_range">—</span>), with <span data-source="econ_facts" data-field="display" data-where="fact=wa_labor_income">—</span> of labor income, <span data-source="econ_facts" data-field="display" data-where="fact=wa_value_added">—</span> of value added and <span data-source="econ_facts" data-field="display" data-where="fact=wa_taxes">—</span> of
+        state and local taxes (Table IV, Fig. 19). The station's own payroll and purchases account for about four-fifths of
+        this; research done at FHL adds <span data-source="econ_facts" data-field="display" data-where="fact=wa_research_output">—</span>, and the spending of students and visitors off the station
+        <span data-source="econ_facts" data-field="display" data-where="fact=wa_users_output">—</span>. Within San Juan County the figures are <span data-source="econ_facts" data-field="display" data-where="fact=sjc_output">—</span> of output (<span data-source="econ_facts" data-field="display" data-where="fact=sjc_output_range">—</span>) and
+        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs">—</span> jobs (<span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs_range">—</span>). The county is part of the state, so the two are not summed. Each dollar spent
+        directly supports about <span data-source="econ_facts" data-field="display" data-where="fact=wa_ratio">—</span> dollars of output in the state but <span data-source="econ_facts" data-field="display" data-where="fact=sjc_ratio">—</span> in the county, because an island
+        economy imports most of what it buys.</p>
+      <p>These are contribution figures: they count all activity linked to FHL, whoever pays for it. A narrower measure counts
+        only money from outside the region that would not be spent there without the station. For San Juan County almost all
+        of FHL's activity passes this test, since its funding comes from state, university, federal and donor sources off the
+        island and the users counted come from elsewhere; the county's new-money impact, <span data-source="econ_facts" data-field="display" data-where="fact=sjc_nm_output">—</span> and
+        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_nm_jobs">—</span> jobs, is close to its contribution. For Washington it is about a third: <span data-source="econ_facts" data-field="display" data-where="fact=wa_nm_output">—</span> and
+        <span data-source="econ_facts" data-field="display" data-where="fact=wa_nm_jobs">—</span> jobs, from federal grants, out-of-state users and out-of-state donors. State and university funds would
+        otherwise be spent elsewhere in Washington.</p>
+      <p>Construction is one-time and reported separately. Projects worth <span data-source="econ_facts" data-field="display" data-where="fact=constr_spend">—</span> in 2015–2024, among them the
+        Fernald Laboratory basement, the sewer lift station and the genomics laboratory in Lab 2, supported
+        <span data-source="econ_facts" data-field="display" data-where="fact=wa_constr_output">—</span> of output and <span data-source="econ_facts" data-field="display" data-where="fact=wa_constr_jobyears">—</span> job-years in Washington, about one job a year.</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-controls fp-toggle" role="group" aria-label="Measure shown in Fig. 19">
+        <button type="button" data-econ="output" aria-pressed="true">Output</button>
+        <button type="button" data-econ="jobs" aria-pressed="false">Jobs</button>
+        <button type="button" data-econ="labor_income" aria-pressed="false">Labor income</button>
+        <button type="button" data-econ="value_added" aria-pressed="false">Value added</button>
+      </div>
+      <div class="fp-legend" id="lg-econ"></div>
+      <div class="fp-chart" id="ch-econ" data-source="econ_model_by_source"></div>
+      <figcaption>
+        <h3 id="fig-econ"><span class="fig">Fig. 19.</span>—The economic contribution of FHL activity in a typical year.</h3>
+        <p class="cap">Output supported in Washington and in San Juan County by the station's operations, by research done at
+          FHL, and by the spending of its students and visitors off the station; the buttons show jobs, labor income or value
+          added instead. Each bar separates direct, supply-chain (indirect) and household-spending (induced) effects. Whiskers
+          span the 10th to 90th percentiles of <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> simulations; open diamonds mark the part paid for from outside the
+          region (new money). 2024 dollars. The county is part of the state, so the two panels are not summed. Construction is
+          in Table IV; grants acknowledged by papers are not part of these totals, and gifts count only through the spending
+          they pay for.</p>
+      </figcaption>
+    </figure>
+    <div class="fp-fig" id="econ-totals">
+      <h3 id="tab-econ"><span class="fig">Table IV.</span>—The economic contribution of FHL activity.</h3>
+      <div class="fp-scroll"><table id="tbl-econ" class="ruled" data-source="econ_model_totals">
+        <thead><tr><th>Region and basis</th><th class="num">Output</th><th class="num">Jobs</th><th class="num">Labor income</th>
+          <th class="num">Value added</th><th class="num">State and local taxes</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <p class="cap">Yearly effects of the station's operations, research done at FHL and the spending of its students and
+        visitors off the station, with construction over 2015–2024 as a one-time total, in 2024 dollars; the 10th–90th
+        percentile range is in parentheses. Jobs are full- and part-time jobs supported and sustained; the station's own are
+        counted as annual-average full-time equivalents (about 31); for construction they are job-years. New money is the part paid for from outside the region. County taxes are
+        state and local taxes generated by activity in the county, mostly state revenue. Output, labor income and value added
+        are nested measures and are not summed. The italic rows are outside the totals: pay that UW departments give faculty
+        who work at FHL, and the university's overhead on FHL research, spent in Seattle.</p>
+    </div>
+    
+    
+
+    <h4 id="econ-funding">Research funding</h4>
+    <div class="fp-notes">
+      <p>Grants for work at FHL appear in public records from 1957 on (Fig. 20, Table V). The National Science Foundation has
+        awarded <span data-source="econ_facts" data-field="display" data-where="fact=nsf_total">—</span> for FHL facilities, for research and training done there and for meetings held there
+        (1957–2026; <span data-source="econ_facts" data-field="display" data-where="fact=nsf_total_2024">—</span> in 2024 dollars; about $5 million of it placed at FHL with medium or low confidence), and the National Institutes of Health <span data-source="econ_facts" data-field="display" data-where="fact=nih_total">—</span> for projects whose
+        records name FHL (1987–2010), nearly all of it for the Center for Cell Dynamics. These are awards, not yearly spending,
+        and they are floors, because federal databases file most FHL grants under the university's Seattle address. Spread
+        over their award periods, grants for work at FHL came to <span data-source="econ_facts" data-field="display" data-where="fact=research_per_year">—</span> a year in 2022–2024; the model's research
+        line counts the direct costs of these awards, about 87% of them.</p>
+      <p>The census papers name a far larger body of funding. Of <span data-source="econ_facts" data-field="display" data-where="fact=matched_papers">—</span> papers matched to OpenAlex,
+        <span data-source="econ_facts" data-field="display" data-where="fact=funder_papers">—</span> name a funder: the National Science Foundation in <span data-source="econ_facts" data-field="display" data-where="fact=nsf_papers">—</span>, the National Institutes of Health
+        in <span data-source="econ_facts" data-field="display" data-where="fact=nih_papers">—</span> and NOAA in <span data-source="econ_facts" data-field="display" data-where="fact=noaa_papers">—</span> (Fig. 21). The <span data-source="econ_facts" data-field="display" data-where="fact=assoc_awards">—</span> research-project awards from the first
+        two that verified papers name total <span data-source="econ_facts" data-field="display" data-where="fact=assoc_usd">—</span> as awarded, paid to institutions in <span data-source="econ_facts" data-field="display" data-where="fact=assoc_states">—</span> states,
+        <span data-source="econ_facts" data-field="display" data-where="fact=assoc_other">—</span>, and to one in Italy. This is funding associated with research at FHL, mostly spent elsewhere: only
+        <span data-source="econ_facts" data-field="display" data-where="fact=sited_awards_n">—</span> of these awards, worth <span data-source="econ_facts" data-field="display" data-where="fact=sited_awards_usd">—</span>, can be placed at FHL. Only the 2022–2024 share of those awards enters the model's research line; the rest of this
+        funding is not part of the modeled contribution.</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-econ-res"></div>
+      <div class="fp-chart" id="ch-econ-res" data-source="econ_research_by_fy"></div>
+      <figcaption>
+        <h3 id="fig-econ-res"><span class="fig">Fig. 20.</span>—Federal awards for work at FHL, by year.</h3>
+        <p class="cap">National Science Foundation and National Institutes of Health awards, and a few from other agencies,
+          for research, training and meetings at FHL and for its facilities and instruments, by University of Washington
+          fiscal year, in 2024 dollars. Each award is spread evenly over its award period. The light layer adds a share of
+          awards carried out partly at FHL and of awards to scientists based there. Dashed rules mark where the federal award databases begin
+          (fiscal 1975) and fiscal 2022–2024, the years behind the research line in Fig. 19. Amounts are as awarded, not expenditures. NSF grants before 1975 come
+          from the regents' minutes and NSF's annual reports; NIH records begin in 1985. Federal databases file most FHL grants
+          under the university's Seattle address, so the bars are a floor.</p>
+      </figcaption>
+    </figure>
+    <div class="fp-fig" id="econ-sources">
+      <h3 id="tab-econ-sources"><span class="fig">Table V.</span>—Grants for work at FHL, by source.</h3>
+      <div class="fp-scroll"><table id="tbl-econ-sources" class="ruled" data-source="econ_money_sources">
+        <thead><tr><th>Source</th><th>Years</th><th class="num">Number</th><th class="num">As awarded</th>
+          <th class="num">2024 dollars</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <p class="cap">Awards for FHL facilities, for research and training done at FHL and for meetings held there; numbers
+        are awards unless marked. Italic rows
+        are linked to FHL less directly and are not in the total. Federal databases list most FHL grants under the
+        university's Seattle address, so the counted rows are a floor. Grants acknowledged by census papers but carried out
+        elsewhere are in Fig. 21, not here.</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-econ-fund"></div>
+      <div class="fp-chart" id="ch-econ-fund" data-source="econ_funders_by_decade"></div>
+      <div class="fp-chart" id="ch-econ-scopes" data-source="econ_award_scopes"></div>
+      <figcaption>
+        <h3 id="fig-econ-fund"><span class="fig">Fig. 21.</span>—Funding named by FHL-connected papers: associated, not spent at FHL.</h3>
+        <p class="cap">Above: the share of each decade's census papers, among those matched to OpenAlex by DOI, that name each
+          funder. The gray band is the share that name any funder: few acknowledgments were recorded before about 2008, so part
+          of every rise is a rise in recording. Below: National Science Foundation and National Institutes of Health awards
+          named by those papers, as awarded, at successively narrower scopes (log scale). This is research funding associated
+          with work at FHL, paid to institutions across the country; only the black row was spent at FHL, and only its 2022–2024
+          share is part of Fig. 19.</p>
+      </figcaption>
+    </figure>
+
+    <h4 id="econ-people">People</h4>
+    <div class="fp-notes">
+      <p>By this estimate FHL employs about <span data-source="econ_facts" data-field="display" data-where="fact=fte">—</span> people on an annual-average basis (<span data-source="econ_facts" data-field="display" data-where="fact=fte_range">—</span>), counting seasonal staff,
+        summer instructors and teaching assistants for the months they work; about <span data-source="econ_facts" data-field="display" data-where="fact=headcount">—</span> different people are paid
+        during a year. Its field-station profile lists <span data-source="econ_facts" data-field="display" data-where="fact=obfs_yearround">—</span> or more year-round and <span data-source="econ_facts" data-field="display" data-where="fact=obfs_seasonal">—</span> seasonal
+        staff. More than 100 visiting researchers come each year, and course enrollment rose from <span data-source="econ_facts" data-field="display" data-where="fact=enroll_2018">—</span> in 2018 to
+        <span data-source="econ_facts" data-field="display" data-where="fact=enroll_2022">—</span> in 2022. Students and visitors from outside the county spent an estimated <span data-source="econ_facts" data-field="display" data-where="fact=visitor_days">—</span> days in
+        the county in 2024.</p>
+    </div>
+
+    <h4 id="econ-capital">Capital and gifts</h4>
+    <div class="fp-notes">
+      <p>The campus was built in bursts (Fig. 22). The legislature gave $6,000 for buildings in 1909. The research campus of
+        the 1960s rested on the National Science Foundation, whose <span data-source="econ_facts" data-field="display" data-where="fact=nsf_lab_1961">—</span> grant paid most of the <span data-source="econ_facts" data-field="display" data-where="fact=lab_budget_1961">—</span>
+        budget for the main laboratory in 1961; NSF made <span data-source="econ_facts" data-field="display" data-where="fact=nsf_facility_n">—</span> more facility, instrument and housing awards from
+        1977 to 2022 (<span data-source="econ_facts" data-field="display" data-where="fact=nsf_facility_2024">—</span> in 2024 dollars). Gifts of land include Cedar Rock Preserve on Shaw Island,
+        completed by a bequest assessed at <span data-source="econ_facts" data-field="display" data-where="fact=cedar_rock">—</span> in 1983, and the Whiteley Center property, <span data-source="econ_facts" data-field="display" data-where="fact=whiteley_gift">—</span> in 2001.
+        In 2023 FHL estimated that almost a quarter of the money it spends each year comes ultimately from donors, and its
+        endowment exceeded <span data-source="econ_facts" data-field="display" data-where="fact=endowment">—</span>. Gifts are sources of funds and already sit inside the spending modeled above.</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-econ-cap"></div>
+      <div class="fp-chart" id="ch-econ-cap" data-source="econ_capital_timeline"></div>
+      <figcaption>
+        <h3 id="fig-econ-cap"><span class="fig">Fig. 22.</span>—Building the station, 1909–2022.</h3>
+        <p class="cap">Each mark is one building, utility, housing, land, vessel or instrument project at its budget, grant or stated
+          value, in 2024 dollars on a log scale; projects before 1913, which have no consumer price index, are drawn at their
+          dollar amount and marked with a ring. The five largest are numbered and named below the chart. Open marks are gifts: land at its assessed or stated value, and buildings, vessels and equipment paid for by donors. Early amounts are the
+          regents' ceilings, not costs. Funding sources that paid for projects already shown are not drawn again. The shaded
+          years are the period whose construction is counted in Table IV; of the marks there, only the Fernald Laboratory
+          basement, the sewer lift station and Lab 2 are counted. Sources: UW Board of Regents minutes, NSF award records and the
+          Historical Centennial Timeline (Mills and Hermans).</p>
+      </figcaption>
+    </figure>
+
+    <h4 id="econ-gfp">Discoveries that left the station</h4>
+    <div class="fp-notes">
+      <p>In summer 1961 Osamu Shimomura and Frank Johnson extracted aequorin from about 10,000 <i>Aequorea</i> jellyfish at
+        FHL, and green fluorescent protein (GFP) turned up in the same extracts. The genes for both proteins were cloned from
+        Friday Harbor jellyfish, and the GFP clone led to the 2008 Nobel Prize in Chemistry (Table VI). As of <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed_date">—</span>,
+        PubMed held <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed">—</span> records under the heading for GFP (Fig. 23). No dollar value of this work can be assigned to FHL, and
+        none is included here.</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-econ-gfp"></div>
+      <div class="fp-chart" id="ch-econ-gfp" data-source="econ_gfp_pubmed"></div>
+      <figcaption>
+        <h3 id="fig-econ-gfp"><span class="fig">Fig. 23.</span>—From the dock to the bench.</h3>
+        <p class="cap">PubMed records a year indexed under the subject headings Green Fluorescent Proteins and Aequorin, counted by the
+          year each record entered PubMed, on a scale that is close to linear below about 10 and logarithmic above, so both lines can be read. Both
+          proteins were first extracted from jellyfish collected and processed at FHL in 1961, and the genes for both were cloned
+          from Friday Harbor jellyfish. Indexing misses most papers that use GFP as a routine tool, so
+          the counts are a floor, and their fall after about 2012 need not mean less use.</p>
+      </figcaption>
+    </figure>
+    <div class="fp-fig" id="econ-chain">
+      <h3 id="tab-econ-gfp"><span class="fig">Table VI.</span>—The aequorin and GFP chain.</h3>
+      <div class="fp-scroll"><table id="tbl-econ-gfp" class="ruled" data-source="econ_gfp_chain">
+        <thead><tr><th class="num">Year</th><th>Step</th><th>Where</th><th>Evidence</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <p class="cap">Each step and the primary source that places it. Steps after 1992 used the cloned gene, not the jellyfish.</p>
+    </div>
+
+    <h4 id="econ-county">The station in the county economy</h4>
+    <div class="fp-notes">
+      <p>San Juan County had <span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs_2024">—</span> jobs covered by unemployment insurance in 2024, at an average pay of
+        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_pay">—</span>. FHL's own jobs equal about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_own_share_total">—</span> of the county's total employment including the
+        self-employed, and all the jobs that FHL activity supports there about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_related_share">—</span>, roughly one job in
+        250.</p>
+    </div>
+    </div>
   </section>
 
   <section class="fp-section" id="method">
-    <h2><span class="num">XII.</span> Technical methods</h2>
+    <h2><span class="num">X.</span> Technical methods</h2>
     <figure class="fp-fig fm-fig" id="cartoon">
       <div class="fp-chart fm-chart fm-cartoon" id="ch-cartoon" data-source="methods_facts ai_workflows agents"></div>
       <figcaption>
-        <h3 id="fig-cartoon"><span class="fig">Fig. 27.</span>—How the agents were used.</h3>
+        <h3 id="fig-cartoon"><span class="fig">Fig. 24.</span>—How the agents were used.</h3>
         <p class="cap">One workflow in six stages (columns), one lane per actor (rows). The compiler typed a request in
           the Claude app. Claude, in the main session, was the coordinator: it wrote a short workflow (the jobs, a brief for
           each agent and the stages), and the workflow started the reading agents in parallel, a few at a time up to a set
@@ -1431,24 +1343,24 @@
           re-opened a sample of the records, in some runs with a tie-breaker for disagreements, and returned their verdicts to
           the workflow; the coordinator merged the files and verdicts into the census by written rules. From the agents it saw
           only these files and short reports, never their browsing. The worked example is the
-          verification push (Fig. 32). Squares mark roles as in Figs. 28–31.</p>
+          verification push (Fig. 30). Squares mark roles as in Figs. 25–28.</p>
       </figcaption>
     </figure>
     <div class="fp-notes">
       <p class="fm-lead">The census and its companions were built by <span data-fm="agents-counted">—</span> AI agents in <span data-fm="runs-agents">—</span> runs,
-        plus <span data-fm="runs-none">—</span> run done in the coordinating session (Table X); <span data-fm="prompts-launching">—</span> of the
-        compiler's prompts launched them (Fig. 30). Fig. 27 shows how one job was handed out and gathered back; Figs. 28–30 show where the agents went, how each run was
-        built and when they worked; Figs. 31 and 32 follow the publication census and one agent's job inside it; Figs. 33 and
-        34 show how the agents' work was checked and how far it can be trusted.</p>
+        plus <span data-fm="runs-none">—</span> run done in the coordinating session (Table VIII); <span data-fm="prompts-launching">—</span> of the
+        compiler's prompts launched them (Fig. 27). Fig. 24 shows how one job was handed out and gathered back; Figs. 25–27 show where the agents went, how each run was
+        built and when they worked; Figs. 28 and 30 follow the publication census and one agent's job inside it; Figs. 31 and
+        32 show how the agents' work was checked and how far it can be trusted.</p>
       <p><span class="runin">Definition.</span>—A publication is counted when Friday Harbor Laboratories, or the station under
-        one of its earlier names (Table IX), appears in the publication or its record: in an author address, in the main text
+        one of its earlier names (Table VII), appears in the publication or its record: in an author address, in the main text
         (methods, acknowledgments, figure captions or anywhere else except the reference list), in the station's own
         publication series, or in a dataset's metadata. A mention only of the town of Friday Harbor, of another Friday Harbor
-        organization, or only in a reference list does not count. Each publication is assigned the name the station used in
+        organization, or only in a reference list does not count, and neither does a passing mention in work that has nothing to do with the station. Each publication is assigned the name the station used in
         its publication year.</p>
     </div>
     <div class="fp-fig fp-narrow" id="names">
-      <h3 id="tab-names"><span class="fig">Table IX.</span>—The station's names.</h3>
+      <h3 id="tab-names"><span class="fig">Table VII.</span>—The station's names.</h3>
       <div class="fp-scroll"><table id="tbl-eras" class="ruled" data-source="eras" data-row-key="name">
         <thead><tr><th data-field="start" class="num">From</th><th data-field="end" class="num">To</th>
           <th data-field="name">Name</th></tr></thead>
@@ -1461,19 +1373,19 @@
       <div class="fp-legend" id="lg-tools"></div>
       <div class="fp-chart fm-chart" id="ch-agents" data-source="methods_facts ai_workflows agents"></div>
       <figcaption>
-        <h3 id="fig-agents"><span class="fig">Fig. 28.</span>—Where the agents went.</h3>
-        <p class="cap">Each square is one AI agent, grouped by run (numbered as in Table X) and set in the order of its run's stages.
+        <h3 id="fig-agents"><span class="fig">Fig. 25.</span>—Where the agents went.</h3>
+        <p class="cap">Each square is one AI agent, grouped by run (numbered as in Table VIII) and set in the order of its run's stages.
           Solid: did the work. Hatched: checked earlier work (another agent's, a script's or a rule's), re-opening its sources or
           redoing it blind. Crossed: worked across other agents' results (critiquing, calibrating, adjudicating, merging, curating
           or drafting from them). Dashed and open: never returned
           (drawn, not counted); a slash: stopped by an error. Dotted boxes mark the <span data-fm="runs-unlogged">—</span> runs
           with no log, drawn from their design. Bars at right sort each family's tool calls by kind.
           <span data-fm="census-agents">—</span> of the <span data-fm="all-agents">—</span> agents built the publication census. Pick a run to see how it
-          was built (Fig. 29).</p>
+          was built (Fig. 26).</p>
       </figcaption>
     </figure>
     <details class="fm-table" id="ai-workflows">
-      <summary><span class="fig" id="tab-ai">Table X.</span>—The AI runs, as a table.</summary>
+      <summary><span class="fig" id="tab-ai">Table VIII.</span>—The AI runs, as a table.</summary>
       <div class="fp-scroll"><table id="tbl-ai" class="ruled" data-source="ai_workflows" data-row-key="workflow">
         <thead><tr><th data-field="workflow">Run</th><th data-field="purpose">Purpose</th>
           <th data-field="agents" class="num">Agents</th><th data-field="effort">Session effort</th>
@@ -1486,8 +1398,8 @@
       <div class="fm-shapes" id="ch-shapes" data-source="agent_stages"></div>
       <p class="fm-rounds" id="fm-rounds"></p>
       <figcaption>
-        <h3 id="fig-shapes"><span class="fig">Fig. 29.</span>—How a run is built: four shapes.</h3>
-        <p class="cap">Most runs combine these four shapes, drawn here from real runs. Squares are agents, as in Fig. 28; each step
+        <h3 id="fig-shapes"><span class="fig">Fig. 26.</span>—How a run is built: four shapes.</h3>
+        <p class="cap">Most runs combine these four shapes, drawn here from real runs. Squares are agents, as in Fig. 25; each step
           says what its agents were given, what they did and, where it was counted, what they handed on. In every shape, later
           agents check the earlier agents' work instead of taking it on trust; the last panel holds the few runs that fit no single
           shape. Pick a run under a panel to draw it.</p>
@@ -1497,7 +1409,7 @@
       <div class="fp-legend" id="lg-timeline"></div>
       <div class="fp-chart fm-chart" id="ch-timeline" data-source="prompts"></div>
       <figcaption>
-        <h3 id="fig-timeline"><span class="fig">Fig. 30.</span>—When the agents worked, and when a person typed.</h3>
+        <h3 id="fig-timeline"><span class="fig">Fig. 27.</span>—When the agents worked, and when a person typed.</h3>
         <p class="cap">Each row is one run; its height is how many of its agents were working at that moment, never more than
           <span data-fm="peak-run">—</span> in one run. The top strip adds all runs together: at most <span data-fm="peak-all">—</span> at once. Ticks above are
           the prompts the compiler typed (Pacific time), and a dotted line joins each prompt to the runs it launched.
@@ -1510,8 +1422,8 @@
       <div class="fp-legend" id="lg-census"></div>
       <div class="fp-chart fm-chart" id="ch-census" data-source="census_steps"></div>
       <figcaption>
-        <h3 id="fig-census"><span class="fig">Fig. 31.</span>—The census, step by step: who did each step, and how many records it handled.</h3>
-        <p class="cap">Each row is one census step, in order. Squares are the agents that did it, as in Fig. 28; ◆ marks Claude
+        <h3 id="fig-census"><span class="fig">Fig. 28.</span>—The census, step by step: who did each step, and how many records it handled.</h3>
+        <p class="cap">Each row is one census step, in order. Squares are the agents that did it, as in Fig. 25; ◆ marks Claude
           working in the main session and □ a script. Bars, all on one scale, count the records each step handled,
           and their fills show who handled them. The last bar shows what finally settled each candidate.</p>
       </figcaption>
@@ -1526,7 +1438,7 @@
         repositories, archive.org scans including the Biodiversity Heritage Library, FHL's own publication lists recovered from
         the Internet Archive, and news) and wrote a rerunnable script; a script searched OpenAlex; and Claude exported
         <span data-source="methods_facts" data-field="value" data-where="fact=wos_records">—</span> Web of Science records through the UW Libraries in a browser, after the compiler signed in
-        (Fig. 31, row 1). <span data-fm="n-critique">—</span> more agent looked for gaps, and <span data-fm="n-gapfill">—</span> more filled them. Rows were joined into one candidate when they shared a DOI or a
+        (Fig. 28, row 1). <span data-fm="n-critique">—</span> more agent looked for gaps, and <span data-fm="n-gapfill">—</span> more filled them. Rows were joined into one candidate when they shared a DOI or a
         PubMed, PubMed Central or OpenAlex identifier, or when their titles matched closely (a fuzzy similarity of at least 93
         of 100), their years differed by at most one and their first authors shared a surname. Written rules decided the
         clear cases. AI agents judged the rest against a written screening guide that lists the station's names and the common
@@ -1545,6 +1457,19 @@
         address, in <span data-source="methods_facts" data-field="value" data-where="fact=aff_no">—</span> the addresses were read and none is FHL (visitors typically gave their home university), and
         <span data-source="methods_facts" data-field="value" data-where="fact=aff_unknown">—</span> could not be seen.</p>
     </div>
+    <figure class="fp-fig">
+        <div class="fp-chart" id="ch-status" data-source="candidate_status"></div>
+        <figcaption>
+          <h3 id="fig-status"><span class="fig">Fig. 29.</span>—What happened to every candidate.</h3>
+          <p class="cap">Every record that matched "Friday Harbor" or a station name, after screening. Excluded records are
+            mostly the town, the ferry or other Friday Harbor organizations (Center for Whale Research, Whale Museum),
+            mentions only in reference lists, and figures deposited from papers. "Included" counts the
+            <span data-source="headline" data-field="publications">—</span> publications and
+            <span data-source="headline" data-field="news_items">—</span> news items. "Archive mention (volume-level)" are
+            scanned volumes, mostly from archive.org, that mention the station but could not be tied to a single
+            publication.</p>
+        </figcaption>
+      </figure>
     <figure class="fp-fig fm-fig">
       <div class="fm-push" id="ch-push">
         <div class="fm-card">
@@ -1580,17 +1505,18 @@
         </div>
       </div>
       <figcaption>
-        <h3 id="fig-push"><span class="fig">Fig. 32.</span>—Inside one agent's job: the verification push.</h3>
+        <h3 id="fig-push"><span class="fig">Fig. 30.</span>—Inside one agent's job: the verification push.</h3>
         <p class="cap">The verification push of 28 October 2026. (a) What each reading agent was given. (b) What each did: one column
           per agent, its tool calls stacked by kind; dashed stubs never returned, and the re-check agents with a slash stopped
           at the account's spend limit. (c) What came back, one square per <span data-fm="waffle-n">—</span> records: <span data-fm="push-unread-share">—</span>
           could not be read and were left unchanged rather than guessed from the title; a person with library access could check
-          them (Table VIII gives the reason for each one in the catalog; the census file has the rest). Papers on FHL's lists that do not name the station stay in the listed
+          them (Table III gives the reason for each one in the catalog; the census file has the rest). Papers on FHL's lists that do not name the station stay in the listed
           tier. Below the squares, second agents' re-reading of a sample from <span data-fm="push-recheck-batches">—</span> of
           the <span data-fm="push-batches">—</span> batches (the other batches' re-check agents stopped at the spend limit or
           never returned).</p>
       </figcaption>
     </figure>
+    <h3 class="fp-subhead" id="reliability">How far to trust the report</h3>
     <div class="fp-notes">
       <p><span class="runin">Evidence tiers.</span>—<i>Verified</i>: FHL was seen in the record (an author address, a passage
         of text, the station's own series, or dataset metadata). <i>Probable</i>: a full-text index names the lab, but the
@@ -1604,9 +1530,9 @@
       <div class="fp-legend" id="lg-checks"></div>
       <div class="fp-chart fm-chart" id="ch-checks" data-source="methods_checks"></div>
       <figcaption>
-        <h3 id="fig-checks"><span class="fig">Fig. 33.</span>—What the checking agents changed.</h3>
+        <h3 id="fig-checks"><span class="fig">Fig. 31.</span>—What the checking agents changed.</h3>
         <p class="cap">Rounds in which checking agents re-opened other agents' (or a script's) work; the audit of the census
-          decisions is in Fig. 34 and the screening calibration in Fig. 31. Each row shows what the checking agents did with
+          decisions is in Fig. 32 and the screening calibration in Fig. 28. Each row shows what the checking agents did with
           the items they re-opened (■ an agent, □ a script, ▨ a checking agent, ⊠ a reviewer). The thin line under each bar
           shows the share of all items re-opened. <span data-fm="checks-claim" hidden>Checkers rewrote nearly every
           profile but rarely overturned a reading.</span></p>
@@ -1617,13 +1543,13 @@
       <div class="fp-controls fp-toggle" id="fm-trust-toggle" role="group" aria-label="View"><button type="button" data-view="decided" aria-pressed="true">By who decided</button><button type="button" data-view="tier" aria-pressed="false">By evidence tier</button></div>
       <div class="fp-chart fm-chart" id="ch-trust" data-source="audit_by_stratum audit_tiers"></div>
       <figcaption>
-        <h3 id="fig-trust"><span class="fig">Fig. 34.</span>—How far each kind of decision can be trusted.</h3>
+        <h3 id="fig-trust"><span class="fig">Fig. 32.</span>—How far each kind of decision can be trusted.</h3>
         <p class="cap">The share of audited decisions the audit agreed with (95% intervals), grouped by how each record was decided.
           Bars at right give each stratum's size when the audit sample was drawn, before the verification push and the
-          clean-up, so they differ from the final decisions in Fig. 31. The auditors were themselves AI agents, with an adjudicator on
+          clean-up, so they differ from the final decisions in Fig. 28. The auditors were themselves AI agents, with an adjudicator on
           disagreements in the stratified sample (not on the <span data-source="methods_facts" data-field="value" data-where="fact=audited_listed">—</span> extra records from FHL's lists). <span data-fm="trust-claim" hidden>Records an agent screened held up as well as those decided by
           written rules; records resting only on FHL's own lists did not.</span> The second view gives the evidence tiers
-          (Table VII).</p>
+          (Table IX).</p>
       </figcaption>
     </figure>
     <div class="fp-notes">
@@ -1632,13 +1558,37 @@
         tier and from the excluded and unverified records, was re-checked by separate AI agents told to try to prove each
         decision wrong from the publication itself; a second agent adjudicated every disagreement. A further <span data-source="methods_facts" data-field="value" data-where="fact=audited_listed">—</span> records found only
         on FHL's own lists were judged by one agent, without adjudication (<span data-source="methods_facts" data-field="value" data-where="fact=audited">—</span> audited in all, <span data-source="methods_facts" data-field="value" data-where="fact=audit_full_text">—</span> of them read in full text). Precision is the share confirmed, weighted by
-        stratum size, with Wilson 95% intervals (Table VII). The best estimate counts verified records at their audited
+        stratum size, with Wilson 95% intervals (Table IX). The best estimate counts verified records at their audited
         precision. Probable and listed records that could not be read count at the share of their tier that named FHL among the
-        papers the verification push could read (at the audit precision where fewer than 20 were read). AI agents, not
+        papers the verification push could read (at the audit precision where fewer than 20 were read). Its 95% interval combines
+        the intervals of those three rates, treated as independent. It covers sampling error only and assumes that papers that could not be read resemble those that could. AI agents, not
         people, did the audit; a human check of a sample would strengthen it.</p>
-      <p><span class="runin">Recall.</span>—FHL's own publication lists serve as an independent sample of FHL work. For each
-        decade, recall is the share of listed papers that the database searches found on their own (Fig. 26). Listed papers
-        that the searches missed make up the "Listed by FHL" tier.</p>
+    </div>
+    <div class="fp-fig">
+        <h3 id="tab-audit"><span class="fig">Table IX.</span>—Independent audit.</h3>
+        <div class="fp-scroll"><table id="tbl-audit" class="ruled" data-source="audit_tiers" data-row-key="tier">
+          <thead><tr><th data-field="tier">Tier</th><th data-field="precision" class="num">Correct</th>
+            <th data-field="checked" class="num">Records checked</th><th data-field="interval" class="num">95% interval</th></tr></thead>
+          <tbody></tbody>
+        </table></div>
+        <p class="cap">"Correct" is the precision defined in the Audit paragraph above, shown for each evidence tier.</p>
+      </div>
+    <div class="fp-notes">
+      <p><span class="runin">Recall.</span>—FHL's own publication lists serve as an independent sample of FHL work. Recall is the
+        share of listed papers that the database searches found on their own: <span data-source="headline" data-field="search_recall_vs_fhl_lists">—</span> overall, by decade in Fig. 33.</p>
+    </div>
+    <figure class="fp-fig">
+        <div class="fp-chart" id="ch-recall" data-source="recall_by_decade"></div>
+        <figcaption>
+          <h3 id="fig-recall"><span class="fig">Fig. 33.</span>—What the searches miss.</h3>
+          <p class="cap">Recall, by decade.
+            Before about 2008, databases did not index acknowledgments, so papers that thank FHL without listing it in an
+            address are invisible to searches. Most FHL-listed papers outside the "Listed by FHL" tier are counted as verified or
+            probable.</p>
+        </figcaption>
+      </figure>
+    <h3 class="fp-subhead" id="census-details">Other data, sources and files</h3>
+    <div class="fp-notes">
       <p><span class="runin">Types and citations.</span>—Publication types come from each source's metadata, corrected by the
         screening agents, and are grouped into seven categories for Fig. 13. Citations are OpenAlex cited-by counts at
         retrieval, with Crossref, Europe PMC or DataCite counts where OpenAlex had none; other databases give different
@@ -1696,7 +1646,7 @@
         name, as their address on at least three verified publications, identified through OpenAlex's author records. The
         mentoring network (Fig. 11) joins them to their students and teachers through UW thesis records, Wikidata, lab rosters
         and CVs read by AI agents and re-checked entry by entry, graduate committees, fact-checked profiles, and mentors
-        inferred from co-authorship and checked by agents (Figs. 29, 33 and 35). Of the FHL scientists,
+        inferred from co-authorship and checked by agents (Figs. 26, 31 and 34). Of the FHL scientists,
         <span data-source="methods_facts" data-field="value" data-where="fact=roster_found">—</span> have a roster, CV list or committee list, <span data-source="methods_facts" data-field="value" data-where="fact=roster_no_lab">—</span> lead no lab of their own,
         <span data-source="methods_facts" data-field="value" data-where="fact=roster_historical">—</span> worked before public lab pages, and for <span data-source="methods_facts" data-field="value" data-where="fact=roster_not_found">—</span> who taught, no list of
         trainees was found.</p>
@@ -1725,7 +1675,7 @@
         pages, CVs), with an independent second look at every verdict that did not rest on a direct source and an adjudicator
         where the two looks disagreed: <span data-source="methods_facts" data-field="value" data-where="fact=mentor_confirmed">—</span> of the <span data-source="methods_facts" data-field="value" data-where="fact=mentor_checked">—</span> were advisor, postdoctoral or
         student-research mentors and are drawn as documented, <span data-source="methods_facts" data-field="value" data-where="fact=mentor_peer">—</span> were collaborations between peers and were
-        removed, and <span data-source="methods_facts" data-field="value" data-where="fact=mentor_unclear">—</span> could not be settled; those that no other source documents are drawn as inferred (Table X). Lab rosters add
+        removed, and <span data-source="methods_facts" data-field="value" data-where="fact=mentor_unclear">—</span> could not be settled; those that no other source documents are drawn as inferred (Table VIII). Lab rosters add
         <span data-source="methods_facts" data-field="value" data-where="fact=roster_links">—</span> documented links: AI agents read each FHL scientist's public lab, team and alumni pages and CVs
         and listed the graduate students, postdocs, technicians, interns and staff named there, and a second agent re-opened
         every page to confirm each entry. Undergraduates named on a home-university lab page are included only if they also
@@ -1751,32 +1701,32 @@
     <figure class="fp-fig fm-fig">
       <div class="fp-chart" id="ch-linksrc" data-source="lineage"></div>
       <figcaption>
-        <h3 id="fig-linksrc"><span class="fig">Fig. 35.</span>—Where the links of the mentoring network come from.</h3>
+        <h3 id="fig-linksrc"><span class="fig">Fig. 34.</span>—Where the links of the mentoring network come from.</h3>
         <p class="cap">Links in Fig. 11 by the source that documents them. <span data-fm="links-agent">—</span> of the <span data-fm="links-all">—</span> were found by
-          AI agents reading lab rosters, CVs, committee lists and profiles (runs 9 to 12; Fig. 29), each re-checked; the rest
-          come from UW thesis records, Wikidata and the co-authorship rule, whose links agents checked one by one (Fig. 33). A
+          AI agents reading lab rosters, CVs, committee lists and profiles (runs 9 to 12; Fig. 26), each re-checked; the rest
+          come from UW thesis records, Wikidata and the co-authorship rule, whose links agents checked one by one (Fig. 31). A
           pair documented by more than one source is counted once, under the source that documented it first.</p>
       </figcaption>
     </figure>
     <div class="fp-notes">
-      <p><span class="runin">The chronicle.</span>—The events and images of section XI come from public sources (Chronicling
+      <p><span class="runin">The chronicle.</span>—The events and images of section IX come from public sources (Chronicling
         America newspaper pages, FHL's newsletters and web pages read from Internet Archive copies, the Historical Centennial
         Timeline, the census's news items and UW Libraries catalog records) and from FHL's own archives, used with FHL's
         permission. AI agents extracted <span data-source="methods_facts" data-field="value" data-where="fact=history_extracted">—</span> dated events, another merged them into one timeline, and
         fact-checkers checked every event; three image searches proposed candidates that second agents checked for license
-        and year before picture editors chose among them and fact-checkers checked every caption (Figs. 29 and 33). Images
+        and year before picture editors chose among them and fact-checkers checked every caption (Figs. 26 and 31). Images
         are shown only where they are in the public domain, openly licensed, or FHL's own.</p>
     </div>
     <details class="fm-more">
       <summary>How the chronicle was gathered, in detail</summary>
       <div class="fp-notes">
-      <p><span class="runin">The chronicle.</span>—Sources for section XI were gathered through public interfaces:
+      <p><span class="runin">The chronicle.</span>—Sources for section IX were gathered through public interfaces:
         newspaper pages from Chronicling America (Library of Congress) that mention the station, mostly the San Juan Islander of
         1904–1914; FHL's annual newsletter Intertidal Tidings and its history and news pages, read from Internet Archive copies;
         the Historical Centennial Timeline compiled by Claudia Mills and Colin Hermans (used for facts, credited, not quoted at
         length); the census's news items; and catalog records of the University of Washington Libraries' photographs. AI agents
         extracted <span data-source="methods_facts" data-field="value" data-where="fact=history_extracted">—</span> dated events from these, another merged them into one timeline, and four more checked
-        each of the <span data-source="methods_facts" data-field="value" data-where="fact=history_events_first">—</span> events against its sources, correcting <span data-source="methods_facts" data-field="value" data-where="fact=history_corrected_first">—</span> (Table X); the timeline holds
+        each of the <span data-source="methods_facts" data-field="value" data-where="fact=history_events_first">—</span> events against its sources, correcting <span data-source="methods_facts" data-field="value" data-where="fact=history_corrected_first">—</span> (Table VIII); the timeline holds
         <span data-source="methods_facts" data-field="value" data-where="fact=history_events">—</span> events, <span data-source="methods_facts" data-field="value" data-where="fact=history_more_events">—</span> of them drawn from the records of images found by the image searches. A
         second run looked for images: eight agents each searched one kind of source (Wikimedia Commons and Wikidata; openly
         licensed photographs through Openverse; publications from before 1931 on the Internet Archive; University of Washington
@@ -1803,7 +1753,7 @@
       </div>
     </details>
     <div class="fp-notes">
-      <p><span class="runin">Classes and art.</span>—The lists of classes, staff and artists in residence in section XI were
+      <p><span class="runin">Classes and art.</span>—The lists of classes, staff and artists in residence in section IX were
         gathered from public records by AI agents and fact-checked by others. For the figure of course topics, agents gave
         each of the <span data-source="methods_facts" data-field="value" data-where="fact=course_titles">—</span> distinct course titles one topic from a fixed list, and a further agent reviewed
         them all for consistency, changing <span data-source="methods_facts" data-field="value" data-where="fact=course_review_changes">—</span>. A single AI agent assigned the artists'
@@ -1811,7 +1761,7 @@
         FHL's photographs of artists at work in its studio (<span data-source="methods_facts" data-field="value" data-where="fact=art_images">—</span> shown), used with FHL's permission;
         images of the finished works are the artists' own and are not reproduced here without their permission.</p>
       <p><span class="runin">Not searched.</span>—Google Scholar and Scopus (no automated access), BIOSIS Previews, Zoological
-        Record and ASFA. Before about 2008 databases did not index acknowledgments, so counts are a lower bound, especially
+        Record and ASFA. Because of the acknowledgment gap before about 2008 (Fig. 33), counts are a lower bound, especially
         for 1985–2010 and before 1970.</p>
       <p><span class="runin">Software and files.</span>—Python 3 scripts (pandas, rapidfuzz, pypdf, lxml, openpyxl) collect,
         merge, screen and summarize the records, and the charts are drawn with d3, version 7. The authors keep the scripts and their
@@ -1822,41 +1772,72 @@
 
     <h3 class="fp-subhead" id="econ-model">The economic model</h3>
     <div class="fp-notes">
-      <p><span class="runin">Design.</span>—Section VIII follows the structure of the University of Washington's own
+      <p><span class="runin">Design.</span>—The economic contribution in section IX follows the structure of the University of Washington's own
         economic impact reports (Parker Strategy Group, 2024, for fiscal 2023): four spending sources (operations, research, students
-        and visitors), with construction reported separately; direct, indirect and induced effects; and five measures (output,
+        and visitors), with construction reported separately; direct, supply-chain (indirect) and household-spending (induced) effects; and five measures (output,
         jobs supported and sustained, labor income, value added, and state and local taxes), each for the contribution of all
-        FHL activity and for the new-money impact of spending paid for from outside the region. No IMPLAN license and no FHL
+        FHL activity and for the new-money impact of spending paid for from outside the region. Gifts, and the grants acknowledged by papers beyond the model's research line, are
+        reported beside the totals and never added to them; gifts count only through the spending they pay for. Amounts are in 2024 dollars
+        (CPI-U), and grants are as awarded unless marked otherwise. No IMPLAN license and no FHL
         records were used: every input is public.</p>
       <p><span class="runin">Regional models.</span>—The state model is the Washington Office of Financial Management's 2012
         input-output table (52 industries), rebuilt from OFM's published tables and checked against OFM's own impact
         worksheets. The county model scales it to San Juan County with the Flegg location quotient, computed from 2024
         county and state employment by industry (Bureau of Labor Statistics, Quarterly Census of Employment and Wages), with
         the county's hospital and FHL's own jobs filled in where the published county file has gaps. OFM's household closure
-        gives induced effects about twice those of IMPLAN per dollar of labor income, so induced effects are calibrated to
+        gives induced effects about twice those of the commercial IMPLAN model per dollar of labor income, so induced effects are calibrated to
         IMPLAN results published for UW's research enterprise (state) and for the Washington State Ferries route to Friday
-        Harbor (county). Jobs per dollar are brought from 2012 to 2024 by a blend of wage growth and consumer prices.</p>
+        Harbor (county). Taxes use the university's IMPLAN tax ratio and the state's tourism tax ratios. Jobs per dollar are brought from 2012 to 2024 by a blend of wage growth and consumer prices.</p>
       <p><span class="runin">Inputs.</span>—FHL's operating spending was estimated three ways: a staff roster built from
         public counts and priced at occupation-level wages for the area (BLS Occupational Employment and Wage Statistics) with
         UW's benefit rates; revenue by source (state and university funds, room, board and fees at published rates, endowment
         payout and gifts); and FHL's published statement that almost a quarter of its spending came from donors. The three
-        agree within about $0.5 million. Research spending is the federal awards for work at FHL, spread evenly over each
+        agree within about $0.5 million; reconciled, and excluding scholarships, operating spending is about <span data-source="econ_facts" data-field="display" data-where="fact=ops_spend">—</span> a year, of which <span data-source="econ_facts" data-field="display" data-where="fact=ops_payroll">—</span> is payroll. Research spending is the direct costs of the federal awards for work at FHL, spread evenly over each
         award's period and averaged over fiscal 2022–2024. Student and visitor spending off the station counts only people
-        from outside the county, from published course enrollments, visitor numbers and daily spending profiles. Construction
+        from outside the county: what they spend in the county and, for the state figures, on their travel through Washington (ferry, shuttles, meals and Seattle
+        lodging), estimated from published course enrollments, visitor numbers and daily spending profiles. Construction
         is the 2015–2024 projects found in the regents' minutes, NSF records and state capital budgets. Double counting is
         avoided by counting room, board and fees once (in operations), leaving scholarships out as transfers, and keeping the
         university's overhead on grants and the departmental pay of resident faculty as memo lines.</p>
-      <p><span class="runin">Uncertainty.</span>—Each of the <span data-source="econ_facts" data-field="display" data-where="fact=n_inputs">—</span> inputs has a stated basis, and those that are
-        uncertain carry a low, central and high value. The ranges quoted are the 10th to 90th percentiles of <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> Monte Carlo draws;
-        Fig. 20 moves one input at a time. Three independent reviews (economic method, the provenance of every input, and the
+      <p><span class="runin">Uncertainty.</span>—Each of the <span data-source="econ_facts" data-field="display" data-where="fact=n_inputs">—</span> inputs has a stated basis. Most carry a low, central and high value and are varied together; the rest are fixed shares, mappings or memo values. The ranges quoted, most of them skewed upward, are the 10th to 90th percentiles of <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> Monte Carlo draws;
+        Fig. 35 moves one input at a time. Three independent reviews (economic method, the provenance of every input, and the
         regional treatment against peer marine stations) were answered before the results were fixed. The output per direct
         dollar, 1.81 in the state and 1.36 in the county, sits beside published values for peer marine laboratories (1.83 for
         Bigelow Laboratory in Maine, 1.53 for Duke's marine laboratory in its county).</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-controls fp-toggle" role="group" aria-label="Measure shown in Fig. 35">
+        <button type="button" data-sens="output" aria-pressed="true">Output</button>
+        <button type="button" data-sens="jobs" aria-pressed="false">Jobs</button>
+      </div>
+      <div class="fp-chart" id="ch-econ-sens" data-source="econ_model_sensitivity"></div>
+      <figcaption>
+        <h3 id="fig-econ-sens"><span class="fig">Fig. 35.</span>—What the estimate depends on.</h3>
+        <p class="cap">Yearly output (or jobs) when one input (Table X) moves from its low to its high value (for household-spending effects, over the range used in the
+          simulations) and every other input stays
+          at its central value; the rule marks the central estimate. The most influential inputs are shown for each region;
+          hatched bars are alternative model structures rather than inputs. FHL publishes no purchasing records, so for output its
+          purchases matter most in both regions, and for jobs the count of the station's own jobs does; household-spending
+          effects matter mainly if the uncalibrated tables are used instead (hatched bars). Swings are
+          not additive: the range in Fig. 19 (in the Chronicle) combines all inputs at once.</p>
+      </figcaption>
+    </figure>
+    <div class="fp-fig" id="econ-inputs">
+      <h3 id="tab-econ-inputs"><span class="fig">Table X.</span>—What goes into the estimate.</h3>
+      <div class="fp-scroll"><table id="tbl-econ-inputs" class="ruled" data-source="econ_model_inputs">
+        <thead><tr><th>Input</th><th class="num">Central</th><th class="num">Low–high</th><th>Basis</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <p class="cap">The main inputs, each with a low, central and high value and its basis: <i>measured</i> (a published
+        figure), <i>derived</i> (computed from published figures) or <i>assumption</i> (a stated judgment with a range). The full list of <span data-source="econ_facts" data-field="display" data-where="fact=n_inputs">—</span> inputs, with sources, is in the model
+        files.</p>
+    </div>
+    <div class="fp-notes">
       <p><span class="runin">Limits.</span>—The input-output table dates from 2012 and the county model is a non-survey
         regionalization. FHL's budget, payroll, purchases and user records are not published, so the station's own figures
         are estimates; with the station's accounts the model reruns in seconds. FHL's 2026 rates, its 2024 scholarship total
         and its donor share (published in 2023) were read from Internet Archive copies of its pages. No value is assigned to discoveries made at
-        FHL, to grants held at visitors' home institutions or to the ecosystem services of the reserves. The
+        FHL, to the education of its students, to grants held at visitors' home institutions or to the ecosystem services of the reserves. The
         <a href="https://github.com/weertman/fhl-research-profile/blob/main/docs/economic_model_method.md" target="_blank" rel="noopener">full method</a>
         and the model's <a href="https://github.com/weertman/fhl-research-profile/tree/main/data/economics" target="_blank" rel="noopener">inputs, results and sensitivities</a>
         are published with the data; the code is kept with the census files. AI agents (Claude Opus 5.5) gathered the
@@ -1867,21 +1848,21 @@
     <div class="fp-notes">
       <p><span class="runin">Platform.</span>—The census, its code, the spreadsheet, the figures and this page were produced
         with Claude Code (version 2.1.295 and later), Anthropic's coding agent, in the Claude desktop app on macOS, on 13–16
-        and 28–29 October 2026 (UTC), apart from section VIII, its economic model and methods, and a final round of
-        corrections, which were produced in November 2026 and are not counted in Table X or in the totals below. The
+        and 28–29 October 2026 (UTC), apart from the economic contribution in section IX, its economic model and methods, and a final round of
+        corrections, which were produced in November 2026 and are not counted in Table VIII or in the totals below. The
         coordinating session and every agent it started used the model Claude Opus 5.5 (claude-opus-5-5). The census and
         the drafting of this page ran at the "xhigh" reasoning-effort setting, the second highest of five
         (low, medium, high, xhigh, max). From the topic classification onward (14 October, 18:10 UTC), including the people
-        section and the check of inferred mentors, the setting was "max", the highest. It returned to "xhigh" (Table X) for the
+        section and the check of inferred mentors, the setting was "max", the highest. It returned to "xhigh" (Table VIII) for the
         chronicle's second image search and a review of the page's phone layout (15–16 October); the verification push, the
         archive searches and the review of 28 October; and the later searches for images, course topics and art and the
         research for the methods diagrams (28–29 October). These are the coordinating session's settings. The agents' own
-        logs record each agent's setting (Table X): one step lower for the runs at "max" (runs 9–13, logged "xhigh") and for
+        logs record each agent's setting (Table VIII): one step lower for the runs at "max" (runs 9–13, logged "xhigh") and for
         the runs of 28–29 October that started after 22:00 UTC (runs 22–25, logged "high"). Claude Code's ultracode
         mode was on while the census was built, so each substantive step ran as a scripted multi-agent workflow; the topic
         classification and the mentor check, which followed the build, ran as agents started directly. In all,
         <span data-source="methods_facts" data-field="value" data-where="fact=ai_runs">—</span> runs (<span data-fm="runs-agents">—</span> of them with agents) used
-        <span data-source="methods_facts" data-field="value" data-where="fact=ai_agents">—</span> agents (Table X).
+        <span data-source="methods_facts" data-field="value" data-where="fact=ai_agents">—</span> agents (Table VIII).
         Runs 1–6, from the first prompt to a complete census and page on 13–14 October, took
         <span data-source="methods_facts" data-field="value" data-where="fact=build_hours">—</span> hours of wall-clock time,
         most of it unattended; runs 7–25 extended and checked it on 14–16 and 28–29 October.</p>
@@ -1900,10 +1881,10 @@
         their metadata and abstract; where the connection could not be seen they stay Probable or Listed by FHL rather than
         Verified, and the catalog says why. Personal email addresses found in records were
         removed from the outputs.</p>
-      <p><span class="runin">Limits.</span>—AI judgments can be wrong; the audit's error rates (Table VII) and the topic
+      <p><span class="runin">Limits.</span>—AI judgments can be wrong; the audit's error rates (Table IX) and the topic
         agreement rates above describe how often.
         Treat individual records as leads to check, and the totals as estimates with the stated uncertainty.</p>
-      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app from 13 to 28 October 2026; the requests after 28 October, including those behind section VIII, are not listed.
+      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app from 13 to 28 October 2026; the requests after 28 October, including those behind the economic contribution in section IX, are not listed.
         Messages about signing in, saving files and progress are summarized rather than quoted. Each prompt shows when it
         was typed (Pacific time) and the output tokens (text, reasoning and tool calls) it led to: those Claude generated in
         the main session before the next prompt, plus those of the agents started in that time. A workflow's agents count
@@ -1913,7 +1894,7 @@
         instructions that Claude wrote: a <a href="https://github.com/weertman/fhl-research-profile/blob/main/docs/screening_guide.md" target="_blank" rel="noopener">screening guide</a>, a
         <a href="https://github.com/weertman/fhl-research-profile/blob/main/docs/harvest_spec.md" target="_blank" rel="noopener">search specification</a> and a
         <a href="https://github.com/weertman/fhl-research-profile/blob/main/docs/topic_guide.md" target="_blank" rel="noopener">topic guide</a>, published with the census data, and the workflow
-        scripts, which hold every agent prompt and are not published; Table X describes each workflow, and
+        scripts, which hold every agent prompt and are not published; Table VIII describes each workflow, and
         the prompts below show what launched it.</p>
     </div>
     <details class="fp-prompts" id="prompts">
@@ -1930,22 +1911,16 @@
       <span class="note">FHL named in an author address, the text, dataset records or the station's own series, or the work shown from its context to have been done at the station</span></div>
     <div class="fp-item"><div class="line"><span class="lab">Best estimate</span><span class="dots"></span>
       <span class="val dash-skeleton" data-source="best_estimate" data-field="estimate">—</span></div>
-      <span class="note">verified at audited precision; unread candidates at the rate measured where papers could be read</span></div>
+      <span class="note">95% interval <span data-source="best_estimate" data-field="low">—</span>–<span data-source="best_estimate" data-field="high">—</span>, sampling error only; verified at audited precision; unread candidates at the rate measured where papers could be read</span></div>
     <div class="fp-item"><div class="line"><span class="lab">Citations to verified work</span><span class="dots"></span>
       <span class="val dash-skeleton" data-source="headline" data-field="verified_citations">—</span></div>
       <span class="note">OpenAlex counts</span></div>
     <div class="fp-item"><div class="line"><span class="lab">Verified per year, 2016–2025</span><span class="dots"></span>
       <span class="val dash-skeleton" data-source="headline" data-field="verified_per_year_2016_2025">—</span></div>
       <span class="note">average publications a year</span></div>
-    <div class="fp-item"><div class="line"><span class="lab">Audit: verified tier correct</span><span class="dots"></span>
-      <span class="val dash-skeleton" data-source="audit_tiers" data-field="precision" data-where="tier=Verified">—</span></div>
-      <span class="note">share confirmed against the papers</span></div>
-    <div class="fp-item"><div class="line"><span class="lab">FHL's own list found by searches</span><span class="dots"></span>
-      <span class="val dash-skeleton" data-source="headline" data-field="search_recall_vs_fhl_lists">—</span></div>
-      <span class="note">database searches miss many acknowledgment-only papers</span></div>
     <div class="fp-item"><div class="line"><span class="lab">Economic contribution, Washington</span><span class="dots"></span>
       <span class="val dash-skeleton" data-source="econ_facts" data-field="display" data-where="fact=wa_output">—</span></div>
-      <span class="note">output a year supported by FHL activity, with <span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs">—</span> jobs (2024 dollars; estimated from public sources, section VIII)</span></div>
+      <span class="note">a year in spending supported by FHL activity (range <span data-source="econ_facts" data-field="display" data-where="fact=wa_output_range">—</span>), with <span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs">—</span> jobs (<span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs_range">—</span>). Ranges are the 10th to 90th percentiles of simulations over the model's inputs. 2024 dollars; estimated from public sources; excludes education and the value of the science; in the Chronicle, section IX</span></div>
   </section>
   <section class="fp-ode" id="ode" aria-labelledby="ode-title">
     <h2 id="ode-title">Ode to the life of the sea</h2>
@@ -2314,7 +2289,13 @@
       const rate = (k, tier) => (h[k] !== '' && h[k] != null && !Number.isNaN(Number(h[k])) ? Number(h[k]) : p(tier));
       const listedUnread = Number(h.listed_by_fhl) - Number(h.listed_not_named || 0);
       const est = Number(h.verified) * p('Verified') + Number(h.probable) * rate('rate_probable', 'Probable') + listedUnread * rate('rate_listed', 'Listed by FHL');
-      return [{ estimate: Math.round(est / 10) * 10 }];
+      // 95% interval: each rate's interval (Wilson), combined in quadrature as independent samples.
+      const auditIv = (tier) => String((audit_tiers.find((r) => r.tier === tier) || {}).interval || '').split('–').map(Number);
+      const wilson = (q, n) => { const z = 1.96, d = 1 + z * z / n, c = (q + z * z / (2 * n)) / d, w = z * Math.sqrt(q * (1 - q) / n + z * z / (4 * n * n)) / d; return [c - w, c + w]; };
+      const iv = (k, nk, tier) => (Number(h[nk]) >= 20 ? wilson(rate(k, tier), Number(h[nk])) : auditIv(tier));
+      const terms = [[Number(h.verified), p('Verified'), auditIv('Verified')], [Number(h.probable), rate('rate_probable', 'Probable'), iv('rate_probable', 'rate_probable_read', 'Probable')], [listedUnread, rate('rate_listed', 'Listed by FHL'), iv('rate_listed', 'rate_listed_read', 'Listed by FHL')]];
+      const spread = (side) => Math.sqrt(terms.reduce((s, [n, q, c]) => s + (n * (c[side] - q)) ** 2, 0));
+      return [{ estimate: Math.round(est / 10) * 10, low: Math.round((est - spread(0)) / 10) * 10, high: Math.round((est + spread(1)) / 10) * 10 }];
     },
   });
   dash.calc('scorecard', {
@@ -3305,12 +3286,13 @@
       btn.setAttribute('aria-expanded', String(open)); act.textContent = open ? (fig.tagName === 'FIGURE' ? 'Hide figure' : 'Hide') : 'Show';
     });
   });
-  // Three tabs: the report, the chronicle of the station (section XI) and the technical methods (section XII). The address
-  // picks the tab (#history, #hist-…, #land and #chronicle show the chronicle; #method and anything inside section XII
+  // Three tabs: the report, the chronicle of the station (section IX) and the technical methods (section X). The address
+  // picks the tab (#history, #hist-…, #land and #chronicle show the chronicle; #method and anything inside section X
   // show the methods), so links and the contents keep working.
   const fpRoot = document.getElementById('fhl-profile');
   // The tabs whose figures drawAll drew while they were hidden (and so at the wrong width); opening one redraws.
   const drawnHidden = new Set();
+  let drawnOnce = false; // showTab can run before the first draw, when the economic figures' constants do not exist yet
   const tabOfEl = (t) => (t.closest('#history') ? 'chronicle' : t.closest('#method') ? 'methods' : 'report');
   const tabOfHash = (h) => {
     const id = decodeURIComponent((h || '').slice(1));
@@ -3327,6 +3309,7 @@
     document.querySelectorAll('.fp-tabs a').forEach((a) => (a.dataset.tab === tab ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
     if (drawnHidden.has(tab) && typeof redraw === 'function') redraw();
     if (chron && typeof drawArchive === 'function' && dash.data('staff').status === 'ok') drawArchive();
+    if (chron && drawnOnce) drawChronicleEcon();
   };
   // Open whatever folds the address points into (a folded figure, an era of the chronicle), then go there.
   const openTarget = () => {
@@ -3479,7 +3462,7 @@
   }
 
   let drawnW = 0, drawnPhone = null, redrawT = 0; // the width and layout the figures were last drawn for
-  // ---- economic contribution (section VIII) --------------------------------------------------------------------
+  // ---- economic contribution (section IX) --------------------------------------------------------------------
   // Money in millions with two decimals ("$9.11M"), or thousands below $0.1 million; jobs with one decimal below 10.
   const usd = (v) => (Math.abs(v) >= 1e9 ? `$${d3.format('.3~r')(v / 1e9)}B` : Math.abs(v) >= 1e5 ? `$${(v / 1e6).toFixed(2)}M`
     : `$${f(Math.round(v / 1e3))}K`);
@@ -3580,12 +3563,12 @@
     const regions = ECON_REGIONS.map((reg) => ({ reg, rows: data.filter((r) => r.region === reg).sort((a, b) => +b.swing - +a.swing).slice(0, N) }));
     const ph = head + N * step + axisH;
     const { svg } = svgFor(el, one ? 2 * ph + gap : ph);
-    const lw = Math.min(pw * 0.48, textWidth(svg, data.map((r) => r.label)) + 10);
+    const lw = Math.min(pw * (one ? 0.54 : 0.48), textWidth(svg, data.map((r) => r.label)) + 10);
     regions.forEach(({ reg, rows }, pi) => {
       const g = svg.append('g').attr('transform', one ? `translate(0,${pi * (ph + gap)})` : `translate(${pi * (pw + gap)},0)`);
       const c = rows.length ? +rows[0].central : 0;
       const lo = d3.min(rows, (r) => Math.min(+r.at_low, +r.at_high)), hi = d3.max(rows, (r) => Math.max(+r.at_low, +r.at_high));
-      const x = d3.scaleLinear([Math.min(lo, c), Math.max(hi, c)], [lw, pw - 8]).nice();
+      const x = d3.scaleLinear([Math.min(lo, c), Math.max(hi, c)], [lw, pw - (one ? 14 : 8)]).nice();
       g.append('text').attr('class', 'ptitle').attr('x', lw).attr('y', 13).text(reg);
       const ticks = x.ticks(pw < 300 ? 3 : 4);
       g.append('g').selectAll('line').data(ticks).join('line').attr('class', 'gridline')
@@ -3767,7 +3750,8 @@
     const data = dash.data('econ_gfp_pubmed').data.map((r) => ({ ...r, yr: +r.year, n: +r.count })).filter((r) => r.yr);
     const years = Array.from(new Set(data.map((r) => r.yr))).sort((a, b) => a - b);
     const marks = [[1961, 'extracted at FHL'], [1985, 'aequorin gene cloned'], [1992, 'GFP gene cloned'], [1994, 'GFP in other organisms'], [2008, 'Nobel Prize']];
-    const rowsH = phone() ? 0 : 3 * 13;
+    const markRow = phone() ? [0, 1, 0, 1, 0] : [0, 0, 1, 2, 0];
+    const rowsH = (d3.max(markRow) + 1) * 13;
     const { svg, width, height } = svgFor(el, 240 + rowsH);
     const top = 8 + rowsH, base = height - 22;
     // symlog, so the aequorin line (tens a year) is readable beside GFP (thousands)
@@ -3782,9 +3766,9 @@
     svg.append('g').attr('transform', `translate(0,${base})`).call(d3.axisBottom(x).ticks(phone() ? 4 : 8).tickFormat(d3.format('d')).tickSize(4))
       .call(cleanAxis).call((g) => g.select('.domain').remove());
     marks.forEach(([yr, text], i) => {
-      svg.append('line').attr('class', 'sep').attr('x1', x(yr)).attr('x2', x(yr)).attr('y1', phone() ? top : 8 + (i % 3) * 13).attr('y2', base);
-      if (!phone()) svg.append('text').attr('class', 'era').attr('x', x(yr) + 3).attr('y', 8 + (i % 3) * 13 + 9).attr('font-size', 11).text(`${yr} ${text}`);
-      else svg.append('text').attr('class', 'era').attr('x', x(yr) + 2).attr('y', top + 9).attr('font-size', 11).text(i + 1);
+      const ry = 8 + markRow[i] * 13;
+      svg.append('line').attr('class', 'sep').attr('x1', x(yr)).attr('x2', x(yr)).attr('y1', ry).attr('y2', base);
+      svg.append('text').attr('class', 'era').attr('x', x(yr) + 3).attr('y', ry + 9).attr('font-size', 11).text(phone() ? i + 1 : `${yr} ${text}`);
     });
     let key = el.parentNode.querySelector(':scope > .fp-gfpkey');
     if (!key) { key = document.createElement('p'); key.className = 'cap fp-capkey fp-gfpkey'; el.after(key); }
@@ -3803,7 +3787,7 @@
         const r = data.find((q) => q.yr === d && q.series === k); return [null, n, r ? f(r.n) : '—'];
       }).concat(marks.filter(([yr]) => yr === d).map(([, t]) => [null, null, t])))).on('mouseleave', () => hideTip(el));
   }
-  // Tables III-VI.
+  // Tables IV-VI and X.
   function drawEconTables() {
     const tot = dash.data('econ_model_totals');
     if (tot.status === 'ok') {
@@ -3890,7 +3874,14 @@
     }
   }
 
+  // The economic figures sit in the chronicle tab: drawn with the rest, and again when the tab is opened.
+  function drawChronicleEcon() {
+    [['ch-econ', drawEcon], ['ch-econ-res', drawEconRes], ['ch-econ-fund', drawEconFund],
+     ['ch-econ-cap', drawEconCap], ['ch-econ-gfp', drawEconGfp]].forEach(([id, fn]) => safely(document.getElementById(id), fn));
+  }
+
   const drawAll = () => {
+    drawnOnce = true;
     drawnW = document.documentElement.clientWidth; drawnPhone = phone();
     // the report's and the methods' figures need their real width: note whichever of them is hidden now
     drawnHidden.clear(); ['report', 'methods'].forEach((t) => { if (t !== currentTab()) drawnHidden.add(t); });
@@ -3902,7 +3893,7 @@
     // In the opening sentence the citation total is written out in full rather than compact ("134K").
     setText('#takeaway [data-field="verified_citations"]', 'headline', 'verified_citations', (v) => f(+v));
     setText('[data-source="audit_tiers"][data-field="precision"]', 'audit_tiers', 'precision', (v) => pct(+v));
-    setText('[data-source="best_estimate"][data-field="estimate"]', 'best_estimate', 'estimate', (v) => f(+v));
+    ['estimate', 'low', 'high'].forEach((k) => setText(`[data-source="best_estimate"][data-field="${k}"]`, 'best_estimate', k, (v) => f(+v)));
 
     // ---- who writes the papers: two bars on one scale, the shared part outlined -------------------------------
     // ---- at a glance: the measures a university uses, grouped; above them, a bar splitting the work by kind -----
@@ -4184,8 +4175,8 @@
 
     // ---- economic contribution ------------------------------------------------------------------------------
     setText('[data-source="econ_facts"][data-field="display"]', 'econ_facts', 'display', (v) => v);
-    [['ch-econ', drawEcon], ['ch-econ-sens', drawEconSens], ['ch-econ-res', drawEconRes], ['ch-econ-fund', drawEconFund],
-     ['ch-econ-cap', drawEconCap], ['ch-econ-gfp', drawEconGfp]].forEach(([id, fn]) => safely(document.getElementById(id), fn));
+    safely(document.getElementById('ch-econ-sens'), drawEconSens);
+    drawChronicleEcon();
     drawEconTables();
 
     // ---- reliability ----------------------------------------------------------------------------------------
@@ -4231,7 +4222,7 @@
       }));
     }
 
-    // ---- methods figures: Figs. 27-34 are drawn by methods.js (loaded after this script); Fig. 35 here ----------------
+    // ---- methods figures: Figs. 24-28 and 30-32 are drawn by methods.js (loaded after this script); Fig. 34 here ----------------
     if (window.FPM) window.FPM.draw();
     const elLs = document.getElementById('ch-linksrc');
     if (state(elLs, ['lineage'])) {
@@ -4350,8 +4341,8 @@
     // The heading of the part of the report in view, to prefill "Where".
     const inView = () => {
       let best = '';
-      for (const h of document.querySelectorAll('#fhl-profile h2, #fhl-profile h3')) {
-        if (!h.offsetParent || h.closest('dialog, .fp-mast')) continue;
+      for (const h of document.querySelectorAll('#fhl-profile h2, #fhl-profile h3, .fp-arch h4')) {
+        if (!h.offsetParent || h.closest('dialog, .fp-mast, .is-collapsed')) continue;
         if (h.getBoundingClientRect().top < 140) best = h.textContent; else break;
       }
       return best.replace(/\s+/g, ' ').trim().slice(0, 200);
@@ -4417,16 +4408,16 @@
   })();
 </script>
 <script>
-// Fig. 27, the Methods cartoon: built by scripts/build_cartoon.py from cartoon/wide.svg and cartoon/tall.svg.
-window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 920 440\" role=\"img\" aria-labelledby=\"sB-title sB-desc\"><title id=\"sB-title\">Fig. 27. How the agents were used</title><desc id=\"sB-desc\">A swimlane schematic with one lane per actor and six stages running left to right: the compiler types a request; the coordinator, Claude in the main session, writes a workflow that starts the reading agents in parallel, a few at a time, each alone with its brief; they open the papers, validate their own batch files and hand back only those files and a short report of counts; checking agents re-open a sample and return their verdicts to the workflow, and the coordinator merges the files and verdicts by script and rebuilds the census and report. In the verification push, {push_records} records went to {push_batches} reading agents, {push_peak} at a time, and {recheck_agents} re-checking agents, and the median reader made {median_web} web requests; in all {agents_counted} agents in {runs_agents} runs built the census and its companions.</desc><style>.fm-cartoon .sB-box{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.3}.fm-cartoon .sB-back{fill:var(--fp-paper);stroke:var(--fp-ink-2);stroke-width:1.2}.fm-cartoon .sB-out{fill:none;stroke:var(--fp-ink);stroke-width:1.3}.fm-cartoon .sB-pap{fill:var(--fp-paper);stroke:none}.fm-cartoon .sB-sheet{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.2}.fm-cartoon .sB-strip{stroke:none}.fm-cartoon .sB-sq{stroke:var(--fp-ink);stroke-width:1}.fm-cartoon .sB-fs{fill:var(--fp-ink)}.fm-cartoon .sB-fh{fill:url(#fp-hatch)}.fm-cartoon .sB-fx{fill:url(#fp-cross)}.fm-cartoon .sB-fd{fill:url(#fp-dots)}.fm-cartoon .sB-arr{fill:none;stroke:var(--fp-ink-2);stroke-width:1.3}.fm-cartoon .sB-dash{stroke-dasharray:4 3}.fm-cartoon .sB-brk{fill:none;stroke:var(--fp-ink-2);stroke-width:1}.fm-cartoon .sB-rule{fill:none;stroke:var(--fp-ink-3);stroke-width:.7}.fm-cartoon .sB-rule2{fill:none;stroke:var(--fp-ink-2);stroke-width:1}.fm-cartoon .sB-num{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.2}.fm-cartoon .sB-head{fill:var(--fp-ink);stroke:none}.fm-cartoon .sB-t{font-family:var(--fp-serif);fill:var(--fp-ink)}.fm-cartoon .sB-t2{font-family:var(--fp-serif);fill:var(--fp-ink-2)}.fm-cartoon .sB-it{font-style:italic}.fm-cartoon .sB-b{font-weight:bold}.fm-cartoon .sB-caps{letter-spacing:.12em}</style><defs><marker id=\"sB-arrow\" viewBox=\"0 0 8 8\" refX=\"7.6\" refY=\"4\" markerWidth=\"8\" markerHeight=\"8\" markerUnits=\"userSpaceOnUse\" orient=\"auto\"><path d=\"M0,0.6 L8,4 L0,7.4 Z\" fill=\"var(--fp-ink-2)\"/></marker></defs><path class=\"sB-rule2\" d=\"M0,36H912\"/><path class=\"sB-rule\" d=\"M0,78H912\"/><path class=\"sB-rule\" d=\"M0,148H912\"/><path class=\"sB-rule\" d=\"M0,284H912\"/><path class=\"sB-rule\" d=\"M0,362H912\"/><path class=\"sB-rule2\" d=\"M0,410H912\"/><path class=\"sB-rule\" d=\"M124,4V410\"/><path class=\"sB-rule\" d=\"M208,4V410\"/><path class=\"sB-rule\" d=\"M322,4V410\"/><path class=\"sB-rule\" d=\"M546,4V410\"/><path class=\"sB-rule\" d=\"M666,4V410\"/><path class=\"sB-rule\" d=\"M794,4V410\"/><circle class=\"sB-num\" cx=\"135\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"135\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">1</text><text class=\"sB-t sB-b\" x=\"149\" y=\"17\" style=\"font-size:14px\">Request</text><circle class=\"sB-num\" cx=\"219\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"219\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">2</text><text class=\"sB-t sB-b\" x=\"233\" y=\"17\" style=\"font-size:14px\">Plan</text><circle class=\"sB-num\" cx=\"333\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"333\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">3</text><text class=\"sB-t sB-b\" x=\"347\" y=\"17\" style=\"font-size:14px\">Read in parallel</text><circle class=\"sB-num\" cx=\"557\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"557\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">4</text><text class=\"sB-t sB-b\" x=\"571\" y=\"17\" style=\"font-size:14px\">Validate and</text><text class=\"sB-t sB-b\" x=\"571\" y=\"31.5\" style=\"font-size:14px\">hand back</text><circle class=\"sB-num\" cx=\"677\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"677\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">5</text><text class=\"sB-t sB-b\" x=\"691\" y=\"17\" style=\"font-size:14px\">Re-check</text><text class=\"sB-t sB-b\" x=\"691\" y=\"31.5\" style=\"font-size:14px\">a sample</text><circle class=\"sB-num\" cx=\"805\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"805\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">6</text><text class=\"sB-t sB-b\" x=\"819\" y=\"17\" style=\"font-size:14px\">Merge and</text><text class=\"sB-t sB-b\" x=\"819\" y=\"31.5\" style=\"font-size:14px\">rebuild</text><text class=\"sB-t sB-b\" x=\"6\" y=\"56\" style=\"font-size:13px\">Compiler</text><text class=\"sB-t2 sB-it\" x=\"6\" y=\"70\" style=\"font-size:11px\">a person</text><rect class=\"sB-sq sB-fd\" x=\"6\" y=\"90\" width=\"10\" height=\"10\"/><text class=\"sB-t sB-b\" x=\"21\" y=\"99\" style=\"font-size:13px\">Coordinator</text><text class=\"sB-t2\" x=\"21\" y=\"113\" style=\"font-size:11px\">Claude in the</text><text class=\"sB-t2\" x=\"21\" y=\"126\" style=\"font-size:11px\">main session</text><rect class=\"sB-sq sB-fs\" x=\"6\" y=\"160\" width=\"10\" height=\"10\"/><text class=\"sB-t sB-b\" x=\"21\" y=\"169\" style=\"font-size:13px\">Reading</text><text class=\"sB-t sB-b\" x=\"21\" y=\"183\" style=\"font-size:13px\">agents</text><text class=\"sB-t2\" x=\"21\" y=\"198\" style=\"font-size:11px\">in parallel,</text><text class=\"sB-t2\" x=\"21\" y=\"211\" style=\"font-size:11px\">each alone</text><rect class=\"sB-sq sB-fh\" x=\"6\" y=\"296\" width=\"10\" height=\"10\"/><text class=\"sB-t sB-b\" x=\"21\" y=\"305\" style=\"font-size:13px\">Checking</text><text class=\"sB-t sB-b\" x=\"21\" y=\"319\" style=\"font-size:13px\">agents</text><rect class=\"sB-sq sB-fx\" x=\"6\" y=\"333\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"21\" y=\"342\" style=\"font-size:11px\">tie-breaker,</text><text class=\"sB-t2\" x=\"21\" y=\"355\" style=\"font-size:11px\">some runs</text><text class=\"sB-t sB-b\" x=\"6\" y=\"382\" style=\"font-size:13px\">Files</text><text class=\"sB-t2 sB-it\" x=\"6\" y=\"396\" style=\"font-size:11px\">and short reports</text><rect class=\"sB-box\" x=\"132\" y=\"45\" width=\"68\" height=\"28\"/><text class=\"sB-t\" x=\"166\" y=\"57\" style=\"font-size:12px\" text-anchor=\"middle\">Types a</text><text class=\"sB-t\" x=\"166\" y=\"69\" style=\"font-size:12px\" text-anchor=\"middle\">request</text><rect class=\"sB-box\" x=\"216\" y=\"84\" width=\"102\" height=\"58\"/><rect class=\"sB-strip sB-fd\" x=\"216\" y=\"84\" width=\"7\" height=\"58\"/><path class=\"sB-rule2\" d=\"M223,84V142\"/><rect x=\"216\" y=\"84\" width=\"102\" height=\"58\" class=\"sB-out\"/><text class=\"sB-t\" x=\"230\" y=\"98\" style=\"font-size:11px\">Plans the work,</text><text class=\"sB-t\" x=\"230\" y=\"111\" style=\"font-size:11px\">writes a short</text><text class=\"sB-t\" x=\"230\" y=\"124\" style=\"font-size:11px\">workflow: jobs,</text><text class=\"sB-t\" x=\"230\" y=\"137\" style=\"font-size:11px\">briefs, stages</text><path class=\"sB-arr\" d=\"M166,73 L166,113 L216,113\" marker-end=\"url(#sB-arrow)\"/><path class=\"sB-brk\" d=\"M332,101V95H786V101\"/><rect class=\"sB-pap\" x=\"392\" y=\"104\" width=\"334\" height=\"30\"/><text class=\"sB-t2 sB-it\" x=\"559\" y=\"115\" style=\"font-size:11px\" text-anchor=\"middle\">The workflow starts the agents. The coordinator sees</text><text class=\"sB-t2 sB-it\" x=\"559\" y=\"129\" style=\"font-size:11px\" text-anchor=\"middle\">only what is handed back, never the browsing</text><text class=\"sB-t\" x=\"433\" y=\"162\" style=\"font-size:11px\" text-anchor=\"middle\">× n, a few at a time, each alone</text><path class=\"sB-brk\" d=\"M330,174V169H536V174\"/><rect class=\"sB-back\" x=\"336\" y=\"180\" width=\"200\" height=\"88\"/><rect class=\"sB-back\" x=\"333\" y=\"183\" width=\"200\" height=\"88\"/><rect class=\"sB-box\" x=\"330\" y=\"186\" width=\"200\" height=\"88\"/><rect class=\"sB-strip sB-fs\" x=\"330\" y=\"186\" width=\"7\" height=\"88\"/><path class=\"sB-rule2\" d=\"M337,186V274\"/><rect x=\"330\" y=\"186\" width=\"200\" height=\"88\" class=\"sB-out\"/><text class=\"sB-t sB-it\" x=\"344\" y=\"201\" style=\"font-size:12px\">One reader, a fresh Claude</text><text class=\"sB-t\" x=\"344\" y=\"216\" style=\"font-size:11px\">Brief only: ≤ {push_batch_max} records</text><text class=\"sB-t\" x=\"344\" y=\"229\" style=\"font-size:11px\">Opens each paper by open routes</text><text class=\"sB-t\" x=\"344\" y=\"242\" style=\"font-size:11px\">FHL in address, thanks, methods?</text><text class=\"sB-t\" x=\"344\" y=\"255\" style=\"font-size:11px\">Stops at paywalls; never guesses</text><text class=\"sB-t\" x=\"344\" y=\"268\" style=\"font-size:11px\">Writes one line per record</text><path class=\"sB-arr\" d=\"M266,142 L266,230 L330,230\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"272\" y=\"190\" style=\"font-size:11px\">one brief</text><text class=\"sB-t2 sB-it\" x=\"272\" y=\"203\" style=\"font-size:11px\">per agent</text><rect class=\"sB-box\" x=\"554\" y=\"208\" width=\"94\" height=\"40\"/><rect class=\"sB-strip sB-fs\" x=\"554\" y=\"208\" width=\"7\" height=\"40\"/><path class=\"sB-rule2\" d=\"M561,208V248\"/><rect x=\"554\" y=\"208\" width=\"94\" height=\"40\" class=\"sB-out\"/><text class=\"sB-t\" x=\"568\" y=\"224\" style=\"font-size:11px\">Runs validator</text><text class=\"sB-t\" x=\"568\" y=\"238\" style=\"font-size:11px\">on own file</text><path class=\"sB-arr\" d=\"M628,208 C628,188 588,188 588,206\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"608\" y=\"184\" style=\"font-size:11px\" text-anchor=\"middle\">fix until it passes</text><path class=\"sB-arr\" d=\"M537,228 L554,228\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-sheet\" x=\"622\" y=\"367\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"619\" y=\"370\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M622,375H630\"/><path class=\"sB-rule2\" d=\"M622,379H630\"/><path class=\"sB-rule2\" d=\"M622,383H630\"/><path class=\"sB-arr\" d=\"M626,248 L626,366\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"620\" y=\"304\" style=\"font-size:11px\" text-anchor=\"end\">hands back</text><text class=\"sB-t2 sB-it\" x=\"620\" y=\"317\" style=\"font-size:11px\" text-anchor=\"end\">file + counts</text><text class=\"sB-t\" x=\"613\" y=\"383\" style=\"font-size:11px\" text-anchor=\"end\">batch files</text><rect class=\"sB-back\" x=\"680\" y=\"292\" width=\"104\" height=\"44\"/><rect class=\"sB-back\" x=\"677\" y=\"295\" width=\"104\" height=\"44\"/><rect class=\"sB-box\" x=\"674\" y=\"298\" width=\"104\" height=\"44\"/><rect class=\"sB-strip sB-fh\" x=\"674\" y=\"298\" width=\"7\" height=\"44\"/><path class=\"sB-rule2\" d=\"M681,298V342\"/><rect x=\"674\" y=\"298\" width=\"104\" height=\"44\" class=\"sB-out\"/><text class=\"sB-t\" x=\"688\" y=\"311\" style=\"font-size:11px\">Re-checks a</text><text class=\"sB-t\" x=\"688\" y=\"324\" style=\"font-size:11px\">sample of</text><text class=\"sB-t\" x=\"688\" y=\"337\" style=\"font-size:11px\">others' records</text><rect class=\"sB-sq sB-fx\" x=\"676\" y=\"346\" width=\"9\" height=\"9\"/><text class=\"sB-t\" x=\"690\" y=\"355\" style=\"font-size:11px\">+ tie-breaker</text><path class=\"sB-arr sB-dash\" d=\"M637,378 L656,378 L656,320 L674,320\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-sheet\" x=\"766\" y=\"367\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"763\" y=\"370\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M766,375H774\"/><path class=\"sB-rule2\" d=\"M766,379H774\"/><path class=\"sB-rule2\" d=\"M766,383H774\"/><path class=\"sB-arr\" d=\"M770,342 L770,366\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t\" x=\"757\" y=\"383\" style=\"font-size:11px\" text-anchor=\"end\">verdicts</text><path class=\"sB-arr\" d=\"M626,388 L626,400 L812,400 L812,142\" marker-end=\"url(#sB-arrow)\"/><path class=\"sB-arr\" d=\"M770,388 L770,400\"/><rect class=\"sB-box\" x=\"802\" y=\"84\" width=\"108\" height=\"58\"/><rect class=\"sB-strip sB-fd\" x=\"802\" y=\"84\" width=\"7\" height=\"58\"/><path class=\"sB-rule2\" d=\"M809,84V142\"/><rect x=\"802\" y=\"84\" width=\"108\" height=\"58\" class=\"sB-out\"/><text class=\"sB-t\" x=\"816\" y=\"98\" style=\"font-size:11px\">Merges files by</text><text class=\"sB-t\" x=\"816\" y=\"111\" style=\"font-size:11px\">written rules</text><text class=\"sB-t\" x=\"816\" y=\"124\" style=\"font-size:11px\">(a script) and</text><text class=\"sB-t\" x=\"816\" y=\"137\" style=\"font-size:11px\">rebuilds outputs</text><path class=\"sB-arr\" d=\"M897,142 L897,366\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-sheet\" x=\"893\" y=\"367\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"890\" y=\"370\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M893,375H901\"/><path class=\"sB-rule2\" d=\"M893,379H901\"/><path class=\"sB-rule2\" d=\"M893,383H901\"/><text class=\"sB-t\" x=\"884\" y=\"376\" style=\"font-size:11px\" text-anchor=\"end\">census</text><text class=\"sB-t\" x=\"884\" y=\"389\" style=\"font-size:11px\" text-anchor=\"end\">spreadsheet</text><text class=\"sB-t\" x=\"884\" y=\"402\" style=\"font-size:11px\" text-anchor=\"end\">this report</text><text class=\"sB-t sB-caps\" x=\"2\" y=\"424\" style=\"font-size:11px\">KEY</text><rect class=\"sB-sq sB-fs\" x=\"38\" y=\"415\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"53\" y=\"424\" style=\"font-size:11px\">did the work</text><rect class=\"sB-sq sB-fh\" x=\"133\" y=\"415\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"148\" y=\"424\" style=\"font-size:11px\">checked earlier work</text><rect class=\"sB-sq sB-fx\" x=\"272\" y=\"415\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"287\" y=\"424\" style=\"font-size:11px\">ruled on disagreements</text><rect class=\"sB-sq sB-fd\" x=\"422\" y=\"415\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"437\" y=\"424\" style=\"font-size:11px\">coordinator (main session)</text><path class=\"sB-arr sB-dash\" d=\"M594,420 L620,420\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2\" x=\"626\" y=\"424\" style=\"font-size:11px\">sample sent for re-checking</text><text class=\"sB-t2 sB-it\" x=\"788.5\" y=\"424\" style=\"font-size:11px\">fills as in Figs. 28–31</text><text class=\"sB-t2 sB-it\" x=\"2\" y=\"437\" style=\"font-size:11px\">Worked example (verification push): {push_records} records; n = {push_batches} readers, {push_peak} at a time; {recheck_agents} re-checkers; median reader {median_web} web requests. In all, {agents_counted} agents in {runs_agents} runs.</text></svg>", "tall": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 962\" role=\"img\" aria-labelledby=\"sB-title sB-desc\"><title id=\"sB-title\">Fig. 27. How the agents were used</title><desc id=\"sB-desc\">A schematic of six stages running top to bottom, each tagged with its actor: the compiler types a request; the coordinator, Claude in the main session, writes a workflow that starts the reading agents in parallel, a few at a time, each alone with its brief; they open the papers, validate their own batch files and hand back only those files and a short report of counts; checking agents re-open a sample and return their verdicts to the workflow, and the coordinator merges the files and verdicts by script and rebuilds the census and report. In the verification push, {push_records} records went to {push_batches} reading agents, {push_peak} at a time, and {recheck_agents} re-checking agents, and the median reader made {median_web} web requests; in all {agents_counted} agents in {runs_agents} runs built the census and its companions.</desc><style>.fm-cartoon .sB-box{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.3}.fm-cartoon .sB-back{fill:var(--fp-paper);stroke:var(--fp-ink-2);stroke-width:1.2}.fm-cartoon .sB-out{fill:none;stroke:var(--fp-ink);stroke-width:1.3}.fm-cartoon .sB-pap{fill:var(--fp-paper);stroke:none}.fm-cartoon .sB-sheet{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.2}.fm-cartoon .sB-strip{stroke:none}.fm-cartoon .sB-sq{stroke:var(--fp-ink);stroke-width:1}.fm-cartoon .sB-fs{fill:var(--fp-ink)}.fm-cartoon .sB-fh{fill:url(#fp-hatch)}.fm-cartoon .sB-fx{fill:url(#fp-cross)}.fm-cartoon .sB-fd{fill:url(#fp-dots)}.fm-cartoon .sB-arr{fill:none;stroke:var(--fp-ink-2);stroke-width:1.3}.fm-cartoon .sB-dash{stroke-dasharray:4 3}.fm-cartoon .sB-brk{fill:none;stroke:var(--fp-ink-2);stroke-width:1}.fm-cartoon .sB-rule{fill:none;stroke:var(--fp-ink-3);stroke-width:.7}.fm-cartoon .sB-rule2{fill:none;stroke:var(--fp-ink-2);stroke-width:1}.fm-cartoon .sB-num{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.2}.fm-cartoon .sB-head{fill:var(--fp-ink);stroke:none}.fm-cartoon .sB-t{font-family:var(--fp-serif);fill:var(--fp-ink)}.fm-cartoon .sB-t2{font-family:var(--fp-serif);fill:var(--fp-ink-2)}.fm-cartoon .sB-it{font-style:italic}.fm-cartoon .sB-b{font-weight:bold}.fm-cartoon .sB-caps{letter-spacing:.12em}</style><defs><marker id=\"sB-arrow\" viewBox=\"0 0 8 8\" refX=\"7.6\" refY=\"4\" markerWidth=\"8\" markerHeight=\"8\" markerUnits=\"userSpaceOnUse\" orient=\"auto\"><path d=\"M0,0.6 L8,4 L0,7.4 Z\" fill=\"var(--fp-ink-2)\"/></marker></defs><circle class=\"sB-num\" cx=\"14\" cy=\"18\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"22.3\" style=\"font-size:12px\" text-anchor=\"middle\">1</text><text class=\"sB-t sB-b\" x=\"28\" y=\"22\" style=\"font-size:14px\">Request</text><text class=\"sB-t2\" x=\"28\" y=\"39\" style=\"font-size:11px\">Compiler</text><rect class=\"sB-box\" x=\"130\" y=\"12\" width=\"218\" height=\"30\"/><text class=\"sB-t\" x=\"144\" y=\"31\" style=\"font-size:12px\">Types a request in the Claude app</text><path class=\"sB-arr\" d=\"M239,42 L239,66\" marker-end=\"url(#sB-arrow)\"/><circle class=\"sB-num\" cx=\"14\" cy=\"80\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"84.3\" style=\"font-size:12px\" text-anchor=\"middle\">2</text><text class=\"sB-t sB-b\" x=\"28\" y=\"84\" style=\"font-size:14px\">Plan</text><rect class=\"sB-sq sB-fd\" x=\"28\" y=\"92\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"101\" style=\"font-size:11px\">Coordinator</text><rect class=\"sB-box\" x=\"130\" y=\"66\" width=\"218\" height=\"62\"/><rect class=\"sB-strip sB-fd\" x=\"130\" y=\"66\" width=\"7\" height=\"62\"/><path class=\"sB-rule2\" d=\"M137,66V128\"/><rect x=\"130\" y=\"66\" width=\"218\" height=\"62\" class=\"sB-out\"/><text class=\"sB-t\" x=\"144\" y=\"82\" style=\"font-size:11px\">Plans the work and writes a</text><text class=\"sB-t\" x=\"144\" y=\"95\" style=\"font-size:11px\">short workflow: the jobs, the</text><text class=\"sB-t\" x=\"144\" y=\"108\" style=\"font-size:11px\">brief for each agent, and the</text><text class=\"sB-t\" x=\"144\" y=\"121\" style=\"font-size:11px\">stages (read, then re-check)</text><path class=\"sB-arr\" d=\"M239,128 L239,166\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"233\" y=\"151\" style=\"font-size:11px\" text-anchor=\"end\">one brief per agent</text><rect class=\"sB-back\" x=\"136\" y=\"166\" width=\"218\" height=\"160\"/><rect class=\"sB-back\" x=\"133\" y=\"169\" width=\"218\" height=\"160\"/><rect class=\"sB-box\" x=\"130\" y=\"172\" width=\"218\" height=\"160\"/><rect class=\"sB-strip sB-fs\" x=\"130\" y=\"172\" width=\"7\" height=\"160\"/><path class=\"sB-rule2\" d=\"M137,172V332\"/><rect x=\"130\" y=\"172\" width=\"218\" height=\"160\" class=\"sB-out\"/><text class=\"sB-t sB-it\" x=\"144\" y=\"189\" style=\"font-size:12px\">Each reader is a fresh Claude</text><text class=\"sB-t\" x=\"144\" y=\"205\" style=\"font-size:11px\">Sees only its brief: ≤ {push_batch_max} records</text><text class=\"sB-t\" x=\"144\" y=\"218\" style=\"font-size:11px\">Opens each paper by open routes:</text><text class=\"sB-t\" x=\"144\" y=\"231\" style=\"font-size:11px\">doi.org, Europe PMC, open copies,</text><text class=\"sB-t\" x=\"144\" y=\"244\" style=\"font-size:11px\">Biodiversity Heritage Library</text><text class=\"sB-t\" x=\"144\" y=\"257\" style=\"font-size:11px\">Looks for FHL in the address,</text><text class=\"sB-t\" x=\"144\" y=\"270\" style=\"font-size:11px\">acknowledgments or methods</text><text class=\"sB-t\" x=\"144\" y=\"283\" style=\"font-size:11px\">Stops at paywall, login, CAPTCHA;</text><text class=\"sB-t\" x=\"144\" y=\"296\" style=\"font-size:11px\">never guesses from the title</text><text class=\"sB-t\" x=\"144\" y=\"309\" style=\"font-size:11px\">Writes one line per record: decision,</text><text class=\"sB-t\" x=\"144\" y=\"322\" style=\"font-size:11px\">where FHL appears, quoted evidence</text><circle class=\"sB-num\" cx=\"14\" cy=\"186\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"190.3\" style=\"font-size:12px\" text-anchor=\"middle\">3</text><text class=\"sB-t sB-b\" x=\"28\" y=\"190\" style=\"font-size:14px\">Read in</text><text class=\"sB-t sB-b\" x=\"28\" y=\"205\" style=\"font-size:14px\">parallel</text><rect class=\"sB-sq sB-fs\" x=\"28\" y=\"213\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"222\" style=\"font-size:11px\">Reading</text><text class=\"sB-t2\" x=\"42\" y=\"235\" style=\"font-size:11px\">agents</text><path class=\"sB-brk\" d=\"M125,166H120V332H125\"/><text class=\"sB-t sB-b\" x=\"28\" y=\"262\" style=\"font-size:13px\">× n</text><text class=\"sB-t2 sB-it\" x=\"28\" y=\"277\" style=\"font-size:11px\">a few at a time,</text><text class=\"sB-t2 sB-it\" x=\"28\" y=\"290\" style=\"font-size:11px\">each alone</text><path class=\"sB-arr\" d=\"M239,332 L239,354\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-box\" x=\"130\" y=\"354\" width=\"218\" height=\"50\"/><rect class=\"sB-strip sB-fs\" x=\"130\" y=\"354\" width=\"7\" height=\"50\"/><path class=\"sB-rule2\" d=\"M137,354V404\"/><rect x=\"130\" y=\"354\" width=\"218\" height=\"50\" class=\"sB-out\"/><text class=\"sB-t\" x=\"144\" y=\"370\" style=\"font-size:11px\">Runs a validator on its own file:</text><text class=\"sB-t\" x=\"144\" y=\"383\" style=\"font-size:11px\">every record once, allowed values,</text><text class=\"sB-t\" x=\"144\" y=\"396\" style=\"font-size:11px\">a reason; fixes it until it passes</text><path class=\"sB-arr\" d=\"M348,368 C357,368 357,390 349,390\" marker-end=\"url(#sB-arrow)\"/><circle class=\"sB-num\" cx=\"14\" cy=\"368\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"372.3\" style=\"font-size:12px\" text-anchor=\"middle\">4</text><text class=\"sB-t sB-b\" x=\"28\" y=\"372\" style=\"font-size:14px\">Validate and</text><text class=\"sB-t sB-b\" x=\"28\" y=\"387\" style=\"font-size:14px\">hand back</text><rect class=\"sB-sq sB-fs\" x=\"28\" y=\"395\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"404\" style=\"font-size:11px\">Reading</text><text class=\"sB-t2\" x=\"42\" y=\"417\" style=\"font-size:11px\">agents</text><path class=\"sB-arr\" d=\"M239,404 L239,440\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"246\" y=\"420\" style=\"font-size:11px\">hands back</text><text class=\"sB-t2 sB-it\" x=\"246\" y=\"433\" style=\"font-size:11px\">file + counts</text><rect class=\"sB-sheet\" x=\"235\" y=\"441\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"232\" y=\"444\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M235,449H243\"/><path class=\"sB-rule2\" d=\"M235,453H243\"/><path class=\"sB-rule2\" d=\"M235,457H243\"/><text class=\"sB-t\" x=\"257\" y=\"457\" style=\"font-size:11px\">batch file</text><text class=\"sB-t2 sB-it\" x=\"28\" y=\"457\" style=\"font-size:11px\">Files</text><path class=\"sB-arr sB-dash\" d=\"M239,462 L239,492\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"246\" y=\"481\" style=\"font-size:11px\">a sample of records</text><rect class=\"sB-back\" x=\"136\" y=\"492\" width=\"218\" height=\"98\"/><rect class=\"sB-back\" x=\"133\" y=\"495\" width=\"218\" height=\"98\"/><rect class=\"sB-box\" x=\"130\" y=\"498\" width=\"218\" height=\"98\"/><rect class=\"sB-strip sB-fh\" x=\"130\" y=\"498\" width=\"7\" height=\"54\"/><rect class=\"sB-strip sB-fx\" x=\"130\" y=\"552\" width=\"7\" height=\"44\"/><path class=\"sB-rule2\" d=\"M137,498V596\"/><path class=\"sB-rule2\" d=\"M130,552H348\"/><rect x=\"130\" y=\"498\" width=\"218\" height=\"98\" class=\"sB-out\"/><text class=\"sB-t\" x=\"144\" y=\"514\" style=\"font-size:11px\">Re-opens a sample of another</text><text class=\"sB-t\" x=\"144\" y=\"527\" style=\"font-size:11px\">agent's records instead of</text><text class=\"sB-t\" x=\"144\" y=\"540\" style=\"font-size:11px\">trusting them</text><text class=\"sB-t\" x=\"144\" y=\"570\" style=\"font-size:11px\">In some runs a tie-breaker</text><text class=\"sB-t\" x=\"144\" y=\"584\" style=\"font-size:11px\">rules on disagreements</text><circle class=\"sB-num\" cx=\"14\" cy=\"512\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"516.3\" style=\"font-size:12px\" text-anchor=\"middle\">5</text><text class=\"sB-t sB-b\" x=\"28\" y=\"516\" style=\"font-size:14px\">Re-check a</text><text class=\"sB-t sB-b\" x=\"28\" y=\"531\" style=\"font-size:14px\">sample</text><rect class=\"sB-sq sB-fh\" x=\"28\" y=\"539\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"548\" style=\"font-size:11px\">Checking</text><text class=\"sB-t2\" x=\"42\" y=\"561\" style=\"font-size:11px\">agents</text><rect class=\"sB-sq sB-fx\" x=\"28\" y=\"566\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"575\" style=\"font-size:11px\">tie-breaker</text><path class=\"sB-arr\" d=\"M239,596 L239,618\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-sheet\" x=\"235\" y=\"619\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"232\" y=\"622\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M235,627H243\"/><path class=\"sB-rule2\" d=\"M235,631H243\"/><path class=\"sB-rule2\" d=\"M235,635H243\"/><text class=\"sB-t\" x=\"257\" y=\"635\" style=\"font-size:11px\">verdicts</text><text class=\"sB-t2 sB-it\" x=\"28\" y=\"635\" style=\"font-size:11px\">Reports</text><path class=\"sB-arr\" d=\"M239,640 L239,662\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-box\" x=\"130\" y=\"662\" width=\"218\" height=\"66\"/><rect class=\"sB-strip sB-fd\" x=\"130\" y=\"662\" width=\"7\" height=\"66\"/><path class=\"sB-rule2\" d=\"M137,662V728\"/><rect x=\"130\" y=\"662\" width=\"218\" height=\"66\" class=\"sB-out\"/><text class=\"sB-t2 sB-it\" x=\"144\" y=\"678\" style=\"font-size:11px\">Sees what comes back, never the browsing</text><text class=\"sB-t\" x=\"144\" y=\"692\" style=\"font-size:11px\">Merges them into the census by</text><text class=\"sB-t\" x=\"144\" y=\"705\" style=\"font-size:11px\">written rules (a script), then</text><text class=\"sB-t\" x=\"144\" y=\"718\" style=\"font-size:11px\">rebuilds spreadsheet and report</text><circle class=\"sB-num\" cx=\"14\" cy=\"676\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"680.3\" style=\"font-size:12px\" text-anchor=\"middle\">6</text><text class=\"sB-t sB-b\" x=\"28\" y=\"680\" style=\"font-size:14px\">Merge and</text><text class=\"sB-t sB-b\" x=\"28\" y=\"695\" style=\"font-size:14px\">rebuild</text><rect class=\"sB-sq sB-fd\" x=\"28\" y=\"703\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"712\" style=\"font-size:11px\">Coordinator</text><path class=\"sB-arr\" d=\"M239,728 L239,750\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-sheet\" x=\"235\" y=\"751\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"232\" y=\"754\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M235,759H243\"/><path class=\"sB-rule2\" d=\"M235,763H243\"/><path class=\"sB-rule2\" d=\"M235,767H243\"/><text class=\"sB-t\" x=\"257\" y=\"760\" style=\"font-size:11px\">census,</text><text class=\"sB-t\" x=\"257\" y=\"773\" style=\"font-size:11px\">spreadsheet,</text><text class=\"sB-t\" x=\"257\" y=\"786\" style=\"font-size:11px\">this report</text><text class=\"sB-t2 sB-it\" x=\"28\" y=\"767\" style=\"font-size:11px\">Files</text><path class=\"sB-rule\" d=\"M0,54H360\"/><path class=\"sB-rule\" d=\"M0,140H360\"/><path class=\"sB-rule\" d=\"M0,343H360\"/><path class=\"sB-rule\" d=\"M0,470H360\"/><path class=\"sB-rule\" d=\"M0,648H360\"/><path class=\"sB-rule2\" d=\"M0,792H360\"/><text class=\"sB-t sB-caps\" x=\"2\" y=\"812\" style=\"font-size:11px\">KEY</text><text class=\"sB-t2 sB-it\" x=\"38\" y=\"812\" style=\"font-size:11px\">fills as in Figs. 28–31</text><rect class=\"sB-sq sB-fs\" x=\"2\" y=\"820\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"18\" y=\"829\" style=\"font-size:11px\">did the work (reading agents)</text><rect class=\"sB-sq sB-fh\" x=\"2\" y=\"835\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"18\" y=\"844\" style=\"font-size:11px\">checked earlier work</text><rect class=\"sB-sq sB-fx\" x=\"2\" y=\"850\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"18\" y=\"859\" style=\"font-size:11px\">ruled on disagreements (tie-breaker)</text><rect class=\"sB-sq sB-fd\" x=\"2\" y=\"865\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"18\" y=\"874\" style=\"font-size:11px\">Claude in the main session (coordinator)</text><path class=\"sB-arr sB-dash\" d=\"M2,885 L26,885\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2\" x=\"32\" y=\"889\" style=\"font-size:11px\">sample sent for re-checking</text><text class=\"sB-t2 sB-it\" x=\"2\" y=\"913\" style=\"font-size:11px\">Worked example, the verification push: {push_records} records;</text><text class=\"sB-t2 sB-it\" x=\"2\" y=\"927\" style=\"font-size:11px\">n = {push_batches} reading agents, one per batch, {push_peak} at a time;</text><text class=\"sB-t2 sB-it\" x=\"2\" y=\"941\" style=\"font-size:11px\">{recheck_agents} re-checking agents; median reader {median_web} web requests.</text><text class=\"sB-t2 sB-it\" x=\"2\" y=\"955\" style=\"font-size:11px\">In all, {agents_counted} agents in {runs_agents} runs built the census and its companions.</text></svg>"};
+// Fig. 24, the Methods cartoon: built by scripts/build_cartoon.py from cartoon/wide.svg and cartoon/tall.svg.
+window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 920 440\" role=\"img\" aria-labelledby=\"sB-title sB-desc\"><title id=\"sB-title\">Fig. 24. How the agents were used</title><desc id=\"sB-desc\">A swimlane schematic with one lane per actor and six stages running left to right: the compiler types a request; the coordinator, Claude in the main session, writes a workflow that starts the reading agents in parallel, a few at a time, each alone with its brief; they open the papers, validate their own batch files and hand back only those files and a short report of counts; checking agents re-open a sample and return their verdicts to the workflow, and the coordinator merges the files and verdicts by script and rebuilds the census and report. In the verification push, {push_records} records went to {push_batches} reading agents, {push_peak} at a time, and {recheck_agents} re-checking agents, and the median reader made {median_web} web requests; in all {agents_counted} agents in {runs_agents} runs built the census and its companions.</desc><style>.fm-cartoon .sB-box{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.3}.fm-cartoon .sB-back{fill:var(--fp-paper);stroke:var(--fp-ink-2);stroke-width:1.2}.fm-cartoon .sB-out{fill:none;stroke:var(--fp-ink);stroke-width:1.3}.fm-cartoon .sB-pap{fill:var(--fp-paper);stroke:none}.fm-cartoon .sB-sheet{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.2}.fm-cartoon .sB-strip{stroke:none}.fm-cartoon .sB-sq{stroke:var(--fp-ink);stroke-width:1}.fm-cartoon .sB-fs{fill:var(--fp-ink)}.fm-cartoon .sB-fh{fill:url(#fp-hatch)}.fm-cartoon .sB-fx{fill:url(#fp-cross)}.fm-cartoon .sB-fd{fill:url(#fp-dots)}.fm-cartoon .sB-arr{fill:none;stroke:var(--fp-ink-2);stroke-width:1.3}.fm-cartoon .sB-dash{stroke-dasharray:4 3}.fm-cartoon .sB-brk{fill:none;stroke:var(--fp-ink-2);stroke-width:1}.fm-cartoon .sB-rule{fill:none;stroke:var(--fp-ink-3);stroke-width:.7}.fm-cartoon .sB-rule2{fill:none;stroke:var(--fp-ink-2);stroke-width:1}.fm-cartoon .sB-num{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.2}.fm-cartoon .sB-head{fill:var(--fp-ink);stroke:none}.fm-cartoon .sB-t{font-family:var(--fp-serif);fill:var(--fp-ink)}.fm-cartoon .sB-t2{font-family:var(--fp-serif);fill:var(--fp-ink-2)}.fm-cartoon .sB-it{font-style:italic}.fm-cartoon .sB-b{font-weight:bold}.fm-cartoon .sB-caps{letter-spacing:.12em}</style><defs><marker id=\"sB-arrow\" viewBox=\"0 0 8 8\" refX=\"7.6\" refY=\"4\" markerWidth=\"8\" markerHeight=\"8\" markerUnits=\"userSpaceOnUse\" orient=\"auto\"><path d=\"M0,0.6 L8,4 L0,7.4 Z\" fill=\"var(--fp-ink-2)\"/></marker></defs><path class=\"sB-rule2\" d=\"M0,36H912\"/><path class=\"sB-rule\" d=\"M0,78H912\"/><path class=\"sB-rule\" d=\"M0,148H912\"/><path class=\"sB-rule\" d=\"M0,284H912\"/><path class=\"sB-rule\" d=\"M0,362H912\"/><path class=\"sB-rule2\" d=\"M0,410H912\"/><path class=\"sB-rule\" d=\"M124,4V410\"/><path class=\"sB-rule\" d=\"M208,4V410\"/><path class=\"sB-rule\" d=\"M322,4V410\"/><path class=\"sB-rule\" d=\"M546,4V410\"/><path class=\"sB-rule\" d=\"M666,4V410\"/><path class=\"sB-rule\" d=\"M794,4V410\"/><circle class=\"sB-num\" cx=\"135\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"135\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">1</text><text class=\"sB-t sB-b\" x=\"149\" y=\"17\" style=\"font-size:14px\">Request</text><circle class=\"sB-num\" cx=\"219\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"219\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">2</text><text class=\"sB-t sB-b\" x=\"233\" y=\"17\" style=\"font-size:14px\">Plan</text><circle class=\"sB-num\" cx=\"333\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"333\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">3</text><text class=\"sB-t sB-b\" x=\"347\" y=\"17\" style=\"font-size:14px\">Read in parallel</text><circle class=\"sB-num\" cx=\"557\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"557\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">4</text><text class=\"sB-t sB-b\" x=\"571\" y=\"17\" style=\"font-size:14px\">Validate and</text><text class=\"sB-t sB-b\" x=\"571\" y=\"31.5\" style=\"font-size:14px\">hand back</text><circle class=\"sB-num\" cx=\"677\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"677\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">5</text><text class=\"sB-t sB-b\" x=\"691\" y=\"17\" style=\"font-size:14px\">Re-check</text><text class=\"sB-t sB-b\" x=\"691\" y=\"31.5\" style=\"font-size:14px\">a sample</text><circle class=\"sB-num\" cx=\"805\" cy=\"13\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"805\" y=\"17.3\" style=\"font-size:12px\" text-anchor=\"middle\">6</text><text class=\"sB-t sB-b\" x=\"819\" y=\"17\" style=\"font-size:14px\">Merge and</text><text class=\"sB-t sB-b\" x=\"819\" y=\"31.5\" style=\"font-size:14px\">rebuild</text><text class=\"sB-t sB-b\" x=\"6\" y=\"56\" style=\"font-size:13px\">Compiler</text><text class=\"sB-t2 sB-it\" x=\"6\" y=\"70\" style=\"font-size:11px\">a person</text><rect class=\"sB-sq sB-fd\" x=\"6\" y=\"90\" width=\"10\" height=\"10\"/><text class=\"sB-t sB-b\" x=\"21\" y=\"99\" style=\"font-size:13px\">Coordinator</text><text class=\"sB-t2\" x=\"21\" y=\"113\" style=\"font-size:11px\">Claude in the</text><text class=\"sB-t2\" x=\"21\" y=\"126\" style=\"font-size:11px\">main session</text><rect class=\"sB-sq sB-fs\" x=\"6\" y=\"160\" width=\"10\" height=\"10\"/><text class=\"sB-t sB-b\" x=\"21\" y=\"169\" style=\"font-size:13px\">Reading</text><text class=\"sB-t sB-b\" x=\"21\" y=\"183\" style=\"font-size:13px\">agents</text><text class=\"sB-t2\" x=\"21\" y=\"198\" style=\"font-size:11px\">in parallel,</text><text class=\"sB-t2\" x=\"21\" y=\"211\" style=\"font-size:11px\">each alone</text><rect class=\"sB-sq sB-fh\" x=\"6\" y=\"296\" width=\"10\" height=\"10\"/><text class=\"sB-t sB-b\" x=\"21\" y=\"305\" style=\"font-size:13px\">Checking</text><text class=\"sB-t sB-b\" x=\"21\" y=\"319\" style=\"font-size:13px\">agents</text><rect class=\"sB-sq sB-fx\" x=\"6\" y=\"333\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"21\" y=\"342\" style=\"font-size:11px\">tie-breaker,</text><text class=\"sB-t2\" x=\"21\" y=\"355\" style=\"font-size:11px\">some runs</text><text class=\"sB-t sB-b\" x=\"6\" y=\"382\" style=\"font-size:13px\">Files</text><text class=\"sB-t2 sB-it\" x=\"6\" y=\"396\" style=\"font-size:11px\">and short reports</text><rect class=\"sB-box\" x=\"132\" y=\"45\" width=\"68\" height=\"28\"/><text class=\"sB-t\" x=\"166\" y=\"57\" style=\"font-size:12px\" text-anchor=\"middle\">Types a</text><text class=\"sB-t\" x=\"166\" y=\"69\" style=\"font-size:12px\" text-anchor=\"middle\">request</text><rect class=\"sB-box\" x=\"216\" y=\"84\" width=\"102\" height=\"58\"/><rect class=\"sB-strip sB-fd\" x=\"216\" y=\"84\" width=\"7\" height=\"58\"/><path class=\"sB-rule2\" d=\"M223,84V142\"/><rect x=\"216\" y=\"84\" width=\"102\" height=\"58\" class=\"sB-out\"/><text class=\"sB-t\" x=\"230\" y=\"98\" style=\"font-size:11px\">Plans the work,</text><text class=\"sB-t\" x=\"230\" y=\"111\" style=\"font-size:11px\">writes a short</text><text class=\"sB-t\" x=\"230\" y=\"124\" style=\"font-size:11px\">workflow: jobs,</text><text class=\"sB-t\" x=\"230\" y=\"137\" style=\"font-size:11px\">briefs, stages</text><path class=\"sB-arr\" d=\"M166,73 L166,113 L216,113\" marker-end=\"url(#sB-arrow)\"/><path class=\"sB-brk\" d=\"M332,101V95H786V101\"/><rect class=\"sB-pap\" x=\"392\" y=\"104\" width=\"334\" height=\"30\"/><text class=\"sB-t2 sB-it\" x=\"559\" y=\"115\" style=\"font-size:11px\" text-anchor=\"middle\">The workflow starts the agents. The coordinator sees</text><text class=\"sB-t2 sB-it\" x=\"559\" y=\"129\" style=\"font-size:11px\" text-anchor=\"middle\">only what is handed back, never the browsing</text><text class=\"sB-t\" x=\"433\" y=\"162\" style=\"font-size:11px\" text-anchor=\"middle\">× n, a few at a time, each alone</text><path class=\"sB-brk\" d=\"M330,174V169H536V174\"/><rect class=\"sB-back\" x=\"336\" y=\"180\" width=\"200\" height=\"88\"/><rect class=\"sB-back\" x=\"333\" y=\"183\" width=\"200\" height=\"88\"/><rect class=\"sB-box\" x=\"330\" y=\"186\" width=\"200\" height=\"88\"/><rect class=\"sB-strip sB-fs\" x=\"330\" y=\"186\" width=\"7\" height=\"88\"/><path class=\"sB-rule2\" d=\"M337,186V274\"/><rect x=\"330\" y=\"186\" width=\"200\" height=\"88\" class=\"sB-out\"/><text class=\"sB-t sB-it\" x=\"344\" y=\"201\" style=\"font-size:12px\">One reader, a fresh Claude</text><text class=\"sB-t\" x=\"344\" y=\"216\" style=\"font-size:11px\">Brief only: ≤ {push_batch_max} records</text><text class=\"sB-t\" x=\"344\" y=\"229\" style=\"font-size:11px\">Opens each paper by open routes</text><text class=\"sB-t\" x=\"344\" y=\"242\" style=\"font-size:11px\">FHL in address, thanks, methods?</text><text class=\"sB-t\" x=\"344\" y=\"255\" style=\"font-size:11px\">Stops at paywalls; never guesses</text><text class=\"sB-t\" x=\"344\" y=\"268\" style=\"font-size:11px\">Writes one line per record</text><path class=\"sB-arr\" d=\"M266,142 L266,230 L330,230\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"272\" y=\"190\" style=\"font-size:11px\">one brief</text><text class=\"sB-t2 sB-it\" x=\"272\" y=\"203\" style=\"font-size:11px\">per agent</text><rect class=\"sB-box\" x=\"554\" y=\"208\" width=\"94\" height=\"40\"/><rect class=\"sB-strip sB-fs\" x=\"554\" y=\"208\" width=\"7\" height=\"40\"/><path class=\"sB-rule2\" d=\"M561,208V248\"/><rect x=\"554\" y=\"208\" width=\"94\" height=\"40\" class=\"sB-out\"/><text class=\"sB-t\" x=\"568\" y=\"224\" style=\"font-size:11px\">Runs validator</text><text class=\"sB-t\" x=\"568\" y=\"238\" style=\"font-size:11px\">on own file</text><path class=\"sB-arr\" d=\"M628,208 C628,188 588,188 588,206\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"608\" y=\"184\" style=\"font-size:11px\" text-anchor=\"middle\">fix until it passes</text><path class=\"sB-arr\" d=\"M537,228 L554,228\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-sheet\" x=\"622\" y=\"367\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"619\" y=\"370\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M622,375H630\"/><path class=\"sB-rule2\" d=\"M622,379H630\"/><path class=\"sB-rule2\" d=\"M622,383H630\"/><path class=\"sB-arr\" d=\"M626,248 L626,366\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"620\" y=\"304\" style=\"font-size:11px\" text-anchor=\"end\">hands back</text><text class=\"sB-t2 sB-it\" x=\"620\" y=\"317\" style=\"font-size:11px\" text-anchor=\"end\">file + counts</text><text class=\"sB-t\" x=\"613\" y=\"383\" style=\"font-size:11px\" text-anchor=\"end\">batch files</text><rect class=\"sB-back\" x=\"680\" y=\"292\" width=\"104\" height=\"44\"/><rect class=\"sB-back\" x=\"677\" y=\"295\" width=\"104\" height=\"44\"/><rect class=\"sB-box\" x=\"674\" y=\"298\" width=\"104\" height=\"44\"/><rect class=\"sB-strip sB-fh\" x=\"674\" y=\"298\" width=\"7\" height=\"44\"/><path class=\"sB-rule2\" d=\"M681,298V342\"/><rect x=\"674\" y=\"298\" width=\"104\" height=\"44\" class=\"sB-out\"/><text class=\"sB-t\" x=\"688\" y=\"311\" style=\"font-size:11px\">Re-checks a</text><text class=\"sB-t\" x=\"688\" y=\"324\" style=\"font-size:11px\">sample of</text><text class=\"sB-t\" x=\"688\" y=\"337\" style=\"font-size:11px\">others' records</text><rect class=\"sB-sq sB-fx\" x=\"676\" y=\"346\" width=\"9\" height=\"9\"/><text class=\"sB-t\" x=\"690\" y=\"355\" style=\"font-size:11px\">+ tie-breaker</text><path class=\"sB-arr sB-dash\" d=\"M637,378 L656,378 L656,320 L674,320\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-sheet\" x=\"766\" y=\"367\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"763\" y=\"370\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M766,375H774\"/><path class=\"sB-rule2\" d=\"M766,379H774\"/><path class=\"sB-rule2\" d=\"M766,383H774\"/><path class=\"sB-arr\" d=\"M770,342 L770,366\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t\" x=\"757\" y=\"383\" style=\"font-size:11px\" text-anchor=\"end\">verdicts</text><path class=\"sB-arr\" d=\"M626,388 L626,400 L812,400 L812,142\" marker-end=\"url(#sB-arrow)\"/><path class=\"sB-arr\" d=\"M770,388 L770,400\"/><rect class=\"sB-box\" x=\"802\" y=\"84\" width=\"108\" height=\"58\"/><rect class=\"sB-strip sB-fd\" x=\"802\" y=\"84\" width=\"7\" height=\"58\"/><path class=\"sB-rule2\" d=\"M809,84V142\"/><rect x=\"802\" y=\"84\" width=\"108\" height=\"58\" class=\"sB-out\"/><text class=\"sB-t\" x=\"816\" y=\"98\" style=\"font-size:11px\">Merges files by</text><text class=\"sB-t\" x=\"816\" y=\"111\" style=\"font-size:11px\">written rules</text><text class=\"sB-t\" x=\"816\" y=\"124\" style=\"font-size:11px\">(a script) and</text><text class=\"sB-t\" x=\"816\" y=\"137\" style=\"font-size:11px\">rebuilds outputs</text><path class=\"sB-arr\" d=\"M897,142 L897,366\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-sheet\" x=\"893\" y=\"367\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"890\" y=\"370\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M893,375H901\"/><path class=\"sB-rule2\" d=\"M893,379H901\"/><path class=\"sB-rule2\" d=\"M893,383H901\"/><text class=\"sB-t\" x=\"884\" y=\"376\" style=\"font-size:11px\" text-anchor=\"end\">census</text><text class=\"sB-t\" x=\"884\" y=\"389\" style=\"font-size:11px\" text-anchor=\"end\">spreadsheet</text><text class=\"sB-t\" x=\"884\" y=\"402\" style=\"font-size:11px\" text-anchor=\"end\">this report</text><text class=\"sB-t sB-caps\" x=\"2\" y=\"424\" style=\"font-size:11px\">KEY</text><rect class=\"sB-sq sB-fs\" x=\"38\" y=\"415\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"53\" y=\"424\" style=\"font-size:11px\">did the work</text><rect class=\"sB-sq sB-fh\" x=\"133\" y=\"415\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"148\" y=\"424\" style=\"font-size:11px\">checked earlier work</text><rect class=\"sB-sq sB-fx\" x=\"272\" y=\"415\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"287\" y=\"424\" style=\"font-size:11px\">ruled on disagreements</text><rect class=\"sB-sq sB-fd\" x=\"422\" y=\"415\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"437\" y=\"424\" style=\"font-size:11px\">coordinator (main session)</text><path class=\"sB-arr sB-dash\" d=\"M594,420 L620,420\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2\" x=\"626\" y=\"424\" style=\"font-size:11px\">sample sent for re-checking</text><text class=\"sB-t2 sB-it\" x=\"788.5\" y=\"424\" style=\"font-size:11px\">fills as in Figs. 25–28</text><text class=\"sB-t2 sB-it\" x=\"2\" y=\"437\" style=\"font-size:11px\">Worked example (verification push): {push_records} records; n = {push_batches} readers, {push_peak} at a time; {recheck_agents} re-checkers; median reader {median_web} web requests. In all, {agents_counted} agents in {runs_agents} runs.</text></svg>", "tall": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 962\" role=\"img\" aria-labelledby=\"sB-title sB-desc\"><title id=\"sB-title\">Fig. 24. How the agents were used</title><desc id=\"sB-desc\">A schematic of six stages running top to bottom, each tagged with its actor: the compiler types a request; the coordinator, Claude in the main session, writes a workflow that starts the reading agents in parallel, a few at a time, each alone with its brief; they open the papers, validate their own batch files and hand back only those files and a short report of counts; checking agents re-open a sample and return their verdicts to the workflow, and the coordinator merges the files and verdicts by script and rebuilds the census and report. In the verification push, {push_records} records went to {push_batches} reading agents, {push_peak} at a time, and {recheck_agents} re-checking agents, and the median reader made {median_web} web requests; in all {agents_counted} agents in {runs_agents} runs built the census and its companions.</desc><style>.fm-cartoon .sB-box{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.3}.fm-cartoon .sB-back{fill:var(--fp-paper);stroke:var(--fp-ink-2);stroke-width:1.2}.fm-cartoon .sB-out{fill:none;stroke:var(--fp-ink);stroke-width:1.3}.fm-cartoon .sB-pap{fill:var(--fp-paper);stroke:none}.fm-cartoon .sB-sheet{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.2}.fm-cartoon .sB-strip{stroke:none}.fm-cartoon .sB-sq{stroke:var(--fp-ink);stroke-width:1}.fm-cartoon .sB-fs{fill:var(--fp-ink)}.fm-cartoon .sB-fh{fill:url(#fp-hatch)}.fm-cartoon .sB-fx{fill:url(#fp-cross)}.fm-cartoon .sB-fd{fill:url(#fp-dots)}.fm-cartoon .sB-arr{fill:none;stroke:var(--fp-ink-2);stroke-width:1.3}.fm-cartoon .sB-dash{stroke-dasharray:4 3}.fm-cartoon .sB-brk{fill:none;stroke:var(--fp-ink-2);stroke-width:1}.fm-cartoon .sB-rule{fill:none;stroke:var(--fp-ink-3);stroke-width:.7}.fm-cartoon .sB-rule2{fill:none;stroke:var(--fp-ink-2);stroke-width:1}.fm-cartoon .sB-num{fill:var(--fp-paper);stroke:var(--fp-ink);stroke-width:1.2}.fm-cartoon .sB-head{fill:var(--fp-ink);stroke:none}.fm-cartoon .sB-t{font-family:var(--fp-serif);fill:var(--fp-ink)}.fm-cartoon .sB-t2{font-family:var(--fp-serif);fill:var(--fp-ink-2)}.fm-cartoon .sB-it{font-style:italic}.fm-cartoon .sB-b{font-weight:bold}.fm-cartoon .sB-caps{letter-spacing:.12em}</style><defs><marker id=\"sB-arrow\" viewBox=\"0 0 8 8\" refX=\"7.6\" refY=\"4\" markerWidth=\"8\" markerHeight=\"8\" markerUnits=\"userSpaceOnUse\" orient=\"auto\"><path d=\"M0,0.6 L8,4 L0,7.4 Z\" fill=\"var(--fp-ink-2)\"/></marker></defs><circle class=\"sB-num\" cx=\"14\" cy=\"18\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"22.3\" style=\"font-size:12px\" text-anchor=\"middle\">1</text><text class=\"sB-t sB-b\" x=\"28\" y=\"22\" style=\"font-size:14px\">Request</text><text class=\"sB-t2\" x=\"28\" y=\"39\" style=\"font-size:11px\">Compiler</text><rect class=\"sB-box\" x=\"130\" y=\"12\" width=\"218\" height=\"30\"/><text class=\"sB-t\" x=\"144\" y=\"31\" style=\"font-size:12px\">Types a request in the Claude app</text><path class=\"sB-arr\" d=\"M239,42 L239,66\" marker-end=\"url(#sB-arrow)\"/><circle class=\"sB-num\" cx=\"14\" cy=\"80\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"84.3\" style=\"font-size:12px\" text-anchor=\"middle\">2</text><text class=\"sB-t sB-b\" x=\"28\" y=\"84\" style=\"font-size:14px\">Plan</text><rect class=\"sB-sq sB-fd\" x=\"28\" y=\"92\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"101\" style=\"font-size:11px\">Coordinator</text><rect class=\"sB-box\" x=\"130\" y=\"66\" width=\"218\" height=\"62\"/><rect class=\"sB-strip sB-fd\" x=\"130\" y=\"66\" width=\"7\" height=\"62\"/><path class=\"sB-rule2\" d=\"M137,66V128\"/><rect x=\"130\" y=\"66\" width=\"218\" height=\"62\" class=\"sB-out\"/><text class=\"sB-t\" x=\"144\" y=\"82\" style=\"font-size:11px\">Plans the work and writes a</text><text class=\"sB-t\" x=\"144\" y=\"95\" style=\"font-size:11px\">short workflow: the jobs, the</text><text class=\"sB-t\" x=\"144\" y=\"108\" style=\"font-size:11px\">brief for each agent, and the</text><text class=\"sB-t\" x=\"144\" y=\"121\" style=\"font-size:11px\">stages (read, then re-check)</text><path class=\"sB-arr\" d=\"M239,128 L239,166\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"233\" y=\"151\" style=\"font-size:11px\" text-anchor=\"end\">one brief per agent</text><rect class=\"sB-back\" x=\"136\" y=\"166\" width=\"218\" height=\"160\"/><rect class=\"sB-back\" x=\"133\" y=\"169\" width=\"218\" height=\"160\"/><rect class=\"sB-box\" x=\"130\" y=\"172\" width=\"218\" height=\"160\"/><rect class=\"sB-strip sB-fs\" x=\"130\" y=\"172\" width=\"7\" height=\"160\"/><path class=\"sB-rule2\" d=\"M137,172V332\"/><rect x=\"130\" y=\"172\" width=\"218\" height=\"160\" class=\"sB-out\"/><text class=\"sB-t sB-it\" x=\"144\" y=\"189\" style=\"font-size:12px\">Each reader is a fresh Claude</text><text class=\"sB-t\" x=\"144\" y=\"205\" style=\"font-size:11px\">Sees only its brief: ≤ {push_batch_max} records</text><text class=\"sB-t\" x=\"144\" y=\"218\" style=\"font-size:11px\">Opens each paper by open routes:</text><text class=\"sB-t\" x=\"144\" y=\"231\" style=\"font-size:11px\">doi.org, Europe PMC, open copies,</text><text class=\"sB-t\" x=\"144\" y=\"244\" style=\"font-size:11px\">Biodiversity Heritage Library</text><text class=\"sB-t\" x=\"144\" y=\"257\" style=\"font-size:11px\">Looks for FHL in the address,</text><text class=\"sB-t\" x=\"144\" y=\"270\" style=\"font-size:11px\">acknowledgments or methods</text><text class=\"sB-t\" x=\"144\" y=\"283\" style=\"font-size:11px\">Stops at paywall, login, CAPTCHA;</text><text class=\"sB-t\" x=\"144\" y=\"296\" style=\"font-size:11px\">never guesses from the title</text><text class=\"sB-t\" x=\"144\" y=\"309\" style=\"font-size:11px\">Writes one line per record: decision,</text><text class=\"sB-t\" x=\"144\" y=\"322\" style=\"font-size:11px\">where FHL appears, quoted evidence</text><circle class=\"sB-num\" cx=\"14\" cy=\"186\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"190.3\" style=\"font-size:12px\" text-anchor=\"middle\">3</text><text class=\"sB-t sB-b\" x=\"28\" y=\"190\" style=\"font-size:14px\">Read in</text><text class=\"sB-t sB-b\" x=\"28\" y=\"205\" style=\"font-size:14px\">parallel</text><rect class=\"sB-sq sB-fs\" x=\"28\" y=\"213\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"222\" style=\"font-size:11px\">Reading</text><text class=\"sB-t2\" x=\"42\" y=\"235\" style=\"font-size:11px\">agents</text><path class=\"sB-brk\" d=\"M125,166H120V332H125\"/><text class=\"sB-t sB-b\" x=\"28\" y=\"262\" style=\"font-size:13px\">× n</text><text class=\"sB-t2 sB-it\" x=\"28\" y=\"277\" style=\"font-size:11px\">a few at a time,</text><text class=\"sB-t2 sB-it\" x=\"28\" y=\"290\" style=\"font-size:11px\">each alone</text><path class=\"sB-arr\" d=\"M239,332 L239,354\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-box\" x=\"130\" y=\"354\" width=\"218\" height=\"50\"/><rect class=\"sB-strip sB-fs\" x=\"130\" y=\"354\" width=\"7\" height=\"50\"/><path class=\"sB-rule2\" d=\"M137,354V404\"/><rect x=\"130\" y=\"354\" width=\"218\" height=\"50\" class=\"sB-out\"/><text class=\"sB-t\" x=\"144\" y=\"370\" style=\"font-size:11px\">Runs a validator on its own file:</text><text class=\"sB-t\" x=\"144\" y=\"383\" style=\"font-size:11px\">every record once, allowed values,</text><text class=\"sB-t\" x=\"144\" y=\"396\" style=\"font-size:11px\">a reason; fixes it until it passes</text><path class=\"sB-arr\" d=\"M348,368 C357,368 357,390 349,390\" marker-end=\"url(#sB-arrow)\"/><circle class=\"sB-num\" cx=\"14\" cy=\"368\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"372.3\" style=\"font-size:12px\" text-anchor=\"middle\">4</text><text class=\"sB-t sB-b\" x=\"28\" y=\"372\" style=\"font-size:14px\">Validate and</text><text class=\"sB-t sB-b\" x=\"28\" y=\"387\" style=\"font-size:14px\">hand back</text><rect class=\"sB-sq sB-fs\" x=\"28\" y=\"395\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"404\" style=\"font-size:11px\">Reading</text><text class=\"sB-t2\" x=\"42\" y=\"417\" style=\"font-size:11px\">agents</text><path class=\"sB-arr\" d=\"M239,404 L239,440\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"246\" y=\"420\" style=\"font-size:11px\">hands back</text><text class=\"sB-t2 sB-it\" x=\"246\" y=\"433\" style=\"font-size:11px\">file + counts</text><rect class=\"sB-sheet\" x=\"235\" y=\"441\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"232\" y=\"444\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M235,449H243\"/><path class=\"sB-rule2\" d=\"M235,453H243\"/><path class=\"sB-rule2\" d=\"M235,457H243\"/><text class=\"sB-t\" x=\"257\" y=\"457\" style=\"font-size:11px\">batch file</text><text class=\"sB-t2 sB-it\" x=\"28\" y=\"457\" style=\"font-size:11px\">Files</text><path class=\"sB-arr sB-dash\" d=\"M239,462 L239,492\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2 sB-it\" x=\"246\" y=\"481\" style=\"font-size:11px\">a sample of records</text><rect class=\"sB-back\" x=\"136\" y=\"492\" width=\"218\" height=\"98\"/><rect class=\"sB-back\" x=\"133\" y=\"495\" width=\"218\" height=\"98\"/><rect class=\"sB-box\" x=\"130\" y=\"498\" width=\"218\" height=\"98\"/><rect class=\"sB-strip sB-fh\" x=\"130\" y=\"498\" width=\"7\" height=\"54\"/><rect class=\"sB-strip sB-fx\" x=\"130\" y=\"552\" width=\"7\" height=\"44\"/><path class=\"sB-rule2\" d=\"M137,498V596\"/><path class=\"sB-rule2\" d=\"M130,552H348\"/><rect x=\"130\" y=\"498\" width=\"218\" height=\"98\" class=\"sB-out\"/><text class=\"sB-t\" x=\"144\" y=\"514\" style=\"font-size:11px\">Re-opens a sample of another</text><text class=\"sB-t\" x=\"144\" y=\"527\" style=\"font-size:11px\">agent's records instead of</text><text class=\"sB-t\" x=\"144\" y=\"540\" style=\"font-size:11px\">trusting them</text><text class=\"sB-t\" x=\"144\" y=\"570\" style=\"font-size:11px\">In some runs a tie-breaker</text><text class=\"sB-t\" x=\"144\" y=\"584\" style=\"font-size:11px\">rules on disagreements</text><circle class=\"sB-num\" cx=\"14\" cy=\"512\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"516.3\" style=\"font-size:12px\" text-anchor=\"middle\">5</text><text class=\"sB-t sB-b\" x=\"28\" y=\"516\" style=\"font-size:14px\">Re-check a</text><text class=\"sB-t sB-b\" x=\"28\" y=\"531\" style=\"font-size:14px\">sample</text><rect class=\"sB-sq sB-fh\" x=\"28\" y=\"539\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"548\" style=\"font-size:11px\">Checking</text><text class=\"sB-t2\" x=\"42\" y=\"561\" style=\"font-size:11px\">agents</text><rect class=\"sB-sq sB-fx\" x=\"28\" y=\"566\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"575\" style=\"font-size:11px\">tie-breaker</text><path class=\"sB-arr\" d=\"M239,596 L239,618\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-sheet\" x=\"235\" y=\"619\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"232\" y=\"622\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M235,627H243\"/><path class=\"sB-rule2\" d=\"M235,631H243\"/><path class=\"sB-rule2\" d=\"M235,635H243\"/><text class=\"sB-t\" x=\"257\" y=\"635\" style=\"font-size:11px\">verdicts</text><text class=\"sB-t2 sB-it\" x=\"28\" y=\"635\" style=\"font-size:11px\">Reports</text><path class=\"sB-arr\" d=\"M239,640 L239,662\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-box\" x=\"130\" y=\"662\" width=\"218\" height=\"66\"/><rect class=\"sB-strip sB-fd\" x=\"130\" y=\"662\" width=\"7\" height=\"66\"/><path class=\"sB-rule2\" d=\"M137,662V728\"/><rect x=\"130\" y=\"662\" width=\"218\" height=\"66\" class=\"sB-out\"/><text class=\"sB-t2 sB-it\" x=\"144\" y=\"678\" style=\"font-size:11px\">Sees what comes back, never the browsing</text><text class=\"sB-t\" x=\"144\" y=\"692\" style=\"font-size:11px\">Merges them into the census by</text><text class=\"sB-t\" x=\"144\" y=\"705\" style=\"font-size:11px\">written rules (a script), then</text><text class=\"sB-t\" x=\"144\" y=\"718\" style=\"font-size:11px\">rebuilds spreadsheet and report</text><circle class=\"sB-num\" cx=\"14\" cy=\"676\" r=\"9\"/><text class=\"sB-t sB-b\" x=\"14\" y=\"680.3\" style=\"font-size:12px\" text-anchor=\"middle\">6</text><text class=\"sB-t sB-b\" x=\"28\" y=\"680\" style=\"font-size:14px\">Merge and</text><text class=\"sB-t sB-b\" x=\"28\" y=\"695\" style=\"font-size:14px\">rebuild</text><rect class=\"sB-sq sB-fd\" x=\"28\" y=\"703\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"42\" y=\"712\" style=\"font-size:11px\">Coordinator</text><path class=\"sB-arr\" d=\"M239,728 L239,750\" marker-end=\"url(#sB-arrow)\"/><rect class=\"sB-sheet\" x=\"235\" y=\"751\" width=\"14\" height=\"18\"/><rect class=\"sB-sheet\" x=\"232\" y=\"754\" width=\"14\" height=\"18\"/><path class=\"sB-rule2\" d=\"M235,759H243\"/><path class=\"sB-rule2\" d=\"M235,763H243\"/><path class=\"sB-rule2\" d=\"M235,767H243\"/><text class=\"sB-t\" x=\"257\" y=\"760\" style=\"font-size:11px\">census,</text><text class=\"sB-t\" x=\"257\" y=\"773\" style=\"font-size:11px\">spreadsheet,</text><text class=\"sB-t\" x=\"257\" y=\"786\" style=\"font-size:11px\">this report</text><text class=\"sB-t2 sB-it\" x=\"28\" y=\"767\" style=\"font-size:11px\">Files</text><path class=\"sB-rule\" d=\"M0,54H360\"/><path class=\"sB-rule\" d=\"M0,140H360\"/><path class=\"sB-rule\" d=\"M0,343H360\"/><path class=\"sB-rule\" d=\"M0,470H360\"/><path class=\"sB-rule\" d=\"M0,648H360\"/><path class=\"sB-rule2\" d=\"M0,792H360\"/><text class=\"sB-t sB-caps\" x=\"2\" y=\"812\" style=\"font-size:11px\">KEY</text><text class=\"sB-t2 sB-it\" x=\"38\" y=\"812\" style=\"font-size:11px\">fills as in Figs. 25–28</text><rect class=\"sB-sq sB-fs\" x=\"2\" y=\"820\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"18\" y=\"829\" style=\"font-size:11px\">did the work (reading agents)</text><rect class=\"sB-sq sB-fh\" x=\"2\" y=\"835\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"18\" y=\"844\" style=\"font-size:11px\">checked earlier work</text><rect class=\"sB-sq sB-fx\" x=\"2\" y=\"850\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"18\" y=\"859\" style=\"font-size:11px\">ruled on disagreements (tie-breaker)</text><rect class=\"sB-sq sB-fd\" x=\"2\" y=\"865\" width=\"10\" height=\"10\"/><text class=\"sB-t2\" x=\"18\" y=\"874\" style=\"font-size:11px\">Claude in the main session (coordinator)</text><path class=\"sB-arr sB-dash\" d=\"M2,885 L26,885\" marker-end=\"url(#sB-arrow)\"/><text class=\"sB-t2\" x=\"32\" y=\"889\" style=\"font-size:11px\">sample sent for re-checking</text><text class=\"sB-t2 sB-it\" x=\"2\" y=\"913\" style=\"font-size:11px\">Worked example, the verification push: {push_records} records;</text><text class=\"sB-t2 sB-it\" x=\"2\" y=\"927\" style=\"font-size:11px\">n = {push_batches} reading agents, one per batch, {push_peak} at a time;</text><text class=\"sB-t2 sB-it\" x=\"2\" y=\"941\" style=\"font-size:11px\">{recheck_agents} re-checking agents; median reader {median_web} web requests.</text><text class=\"sB-t2 sB-it\" x=\"2\" y=\"955\" style=\"font-size:11px\">In all, {agents_counted} agents in {runs_agents} runs built the census and its companions.</text></svg>"};
 </script>
 <script>
-// The Methods figures that show how the AI agents were used (Figs. 27-34). Loaded after the page's main script; uses
+// The Methods figures that show how the AI agents were used (Figs. 24-28 and 30-32). Loaded after the page's main script; uses
 // window.FP for fills, keys, tooltips and the phone test. One square is one agent everywhere, filled by its role.
 (() => {
   const { f, pct, FILL, state, legend, svgFor, showTip, hideTip, textWidth, phone } = window.FP;
-  const GAP_H = 2; // hours with no agent working and no prompt typed that cut the time axis of Fig. 30
-  const WAFFLE_N = 5; // records per square in Fig. 32
+  const GAP_H = 2; // hours with no agent working and no prompt typed that cut the time axis of Fig. 27
+  const WAFFLE_N = 5; // records per square in Fig. 30
   const PAPER = 'var(--fp-paper)', INK = 'var(--fp-ink)';
   const ROLE = { make: FILL.solid, check: FILL.hatch, review: FILL.cross };
   const ROLE_NAME = { make: 'did the work', check: 'checked earlier work', review: "worked across other agents' results" };
@@ -4500,7 +4491,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
   const WORD = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
   const word = (k, cap) => { const w = WORD[k] || f(k); return cap ? w[0].toUpperCase() + w.slice(1) : w; };
 
-  // ---- Fig. 27: the cartoon of how the agents were used (drawings in cartoon.js; their {tokens} filled from the data)
+  // ---- Fig. 24: the cartoon of how the agents were used (drawings in cartoon.js; their {tokens} filled from the data)
   const CARTOON_WIDE = 840;
   let cartoonWide = null;
   const drawCartoon = (box, D) => {
@@ -4523,7 +4514,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
     });
   };
 
-  // ---- Fig. 28: where the agents went ----------------------------------------------------------------------------
+  // ---- Fig. 25: where the agents went ----------------------------------------------------------------------------
   const drawAgents = (box, D) => {
     const ph = phone(), size = ph ? 5 : 7, step = size + 1, maxCols = 10;
     const W = Math.max(260, box.clientWidth);
@@ -4567,7 +4558,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
         const ch = 13 + Math.ceil(ra.length / cols) * step;
         if (cx > 0 && cx + cw > sw) { cx = 0; cy += lineH + 6; lineH = 0; }
         const c = g.append('g').attr('class', 'fm-run').attr('transform', `translate(${x0 + cx},${top + cy})`);
-        if (ra.length) c.attr('role', 'button').attr('tabindex', 0).attr('aria-label', `Run ${rn}: ${r ? r.name : ''}; show it in Fig. 29`);
+        if (ra.length) c.attr('role', 'button').attr('tabindex', 0).attr('aria-label', `Run ${rn}: ${r ? r.name : ''}; show it in Fig. 26`);
         else c.classed('fm-inert', true).attr('aria-label', `Run ${rn}: ${r ? r.name : ''}; no agents`);
         c.append('text').attr('class', 'fm-rn').attr('y', 9).text(label);
         const sq = c.append('g').attr('transform', 'translate(0,13)');
@@ -4610,7 +4601,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
     legend(el('lg-tools'), TOOLS.map(([, label, fl]) => [label, fl]));
   };
 
-  // ---- Fig. 29: how a run is built, four shapes ------------------------------------------------------------------
+  // ---- Fig. 26: how a run is built, four shapes ------------------------------------------------------------------
   const SHAPES = [['P1', 'Maker, then checker', 10, ''], ['P2', 'Many, then one reviewer', 2, ''],
     ['P3', 'Two judges and a tie-breaker', 9, 'links'], ['P4', 'The image funnel', 14, ''], ['P0', 'Runs of no single shape', 5, '']];
   // the panel a run belongs to: its first shape, or the last panel when it has agents but no shape
@@ -4675,7 +4666,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
     }
   };
 
-  // ---- Fig. 30: when the agents worked, and when a person typed --------------------------------------------------
+  // ---- Fig. 27: when the agents worked, and when a person typed --------------------------------------------------
   const drawTimeline = (box, D) => {
     const ph = phone();
     const prompts = dash.data('prompts').data.map((p) => ({ n: +p.n, kind: p.kind, t: Date.parse(p.typed_utc), agents: n(p.agents), tokens: n(p.tokens_total), msgs: n(p.messages) }));
@@ -4841,7 +4832,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
     roleLegend('lg-timeline', false);
   };
 
-  // ---- Fig. 31: the census, step by step -------------------------------------------------------------------------
+  // ---- Fig. 28: the census, step by step -------------------------------------------------------------------------
   const drawCensus = (box, D) => {
     const ph = phone();
     const rows = dash.data('census_steps').data.map((r) => ({ ...r, step_i: +r.step_i, value: +r.value }));
@@ -4903,7 +4894,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
     legend(el('lg-census'), Object.entries(WHO).filter(([k]) => used.has(k)).map(([k, [fl, label]]) => [label, fl, k]));
   };
 
-  // ---- Fig. 32: inside one agent's job, the verification push ----------------------------------------------------
+  // ---- Fig. 30: inside one agent's job, the verification push ----------------------------------------------------
   const drawPush = (box, D) => {
     const run = D.agents.filter((a) => a.run === 16);
     const fct = D.facts;
@@ -4989,7 +4980,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
     if (ph) elB.classList.add('fm-ph'); else elB.classList.remove('fm-ph');
   };
 
-  // ---- Fig. 33: what the checking agents changed -----------------------------------------------------------------
+  // ---- Fig. 31: what the checking agents changed -----------------------------------------------------------------
   const drawChecks = (box) => {
     const ph = phone();
     const rows = dash.data('methods_checks').data.map((r) => ({ ...r, runs: str(r.runs), made: +r.made, checked: +r.checked, confirmed: +r.confirmed, corrected: +r.corrected, dropped: +r.dropped, unsettled: +r.unsettled }));
@@ -5037,7 +5028,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
     document.querySelectorAll('[data-fm="checks-claim"]').forEach((e) => { e.hidden = !claim; });
   };
 
-  // ---- Fig. 34: how far each kind of decision can be trusted -----------------------------------------------------
+  // ---- Fig. 32: how far each kind of decision can be trusted -----------------------------------------------------
   const DECIDED = { inc_rule_affiliation: ['written rule', 'address names FHL'], inc_rule_text_structured: ['written rule', 'text names FHL (structured)'],
     inc_rule_datasets_grey: ['written rule', 'datasets and gray literature'], inc_rule_fulltext_lab: ['written rule', 'full-text index match'],
     inc_screened: ['AI screening agent', 'included by screening'], exc_screened: ['AI screening agent', 'excluded by screening'],
@@ -5050,7 +5041,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
     const ph = phone();
     const W = Math.max(260, box.clientWidth);
     document.querySelectorAll('#fm-trust-toggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === trustView)));
-    if (trustView === 'tier') { // the evidence tiers, as in Table VII
+    if (trustView === 'tier') { // the evidence tiers, as in Table IX
       const rows = dash.data('audit_tiers').data.map((r) => { const [lo, hi] = String(r.interval).split('–').map(Number); return { tier: r.tier, p: +r.precision, n: +r.checked, lo, hi }; });
       const rowH = 34, { svg, width, height } = svgFor(box, rows.length * rowH + 30);
       const lw = textWidth(svg, rows.map((r) => r.tier)) + 14, nw = textWidth(svg, rows.map((r) => `${f(r.n)} checked`)) + 10;
@@ -5134,7 +5125,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
       fill('n-harvest', word(ag(1, 'Harvest'), true)); fill('n-critique', word(ag(1, 'Critique'), true)); fill('n-gapfill', word(ag(4, 'Harvest')));
     }
     const ln = dash.data('lineage');
-    if (ln.status === 'ok') { // Fig. 35: links found by agents reading rosters, CVs, committee lists and profiles
+    if (ln.status === 'ok') { // Fig. 34: links found by agents reading rosters, CVs, committee lists and profiles
       const AGENT_FOUND = ['Lab roster', 'Graduate committee', 'Profile'];
       const k = ln.data.filter((l) => AGENT_FOUND.includes(l.source)).length;
       fill('links-agent', `${f(k)} (${pct(k / ln.data.length)})`); fill('links-all', f(ln.data.length));

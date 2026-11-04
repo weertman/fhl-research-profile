@@ -119,5 +119,5 @@ topic_batches,16,random batches classified
 topic_batches_within_chance,15,batches whose topic mix matched the whole within the range expected by chance
 agents_launched,650,"AI agents launched, including those stopped or never returned"
 prompts_launching,17,"prompts that launched agents, including the one whose agent is linked to no run"
-prompts_launching_runs,16,prompts that launched the agents of the runs (Table X)
+prompts_launching_runs,16,prompts that launched the agents of the runs (Table VIII)
 agents_aborted,4,agents of a first launch that was stopped and launched again (not counted)
