@@ -63,7 +63,7 @@ year,appears,n
 1965,Author address,12
 1966,Author address,12
 1967,Author address,10
-1968,Author address,6
+1968,Author address,7
 1969,Author address,12
 1970,Author address,17
 1971,Author address,10
@@ -97,14 +97,14 @@ year,appears,n
 1999,Author address,37
 2000,Author address,30
 2001,Author address,36
-2002,Author address,35
+2002,Author address,36
 2003,Author address,37
 2004,Author address,48
 2005,Author address,57
 2006,Author address,61
 2007,Author address,45
-2008,Author address,57
-2009,Author address,49
+2008,Author address,55
+2009,Author address,51
 2010,Author address,55
 2011,Author address,142
 2012,Author address,109
@@ -118,7 +118,7 @@ year,appears,n
 2020,Author address,60
 2021,Author address,95
 2022,Author address,100
-2023,Author address,98
+2023,Author address,97
 2024,Author address,60
 2025,Author address,95
 2026,Author address,51
@@ -429,7 +429,7 @@ year,appears,n
 1962,Text only: acknowledgments,1
 1963,Text only: acknowledgments,1
 1964,Text only: acknowledgments,1
-1965,Text only: acknowledgments,1
+1965,Text only: acknowledgments,2
 1966,Text only: acknowledgments,1
 1967,Text only: acknowledgments,0
 1968,Text only: acknowledgments,2
@@ -558,13 +558,13 @@ year,appears,n
 1968,Text only: methods and elsewhere,6
 1969,Text only: methods and elsewhere,6
 1970,Text only: methods and elsewhere,7
-1971,Text only: methods and elsewhere,6
+1971,Text only: methods and elsewhere,7
 1972,Text only: methods and elsewhere,4
 1973,Text only: methods and elsewhere,4
 1974,Text only: methods and elsewhere,5
 1975,Text only: methods and elsewhere,9
 1976,Text only: methods and elsewhere,7
-1977,Text only: methods and elsewhere,4
+1977,Text only: methods and elsewhere,5
 1978,Text only: methods and elsewhere,8
 1979,Text only: methods and elsewhere,3
 1980,Text only: methods and elsewhere,8
@@ -601,7 +601,7 @@ year,appears,n
 2011,Text only: methods and elsewhere,31
 2012,Text only: methods and elsewhere,27
 2013,Text only: methods and elsewhere,21
-2014,Text only: methods and elsewhere,32
+2014,Text only: methods and elsewhere,33
 2015,Text only: methods and elsewhere,21
 2016,Text only: methods and elsewhere,20
 2017,Text only: methods and elsewhere,18

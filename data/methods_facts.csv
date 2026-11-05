@@ -3,7 +3,7 @@ source_rows,26759,rows returned by all searches
 wos_records,2543,Web of Science records exported
 candidates,15962,candidate records after merging
 with_doi,6913,candidates with a DOI
-decided_rules,8377,final decisions resting on written rules
+decided_rules,8373,final decisions resting on written rules
 decided_screening,6080,final decisions resting on AI screening
 decided_calibration,260,final decisions resting on calibration review
 decided_audit,365,final decisions resting on the audit

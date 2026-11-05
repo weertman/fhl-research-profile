@@ -634,19 +634,21 @@ san-juan-communities,src,8,"Kendeigh 1968, Bulletin of the Ecological Society of
 san-juan-communities,src,9,"Mills and Hermans, FHL Centennial Timeline",https://faculty.washington.edu/cemills/FHLTimeline.html
 san-juan-communities,src,10,The census,
 connell-barnacles,pub,1,Connell JH (1970) A predator-prey system in the marine intertidal region. I. *Balanus glandula* and several predatory species of *Thais*. Ecological Monographs 40(1):49-78.,https://doi.org/10.2307/1942441
-connell-barnacles,src,1,Connell 1970,https://openalex.org/W1973423513
-connell-barnacles,src,2,"Connell 1970, abstract",https://kirjandus.geoloogia.info/reference/46040
-connell-barnacles,src,3,"Mills and Hermans, FHL Centennial Timeline",https://faculty.washington.edu/cemills/FHLTimeline.html
-connell-barnacles,src,4,"George Mercer Award for 1963, Bulletin of the Ecological Society of America, 1964",https://www.esa.org/wp-content/uploads/sites/94/2022/02/mercer1963.pdf
-connell-barnacles,src,5,"Dayton 1971, Ecological Monographs",https://daytonlab.ucsd.edu/Publications/Dayton71.pdf
-connell-barnacles,src,6,"Intertidal Tidings vol. 10, 2005, FHL newsletter (archived copy)",https://web.archive.org/web/20191018165500/https://fhl.uw.edu/wp-content/uploads/sites/17/2015/08/IntertidalTidingsVol10.pdf
-connell-barnacles,src,7,"Willows 2021, Journal of the San Juans",https://www.sanjuanjournal.com/2021/12/06/vancouver-darwin-hoyle-and-the-fhl-discovery-of-the-largest-known-muscle-cells/
-connell-barnacles,src,8,"Moore 2023, The Glasgow Naturalist",https://www.glasgownaturalhistory.org.uk/gn28_1/Moore_JHConnell_Cumbrae.pdf
-connell-barnacles,src,9,"Lubchenco and Sousa 2020, Nature",https://ib.berkeley.edu/labs/sousa/sites/ib.berkeley.edu.labs.sousa/files/Lubchenco%20and%20Sousa%202020_%5B52%5D.pdf
-connell-barnacles,src,10,"Obituary of Joseph Hurd Connell, Santa Barbara Independent, 2020",https://www.independent.com/obits/2020/09/15/joseph-hurd-connell/
-connell-barnacles,src,11,"Dayton, Revisiting Dayton 1971, Reflections on Papers Past",https://reflectionsonpaperspast.com/?p=101
-connell-barnacles,src,12,"Hopkins Marine Station student paper, about 2001",https://miller-library.github.io/taxa-ocr-output/jc598rf2102.html
-connell-barnacles,src,13,The census,
+connell-barnacles,src,1,"Connell 1963, final report to the Office of Naval Research",https://archive.org/details/DTIC_AD0401697
+connell-barnacles,src,2,"Sousa et al. 2021, Resolution of Respect: Joseph Hurd Connell, Bulletin of the Ecological Society of America",https://ib.berkeley.edu/labs/sousa/sites/ib.berkeley.edu.labs.sousa/files/Sousa%20et%20al%202021_%5B53%5D.pdf
+connell-barnacles,src,3,Connell 1970,https://openalex.org/W1973423513
+connell-barnacles,src,4,"Connell 1970, abstract",https://kirjandus.geoloogia.info/reference/46040
+connell-barnacles,src,5,"Mills and Hermans, FHL Centennial Timeline",https://faculty.washington.edu/cemills/FHLTimeline.html
+connell-barnacles,src,6,"George Mercer Award for 1963, Bulletin of the Ecological Society of America, 1964",https://www.esa.org/wp-content/uploads/sites/94/2022/02/mercer1963.pdf
+connell-barnacles,src,7,"Dayton 1971, Ecological Monographs",https://daytonlab.ucsd.edu/Publications/Dayton71.pdf
+connell-barnacles,src,8,"Intertidal Tidings vol. 10, 2005, FHL newsletter (archived copy)",https://web.archive.org/web/20191018165500/https://fhl.uw.edu/wp-content/uploads/sites/17/2015/08/IntertidalTidingsVol10.pdf
+connell-barnacles,src,9,"Willows 2021, Journal of the San Juans",https://www.sanjuanjournal.com/2021/12/06/vancouver-darwin-hoyle-and-the-fhl-discovery-of-the-largest-known-muscle-cells/
+connell-barnacles,src,10,"Moore 2023, The Glasgow Naturalist",https://www.glasgownaturalhistory.org.uk/gn28_1/Moore_JHConnell_Cumbrae.pdf
+connell-barnacles,src,11,"Lubchenco and Sousa 2020, Nature",https://ib.berkeley.edu/labs/sousa/sites/ib.berkeley.edu.labs.sousa/files/Lubchenco%20and%20Sousa%202020_%5B52%5D.pdf
+connell-barnacles,src,12,"Obituary of Joseph Hurd Connell, Santa Barbara Independent, 2020",https://www.independent.com/obits/2020/09/15/joseph-hurd-connell/
+connell-barnacles,src,13,"Dayton, Revisiting Dayton 1971, Reflections on Papers Past",https://reflectionsonpaperspast.com/?p=101
+connell-barnacles,src,14,"Hopkins Marine Station student paper, about 2001",https://miller-library.github.io/taxa-ocr-output/jc598rf2102.html
+connell-barnacles,src,15,FHL staff and scientist lists,
 dayton-disturbance,pub,1,"Dayton PK (1971) Competition, disturbance, and community organization: the provision and subsequent utilization of space in a rocky intertidal community. Ecological Monographs 41:351-389.",https://daytonlab.ucsd.edu/Publications/Dayton71.pdf
 dayton-disturbance,src,1,"Dayton 1971, Ecological Monographs",https://daytonlab.ucsd.edu/Publications/Dayton71.pdf
 dayton-disturbance,src,2,"Sridhar 2017, Revisiting Dayton 1971, Reflections on Papers Past",https://reflectionsonpaperspast.com/2017/12/31/revisiting-dayton-1971/
@@ -667,7 +669,7 @@ scuba-subtidal-foodwebs,src,1,"Mills and Hermans, FHL Centennial Timeline",https
 scuba-subtidal-foodwebs,src,2,The census,
 scuba-subtidal-foodwebs,src,3,"UW Board of Regents Minutes, March 18, 1960",https://digitalcollections.lib.washington.edu/digital/collection/borminutes/id/9863
 scuba-subtidal-foodwebs,src,4,"Mauzey 1966, Biological Bulletin (archived copy)",https://web.archive.org/web/20231022085639id_/https://www.biodiversitylibrary.org/partpdf/5768
-scuba-subtidal-foodwebs,src,5,"Mauzey, Birkeland and Dayton 1968, Ecology",https://doi.org/10.2307/1935526
+scuba-subtidal-foodwebs,src,5,"Mauzey, Birkeland and Dayton 1968, Ecology",https://daytonlab.ucsd.edu/Publications/Mauzeyetal68.pdf
 scuba-subtidal-foodwebs,src,6,"Birkeland 1974, Ecological Monographs",https://doi.org/10.2307/1942312
 scuba-subtidal-foodwebs,src,7,"Neushul 1967, Ecology",https://doi.org/10.2307/1933420
 scuba-subtidal-foodwebs,src,8,"Birkeland, Dayton and Engstrom 1982, Australian Museum Memoir",https://media.australian.museum/media/Uploads/Journals/17595/365_complete.pdf
@@ -683,16 +685,17 @@ scuba-subtidal-foodwebs,src,17,"Witman et al. 2013, Smithsonian Contributions to
 urchin-grazing,pub,1,"Paine RT, Vadas RL (1969) The effects of grazing by sea urchins, *Strongylocentrotus* spp., on benthic algal populations. Limnology and Oceanography 14:710-719.",https://doi.org/10.4319/lo.1969.14.5.0710
 urchin-grazing,pub,2,Vadas RL (1977) Preferential feeding: an optimization strategy in sea urchins. Ecological Monographs 47:337-371.,https://doi.org/10.2307/1942173
 urchin-grazing,src,1,"Paine and Vadas 1969, Limnology and Oceanography (archived copy)",https://web.archive.org/web/20150919075413id_/http://aslo.org/lo/toc/vol_14/issue_5/0710.pdf
-urchin-grazing,src,2,"Johansen and Vadas 1967, Biological Bulletin (archived copy)",https://archive.org/details/biostor-8685
-urchin-grazing,src,3,"Mills and Hermans, FHL Centennial Timeline",https://faculty.washington.edu/cemills/FHLTimeline.html
-urchin-grazing,src,4,"Vadas 1977, Ecological Monographs (archived copy)",https://web.archive.org/web/20220802092909/https://esajournals.onlinelibrary.wiley.com/doi/10.2307/1942173
-urchin-grazing,src,5,Paine and Vadas 1969,https://doi.org/10.4319/lo.1969.14.5.0710
-urchin-grazing,src,6,Vadas 1977,https://doi.org/10.2307/1942173
-urchin-grazing,src,7,"Steneck 2016, Remembering Bob Paine, University of Maine Darling Marine Center",https://dmc.umaine.edu/2016/08/12/remembering-bob-paine/
-urchin-grazing,src,8,"Sousa, Schroeter and Gaines 1981, Oecologia",https://ib.berkeley.edu/labs/sousa/sites/ib.berkeley.edu.labs.sousa/files/Sousa%20et%20al%201981_%5B4%5D.pdf
-urchin-grazing,src,9,"Pearse and Hines 1979, Marine Biology",https://biomar.fciencias.unam.mx/Sobretiros/Informacion%20algas/Algas/nueva%20informacion/J.S.%20PEARSE%20AND%20A.H.%20HINES%201979.pdf
-urchin-grazing,src,10,"Dobkowski 2017, PeerJ",https://doi.org/10.7717/peerj.3372
-urchin-grazing,src,11,"Raymond, Duggins and Dethier 2011, FHL student research paper",https://digital.lib.washington.edu/researchworks/items/b47ac05a-4016-4501-9c92-ac06acbab9b5/full
+urchin-grazing,src,2,"Vadas 1977, reprinted in Selected Papers in Phycology II (1982), full-text search excerpts",https://archive.org/details/selectedpapersin0000unse
+urchin-grazing,src,3,"Johansen and Vadas 1967, Biological Bulletin (archived copy)",https://archive.org/details/biostor-8685
+urchin-grazing,src,4,"Mills and Hermans, FHL Centennial Timeline",https://faculty.washington.edu/cemills/FHLTimeline.html
+urchin-grazing,src,5,"Vadas 1977, Ecological Monographs (archived copy)",https://web.archive.org/web/20220802092909/https://esajournals.onlinelibrary.wiley.com/doi/10.2307/1942173
+urchin-grazing,src,6,Paine and Vadas 1969,https://doi.org/10.4319/lo.1969.14.5.0710
+urchin-grazing,src,7,Vadas 1977,https://doi.org/10.2307/1942173
+urchin-grazing,src,8,"Steneck 2016, Remembering Bob Paine, University of Maine Darling Marine Center",https://dmc.umaine.edu/2016/08/12/remembering-bob-paine/
+urchin-grazing,src,9,"Sousa, Schroeter and Gaines 1981, Oecologia",https://ib.berkeley.edu/labs/sousa/sites/ib.berkeley.edu.labs.sousa/files/Sousa%20et%20al%201981_%5B4%5D.pdf
+urchin-grazing,src,10,"Pearse and Hines 1979, Marine Biology",https://biomar.fciencias.unam.mx/Sobretiros/Informacion%20algas/Algas/nueva%20informacion/J.S.%20PEARSE%20AND%20A.H.%20HINES%201979.pdf
+urchin-grazing,src,11,"Dobkowski 2017, PeerJ",https://doi.org/10.7717/peerj.3372
+urchin-grazing,src,12,"Raymond, Duggins and Dethier 2011, FHL student research paper",https://digital.lib.washington.edu/researchworks/items/b47ac05a-4016-4501-9c92-ac06acbab9b5/full
 inducible-defenses,pub,1,Harvell CD (1984) Predator-induced defense in a marine bryozoan. Science 224:1357-1359.,https://doi.org/10.1126/science.224.4655.1357
 inducible-defenses,pub,2,Palumbi SR (1984) Tactics of acclimation: morphological changes of sponges in an unpredictable environment. Science 225:1478-1480.,https://doi.org/10.1126/science.225.4669.1478
 inducible-defenses,pub,3,"Harvell CD (1986) The ecology and evolution of inducible defenses in a marine bryozoan: cues, costs, and consequences. American Naturalist 128:810-823.",https://doi.org/10.1086/284607
@@ -1127,6 +1130,7 @@ marine-disease,pub,5,"Groner ML, Burge CA, Couch CS, et al. (2014) Host demograp
 marine-disease,pub,6,"Groner ML, Maynard J, Breyta R, et al. (2016) Managing marine disease emergencies in an era of rapid change. Phil Trans R Soc B 371:20150364.",https://doi.org/10.1098/rstb.2015.0364
 marine-disease,pub,7,"Groner ML, Burge CA, Kim CJS, et al. (2016) Plant characteristics associated with widespread variation in eelgrass wasting disease. Diseases of Aquatic Organisms 118:159-168.",https://doi.org/10.3354/dao02962
 marine-disease,pub,8,"Groner ML, Eisenlord ME, Yoshioka RM, et al. (2021) Warming sea surface temperatures fuel summer epidemics of eelgrass wasting disease. Marine Ecology Progress Series 679:47-58.",https://doi.org/10.3354/meps13902
+marine-disease,pub,9,"Hewson I, Button JB, Gudenkauf BM, et al. (2014) Densovirus associated with sea-star wasting disease and mass mortality. Proceedings of the National Academy of Sciences 111:17278-17283.",https://doi.org/10.1073/pnas.1416625111
 marine-disease,src,1,"Eisenlord et al. 2016, Phil Trans R Soc B",https://pmc.ncbi.nlm.nih.gov/articles/PMC4760142/
 marine-disease,src,2,"Prentice et al. 2025, Nature Ecology & Evolution (copy hosted by J. Hodin)",https://staff.washington.edu/hodin/pdf/Prenice_etal_2025_SSW.pdf
 marine-disease,src,3,"Harvell and Hodin 2025, Intertidal Tidings vol. 46 (archived copy)",https://web.archive.org/web/20251217060000/https://fhl.uw.edu/wp-content/uploads/sites/17/2025/12/2025IntTidings_FINAL.pdf
@@ -1147,7 +1151,7 @@ marine-disease,src,17,FHL 568 course page 2019 (archived copy),https://web.archi
 marine-disease,src,18,FHL 568 course page 2022 (archived copy),https://web.archive.org/web/20220121205524/fhl.uw.edu/courses/course-descriptions/course/ecology-of-infectious-marine-disease/
 marine-disease,src,19,FHL people page 2025 (archived copy),https://web.archive.org/web/20250214091140/https://fhl.uw.edu/about/people/
 marine-disease,src,20,FHL course and staff lists,
-marine-disease,src,21,Hewson et al. 2014 (PubMed Central),https://pmc.ncbi.nlm.nih.gov/articles/PMC4260605/
+marine-disease,src,21,"Hewson et al. 2014, with Supporting Information",https://bpb-us-e1.wpmucdn.com/sites.ucsc.edu/dist/5/1748/files/2024/07/Hewson-et-al-2014-PNAS.pdf
 marine-disease,src,22,Harvell et al. 2019,https://pmc.ncbi.nlm.nih.gov/articles/PMC6353623/
 marine-disease,src,23,The census,
 sunflower-star-culture,pub,1,"Hodin J, Pearson-Lund A, Anteau FP, Kitaeff P, Cefalu S (2021) Progress toward complete life-cycle culturing of the endangered sunflower star, *Pycnopodia helianthoides*. Biological Bulletin 241(3):243-258.",https://doi.org/10.1086/716552

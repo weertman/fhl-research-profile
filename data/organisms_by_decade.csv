@@ -57,9 +57,9 @@ decade,organism,n
 1960,Birds & mammals,3
 1960,"Cnidarians, ctenophores & sponges",18
 1960,Crustaceans & other arthropods,21
-1960,Echinoderms,27
+1960,Echinoderms,28
 1960,Fishes,16
-1960,Many groups,4
+1960,Many groups,5
 1960,Mollusks,21
 1960,No particular organism,13
 1960,Other invertebrates & tunicates,4
@@ -70,9 +70,9 @@ decade,organism,n
 1970,Birds & mammals,6
 1970,"Cnidarians, ctenophores & sponges",33
 1970,Crustaceans & other arthropods,37
-1970,Echinoderms,42
+1970,Echinoderms,43
 1970,Fishes,8
-1970,Many groups,15
+1970,Many groups,16
 1970,Mollusks,70
 1970,No particular organism,18
 1970,Other invertebrates & tunicates,13
@@ -106,7 +106,7 @@ decade,organism,n
 1990,"Seaweeds, seagrasses & plants",26
 1990,Worms,28
 2000,"Bacteria, archaea, viruses & fungi",7
-2000,Birds & mammals,25
+2000,Birds & mammals,26
 2000,"Cnidarians, ctenophores & sponges",36
 2000,Crustaceans & other arthropods,65
 2000,Echinoderms,58
@@ -122,7 +122,7 @@ decade,organism,n
 2010,Birds & mammals,94
 2010,"Cnidarians, ctenophores & sponges",92
 2010,Crustaceans & other arthropods,124
-2010,Echinoderms,118
+2010,Echinoderms,119
 2010,Fishes,235
 2010,Many groups,99
 2010,Mollusks,205
@@ -132,7 +132,7 @@ decade,organism,n
 2010,"Seaweeds, seagrasses & plants",115
 2010,Worms,36
 2020,"Bacteria, archaea, viruses & fungi",19
-2020,Birds & mammals,70
+2020,Birds & mammals,69
 2020,"Cnidarians, ctenophores & sponges",54
 2020,Crustaceans & other arthropods,124
 2020,Echinoderms,67

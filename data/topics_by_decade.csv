@@ -49,19 +49,19 @@ decade,topic,n
 1960,Biomechanics & form,3
 1960,Cell & molecular biology,25
 1960,"Development, larvae & reproduction",27
-1960,Ecology,10
+1960,Ecology,11
 1960,"Evolution, genetics & genomics",2
 1960,"Fisheries, conservation & human impacts",1
 1960,"Microbes, symbiosis & disease",5
 1960,Neurobiology & behavior,15
-1960,Oceanography & environment,4
+1960,Oceanography & environment,5
 1960,Other,6
 1960,Physiology,33
 1960,Taxonomy & natural history,30
 1970,Biomechanics & form,12
 1970,Cell & molecular biology,39
 1970,"Development, larvae & reproduction",61
-1970,Ecology,21
+1970,Ecology,23
 1970,"Evolution, genetics & genomics",7
 1970,"Fisheries, conservation & human impacts",1
 1970,"Microbes, symbiosis & disease",6
@@ -103,7 +103,7 @@ decade,topic,n
 2000,"Development, larvae & reproduction",134
 2000,Ecology,72
 2000,"Evolution, genetics & genomics",61
-2000,"Fisheries, conservation & human impacts",45
+2000,"Fisheries, conservation & human impacts",46
 2000,"Microbes, symbiosis & disease",15
 2000,Neurobiology & behavior,72
 2000,Oceanography & environment,35
@@ -119,7 +119,7 @@ decade,topic,n
 2010,Ecology,275
 2010,"Evolution, genetics & genomics",116
 2010,"Fisheries, conservation & human impacts",89
-2010,"Microbes, symbiosis & disease",32
+2010,"Microbes, symbiosis & disease",33
 2010,Neurobiology & behavior,76
 2010,Oceanography & environment,64
 2010,Other,76
@@ -133,7 +133,7 @@ decade,topic,n
 2020,"Development, larvae & reproduction",69
 2020,Ecology,151
 2020,"Evolution, genetics & genomics",85
-2020,"Fisheries, conservation & human impacts",88
+2020,"Fisheries, conservation & human impacts",87
 2020,"Microbes, symbiosis & disease",60
 2020,Neurobiology & behavior,60
 2020,Oceanography & environment,40
