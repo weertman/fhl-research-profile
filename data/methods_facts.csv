@@ -3,15 +3,36 @@ source_rows,26759,rows returned by all searches
 wos_records,2543,Web of Science records exported
 candidates,15962,candidate records after merging
 with_doi,6913,candidates with a DOI
-decided_rules,8373,final decisions resting on written rules
+decided_rules,7693,final decisions resting on written rules
 decided_screening,6080,final decisions resting on AI screening
 decided_calibration,260,final decisions resting on calibration review
 decided_audit,365,final decisions resting on the audit
-decided_dedup,162,records merged into another record of the same work
+decided_dedup,163,records merged into another record of the same work
 decided_cleanup,210,records removed or moved to Mention only by the clean-up review
-decided_push,508,final decisions resting on the verification push
-decided_hand,12,final decisions resting on the hand review of named papers
-hand_added,8,candidate records added in the hand review
+decided_push,507,final decisions resting on the verification push
+decided_hand,13,final decisions resting on the hand review of named papers
+hand_added,9,candidate records added in the hand review
+decided_recheck,680,"final decisions resting on the re-check of records found only on FHL pages, CVs and newsletters"
+recheck_records,680,"records found only on FHL pages, CVs and newsletters that agents tried to open"
+recheck_settled,193,"of those, decided from the publication or another dated source"
+recheck_publications,19,"of those, publications connected to FHL"
+recheck_verified,17,"publications counted as Verified, from the publication"
+recheck_probable,2,"publications counted as Probable, from another source"
+recheck_news,7,news items connected to FHL
+recheck_not_shown,167,"read, and the work not tied to FHL"
+recheck_checks,468,records a second agent re-opened
+recheck_checks_agreed,449,second agent agreed
+recheck_checks_changed,17,a third agent changed the decision
+recheck_checks_kept,2,a third agent kept the first decision
+recheck_rulings,12,decisions changed by the coordinating session after review
+recheck_not_publication,63,not publications
+recheck_duplicate,24,repeats of another record
+recheck_unread,400,could not be read
+recheck_unread_person,315,unread and on a person's page or CV: Unverified candidates
+recheck_unread_news,85,unread and only cited on a news page: stay excluded
+recheck_unread_like_read,32,unread records that would connect to FHL at the rate among those read
+recheck_licensed_reads,14,not-tied decisions read on publisher pages a university network license appears to have opened
+recheck_archive_reads,7,not-tied decisions read from Wayback Machine copies
 screened_round1,4201,records judged in the first screening round
 screened_round2,1297,records judged in the second screening round
 calibration_overrides,276,decisions changed by calibration reviewers
@@ -100,15 +121,15 @@ profiles_revised,223,"of those, profiles the fact-checker revised"
 profiles_written,236,profiles written and fact-checked in the profiles run
 profiles_written_revised,230,"of those, profiles the fact-checker revised"
 profiles_dropped,7,"second profiles of people recorded under two names, left out"
-dedup_dropped,162,duplicate records merged away
-dedup_kept,143,records they were merged into
+dedup_dropped,163,duplicate records merged away
+dedup_kept,144,records they were merged into
 false_excluded,160,records removed as not publications or false matches
 mention_moved,50,obituaries and similar pieces moved to Mention only
 whiteley_records,122,included publications labeled Whiteley Center
 whiteley_inferred,2,"of those, probable (full-text match on non-marine work)"
 topic_classified,6501,publications given a research topic
 topic_labelled_agents,6501,publications given a topic by the labeling agents (batches 1-16)
-topic_labelled_session,39,publications given a topic later in the coordinating session (batch 17)
+topic_labelled_session,70,"publications given a topic after the labeling agents (batch 17, the hand review and the page and CV re-check)"
 topic_with_abstract,4128,"of those, classified with an abstract"
 topic_sample,300,"publications classified twice, independently"
 topic_agreement_pct,94,percent agreeing on the topic

@@ -714,7 +714,7 @@
           (<span data-source="headline" data-field="verified">—</span> publications).</dd>
         <dt>Probable</dt><dd>A full-text search index (OpenAlex) finds the station's name in the paper, but no one could read
           the passage, mostly because the publisher's site blocked automated reading (a bot check), otherwise because of a
-          paywall. A few classic papers behind paywalls are Probable because other sources tie the work to the station
+          paywall. A few papers that could not be read are Probable because other sources tie the work to the station
           (<span data-source="headline" data-field="probable">—</span>).</dd>
         <dt>Listed by FHL</dt><dd>On one of FHL's own publication lists, but the connection could not be seen in the
           publication: it is behind a paywall or a bot check, no copy is online, or the paper does not name the station
@@ -1566,7 +1566,7 @@
       <p><span class="runin">Evidence tiers.</span>—<i>Verified</i>: FHL was seen in the record (an author address, a passage
         of text, the station's own series, or dataset metadata). <i>Probable</i>: a full-text index names the lab, but the
         passage could not be read, usually because the publisher's site blocked automated reading (a bot check) and
-        otherwise mostly because of a paywall. Six classic papers behind paywalls are Probable because other sources tie the work to the station.
+        otherwise mostly because of a paywall. A few papers that could not be read are Probable because other sources tie the work to the station.
         <i>Listed by FHL</i>: on an FHL-maintained publication list but not independently confirmed, either because the paper
         could not be read or because it does not name the station; the audit found an FHL connection in only about a third,
         so these are not counted as verified.</p>
@@ -1622,7 +1622,20 @@
       <p><span class="runin">Hand-reviewed papers.</span>—The searches missed eight classic San Juan shore papers, and three more were
         set aside because their only source was an FHL newsletter. One agent looked up each of the eleven and a second re-checked it.
         Four name FHL and are Verified. Six are closed, so they are Probable on later sources. One, read in full, does not name FHL and
-        counts zero. These papers are outside the audit sample. Six publication years were corrected by hand.</p>
+        counts zero. These papers are outside the audit sample. Six publication years were corrected by hand. A 1970 PhD thesis, a scan
+        no search could read, turned up in the re-check below; it names FHL and is Verified.</p>
+      <p><span class="runin">Records on FHL pages and CVs.</span>—A written rule set aside <span data-source="methods_facts" data-field="value" data-where="fact=recheck_records">—</span> records found only on an FHL web
+        page, a researcher's CV linked from FHL or an FHL newsletter, since a CV holds work done elsewhere and a newsletter cites other
+        people's papers. AI agents tried to open each one, a second time where no second agent had tested the first try. A second agent re-opened every
+        positive decision, every highly cited record and a sample of the rest (<span data-source="methods_facts" data-field="value" data-where="fact=recheck_checks">—</span> in all), a third settled disagreements, and the coordinating session
+        changed <span data-source="methods_facts" data-field="value" data-where="fact=recheck_rulings">—</span> decisions after review. These agents ran in November 2026 and are not among the runs of Table VIII.
+        <span data-source="methods_facts" data-field="value" data-where="fact=recheck_publications">—</span> are publications tied to FHL, <span data-source="methods_facts" data-field="value" data-where="fact=recheck_verified">—</span> Verified from the publication and <span data-source="methods_facts" data-field="value" data-where="fact=recheck_probable">—</span> Probable from another dated source, most of them reports
+        and web documents by scientists at FHL; <span data-source="methods_facts" data-field="value" data-where="fact=recheck_news">—</span> are news items. <span data-source="methods_facts" data-field="value" data-where="fact=recheck_not_shown">—</span> were read and do not tie the work to FHL, <span data-source="methods_facts" data-field="value" data-where="fact=recheck_not_publication">—</span> are not publications and
+        <span data-source="methods_facts" data-field="value" data-where="fact=recheck_duplicate">—</span> repeat another record. The other <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread">—</span> could not be read, nearly all behind paywalls or bot checks or with no copy online:
+        <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread_person">—</span> on a person's page or CV are listed as Unverified candidates, and <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread_news">—</span> only cited on a news page are excluded. At the rates seen
+        among those read, about <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread_like_read">—</span> of the unread would connect to FHL; papers with open copies are not a random sample, so this figure is left out of the
+        best estimate. Of the papers not tied to FHL, <span data-source="methods_facts" data-field="value" data-where="fact=recheck_licensed_reads">—</span> were read on publisher pages that a university network license appears to have opened and
+        <span data-source="methods_facts" data-field="value" data-where="fact=recheck_archive_reads">—</span> from Wayback Machine copies. These records are outside the audit sample.</p>
       <p><span class="runin">Recall.</span>—FHL's own publication lists serve as an independent sample of FHL work. Recall is the
         share of listed papers that the database searches found on their own: <span data-source="headline" data-field="search_recall_vs_fhl_lists">—</span> overall, by decade in Fig. 33.</p>
     </div>
@@ -1670,8 +1683,8 @@
         taphonomy (<a href="https://github.com/weertman/fhl-research-profile/blob/main/docs/topic_guide.md" target="_blank" rel="noopener">topic guide</a>). Publications whose only link to FHL is the Whiteley Center, the station's study
         center for visiting scholars and writers, are labeled Whiteley Center, with their field as sub-topic (Fig. 6):
         <span data-source="methods_facts" data-field="value" data-where="fact=whiteley_records">—</span> publications, <span data-source="methods_facts" data-field="value" data-where="fact=whiteley_inferred">—</span> of them probable, inferred from a
-        full-text match on non-marine work published since 2000. The 39 publications that entered the census late, almost all through the verification
-        push (the other publications it verified already had topics), were labeled afterwards, under the same guide, by the coordinating session.</p>
+        full-text match on non-marine work published since 2000. The <span data-source="methods_facts" data-field="value" data-where="fact=topic_labelled_session">—</span> publications that entered the census late, through the verification
+        push (the other publications it verified already had topics), the hand review and the re-check of FHL pages, were labeled afterwards under the same guide.</p>
       <p><span class="runin">Clean-up.</span>—A final review after the topic classification merged
         <span data-source="methods_facts" data-field="value" data-where="fact=dedup_dropped">—</span> duplicate records into <span data-source="methods_facts" data-field="value" data-where="fact=dedup_kept">—</span>. These were the same article under two
         DOIs, a preprint and its published version, repository, reprint and translated copies, garbled copies from the

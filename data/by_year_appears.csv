@@ -79,13 +79,13 @@ year,appears,n
 1981,Author address,36
 1982,Author address,37
 1983,Author address,29
-1984,Author address,51
+1984,Author address,52
 1985,Author address,31
 1986,Author address,30
 1987,Author address,24
-1988,Author address,40
-1989,Author address,26
-1990,Author address,31
+1988,Author address,41
+1989,Author address,27
+1990,Author address,32
 1991,Author address,35
 1992,Author address,21
 1993,Author address,33
@@ -93,19 +93,19 @@ year,appears,n
 1995,Author address,21
 1996,Author address,27
 1997,Author address,15
-1998,Author address,20
-1999,Author address,37
-2000,Author address,30
-2001,Author address,36
+1998,Author address,19
+1999,Author address,38
+2000,Author address,31
+2001,Author address,39
 2002,Author address,36
 2003,Author address,37
-2004,Author address,48
-2005,Author address,57
+2004,Author address,49
+2005,Author address,58
 2006,Author address,61
 2007,Author address,45
-2008,Author address,55
+2008,Author address,56
 2009,Author address,51
-2010,Author address,55
+2010,Author address,56
 2011,Author address,142
 2012,Author address,109
 2013,Author address,99
@@ -188,7 +188,7 @@ year,appears,n
 1967,In the text; addresses not seen,1
 1968,In the text; addresses not seen,0
 1969,In the text; addresses not seen,0
-1970,In the text; addresses not seen,1
+1970,In the text; addresses not seen,2
 1971,In the text; addresses not seen,2
 1972,In the text; addresses not seen,0
 1973,In the text; addresses not seen,3
@@ -222,7 +222,7 @@ year,appears,n
 2001,In the text; addresses not seen,1
 2002,In the text; addresses not seen,2
 2003,In the text; addresses not seen,2
-2004,In the text; addresses not seen,2
+2004,In the text; addresses not seen,3
 2005,In the text; addresses not seen,1
 2006,In the text; addresses not seen,0
 2007,In the text; addresses not seen,1
@@ -440,7 +440,7 @@ year,appears,n
 1973,Text only: acknowledgments,6
 1974,Text only: acknowledgments,1
 1975,Text only: acknowledgments,4
-1976,Text only: acknowledgments,1
+1976,Text only: acknowledgments,2
 1977,Text only: acknowledgments,4
 1978,Text only: acknowledgments,1
 1979,Text only: acknowledgments,0
@@ -448,7 +448,7 @@ year,appears,n
 1981,Text only: acknowledgments,3
 1982,Text only: acknowledgments,1
 1983,Text only: acknowledgments,7
-1984,Text only: acknowledgments,5
+1984,Text only: acknowledgments,6
 1985,Text only: acknowledgments,7
 1986,Text only: acknowledgments,7
 1987,Text only: acknowledgments,5
@@ -462,7 +462,7 @@ year,appears,n
 1995,Text only: acknowledgments,4
 1996,Text only: acknowledgments,6
 1997,Text only: acknowledgments,8
-1998,Text only: acknowledgments,6
+1998,Text only: acknowledgments,7
 1999,Text only: acknowledgments,3
 2000,Text only: acknowledgments,7
 2001,Text only: acknowledgments,7

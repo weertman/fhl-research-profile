@@ -68,9 +68,9 @@ decade,organism,n
 1960,Worms,19
 1970,"Bacteria, archaea, viruses & fungi",2
 1970,Birds & mammals,6
-1970,"Cnidarians, ctenophores & sponges",33
+1970,"Cnidarians, ctenophores & sponges",34
 1970,Crustaceans & other arthropods,37
-1970,Echinoderms,43
+1970,Echinoderms,44
 1970,Fishes,8
 1970,Many groups,16
 1970,Mollusks,70
@@ -81,25 +81,25 @@ decade,organism,n
 1970,Worms,17
 1980,"Bacteria, archaea, viruses & fungi",2
 1980,Birds & mammals,5
-1980,"Cnidarians, ctenophores & sponges",67
+1980,"Cnidarians, ctenophores & sponges",68
 1980,Crustaceans & other arthropods,35
 1980,Echinoderms,99
 1980,Fishes,28
-1980,Many groups,44
+1980,Many groups,45
 1980,Mollusks,93
 1980,No particular organism,23
 1980,Other invertebrates & tunicates,28
 1980,Phytoplankton & protists,13
-1980,"Seaweeds, seagrasses & plants",28
+1980,"Seaweeds, seagrasses & plants",30
 1980,Worms,29
 1990,"Bacteria, archaea, viruses & fungi",1
 1990,Birds & mammals,5
-1990,"Cnidarians, ctenophores & sponges",28
+1990,"Cnidarians, ctenophores & sponges",29
 1990,Crustaceans & other arthropods,39
 1990,Echinoderms,38
 1990,Fishes,37
 1990,Many groups,53
-1990,Mollusks,84
+1990,Mollusks,85
 1990,No particular organism,39
 1990,Other invertebrates & tunicates,40
 1990,Phytoplankton & protists,4
@@ -107,16 +107,16 @@ decade,organism,n
 1990,Worms,28
 2000,"Bacteria, archaea, viruses & fungi",7
 2000,Birds & mammals,26
-2000,"Cnidarians, ctenophores & sponges",36
+2000,"Cnidarians, ctenophores & sponges",37
 2000,Crustaceans & other arthropods,65
 2000,Echinoderms,58
 2000,Fishes,35
-2000,Many groups,61
-2000,Mollusks,116
-2000,No particular organism,115
+2000,Many groups,64
+2000,Mollusks,117
+2000,No particular organism,117
 2000,Other invertebrates & tunicates,87
 2000,Phytoplankton & protists,13
-2000,"Seaweeds, seagrasses & plants",40
+2000,"Seaweeds, seagrasses & plants",41
 2000,Worms,45
 2010,"Bacteria, archaea, viruses & fungi",12
 2010,Birds & mammals,94
@@ -129,7 +129,7 @@ decade,organism,n
 2010,No particular organism,226
 2010,Other invertebrates & tunicates,99
 2010,Phytoplankton & protists,61
-2010,"Seaweeds, seagrasses & plants",115
+2010,"Seaweeds, seagrasses & plants",116
 2010,Worms,36
 2020,"Bacteria, archaea, viruses & fungi",19
 2020,Birds & mammals,69

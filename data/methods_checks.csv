@@ -1,6 +1,7 @@
 group,label,runs,maker,checker,made,checked,confirmed,corrected,dropped,unsettled,unit,confirmed_word,corrected_word,dropped_word,unsettled_word
 Publications,Re-reading (verification push),16,agent,agent,2175,159,152,2,0,5,records,agreed,changed to the re-check's reading,dropped,disagreed; first reading kept
 Publications,Author addresses (older papers),17,agent,agent,904,103,96,7,0,0,publications,agreed,changed to the re-check's reading,dropped,disagreed; first reading kept
+Publications,Records on FHL pages and CVs,,agent,agent,680,468,449,17,0,2,records,agreed,changed by a third agent,dropped,disagreed; first reading kept
 Publications,"Topics, labeled again blind",7,agent,agent,6501,300,282,0,0,18,publications,same topic,corrected,dropped,"different topic (measured, not changed)"
 People,Mentor links from co-authorship,9,script,agent,146,146,117,0,19,10,links,confirmed,corrected,removed (peers),unsettled
 People,Profiles of people,10,agent,agent,236,236,6,230,0,0,profiles,kept as written,revised,dropped,unsettled

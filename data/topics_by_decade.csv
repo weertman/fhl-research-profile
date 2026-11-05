@@ -60,8 +60,8 @@ decade,topic,n
 1960,Taxonomy & natural history,30
 1970,Biomechanics & form,12
 1970,Cell & molecular biology,39
-1970,"Development, larvae & reproduction",61
-1970,Ecology,23
+1970,"Development, larvae & reproduction",62
+1970,Ecology,24
 1970,"Evolution, genetics & genomics",7
 1970,"Fisheries, conservation & human impacts",1
 1970,"Microbes, symbiosis & disease",6
@@ -73,7 +73,7 @@ decade,topic,n
 1980,Biomechanics & form,37
 1980,Cell & molecular biology,62
 1980,"Development, larvae & reproduction",123
-1980,Ecology,82
+1980,Ecology,85
 1980,"Evolution, genetics & genomics",13
 1980,"Fisheries, conservation & human impacts",10
 1980,"Microbes, symbiosis & disease",5
@@ -82,35 +82,35 @@ decade,topic,n
 1980,Other,8
 1980,Paleobiology & taphonomy,4
 1980,Physiology,41
-1980,Taxonomy & natural history,49
+1980,Taxonomy & natural history,50
 1990,Biomechanics & form,22
 1990,Cell & molecular biology,33
 1990,Climate change & ocean acidification,2
 1990,"Development, larvae & reproduction",90
-1990,Ecology,72
+1990,Ecology,74
 1990,"Evolution, genetics & genomics",20
-1990,"Fisheries, conservation & human impacts",14
+1990,"Fisheries, conservation & human impacts",13
 1990,"Microbes, symbiosis & disease",5
 1990,Neurobiology & behavior,56
 1990,Oceanography & environment,17
 1990,Other,19
 1990,Paleobiology & taphonomy,1
 1990,Physiology,30
-1990,Taxonomy & natural history,41
+1990,Taxonomy & natural history,42
 2000,Biomechanics & form,44
 2000,Cell & molecular biology,66
 2000,Climate change & ocean acidification,9
 2000,"Development, larvae & reproduction",134
-2000,Ecology,72
+2000,Ecology,75
 2000,"Evolution, genetics & genomics",61
-2000,"Fisheries, conservation & human impacts",46
+2000,"Fisheries, conservation & human impacts",49
 2000,"Microbes, symbiosis & disease",15
 2000,Neurobiology & behavior,72
 2000,Oceanography & environment,35
-2000,Other,34
+2000,Other,35
 2000,Paleobiology & taphonomy,8
 2000,Physiology,25
-2000,Taxonomy & natural history,62
+2000,Taxonomy & natural history,63
 2000,Whiteley Center,21
 2010,Biomechanics & form,230
 2010,Cell & molecular biology,44
@@ -118,7 +118,7 @@ decade,topic,n
 2010,"Development, larvae & reproduction",134
 2010,Ecology,275
 2010,"Evolution, genetics & genomics",116
-2010,"Fisheries, conservation & human impacts",89
+2010,"Fisheries, conservation & human impacts",90
 2010,"Microbes, symbiosis & disease",33
 2010,Neurobiology & behavior,76
 2010,Oceanography & environment,64
