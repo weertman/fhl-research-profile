@@ -414,7 +414,28 @@
   .fp-arch .srcs a { display: inline-block; padding: .15rem .2rem; font-size: .78rem; color: inherit; }
   .fp-arch .fp-scroll { max-height: 30rem; overflow: auto; border-top: 1.5px solid var(--fp-ink); border-bottom: 1.5px solid var(--fp-ink); }
   .fp-arch table td { font-size: .84rem; }
-  #economics .fp-scroll { max-height: none; border: 0; }
+  #economics .fp-scroll, #discoveries .fp-scroll { max-height: none; border: 0; }
+  #disc-list { display: grid; gap: .35rem; min-width: 0; }
+  .fp-arch .fp-disc-group { margin: .9rem 0 .15rem; font-weight: 400; font-variant: small-caps; letter-spacing: .05em; font-size: 1rem; }
+  .fp-disc > .fp-collapse-btn .title { font-size: .92rem; }
+  .fp-disc > .fp-collapse-body { padding: .15rem 0 1rem; border-bottom: 1px solid var(--fp-ink-2); }
+  .fp-disc-h { margin: 0; font-weight: 400; font-size: 1.02rem; text-align: center; }
+  .fp-disc-meta, .fp-disc-people { font-size: .84rem; text-align: center; color: var(--fp-ink-2); max-width: 44em; justify-self: center; }
+  .fp-disc-tie { font-variant: small-caps; letter-spacing: .04em; color: var(--fp-ink); margin-right: .4em; }
+  .fp-disc-sub { margin: .3rem auto 0; font-weight: 400; font-style: italic; font-size: .88rem; max-width: 50em; width: 100%; }
+  .fp-disc-refs { margin: 0 auto; padding-left: 1.6em; font-size: .8rem; line-height: 1.4; display: grid; gap: .2rem; max-width: 50em; width: 100%; box-sizing: border-box; overflow-wrap: anywhere; }
+  .fp-disc-refs a { color: inherit; }
+  .fp-disc-src { font-size: .82rem; max-width: 50em; width: 100%; margin: 0 auto; }
+  .fp-disc-src summary { cursor: pointer; font-style: italic; }
+  #beyond-list { display: grid; gap: .35rem; min-width: 0; max-width: 50em; width: 100%; justify-self: center; }
+  .fp-bey-g { margin: .5rem 0 0; font-weight: 400; font-style: italic; font-size: .92rem; }
+  .fp-bey { margin: 0; padding: 0; list-style: none; display: grid; gap: .35rem; font-size: .88rem; line-height: 1.45; overflow-wrap: anywhere; }
+  .fp-bey b { font-weight: 600; }
+  .fp-bey-src { color: var(--fp-ink-2); font-size: .8rem; font-style: italic; }
+  .fp-bey-src a { color: inherit; }
+  .fp-disc-ctl { margin: 0; text-align: right; }
+  .fp-disc-all { font: inherit; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--fp-ink-2); background: none; border: 0; cursor: pointer; padding: .3rem .1rem; }
+  #disc-gfp-extra { display: grid; gap: .65rem; min-width: 0; }
   .fp-artprog dl { margin: 0; display: grid; gap: .25rem; font-size: .88rem; }
   .fp .fp-artgal figure img { filter: none; cursor: zoom-in; } /* art keeps its colors */
   .fp-artprog dt { font-variant: small-caps; letter-spacing: .03em; }
@@ -646,7 +667,8 @@
       <li><a href="#headline"><span class="num"></span><span class="t">Summary of results</span><span class="dots"></span><span class="refs"></span></a></li>
       <li><a href="#ode"><span class="num"></span><span class="t">Ode to the life of the sea</span><span class="dots"></span><span class="refs"></span></a></li>
       <li><a href="#history"><span class="num">IX.</span><span class="t">Chronicle of the station</span><span class="dots"></span><span class="refs">Separate tab</span></a></li>
-      <li><a href="#economics"><span class="num"></span><span class="t">Economic contribution and discoveries, in the Chronicle</span><span class="dots"></span><span class="refs">Figs. 19–23, Tables IV–VI</span></a></li>
+      <li><a href="#economics"><span class="num"></span><span class="t">Economic contribution, in the Chronicle</span><span class="dots"></span><span class="refs">Figs. 19–22, Tables IV–V</span></a></li>
+      <li><a href="#discoveries"><span class="num"></span><span class="t">Discoveries and scientific contributions, in the Chronicle</span><span class="dots"></span><span class="refs">Fig. 23, Table VI</span></a></li>
       <li><a href="#method"><span class="num">X.</span><span class="t">Technical methods, in a separate tab</span><span class="dots"></span><span class="refs">Figs. 24–35, Tables VII–X</span></a></li>
     </ol>
     <p class="tip">Hover over a chart for values. Hover over an entry in a figure's key to highlight it, or click to keep it
@@ -1127,7 +1149,7 @@
       </table></div>
     </div>
     <div class="fp-arch" data-collapsible id="economics">
-      <h3 class="fold">Economic contribution and discoveries</h3>
+      <h3 class="fold">Economic contribution</h3>
       <div class="fp-notes">
       <p>The University of Washington measures its economic contribution in a standard way: it traces the spending of its
         operations, its students and its visitors through the supply chain and through household spending, and reports the
@@ -1289,13 +1311,42 @@
       </figcaption>
     </figure>
 
-    <h4 id="econ-gfp">Discoveries that left the station</h4>
+    <h4 id="econ-county">The station in the county economy</h4>
     <div class="fp-notes">
-      <p>In summer 1961 Osamu Shimomura and Frank Johnson extracted aequorin from about 10,000 <i>Aequorea</i> jellyfish at
-        FHL, and green fluorescent protein (GFP) turned up in the same extracts. The genes for both proteins were cloned from
-        Friday Harbor jellyfish, and the GFP clone led to the 2008 Nobel Prize in Chemistry (Table VI). As of <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed_date">—</span>,
-        PubMed held <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed">—</span> records under the heading for GFP (Fig. 23). No dollar value of this work can be assigned to FHL, and
-        none is included here.</p>
+      <p>San Juan County had <span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs_2024">—</span> jobs covered by unemployment insurance in 2024, at an average pay of
+        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_pay">—</span>. FHL's own jobs equal about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_own_share_total">—</span> of the county's total employment including the
+        self-employed, and all the jobs that FHL activity supports there about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_related_share">—</span>, roughly one job in
+        250.</p>
+    </div>
+
+    <h4 id="beyond-spending">Beyond spending</h4>
+    <div class="fp-notes">
+      <p>The estimate of <span data-source="econ_facts" data-field="display" data-where="fact=wa_output">—</span> counts spending and the jobs it supports. It leaves out what the
+        station teaches and what its science does: the education of students, the careers that follow and the discoveries listed
+        below. No dollar value is assigned to these. Public sources support the counts here. Each has its own
+        definition, so they do not add up to a total.</p>
+    </div>
+    <div id="beyond-list" data-source="beyond_spending"></div>
+    <div class="fp-notes">
+      <p>Public sources do not give the total number of students trained since 1904, enrollment for most years (summer, the main
+        season for courses, is not on the university's public time schedule), individual people as opposed to registrations, or
+        what became of most former students. The counts from newsletters, proposals and grant reports are the station's own or a grant holder's, with no outside audit. The census, class list and mentoring counts are this report's own, as the Methods tab describes.</p>
+    </div>
+    </div>
+    <div class="fp-arch" data-collapsible id="discoveries">
+      <h3 class="fold">Discoveries and scientific contributions</h3>
+      <div class="fp-notes">
+        <p>The work done at the station or by people based there spans more than a century. Each entry below gives what was
+          found, why it matters and what part FHL had in it, under one of three labels: done at FHL; based at FHL, with the work
+          partly elsewhere; or partly at FHL, where the main people were based elsewhere and FHL gave a site, animals, facilities or part of the work, or where the sources do not place the central work at FHL. The list has <span id="disc-n">—</span> entries, grouped by field and in order of date
+          within each field; how they were chosen is in the Methods tab.</p>
+      </div>
+      <p class="fp-disc-ctl"><button type="button" id="disc-all" class="fp-disc-all" aria-pressed="false" hidden>Show all</button></p>
+      <div id="disc-list" data-source="discoveries discovery_refs"></div>
+      <div id="disc-gfp-extra">
+    <div class="fp-notes">
+      <p>As of <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed_date">—</span>, PubMed held
+        <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed">—</span> records under the heading for GFP (Fig. 23).</p>
     </div>
     <figure class="fp-fig">
       <div class="fp-legend" id="lg-econ-gfp"></div>
@@ -1317,14 +1368,7 @@
       </table></div>
       <p class="cap">Each step and the primary source that places it. Steps after 1992 used the cloned gene, not the jellyfish.</p>
     </div>
-
-    <h4 id="econ-county">The station in the county economy</h4>
-    <div class="fp-notes">
-      <p>San Juan County had <span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs_2024">—</span> jobs covered by unemployment insurance in 2024, at an average pay of
-        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_pay">—</span>. FHL's own jobs equal about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_own_share_total">—</span> of the county's total employment including the
-        self-employed, and all the jobs that FHL activity supports there about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_related_share">—</span>, roughly one job in
-        250.</p>
-    </div>
+      </div>
     </div>
   </section>
 
@@ -1716,6 +1760,14 @@
         fact-checkers checked every event; three image searches proposed candidates that second agents checked for license
         and year before picture editors chose among them and fact-checkers checked every caption (Figs. 26 and 31). Images
         are shown only where they are in the public domain, openly licensed, or FHL's own.</p>
+      <p id="method-discoveries"><span class="runin">Discoveries.</span>—AI agents swept the census, the chronicle and the literature of each field for FHL's major
+        contributions; of more than 110 candidates, 56 are listed. An entry needed two things: independent credit in a later source, or
+        sustained citation with a specific FHL link; and an FHL link stated in the paper or another source, beyond a line in FHL's
+        bibliography. One agent wrote each entry from the sources, independent agents tried to refute it, and a critic looked for what was missing. Another
+        agent rewrote each for readers and a further one compared the rewrite with the checked text. Two agents judged each entry's
+        label independently and a third settled disagreements, taking the weaker label when two fit; a last review against each entry's evidence changed 11 of the labels. Many publishers' full texts could not be opened, so some entries rest on abstracts and on what a source says of the site.
+        Citation counts, read in 2026, come from the census, OpenAlex, Crossref, Europe PMC or Web of Science and are not comparable with each other. The list is a selection: 1935–1960 is thin, partly because the
+        war interrupted the station, and some classic San Juan papers cited here are missing from the census. They are not added to its counts.</p>
     </div>
     <details class="fm-more">
       <summary>How the chronicle was gathered, in detail</summary>
@@ -1848,7 +1900,7 @@
     <div class="fp-notes">
       <p><span class="runin">Platform.</span>—The census, its code, the spreadsheet, the figures and this page were produced
         with Claude Code (version 2.1.295 and later), Anthropic's coding agent, in the Claude desktop app on macOS, on 13–16
-        and 28–29 October 2026 (UTC), apart from the economic contribution in section IX, its economic model and methods, and a final round of
+        and 28–29 October 2026 (UTC), apart from the economic contribution and the discoveries in section IX, the economic model and methods, and a final round of
         corrections, which were produced in November 2026 and are not counted in Table VIII or in the totals below. The
         coordinating session and every agent it started used the model Claude Opus 5.5 (claude-opus-5-5). The census and
         the drafting of this page ran at the "xhigh" reasoning-effort setting, the second highest of five
@@ -1884,7 +1936,7 @@
       <p><span class="runin">Limits.</span>—AI judgments can be wrong; the audit's error rates (Table IX) and the topic
         agreement rates above describe how often.
         Treat individual records as leads to check, and the totals as estimates with the stated uncertainty.</p>
-      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app from 13 to 28 October 2026; the requests after 28 October, including those behind the economic contribution in section IX, are not listed.
+      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app from 13 to 28 October 2026; the requests after 28 October, including those behind the economic contribution and the discoveries in section IX, are not listed.
         Messages about signing in, saving files and progress are summarized rather than quoted. Each prompt shows when it
         was typed (Pacific time) and the output tokens (text, reasoning and tool calls) it led to: those Claude generated in
         the main session before the next prompt, plus those of the agents started in that time. A workflow's agents count
@@ -1938,7 +1990,7 @@
   // Stand-in for the dashboard runtime: fetches each dataset from data/ and serves it to the info sheet's code unchanged.
   window.FP_SITE_BASE = ''; // images (the chronicle of the station) are files next to the page
   window.dash = (() => {
-    const FILES = {"agent_stages": "data/agent_stages.csv", "agents": "data/agents.csv", "ai_workflows": "data/ai_workflows.csv", "art_images": "data/art_images.csv", "artist_programs": "data/artist_programs.csv", "artists": "data/artists.csv", "audit_by_stratum": "data/audit_by_stratum.csv", "audit_tiers": "data/audit_tiers.csv", "by_appears": "data/by_appears.csv", "by_era": "data/by_era.csv", "by_type": "data/by_type.csv", "by_year": "data/by_year.csv", "by_year_appears": "data/by_year_appears.csv", "candidate_status": "data/candidate_status.csv", "census_steps": "data/census_steps.csv", "classes": "data/classes.csv", "coauthor_places": "data/coauthor_places.csv", "course_topics": "data/course_topics.csv", "econ_award_scopes": "data/econ_award_scopes.csv", "econ_capital_timeline": "data/econ_capital_timeline.csv", "econ_facts": "data/econ_facts.csv", "econ_funders_by_decade": "data/econ_funders_by_decade.csv", "econ_gfp_chain": "data/econ_gfp_chain.csv", "econ_gfp_pubmed": "data/econ_gfp_pubmed.csv", "econ_model_by_source": "data/econ_model_by_source.csv", "econ_model_inputs": "data/econ_model_inputs.csv", "econ_model_sensitivity": "data/econ_model_sensitivity.csv", "econ_model_totals": "data/econ_model_totals.csv", "econ_money_sources": "data/econ_money_sources.csv", "econ_research_by_fy": "data/econ_research_by_fy.csv", "eras": "data/eras.csv", "headline": "data/headline.csv", "history_eras": "data/history_eras.csv", "history_events": "data/history_events.csv", "history_images": "data/history_images.csv", "lineage": "data/lineage.csv", "lineage_people": "data/lineage_people.csv", "methods_checks": "data/methods_checks.csv", "methods_facts": "data/methods_facts.csv", "network_split": "data/network_split.csv", "news_by_year": "data/news_by_year.csv", "organisms_by_decade": "data/organisms_by_decade.csv", "people": "data/people.csv", "people_links": "data/people_links.csv", "places": "data/places.csv", "profiles": "data/profiles.csv", "prompts": "data/prompts.csv", "publications": "data/publications.csv", "recall_by_decade": "data/recall_by_decade.csv", "staff": "data/staff.csv", "top_cited": "data/top_cited.csv", "top_venues": "data/top_venues.csv", "topics_by_decade": "data/topics_by_decade.csv", "whiteley_by_field": "data/whiteley_by_field.csv", "world_land": "data/world_land.json"};
+    const FILES = {"agent_stages": "data/agent_stages.csv", "agents": "data/agents.csv", "ai_workflows": "data/ai_workflows.csv", "art_images": "data/art_images.csv", "artist_programs": "data/artist_programs.csv", "artists": "data/artists.csv", "audit_by_stratum": "data/audit_by_stratum.csv", "audit_tiers": "data/audit_tiers.csv", "beyond_spending": "data/beyond_spending.csv", "by_appears": "data/by_appears.csv", "by_era": "data/by_era.csv", "by_type": "data/by_type.csv", "by_year": "data/by_year.csv", "by_year_appears": "data/by_year_appears.csv", "candidate_status": "data/candidate_status.csv", "census_steps": "data/census_steps.csv", "classes": "data/classes.csv", "coauthor_places": "data/coauthor_places.csv", "course_topics": "data/course_topics.csv", "discoveries": "data/discoveries.csv", "discovery_refs": "data/discovery_refs.csv", "econ_award_scopes": "data/econ_award_scopes.csv", "econ_capital_timeline": "data/econ_capital_timeline.csv", "econ_facts": "data/econ_facts.csv", "econ_funders_by_decade": "data/econ_funders_by_decade.csv", "econ_gfp_chain": "data/econ_gfp_chain.csv", "econ_gfp_pubmed": "data/econ_gfp_pubmed.csv", "econ_model_by_source": "data/econ_model_by_source.csv", "econ_model_inputs": "data/econ_model_inputs.csv", "econ_model_sensitivity": "data/econ_model_sensitivity.csv", "econ_model_totals": "data/econ_model_totals.csv", "econ_money_sources": "data/econ_money_sources.csv", "econ_research_by_fy": "data/econ_research_by_fy.csv", "eras": "data/eras.csv", "headline": "data/headline.csv", "history_eras": "data/history_eras.csv", "history_events": "data/history_events.csv", "history_images": "data/history_images.csv", "lineage": "data/lineage.csv", "lineage_people": "data/lineage_people.csv", "methods_checks": "data/methods_checks.csv", "methods_facts": "data/methods_facts.csv", "network_split": "data/network_split.csv", "news_by_year": "data/news_by_year.csv", "organisms_by_decade": "data/organisms_by_decade.csv", "people": "data/people.csv", "people_links": "data/people_links.csv", "places": "data/places.csv", "profiles": "data/profiles.csv", "prompts": "data/prompts.csv", "publications": "data/publications.csv", "recall_by_decade": "data/recall_by_decade.csv", "staff": "data/staff.csv", "top_cited": "data/top_cited.csv", "top_venues": "data/top_venues.csv", "topics_by_decade": "data/topics_by_decade.csv", "whiteley_by_field": "data/whiteley_by_field.csv", "world_land": "data/world_land.json"};
     const store = {}, calcs = {}, draws = [];
     const run = (fn) => { try { fn(); } catch (e) { console.error(e); } };
     // Figures depend only on the width: redraw when it changes (not when a phone's toolbar hides, which changes the height).
@@ -3298,7 +3350,7 @@
     const id = decodeURIComponent((h || '').slice(1));
     const t = id && document.getElementById(id);
     if (t) return tabOfEl(t);
-    return /^#(history|hist-|land|chronicle|arch-)/.test(h || '') ? 'chronicle' : /^#method/.test(h || '') ? 'methods' : 'report';
+    return /^#(history|hist-|land|chronicle|arch-|disc)/.test(h || '') ? 'chronicle' : /^#method/.test(h || '') ? 'methods' : 'report';
   };
   const currentTab = () => (fpRoot.classList.contains('tab-chronicle') ? 'chronicle' : fpRoot.classList.contains('tab-methods') ? 'methods' : 'report');
   let pendingTarget = (location.hash || '').length > 1; // a link into the page, followed once its target is drawn
@@ -3317,8 +3369,8 @@
     const t = id && document.getElementById(id);
     if (!t) return;
     showTab(tabOfEl(t));
-    const fig = t.closest('[data-collapsible].is-collapsed');
-    if (fig) fig.querySelector('.fp-collapse-btn').click();
+    let fig;
+    while ((fig = t.closest('[data-collapsible].is-collapsed'))) fig.querySelector(':scope > .fp-collapse-btn').click();
     const era = t.closest('details.fp-era-box');
     if (era && !era.open) era.open = true;
     t.scrollIntoView();
@@ -4224,6 +4276,7 @@
 
     // ---- methods figures: Figs. 24-28 and 30-32 are drawn by methods.js (loaded after this script); Fig. 34 here ----------------
     if (window.FPM) window.FPM.draw();
+    if (window.FPD) safely(document.getElementById('disc-list'), window.FPD.draw);
     const elLs = document.getElementById('ch-linksrc');
     if (state(elLs, ['lineage'])) {
       const rows = d3.rollups(dash.data('lineage').data, (v) => v.length, (l) => l.source).map(([source, n]) => ({ source, n })).sort((a, b) => b.n - a.n);
@@ -5169,6 +5222,112 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
   });
   window.FPM = { draw, showRun };
   if (dash.data('methods_facts').status === 'ok') draw();
+})();
+</script>
+<script>
+// The Chronicle's list of discoveries and scientific contributions: one folded subsection per entry, grouped by field.
+// Loaded after the page's main script; built once from the discoveries and discovery_refs datasets. The aequorin and GFP
+// figure and table stay in the page as written, so they still show if the data fail, and move into that entry when it is built.
+(() => {
+  const { state } = window.FP;
+  const el = (id) => document.getElementById(id);
+  const mk = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  // the online runtime types CSV cells ("1989" arrives as a number, an empty cell as null); the other copies keep text
+  const str = (v) => (v == null ? '' : String(v));
+  // *Aequorea* in the data is set in italics; everything else is plain text
+  const rich = (node, text) => { str(text).split(/\*([^*]+)\*/).forEach((part, i) => { if (part) node.append(i % 2 ? mk('i', null, part) : document.createTextNode(part)); }); return node; };
+  const para = (label, text) => { const p = mk('p'); if (label) p.append(mk('span', 'runin', label + '.'), document.createTextNode('—')); return rich(p, text); };
+  const link = (text, url) => { const a = rich(mk('a'), text); a.href = url; a.target = '_blank'; a.rel = 'noopener'; return a; };
+  const isUrl = (u) => /^https?:\/\//.test(u);
+  const refList = (rows) => {
+    const ol = mk('ol', 'fp-disc-refs');
+    rows.forEach((r) => { const li = mk('li'); const t = str(r.text), u = str(r.url); li.append(isUrl(u) ? link(t, u) : rich(mk('span'), t)); ol.append(li); });
+    return ol;
+  };
+  const setOpen = (item, open) => {
+    item.classList.toggle('is-collapsed', !open);
+    const btn = item.querySelector(':scope > .fp-collapse-btn');
+    btn.setAttribute('aria-expanded', String(open));
+    btn.querySelector('.act').textContent = open ? 'Hide' : 'Show';
+  };
+  const entry = (r, refs) => {
+    const id = str(r.id);
+    const item = mk('div', 'fp-disc is-collapsed'); item.id = 'disc-' + id; item.setAttribute('data-collapsible', '');
+    const btn = mk('button', 'fp-collapse-btn'); btn.type = 'button'; btn.setAttribute('aria-expanded', 'false');
+    const t = rich(mk('span', 'title'), r.title);
+    t.append(mk('span', 'cnt', ' ' + str(r.years_short)));
+    btn.append(t, mk('span', 'act', 'Show'));
+    btn.addEventListener('click', () => setOpen(item, item.classList.contains('is-collapsed')));
+    const body = mk('div', 'fp-collapse-body');
+    body.append(rich(mk('h5', 'fp-disc-h'), r.title));
+    const meta = mk('p', 'fp-disc-meta');
+    meta.append(mk('span', 'fp-disc-tie', str(r.tie_label)), document.createTextNode(' ' + str(r.years)));
+    body.append(meta);
+    if (str(r.people)) body.append(rich(mk('p', 'fp-disc-people'), r.people));
+    const notes = mk('div', 'fp-notes');
+    notes.append(para('', r.summary), para('Why it matters', r.significance), para("FHL's part", r.fhl_tie));
+    body.append(notes);
+    const mine = refs.filter((x) => str(x.id) === id);
+    const pubs = mine.filter((x) => x.kind === 'pub'), srcs = mine.filter((x) => x.kind === 'src');
+    if (pubs.length) { body.append(mk('h6', 'fp-disc-sub', 'Key publications'), refList(pubs)); }
+    if (srcs.length) {
+      const d = mk('details', 'fp-disc-src');
+      d.append(mk('summary', null, `Sources (${srcs.length})`), refList(srcs));
+      body.append(d);
+    }
+    item.append(btn, body);
+    return item;
+  };
+  let built = false;
+  const draw = () => {
+    const box = el('disc-list');
+    if (!box || built || !state(box, ['discoveries', 'discovery_refs'])) return;
+    built = true;
+    const rows = dash.data('discoveries').data, refs = dash.data('discovery_refs').data;
+    const groups = [];
+    rows.forEach((r) => { const g = str(r.group); let x = groups.find((y) => y.g === g); if (!x) { x = { g, rows: [] }; groups.push(x); } x.rows.push(r); });
+    box.replaceChildren();
+    groups.forEach((x) => { box.append(mk('h4', 'fp-disc-group', x.g)); x.rows.forEach((r) => box.append(entry(r, refs))); });
+    const n = el('disc-n'); if (n) n.textContent = String(rows.length);
+    const extra = el('disc-gfp-extra'), gfp = el('disc-aequorin-gfp');
+    if (extra && gfp) gfp.querySelector(':scope > .fp-collapse-body').insertBefore(extra, gfp.querySelector('.fp-disc-sub'));
+    const all = el('disc-all');
+    if (all) {
+      all.hidden = false;
+      all.addEventListener('click', () => {
+        const open = all.getAttribute('aria-pressed') !== 'true';
+        all.setAttribute('aria-pressed', String(open)); all.textContent = open ? 'Hide all' : 'Show all';
+        box.querySelectorAll('.fp-disc').forEach((i) => setOpen(i, open));
+      });
+    }
+    // an address that points at an entry can only be followed once the entry exists
+    const id = decodeURIComponent((location.hash || '').slice(1)), t = id && el(id);
+    if (t && t.closest('.fp-disc')) {
+      let f;
+      while ((f = t.closest('[data-collapsible].is-collapsed'))) f.querySelector(':scope > .fp-collapse-btn').click();
+      t.scrollIntoView();
+    }
+  };
+  // the counts beyond spending, in the economic contribution
+  let builtB = false;
+  const drawBeyond = () => {
+    const box = el('beyond-list');
+    if (!box || builtB || !state(box, ['beyond_spending'])) return;
+    builtB = true;
+    box.replaceChildren();
+    let ul = null, group = null;
+    dash.data('beyond_spending').data.forEach((r) => {
+      if (str(r.group) !== group) { group = str(r.group); box.append(mk('h5', 'fp-bey-g', group)); ul = mk('ul', 'fp-bey'); box.append(ul); }
+      const li = mk('li');
+      li.append(mk('b', null, str(r.value)), document.createTextNode(' ' + str(r.text) + ' '));
+      const u = str(r.url), s = mk('span', 'fp-bey-src');
+      s.append(isUrl(u) ? link(str(r.source), u) : document.createTextNode(str(r.source)));
+      li.append(s);
+      ul.append(li);
+    });
+  };
+  window.FPD = { draw: () => { draw(); drawBeyond(); } };
+  window.FPD.draw();
 })();
 </script>
 

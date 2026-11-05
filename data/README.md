@@ -15,6 +15,7 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `artists.csv`: Artists and writers in residence, with years, program, medium and sources.
 - `audit_by_stratum.csv`: The independent audit by how each record was decided: the stratum's size when the sample was drawn, the records audited, how many had a verdict on the FHL connection, and the share that agreed with the census (95% interval).
 - `audit_tiers.csv`: The independent audit, by evidence tier.
+- `beyond_spending.csv`: Counts of teaching and training that the spending estimate leaves out, each with its source and limits.
 - `by_appears.csv`: Publications by where FHL appears.
 - `by_era.csv`: Publications under each of the station's names.
 - `by_type.csv`: Publications by type.
@@ -25,6 +26,8 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `classes.csv`: Classes taught at the station by year and term, with instructors, TAs and sources (public records, fact-checked).
 - `coauthor_places.csv`: Institutions whose researchers co-authored verified FHL publications, with locations and counts by decade (OpenAlex).
 - `course_topics.csv`: Course titles by decade and topic (AI classification of the course list).
+- `discoveries.csv`: The discoveries and scientific contributions in section IX: what was found, why it matters and FHL's part, by field.
+- `discovery_refs.csv`: Key publications and sources for each discovery, with links.
 - `econ_award_scopes.csv`: NSF and NIH awards named by census papers, at narrower and narrower scopes, as awarded (Fig. 21).
 - `econ_capital_timeline.csv`: Buildings, utilities, housing, land and instruments: year, funder, basis of the value, amount as stated and in 2024 dollars, and source (Fig. 22).
 - `econ_facts.csv`: Every number quoted in the text of the economic contribution (section IX), with its rounded display form, dollar year, scope and source.
