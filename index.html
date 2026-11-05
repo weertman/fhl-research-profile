@@ -323,7 +323,7 @@
     .fp .fp-lead, .fp-notes p { text-align: left; }
     .fp-item .val { font-size: 1.3rem; }
   }
-  /* Definition boxes (how a publication gets in; who counts as an FHL scientist) */
+  /* Definition boxes (how a publication gets in; who counts as an FHL core scientist) */
   .fp-defbox { max-width: 46rem; margin: 0 auto; padding: .7rem 1rem .8rem; border: 1px solid var(--fp-ink); font-size: .9rem; }
   .fp-defbox .lbl { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; text-align: center; margin-bottom: .4rem; }
   .fp-defbox dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: .3rem .9rem; }
@@ -642,8 +642,8 @@
     cited <b data-source="headline" data-field="verified_citations" class="dash-skeleton">—</b> times. Research papers
     and other kinds of work are counted apart throughout, because they are different outputs. About
     <span id="split-research">—</span> research papers a year named the station over 2016–2025: about <span id="split-fhl">—</span>
-    with one of FHL's own scientists among the authors, and about <span id="split-others">—</span> by visiting
-    researchers, students and other collaborators, much of it written elsewhere. In all, the 173 FHL scientists identified by address (section IV; 41 of them still publishing from FHL), wherever they were,
+    with an FHL core scientist among the authors, and about <span id="split-others">—</span> by visiting
+    researchers, students and other collaborators, much of it written elsewhere. In all, the 173 FHL core scientists identified by address (section IV; 41 of them still publishing from FHL), wherever they were,
     published about <span id="split-all">—</span> research papers a year over 2016–2025; most of these do not name the station. The sections below show what the work was about, who did it (where they came
     from, whom they trained and where they went) and where the station appears in each publication; the Chronicle tab tells
     the station's history and what its activity contributes to the economy of the island and the state. AI agents
@@ -680,9 +680,9 @@
     <figcaption>
       <h3 id="fig-glance">Who writes the research papers.—Research papers a year, averaged over 2016–2025.</h3>
       <p class="cap">Research papers only: journal articles, reviews and letters (the lower three layers of Fig. 1). Left:
-        verified research papers that name FHL. Right: every research paper the FHL scientists identified by address
+        verified research papers that name FHL. Right: every research paper the FHL core scientists identified by address
         (section IV) published in the same years, wherever they were (OpenAlex's article, review and letter
-        types). The two meet in the middle box, drawn heavier: FHL scientists' papers that name the station. Authors are
+        types). The two meet in the middle box, drawn heavier: FHL core scientists' papers that name the station. Authors are
         matched by OpenAlex identifier, or by name where a record has none. Books and chapters, student reports, theses,
         datasets and other work are counted in the summary below.</p>
     </figcaption>
@@ -823,16 +823,17 @@
 
   <section class="fp-section" id="people">
     <h2><span class="num">IV.</span> The people</h2>
-    <aside class="fp-defbox" id="def-fhl-scientist" aria-label="Who counts as an FHL scientist">
-      <div class="lbl">Who counts as an FHL scientist</div>
+    <aside class="fp-defbox" id="def-fhl-scientist" aria-label="Who counts as an FHL core scientist">
+      <div class="lbl">Who counts as an FHL core scientist</div>
       <p>An author who gives FHL, or the station under an earlier name, as their address on at least three verified
         publications. Because older papers often carry no address, and many of the station's builders worked there in
         summers, people the archives document before about 1985 as director or resident investigator, or as teaching or
-        doing research at the station in at least two seasons, also count as <i>historical</i> FHL scientists
+        doing research at the station in at least two seasons, also count as <i>historical</i> FHL core scientists
         (<span id="n-historical">—</span>; marked "Historical" in Table I). Visitors who only thank FHL in their papers are
-        not counted, though many appear in Fig. 11 and in the census.</p>
+        not counted, though many appear in Fig. 11 and in the census. The term names a tie to the station, not a ranking: some
+        eminent scientists whose work at FHL is in the census, such as Joseph Connell and Paul Dayton, fall outside the group.</p>
     </aside>
-    <p class="fp-intro"><span data-source="people_summary" data-field="scientists">—</span> scientists list FHL as their
+    <p class="fp-intro"><span data-source="people_summary" data-field="scientists">—</span> core scientists list FHL as their
       address on at least three verified publications. <span data-source="people_summary" data-field="from_north_america">—</span>
       came from institutions in North America, <span data-source="people_summary" data-field="from_europe">—</span> from
       Europe and <span data-source="people_summary" data-field="from_asia_pacific">—</span> from Asia and the Pacific;
@@ -858,10 +859,10 @@
       </div>
       <div class="fp-chart tall" id="ch-map" data-source="places world_land"></div>
       <figcaption>
-        <h3 id="fig-map"><span class="fig">Fig. 9.</span>—Where FHL scientists came from, and where they went.</h3>
-        <p class="cap">Open circles: the earliest institution in each scientist's publication record before or in the year of their
+        <h3 id="fig-map"><span class="fig">Fig. 9.</span>—Where FHL core scientists came from, and where they went.</h3>
+        <p class="cap">Open circles: the earliest institution in each core scientist's publication record before or in the year of their
           first FHL paper. Black circles: the institution where they published most after their last FHL paper (at least two years
-          there). Circle area shows the number of scientists; lines are great circles to Friday Harbor. Hover over a circle
+          there). Circle area shows the number of core scientists; lines are great circles to Friday Harbor. Hover over a circle
           for names.</p>
       </figcaption>
     </figure>
@@ -905,7 +906,7 @@
           a mark, click it to keep it lit, or use "Find a person", to follow a lineage back through teachers and forward through
           students. When no one is selected, click a part of the key to highlight it. The network is a sample and far from
           complete. Set apart below it are the technicians and staff in the chronicle's staff archive (boat crews,
-          facilities, dining, office, library and research support) who have no documented link to any FHL scientist. They
+          facilities, dining, office, library and research support) who have no documented link to any FHL core scientist. They
           are shown as a group, not on the time axis: about two in five are dated only by a staff list that happens to
           survive from the station's website, most of them from 2000 or 2006, so their first year says more about the records than about
           when they came. Hover over a mark for the person's role and years. Much of the station's work is done by people
@@ -916,8 +917,8 @@
       <div class="fp-legend" id="lg-net"></div>
       <div class="fp-chart" id="ch-net" data-source="people people_links"></div>
       <figcaption>
-        <h3 id="fig-net"><span class="fig">Fig. 12.</span>—Who cites whom: the most prolific FHL scientists.</h3>
-        <p class="cap">The sixty scientists with the most FHL-address publications, around the circle in the order they
+        <h3 id="fig-net"><span class="fig">Fig. 12.</span>—Who cites whom: the most prolific FHL core scientists.</h3>
+        <p class="cap">The sixty core scientists with the most FHL-address publications, around the circle in the order they
           began publishing from FHL (clockwise from the top). A line joins two scientists when the FHL papers of one cite the
           FHL papers of the other; its weight shows how often. Marker area shows FHL publications, and the fill shows the
           region the scientist came from. Hover over a name to pick out their links; click it to keep them lit (for example to save
@@ -925,14 +926,14 @@
       </figcaption>
     </figure>
     <div class="fp-fig" id="people-table">
-      <h3 id="tab-people"><span class="fig">Table I.</span>—FHL scientists, where they came from and where they went.</h3>
-      <p class="cap">FHL scientists (see the definition above), most prolific first. <i>FHL papers</i>: publications giving
+      <h3 id="tab-people"><span class="fig">Table I.</span>—FHL core scientists, where they came from and where they went.</h3>
+      <p class="cap">FHL core scientists (see the definition above), most prolific first. <i>FHL papers</i>: publications giving
         FHL as an author's address. <i>By kind</i>: all their verified FHL publications, including those that name FHL
         only in the text ("other" is mostly conference abstracts, reports and preprints). <i>First</i> and
         <i>last</i>: the years of their first and last FHL-address publications. <i>Now</i>: still publishing from FHL, the
         institution where they published most after leaving, no later record, or the year of death where a public source
         gives it. Career points come from OpenAlex author records, which occasionally merge or split people with similar
-        names. For historical FHL scientists, <i>Now</i> gives the years of their documented roles at the station; their
+        names. For historical FHL core scientists, <i>Now</i> gives the years of their documented roles at the station; their
         roles and sources are on their card. Use "Find a person" above to open a card or search the list.</p>
       <div class="fp-table-wrap">
         <table id="tbl-people" data-source="people" data-row-key="person_id">
@@ -1682,7 +1683,7 @@
         downloads), and moved <span data-source="methods_facts" data-field="value" data-where="fact=mention_moved">—</span> obituaries, biographies and histories to Mention only, as the
         screening guide prescribes. The audit's error rates were measured before this review, which removed many of the
         errors it found, so for the cleaned census the best estimate is somewhat conservative.</p>
-      <p><span class="runin">Historical FHL scientists.</span>—Older papers rarely carry an address, and many of the people who
+      <p><span class="runin">Historical FHL core scientists.</span>—Older papers rarely carry an address, and many of the people who
         built the station worked there in the summers, so AI agents searched the archives (the Regents' minutes, summer-session
         announcements, the station's Publications, UW catalogs and yearbooks, FHL's newsletters and the centennial timeline)
         for people with a documented role at the station before about 1985; a second agent checked a sample against the
@@ -1690,11 +1691,11 @@
         or did research there in at least two documented seasons; people documented for a single season appear in the record
         of classes instead. They are marked "Historical" in Table I; their roles and sources are on their card (Find a
         person).</p>
-      <p><span class="runin">People.</span>—FHL scientists are the authors who list FHL, or the station under an earlier
+      <p><span class="runin">People.</span>—FHL core scientists identified by address are the authors who list FHL, or the station under an earlier
         name, as their address on at least three verified publications, identified through OpenAlex's author records. The
         mentoring network (Fig. 11) joins them to their students and teachers through UW thesis records, Wikidata, lab rosters
         and CVs read by AI agents and re-checked entry by entry, graduate committees, fact-checked profiles, and mentors
-        inferred from co-authorship and checked by agents (Figs. 26, 31 and 34). Of the FHL scientists,
+        inferred from co-authorship and checked by agents (Figs. 26, 31 and 34). Of those identified by address,
         <span data-source="methods_facts" data-field="value" data-where="fact=roster_found">—</span> have a roster, CV list or committee list, <span data-source="methods_facts" data-field="value" data-where="fact=roster_no_lab">—</span> lead no lab of their own,
         <span data-source="methods_facts" data-field="value" data-where="fact=roster_historical">—</span> worked before public lab pages, and for <span data-source="methods_facts" data-field="value" data-where="fact=roster_not_found">—</span> who taught, no list of
         trainees was found.</p>
@@ -1702,13 +1703,13 @@
     <details class="fm-more">
       <summary>How people, mentoring links and profiles were found, in detail</summary>
       <div class="fp-notes">
-      <p><span class="runin">People.</span>—FHL scientists are the authors who list FHL, or the station under an earlier
+      <p><span class="runin">People.</span>—FHL core scientists identified by address are the authors who list FHL, or the station under an earlier
         name, as their address on at least three verified publications, identified through OpenAlex's author records. For
         each, OpenAlex's history of the institutions on their papers gives where they came from (the earliest institution
         with a paper before or in their first FHL year) and where they went (the institution with papers in the most years
         after their last FHL paper, counting only institutions with at least two such years); those still publishing from
         FHL in the last three years count as still at FHL. Citation links count, from OpenAlex reference lists, how often
-        one scientist's FHL papers cite another's. Advisor-student links come from UW thesis records,
+        one core scientist's FHL papers cite another's. Advisor-student links come from UW thesis records,
         which name the advisor, and from Wikidata's doctoral-advisor and doctoral-student statements. People were matched to
         Wikidata by ORCID or by Wikidata's own links to the station, and advisors were followed up to five generations back;
         a match was dropped if it would make the person younger than 18 at their first FHL paper. Mentors were also inferred
@@ -1724,16 +1725,16 @@
         where the two looks disagreed: <span data-source="methods_facts" data-field="value" data-where="fact=mentor_confirmed">—</span> of the <span data-source="methods_facts" data-field="value" data-where="fact=mentor_checked">—</span> were advisor, postdoctoral or
         student-research mentors and are drawn as documented, <span data-source="methods_facts" data-field="value" data-where="fact=mentor_peer">—</span> were collaborations between peers and were
         removed, and <span data-source="methods_facts" data-field="value" data-where="fact=mentor_unclear">—</span> could not be settled; those that no other source documents are drawn as inferred (Table VIII). Lab rosters add
-        <span data-source="methods_facts" data-field="value" data-where="fact=roster_links">—</span> documented links: AI agents read each FHL scientist's public lab, team and alumni pages and CVs
+        <span data-source="methods_facts" data-field="value" data-where="fact=roster_links">—</span> documented links: AI agents read the public lab, team and alumni pages and CVs
         and listed the graduate students, postdocs, technicians, interns and staff named there, and a second agent re-opened
         every page to confirm each entry. Undergraduates named on a home-university lab page are included only if they also
         appear as authors in the census, and the Star Lab team comes from FHL's own pages, read from Internet Archive copies.
         Graduate committees listed in CVs add <span data-source="methods_facts" data-field="value" data-where="fact=committee_links">—</span> links, drawn dotted, and advisors and mentors named
-        in the fact-checked profiles (below) add <span data-source="methods_facts" data-field="value" data-where="fact=profile_links">—</span>. Every FHL scientist was searched, in three rounds (the last starting from each profile's sources and ORCID record,
+        in the fact-checked profiles (below) add <span data-source="methods_facts" data-field="value" data-where="fact=profile_links">—</span>. Every core scientist identified by address was searched, in three rounds (the last starting from each profile's sources and ORCID record,
         since web-search capacity ran short in the first two): <span data-source="methods_facts" data-field="value" data-where="fact=roster_found">—</span> have a roster, CV list or committee list;
         <span data-source="methods_facts" data-field="value" data-where="fact=roster_no_lab">—</span> lead no lab of their own (students, early-career researchers or staff); <span data-source="methods_facts" data-field="value" data-where="fact=roster_historical">—</span>
         worked before public lab pages and no list of their students is public; and for <span data-source="methods_facts" data-field="value" data-where="fact=roster_not_found">—</span> who taught,
-        no public list of trainees was found. Every FHL scientist identified by address and most teachers in the network have a two-paragraph profile (<span data-source="methods_facts" data-field="value" data-where="fact=profiles">—</span>
+        no public list of trainees was found. Every FHL core scientist identified by address and most teachers in the network have a two-paragraph profile (<span data-source="methods_facts" data-field="value" data-where="fact=profiles">—</span>
         in all, leaving out the second profiles of <span data-source="methods_facts" data-field="value" data-where="fact=profiles_dropped">—</span> people recorded under two names), shown when the person is picked in "Find a person". An AI agent wrote each profile from the person's census record and
         public sources (faculty and lab pages, CVs, ORCID, obituaries), and a second agent checked every claim against
         those sources and revised <span data-source="methods_facts" data-field="value" data-where="fact=profiles_revised">—</span> of them. In all the network holds <span data-source="methods_facts" data-field="value" data-where="fact=network_links">—</span> links among <span data-source="methods_facts" data-field="value" data-where="fact=network_people">—</span> people. OpenAlex groups papers into
@@ -1742,7 +1743,7 @@
         of the same name, a biogerontologist and a statistician. Three scientists whose papers OpenAlex had split between
         two records, David O. Duggins, Aaron W. E. Galloway and Thomas E. Schroeder (each also recorded under initials), were
         joined by hand, and E. J. Lund's OpenAlex destination, the University of Copenhagen, which contradicts his career at
-        the University of Texas, is left out. Scientists from before about 1970 are under-represented because older papers carry no address
+        the University of Texas, is left out. Core scientists from before about 1970 are under-represented because older papers carry no address
         metadata.</p>
       </div>
     </details>
@@ -2388,8 +2389,8 @@
     },
   });
   dash.calc('people_summary', {
-    title: 'FHL scientists in brief',
-    description: 'Counts from the table of FHL scientists: how many, where they came from (by region), how many moved on, to how many countries, and how many still publish from FHL.',
+    title: 'FHL core scientists in brief',
+    description: 'Counts from the table of FHL core scientists: how many, where they came from (by region), how many moved on, to how many countries, and how many still publish from FHL.',
     inputs: ['people'],
     fn: (all) => { const people = all.filter((p) => (p.basis || 'address') === 'address'); return [{
       scientists: people.length,
@@ -2614,10 +2615,10 @@
     head.append(close); kids.push(head);
     const facts = [];
     if (person && person.basis === 'historical') {
-      facts.push(`Historical FHL scientist (${person.first_fhl_year}–${person.last_fhl_year}): ${person.roles}`);
+      facts.push(`Historical FHL core scientist (${person.first_fhl_year}–${person.last_fhl_year}): ${person.roles}`);
       if (/\d/.test(String(person.death_year || ''))) facts.push(`died ${person.death_year}`);
     } else if (person) {
-      facts.push(`FHL scientist: ${f(+person.fhl_works)} FHL-address papers, ${person.first_fhl_year}–${person.last_fhl_year}`);
+      facts.push(`FHL core scientist: ${f(+person.fhl_works)} FHL-address papers, ${person.first_fhl_year}–${person.last_fhl_year}`);
       if (person.came_from) facts.push(`came from ${person.came_from}`);
       facts.push(person.went_to ? `went to ${person.went_to}` : person.status.replace(/^\w/, (c) => c.toLowerCase()));
     } else if (node) facts.push(`In the mentoring network; career began about ${node.year}`);
@@ -2748,7 +2749,7 @@
       .attr('d', (p) => linePath(proj, greatCircle([p.lon, p.lat], [fhl.lon, fhl.lat])))
       .style('stroke-width', (p) => (phone() ? 0.4 + Math.sqrt(p.people) * 0.3 : 0.6 + Math.sqrt(p.people) * 0.5));
     const tipRows = (p) => [[null, null, [p.city, p.country].filter(Boolean).join(', ')],
-      [null, null, `${f(p.people)} scientist${p.people === 1 ? '' : 's'}: ${p.names}`]];
+      [null, null, `${f(p.people)} core scientist${p.people === 1 ? '' : 's'}: ${p.names}`]];
     const r = d3.scaleSqrt([1, d3.max(places.filter((p) => p.role !== 'FHL'), (p) => p.people) || 1],
       phone() ? [1.8, mapView === 'world' ? 7 : 10] : [2.6, mapView === 'world' ? 12 : 16]);
     svg.append('g').selectAll('circle').data(pts).join('circle').attr('class', `place ${mapMode}`)
@@ -2960,8 +2961,8 @@
   }
 
   // Under the mentoring network (Fig. 11), on its time axis: the technicians and staff from the chronicle's staff archive
-  // who have no documented link to an FHL scientist, so the network is not read as covering everyone who worked there.
-  // Under Fig. 11, set apart from the network: the technicians and staff with no documented link to an FHL scientist, as two
+  // who have no documented link to an FHL core scientist, so the network is not read as covering everyone who worked there.
+  // Under Fig. 11, set apart from the network: the technicians and staff with no documented link to an FHL core scientist, as two
   // groups of marks (technical and research support; everyone else). Not on the time axis: many are dated only by a staff
   // list that happens to survive, so a year would mislead.
   function drawStaffStrip() {
@@ -2985,7 +2986,7 @@
     const pts = [...seen.values()].sort((a, b) => a.year - b.year || a.name.localeCompare(b.name));
     if (!pts.length) return;
     const head = document.createElement('p'); head.className = 'cap fp-strip-head'; // HTML, so it wraps on a phone
-    head.textContent = `Outside the network: ${f(pts.length)} technicians and staff with no documented link to an FHL scientist.`;
+    head.textContent = `Outside the network: ${f(pts.length)} technicians and staff with no documented link to an FHL core scientist.`;
     el.append(head);
     const r = 4, step = 11, width = Math.max(260, el.clientWidth), cols = Math.max(10, Math.floor((width - 2) / step));
     [[true, 'Technical and research support'], [false, 'Facilities, boats, dining, office, library and other staff']].forEach(([tech, label]) => {
@@ -3010,7 +3011,7 @@
   function drawTree() {
     const el = document.getElementById('ch-tree');
     const lg = document.getElementById('lg-tree');
-    legend(lg, [['FHL scientist', FILL.solid], ['Other', FILL.open]]);
+    legend(lg, [['FHL core scientist', FILL.solid], ['Other', FILL.open]]);
     lineage = null;
     if (!state(el, ['lineage', 'lineage_people'])) return;
     const inferred = (l) => l.source === 'Co-authorship';
@@ -3095,7 +3096,7 @@
       if (isFhl(d.id)) g.append('rect').attr('class', 'lin-mark fhl').attr('x', -d.r).attr('y', -d.r).attr('width', 2 * d.r).attr('height', 2 * d.r);
       else g.append('circle').attr('class', 'lin-mark other').attr('r', d.r);
     });
-    // Names for the most prominent people (students in the network, FHL papers, FHL scientists first), set into the
+    // Names for the most prominent people (students in the network, FHL papers, FHL core scientists first), set into the
     // free space: beside the mark, above or below it, or popped out with a leader line, never over another name or mark.
     const papers = new Map(dash.data('people').status === 'ok' ? dash.data('people').data.map((r) => [r.name, +r.fhl_works]) : []);
     const prominence = (d) => nStudents(d.id) * 3 + (teachersOf.get(d.id) || []).length + Math.min(30, papers.get(d.id) || 0) / 3 + (isFhl(d.id) ? 2 : 0);
@@ -3205,7 +3206,7 @@
       if (!d || Math.hypot(d.x - px, d.y - py) > 14) { rest(); hideTip(el); return; }
       focus(d.id);
       const nfo = info.get(d.id);
-      showTip(el, event, d.id, [[null, null, `${isFhl(d.id) ? 'FHL scientist' : 'Mentor or trainee of FHL scientists'}; career began about ${nfo.year} (${nfo.year_basis})`],
+      showTip(el, event, d.id, [[null, null, `${isFhl(d.id) ? 'FHL core scientist' : 'In the mentoring network'}; career began about ${nfo.year} (${nfo.year_basis})`],
         ...(teachersOf.get(d.id) || []).map((l) => [null, null, `Taught by ${l.advisor} (${evidence(l)})`]),
         ...((studentsOf.get(d.id) || []).length ? [[null, null, `${f(nStudents(d.id))} student${nStudents(d.id) === 1 ? '' : 's'} here: ${(studentsOf.get(d.id) || []).slice(0, 6).map((l) => l.student).join(', ')}${nStudents(d.id) > 6 ? ', …' : ''}`]] : [])]);
     }).on('mouseleave', () => { hideTip(el); rest(); })
@@ -3994,7 +3995,7 @@
     } else elScG.replaceChildren();
 
     const elSp = document.getElementById('ch-split');
-    const SPLIT = [['With an FHL scientist among the authors', FILL.solid], ['By visitors, students and other collaborators', FILL.dots],
+    const SPLIT = [['With an FHL core scientist among the authors', FILL.solid], ['By visitors, students and other collaborators', FILL.dots],
       ['Authors not known', FILL.grayl], ['Do not name FHL', FILL.hatch]];
     if (state(elSp, ['network_split'])) {
       const yrs = dash.data('network_split').data.filter((r) => +r.year >= 2016 && +r.year <= 2025);
@@ -4003,8 +4004,8 @@
       const A = avg('by_fhl_scientists_research'), B = avg('by_others_research'), U = avg('no_author_data_research'), T = avg('fhl_scientists_all_research');
       const r0 = (v) => f(Math.round(v));
       [['split-research', A + B + U], ['split-fhl', A], ['split-others', B], ['split-all', T]].forEach(([id, v]) => { const e = document.getElementById(id); if (e) e.textContent = r0(v); });
-      // A flow chart: the papers that name FHL (left) and everything FHL scientists publish (right) meet in the middle,
-      // where FHL scientists' papers name the station.
+      // A flow chart: the papers that name FHL (left) and everything FHL core scientists publish (right) meet in the middle,
+      // where FHL core scientists' papers name the station.
       const nSci = dash.data('people').status === 'ok' ? dash.data('people').data.filter((p) => (p.basis || 'address') === 'address').length : 173;
       const W = Math.max(260, elSp.clientWidth), small = W < 560;
       const fs = small ? 10.5 : 13, numFs = small ? 18 : 24, pad = small ? 6 : 10, lineH = fs * 1.25;
@@ -4024,13 +4025,13 @@
       const tops = [
         { cx: W * 0.25, w: tw, num: `${r0(A + B + U)} a year`, label: 'research papers name FHL (verified, 2016–2025 average)',
           note: U >= 0.5 ? `${r0(U)} of them have no author data` : '' },
-        { cx: W * 0.75, w: tw, num: `${r0(T)} a year`, label: `research papers by the ${f(nSci)} FHL scientists, wherever they were`,
-          note: 'FHL scientists: FHL is their address on at least three verified publications (section IV)' },
+        { cx: W * 0.75, w: tw, num: `${r0(T)} a year`, label: `research papers by the ${f(nSci)} FHL core scientists, wherever they were`,
+          note: 'FHL core scientists: FHL is their address on at least three verified publications (section IV)' },
       ];
       const bots = [
         { cx: colW * 0.5, fill: SPLIT[1][1], name: SPLIT[1][0], num: r0(B), label: 'by visitors, students and other collaborators', from: [0] },
-        { cx: colW * 1.5, fill: SPLIT[0][1], name: SPLIT[0][0], num: r0(A), label: 'by FHL scientists, naming FHL', from: [0, 1], shared: true },
-        { cx: colW * 2.5, fill: SPLIT[3][1], name: 'By FHL scientists, not naming FHL', num: f(Math.round(T) - Math.round(A)), label: 'by FHL scientists, not naming FHL', from: [1] },
+        { cx: colW * 1.5, fill: SPLIT[0][1], name: SPLIT[0][0], num: r0(A), label: 'by FHL core scientists, naming FHL', from: [0, 1], shared: true },
+        { cx: colW * 2.5, fill: SPLIT[3][1], name: 'By FHL core scientists, not naming FHL', num: f(Math.round(T) - Math.round(A)), label: 'by FHL core scientists, not naming FHL', from: [1] },
       ];
       [...tops, ...bots].forEach((d) => {
         d.w = d.w || bw;

@@ -16,14 +16,14 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 9,links,0,Check,make,16,146,links,56 settled on a direct source; the rest to a second look,a batch of mentor links inferred from co-authorship,"searches public records; mentor, peer or unclear"
 9,links,1,Second look,check,16,90,verdicts,68 agreed · 16 settled by a deeper search · 6 disputed,verdicts not resting on a direct source,"judges them again, independently"
 9,links,2,Adjudicate,review,4,6,links,"1 kept · 5 removed; in all, 117 kept · 19 removed · 10 unsettled",only the links where the two looks disagree,weighs both looks' evidence and rules
-9,rosters,3,Rosters,make,22,,,,a batch of FHL scientists,"lists trainees from lab pages, alumni pages and CVs"
+9,rosters,3,Rosters,make,22,,,,a batch of FHL core scientists,"lists trainees from lab pages, alumni pages and CVs"
 9,rosters,4,Verify rosters,check,17,,,,that batch's roster entries,re-opens each page; confirms or removes every entry
 10,,0,Write,make,30,236,people,,a batch of people's census records,researches each person; drafts two sourced paragraphs
 10,,1,Fact-check,check,30,,,230 of 236 revised; 7 second profiles of people recorded under two names later left out,that batch's drafts,checks every claim against its sources; revises
 11,,0,Profile advisors,make,4,,,,the fact-checked profiles,lists advisors the profiles state plainly
-11,,1,Rosters,make,30,,,,a batch of FHL scientists (five agents at a time),"lists trainees, co-supervised students and committees"
+11,,1,Rosters,make,30,,,,a batch of FHL core scientists (five agents at a time),"lists trainees, co-supervised students and committees"
 11,,2,Verify rosters,check,28,,,,that batch's roster entries,re-opens each page; confirms or removes every entry
-12,,0,Rosters,make,33,,,,"scientists without a roster, or with an incomplete one","finds or completes a roster, or records why there is none"
+12,,0,Rosters,make,33,,,,"core scientists without a roster, or with an incomplete one","finds or completes a roster, or records why there is none"
 12,,1,Verify rosters,check,29,,,,that batch's new entries,re-opens each page; confirms or removes every entry
 13,,0,Extract events,make,12,,,744 dated events,one group of history sources,"lists dated events, each with its source"
 13,,1,Images,make,3,,,,openly licensed images,writes a caption and alt text for each
@@ -39,7 +39,7 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 16,,1,Re-check,check,25,159,readings,"152 agreed · 2 changed · 5 disagreed, first reading kept · from 32 of 49 batches",two finished batches,re-opens five records per batch; agrees or not
 17,,0,Read,make,21,904,publications,,one batch of verified publications,"reads the author addresses, footnotes included"
 17,,1,Re-check,check,11,103,readings,96 agreed · 7 changed · from 21 of 21 batches,two finished batches,re-opens five records per batch; checks the addresses
-18,,0,Research,make,11,,,,public archives and the chronicle,"builds one list: scientists, staff, classes or artists"
+18,,0,Research,make,11,,,,public archives and the chronicle,"builds one list: core scientists, staff, classes or artists"
 18,,1,Fact-check,check,11,,,,that list,checks its least certain entries against sources
 19,,0,Curate,review,5,,,,the lists with their fact-check verdicts,"applies fixes, merges duplicates, keeps professional facts"
 20,,0,Review,make,3,,,,the page's code and data,reviews them through one lens; lists findings

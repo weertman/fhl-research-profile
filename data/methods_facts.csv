@@ -10,6 +10,8 @@ decided_audit,365,final decisions resting on the audit
 decided_dedup,162,records merged into another record of the same work
 decided_cleanup,210,records removed or moved to Mention only by the clean-up review
 decided_push,508,final decisions resting on the verification push
+decided_hand,12,final decisions resting on the hand review of named papers
+hand_added,8,candidate records added in the hand review
 screened_round1,4201,records judged in the first screening round
 screened_round2,1297,records judged in the second screening round
 calibration_overrides,276,decisions changed by calibration reviewers
@@ -37,16 +39,16 @@ mentor_adjudicated_kept,1,"of those, kept as mentor links"
 mentor_adjudicated_removed,5,"of those, removed as peers"
 mentor_doc_visible,182,documented pairs with the student first and the teacher last on a census paper
 mentor_doc_recovered,74,"of those, found by the co-authorship rule"
-roster_links,1322,"links from lab, team and alumni pages and CVs"
+roster_links,1323,"links from lab, team and alumni pages and CVs"
 committee_links,282,graduate committee links
-roster_scientists,90,FHL scientists with a roster or committee list
-network_links,1823,links in the mentoring network
-network_people,1798,people in the mentoring network
+roster_scientists,90,FHL core scientists with a roster or committee list
+network_links,1824,links in the mentoring network
+network_people,1799,people in the mentoring network
 profile_links,118,advisor links named in fact-checked profiles
-roster_found,100,"FHL scientists with a roster, CV list or committee list"
-roster_no_lab,36,"FHL scientists who lead no lab (students, early-career, staff)"
-roster_historical,25,FHL scientists from before public lab pages
-roster_not_found,12,FHL scientists who taught but have no public trainee list
+roster_found,100,"FHL core scientists identified by address with a roster, CV list or committee list"
+roster_no_lab,36,"FHL core scientists identified by address who lead no lab (students, early-career, staff)"
+roster_historical,25,FHL core scientists identified by address whose careers predate public lab pages
+roster_not_found,12,FHL core scientists identified by address who taught but have no public trainee list
 history_extracted,744,dated events extracted from the history sources
 history_events,106,events in the chronicle of the station
 history_corrected,47,history events the fact-checkers corrected

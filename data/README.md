@@ -49,13 +49,13 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `lineage_people.csv`: Everyone in the mentoring network, with the year their career began and how it was estimated.
 - `methods_checks.csv`: Rounds of checking agents' work: items made, re-opened, confirmed, corrected (changed to the checker's verdict), dropped and unsettled.
 - `methods_facts.csv`: Counts quoted in the technical methods.
-- `network_split.csv`: Publications naming FHL per year, split into those with an FHL scientist among the authors and those by others, beside the FHL scientists' total output (OpenAlex counts). Columns ending in _research count research papers only (journal articles, reviews and letters; for the FHL scientists' total, OpenAlex's article, review and letter types), as on the page.
+- `network_split.csv`: Publications naming FHL per year, split into those with an FHL core scientist among the authors and those by others, beside the FHL core scientists' total output (OpenAlex counts). Columns ending in _research count research papers only (journal articles, reviews and letters; for the FHL core scientists' total, OpenAlex's article, review and letter types), as on the page.
 - `news_by_year.csv`: News items per year.
 - `organisms_by_decade.csv`: Organism groups by decade (AI classification).
-- `people.csv`: FHL scientists (at least three FHL-address publications, or a documented role at the station in its early decades), where they came from and where they went (OpenAlex), their publications by kind, and death years from public sources.
-- `people_links.csv`: Citations among the 60 most prolific FHL scientists.
-- `places.csv`: Institutions FHL scientists came from and went to, with locations.
-- `profiles.csv`: A two-paragraph, fact-checked account of each FHL scientist identified by address and of 56 other people, most of them teachers in the mentoring network.
+- `people.csv`: FHL core scientists (at least three FHL-address publications, or a documented role at the station in its early decades), where they came from and where they went (OpenAlex), their publications by kind, and death years from public sources.
+- `people_links.csv`: Citations among the 60 most prolific FHL core scientists.
+- `places.csv`: Institutions FHL core scientists came from and went to, with locations.
+- `profiles.csv`: A two-paragraph, fact-checked account of each FHL core scientist identified by address and of 56 other people, most of them teachers in the mentoring network.
 - `prompts.csv`: The prompts typed from 13 to 28 October 2026 that built the census and the page (messages about signing in, saving files and progress summarized in one row), with when each was typed and the output tokens it led to.
 - `publications.csv`: The census: one row per publication (record id, evidence tier, year, authors, title, venue, type, where FHL appears, citations, DOI, research topic, organism group, why the record was counted and the passage that names FHL, with contact details removed).
 - `recall_by_decade.csv`: How many of FHL's own listed papers the database searches found, by decade.
