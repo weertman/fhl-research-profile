@@ -45,7 +45,7 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `history_eras.csv`: Chronicle of the station: the eras under the station's successive names.
 - `history_events.csv`: Chronicle of the station: dated, sourced events from 1903 to 2026.
 - `history_images.csv`: Chronicle of the station: the images shown, with captions, credits, licenses and sources. Most are public domain or openly licensed; those from FHL's own archives are used with FHL's permission and are not free to reuse (see the license column).
-- `lineage.csv`: Teacher-student links: lab rosters and CVs, graduate committees, advisors named in the fact-checked profiles, UW theses, Wikidata, and mentors inferred from co-authorship (confirmed or not), with the source of each.
+- `lineage.csv`: Teacher-student links: lab rosters and CVs, graduate committees, course pages, other public records, advisors named in the fact-checked profiles, UW theses, Wikidata, and mentors inferred from co-authorship (confirmed or not), with the source of each.
 - `lineage_people.csv`: Everyone in the mentoring network, with the year their career began and how it was estimated.
 - `methods_checks.csv`: Rounds of checking agents' work: items made, re-opened, confirmed, corrected (changed to the checker's verdict), dropped and unsettled.
 - `methods_facts.csv`: Counts quoted in the technical methods.
@@ -55,7 +55,7 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `people.csv`: FHL core scientists (at least three FHL-address publications, or a documented role at the station in its early decades), where they came from and where they went (OpenAlex), their publications by kind, and death years from public sources.
 - `people_links.csv`: Citations among the 60 most prolific FHL core scientists.
 - `places.csv`: Institutions FHL core scientists came from and went to, with locations.
-- `profiles.csv`: A two-paragraph, fact-checked account of each FHL core scientist identified by address and of 56 other people, most of them teachers in the mentoring network.
+- `profiles.csv`: An entry on each person in the mentoring network: a fact-checked profile or section, or one sentence from their listing (kind), with its public sources.
 - `prompts.csv`: The prompts typed from 13 to 28 October 2026 that built the census and the page (messages about signing in, saving files and progress summarized in one row), with when each was typed and the output tokens it led to.
 - `publications.csv`: The census: one row per publication (record id, evidence tier, year, authors, title, venue, type, where FHL appears, citations, DOI, research topic, organism group, why the record was counted and the passage that names FHL, with contact details removed).
 - `recall_by_decade.csv`: How many of FHL's own listed papers the database searches found, by decade.

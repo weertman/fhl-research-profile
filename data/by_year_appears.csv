@@ -106,22 +106,22 @@ year,appears,n
 2008,Author address,56
 2009,Author address,51
 2010,Author address,56
-2011,Author address,142
-2012,Author address,109
+2011,Author address,141
+2012,Author address,110
 2013,Author address,99
-2014,Author address,146
+2014,Author address,145
 2015,Author address,74
 2016,Author address,51
 2017,Author address,65
 2018,Author address,78
 2019,Author address,100
 2020,Author address,60
-2021,Author address,95
-2022,Author address,100
-2023,Author address,97
-2024,Author address,60
-2025,Author address,95
-2026,Author address,51
+2021,Author address,94
+2022,Author address,89
+2023,Author address,92
+2024,Author address,55
+2025,Author address,90
+2026,Author address,48
 1904,In the text; addresses not seen,0
 1905,In the text; addresses not seen,0
 1906,In the text; addresses not seen,0
@@ -357,7 +357,7 @@ year,appears,n
 2013,Other or not determined,6
 2014,Other or not determined,6
 2015,Other or not determined,4
-2016,Other or not determined,3
+2016,Other or not determined,2
 2017,Other or not determined,3
 2018,Other or not determined,3
 2019,Other or not determined,3
@@ -473,8 +473,8 @@ year,appears,n
 2006,Text only: acknowledgments,3
 2007,Text only: acknowledgments,8
 2008,Text only: acknowledgments,28
-2009,Text only: acknowledgments,25
-2010,Text only: acknowledgments,28
+2009,Text only: acknowledgments,24
+2010,Text only: acknowledgments,29
 2011,Text only: acknowledgments,32
 2012,Text only: acknowledgments,33
 2013,Text only: acknowledgments,22
@@ -485,7 +485,7 @@ year,appears,n
 2018,Text only: acknowledgments,23
 2019,Text only: acknowledgments,30
 2020,Text only: acknowledgments,23
-2021,Text only: acknowledgments,38
+2021,Text only: acknowledgments,37
 2022,Text only: acknowledgments,28
 2023,Text only: acknowledgments,19
 2024,Text only: acknowledgments,18
@@ -575,8 +575,8 @@ year,appears,n
 1985,Text only: methods and elsewhere,10
 1986,Text only: methods and elsewhere,7
 1987,Text only: methods and elsewhere,12
-1988,Text only: methods and elsewhere,6
-1989,Text only: methods and elsewhere,14
+1988,Text only: methods and elsewhere,7
+1989,Text only: methods and elsewhere,13
 1990,Text only: methods and elsewhere,8
 1991,Text only: methods and elsewhere,8
 1992,Text only: methods and elsewhere,6
@@ -590,7 +590,7 @@ year,appears,n
 2000,Text only: methods and elsewhere,9
 2001,Text only: methods and elsewhere,10
 2002,Text only: methods and elsewhere,9
-2003,Text only: methods and elsewhere,8
+2003,Text only: methods and elsewhere,9
 2004,Text only: methods and elsewhere,15
 2005,Text only: methods and elsewhere,10
 2006,Text only: methods and elsewhere,8
@@ -608,9 +608,9 @@ year,appears,n
 2018,Text only: methods and elsewhere,21
 2019,Text only: methods and elsewhere,36
 2020,Text only: methods and elsewhere,33
-2021,Text only: methods and elsewhere,36
+2021,Text only: methods and elsewhere,35
 2022,Text only: methods and elsewhere,34
 2023,Text only: methods and elsewhere,33
 2024,Text only: methods and elsewhere,37
 2025,Text only: methods and elsewhere,28
-2026,Text only: methods and elsewhere,34
+2026,Text only: methods and elsewhere,33

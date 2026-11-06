@@ -3,13 +3,13 @@ source_rows,26759,rows returned by all searches
 wos_records,2543,Web of Science records exported
 candidates,15962,candidate records after merging
 with_doi,6913,candidates with a DOI
-decided_rules,7693,final decisions resting on written rules
-decided_screening,6080,final decisions resting on AI screening
+decided_rules,7659,final decisions resting on written rules
+decided_screening,6079,final decisions resting on AI screening
 decided_calibration,260,final decisions resting on calibration review
-decided_audit,365,final decisions resting on the audit
-decided_dedup,163,records merged into another record of the same work
-decided_cleanup,210,records removed or moved to Mention only by the clean-up review
-decided_push,507,final decisions resting on the verification push
+decided_audit,363,final decisions resting on the audit
+decided_dedup,171,records merged into another record of the same work
+decided_cleanup,241,records removed or moved to Mention only by the clean-up review
+decided_push,505,final decisions resting on the verification push
 decided_hand,13,final decisions resting on the hand review of named papers
 hand_added,9,candidate records added in the hand review
 decided_recheck,680,"final decisions resting on the re-check of records found only on FHL pages, CVs and newsletters"
@@ -58,14 +58,14 @@ mentor_via_deeper,16,links settled by the second look's deeper search
 mentor_adjudicated,6,"links where the two looks disagreed, ruled by an adjudicator"
 mentor_adjudicated_kept,1,"of those, kept as mentor links"
 mentor_adjudicated_removed,5,"of those, removed as peers"
-mentor_doc_visible,182,documented pairs with the student first and the teacher last on a census paper
+mentor_doc_visible,179,documented pairs with the student first and the teacher last on a census paper
 mentor_doc_recovered,74,"of those, found by the co-authorship rule"
-roster_links,1323,"links from lab, team and alumni pages and CVs"
-committee_links,282,graduate committee links
-roster_scientists,90,FHL core scientists with a roster or committee list
-network_links,1824,links in the mentoring network
-network_people,1799,people in the mentoring network
-profile_links,118,advisor links named in fact-checked profiles
+roster_links,783,"links from lab, team and alumni pages and CVs"
+committee_links,288,graduate and undergraduate thesis committee links
+roster_scientists,72,FHL core scientists with a roster or committee list
+network_links,2278,links in the mentoring network
+network_people,2081,people in the mentoring network
+profile_links,75,advisor links named in fact-checked profiles
 roster_found,100,"FHL core scientists identified by address with a roster, CV list or committee list"
 roster_no_lab,36,"FHL core scientists identified by address who lead no lab (students, early-career, staff)"
 roster_historical,25,FHL core scientists identified by address whose careers predate public lab pages
@@ -116,14 +116,21 @@ aff_recheck_n,103,readings a second agent re-checked (affiliation push)
 aff_recheck_agree,96,re-checked readings the second agent agreed with (affiliation push)
 aff_recheck_applied,7,disputed readings changed to the second agent's verdict (affiliation push)
 aff_recheck_batches,21,batches with at least one re-checked reading (affiliation push)
-profiles,229,"people profiles shown, written and fact-checked"
-profiles_revised,223,"of those, profiles the fact-checker revised"
+sections,1874,shorter sections on people in the mentoring network
+listings,27,"people with one sentence from their listing, among them the school students"
+sections_thin,539,sections resting on the listing or the listing and papers
+links_removed,71,links removed in the review of the network
+links_added,539,links added from pages the section writers read
+people_added,350,people in the network through those links
+profiles,219,"people profiles shown, written and fact-checked"
+profiles_revised,213,"of those, profiles the fact-checker revised"
 profiles_written,236,profiles written and fact-checked in the profiles run
 profiles_written_revised,230,"of those, profiles the fact-checker revised"
+profiles_no_place,10,"profiles of people whose links did not hold in the review, left out"
 profiles_dropped,7,"second profiles of people recorded under two names, left out"
-dedup_dropped,163,duplicate records merged away
-dedup_kept,144,records they were merged into
-false_excluded,160,records removed as not publications or false matches
+dedup_dropped,171,duplicate records merged away
+dedup_kept,152,records they were merged into
+false_excluded,191,records removed as not publications or false matches
 mention_moved,50,obituaries and similar pieces moved to Mention only
 whiteley_records,122,included publications labeled Whiteley Center
 whiteley_inferred,2,"of those, probable (full-text match on non-marine work)"

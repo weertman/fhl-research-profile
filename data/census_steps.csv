@@ -11,7 +11,7 @@ step_i,step,actors,runs,only,segment,value,who,label
 1,Search,agent script claude,1 4,,Web of Science,2543,claude,rows exported by Claude after the compiler signed in
 2,Merge,script,,,candidates,15962,script,candidate records
 2,Merge,script,,,added by hand,9,agent,"papers the searches missed, added in the hand review"
-3,Written rules,script,,,decided by a rule,8373,script,records decided by a written rule
+3,Written rules,script,,,decided by a rule,8339,script,records decided by a written rule
 4,Screening,agent review,2 6,,"judged, unchanged",5222,agent,"records judged by the screening agents, decision unchanged"
 4,Screening,agent review,2 6,,calibration changes,276,review,decisions changed by the calibrators
 5,Audit,check review,3 5,5:Audit listed,random sample,340,check,decisions in the stratified random sample
@@ -21,8 +21,8 @@ step_i,step,actors,runs,only,segment,value,who,label
 6,Resolution,agent,5,5:Resolve,undecided,428,agent,could not be decided
 7,Topics,agent claude,7 21,,labeled by agents,6501,agent,publications given a topic by the labeling agents
 7,Topics,agent claude,7 21,,labeled later,70,claude,publications labeled later in the coordinating session
-8,Clean-up,claude,,,duplicates merged,163,claude,duplicate records merged away
-8,Clean-up,claude,,,removed,160,claude,not publications or false matches
+8,Clean-up,claude,,,duplicates merged,171,claude,duplicate records merged away
+8,Clean-up,claude,,,removed,191,claude,not publications or false matches
 8,Clean-up,claude,,,moved to Mention only,50,claude,obituaries and similar pieces
 9,Re-reading,agent check,16,,read,624,agent,read well enough to decide
 9,Re-reading,agent check,16,,"read, unsettled",119,agent,"read, but not settled"
@@ -30,11 +30,11 @@ step_i,step,actors,runs,only,segment,value,who,label
 10,Address check,agent check,17,,FHL an address,74,agent,give FHL as an author address
 10,Address check,agent check,17,,FHL not an address,659,agent,addresses read; none is FHL
 10,Address check,agent check,17,,addresses not seen,171,none,addresses could not be seen
-11,Final decision,,,,written rule,7693,script,decided by a written rule
-11,Final decision,,,,AI screening,6080,agent,decided by AI screening
+11,Final decision,,,,written rule,7659,script,decided by a written rule
+11,Final decision,,,,AI screening,6079,agent,decided by AI screening
 11,Final decision,,,,calibration,260,review,decided by the calibrators
-11,Final decision,,,,audit,365,check,decided by the audit
-11,Final decision,,,,re-reading,507,agent,decided by the re-reading
-11,Final decision,,,,clean-up,373,claude,merged or removed in the clean-up
+11,Final decision,,,,audit,363,check,decided by the audit
+11,Final decision,,,,re-reading,505,agent,decided by the re-reading
+11,Final decision,,,,clean-up,412,claude,merged or removed in the clean-up
 11,Final decision,,,,hand review,13,agent,decided in the hand review of named papers
 11,Final decision,,,,page and CV re-check,680,agent,"decided in the re-check of records found only on FHL pages, CVs and newsletters"

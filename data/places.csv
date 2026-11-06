@@ -11,7 +11,6 @@ California Institute of Technology,came from,2,Gerald J. Audesirk; Hironobu Ozak
 Scripps Research Institute,came from,1,Ryan S. Littlefield,San Diego,United States,32.71571,-117.16472
 University of Iowa,came from,1,Billie J. Swalla,Iowa City,United States,41.66113,-91.53017
 United States Geological Survey,came from,1,H. Gary Greene,Reston,United States,38.96872,-77.3411
-Centre National de la Recherche Scientifique,came from,1,M. R. Baker,Paris,France,48.85341,2.3488
 Dalhousie University,came from,1,Colette J. Feehan,Halifax,Canada,44.64269,-63.57688
 National Institutes of Health,came from,2,Jason Hodin; Esther M. Leise,Bethesda,United States,38.98067,-77.10026
 Washington Department of Natural Resources,came from,1,Thomas F. Mumford,Olympia,United States,47.0449104309082,-122.90168762207031
@@ -41,7 +40,7 @@ Universidade de São Paulo,came from,1,J. A. Petersen,São Paulo,Brazil,-23.5475
 "University of California, San Francisco",came from,1,Sefton R. Wellings,San Francisco,United States,37.77493,-122.41942
 University of Oregon,came from,3,A. O. Dennis Willows; E. B. Ridgway; Amy L. Moran,Eugene,United States,44.05207,-123.08675
 Georgia State University,came from,1,James M. Newcomb,Atlanta,United States,33.749,-84.38798
-University of Oslo,came from,1,Hans Jorgen Fyhn,Oslo,Norway,59.91273,10.74609
+University of Oslo,came from,1,Hans Jørgen Fyhn,Oslo,Norway,59.91273,10.74609
 George Washington University,came from,1,Karly Elizabeth Cohen,Washington,United States,38.89511,-77.03637
 Princeton University,came from,3,Arthur H. Whiteley; Frank H. Johnson; Yo Saiga,Princeton,United States,40.34872,-74.65905
 University of Washington,came from,60,Megan N. Dethier; David O. Duggins; Thomas E. Schroeder; Tigran P. Norekian; Pedro Verdugo; Charles C. Lambert; Gretchen Lambert; Edwin Munro,Seattle,United States,47.60621,-122.33207
@@ -69,7 +68,7 @@ University of Virginia,came from,1,Johanna Taylor Cannon,Charlottesville,United 
 Arizona State University,came from,2,William M. Bement; Thomas J. Pirtle,Tempe,United States,33.41477,-111.90931
 Stony Brook University,came from,1,Christiane H. Biermann,Stony Brook,United States,40.92565,-73.14094
 Brandeis University,came from,1,Andrew E. Christie,Waltham,United States,42.37649154663086,-71.23561096191406
-San Francisco State University,came from,2,Sandy Wyllie‐Echeverria; Kayla C. Hall,San Francisco,United States,37.77493,-122.41942
+San Francisco State University,came from,2,Sandy Wyllie-Echeverria; Kayla C. Hall,San Francisco,United States,37.77493,-122.41942
 The University of Tokyo,came from,1,Shigeki Mizuno,Tokyo,Japan,35.6895,139.69171
 University of Arkansas at Fayetteville,came from,1,Robert A. Andersen,Fayetteville,United States,36.06258,-94.15743
 University of Otago,came from,1,Miles D. Lamare,Dunedin,New Zealand,-45.87416,170.50361
@@ -94,7 +93,7 @@ Limestone College,went to,1,Tamara M. McGovern,Gaffney,United States,35.05665588
 University of Alaska Fairbanks,went to,1,Scott Smiley,Fairbanks,United States,64.83778381347656,-147.7163848876953
 College of the Atlantic,went to,1,Christopher W. Petersen,Bar Harbor,United States,44.38758087158203,-68.20390319824219
 University of Louisville,went to,1,Matthew A. Kolmann,Louisville,United States,38.25424,-85.75941
-"California State University, Fullerton",went to,1,E. W. Misty Paig‐Tran,Fullerton,United States,33.87028884887695,-117.92533874511719
+"California State University, Fullerton",went to,1,E. W. Misty Paig-Tran,Fullerton,United States,33.87028884887695,-117.92533874511719
 University of North Carolina Wilmington,went to,1,Richard A. Satterlie,Wilmington,United States,34.23556,-77.94604
 "University of California, Santa Barbara",went to,1,Johanna Taylor Cannon,Santa Barbara,United States,34.42083,-119.69819
 University of Freiburg,went to,1,Sebastian Kruppert,Freiburg im Breisgau,Germany,47.9959,7.85222
@@ -134,7 +133,7 @@ Puget Sound Restoration Fund,went to,1,Hilary A. Hayford,Bainbridge Island,Unite
 Knox College,went to,1,Nicholas J. Gidmark,Galesburg,United States,40.947818756103516,-90.3712387084961
 Seattle Children's Research Institute,went to,1,Sara M. Rolfe,Seattle,United States,47.60621,-122.33207
 Hopkins Marine Station,went to,1,Stuart H. Thompson,Pacific Grove,United States,36.61774,-121.91662
-University of Bergen,went to,1,Hans Jorgen Fyhn,Bergen,Norway,60.39299,5.32415
+University of Bergen,went to,1,Hans Jørgen Fyhn,Bergen,Norway,60.39299,5.32415
 The Ohio State University,went to,1,Adriana T. Dawes,Columbus,United States,39.96118,-82.99879
 Western Washington University,went to,2,Kathryn L. Van Alstyne; Robin B. Kodner,Bellingham,United States,48.75955,-122.48822
 The University of Adelaide,went to,1,Clyde Manwell,Adelaide,Australia,-34.92866,138.59863

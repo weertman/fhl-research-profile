@@ -19,7 +19,7 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 9,rosters,3,Rosters,make,22,,,,a batch of FHL core scientists,"lists trainees from lab pages, alumni pages and CVs"
 9,rosters,4,Verify rosters,check,17,,,,that batch's roster entries,re-opens each page; confirms or removes every entry
 10,,0,Write,make,30,236,people,,a batch of people's census records,researches each person; drafts two sourced paragraphs
-10,,1,Fact-check,check,30,,,230 of 236 revised; 7 second profiles of people recorded under two names later left out,that batch's drafts,checks every claim against its sources; revises
+10,,1,Fact-check,check,30,,,230 of 236 revised; 7 second profiles of people recorded under two names later left out; 10 of people whose links did not hold in the review also left out,that batch's drafts,checks every claim against its sources; revises
 11,,0,Profile advisors,make,4,,,,the fact-checked profiles,lists advisors the profiles state plainly
 11,,1,Rosters,make,30,,,,a batch of FHL core scientists (five agents at a time),"lists trainees, co-supervised students and committees"
 11,,2,Verify rosters,check,28,,,,that batch's roster entries,re-opens each page; confirms or removes every entry
