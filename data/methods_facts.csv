@@ -14,25 +14,25 @@ decided_hand,13,final decisions resting on the hand review of named papers
 hand_added,9,candidate records added in the hand review
 decided_recheck,680,"final decisions resting on the re-check of records found only on FHL pages, CVs and newsletters"
 recheck_records,680,"records found only on FHL pages, CVs and newsletters that agents tried to open"
-recheck_settled,193,"of those, decided from the publication or another dated source"
+recheck_settled,180,"of those, decided from the publication or another dated source"
 recheck_publications,19,"of those, publications connected to FHL"
 recheck_verified,17,"publications counted as Verified, from the publication"
 recheck_probable,2,"publications counted as Probable, from another source"
 recheck_news,7,news items connected to FHL
-recheck_not_shown,167,"read, and the work not tied to FHL"
+recheck_not_shown,154,"read, and the work not tied to FHL"
 recheck_checks,468,records a second agent re-opened
 recheck_checks_agreed,449,second agent agreed
 recheck_checks_changed,17,a third agent changed the decision
 recheck_checks_kept,2,a third agent kept the first decision
-recheck_rulings,12,decisions changed by the coordinating session after review
+recheck_rulings,27,decisions changed by the coordinating session after review
 recheck_not_publication,63,not publications
 recheck_duplicate,24,repeats of another record
-recheck_unread,400,could not be read
-recheck_unread_person,315,unread and on a person's page or CV: Unverified candidates
-recheck_unread_news,85,unread and only cited on a news page: stay excluded
-recheck_unread_like_read,32,unread records that would connect to FHL at the rate among those read
-recheck_licensed_reads,14,not-tied decisions read on publisher pages a university network license appears to have opened
-recheck_archive_reads,7,not-tied decisions read from Wayback Machine copies
+recheck_unread,413,could not be read
+recheck_unread_person,323,unread and on a person's page or CV: Unverified candidates
+recheck_unread_news,90,unread and only cited on a news page: stay excluded
+recheck_unread_like_read,34,unread records that would connect to FHL at the rate among those read
+recheck_licensed_reads,14,"papers that opened only on publisher pages a university network license appears to have served, counted as unread"
+recheck_archive_reads,8,not-tied decisions read from Wayback Machine copies
 screened_round1,4201,records judged in the first screening round
 screened_round2,1297,records judged in the second screening round
 calibration_overrides,276,decisions changed by calibration reviewers
@@ -63,8 +63,8 @@ mentor_doc_recovered,74,"of those, found by the co-authorship rule"
 roster_links,783,"links from lab, team and alumni pages and CVs"
 committee_links,288,graduate and undergraduate thesis committee links
 roster_scientists,72,FHL core scientists with a roster or committee list
-network_links,2278,links in the mentoring network
-network_people,2081,people in the mentoring network
+network_links,2282,links in the mentoring network
+network_people,2084,people in the mentoring network
 profile_links,75,advisor links named in fact-checked profiles
 roster_found,100,"FHL core scientists identified by address with a roster, CV list or committee list"
 roster_no_lab,36,"FHL core scientists identified by address who lead no lab (students, early-career, staff)"
@@ -116,10 +116,10 @@ aff_recheck_n,103,readings a second agent re-checked (affiliation push)
 aff_recheck_agree,96,re-checked readings the second agent agreed with (affiliation push)
 aff_recheck_applied,7,disputed readings changed to the second agent's verdict (affiliation push)
 aff_recheck_batches,21,batches with at least one re-checked reading (affiliation push)
-sections,1874,shorter sections on people in the mentoring network
+sections,1877,shorter sections on people in the mentoring network
 listings,27,"people with one sentence from their listing, among them the school students"
-sections_thin,539,sections resting on the listing or the listing and papers
-links_removed,71,links removed in the review of the network
+sections_thin,540,sections resting on the listing or the listing and papers
+links_removed,67,links removed in the review of the network
 links_added,539,links added from pages the section writers read
 people_added,350,people in the network through those links
 profiles,219,"people profiles shown, written and fact-checked"
