@@ -26,20 +26,20 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `classes.csv`: Classes taught at the station by year and term, with instructors, TAs and sources (public records, fact-checked).
 - `coauthor_places.csv`: Institutions whose researchers co-authored verified FHL publications, with locations and counts by decade (OpenAlex).
 - `course_topics.csv`: Course titles by decade and topic (AI classification of the course list).
-- `discoveries.csv`: The discoveries and scientific contributions in section IX: what was found, why it matters and FHL's part, by field.
+- `discoveries.csv`: The discoveries and scientific contributions in section X: what was found, why it matters and FHL's part, by field.
 - `discovery_refs.csv`: Key publications and sources for each discovery, with links.
-- `econ_award_scopes.csv`: NSF and NIH awards named by census papers, at narrower and narrower scopes, as awarded (Fig. 21).
-- `econ_capital_timeline.csv`: Buildings, utilities, housing, land and instruments: year, funder, basis of the value, amount as stated and in 2024 dollars, and source (Fig. 22).
-- `econ_facts.csv`: Every number quoted in the text of the economic contribution (section IX), with its rounded display form, dollar year, scope and source.
-- `econ_funders_by_decade.csv`: Share of census papers matched to OpenAlex that name each funder, by decade (Fig. 21).
-- `econ_gfp_chain.csv`: The steps from aequorin and GFP at FHL in 1961 to the 2008 Nobel Prize, with sources (Table VI).
-- `econ_gfp_pubmed.csv`: PubMed records a year under the subject headings Green Fluorescent Proteins and Aequorin (Fig. 23).
-- `econ_model_by_source.csv`: Economic contribution by spending source (operations, research, students, visitors) and effect (direct, indirect, induced), for each region and basis (Fig. 19).
+- `econ_award_scopes.csv`: NSF and NIH awards named by census papers, at narrower and narrower scopes, as awarded (Fig. 22).
+- `econ_capital_timeline.csv`: Buildings, utilities, housing, land and instruments: year, funder, basis of the value, amount as stated and in 2024 dollars, and source (Fig. 23).
+- `econ_facts.csv`: Every number quoted in the text of the economic contribution (section X), with its rounded display form, dollar year, scope and source.
+- `econ_funders_by_decade.csv`: Share of census papers matched to OpenAlex that name each funder, by decade (Fig. 22).
+- `econ_gfp_chain.csv`: The steps from aequorin and GFP at FHL in 1961 to the 2008 Nobel Prize, with sources (Table IV).
+- `econ_gfp_pubmed.csv`: PubMed records a year under the subject headings Green Fluorescent Proteins and Aequorin (Fig. 19).
+- `econ_model_by_source.csv`: Economic contribution by spending source (operations, research, students, visitors) and effect (direct, indirect, induced), for each region and basis (Fig. 20).
 - `econ_model_inputs.csv`: The main inputs of the economic model, with low, central and high values and their basis (Table X); the full list is in economics/model_inputs.csv.
 - `econ_model_sensitivity.csv`: How much each input moves the economic estimate when it goes from its low to its high value (the two household-spending inputs over the range used in the simulations), and the alternative model structures (Fig. 35).
-- `econ_model_totals.csv`: Economic contribution (section IX, Table IV): yearly totals for Washington and San Juan County by basis (contribution, new money) and measure, with construction 2015–2024 and memo lines; central value, 10th, 50th and 90th percentiles and extreme bounds, in 2024 dollars. Estimated from public sources.
-- `econ_money_sources.csv`: Grants for work at FHL by source, as awarded and in 2024 dollars, with the rows not counted (Table V); n counts what n_unit names (NIH rows count projects, with their project-years in n_project_years).
-- `econ_research_by_fy.csv`: Federal awards for work at FHL spread over their award periods, by UW fiscal year, as awarded and in 2024 dollars (Fig. 20).
+- `econ_model_totals.csv`: Economic contribution (section X, Table V): yearly totals for Washington and San Juan County by basis (contribution, new money) and measure, with construction 2015–2024 and memo lines; central value, 10th, 50th and 90th percentiles and extreme bounds, in 2024 dollars. Estimated from public sources.
+- `econ_money_sources.csv`: Grants for work at FHL by source, as awarded and in 2024 dollars, with the rows not counted (Table VI); n counts what n_unit names (NIH rows count projects, with their project-years in n_project_years).
+- `econ_research_by_fy.csv`: Federal awards for work at FHL spread over their award periods, by UW fiscal year, as awarded and in 2024 dollars (Fig. 21).
 - `eras.csv`: The station's names and their years.
 - `headline.csv`: Headline totals: publications by evidence tier, citations, yearly averages for 2016–2025, screening outcomes, search recall against FHL's lists, the audited precision of all included records taken together (audit_precision; each tier's precision is in audit_tiers.csv), the read rates the page uses for its best estimate, and the date the data were retrieved.
 - `history_eras.csv`: Chronicle of the station: the eras under the station's successive names.
@@ -65,4 +65,4 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `topics_by_decade.csv`: Research topics by decade (AI classification).
 - `whiteley_by_field.csv`: Whiteley Center publications by field.
 - `world_land.json`: World land outline for the map (Natural Earth, public domain), as GeoJSON features.
-- `economics/`: the economic model behind the economic contribution in section IX (method in `docs/economic_model_method.md`): `model_inputs.csv`, every input with its low, central and high value, unit, dollar year, source and basis (sources of the form model/... name files in the census pipeline that are not published; public sources are given by URL or title); `model_results.csv`, every result by region, basis (contribution or new money), spending source, measure and effect, with the Monte Carlo 10th, 50th and 90th percentiles and the extreme bounds; and `model_sensitivity.csv`, the one-at-a-time swing of each input group. All money is in 2024 dollars.
+- `economics/`: the economic model behind the economic contribution in section X (method in `docs/economic_model_method.md`): `model_inputs.csv`, every input with its low, central and high value, unit, dollar year, source and basis (sources of the form model/... name files in the census pipeline that are not published; public sources are given by URL or title); `model_results.csv`, every result by region, basis (contribution or new money), spending source, measure and effect, with the Monte Carlo 10th, 50th and 90th percentiles and the extreme bounds; and `model_sensitivity.csv`, the one-at-a-time swing of each input group. All money is in 2024 dollars.

@@ -448,11 +448,11 @@ Denominators: QCEW 2024 San Juan County (6,097 covered jobs, $324.2M wages, $53,
 - **Monte Carlo independence.** Except for the operations residual and the user-spending scaling, inputs are independent. Common biases (for example, in the users module's day counts or across the operations roster) would widen the range.
 - **BEA vintage.** County total employment including proprietors is 2022, the latest year in BEA's public bulk file; earnings are 2024.
 - **Exclusions:**
-  - downstream innovation value (aequorin/GFP and others; the economic contribution in section IX of the report);
+  - downstream innovation value (aequorin/GFP and others; the economic contribution in section X of the report);
   - the value of the education and training of students (course alumni's careers);
   - research grants held at visitors' home institutions;
   - catalytic and ecosystem-service value;
-  - acknowledged-award totals (Fig. 21 of the report), which are not FHL spending;
+  - acknowledged-award totals (Fig. 22 of the report), which are not FHL spending;
   - UW departmental payroll for resident faculty and research F&A, both shown only as memo lines;
   - the equipment part of NSF 2218256.
 

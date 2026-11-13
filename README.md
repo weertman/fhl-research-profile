@@ -7,9 +7,9 @@ station on San Juan Island, since it opened in 1904. It includes work published 
 Sound Marine Station, the Puget Sound Biological Station and the University of Washington Oceanographic Laboratories.
 The page covers when FHL work was published, what it was about, the people (where they came from, who trained whom, who cites
 whom), where FHL appears in each publication, citations and news coverage. A second tab, the chronicle of the station, tells the
-station's history in dated events and images, with its directors and staff, classes, artists in residence and economic contribution
-(estimated from public sources). A third tab, Methods, describes how the census was built, how far to trust it, the economic
-model and the use of AI.
+station's history in dated events and images. A third, Science and society, gives the station's discoveries and scientific
+contributions, its economic contribution (estimated from public sources), and its classes, directors and staff, and artists in
+residence. A fourth tab, Methods, describes how the census was built, how far to trust it, the economic model and the use of AI.
 
 **The page:** https://weertman.github.io/fhl-research-profile/
 
@@ -21,7 +21,7 @@ model and the use of AI.
   `data/README.md`.
 - `docs/`: the written guides the AI agents followed: `harvest_spec.md` (the searches), `screening_guide.md` (deciding
   whether a record is FHL work) and `topic_guide.md` (research topics and organism groups).
-  `economic_model_method.md` describes the economic model behind the economic contribution in the page's section IX.
+  `economic_model_method.md` describes the economic model behind the economic contribution in the page's section X.
 - `images/`: the chronicle's images (`images/history/`) and photographs of artists at work in residence (`images/art/`),
   each folder with small previews in `thumb/`. Each image's credit, license and source are in `data/history_images.csv`
   and `data/art_images.csv`. Most chronicle images are public domain or openly licensed; CC BY and CC BY-SA images need

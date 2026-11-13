@@ -405,7 +405,7 @@
   .fm-more > .fp-notes { margin-top: .6rem; }
   .fm-lead { font-size: 1.02rem; }
   @media (max-width: 860px) { .fm-push { grid-template-columns: minmax(0, 1fr); } }
-  /* The chronicle tab's archive sections (staff, classes, artists), folded like the minor figures */
+  /* The archive sections of the Science and society tab (discoveries, economics, staff, classes, artists), folded like the minor figures */
   .fp-arch { max-width: 60rem; width: 100%; margin: 0 auto; display: grid; gap: .6rem; }
   .fp-arch > .fp-collapse-body { gap: 1rem; }
   .fp-arch h3.fold { font-weight: 400; letter-spacing: .1em; text-transform: uppercase; font-size: .95rem; }
@@ -442,7 +442,7 @@
   .fp-artprog dd { margin: 0 0 .4rem; line-height: 1.45; }
   #tbl-classes td.courses { white-space: pre-line; min-width: 16rem; }
   #cls-q { flex: 1 1 18rem; font: inherit; padding: .3rem .5rem; border: 1px solid var(--fp-ink); background: var(--fp-paper); color: var(--fp-ink); }
-  /* Tabs and the feedback link under the masthead; the chronicle has its own tab */
+  /* Tabs and the feedback link under the masthead; the chronicle, science and society, and methods each have a tab */
   .fp-topbar { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .6rem 1.4rem; margin-top: .6rem; }
   .fp-tabs { display: flex; border: 1px solid var(--fp-ink); }
   .fp-tabs a { display: flex; align-items: center; justify-content: center; text-align: center; padding: .5rem 1.1rem; font-size: .86rem; text-transform: uppercase; letter-spacing: .12em; color: var(--fp-ink); text-decoration: none; }
@@ -489,6 +489,8 @@
   .fp-fb .done { text-align: center; font-size: 1.05rem; line-height: 1.5; margin: .8rem 0 1rem; }
   .fp.tab-chronicle > :not(.fp-mast):not(#history):not(.fp-end):not(dialog):not(.fp-defs) { display: none; }
   .fp:not(.tab-chronicle) > #history { display: none; }
+  .fp.tab-science > :not(.fp-mast):not(#science):not(.fp-end):not(dialog):not(.fp-defs) { display: none; }
+  .fp:not(.tab-science) > #science { display: none; }
   .fp.tab-methods > :not(.fp-mast):not(#method):not(.fp-end):not(dialog):not(.fp-defs) { display: none; }
   .fp:not(.tab-methods) > #method { display: none; }
   /* Who writes the papers (under the opening) */
@@ -587,7 +589,8 @@
     <div class="fp-topbar">
       <nav class="fp-tabs" aria-label="Parts of the report">
         <a href="#top" data-tab="report">The report</a>
-        <a href="#history" data-tab="chronicle">Chronicle of the station</a>
+        <a href="#history" data-tab="chronicle">Chronicle</a>
+        <a href="#science" data-tab="science">Science and society</a>
         <a href="#method" data-tab="methods">Methods</a>
       </nav>
     </div>
@@ -646,7 +649,8 @@
     researchers, students and other collaborators, much of it written elsewhere. In all, the 173 FHL core scientists identified by address (section IV; 41 of them still publishing from FHL), wherever they were,
     published about <span id="split-all">—</span> research papers a year over 2016–2025; most of these do not name the station. The sections below show what the work was about, who did it (where they came
     from, whom they trained and where they went) and where the station appears in each publication; the Chronicle tab tells
-    the station's history and what its activity contributes to the economy of the island and the state. AI agents
+    the station's history in dated events and images, and the Science and society tab gives its discoveries, the economic
+    contribution of its activity to the island and the state, and its classes, staff and artists in residence. AI agents
     assembled the census by searching databases, archives and FHL's own lists. How far to trust it, the
     methods and the prompts that built it are given in the Methods tab, and the data are <a href="https://github.com/weertman/fhl-research-profile/tree/main/data" target="_blank" rel="noopener">public</a>.
   </p>
@@ -667,9 +671,10 @@
       <li><a href="#headline"><span class="num"></span><span class="t">Summary of results</span><span class="dots"></span><span class="refs"></span></a></li>
       <li><a href="#ode"><span class="num"></span><span class="t">Ode to the life of the sea</span><span class="dots"></span><span class="refs"></span></a></li>
       <li><a href="#history"><span class="num">IX.</span><span class="t">Chronicle of the station</span><span class="dots"></span><span class="refs">Separate tab</span></a></li>
-      <li><a href="#economics"><span class="num"></span><span class="t">Economic contribution, in the Chronicle</span><span class="dots"></span><span class="refs">Figs. 19–22, Tables IV–V</span></a></li>
-      <li><a href="#discoveries"><span class="num"></span><span class="t">Discoveries and scientific contributions, in the Chronicle</span><span class="dots"></span><span class="refs">Fig. 23, Table VI</span></a></li>
-      <li><a href="#method"><span class="num">X.</span><span class="t">Technical methods, in a separate tab</span><span class="dots"></span><span class="refs">Figs. 24–35, Tables VII–X</span></a></li>
+      <li><a href="#science"><span class="num">X.</span><span class="t">Science and society</span><span class="dots"></span><span class="refs">Separate tab</span></a></li>
+      <li><a href="#discoveries"><span class="num"></span><span class="t">Discoveries and scientific contributions</span><span class="dots"></span><span class="refs">Fig. 19, Table IV</span></a></li>
+      <li><a href="#economics"><span class="num"></span><span class="t">Economic contribution</span><span class="dots"></span><span class="refs">Figs. 20–23, Tables V–VI</span></a></li>
+      <li><a href="#method"><span class="num">XI.</span><span class="t">Technical methods, in a separate tab</span><span class="dots"></span><span class="refs">Figs. 24–35, Tables VII–X</span></a></li>
     </ol>
     <p class="tip">Hover over a chart for values. Hover over an entry in a figure's key to highlight it, or click to keep it
       highlighted. In the downloadable and website copies, every chart except Figs. 26 and 30 can be saved as PNG or SVG.</p>
@@ -902,10 +907,10 @@
           back several academic generations), lab and team pages, and mentors first inferred from co-authorship and then
           confirmed in public records. Dashed lines are mentors inferred from co-authorship that could not be confirmed: a
           scientist who is last author on at least two of a younger colleague's first-author FHL papers, early in that
-          colleague's career (rules and checks in section X). Mark size shows the number of students. Hover over
+          colleague's career (rules and checks in section XI). Mark size shows the number of students. Hover over
           a mark, click it to keep it lit, or use "Find a person", to follow a lineage back through teachers and forward through
           students. When no one is selected, click a part of the key to highlight it. The network is a sample and far from
-          complete. Set apart below it are the technicians and staff in the chronicle's staff archive (boat crews,
+          complete. Set apart below it are the technicians and staff in the staff archive of section X (boat crews,
           facilities, dining, office, library and research support) who have no documented link to any FHL core scientist. They
           are shown as a group, not on the time axis: about two in five are dated only by a staff list that happens to
           survive from the station's website, most of them from 2000 or 2006, so their first year says more about the records than about
@@ -1075,25 +1080,239 @@
     </div>
     <div class="fp-history" id="history-timeline" data-source="history_events history_images history_eras"></div>
     <p class="cap fp-narrow">AI agents extracted the events from these sources; further agents merged them into one timeline and
-      fact-checked them against the sources (section X). Each event lists its sources. Captions were written from each image's
+      fact-checked them against the sources (section XI). Each event lists its sources. Captions were written from each image's
       catalog record and what it shows, then checked by a second agent. Images that illustrate no single event are set as
       plates at the head of their era. Dates marked "about" are uncertain.</p>
-    <div class="fp-arch" data-collapsible id="arch-staff">
-      <h3 class="fold">Directors and staff through time <span class="cnt" id="n-staff"></span></h3>
-      <figure class="fp-fig">
-        <div class="fp-legend" id="lg-staff"></div>
-        <div class="fp-chart" id="ch-staff" data-source="staff"></div>
-        <figcaption>
-          <h3 id="fig-staff">Directors and faculty in residence.—Years in post.</h3>
-          <p class="cap">Directors, associate and assistant directors, resident faculty and staff scientists, from the
-            Regents' minutes, UW catalogs and yearbooks, FHL's newsletters and archived web pages, and the centennial
-            timeline. A bar with an open end has no documented end year. Every post, support staff included, is in the
-            table below, with its sources.</p>
-        </figcaption>
-      </figure>
-      <div class="fp-scroll"><table id="tbl-staff" class="ruled" data-source="staff">
-        <thead><tr><th class="num">Years</th><th>Name</th><th>Post</th><th>Kind of post</th><th>Sources</th></tr></thead><tbody></tbody>
+  </section>
+
+  <section class="fp-section" id="science">
+    <h2><span class="num">X.</span> Science and society</h2>
+    <p class="fp-intro">What the station has given beyond its publications: the discoveries made there or by people based
+      there, the economic contribution of its activity to the island and the state, and the people who taught, worked and made
+      art there. The discoveries and the lists of classes, staff and artists in residence come from public records gathered and
+      fact-checked by AI agents; the economic contribution is estimated from public sources. How each was assembled is in the
+      Methods tab.</p>
+    <div class="fp-arch" data-collapsible id="discoveries">
+      <h3 class="fold">Discoveries and scientific contributions</h3>
+      <div class="fp-notes">
+        <p>The work done at the station or by people based there spans more than a century. Each entry below gives what was
+          found, why it matters and what part FHL had in it, under one of three labels: done at FHL; based at FHL, with the work
+          partly elsewhere; or partly at FHL, where the main people were based elsewhere and FHL gave a site, animals, facilities or part of the work, or where the sources do not place the central work at FHL. The list has <span id="disc-n">—</span> entries, grouped by field and in order of date
+          within each field; how they were chosen is in the Methods tab.</p>
+      </div>
+      <p class="fp-disc-ctl"><button type="button" id="disc-all" class="fp-disc-all" aria-pressed="false" hidden>Show all</button></p>
+      <div id="disc-list" data-source="discoveries discovery_refs"></div>
+      <div id="disc-gfp-extra">
+    <div class="fp-notes">
+      <p>As of <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed_date">—</span>, PubMed held
+        <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed">—</span> records under the heading for GFP (Fig. 19).</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-econ-gfp"></div>
+      <div class="fp-chart" id="ch-econ-gfp" data-source="econ_gfp_pubmed"></div>
+      <figcaption>
+        <h3 id="fig-econ-gfp"><span class="fig">Fig. 19.</span>—From the dock to the bench.</h3>
+        <p class="cap">PubMed records a year indexed under the subject headings Green Fluorescent Proteins and Aequorin, counted by the
+          year each record entered PubMed, on a scale that is close to linear below about 10 and logarithmic above, so both lines can be read. Both
+          proteins were first extracted from jellyfish collected and processed at FHL in 1961, and the genes for both were cloned
+          from Friday Harbor jellyfish. Indexing misses most papers that use GFP as a routine tool, so
+          the counts are a floor, and their fall after about 2012 need not mean less use.</p>
+      </figcaption>
+    </figure>
+    <div class="fp-fig" id="econ-chain">
+      <h3 id="tab-econ-gfp"><span class="fig">Table IV.</span>—The aequorin and GFP chain.</h3>
+      <div class="fp-scroll"><table id="tbl-econ-gfp" class="ruled" data-source="econ_gfp_chain">
+        <thead><tr><th class="num">Year</th><th>Step</th><th>Where</th><th>Evidence</th></tr></thead>
+        <tbody></tbody>
       </table></div>
+      <p class="cap">Each step and the primary source that places it. Steps after 1992 used the cloned gene, not the jellyfish.</p>
+    </div>
+      </div>
+    </div>
+    <div class="fp-arch" data-collapsible id="economics">
+      <h3 class="fold">Economic contribution</h3>
+      <div class="fp-notes">
+      <p>The University of Washington measures its economic contribution in a standard way: it traces the spending of its
+        operations, its students and its visitors through the supply chain and through household spending, and reports the
+        output, jobs, labor income, value added and state and local taxes that result (Parker Strategy Group, 2024). This
+        part applies that method to FHL through an economic model; its results are modeled estimates, not measured amounts. FHL's budget, payroll and user records are not published, so the model's inputs
+        come from public sources, not the station's accounts: operating spending, for example, is estimated at about
+        <span data-source="econ_facts" data-field="display" data-where="fact=ops_spend">—</span> a year excluding scholarships, of which
+        <span data-source="econ_facts" data-field="display" data-where="fact=ops_payroll">—</span> is payroll.
+        Results are for a typical recent year, fiscal 2024, in 2024 dollars; ranges are the 10th to 90th percentiles of
+        <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> simulations. The method and inputs are described in the Methods tab.</p>
+      <p>In Washington, FHL activity supports about <span data-source="econ_facts" data-field="display" data-where="fact=wa_output">—</span> of output a year (<span data-source="econ_facts" data-field="display" data-where="fact=wa_output_range">—</span>) and <span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs">—</span> jobs
+        (<span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs_range">—</span>), with <span data-source="econ_facts" data-field="display" data-where="fact=wa_labor_income">—</span> of labor income, <span data-source="econ_facts" data-field="display" data-where="fact=wa_value_added">—</span> of value added and <span data-source="econ_facts" data-field="display" data-where="fact=wa_taxes">—</span> of
+        state and local taxes (Table V, Fig. 20). The station's own payroll and purchases account for about four-fifths of
+        this; research done at FHL adds <span data-source="econ_facts" data-field="display" data-where="fact=wa_research_output">—</span>, and the spending of students and visitors off the station
+        <span data-source="econ_facts" data-field="display" data-where="fact=wa_users_output">—</span>. Within San Juan County the figures are <span data-source="econ_facts" data-field="display" data-where="fact=sjc_output">—</span> of output (<span data-source="econ_facts" data-field="display" data-where="fact=sjc_output_range">—</span>) and
+        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs">—</span> jobs (<span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs_range">—</span>). The county is part of the state, so the two are not summed. Each dollar spent
+        directly supports about <span data-source="econ_facts" data-field="display" data-where="fact=wa_ratio">—</span> dollars of output in the state but <span data-source="econ_facts" data-field="display" data-where="fact=sjc_ratio">—</span> in the county, because an island
+        economy imports most of what it buys.</p>
+      <p>These are contribution figures: they count all activity linked to FHL, whoever pays for it. A narrower measure counts
+        only money from outside the region that would not be spent there without the station. For San Juan County almost all
+        of FHL's activity passes this test, since its funding comes from state, university, federal and donor sources off the
+        island and the users counted come from elsewhere; the county's new-money impact, <span data-source="econ_facts" data-field="display" data-where="fact=sjc_nm_output">—</span> and
+        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_nm_jobs">—</span> jobs, is close to its contribution. For Washington it is about a third: <span data-source="econ_facts" data-field="display" data-where="fact=wa_nm_output">—</span> and
+        <span data-source="econ_facts" data-field="display" data-where="fact=wa_nm_jobs">—</span> jobs, from federal grants, out-of-state users and out-of-state donors. State and university funds would
+        otherwise be spent elsewhere in Washington.</p>
+      <p>Construction is one-time and reported separately. Projects worth <span data-source="econ_facts" data-field="display" data-where="fact=constr_spend">—</span> in 2015–2024, among them the
+        Fernald Laboratory basement, the sewer lift station and the genomics laboratory in Lab 2, supported
+        <span data-source="econ_facts" data-field="display" data-where="fact=wa_constr_output">—</span> of output and <span data-source="econ_facts" data-field="display" data-where="fact=wa_constr_jobyears">—</span> job-years in Washington, about one job a year.</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-controls fp-toggle" role="group" aria-label="Measure shown in Fig. 20">
+        <button type="button" data-econ="output" aria-pressed="true">Output</button>
+        <button type="button" data-econ="jobs" aria-pressed="false">Jobs</button>
+        <button type="button" data-econ="labor_income" aria-pressed="false">Labor income</button>
+        <button type="button" data-econ="value_added" aria-pressed="false">Value added</button>
+      </div>
+      <div class="fp-legend" id="lg-econ"></div>
+      <div class="fp-chart" id="ch-econ" data-source="econ_model_by_source"></div>
+      <figcaption>
+        <h3 id="fig-econ"><span class="fig">Fig. 20.</span>—The economic contribution of FHL activity in a typical year.</h3>
+        <p class="cap">Output supported in Washington and in San Juan County by the station's operations, by research done at
+          FHL, and by the spending of its students and visitors off the station; the buttons show jobs, labor income or value
+          added instead. Each bar separates direct, supply-chain (indirect) and household-spending (induced) effects. Whiskers
+          span the 10th to 90th percentiles of <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> simulations; open diamonds mark the part paid for from outside the
+          region (new money). 2024 dollars. The county is part of the state, so the two panels are not summed. Construction is
+          in Table V; grants acknowledged by papers are not part of these totals, and gifts count only through the spending
+          they pay for.</p>
+      </figcaption>
+    </figure>
+    <div class="fp-fig" id="econ-totals">
+      <h3 id="tab-econ"><span class="fig">Table V.</span>—The economic contribution of FHL activity.</h3>
+      <div class="fp-scroll"><table id="tbl-econ" class="ruled" data-source="econ_model_totals">
+        <thead><tr><th>Region and basis</th><th class="num">Output</th><th class="num">Jobs</th><th class="num">Labor income</th>
+          <th class="num">Value added</th><th class="num">State and local taxes</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <p class="cap">Yearly effects of the station's operations, research done at FHL and the spending of its students and
+        visitors off the station, with construction over 2015–2024 as a one-time total, in 2024 dollars; the 10th–90th
+        percentile range is in parentheses. Jobs are full- and part-time jobs supported and sustained; the station's own are
+        counted as annual-average full-time equivalents (about 31); for construction they are job-years. New money is the part paid for from outside the region. County taxes are
+        state and local taxes generated by activity in the county, mostly state revenue. Output, labor income and value added
+        are nested measures and are not summed. The italic rows are outside the totals: pay that UW departments give faculty
+        who work at FHL, and the university's overhead on FHL research, spent in Seattle.</p>
+    </div>
+    
+    
+
+    <h4 id="econ-funding">Research funding</h4>
+    <div class="fp-notes">
+      <p>Grants for work at FHL appear in public records from 1957 on (Fig. 21, Table VI). The National Science Foundation has
+        awarded <span data-source="econ_facts" data-field="display" data-where="fact=nsf_total">—</span> for FHL facilities, for research and training done there and for meetings held there
+        (1957–2026; <span data-source="econ_facts" data-field="display" data-where="fact=nsf_total_2024">—</span> in 2024 dollars; about $5 million of it placed at FHL with medium or low confidence), and the National Institutes of Health <span data-source="econ_facts" data-field="display" data-where="fact=nih_total">—</span> for projects whose
+        records name FHL (1987–2010), nearly all of it for the Center for Cell Dynamics. These are awards, not yearly spending,
+        and they are floors, because federal databases file most FHL grants under the university's Seattle address. Spread
+        over their award periods, grants for work at FHL came to <span data-source="econ_facts" data-field="display" data-where="fact=research_per_year">—</span> a year in 2022–2024; the model's research
+        line counts the direct costs of these awards, about 87% of them.</p>
+      <p>The census papers name a far larger body of funding. Of <span data-source="econ_facts" data-field="display" data-where="fact=matched_papers">—</span> papers matched to OpenAlex,
+        <span data-source="econ_facts" data-field="display" data-where="fact=funder_papers">—</span> name a funder: the National Science Foundation in <span data-source="econ_facts" data-field="display" data-where="fact=nsf_papers">—</span>, the National Institutes of Health
+        in <span data-source="econ_facts" data-field="display" data-where="fact=nih_papers">—</span> and NOAA in <span data-source="econ_facts" data-field="display" data-where="fact=noaa_papers">—</span> (Fig. 22). The <span data-source="econ_facts" data-field="display" data-where="fact=assoc_awards">—</span> research-project awards from the first
+        two that verified papers name total <span data-source="econ_facts" data-field="display" data-where="fact=assoc_usd">—</span> as awarded, paid to institutions in <span data-source="econ_facts" data-field="display" data-where="fact=assoc_states">—</span> states,
+        <span data-source="econ_facts" data-field="display" data-where="fact=assoc_other">—</span>, and to one in Italy. This is funding associated with research at FHL, mostly spent elsewhere: only
+        <span data-source="econ_facts" data-field="display" data-where="fact=sited_awards_n">—</span> of these awards, worth <span data-source="econ_facts" data-field="display" data-where="fact=sited_awards_usd">—</span>, can be placed at FHL. Only the 2022–2024 share of those awards enters the model's research line; the rest of this
+        funding is not part of the modeled contribution.</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-econ-res"></div>
+      <div class="fp-chart" id="ch-econ-res" data-source="econ_research_by_fy"></div>
+      <figcaption>
+        <h3 id="fig-econ-res"><span class="fig">Fig. 21.</span>—Federal awards for work at FHL, by year.</h3>
+        <p class="cap">National Science Foundation and National Institutes of Health awards, and a few from other agencies,
+          for research, training and meetings at FHL and for its facilities and instruments, by University of Washington
+          fiscal year, in 2024 dollars. Each award is spread evenly over its award period. The light layer adds a share of
+          awards carried out partly at FHL and of awards to scientists based there. Dashed rules mark where the federal award databases begin
+          (fiscal 1975) and fiscal 2022–2024, the years behind the research line in Fig. 20. Amounts are as awarded, not expenditures. NSF grants before 1975 come
+          from the regents' minutes and NSF's annual reports; NIH records begin in 1985. Federal databases file most FHL grants
+          under the university's Seattle address, so the bars are a floor.</p>
+      </figcaption>
+    </figure>
+    <div class="fp-fig" id="econ-sources">
+      <h3 id="tab-econ-sources"><span class="fig">Table VI.</span>—Grants for work at FHL, by source.</h3>
+      <div class="fp-scroll"><table id="tbl-econ-sources" class="ruled" data-source="econ_money_sources">
+        <thead><tr><th>Source</th><th>Years</th><th class="num">Number</th><th class="num">As awarded</th>
+          <th class="num">2024 dollars</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <p class="cap">Awards for FHL facilities, for research and training done at FHL and for meetings held there; numbers
+        are awards unless marked. Italic rows
+        are linked to FHL less directly and are not in the total. Federal databases list most FHL grants under the
+        university's Seattle address, so the counted rows are a floor. Grants acknowledged by census papers but carried out
+        elsewhere are in Fig. 22, not here.</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-econ-fund"></div>
+      <div class="fp-chart" id="ch-econ-fund" data-source="econ_funders_by_decade"></div>
+      <div class="fp-chart" id="ch-econ-scopes" data-source="econ_award_scopes"></div>
+      <figcaption>
+        <h3 id="fig-econ-fund"><span class="fig">Fig. 22.</span>—Funding named by FHL-connected papers: associated, not spent at FHL.</h3>
+        <p class="cap">Above: the share of each decade's census papers, among those matched to OpenAlex by DOI, that name each
+          funder. The gray band is the share that name any funder: few acknowledgments were recorded before about 2008, so part
+          of every rise is a rise in recording. Below: National Science Foundation and National Institutes of Health awards
+          named by those papers, as awarded, at successively narrower scopes (log scale). This is research funding associated
+          with work at FHL, paid to institutions across the country; only the black row was spent at FHL, and only its 2022–2024
+          share is part of Fig. 20.</p>
+      </figcaption>
+    </figure>
+
+    <h4 id="econ-people">People</h4>
+    <div class="fp-notes">
+      <p>By this estimate FHL employs about <span data-source="econ_facts" data-field="display" data-where="fact=fte">—</span> people on an annual-average basis (<span data-source="econ_facts" data-field="display" data-where="fact=fte_range">—</span>), counting seasonal staff,
+        summer instructors and teaching assistants for the months they work; about <span data-source="econ_facts" data-field="display" data-where="fact=headcount">—</span> different people are paid
+        during a year. Its field-station profile lists <span data-source="econ_facts" data-field="display" data-where="fact=obfs_yearround">—</span> or more year-round and <span data-source="econ_facts" data-field="display" data-where="fact=obfs_seasonal">—</span> seasonal
+        staff. More than 100 visiting researchers come each year, and course enrollment rose from <span data-source="econ_facts" data-field="display" data-where="fact=enroll_2018">—</span> in 2018 to
+        <span data-source="econ_facts" data-field="display" data-where="fact=enroll_2022">—</span> in 2022. Students and visitors from outside the county spent an estimated <span data-source="econ_facts" data-field="display" data-where="fact=visitor_days">—</span> days in
+        the county in 2024.</p>
+    </div>
+
+    <h4 id="econ-capital">Capital and gifts</h4>
+    <div class="fp-notes">
+      <p>The campus was built in bursts (Fig. 23). The legislature gave $6,000 for buildings in 1909. The research campus of
+        the 1960s rested on the National Science Foundation, whose <span data-source="econ_facts" data-field="display" data-where="fact=nsf_lab_1961">—</span> grant paid most of the <span data-source="econ_facts" data-field="display" data-where="fact=lab_budget_1961">—</span>
+        budget for the main laboratory in 1961; NSF made <span data-source="econ_facts" data-field="display" data-where="fact=nsf_facility_n">—</span> more facility, instrument and housing awards from
+        1977 to 2022 (<span data-source="econ_facts" data-field="display" data-where="fact=nsf_facility_2024">—</span> in 2024 dollars). Gifts of land include Cedar Rock Preserve on Shaw Island,
+        completed by a bequest assessed at <span data-source="econ_facts" data-field="display" data-where="fact=cedar_rock">—</span> in 1983, and the Whiteley Center property, <span data-source="econ_facts" data-field="display" data-where="fact=whiteley_gift">—</span> in 2001.
+        In 2023 FHL estimated that almost a quarter of the money it spends each year comes ultimately from donors, and its
+        endowment exceeded <span data-source="econ_facts" data-field="display" data-where="fact=endowment">—</span>. Gifts are sources of funds and already sit inside the spending modeled above.</p>
+    </div>
+    <figure class="fp-fig">
+      <div class="fp-legend" id="lg-econ-cap"></div>
+      <div class="fp-chart" id="ch-econ-cap" data-source="econ_capital_timeline"></div>
+      <figcaption>
+        <h3 id="fig-econ-cap"><span class="fig">Fig. 23.</span>—Building the station, 1909–2022.</h3>
+        <p class="cap">Each mark is one building, utility, housing, land, vessel or instrument project at its budget, grant or stated
+          value, in 2024 dollars on a log scale; projects before 1913, which have no consumer price index, are drawn at their
+          dollar amount and marked with a ring. The five largest are numbered and named below the chart. Open marks are gifts: land at its assessed or stated value, and buildings, vessels and equipment paid for by donors. Early amounts are the
+          regents' ceilings, not costs. Funding sources that paid for projects already shown are not drawn again. The shaded
+          years are the period whose construction is counted in Table V; of the marks there, only the Fernald Laboratory
+          basement, the sewer lift station and Lab 2 are counted. Sources: UW Board of Regents minutes, NSF award records and the
+          Historical Centennial Timeline (Mills and Hermans).</p>
+      </figcaption>
+    </figure>
+
+    <h4 id="econ-county">The station in the county economy</h4>
+    <div class="fp-notes">
+      <p>San Juan County had <span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs_2024">—</span> jobs covered by unemployment insurance in 2024, at an average pay of
+        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_pay">—</span>. FHL's own jobs equal about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_own_share_total">—</span> of the county's total employment including the
+        self-employed, and all the jobs that FHL activity supports there about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_related_share">—</span>, roughly one job in
+        250.</p>
+    </div>
+
+    <h4 id="beyond-spending">Beyond spending</h4>
+    <div class="fp-notes">
+      <p>The estimate of <span data-source="econ_facts" data-field="display" data-where="fact=wa_output">—</span> counts spending and the jobs it supports. It leaves out what the
+        station teaches and what its science does: the education of students, the careers that follow and the discoveries listed
+        below. No dollar value is assigned to these. Public sources support the counts here. Each has its own
+        definition, so they do not add up to a total.</p>
+    </div>
+    <div id="beyond-list" data-source="beyond_spending"></div>
+    <div class="fp-notes">
+      <p>Public sources do not give the total number of students trained since 1904, enrollment for most years (summer, the main
+        season for courses, is not on the university's public time schedule), individual people as opposed to registrations, or
+        what became of most former students. The counts from newsletters, proposals and grant reports are the station's own or a grant holder's, with no outside audit. The census, class list and mentoring counts are this report's own, as the Methods tab describes.</p>
+    </div>
     </div>
     <div class="fp-arch" data-collapsible id="arch-classes">
       <h3 class="fold">Classes at the station <span class="cnt" id="n-classes"></span></h3>
@@ -1112,7 +1331,7 @@
         <figcaption>
           <h3 id="fig-course-topics">What the classes taught.—Courses a decade, by topic.</h3>
           <p class="cap">Each course is counted once for each term it was taught. AI agents assigned topics from the course titles,
-            following a written list of topics; another agent reviewed them for consistency (section X). Panels run from
+            following a written list of topics; another agent reviewed them for consistency (section XI). Panels run from
             topics taught mostly early to those taught mostly recently (by the average decade of their share); all share one
             scale. "Other or not named" holds entries whose courses were not named.</p>
         </figcaption>
@@ -1121,6 +1340,23 @@
         <span class="cap" id="cls-count"></span></div>
       <div class="fp-scroll"><table id="tbl-classes" class="ruled" data-source="classes">
         <thead><tr><th class="num">Year</th><th>Term</th><th>Course</th><th>Instructors</th><th>Teaching assistants</th><th class="num">Reports</th><th>Sources</th></tr></thead><tbody></tbody>
+      </table></div>
+    </div>
+    <div class="fp-arch" data-collapsible id="arch-staff">
+      <h3 class="fold">Directors and staff through time <span class="cnt" id="n-staff"></span></h3>
+      <figure class="fp-fig">
+        <div class="fp-legend" id="lg-staff"></div>
+        <div class="fp-chart" id="ch-staff" data-source="staff"></div>
+        <figcaption>
+          <h3 id="fig-staff">Directors and faculty in residence.—Years in post.</h3>
+          <p class="cap">Directors, associate and assistant directors, resident faculty and staff scientists, from the
+            Regents' minutes, UW catalogs and yearbooks, FHL's newsletters and archived web pages, and the centennial
+            timeline. A bar with an open end has no documented end year. Every post, support staff included, is in the
+            table below, with its sources.</p>
+        </figcaption>
+      </figure>
+      <div class="fp-scroll"><table id="tbl-staff" class="ruled" data-source="staff">
+        <thead><tr><th class="num">Years</th><th>Name</th><th>Post</th><th>Kind of post</th><th>Sources</th></tr></thead><tbody></tbody>
       </table></div>
     </div>
     <div class="fp-arch" data-collapsible id="arch-artists">
@@ -1149,232 +1385,10 @@
         <thead><tr><th>Years</th><th>Name</th><th>Medium</th><th>Program</th><th>Work</th><th>Sources</th></tr></thead><tbody></tbody>
       </table></div>
     </div>
-    <div class="fp-arch" data-collapsible id="economics">
-      <h3 class="fold">Economic contribution</h3>
-      <div class="fp-notes">
-      <p>The University of Washington measures its economic contribution in a standard way: it traces the spending of its
-        operations, its students and its visitors through the supply chain and through household spending, and reports the
-        output, jobs, labor income, value added and state and local taxes that result (Parker Strategy Group, 2024). This
-        part applies that method to FHL through an economic model; its results are modeled estimates, not measured amounts. FHL's budget, payroll and user records are not published, so the model's inputs
-        come from public sources, not the station's accounts: operating spending, for example, is estimated at about
-        <span data-source="econ_facts" data-field="display" data-where="fact=ops_spend">—</span> a year excluding scholarships, of which
-        <span data-source="econ_facts" data-field="display" data-where="fact=ops_payroll">—</span> is payroll.
-        Results are for a typical recent year, fiscal 2024, in 2024 dollars; ranges are the 10th to 90th percentiles of
-        <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> simulations. The method and inputs are described in the Methods tab.</p>
-      <p>In Washington, FHL activity supports about <span data-source="econ_facts" data-field="display" data-where="fact=wa_output">—</span> of output a year (<span data-source="econ_facts" data-field="display" data-where="fact=wa_output_range">—</span>) and <span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs">—</span> jobs
-        (<span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs_range">—</span>), with <span data-source="econ_facts" data-field="display" data-where="fact=wa_labor_income">—</span> of labor income, <span data-source="econ_facts" data-field="display" data-where="fact=wa_value_added">—</span> of value added and <span data-source="econ_facts" data-field="display" data-where="fact=wa_taxes">—</span> of
-        state and local taxes (Table IV, Fig. 19). The station's own payroll and purchases account for about four-fifths of
-        this; research done at FHL adds <span data-source="econ_facts" data-field="display" data-where="fact=wa_research_output">—</span>, and the spending of students and visitors off the station
-        <span data-source="econ_facts" data-field="display" data-where="fact=wa_users_output">—</span>. Within San Juan County the figures are <span data-source="econ_facts" data-field="display" data-where="fact=sjc_output">—</span> of output (<span data-source="econ_facts" data-field="display" data-where="fact=sjc_output_range">—</span>) and
-        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs">—</span> jobs (<span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs_range">—</span>). The county is part of the state, so the two are not summed. Each dollar spent
-        directly supports about <span data-source="econ_facts" data-field="display" data-where="fact=wa_ratio">—</span> dollars of output in the state but <span data-source="econ_facts" data-field="display" data-where="fact=sjc_ratio">—</span> in the county, because an island
-        economy imports most of what it buys.</p>
-      <p>These are contribution figures: they count all activity linked to FHL, whoever pays for it. A narrower measure counts
-        only money from outside the region that would not be spent there without the station. For San Juan County almost all
-        of FHL's activity passes this test, since its funding comes from state, university, federal and donor sources off the
-        island and the users counted come from elsewhere; the county's new-money impact, <span data-source="econ_facts" data-field="display" data-where="fact=sjc_nm_output">—</span> and
-        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_nm_jobs">—</span> jobs, is close to its contribution. For Washington it is about a third: <span data-source="econ_facts" data-field="display" data-where="fact=wa_nm_output">—</span> and
-        <span data-source="econ_facts" data-field="display" data-where="fact=wa_nm_jobs">—</span> jobs, from federal grants, out-of-state users and out-of-state donors. State and university funds would
-        otherwise be spent elsewhere in Washington.</p>
-      <p>Construction is one-time and reported separately. Projects worth <span data-source="econ_facts" data-field="display" data-where="fact=constr_spend">—</span> in 2015–2024, among them the
-        Fernald Laboratory basement, the sewer lift station and the genomics laboratory in Lab 2, supported
-        <span data-source="econ_facts" data-field="display" data-where="fact=wa_constr_output">—</span> of output and <span data-source="econ_facts" data-field="display" data-where="fact=wa_constr_jobyears">—</span> job-years in Washington, about one job a year.</p>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-controls fp-toggle" role="group" aria-label="Measure shown in Fig. 19">
-        <button type="button" data-econ="output" aria-pressed="true">Output</button>
-        <button type="button" data-econ="jobs" aria-pressed="false">Jobs</button>
-        <button type="button" data-econ="labor_income" aria-pressed="false">Labor income</button>
-        <button type="button" data-econ="value_added" aria-pressed="false">Value added</button>
-      </div>
-      <div class="fp-legend" id="lg-econ"></div>
-      <div class="fp-chart" id="ch-econ" data-source="econ_model_by_source"></div>
-      <figcaption>
-        <h3 id="fig-econ"><span class="fig">Fig. 19.</span>—The economic contribution of FHL activity in a typical year.</h3>
-        <p class="cap">Output supported in Washington and in San Juan County by the station's operations, by research done at
-          FHL, and by the spending of its students and visitors off the station; the buttons show jobs, labor income or value
-          added instead. Each bar separates direct, supply-chain (indirect) and household-spending (induced) effects. Whiskers
-          span the 10th to 90th percentiles of <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> simulations; open diamonds mark the part paid for from outside the
-          region (new money). 2024 dollars. The county is part of the state, so the two panels are not summed. Construction is
-          in Table IV; grants acknowledged by papers are not part of these totals, and gifts count only through the spending
-          they pay for.</p>
-      </figcaption>
-    </figure>
-    <div class="fp-fig" id="econ-totals">
-      <h3 id="tab-econ"><span class="fig">Table IV.</span>—The economic contribution of FHL activity.</h3>
-      <div class="fp-scroll"><table id="tbl-econ" class="ruled" data-source="econ_model_totals">
-        <thead><tr><th>Region and basis</th><th class="num">Output</th><th class="num">Jobs</th><th class="num">Labor income</th>
-          <th class="num">Value added</th><th class="num">State and local taxes</th></tr></thead>
-        <tbody></tbody>
-      </table></div>
-      <p class="cap">Yearly effects of the station's operations, research done at FHL and the spending of its students and
-        visitors off the station, with construction over 2015–2024 as a one-time total, in 2024 dollars; the 10th–90th
-        percentile range is in parentheses. Jobs are full- and part-time jobs supported and sustained; the station's own are
-        counted as annual-average full-time equivalents (about 31); for construction they are job-years. New money is the part paid for from outside the region. County taxes are
-        state and local taxes generated by activity in the county, mostly state revenue. Output, labor income and value added
-        are nested measures and are not summed. The italic rows are outside the totals: pay that UW departments give faculty
-        who work at FHL, and the university's overhead on FHL research, spent in Seattle.</p>
-    </div>
-    
-    
-
-    <h4 id="econ-funding">Research funding</h4>
-    <div class="fp-notes">
-      <p>Grants for work at FHL appear in public records from 1957 on (Fig. 20, Table V). The National Science Foundation has
-        awarded <span data-source="econ_facts" data-field="display" data-where="fact=nsf_total">—</span> for FHL facilities, for research and training done there and for meetings held there
-        (1957–2026; <span data-source="econ_facts" data-field="display" data-where="fact=nsf_total_2024">—</span> in 2024 dollars; about $5 million of it placed at FHL with medium or low confidence), and the National Institutes of Health <span data-source="econ_facts" data-field="display" data-where="fact=nih_total">—</span> for projects whose
-        records name FHL (1987–2010), nearly all of it for the Center for Cell Dynamics. These are awards, not yearly spending,
-        and they are floors, because federal databases file most FHL grants under the university's Seattle address. Spread
-        over their award periods, grants for work at FHL came to <span data-source="econ_facts" data-field="display" data-where="fact=research_per_year">—</span> a year in 2022–2024; the model's research
-        line counts the direct costs of these awards, about 87% of them.</p>
-      <p>The census papers name a far larger body of funding. Of <span data-source="econ_facts" data-field="display" data-where="fact=matched_papers">—</span> papers matched to OpenAlex,
-        <span data-source="econ_facts" data-field="display" data-where="fact=funder_papers">—</span> name a funder: the National Science Foundation in <span data-source="econ_facts" data-field="display" data-where="fact=nsf_papers">—</span>, the National Institutes of Health
-        in <span data-source="econ_facts" data-field="display" data-where="fact=nih_papers">—</span> and NOAA in <span data-source="econ_facts" data-field="display" data-where="fact=noaa_papers">—</span> (Fig. 21). The <span data-source="econ_facts" data-field="display" data-where="fact=assoc_awards">—</span> research-project awards from the first
-        two that verified papers name total <span data-source="econ_facts" data-field="display" data-where="fact=assoc_usd">—</span> as awarded, paid to institutions in <span data-source="econ_facts" data-field="display" data-where="fact=assoc_states">—</span> states,
-        <span data-source="econ_facts" data-field="display" data-where="fact=assoc_other">—</span>, and to one in Italy. This is funding associated with research at FHL, mostly spent elsewhere: only
-        <span data-source="econ_facts" data-field="display" data-where="fact=sited_awards_n">—</span> of these awards, worth <span data-source="econ_facts" data-field="display" data-where="fact=sited_awards_usd">—</span>, can be placed at FHL. Only the 2022–2024 share of those awards enters the model's research line; the rest of this
-        funding is not part of the modeled contribution.</p>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-legend" id="lg-econ-res"></div>
-      <div class="fp-chart" id="ch-econ-res" data-source="econ_research_by_fy"></div>
-      <figcaption>
-        <h3 id="fig-econ-res"><span class="fig">Fig. 20.</span>—Federal awards for work at FHL, by year.</h3>
-        <p class="cap">National Science Foundation and National Institutes of Health awards, and a few from other agencies,
-          for research, training and meetings at FHL and for its facilities and instruments, by University of Washington
-          fiscal year, in 2024 dollars. Each award is spread evenly over its award period. The light layer adds a share of
-          awards carried out partly at FHL and of awards to scientists based there. Dashed rules mark where the federal award databases begin
-          (fiscal 1975) and fiscal 2022–2024, the years behind the research line in Fig. 19. Amounts are as awarded, not expenditures. NSF grants before 1975 come
-          from the regents' minutes and NSF's annual reports; NIH records begin in 1985. Federal databases file most FHL grants
-          under the university's Seattle address, so the bars are a floor.</p>
-      </figcaption>
-    </figure>
-    <div class="fp-fig" id="econ-sources">
-      <h3 id="tab-econ-sources"><span class="fig">Table V.</span>—Grants for work at FHL, by source.</h3>
-      <div class="fp-scroll"><table id="tbl-econ-sources" class="ruled" data-source="econ_money_sources">
-        <thead><tr><th>Source</th><th>Years</th><th class="num">Number</th><th class="num">As awarded</th>
-          <th class="num">2024 dollars</th></tr></thead>
-        <tbody></tbody>
-      </table></div>
-      <p class="cap">Awards for FHL facilities, for research and training done at FHL and for meetings held there; numbers
-        are awards unless marked. Italic rows
-        are linked to FHL less directly and are not in the total. Federal databases list most FHL grants under the
-        university's Seattle address, so the counted rows are a floor. Grants acknowledged by census papers but carried out
-        elsewhere are in Fig. 21, not here.</p>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-legend" id="lg-econ-fund"></div>
-      <div class="fp-chart" id="ch-econ-fund" data-source="econ_funders_by_decade"></div>
-      <div class="fp-chart" id="ch-econ-scopes" data-source="econ_award_scopes"></div>
-      <figcaption>
-        <h3 id="fig-econ-fund"><span class="fig">Fig. 21.</span>—Funding named by FHL-connected papers: associated, not spent at FHL.</h3>
-        <p class="cap">Above: the share of each decade's census papers, among those matched to OpenAlex by DOI, that name each
-          funder. The gray band is the share that name any funder: few acknowledgments were recorded before about 2008, so part
-          of every rise is a rise in recording. Below: National Science Foundation and National Institutes of Health awards
-          named by those papers, as awarded, at successively narrower scopes (log scale). This is research funding associated
-          with work at FHL, paid to institutions across the country; only the black row was spent at FHL, and only its 2022–2024
-          share is part of Fig. 19.</p>
-      </figcaption>
-    </figure>
-
-    <h4 id="econ-people">People</h4>
-    <div class="fp-notes">
-      <p>By this estimate FHL employs about <span data-source="econ_facts" data-field="display" data-where="fact=fte">—</span> people on an annual-average basis (<span data-source="econ_facts" data-field="display" data-where="fact=fte_range">—</span>), counting seasonal staff,
-        summer instructors and teaching assistants for the months they work; about <span data-source="econ_facts" data-field="display" data-where="fact=headcount">—</span> different people are paid
-        during a year. Its field-station profile lists <span data-source="econ_facts" data-field="display" data-where="fact=obfs_yearround">—</span> or more year-round and <span data-source="econ_facts" data-field="display" data-where="fact=obfs_seasonal">—</span> seasonal
-        staff. More than 100 visiting researchers come each year, and course enrollment rose from <span data-source="econ_facts" data-field="display" data-where="fact=enroll_2018">—</span> in 2018 to
-        <span data-source="econ_facts" data-field="display" data-where="fact=enroll_2022">—</span> in 2022. Students and visitors from outside the county spent an estimated <span data-source="econ_facts" data-field="display" data-where="fact=visitor_days">—</span> days in
-        the county in 2024.</p>
-    </div>
-
-    <h4 id="econ-capital">Capital and gifts</h4>
-    <div class="fp-notes">
-      <p>The campus was built in bursts (Fig. 22). The legislature gave $6,000 for buildings in 1909. The research campus of
-        the 1960s rested on the National Science Foundation, whose <span data-source="econ_facts" data-field="display" data-where="fact=nsf_lab_1961">—</span> grant paid most of the <span data-source="econ_facts" data-field="display" data-where="fact=lab_budget_1961">—</span>
-        budget for the main laboratory in 1961; NSF made <span data-source="econ_facts" data-field="display" data-where="fact=nsf_facility_n">—</span> more facility, instrument and housing awards from
-        1977 to 2022 (<span data-source="econ_facts" data-field="display" data-where="fact=nsf_facility_2024">—</span> in 2024 dollars). Gifts of land include Cedar Rock Preserve on Shaw Island,
-        completed by a bequest assessed at <span data-source="econ_facts" data-field="display" data-where="fact=cedar_rock">—</span> in 1983, and the Whiteley Center property, <span data-source="econ_facts" data-field="display" data-where="fact=whiteley_gift">—</span> in 2001.
-        In 2023 FHL estimated that almost a quarter of the money it spends each year comes ultimately from donors, and its
-        endowment exceeded <span data-source="econ_facts" data-field="display" data-where="fact=endowment">—</span>. Gifts are sources of funds and already sit inside the spending modeled above.</p>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-legend" id="lg-econ-cap"></div>
-      <div class="fp-chart" id="ch-econ-cap" data-source="econ_capital_timeline"></div>
-      <figcaption>
-        <h3 id="fig-econ-cap"><span class="fig">Fig. 22.</span>—Building the station, 1909–2022.</h3>
-        <p class="cap">Each mark is one building, utility, housing, land, vessel or instrument project at its budget, grant or stated
-          value, in 2024 dollars on a log scale; projects before 1913, which have no consumer price index, are drawn at their
-          dollar amount and marked with a ring. The five largest are numbered and named below the chart. Open marks are gifts: land at its assessed or stated value, and buildings, vessels and equipment paid for by donors. Early amounts are the
-          regents' ceilings, not costs. Funding sources that paid for projects already shown are not drawn again. The shaded
-          years are the period whose construction is counted in Table IV; of the marks there, only the Fernald Laboratory
-          basement, the sewer lift station and Lab 2 are counted. Sources: UW Board of Regents minutes, NSF award records and the
-          Historical Centennial Timeline (Mills and Hermans).</p>
-      </figcaption>
-    </figure>
-
-    <h4 id="econ-county">The station in the county economy</h4>
-    <div class="fp-notes">
-      <p>San Juan County had <span data-source="econ_facts" data-field="display" data-where="fact=sjc_jobs_2024">—</span> jobs covered by unemployment insurance in 2024, at an average pay of
-        <span data-source="econ_facts" data-field="display" data-where="fact=sjc_pay">—</span>. FHL's own jobs equal about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_own_share_total">—</span> of the county's total employment including the
-        self-employed, and all the jobs that FHL activity supports there about <span data-source="econ_facts" data-field="display" data-where="fact=fhl_related_share">—</span>, roughly one job in
-        250.</p>
-    </div>
-
-    <h4 id="beyond-spending">Beyond spending</h4>
-    <div class="fp-notes">
-      <p>The estimate of <span data-source="econ_facts" data-field="display" data-where="fact=wa_output">—</span> counts spending and the jobs it supports. It leaves out what the
-        station teaches and what its science does: the education of students, the careers that follow and the discoveries listed
-        below. No dollar value is assigned to these. Public sources support the counts here. Each has its own
-        definition, so they do not add up to a total.</p>
-    </div>
-    <div id="beyond-list" data-source="beyond_spending"></div>
-    <div class="fp-notes">
-      <p>Public sources do not give the total number of students trained since 1904, enrollment for most years (summer, the main
-        season for courses, is not on the university's public time schedule), individual people as opposed to registrations, or
-        what became of most former students. The counts from newsletters, proposals and grant reports are the station's own or a grant holder's, with no outside audit. The census, class list and mentoring counts are this report's own, as the Methods tab describes.</p>
-    </div>
-    </div>
-    <div class="fp-arch" data-collapsible id="discoveries">
-      <h3 class="fold">Discoveries and scientific contributions</h3>
-      <div class="fp-notes">
-        <p>The work done at the station or by people based there spans more than a century. Each entry below gives what was
-          found, why it matters and what part FHL had in it, under one of three labels: done at FHL; based at FHL, with the work
-          partly elsewhere; or partly at FHL, where the main people were based elsewhere and FHL gave a site, animals, facilities or part of the work, or where the sources do not place the central work at FHL. The list has <span id="disc-n">—</span> entries, grouped by field and in order of date
-          within each field; how they were chosen is in the Methods tab.</p>
-      </div>
-      <p class="fp-disc-ctl"><button type="button" id="disc-all" class="fp-disc-all" aria-pressed="false" hidden>Show all</button></p>
-      <div id="disc-list" data-source="discoveries discovery_refs"></div>
-      <div id="disc-gfp-extra">
-    <div class="fp-notes">
-      <p>As of <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed_date">—</span>, PubMed held
-        <span data-source="econ_facts" data-field="display" data-where="fact=gfp_pubmed">—</span> records under the heading for GFP (Fig. 23).</p>
-    </div>
-    <figure class="fp-fig">
-      <div class="fp-legend" id="lg-econ-gfp"></div>
-      <div class="fp-chart" id="ch-econ-gfp" data-source="econ_gfp_pubmed"></div>
-      <figcaption>
-        <h3 id="fig-econ-gfp"><span class="fig">Fig. 23.</span>—From the dock to the bench.</h3>
-        <p class="cap">PubMed records a year indexed under the subject headings Green Fluorescent Proteins and Aequorin, counted by the
-          year each record entered PubMed, on a scale that is close to linear below about 10 and logarithmic above, so both lines can be read. Both
-          proteins were first extracted from jellyfish collected and processed at FHL in 1961, and the genes for both were cloned
-          from Friday Harbor jellyfish. Indexing misses most papers that use GFP as a routine tool, so
-          the counts are a floor, and their fall after about 2012 need not mean less use.</p>
-      </figcaption>
-    </figure>
-    <div class="fp-fig" id="econ-chain">
-      <h3 id="tab-econ-gfp"><span class="fig">Table VI.</span>—The aequorin and GFP chain.</h3>
-      <div class="fp-scroll"><table id="tbl-econ-gfp" class="ruled" data-source="econ_gfp_chain">
-        <thead><tr><th class="num">Year</th><th>Step</th><th>Where</th><th>Evidence</th></tr></thead>
-        <tbody></tbody>
-      </table></div>
-      <p class="cap">Each step and the primary source that places it. Steps after 1992 used the cloned gene, not the jellyfish.</p>
-    </div>
-      </div>
-    </div>
   </section>
 
   <section class="fp-section" id="method">
-    <h2><span class="num">X.</span> Technical methods</h2>
+    <h2><span class="num">XI.</span> Technical methods</h2>
     <figure class="fp-fig fm-fig" id="cartoon">
       <div class="fp-chart fm-chart fm-cartoon" id="ch-cartoon" data-source="methods_facts ai_workflows agents"></div>
       <figcaption>
@@ -1837,7 +1851,7 @@
       </div>
     </details>
     <div class="fp-notes">
-      <p><span class="runin">Classes and art.</span>—The lists of classes, staff and artists in residence in section IX were
+      <p><span class="runin">Classes and art.</span>—The lists of classes, staff and artists in residence in section X were
         gathered from public records by AI agents and fact-checked by others. For the figure of course topics, agents gave
         each of the <span data-source="methods_facts" data-field="value" data-where="fact=course_titles">—</span> distinct course titles one topic from a fixed list, and a further agent reviewed
         them all for consistency, changing <span data-source="methods_facts" data-field="value" data-where="fact=course_review_changes">—</span>. A single AI agent assigned the artists'
@@ -1856,7 +1870,7 @@
 
     <h3 class="fp-subhead" id="econ-model">The economic model</h3>
     <div class="fp-notes">
-      <p><span class="runin">Design.</span>—The economic contribution in section IX follows the structure of the University of Washington's own
+      <p><span class="runin">Design.</span>—The economic contribution in section X follows the structure of the University of Washington's own
         economic impact reports (Parker Strategy Group, 2024, for fiscal 2023): four spending sources (operations, research, students
         and visitors), with construction reported separately; direct, supply-chain (indirect) and household-spending (induced) effects; and five measures (output,
         jobs supported and sustained, labor income, value added, and state and local taxes), each for the contribution of all
@@ -1903,7 +1917,7 @@
           hatched bars are alternative model structures rather than inputs. FHL publishes no purchasing records, so for output its
           purchases matter most in both regions, and for jobs the count of the station's own jobs does; household-spending
           effects matter mainly if the uncalibrated tables are used instead (hatched bars). Swings are
-          not additive: the range in Fig. 19 (in the Chronicle) combines all inputs at once.</p>
+          not additive: the range in Fig. 20 (in Science and society) combines all inputs at once.</p>
       </figcaption>
     </figure>
     <div class="fp-fig" id="econ-inputs">
@@ -1932,7 +1946,7 @@
     <div class="fp-notes">
       <p><span class="runin">Platform.</span>—The census, its code, the spreadsheet, the figures and this page were produced
         with Claude Code (version 2.1.295 and later), Anthropic's coding agent, in the Claude desktop app on macOS, on 13–16
-        and 28–29 October 2026 (UTC), apart from the economic contribution and the discoveries in section IX, the economic model and methods, and a final round of
+        and 28–29 October 2026 (UTC), apart from the economic contribution and the discoveries in section X, the economic model and methods, and a final round of
         corrections, which were produced in November 2026 and are not counted in Table VIII or in the totals below. The
         coordinating session and every agent it started used the model Claude Opus 5.5 (claude-opus-5-5). The census and
         the drafting of this page ran at the "xhigh" reasoning-effort setting, the second highest of five
@@ -1968,7 +1982,7 @@
       <p><span class="runin">Limits.</span>—AI judgments can be wrong; the audit's error rates (Table IX) and the topic
         agreement rates above describe how often.
         Treat individual records as leads to check, and the totals as estimates with the stated uncertainty.</p>
-      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app from 13 to 28 October 2026; the requests after 28 October, including those behind the economic contribution and the discoveries in section IX, are not listed.
+      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app from 13 to 28 October 2026; the requests after 28 October, including those behind the economic contribution and the discoveries in section X, are not listed.
         Messages about signing in, saving files and progress are summarized rather than quoted. Each prompt shows when it
         was typed (Pacific time) and the output tokens (text, reasoning and tool calls) it led to: those Claude generated in
         the main session before the next prompt, plus those of the agents started in that time. A workflow's agents count
@@ -2004,7 +2018,7 @@
       <span class="note">average publications a year</span></div>
     <div class="fp-item"><div class="line"><span class="lab">Economic contribution, Washington</span><span class="dots"></span>
       <span class="val dash-skeleton" data-source="econ_facts" data-field="display" data-where="fact=wa_output">—</span></div>
-      <span class="note">a year in spending supported by FHL activity (range <span data-source="econ_facts" data-field="display" data-where="fact=wa_output_range">—</span>), with <span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs">—</span> jobs (<span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs_range">—</span>). Ranges are the 10th to 90th percentiles of simulations over the model's inputs. 2024 dollars; estimated from public sources; excludes education and the value of the science; in the Chronicle, section IX</span></div>
+      <span class="note">a year in spending supported by FHL activity (range <span data-source="econ_facts" data-field="display" data-where="fact=wa_output_range">—</span>), with <span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs">—</span> jobs (<span data-source="econ_facts" data-field="display" data-where="fact=wa_jobs_range">—</span>). Ranges are the 10th to 90th percentiles of simulations over the model's inputs. 2024 dollars; estimated from public sources; excludes education and the value of the science; in Science and society, section X</span></div>
   </section>
   <section class="fp-ode" id="ode" aria-labelledby="ode-title">
     <h2 id="ode-title">Ode to the life of the sea</h2>
@@ -3376,30 +3390,32 @@
       btn.setAttribute('aria-expanded', String(open)); act.textContent = open ? (fig.tagName === 'FIGURE' ? 'Hide figure' : 'Hide') : 'Show';
     });
   });
-  // Three tabs: the report, the chronicle of the station (section IX) and the technical methods (section X). The address
-  // picks the tab (#history, #hist-…, #land and #chronicle show the chronicle; #method and anything inside section X
-  // show the methods), so links and the contents keep working.
+  // Four tabs: the report, the chronicle of the station (section IX), science and society (section X: discoveries, economic
+  // contribution, classes, staff, artists) and the technical methods (section XI). The address picks the tab (#history,
+  // #hist-…, #land and #chronicle show the chronicle; #science, #arch-…, #disc…, #econ… and #beyond… show science and
+  // society; #method and anything inside section XI show the methods), so links and the contents keep working.
   const fpRoot = document.getElementById('fhl-profile');
   // The tabs whose figures drawAll drew while they were hidden (and so at the wrong width); opening one redraws.
   const drawnHidden = new Set();
   let drawnOnce = false; // showTab can run before the first draw, when the economic figures' constants do not exist yet
-  const tabOfEl = (t) => (t.closest('#history') ? 'chronicle' : t.closest('#method') ? 'methods' : 'report');
+  const tabOfEl = (t) => (t.closest('#history') ? 'chronicle' : t.closest('#science') ? 'science' : t.closest('#method') ? 'methods' : 'report');
   const tabOfHash = (h) => {
     const id = decodeURIComponent((h || '').slice(1));
     const t = id && document.getElementById(id);
     if (t) return tabOfEl(t);
-    return /^#(history|hist-|land|chronicle|arch-|disc)/.test(h || '') ? 'chronicle' : /^#method/.test(h || '') ? 'methods' : 'report';
+    return /^#(history|hist-|land|chronicle)/.test(h || '') ? 'chronicle' : /^#(science|arch-|disc|econ|beyond)/.test(h || '') ? 'science' : /^#method/.test(h || '') ? 'methods' : 'report';
   };
-  const currentTab = () => (fpRoot.classList.contains('tab-chronicle') ? 'chronicle' : fpRoot.classList.contains('tab-methods') ? 'methods' : 'report');
+  const currentTab = () => (fpRoot.classList.contains('tab-chronicle') ? 'chronicle' : fpRoot.classList.contains('tab-science') ? 'science' : fpRoot.classList.contains('tab-methods') ? 'methods' : 'report');
   let pendingTarget = (location.hash || '').length > 1; // a link into the page, followed once its target is drawn
   const showTab = (tab) => {
-    const chron = tab === 'chronicle';
-    fpRoot.classList.toggle('tab-chronicle', chron);
+    const sci = tab === 'science';
+    fpRoot.classList.toggle('tab-chronicle', tab === 'chronicle');
+    fpRoot.classList.toggle('tab-science', sci);
     fpRoot.classList.toggle('tab-methods', tab === 'methods');
     document.querySelectorAll('.fp-tabs a').forEach((a) => (a.dataset.tab === tab ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
     if (drawnHidden.has(tab) && typeof redraw === 'function') redraw();
-    if (chron && typeof drawArchive === 'function' && dash.data('staff').status === 'ok') drawArchive();
-    if (chron && drawnOnce) drawChronicleEcon();
+    if (sci && typeof drawArchive === 'function' && dash.data('staff').status === 'ok') drawArchive();
+    if (sci && drawnOnce) drawChronicleEcon();
   };
   // Open whatever folds the address points into (a folded figure, an era of the chronicle), then go there.
   const openTarget = () => {
@@ -3417,7 +3433,7 @@
   // '#feedback' opens the feedback form over whichever tab is showing (its own script handles it), so it moves nothing here.
   window.addEventListener('hashchange', () => { if (location.hash === '#feedback') return; pendingTarget = false; showTab(tabOfHash(location.hash)); openTarget(); });
 
-  // The chronicle tab's directors and staff, classes, and artists in residence. Drawn with the rest, and again when the
+  // The Science and society tab's directors and staff, classes, and artists in residence. Drawn with the rest, and again when the
   // tab is opened, since the charts need the tab on screen to measure their width.
   function drawArchive() {
     const mk = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
@@ -3552,7 +3568,7 @@
   }
 
   let drawnW = 0, drawnPhone = null, redrawT = 0; // the width and layout the figures were last drawn for
-  // ---- economic contribution (section IX) --------------------------------------------------------------------
+  // ---- economic contribution (section X) ---------------------------------------------------------------------
   // Money in millions with two decimals ("$9.11M"), or thousands below $0.1 million; jobs with one decimal below 10.
   const usd = (v) => (Math.abs(v) >= 1e9 ? `$${d3.format('.3~r')(v / 1e9)}B` : Math.abs(v) >= 1e5 ? `$${(v / 1e6).toFixed(2)}M`
     : `$${f(Math.round(v / 1e3))}K`);
@@ -3877,7 +3893,7 @@
         const r = data.find((q) => q.yr === d && q.series === k); return [null, n, r ? f(r.n) : '—'];
       }).concat(marks.filter(([yr]) => yr === d).map(([, t]) => [null, null, t])))).on('mouseleave', () => hideTip(el));
   }
-  // Tables IV-VI and X.
+  // Tables IV-VI and X (the GFP chain is Table IV, the economic tables V and VI).
   function drawEconTables() {
     const tot = dash.data('econ_model_totals');
     if (tot.status === 'ok') {
@@ -3964,7 +3980,7 @@
     }
   }
 
-  // The economic figures sit in the chronicle tab: drawn with the rest, and again when the tab is opened.
+  // The economic figures sit in the Science and society tab: drawn with the rest, and again when the tab is opened.
   function drawChronicleEcon() {
     [['ch-econ', drawEcon], ['ch-econ-res', drawEconRes], ['ch-econ-fund', drawEconFund],
      ['ch-econ-cap', drawEconCap], ['ch-econ-gfp', drawEconGfp]].forEach(([id, fn]) => safely(document.getElementById(id), fn));
@@ -4465,7 +4481,7 @@
       if (!what.value.trim()) { show('Please write your correction or suggestion first.', true); what.focus(); return; }
       const body = new URLSearchParams();
       fields().forEach((el) => body.set(el.name, el.value));
-      body.set('page', `${copy()}${document.querySelector('.fp.tab-chronicle') ? ', chronicle tab' : document.querySelector('.fp.tab-methods') ? ', methods tab' : ''}`);
+      body.set('page', `${copy()}${document.querySelector('.fp.tab-chronicle') ? ', chronicle tab' : document.querySelector('.fp.tab-science') ? ', science and society tab' : document.querySelector('.fp.tab-methods') ? ', methods tab' : ''}`);
       sending = true; send.disabled = true; show('Sending…');
       const stop = new AbortController(), timer = setTimeout(() => stop.abort(), 20000);
       try {
@@ -5263,7 +5279,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
 })();
 </script>
 <script>
-// The Chronicle's list of discoveries and scientific contributions: one folded subsection per entry, grouped by field.
+// The Science and society tab's list of discoveries and scientific contributions: one folded subsection per entry, grouped by field.
 // Loaded after the page's main script; built once from the discoveries and discovery_refs datasets. The aequorin and GFP
 // figure and table stay in the page as written, so they still show if the data fail, and move into that entry when it is built.
 (() => {
