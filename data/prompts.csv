@@ -145,7 +145,151 @@ fig 2, fig 3, fig 6, fig 13, fig 18, fig 19, tab 3, get rid of fig 25, the metho
 76,typed,2026-10-28T22:59:26.712Z,2026-10-28 15:59,1,The classes at the station. id like an added figure that shows the topics of the courses over the years. also. when i drag over the classes at the station figure i want to see the counts but also the names of the courses.,9842,0,0,9842
 77,typed,2026-10-28T23:00:25.576Z,2026-10-28 16:00,1,the artists in residence section needs some images of art that was made and a figure of its timeline which helps the reader understand amount and kind of art being made,0,0,0,0
 78,typed,2026-10-28T23:00:51.845Z,2026-10-28 16:00,1,the very first who is an fhl scientist key. i think it could be more clear. like a flow chart or something. i like the numbers,41479,693022,41,734501
-79,typed,2026-10-28T23:08:08.769Z,2026-10-28 16:08,1,"im making this in colab with [link to her profile] marjorie wonham of the uwfhl
+79,typed,2026-10-28T23:08:08.769Z,2026-10-28 16:08,1,"im making this in colab with [link to a profile] marjorie wonham of the uwfhl
 
 she should be a co-author.",12849,0,0,12849
-80,typed,2026-10-28T23:17:00.253Z,2026-10-28 16:17,1,ill need very clear step by step instructions on the google slides,40505,644997,26,685502
+80,typed,2026-10-28T23:17:00.253Z,2026-10-28 16:17,1,ill need very clear step by step instructions on the google slides,120661,906554,68,1027215
+81,typed,2026-10-29T16:41:50.566Z,2026-10-29 09:41,1,thats a lot of text since the last convo. please put here in clear instructions the form set up,3896,0,0,3896
+82,typed,2026-10-29T20:04:25.472Z,2026-10-29 13:04,1,[link to the feedback form's web app],7033,0,0,7033
+83,typed,2026-10-29T21:28:12.656Z,2026-10-29 14:28,1,[Sent from the page (Page code · stopped): “Fix this page.”],32679,41360,8,74039
+84,typed,2026-10-29T21:39:58.182Z,2026-10-29 14:39,1,i jsut submitted a test and i dont know where to see it.,587,0,0,587
+85,typed,2026-10-29T21:40:25.257Z,2026-10-29 14:40,1,oh i see it now,140,0,0,140
+86,typed,2026-10-29T21:40:59.783Z,2026-10-29 14:40,1,i dont think the chronicle needs a second button. also. i think the methods should be its own tab,2555,0,0,2555
+87,typed,2026-10-29T21:41:29.072Z,2026-10-29 14:41,1,"why is this massively repeated text in it? 
+
+
+Not in the network: 124 technicians and staff with no documented link to an FHL scientist, at the first year the sources show them (filled: technical and research support, 15; open: facilities, boats, dining, office, library and other staff, 109).
+
+[the same line, 12 times in all]",5038,0,0,5038
+88,typed,2026-10-29T21:42:17.543Z,2026-10-29 14:42,1,"also. i  think fig 11 should be collapsed by default Fig. 11.—Researchers and their students, postdocs and technicians: the mentoring network.",21755,56839,12,78594
+89,typed,2026-10-29T21:50:46.623Z,2026-10-29 14:50,1,the methods visualizations need serious work. we have agents looking at this data. i want it to be more visual. right now its just blocks of text. i want the reader to be able to understand how the agents were used,21205,212901,7,234106
+90,typed,2026-10-29T21:55:27.532Z,2026-10-29 14:55,1,we really want these numbers to be metrics the university would care a lot about. and very clearly sorted by them,11777,0,0,11777
+91,typed,2026-10-29T21:57:57.569Z,2026-10-29 14:57,1,the chronicle of the station should be collapsed by default and the open buttons should be in bold,207385,271091,12,478476
+92,typed,2026-10-29T23:33:46.870Z,2026-10-29 16:33,1,when done push to online so we can review,359,0,0,359
+93,typed,2026-10-29T23:54:25.653Z,2026-10-29 16:54,1,looks very interesting. id like to add a diagram just showing the readers that an agent is looking at papers. like a cartoon diagram. and it should also show that there is a coordinator agent. basically. a diagram of how ultracode works.,7316,0,0,7316
+94,typed,2026-10-29T23:55:41.977Z,2026-10-29 16:55,1,fig 24 fails to draw,11920,215717,6,227637
+95,typed,2026-10-29T23:58:06.084Z,2026-10-29 16:58,1,the send correction or suggestion text doesnt need a side (),8493,0,0,8493
+96,typed,2026-10-30T00:10:38.673Z,2026-10-29 17:10,1,remove this Data retrieved 2026-10-13 from the top,1721,0,0,1721
+97,typed,2026-10-30T00:11:03.186Z,2026-10-29 17:11,1,"make these collapsable 
+
+
+72 a year
+research papers name FHL (verified, 2016–2025 average)
+234 a year
+research papers by the 176 FHL scientists, wherever they
+were
+FHL scientists: FHL is their address on at least three verified
+publications (section IV)
+32
+by visitors, students and other
+collaborators
+39
+by FHL scientists, naming FHL
+195
+by FHL scientists, not naming FHL
+Who writes the research papers.—Research papers a year, averaged over 2016–2025.
+Research papers only: journal articles, reviews, books, chapters and letters, as in Fig. 1. Left: verified research papers that name FHL. Right: every research paper the FHL scientists identified by address (section IV) published in the same years, wherever they were (OpenAlex's article, review, book, chapter and letter types). The two meet in the middle box, drawn heavier: FHL scientists' papers that name the station. Authors are matched by OpenAlex identifier, or by name where a record has none. Student reports, theses, datasets and other work are counted in the summary below.
+
+Save figure as PNG or SVG
+Yearly averages, 2016–2025. Of the 141 verified works a year that name FHL, on average:
+
+72 research papers
+34 theses and student reports
+13.5 datasets and software
+22 other work
+Research output
+72
+research papers name FHL a year on average
+journal articles, reviews, books, chapters and letters
+Research impact
+18,363
+citations so far to the research papers of 2016–2025 that name FHL
+12
+median citations per such paper
+135,893
+citations to all research papers that name FHL, every year
+Training
+8.5
+theses and dissertations name FHL a year on average
+25
+student and course reports a year on average
+mostly from FHL classes
+Open data
+13.5
+datasets and software name FHL a year on average
+Public reach
+35
+news stories about the station or its research a year on average
+Collaboration
+1,277
+institutions co-authored verified work with FHL, every year
+79
+countries those institutions are in
+Other output
+22
+conference abstracts, reports, preprints, editorials and the rest a year on average
+At a glance.—What the station produces, sorted by the measures a university uses.
+Every number marked ""a year"" is a yearly average over 2016–2025; the others are totals. The bar splits the verified work that names FHL by kind; the boxes below sort it into research, its impact, training, open data, public reach and collaboration. Who wrote the research papers is in the chart above. Citations are OpenAlex counts as of October 2026, so recent papers have had less time to gather them. Hover over the bar for each part.",1949,0,0,1949
+98,typed,2026-10-30T00:11:37.288Z,2026-10-29 17:11,1,"i think books and research papers need to be seperated for fig 1 
+
+
+Research papers and books: verified
+Research papers and books: listed by FHL
+Research papers and books: probable
+Other work (student reports, theses, datasets, abstracts, agency reports and more): all tiers",4039,0,0,4039
+99,typed,2026-10-30T00:13:12.677Z,2026-10-29 17:13,1,the agent cartoon should be at the top of the methods,40719,75456,16,116175
+100,typed,2026-10-30T00:44:12.802Z,2026-10-29 17:44,1,show them to me here,3252,0,0,3252
+101,typed,2026-10-30T00:45:37.622Z,2026-10-29 17:45,1,i was thinking more like a scientific diagram you would see in a paper,8533,245703,6,254236
+102,typed,2026-10-30T00:49:17.091Z,2026-10-29 17:49,1,put this link Send a correction or suggestion in the top right of the page. not inline with the tabs,5066,0,0,5066
+103,typed,2026-10-30T00:50:20.262Z,2026-10-29 17:50,1,"get rid of this open function and the numbers reported 'Open every era
+106 of 106 events · 216 images'",3978,0,0,3978
+104,typed,2026-10-30T00:54:22.130Z,2026-10-29 17:54,1,yes stop counting books as research papers there too,6150,0,0,6150
+105,typed,2026-10-30T00:55:45.073Z,2026-10-29 17:55,1,i want you to do a writing audit. there are multiple places in the text where you have language that discusses the adding of data. the report is the report. the language in it should be static in its language like the data or features were always there. im not sure i describved this correctly. please redescribe in technical terms before running the audit,28853,119791,58,148644
+106,typed,2026-11-01T21:12:05.305Z,2026-11-01 13:12,1,after the correctness audit i want to run a text compaction audit. that is. for all text blocks. we want to have subagents compress the text without removing information content to optimize readability,7763,0,0,7763
+107,typed,2026-11-01T21:13:47.183Z,2026-11-01 13:13,1,when both the audit and text compaction finish. make sure the audit results are incorporated. and then go live with the report on the github io,65507,2024531,93,2090038
+108,typed,2026-11-02T18:59:02.376Z,2026-11-02 10:59,1,"i think those images are fine to use. other than the one with kids, thats good to remove. We are doing this for fhl. i already had looked at them and saw no issue. we have the issue form, for a reason. 
+
+probably best not to use british spellings since we are not british. 
+
+sounds like there were a lot of issues found. and we got a lot of claude sub usage left. 
+
+i'm wondering if we could create an economic impact section of the main report.",48060,934569,15,982629
+109,typed,2026-11-02T20:00:07.786Z,2026-11-02 12:00,1,great. yes. we want to decide on what classifications of economic impact we use. what does the uw normally use in other pubs?,86276,1331911,22,1418187
+110,typed,2026-11-02T23:40:23.580Z,2026-11-02 15:40,1,is it live?,485,0,0,485
+111,typed,2026-11-02T23:40:50.147Z,2026-11-02 15:40,1,no we can wait,85486,952596,32,1038082
+112,typed,2026-11-03T19:13:00.293Z,2026-11-03 11:13,1,yes go ahead and go live,42345,0,0,42345
+113,typed,2026-11-04T18:00:47.935Z,2026-11-04 10:00,1,"okay, next. we have a lot of stuff in the report that should be in the methods. flag which sections those are",8765,111440,14,120205
+114,typed,2026-11-04T18:12:58.596Z,2026-11-04 10:12,1,"i think everything to do with how. to trust the report should be moved to methods. also. the economic impacts and the gfp bit should be moved to chronicle in a new chronicle section.
+
+basically, the report needs to be just info that informs, not confuses. the how much to trust the report. thats all methods.",15243,146148,3,161391
+115,typed,2026-11-04T18:17:18.553Z,2026-11-04 10:17,1,i think that fig 1 is fine. i meant more like stuff from section IX in the report,26969,147465,3,174434
+116,typed,2026-11-04T18:28:42.155Z,2026-11-04 10:28,1,push it,781,0,0,781
+117,typed,2026-11-04T18:30:29.729Z,2026-11-04 10:30,1,i think the discoveries section in the chronicle should be expanded. with a collapsable subsection for each major discovery/scientific contribution from the labs. there are many.,8091,3983510,118,3991601
+118,typed,2026-11-04T18:52:13.670Z,2026-11-04 10:52,1,"this number 
+
+""Economic contribution, Washington
+$9.1 million
+output a year supported by FHL activity, with 54 jobs (2024 dollars; estimated from public sources, section VIII)""
+
+it seems like an underestimate. please help me understand it",26629,68292,2,94921
+119,typed,2026-11-04T19:06:02.695Z,2026-11-04 11:06,1,what i meant. is that impact is direct right? but it also isn't accounting for impact of the student educations etc that come through fhl?,2561,0,0,2561
+120,typed,2026-11-04T19:07:04.321Z,2026-11-04 11:07,1,do it,5732,0,0,5732
+121,typed,2026-11-04T19:09:33.043Z,2026-11-04 11:09,1,give error bars if possible,7871,0,0,7871
+122,typed,2026-11-04T19:14:51.423Z,2026-11-04 11:14,1,when ready push to live so mar i can review,655,0,0,655
+123,typed,2026-11-04T19:18:20.977Z,2026-11-04 11:18,1,we like to review remotely. okay if you push them to live,209449,5810131,565,6019580
+124,typed,2026-11-05T17:16:37.142Z,2026-11-05 09:16,1,add the missing papers to the census and fix the years.,32720,518446,30,551166
+125,typed,2026-11-05T17:28:48.987Z,2026-11-05 09:28,1,i've had some chats with folks. all the people in the network that we found. we should have subagents investigate them more so at least we can have written sections for them. and if we find anymore. more links,15289,0,0,15289
+126,typed,2026-11-05T17:32:02.939Z,2026-11-05 09:32,1,do it,72181,10561466,232,10633647
+127,typed,2026-11-05T18:18:26.961Z,2026-11-05 10:18,1,yes re-check the newsletter exclusion rule,24191,1930920,72,1955111
+128,typed,2026-11-05T18:23:45.673Z,2026-11-05 10:23,1,i think we need to think about our wording of 'fhl scientist' is more like notable scientist or significant scientist. because it is a little wrong. almost everyone in the network is a scientist.,2774,0,0,2774
+129,typed,2026-11-05T18:27:24.676Z,2026-11-05 10:27,1,"yes core scientists works. 
+
+we should update that language throughout",236268,8412846,204,8649114
+130,typed,2026-11-06T01:25:52.141Z,2026-11-05 17:25,1,status?,1312,0,0,1312
+131,typed,2026-11-06T01:27:03.471Z,2026-11-05 17:27,1,it is okay to have high school students in the network,2109,0,0,2109
+132,typed,2026-11-06T01:56:04.662Z,2026-11-05 17:56,1,when do push live,1341,0,0,1341
+133,typed,2026-11-06T01:56:46.943Z,2026-11-05 17:56,1,no thats fine we can wait. do it right,300179,2525895,59,2826074
+134,typed,2026-11-09T21:26:35.624Z,2026-11-09 13:26,1,[Rulings on six people named in the network and on one census record; the names are withheld.],33538,0,0,33538
+135,typed,2026-11-13T16:25:23.949Z,2026-11-13 08:25,1,"i think we want 4 tabs not 3. the chronicle should be split into chronicle and science. or something like that. so that the visual story is one tab and the other info is the other tab
+
+and then the methods need to be brought to be up to date.",117452,418020,19,535472

@@ -44,8 +44,8 @@ audited,380,records in the audit sample
 audited_sample,340,audited records of the stratified random sample (the audit run)
 audited_listed,40,audited records found only on FHL's own lists (the resolution run's audit agent)
 audit_full_text,260,audited records read in full text
-ai_runs,25,"AI runs (multi-agent workflows, the topic classification, and the checks, rosters and profiles)"
-ai_agents,639,AI agents run in those runs
+ai_runs,69,"AI runs (multi-agent workflows, the topic classification, and the checks, rosters and profiles)"
+ai_agents,2273,AI agents run in those runs
 build_hours,8.7,wall-clock hours from the first prompt to the census and page delivered on 14 October (runs 1–6)
 mentor_pairs,146,mentor links inferred from co-authorship
 mentor_checked,146,inferred links checked against public records
@@ -137,6 +137,7 @@ whiteley_inferred,2,"of those, probable (full-text match on non-marine work)"
 topic_classified,6501,publications given a research topic
 topic_labelled_agents,6501,publications given a topic by the labeling agents (batches 1-16)
 topic_labelled_session,70,"publications given a topic after the labeling agents (batch 17, the hand review and the page and CV re-check)"
+topic_labelled_recheck,19,"of those, publications of the page and CV re-check, labeled and checked by the agents of run 59"
 topic_with_abstract,4128,"of those, classified with an abstract"
 topic_sample,300,"publications classified twice, independently"
 topic_agreement_pct,94,percent agreeing on the topic
@@ -147,7 +148,7 @@ topic_harmonized,223,labels changed by the consistency review
 topic_sample_agree,282,"of the sample, publications given the same topic twice"
 topic_batches,16,random batches classified
 topic_batches_within_chance,15,batches whose topic mix matched the whole within the range expected by chance
-agents_launched,650,"AI agents launched, including those stopped or never returned"
-prompts_launching,17,"prompts that launched agents, including the one whose agent is linked to no run"
-prompts_launching_runs,16,prompts that launched the agents of the runs (Table VIII)
-agents_aborted,4,agents of a first launch that was stopped and launched again (not counted)
+agents_launched,2300,"AI agents launched, including those stopped or never returned"
+prompts_launching,41,"prompts that launched agents, including the one whose agent is linked to no run"
+prompts_launching_runs,40,prompts that launched the agents of the runs (Table VIII)
+agents_aborted,10,agents of a first launch that was stopped and launched again (not counted)

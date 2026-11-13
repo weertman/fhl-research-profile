@@ -23,7 +23,7 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 11,,0,Profile advisors,make,4,,,,the fact-checked profiles,lists advisors the profiles state plainly
 11,,1,Rosters,make,30,,,,a batch of FHL core scientists (five agents at a time),"lists trainees, co-supervised students and committees"
 11,,2,Verify rosters,check,28,,,,that batch's roster entries,re-opens each page; confirms or removes every entry
-12,,0,Rosters,make,33,,,,"core scientists without a roster, or with an incomplete one","finds or completes a roster, or records why there is none"
+12,,0,Rosters,make,33,,,,"FHL core scientists without a roster, or with an incomplete one","finds or completes a roster, or records why there is none"
 12,,1,Verify rosters,check,29,,,,that batch's new entries,re-opens each page; confirms or removes every entry
 13,,0,Extract events,make,12,,,744 dated events,one group of history sources,"lists dated events, each with its source"
 13,,1,Images,make,3,,,,openly licensed images,writes a caption and alt text for each
@@ -39,7 +39,7 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 16,,1,Re-check,check,25,159,readings,"152 agreed · 2 changed · 5 disagreed, first reading kept · from 32 of 49 batches",two finished batches,re-opens five records per batch; agrees or not
 17,,0,Read,make,21,904,publications,,one batch of verified publications,"reads the author addresses, footnotes included"
 17,,1,Re-check,check,11,103,readings,96 agreed · 7 changed · from 21 of 21 batches,two finished batches,re-opens five records per batch; checks the addresses
-18,,0,Research,make,11,,,,public archives and the chronicle,"builds one list: core scientists, staff, classes or artists"
+18,,0,Research,make,11,,,,public archives and the chronicle,"builds one list: FHL core scientists, staff, classes or artists"
 18,,1,Fact-check,check,11,,,,that list,checks its least certain entries against sources
 19,,0,Curate,review,5,,,,the lists with their fact-check verdicts,"applies fixes, merges duplicates, keeps professional facts"
 20,,0,Review,make,3,,,,the page's code and data,reviews them through one lens; lists findings
@@ -58,3 +58,115 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 25,,1,Check,check,11,,,,eight of a finder's candidates,confirms provenance or license and year; writes the caption
 25,,2,Curate,review,5,,,,the checked images of one period,picks up to two images a year
 25,,3,Fact-check,check,6,,,,ten of the chosen images,"checks every caption, year and credit"
+26,,0,Review,make,5,,,,"the round's changes to the page, data and images",reviews them through one lens; lists findings with fixes
+26,,1,Verify,check,37,,,,one finding,checks it against the files; tries to refute it
+27,,0,Review,make,3,,,,"the feedback form's markup, styles and script",reviews them through one lens; lists findings
+27,,1,Verify,check,5,,,,one finding,checks it against the code; tries to refute it
+28,,0,Review,make,3,,,,the page and its version before these edits,reviews them through one lens; lists findings
+28,,1,Verify,check,9,,,,one finding,checks it against the code; tries to refute it
+29,,0,Gather,make,3,,,,"the run logs, the scripts of the runs, or the Methods section","builds an agent dataset, a design per run, or a critique"
+29,,1,Design,review,3,,,,all three gatherers' results and the page's constraints,proposes four to seven figures from one angle
+29,,2,Synthesize,review,1,,,,the three designers' proposals,judges them; writes the final build plan
+30,,0,Review,make,4,,,,"the Methods figures' data, code, prose and build",reviews them through one lens; lists up to 12 findings
+30,,1,Verify,check,4,,,,that lens's findings,checks each finding against the code and data
+31,,0,Verify,check,4,,,,the record of the fixes and one area's checklist,recomputes or re-reads each item; reports those that fail
+32,,0,Design,make,3,,,,"the method's facts, the style rules and one concept",draws the concept as a wide and a phone drawing
+32,,1,Critique,check,3,,,,one design's two drawings and the brief,"checks facts, style and geometry; fixes what it finds"
+33,,0,Review,make,3,,,,"the cartoon, its caption and the renumbered page",reviews them through one lens; lists findings with evidence
+33,,1,Verify,check,13,,,,one finding,checks it against the files; tries to refute it
+34,,0,Design,make,3,,,,"the method's facts, the style rules and one concept",draws the concept as a wide and a phone schematic
+34,,1,Critique,check,3,,,,one design's two drawings and the brief,"renders them; checks facts, style and geometry; fixes what it finds"
+35,,0,Sweep,make,9,,,,"one page part, code-written text, data text, or a word list",flags editing-history wording; proposes a static rewrite
+35,,1,Verify,check,49,,,,one flagged passage and the rule,"judges it real, borderline or not; gives the best rewrite"
+36,,0,Audit,make,12,,,,"the page, data, documents and a rendered text snapshot",audits one area; lists findings with evidence and an exact fix
+36,,1,Verify,check,12,,,,that area's findings,checks each finding against the files; corrects the fix
+37,,0,Fix 1,make,4,,,,the findings for files it alone owns,applies the fixes; re-runs its scripts; reports changed numbers
+37,,1,Fix 2,make,2,,,,"the first fixers' changed numbers, hand-offs and skipped items","fixes the documents and site build, or the page's numbers"
+37,,2,Build,make,1,,,,the fixed sources,rebuilds every copy; renders them; scans for private data
+37,,3,Verify,check,6,,,,"one group's findings and fixer reports, or the whole report",checks each fix holds; looks for regressions; lists open items
+37,,4,Repair,make,1,,,,the 26 items the checkers left open,fixes them or says why not; rebuilds and re-renders the report
+38,,0,Compact,make,48,,,,"one of 24 groups of page text, events, captions or profiles",one agent shortens the text; a second checks every fact survives
+38,,1,Apply,make,2,,,,the approved edits for the page or for the data,applies them exactly; data edits through an override file
+38,,2,Verify,check,5,,,,the applied edits and the text before and after,one rebuilds and renders; three compare blocks; one repairs problems
+39,,0,Gather,make,6,,,,"one evidence topic, the census and public records","gathers sourced figures, claims and gaps for that topic"
+39,,1,Price awards,make,1,,,,award numbers acknowledged by census papers,looks up each award's dollars in public grant databases
+39,,2,Verify,check,7,,,,"one sweep's figures and claims, or the award pricing","re-opens sources, reruns computations; confirms, corrects or rejects each"
+39,,3,Design,review,1,,,,every sweep's evidence with its fact-check verdicts,"designs the section from what held: structure, figures, tables, draft text"
+40,,0,Survey,make,5,,,,"one group of sources: university-wide, research offices, units, frameworks, peers","lists each report's impact categories, measures and method"
+40,,1,Verify,check,5,,,,one survey's publications,re-opens each source; corrects or drops what does not hold
+40,,2,Synthesize,review,1,,,,all checked surveys,"drafts a classification for the station's section, with precedents"
+41,,0,Inputs,make,4,,,,"one input: multipliers, operations, students and visitors, or research and construction","estimates low, central and high values from public sources"
+41,,1,Model,make,1,,,,the four sets of inputs,builds the state and county model with ranges and sensitivity
+41,,2,Review,check,3,,,,"the model and one lens: economics, sources, or regional fit",reviews it through that lens; reports issues with evidence and fixes
+41,,3,Fix,make,1,,,,the model and the reviewers' 29 issues,applies blocking and major fixes; reruns; explains any rejected
+41,,4,Design,review,1,,,,the final model and the counted evidence,"designs the section: modeled block, counted parts, figures, draft text"
+42,,0,Audit,make,9,,,,"the whole report, its data and website; one area",audits that area; lists findings with evidence and an exact fix
+42,,1,Verify,check,9,,,,that area's findings,"checks each finding against the files; confirms, refutes or flags it"
+43,,0,Verify,check,9,,,,one audit area's confirmed or uncertain findings and their fixes,"checks each fix in page, data and website; notes further problems"
+43,,1,Regression,check,1,,,,the page and data before and after the fixes,re-reads every changed passage and code edit for introduced errors
+44,,0,Check,check,2,,,,"run 43's 33 problems and the page, or the public website","re-checks those problems and key sections, or scans the website"
+45,,0,Read,make,7,,,,"one block of the report, and the Methods section",flags passages to move to Methods or trim
+45,,1,Challenge,check,6,,,,one reader's flags,"tests each flag against the page and Methods; keeps, adjusts, drops"
+45,,2,Completeness,review,1,,,,all surviving flags and the whole report,finds missed passages; rates each section's share of method
+46,,0,Scout,make,3,,,,the planned restructure and one inventory task,"lists trust passages, number references or code the move breaks"
+47,,0,Verify,check,3,,,,the restructured page and its previous version,"checks references, lost or doubled content, or rendering"
+48,,0,Sweep,make,6,,,,"the census, the station's history, or one group of fields",lists candidate contributions with a specific tie to FHL
+48,,1,Shortlist,review,1,,,,all 279 candidates from the six searches,merges duplicates; picks 55 by written criteria; gives reasons for drops
+48,,2,Write,make,55,,,,one shortlisted contribution and a brief,writes a sourced entry from primary papers and independent accounts
+48,,3,Check,check,55,,,,one written entry and its sources,re-opens the sources; tries to refute every claim and the FHL tie
+48,,4,Completeness,review,1,,,,the surviving entries and every dropped candidate,"names missing contributions, thin fields and wrongly dropped candidates"
+49,,0,Check,check,2,,,,"the last edits, or the copy of the page stored online","tries to refute each edit, or runs the copy in simulation"
+50,,0,Research,make,7,,,,"a set of gaps the completeness review named, or training counts",drafts or rejects entries and additions; gathers sourced training counts
+50,,1,Verify,check,43,,,,"one proposed entry or addition, or the training counts","re-opens sources; one check tests facts, the other the FHL tie"
+50,,2,Fix,review,21,,,,one proposed item and its two independent checks,"corrects what the checks support, or drops the item"
+51,,0,Edit,make,56,,,,one checked discovery entry with its source notes,rewrites it for a lay reader with no fact beyond the original
+51,,1,Check,check,56,,,,the edit and the entry's checked original,compares them sentence by sentence; lists problems with exact fixes
+51,,2,Fix,make,55,,,,"the edit, the checked original and the checker's problems",applies each fix the original supports; explains any it rejects
+51,,3,Recheck,check,55,,,,the corrected edit and the checked original,repeats the sentence-by-sentence comparison against the original
+52,,0,Label,check,119,,,,one entry's checked original and edit; its current label,judges the FHL-connection label; a third judge settles disagreements
+52,,1,Fix,make,66,,,,an entry with open problems and the checker's findings,applies the right fixes; rewrites paper shorthand as plain sentences
+52,,2,Check,check,66,,,,"the fixed edit, its label and the checked original","reports only problems that matter to a reader, with exact fixes"
+52,,3,Read,review,11,,,,every entry in one field group,reads as a lay reader; proposes exact fixes; flags overlapping entries
+53,,0,Review,check,4,,,,"the page changes, data files, final entries and checked originals","reviews code, facts, wording or hand-applied fixes; ranks findings"
+54,,0,Read,make,11,,,,one paper missing from the census or excluded by it,"finds open text; quotes any FHL address, site or thanks"
+54,,1,Verify,check,11,,,,one reader's claims about a paper,re-opens the sources; checks quotes and metadata; tries to refute
+54,,2,Years,check,7,,,,one census record with a doubtful publication year,"checks the year against the publisher, Crossref and a citation"
+54,,3,Critic,review,1,,,,a summary of all eleven readings,tries open routes the readers missed for papers not read
+55,,0,Research,make,113,,,,"a batch of network people with links, papers and candidate records",reads public records; drafts each section; reports mentoring links with quotes
+55,,1,Fact-check,check,113,,,,one batch's drafts and its batch file,re-opens every source; tests identity; cuts what fails; saves the batch
+56,,0,Read,make,28,,,,a batch of 25 excluded records,opens each publication; records whether and where it names FHL
+56,,1,Re-check,check,28,,,,the reader's decisions picked by a script for a second look,re-opens each publication before weighing the reader's reasoning
+56,,2,Adjudicate,review,15,,,,only the records where reader and second look disagree,opens the publication and rules from what it says
+56,,3,Critic,review,1,,,,"all reader results, checks and rulings, and the census","looks for duplicates, inconsistent treatment, wrong metadata and gaps"
+57,,0,Review,check,2,,,,before and after copies of the page and data; wording rules,one tests each use is true; one tests quotes and misses
+58,,0,Read again,make,10,,,,a batch of up to 25 records no second reader opened,seeks a readable copy by open routes; decides from the publication
+58,,1,Test changes,check,10,,,,"every yes, changed decision and unchecked no in that batch",re-opens each publication and tries to refute the decision
+58,,2,Settle,review,1,,,,the one record where the two looks disagree,opens the publication and rules
+58,,3,Census items,check,1,,,,three census questions raised in run 56,decides each from the census records and open sources
+59,,0,Label,make,1,,,,"27 publications with title, venue and the topic guide",gives each a research topic and organism group
+59,,1,Check,check,1,,,,the same records and the draft labels,"labels each again, compares, keeps defensible calls; changed none"
+60,,0,Review,check,2,,,,"the merged census, decisions, rulings and a pre-merge copy",one checks the records; one checks the numbers and Methods text
+61,,0,Flags,review,10,,,,the fact-checkers' notes for about a dozen batches,"pulls out what an editor must act on, by type"
+61,,1,Same person,check,8,,,,proposed same-person pairs and unmatched spellings of mentor names,rules on each with a stated tie; a skeptic tests each merge
+61,,2,Links,check,26,,,,about 30 links reported wrong or poorly sourced,opens the source and rules; a skeptic tests removals and relabels
+61,,3,Audit,check,26,,,,ten written sections drawn at random,checks each claim against sources; a skeptic re-tests claimed errors
+62,,0,Shared sources,check,5,,,,one source that many sections and links rest on,reads it once; rules on every network row citing it
+62,,1,Text repair,make,32,,,,about 18 sections with their flags and audit findings,makes the smallest honest edit; a checker tests each patch
+62,,2,Network data,make,30,,,,"reported errors in the network's data, with present rows",turns each into exact changes; a skeptic tests the riskier ones
+62,,3,New people,make,34,,,,"up to 22 people brought in by links, with quotes",writes a short section; a fact-checker re-opens each source
+62,,4,Privacy and census,make,5,,,,linked pages showing personal details; notes on census errors,"decides keep, replace or unlink; proposes and tests census corrections"
+63,,0,Sections,check,30,,,,about a dozen sections with sources and network rows,checks each claim and row; a skeptic tests each claimed error
+63,,1,Links,check,12,,,,12 network links with their source pages,opens each page and judges the tie; a skeptic tests failures
+63,,2,Reviews,check,2,,,,the build scripts and outputs; every published entry,one tests data integrity; one reads as the report's reader
+64,,0,Verify,check,5,,,,"the audit's fixes, the outputs and a pre-fix copy","re-tests one dimension: integrity, text, rows, Methods or completeness"
+64,,1,Skeptic,check,1,,,,every fault the five checkers reported,tries to refute each in the files; gives the exact fix
+65,,0,Verify,check,3,,,,"the 61 confirmed faults, the changed entries and person cards","re-tests one dimension: earlier faults, changed text or card wording"
+65,,1,Skeptic,check,1,,,,every fault the three checkers reported,tries to refute each in the files; gives the exact fix
+66,,0,Check,check,3,,,,"the third round's fixes, the outputs and the page code",one re-tests the 45; one seeks fresh damage; one tests page code
+67,,0,Check,check,2,,,,"the fourth round's changes, compared against a backup",one tests data rules and text edits; one tests page changes
+68,,0,Draft,make,4,,,,the scripts and agents' returns of a group of runs,describes each run and what each stage was given and did
+68,,1,Verify,check,4,,,,that group's drafts,re-opens the scripts and returns; corrects what does not hold
+68,,2,Harmonize,review,1,,,,all 42 checked entries,"makes wording, families and shapes consistent across runs"
+69,,0,Audit,make,4,,,,one part of the Methods tab and the published data,tests each claim; lists stale or wrong text with an exact fix
+69,,1,Verify,check,4,,,,that part's findings,tries to refute each against the files; corrects the fix
+69,,2,Completeness,review,1,,,,the whole Methods tab and the confirmed findings,looks for what the four auditors missed

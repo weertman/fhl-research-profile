@@ -448,6 +448,7 @@
   .fp-tabs a { display: flex; align-items: center; justify-content: center; text-align: center; padding: .5rem 1.1rem; font-size: .86rem; text-transform: uppercase; letter-spacing: .12em; color: var(--fp-ink); text-decoration: none; }
   .fp-tabs a + a { border-left: 1px solid var(--fp-ink); }
   .fp-tabs a[aria-current="page"] { background: var(--fp-ink); color: var(--fp-paper); }
+  @media (max-width: 560px) { .fp-tabs { max-width: 100%; } .fp-tabs a { padding: .45rem .5rem; letter-spacing: .06em; font-size: .8rem; } }
   .fp-feedback { font-size: .84rem; font-style: italic; color: var(--fp-ink); }
   /* the feedback link sits at the top right of the page; where it would run into the centered imprint, on its own line */
   .fp-mast { position: relative; }
@@ -1406,9 +1407,9 @@
       </figcaption>
     </figure>
     <div class="fp-notes">
-      <p class="fm-lead">In the runs of Table VIII (13 to 29 October) the census and its companions were built by <span data-fm="agents-counted">—</span> AI agents in <span data-fm="runs-agents">—</span> runs,
-        plus <span data-fm="runs-none">—</span> run done in the coordinating session, with the later runs listed after that table on top of these counts; <span data-fm="prompts-launching">—</span> of the
-        compiler's prompts launched the agents in Table VIII (Fig. 27). Fig. 24 shows how one job was handed out and gathered back; Figs. 25–27 show where the agents went, how each run was
+      <p class="fm-lead">The census, the report and their companions were built by <span data-fm="agents-counted">—</span> AI agents in <span data-fm="runs-agents">—</span> runs
+        (Table VIII), plus <span data-fm="runs-none">—</span> run done in the coordinating session; <span data-fm="prompts-launching">—</span> of the
+        compiler's prompts launched them (Fig. 27). Fig. 24 shows how one job was handed out and gathered back; Figs. 25–27 show where the agents went, how each run was
         built and when they worked; Figs. 28 and 30 follow the publication census and one agent's job inside it; Figs. 31 and
         32 show how the agents' work was checked and how far it can be trusted.</p>
       <p><span class="runin">Definition.</span>—A publication is counted when Friday Harbor Laboratories, or the station under
@@ -1453,11 +1454,6 @@
         <tbody></tbody>
       </table></div>
     </details>
-    <details class="fm-more">
-      <summary>Later runs, November 2026 and the last days of October.</summary>
-      <p class="cap">Table VIII and the figures built on it hold the 25 runs from 13 to 29 October (UTC), from the census through the mentoring network and the chronicle's images. These runs came after, grouped by what they did; agents and output tokens are from the session's run records.</p>
-      <div class="fp-scroll"><table class="ruled"><thead><tr><th>Work</th><th class="num">Agents</th><th class="num">Output tokens (millions)</th></tr></thead><tbody><tr><td>Page review and figures, late October</td><td class="num">167</td><td class="num">1.5</td></tr><tr><td>Correctness audits</td><td class="num">68</td><td class="num">2.4</td></tr><tr><td>Text compaction and placement</td><td class="num">77</td><td class="num">0.9</td></tr><tr><td>Economic contribution</td><td class="num">36</td><td class="num">2.1</td></tr><tr><td>Discoveries in the Chronicle</td><td class="num">677</td><td class="num">9.7</td></tr><tr><td>Census additions</td><td class="num">30</td><td class="num">0.5</td></tr><tr><td>Records on FHL's own pages</td><td class="num">98</td><td class="num">2.5</td></tr><tr><td>Review of the term “FHL core scientists”</td><td class="num">2</td><td class="num">0.1</td></tr><tr><td>Sections on the network's people</td><td class="num">232</td><td class="num">10.5</td></tr><tr><td>Review of those sections and the network</td><td class="num">70</td><td class="num">2.9</td></tr><tr><td>Repair of the sections and the network</td><td class="num">106</td><td class="num">4.8</td></tr><tr><td>Final audit</td><td class="num">44</td><td class="num">1.7</td></tr><tr><td>Checks of the audit's fixes</td><td class="num">15</td><td class="num">0.9</td></tr></tbody></table></div>
-    </details>
     <figure class="fp-fig fm-fig">
       <div class="fm-shapes" id="ch-shapes" data-source="agent_stages"></div>
       <p class="fm-rounds" id="fm-rounds"></p>
@@ -1465,7 +1461,7 @@
         <h3 id="fig-shapes"><span class="fig">Fig. 26.</span>—How a run is built: four shapes.</h3>
         <p class="cap">Most runs combine these four shapes, drawn here from real runs. Squares are agents, as in Fig. 25; each step
           says what its agents were given, what they did and, where it was counted, what they handed on. In every shape, later
-          agents check the earlier agents' work instead of taking it on trust; the last panel holds the few runs that fit no single
+          agents check the earlier agents' work instead of taking it on trust; the last panel holds the runs that fit no single
           shape. Pick a run under a panel to draw it.</p>
       </figcaption>
     </figure>
@@ -1647,13 +1643,13 @@
         page, a researcher's CV linked from FHL or an FHL newsletter, since a CV holds work done elsewhere and a newsletter cites other
         people's papers. AI agents tried to open each one, a second time where no second agent had tested the first try. A second agent re-opened every
         positive decision, every highly cited record and a sample of the rest (<span data-source="methods_facts" data-field="value" data-where="fact=recheck_checks">—</span> in all), a third settled disagreements, and the coordinating session
-        changed <span data-source="methods_facts" data-field="value" data-where="fact=recheck_rulings">—</span> decisions after review. These agents ran in November 2026 and are listed with the later runs below Table VIII.
+        changed <span data-source="methods_facts" data-field="value" data-where="fact=recheck_rulings">—</span> decisions after review. These agents ran in runs 56 and 58 (Table VIII).
         <span data-source="methods_facts" data-field="value" data-where="fact=recheck_publications">—</span> are publications tied to FHL, <span data-source="methods_facts" data-field="value" data-where="fact=recheck_verified">—</span> Verified from the publication and <span data-source="methods_facts" data-field="value" data-where="fact=recheck_probable">—</span> Probable from another dated source, most of them reports
         and web documents by scientists at FHL; <span data-source="methods_facts" data-field="value" data-where="fact=recheck_news">—</span> are news items. <span data-source="methods_facts" data-field="value" data-where="fact=recheck_not_shown">—</span> were read and do not tie the work to FHL, <span data-source="methods_facts" data-field="value" data-where="fact=recheck_not_publication">—</span> are not publications and
         <span data-source="methods_facts" data-field="value" data-where="fact=recheck_duplicate">—</span> repeat another record. The other <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread">—</span> could not be read, nearly all behind paywalls or bot checks or with no copy online:
         <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread_person">—</span> on a person's page or CV are listed as Unverified candidates, and <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread_news">—</span> only cited on a news page are excluded. At the rates seen
         among those read, about <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread_like_read">—</span> of the unread would connect to FHL; papers with open copies are not a random sample, so this figure is left out of the
-        best estimate. Another <span data-source="methods_facts" data-field="value" data-where="fact=recheck_licensed_reads">—</span> papers opened only on publisher pages that a university network license appears to have served; the census
+        best estimate. Among the unread are <span data-source="methods_facts" data-field="value" data-where="fact=recheck_licensed_reads">—</span> papers that opened only on publisher pages that a university network license appears to have served; the census
         uses only public copies, so these count as unread. Of the papers not tied to FHL, <span data-source="methods_facts" data-field="value" data-where="fact=recheck_archive_reads">—</span> were read from Wayback Machine copies,
         among them the society's own copies of <i>Limnology and Oceanography</i> papers whose publisher's site refuses automated reading. These records are outside the audit sample.</p>
       <p><span class="runin">Recall.</span>—FHL's own publication lists serve as an independent sample of FHL work. Recall is the
@@ -1704,11 +1700,11 @@
         center for visiting scholars and writers, are labeled Whiteley Center, with their field as sub-topic (Fig. 6):
         <span data-source="methods_facts" data-field="value" data-where="fact=whiteley_records">—</span> publications, <span data-source="methods_facts" data-field="value" data-where="fact=whiteley_inferred">—</span> of them probable, inferred from a
         full-text match on non-marine work published since 2000. The <span data-source="methods_facts" data-field="value" data-where="fact=topic_labelled_session">—</span> publications that entered the census late, through the verification
-        push (the other publications it verified already had topics), the hand review and the re-check of FHL pages, were labeled afterwards under the same guide.</p>
+        push (the other publications it verified already had topics), the hand review and the re-check of FHL pages, were labeled afterwards under the same guide, those of the re-check by an agent of run 59 with a second agent checking each label.</p>
       <p><span class="runin">Clean-up.</span>—A final review after the topic classification merged
         <span data-source="methods_facts" data-field="value" data-where="fact=dedup_dropped">—</span> duplicate records into <span data-source="methods_facts" data-field="value" data-where="fact=dedup_kept">—</span>. These were the same article under two
         DOIs, a preprint and its published version, repository, reprint and translated copies, garbled copies from the
-        historical lists, and the same dataset deposited twice; a title scan after the verification push found 25 of them.
+        historical lists, and the same dataset deposited twice; a title scan after the verification push found 25 of them, the review of the network's people 8 and the re-check of FHL pages 1.
         The kept record takes the strongest FHL evidence and the highest citation count in its group; a dataset, a
         conference abstract or a thesis counts as a work of its own. The review also removed <span data-source="methods_facts" data-field="value" data-where="fact=false_excluded">—</span>
         records that are not publications or whose only FHL match lies in a reference list (whole issues, newsletters,
@@ -1727,7 +1723,7 @@
       <p><span class="runin">People.</span>—FHL core scientists identified by address are the authors who list FHL, or the station under an earlier
         name, as their address on at least three verified publications, identified through OpenAlex's author records. The
         mentoring network (Fig. 11) joins them to their students and teachers through UW thesis records, Wikidata, lab rosters
-        and CVs read by AI agents and re-checked entry by entry, graduate and undergraduate thesis committees, fact-checked profiles, and mentors
+        and CVs read by AI agents and re-checked entry by entry, graduate and undergraduate thesis committees, fact-checked profiles, course records and other public records read by AI agents, and mentors
         inferred from co-authorship and checked by agents (Figs. 26, 31 and 34). Of those identified by address,
         <span data-source="methods_facts" data-field="value" data-where="fact=roster_found">—</span> have a roster, CV list or committee list, <span data-source="methods_facts" data-field="value" data-where="fact=roster_no_lab">—</span> lead no lab of their own,
         <span data-source="methods_facts" data-field="value" data-where="fact=roster_historical">—</span> worked before public lab pages, and for <span data-source="methods_facts" data-field="value" data-where="fact=roster_not_found">—</span> who taught, no list of
@@ -1742,7 +1738,7 @@
         with a paper before or in their first FHL year) and where they went (the institution with papers in the most years
         after their last FHL paper, counting only institutions with at least two such years); those still publishing from
         FHL in the last three years count as still at FHL. Citation links count, from OpenAlex reference lists, how often
-        one core scientist's FHL papers cite another's. Advisor-student links come from UW thesis records,
+        the FHL papers of one FHL core scientist cite another's. Advisor-student links come from UW thesis records,
         which name the advisor, and from Wikidata's doctoral-advisor and doctoral-student statements. People were matched to
         Wikidata by ORCID or by Wikidata's own links to the station, and advisors were followed up to five generations back;
         a match was dropped if it would make the person younger than 18 at their first FHL paper. Mentors were also inferred
@@ -1763,7 +1759,7 @@
         every page to confirm each entry. Undergraduates named on a home-university lab page are included only if they also
         appear as authors in the census, and the Star Lab team comes from FHL's own pages, read from Internet Archive copies.
         Graduate committees listed in thesis records and CVs, and undergraduate thesis committees in thesis records, add <span data-source="methods_facts" data-field="value" data-where="fact=committee_links">—</span> links, drawn dotted, and advisors and mentors named
-        in the fact-checked profiles (below) add <span data-source="methods_facts" data-field="value" data-where="fact=profile_links">—</span>. Every core scientist identified by address was searched, in three rounds (the last starting from each profile's sources and ORCID record,
+        in the fact-checked profiles (below) add <span data-source="methods_facts" data-field="value" data-where="fact=profile_links">—</span>. Every FHL core scientist identified by address was searched, in three rounds (the last starting from each profile's sources and ORCID record,
         since web-search capacity ran short in the first two): <span data-source="methods_facts" data-field="value" data-where="fact=roster_found">—</span> have a roster, CV list or committee list;
         <span data-source="methods_facts" data-field="value" data-where="fact=roster_no_lab">—</span> lead no lab of their own (students, early-career researchers or staff); <span data-source="methods_facts" data-field="value" data-where="fact=roster_historical">—</span>
         worked before public lab pages and no list of their students is public; and for <span data-source="methods_facts" data-field="value" data-where="fact=roster_not_found">—</span> who taught,
@@ -1776,7 +1772,7 @@
         of the same name, a biogerontologist and a statistician. Matthew R. Baker's record likewise held a namesake's earlier papers, so its starting point and first institution are left out. Three scientists whose papers OpenAlex had split between
         two records, David O. Duggins, Aaron W. E. Galloway and Thomas E. Schroeder (each also recorded under initials), were
         joined by hand, and E. J. Lund's OpenAlex destination, the University of Copenhagen, which contradicts his career at
-        the University of Texas, is left out. Core scientists from before about 1970 are under-represented because older papers carry no address
+        the University of Texas, is left out. FHL core scientists identified by address are few before about 1970 because older papers carry no address
         metadata.</p>
       <p><span class="runin">Sections on the network's people.</span>—Everyone in the network has an entry in "Find a person". Beyond the profiles, AI agents
         wrote <span data-source="methods_facts" data-field="value" data-where="fact=sections">—</span> shorter sections from public pages, papers, theses and ORCID records, and a second agent checked each claim. They cover
@@ -1794,7 +1790,7 @@
       <figcaption>
         <h3 id="fig-linksrc"><span class="fig">Fig. 34.</span>—Where the links of the mentoring network come from.</h3>
         <p class="cap">Links in Fig. 11 by the source that documents them. <span data-fm="links-agent">—</span> of the <span data-fm="links-all">—</span> were found by
-          AI agents reading lab rosters, CVs, committee lists, course records, profiles and other public records (runs 9 to 12; Fig. 26, and the later runs listed after Table VIII), each re-checked; the rest come from UW thesis records, Wikidata and the co-authorship rule; agents checked that rule's links one by one (Fig. 31). A
+          AI agents reading lab rosters, CVs, committee lists, course records, profiles and other public records (runs 9 to 12, 55 and 61 to 63; Fig. 26), each re-checked; the rest come from UW thesis records, Wikidata and the co-authorship rule; agents checked that rule's links one by one (Fig. 31). A
           pair documented by more than one source is counted once, under the source that documented it first.</p>
       </figcaption>
     </figure>
@@ -1939,41 +1935,45 @@
         <a href="https://github.com/weertman/fhl-research-profile/blob/main/docs/economic_model_method.md" target="_blank" rel="noopener">full method</a>
         and the model's <a href="https://github.com/weertman/fhl-research-profile/tree/main/data/economics" target="_blank" rel="noopener">inputs, results and sensitivities</a>
         are published with the data; the code is kept with the census files. AI agents (Claude Opus 5.5) gathered the
-        sources, built the model and reviewed it in November 2026.</p>
+        sources, built the model and reviewed it (runs 39 to 41, Table VIII).</p>
     </div>
 
     <h3 class="fp-subhead" id="ai-use">The use of artificial intelligence</h3>
     <div class="fp-notes">
       <p><span class="runin">Platform.</span>—The census, its code, the spreadsheet, the figures and this page were produced
-        with Claude Code (version 2.1.295 and later), Anthropic's coding agent, in the Claude desktop app on macOS, on 13–16
-        and 28–29 October 2026 (UTC), apart from the economic contribution and the discoveries in section X, the economic model and methods, and a final round of
-        corrections, which were produced in November 2026 and are not counted in Table VIII or in the totals below. The
+        with Claude Code (version 2.1.295 and later), Anthropic's coding agent, in the Claude desktop app on macOS, from 13 October
+        to 13 November 2026. The
         coordinating session and every agent it started used the model Claude Opus 5.5 (claude-opus-5-5). The census and
         the drafting of this page ran at the "xhigh" reasoning-effort setting, the second highest of five
         (low, medium, high, xhigh, max). From the topic classification onward (14 October, 18:10 UTC), including the people
         section and the check of inferred mentors, the setting was "max", the highest. It returned to "xhigh" (Table VIII) for the
-        chronicle's second image search and a review of the page's phone layout (15–16 October); the verification push, the
-        archive searches and the review of 28 October; and the later searches for images, course topics and art and the
-        research for the methods diagrams (28–29 October). These are the coordinating session's settings. The agents' own
-        logs record each agent's setting (Table VIII): one step lower for the runs at "max" (runs 9–13, logged "xhigh") and for
-        the runs of 28–29 October that started after 22:00 UTC (runs 22–25, logged "high"). Claude Code's ultracode
-        mode was on while the census was built, so each substantive step ran as a scripted multi-agent workflow; the topic
+        chronicle's second image search and a review of the page's phone layout (15–16 October), and for the verification push, the
+        archive searches and the review of 28 October. From 28 October, 22:41 UTC (Claude Code 2.1.309), the session's record
+        gives "high", for runs 22–69: the research for the methods diagrams, the later searches for images, course topics and
+        art, and all the work from 29 October on. These are the coordinating session's settings. The agents' own
+        logs record each agent's setting (Table VIII): one step lower for the runs at "max" (runs 9–13, logged "xhigh"), and the
+        same as the session's for the other runs with logs (runs 7 and 8, also at "max", left none). Claude Code's ultracode
+        mode was on throughout, so each substantive step ran as a scripted multi-agent workflow; the topic
         classification and the mentor check, which followed the build, ran as agents started directly. Table VIII holds
         <span data-source="methods_facts" data-field="value" data-where="fact=ai_runs">—</span> runs (<span data-fm="runs-agents">—</span> of them with agents) using
-        <span data-source="methods_facts" data-field="value" data-where="fact=ai_agents">—</span> agents; the later runs are listed after the table.
+        <span data-source="methods_facts" data-field="value" data-where="fact=ai_agents">—</span> agents.
         Runs 1–6, from the first prompt to a complete census and page on 13–14 October, took
         <span data-source="methods_facts" data-field="value" data-where="fact=build_hours">—</span> hours of wall-clock time,
-        most of it unattended; runs 7–25 extended and checked it on 14–16 and 28–29 October.</p>
+        most of it unattended; runs 7–25 extended and checked it on 14–16 and 28–29 October; and runs 26–69, from 29 October
+        to 13 November, reviewed and revised the report and built the economic contribution, the discoveries, the sections on
+        the network's people and the re-checks of the census.</p>
       <p><span class="runin">Agents counted.</span>—Agents launched: <span data-fm="agents-launched">—</span>; counted:
         <span data-fm="agents-counted">—</span>. <span data-fm="agents-unreturned">—</span> reading and re-checking agents of run 16 never returned after the
-        run was stopped, and the other <span data-fm="agents-other">—</span> were a first launch of run 24
-        (<span data-fm="agents-aborted">—</span> agents, stopped within minutes and launched again) and
-        <span data-fm="agents-unlinked">—</span> agent not linked to any run.</p>
+        run was stopped, and the other <span data-fm="agents-other">—</span> were first launches of runs 24 and 55
+        (<span data-fm="agents-aborted">—</span> agents: run 24's with an empty course list, stopped within minutes, and a pilot of
+        run 55 on three batches; both launched again) and <span data-fm="agents-unlinked">—</span> agents started one at a time by
+        the coordinating session and linked to no run (a fact-check of the closing poem, fixes to the page's data and code, and
+        updates of the online copy).</p>
       <p><span class="runin">Division of labor.</span>—Claude planned the pipeline, wrote all the code, queried the public
         sources through their programming interfaces, judged ambiguous records, ran the audit, and drafted and designed this
         page. The compiler set the task and made the further requests listed below, signed in to the UW Libraries and Web of
         Science with their own account, and saved the exported files; Claude operated the Web of Science export in a browser
-        after that sign-in. No person screened individual records.</p>
+        after that sign-in. No person screened individual records; the compiler ruled on a few questions the agents raised (see the prompts below).</p>
       <p><span class="runin">Safeguards.</span>—Agents had no accounts or passwords, did not get around paywalls, bot checks or
         CAPTCHAs, and treated fetched pages as data rather than as instructions. Paywalled publications were judged from
         their metadata and abstract; where the connection could not be seen they stay Probable or Listed by FHL rather than
@@ -1982,8 +1982,10 @@
       <p><span class="runin">Limits.</span>—AI judgments can be wrong; the audit's error rates (Table IX) and the topic
         agreement rates above describe how often.
         Treat individual records as leads to check, and the totals as estimates with the stated uncertainty.</p>
-      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app from 13 to 28 October 2026; the requests after 28 October, including those behind the economic contribution and the discoveries in section X, are not listed.
-        Messages about signing in, saving files and progress are summarized rather than quoted. Each prompt shows when it
+      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app from 13 October to 13 November 2026.
+        Early messages about signing in, saving files and progress are summarized rather than quoted, and so are the
+        compiler's rulings on named people in the network and on one census record; a report sent from the page itself is shown as a one-line note, and
+        the link to the feedback form's web app is withheld. Each prompt shows when it
         was typed (Pacific time) and the output tokens (text, reasoning and tool calls) it led to: those Claude generated in
         the main session before the next prompt, plus those of the agents started in that time. A workflow's agents count
         toward the prompt during which it was launched. Many agent records keep only the opening token count of
@@ -4347,7 +4349,7 @@
     if (pr.status === 'ok') {
       const tot = (k) => d3.sum(pr.data, (r) => +r[k]);
       document.getElementById('prompt-total').textContent = `${f(pr.data.length)} entries; in all ${f(tot('tokens_total'))} output tokens, `
-        + `${f(tot('tokens_claude'))} by Claude in the main session and ${f(tot('tokens_agents'))} by ${f(tot('agents'))} agents.`;
+        + `${f(tot('tokens_claude'))} by Claude in the main session and ${f(tot('tokens_agents'))} by the ${f(tot('agents'))} agents launched.`;
       document.getElementById('prompt-list').replaceChildren(...pr.data.map((r) => {
         const li = document.createElement('li'); li.dataset.key = r.n;
         const meta = document.createElement('div'); meta.className = 'pmeta';
@@ -4635,7 +4637,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
     fill('census-agents', f(nCensus)); fill('census-share', pct(nCensus / nAll)); fill('all-agents', f(nAll));
     D.families.forEach((fm) => {
       if (fm.id === 'F1' || fm.id === 'F4') {
-        const t = fm.id === 'F1' ? `The publication census · ${f(nCensus)} agents (${pct(nCensus / nAll)})` : `The people, the history and the report · ${f(nAll - nCensus)} agents`;
+        const t = fm.id === 'F1' ? `The publication census · ${f(nCensus)} agents (${pct(nCensus / nAll)})` : `The people, the history, the report, science and society · ${f(nAll - nCensus)} agents`;
         g0.append('text').attr('class', 'fm-head').attr('x', 0).attr('y', y + 12).text(t);
         g0.append('line').attr('class', 'fm-rule').attr('x1', 0).attr('x2', W).attr('y1', y + 17).attr('y2', y + 17);
         y += 26;
@@ -4769,7 +4771,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
     if (strip) {
       const pairs = [...D.runs.values()].filter((r) => r.follows_run).sort((a, b) => a.run - b.run);
       const items = pairs.map((r) => `${String(r.follows_run).split(' ').join(' and ')} → ${r.run}`);
-      strip.textContent = `Second rounds, each completing the work of an earlier run: ${items.join(' · ')}.`;
+      strip.textContent = `Follow-up runs, each taking up the work of an earlier run: ${items.join(' · ')}.`;
     }
   };
 

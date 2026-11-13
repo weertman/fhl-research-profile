@@ -19,8 +19,9 @@ step_i,step,actors,runs,only,segment,value,who,label
 6,Resolution,agent,5,5:Resolve,confirmed,189,agent,confirmed as FHL work
 6,Resolution,agent,5,5:Resolve,rejected,779,agent,rejected
 6,Resolution,agent,5,5:Resolve,undecided,428,agent,could not be decided
-7,Topics,agent claude,7 21,,labeled by agents,6501,agent,publications given a topic by the labeling agents
-7,Topics,agent claude,7 21,,labeled later,70,claude,publications labeled later in the coordinating session
+7,Topics,agent claude,7 21 59,,labeled by agents,6501,agent,publications given a topic by the labeling agents
+7,Topics,agent claude,7 21 59,,page and CV re-check,19,agent,"publications from the page and CV re-check, labeled and checked by the agents of run 59"
+7,Topics,agent claude,7 21 59,,labeled later,51,claude,publications labeled later in the coordinating session
 8,Clean-up,claude,,,duplicates merged,171,claude,duplicate records merged away
 8,Clean-up,claude,,,removed,191,claude,not publications or false matches
 8,Clean-up,claude,,,moved to Mention only,50,claude,obituaries and similar pieces
