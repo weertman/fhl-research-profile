@@ -56,7 +56,7 @@ The census was built by AI agents (Claude Opus 5.5 in Claude Code) searching bib
 - `people_links.csv`: Citations among the 60 most prolific FHL core scientists.
 - `places.csv`: Institutions FHL core scientists came from and went to, with locations.
 - `profiles.csv`: An entry on each person in the mentoring network: a fact-checked profile or section, or one sentence from their listing (kind), with its public sources.
-- `prompts.csv`: The prompts typed from 13 to 28 October 2026 that built the census and the page (messages about signing in, saving files and progress summarized in one row), with when each was typed and the output tokens it led to.
+- `prompts.csv`: The prompts typed from 13 October to 13 November 2026 that built the census and the report (early messages about signing in, saving files and progress summarized in one row; rulings on named people summarized without the names; the feedback form's web-app link withheld), with when each was typed and the output tokens it led to.
 - `publications.csv`: The census: one row per publication (record id, evidence tier, year, authors, title, venue, type, where FHL appears, citations, DOI, research topic, organism group, why the record was counted and the passage that names FHL, with contact details removed).
 - `recall_by_decade.csv`: How many of FHL's own listed papers the database searches found, by decade.
 - `staff.csv`: Directors and staff through time: roles, categories, years and sources (public records, fact-checked).
