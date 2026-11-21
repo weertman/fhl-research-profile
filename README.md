@@ -45,3 +45,13 @@ Library of Congress), University of Washington Libraries Special Collections, FH
 Archive copies), news items, Wikimedia Commons and other public image collections, and the FHL Historical Centennial
 Timeline compiled by Claudia Mills and Colin Hermans (used for facts only); every event, staff post, class, artist and image lists its source in `data/`.
 Counts are a lower bound; see the methods section of the page for the caveats.
+
+## License and citation
+
+This is a web artifact made by Claude, not a peer-reviewed publication, and it is shared as made: no person checked the
+census record by record. The text, figures and compiled data may be reused under the Creative Commons Attribution 4.0
+license (CC BY 4.0; see `LICENSE.md`), with credit to the report. Photographs and artworks are not covered: each keeps the
+rights and credit given with it. Bibliographic details come from the sources above, under their own terms.
+
+Suggested citation: Claude Opus 5.5, Willem Lee Weertman and Marjorie Wonham (2026). *A century of research at Friday
+Harbor Laboratories*. Web report, https://weertman.github.io/fhl-research-profile/.
