@@ -66,6 +66,7 @@
   .fp-mast .sub { font-style: italic; font-size: clamp(1.05rem, 2.4cqi, 1.3rem); text-wrap: balance; }
   .fp-mast .short { width: 4rem; border-top: 1px solid var(--fp-ink); margin: .4rem 0; }
   .fp-mast .byline { font-variant: small-caps; letter-spacing: .06em; font-size: .98rem; margin: -.2rem 0 .6rem; }
+  .fp-mast .byline > span { display: block; }
 
   /* Opening paragraph with a drop capital */
   .fp .fp-lead { font-size: 1.12rem; line-height: 1.6; max-width: 38em; margin-inline: auto; text-align: justify; hyphens: auto; }
@@ -609,7 +610,7 @@
     <h1>Friday Harbor Laboratories</h1>
     <div class="sub">The publications and people of the University of Washington's marine station since 1904</div>
     <div class="short" role="presentation"></div>
-    <p class="byline">By Claude Opus 5.5, Willem Lee Weertman and Marjorie Wonham</p>
+    <p class="byline"><span>Claude Opus 5.5</span><span>Willem Lee Weertman and Marjorie Wonham</span></p>
     <div class="fp-rule2 flip" role="presentation"></div>
     <div class="fp-topbar">
       <nav class="fp-tabs" aria-label="Parts of the report">
@@ -2148,7 +2149,7 @@
 <p class="fp-sitenote">Published at <a href="https://weertman.github.io/fhl-research-profile/">https://weertman.github.io/fhl-research-profile/</a>. The data behind every figure and table are
   CSV and JSON files in the <a href="https://github.com/weertman/fhl-research-profile/tree/main/data">data folder</a> of <a href="https://github.com/weertman/fhl-research-profile">the repository</a>,
   including <a href="https://github.com/weertman/fhl-research-profile/blob/main/data/census_all_candidates.csv">the full census</a>: every candidate record the
-  searches found, with the decision on each and its evidence. By Claude Opus 5.5, Willem Lee Weertman and Marjorie Wonham.</p>
+  searches found, with the decision on each and its evidence.</p>
 <script>
   // Stand-in for the dashboard runtime: fetches each dataset from data/ and serves it to the info sheet's code unchanged.
   window.FP_SITE_BASE = ''; // images (the chronicle of the station) are files next to the page
@@ -5831,7 +5832,7 @@ window.FP_CARTOON = {"wide": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=
       }
       const hd = window.dash && dash.data('headline').data[0];  // the date the data were retrieved, for the credit line
       const stamp = hd && hd.retrieved ? ` Data retrieved ${hd.retrieved}.` : '';
-      const by = (document.querySelector('.fp-mast .byline')?.textContent || '').replace(/^By\s+/, '').trim();
+      const by = Array.from(document.querySelectorAll('.fp-mast .byline > span'), (s) => s.textContent.trim()).filter(Boolean).join(', ');  // the two byline lines, as one credit
       y += 22;
       wrap(`Friday Harbor Laboratories, University of Washington: research publications census${by ? `, by ${by}` : ''}.${stamp}`,
         font(10.5, ink2, 'font-style:italic'), inner).forEach((line, i) => {
