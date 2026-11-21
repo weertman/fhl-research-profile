@@ -76,7 +76,7 @@ year,appears,n
 1978,Author address,25
 1979,Author address,24
 1980,Author address,32
-1981,Author address,36
+1981,Author address,35
 1982,Author address,37
 1983,Author address,29
 1984,Author address,52
@@ -99,7 +99,7 @@ year,appears,n
 2001,Author address,39
 2002,Author address,36
 2003,Author address,37
-2004,Author address,49
+2004,Author address,48
 2005,Author address,58
 2006,Author address,61
 2007,Author address,45
@@ -108,7 +108,7 @@ year,appears,n
 2010,Author address,56
 2011,Author address,141
 2012,Author address,110
-2013,Author address,99
+2013,Author address,101
 2014,Author address,145
 2015,Author address,74
 2016,Author address,51
@@ -468,10 +468,10 @@ year,appears,n
 2001,Text only: acknowledgments,7
 2002,Text only: acknowledgments,4
 2003,Text only: acknowledgments,10
-2004,Text only: acknowledgments,8
+2004,Text only: acknowledgments,7
 2005,Text only: acknowledgments,5
 2006,Text only: acknowledgments,3
-2007,Text only: acknowledgments,8
+2007,Text only: acknowledgments,7
 2008,Text only: acknowledgments,28
 2009,Text only: acknowledgments,24
 2010,Text only: acknowledgments,29
@@ -578,25 +578,25 @@ year,appears,n
 1988,Text only: methods and elsewhere,7
 1989,Text only: methods and elsewhere,13
 1990,Text only: methods and elsewhere,8
-1991,Text only: methods and elsewhere,8
+1991,Text only: methods and elsewhere,7
 1992,Text only: methods and elsewhere,6
 1993,Text only: methods and elsewhere,13
 1994,Text only: methods and elsewhere,7
 1995,Text only: methods and elsewhere,9
 1996,Text only: methods and elsewhere,9
-1997,Text only: methods and elsewhere,7
+1997,Text only: methods and elsewhere,6
 1998,Text only: methods and elsewhere,12
 1999,Text only: methods and elsewhere,3
 2000,Text only: methods and elsewhere,9
 2001,Text only: methods and elsewhere,10
 2002,Text only: methods and elsewhere,9
 2003,Text only: methods and elsewhere,9
-2004,Text only: methods and elsewhere,15
+2004,Text only: methods and elsewhere,14
 2005,Text only: methods and elsewhere,10
 2006,Text only: methods and elsewhere,8
 2007,Text only: methods and elsewhere,6
-2008,Text only: methods and elsewhere,18
-2009,Text only: methods and elsewhere,19
+2008,Text only: methods and elsewhere,17
+2009,Text only: methods and elsewhere,20
 2010,Text only: methods and elsewhere,10
 2011,Text only: methods and elsewhere,31
 2012,Text only: methods and elsewhere,27

@@ -35,7 +35,7 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 14,,3,Fact-check,check,11,,,,ten of the chosen images,"checks every caption, credit and license"
 15,,0,Review,make,3,,,,the page's phone layout and image galleries,reviews them through one lens; lists findings
 15,,1,Verify,check,3,,,,that lens's findings,checks each finding against the code
-16,,0,Read,make,49,2175,records,"624 decided · 119 read, not settled · 1,432 could not be read",one batch of not-yet-verified records,opens each by open routes; records evidence or barrier
+16,,0,Read,make,49,2175,records,"624 decided · 119 read, not settled · 1,432 could not be read",one batch of records not verified before this run,opens each by open routes; records evidence or barrier
 16,,1,Re-check,check,25,159,readings,"152 agreed · 2 changed · 5 disagreed, first reading kept · from 32 of 49 batches",two finished batches,re-opens five records per batch; agrees or not
 17,,0,Read,make,21,904,publications,,one batch of verified publications,"reads the author addresses, footnotes included"
 17,,1,Re-check,check,11,103,readings,96 agreed · 7 changed · from 21 of 21 batches,two finished batches,re-opens five records per batch; checks the addresses
@@ -170,3 +170,14 @@ run,lane,stage_i,stage,role,agents,given_n,given_unit,result,given,does
 69,,0,Audit,make,4,,,,one part of the Methods tab and the published data,tests each claim; lists stale or wrong text with an exact fix
 69,,1,Verify,check,4,,,,that part's findings,tries to refute each against the files; corrects the fix
 69,,2,Completeness,review,1,,,,the whole Methods tab and the confirmed findings,looks for what the four auditors missed
+70,,0,Check,make,6,,,,"news items, one part of the page, or open per-paper questions",re-reads each item or claim; lists faults with an exact fix
+70,,1,Verify,check,6,,,,that part's findings,tries to refute each against the files and sources; corrects the fix
+70,,2,Completeness,review,1,,,,the whole page and the confirmed findings,looks for what the six checkers missed
+71,,0,Draft,make,3,,,,one group of confirmed findings and the rebuilt data,"drafts exact text edits, recounting every number"
+71,,1,Verify,check,3,,,,that group's draft edits,tries to break each edit against the files; corrects or drops it
+71,,2,Critic,review,1,,,,all the verified edits and the findings,"finds overlaps, contradictions and findings left unresolved"
+72,,0,Design,make,3,,,,the report's figures and photographs and the poster brief,lays out a 42 by 32 inch poster from one angle
+72,,1,Judge,review,1,,,,the three layouts,"scores them, recounts every number and writes the final layout"
+73,,0,Check,make,4,,,,one tab of the rendered page and the data,recounts every number and reference; lists faults with an exact fix
+73,,1,Verify,check,4,,,,that tab's findings,tries to refute each against the files; corrects the fix
+73,,2,Completeness,review,1,,,,the whole rendered page and the confirmed findings,looks across tabs for what the four checkers missed

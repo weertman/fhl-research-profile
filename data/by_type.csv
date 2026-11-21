@@ -1,8 +1,8 @@
 category,publications,citations,median_citations,median_citations_per_year,share
-Journal articles & reviews,2928,134199.0,25.0,1.27,0.5968
-Reports & student papers,829,1393.0,0.0,0.0,0.169
-Conference papers & preprints,415,3966.0,5.0,0.33,0.0846
+Journal articles & reviews,2933,136656.0,25.0,1.28,0.5984
+Reports & student papers,829,1393.0,0.0,0.0,0.1691
+Conference papers & preprints,416,3966.0,5.0,0.33,0.0849
 Datasets & software,223,626.0,0.0,0.0,0.0455
-Theses & dissertations,221,152.0,0.0,0.0,0.045
-Books & chapters,185,4446.0,12.0,0.55,0.0377
-Other,105,1801.0,2.0,0.21000000000000002,0.0214
+Theses & dissertations,221,152.0,0.0,0.0,0.0451
+Books & chapters,172,1781.0,8.5,0.365,0.0351
+Other,107,1804.0,2.0,0.20500000000000002,0.0218

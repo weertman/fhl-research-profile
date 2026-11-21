@@ -166,6 +166,30 @@
   .fp-defs .ink { stroke: var(--fp-ink); fill: none; }
   .fp-defs .dot { fill: var(--fp-ink); }
 
+  /* The overviews at the head of the Chronicle and of Science and society: photographs that open each part, over one
+     figure on a shared time line */
+  .fp-ov { display: grid; gap: 1.1rem; }
+  .fp .fp-ov-lead { max-width: 44em; margin-inline: auto; font-size: 1.06rem; text-align: center; text-wrap: balance; }
+  .fp-ov .fp-fig { gap: .5rem; }
+  .fp-ov-plates { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .9rem; }
+  .fp-ov-plate { display: grid; align-content: start; gap: .1rem; color: inherit; text-decoration: none; }
+  .fp-ov-plate img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border: 1px solid var(--fp-ink-3);
+                     margin-bottom: .35rem; background: var(--fp-ink-3); }
+  .fp-ov-plate:hover img, .fp-ov-plate:focus-visible img { outline: 2px solid var(--fp-ink); outline-offset: 1px; }
+  .fp-ov-plate .yrs { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--fp-ink-2); font-variant-numeric: lining-nums; }
+  .fp-ov-plate .nm { font-family: var(--fp-display); font-size: 1rem; line-height: 1.2; text-decoration: underline;
+                     text-decoration-thickness: .5px; text-underline-offset: .2em; }
+  .fp-ov-plate .sub { font-size: .8rem; line-height: 1.3; color: var(--fp-ink-2); font-style: italic; }
+  .fp-ov .fp-chart { min-height: 11rem; }
+  .fp-ov .fp-chart .ev, .fp-ov .fp-chart .dl { cursor: pointer; }
+  .fp-ov .fp-chart .lead { fill: none; stroke: var(--fp-ink-2); stroke-width: .8; }
+  .fp-ov .credits { font-size: .76rem; }
+  @container (max-width: 560px) {
+    .fp-ov-plates { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 46%; overflow-x: auto;
+                    scroll-snap-type: x mandatory; padding-bottom: .4rem; }
+    .fp-ov-plate { scroll-snap-align: start; }
+  }
+
   /* Key and tooltip */
   .fp-legend { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem 1.1rem; font-size: .85rem; }
   .fp-legend:empty { display: none; }
@@ -770,7 +794,7 @@
           <h3 id="fig-appears-time"><span class="fig">Fig. 3.</span>—Where FHL is named, as a share of each decade.</h3>
           <p class="cap">From the 1950s on, FHL is an author address in more than half of each decade's publications. Before
             then (few records), most name the station only in the text or belong to its own series. Thanks in the
-            acknowledgments, mostly from visiting researchers, grow from a few percent before 1960 to 15–19% since 2000.</p>
+            acknowledgments, mostly from visiting researchers, grow from a few percent before 1960 to 14–19% since 2000.</p>
         </figcaption>
       </figure>
   </section>
@@ -784,7 +808,7 @@
         <h3 id="fig-topics"><span class="fig">Fig. 4.</span>—Research topics, as a share of each decade's publications.</h3>
         <p class="cap">AI agents gave each verified publication one research topic, reading its title, journal and,
           where available, abstract (see Technical methods). Layers are stacked from the topics whose share came
-          earliest on average (bottom) to the most recent (top); the key lists the layers from the top down; hover
+          earliest on average (bottom) to the most recent (top), except that the catch-all layers ("Whiteley Center" and "Other"; in Fig. 7, "Many groups" and "No particular organism") sit on top; the key lists the layers from the top down; hover
           over a bar for every value. "Whiteley Center" gathers work whose only link to FHL is the station's study
           center for visiting scholars and writers (Fig. 6). "Other" covers education, history and records too vague to
           classify. Decades with fewer than 20 verified publications are left out.</p>
@@ -839,7 +863,7 @@
         not counted, though many appear in Fig. 11 and in the census. The term names a tie to the station, not a ranking: some
         eminent scientists whose work at FHL is in the census, such as Joseph Connell and Paul Dayton, fall outside the group.</p>
     </aside>
-    <p class="fp-intro"><span data-source="people_summary" data-field="scientists">—</span> core scientists list FHL as their
+    <p class="fp-intro"><span data-source="people_summary" data-field="scientists">—</span> of the FHL core scientists are identified by address: they give FHL as their
       address on at least three verified publications. <span data-source="people_summary" data-field="from_north_america">—</span>
       came from institutions in North America, <span data-source="people_summary" data-field="from_europe">—</span> from
       Europe and <span data-source="people_summary" data-field="from_asia_pacific">—</span> from Asia and the Pacific;
@@ -960,7 +984,7 @@
       <div class="fp-chart" id="ch-type" data-source="by_type"></div>
       <figcaption>
         <h3 id="fig-type"><span class="fig">Fig. 13.</span>—Verified publications by type.</h3>
-        <p class="cap">“Reports &amp; student papers” combines 631 FHL course papers, nearly all deposited in UW ResearchWorks, with 190 agency and other reports.</p>
+        <p class="cap">“Reports &amp; student papers” combines 630 FHL course papers, nearly all deposited in UW ResearchWorks, with 199 agency and other reports.</p>
       </figcaption>
     </figure>
     <figure class="fp-fig" data-collapsible>
@@ -1016,7 +1040,12 @@
       <div class="fp-chart" id="ch-news" data-source="news_by_year"></div>
       <figcaption>
         <h3 id="fig-news"><span class="fig">Fig. 18.</span>—News items about FHL research and about FHL as an institution.</h3>
-        <p class="cap">Found by web search. This is a sample, not a census, and most online coverage dates from 2000 on.</p>
+        <p class="cap">Found mainly by searching news sites, UW News, FHL's own news pages, historic newspapers and the web, and
+          judged by AI agents (section XI). Each outlet's copy of a story counts as an item. The 41 items from Chronicling
+          America (1909–1947) are whole newspaper pages that mention the station. The 5 of the
+          <span data-source="headline" data-field="news_items">—</span> news items that have no year are left out. In
+          2016–2025 about two in five items are FHL's own posts and columns. This is a sample, not a census, and most online
+          coverage dates from 2000 on.</p>
       </figcaption>
     </figure>
   </section>
@@ -1062,6 +1091,24 @@
         FHL's full statement, with its commitments and resources:
         <a href="https://fhl.uw.edu/about/diversity-equity-inclusion/fhl-land-and-waters-acknowledgement/" target="_blank" rel="noopener">fhl.uw.edu</a>.</p>
     </aside>
+    <div class="fp-ov" id="hist-overview">
+      <p class="fp-ov-lead">The station began in 1904 as a summer camp of university teachers and students, collecting and dredging
+        from the shore at Friday Harbor. It went by four names in its first fifty-odd years and in 1924 moved to the former Point
+        Caution military reserve north of the town; since 1958, as Friday Harbor Laboratories, it has been a year-round center for
+        marine biology. Each photograph opens its era; each mark on the time line is an event in the chronicle.</p>
+      <figure class="fp-fig">
+        <div class="fp-ov-plates" id="hist-ov-plates" data-source="history_images history_eras"></div>
+        <div class="fp-chart" id="ch-hist-ov" data-source="history_events history_eras by_year"></div>
+        <div class="fp-legend" id="lg-hist-ov"></div>
+        <figcaption>
+          <h3 id="fig-hist-ov">The station at a glance.—Its eras, its dated events and its publications, 1903–today.</h3>
+          <p class="cap">The bands are the station's eras under its successive names. Each mark below them is an event of the
+            chronicle at its year; filled marks are its turning points. The shaded area is the number of verified publications a
+            year (Fig. 1). Point to a mark for the event; click it to go there.</p>
+          <p class="cap credits" id="hist-ov-credits"></p>
+        </figcaption>
+      </figure>
+    </div>
     <p class="fp-intro">From the first summer sessions on the shore at Friday Harbor to today's laboratories: the station's story
       in dated events. The events are drawn from the local newspapers of the early years, FHL's own newsletters and pages, the
       centennial timeline compiled by Claudia Mills and Colin Hermans, news coverage and the University of Washington Libraries'
@@ -1088,11 +1135,30 @@
 
   <section class="fp-section" id="science">
     <h2><span class="num">X.</span> Science and society</h2>
-    <p class="fp-intro">What the station has given beyond its publications: the discoveries made there or by people based
-      there, the economic contribution of its activity to the island and the state, and the people who taught, worked and made
-      art there. The discoveries and the lists of classes, staff and artists in residence come from public records gathered and
-      fact-checked by AI agents; the economic contribution is estimated from public sources. How each was assembled is in the
-      Methods tab.</p>
+    <div class="fp-ov" id="sci-overview">
+      <p class="fp-ov-lead">What the station has given beyond its publications, in five parts: the discoveries made there or by
+        people based there, the economic contribution of its activity to the island and the state, the classes taught there, the
+        directors and staff who ran it, and the artists and writers in residence. The figure sets them on one time line; each
+        photograph opens its part.</p>
+      <figure class="fp-fig">
+        <div class="fp-ov-plates" id="sci-ov-plates" data-source="history_images art_images"></div>
+        <div class="fp-chart" id="ch-sci-ov" data-source="discoveries classes staff artists econ_capital_timeline"></div>
+        <div class="fp-legend" id="lg-sci-ov"></div>
+        <figcaption>
+          <h3 id="fig-sci-ov">Science and society at a glance.—Discoveries, classes, faculty, artists and capital on one time line, 1904–today.</h3>
+          <p class="cap">Each line in the top row is one discovery, drawn over the years of its work and marked by FHL's part in
+            it (key). Below, on the same time line: courses taught a year; directors, resident faculty and staff scientists in post (a post with no documented end year is counted only in its first year); artists and
+            writers in residence; and money put into buildings, docks, land, vessels and instruments, in 2024 dollars (Fig. 23).
+            The economic contribution of the station's activity, about <span data-source="econ_facts" data-field="display"
+            data-where="fact=wa_output">—</span> of output a year in Washington, is modeled for one typical year and is shown in
+            its own part (Fig. 20). Point to a mark for details; click a discovery to open it.</p>
+          <p class="cap credits" id="sci-ov-credits"></p>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="cap fp-narrow">The discoveries and the lists of classes, staff and artists in residence come from public records
+      gathered by AI agents and checked by others, the discoveries entry by entry and the lists by sample; the economic contribution is estimated from public sources. How each was assembled
+      is in the Methods tab.</p>
     <div class="fp-arch" data-collapsible id="discoveries">
       <h3 class="fold">Discoveries and scientific contributions</h3>
       <div class="fp-notes">
@@ -1288,8 +1354,8 @@
           dollar amount and marked with a ring. The five largest are numbered and named below the chart. Open marks are gifts: land at its assessed or stated value, and buildings, vessels and equipment paid for by donors. Early amounts are the
           regents' ceilings, not costs. Funding sources that paid for projects already shown are not drawn again. The shaded
           years are the period whose construction is counted in Table V; of the marks there, only the Fernald Laboratory
-          basement, the sewer lift station and Lab 2 are counted. Sources: UW Board of Regents minutes, NSF award records and the
-          Historical Centennial Timeline (Mills and Hermans).</p>
+          basement, the sewer lift station and Lab 2 are counted. Sources: UW Board of Regents minutes, NSF award records, FHL's web pages and newsletters (Internet Archive copies), the
+          Historical Centennial Timeline (Mills and Hermans) and a UW news release.</p>
       </figcaption>
     </figure>
 
@@ -1304,8 +1370,8 @@
     <h4 id="beyond-spending">Beyond spending</h4>
     <div class="fp-notes">
       <p>The estimate of <span data-source="econ_facts" data-field="display" data-where="fact=wa_output">—</span> counts spending and the jobs it supports. It leaves out what the
-        station teaches and what its science does: the education of students, the careers that follow and the discoveries listed
-        below. No dollar value is assigned to these. Public sources support the counts here. Each has its own
+        station teaches and what its science does: the education of students, the careers that follow and the discoveries described
+        above. No dollar value is assigned to these. Public sources support the counts here. Each has its own
         definition, so they do not add up to a total.</p>
     </div>
     <div id="beyond-list" data-source="beyond_spending"></div>
@@ -1426,6 +1492,7 @@
           <th data-field="name">Name</th></tr></thead>
         <tbody></tbody>
       </table></div>
+      <p class="cap">Compiled by an AI search agent (run 1) from the station's own publication series, <i>Science</i> (1909) and <i>Ecology</i> (1920), UW Libraries finding aids, histories of the station and of UW oceanography, and the centennial timeline; the compilation and its sources are kept with the census files. Where the sources disagree, as on the change of 1917–1918, the table gives the years the census uses.</p>
     </div>
     <h3 class="fp-subhead" id="agents-how">How the agents were used</h3>
     <figure class="fp-fig fm-fig">
@@ -1459,7 +1526,7 @@
       <p class="fm-rounds" id="fm-rounds"></p>
       <figcaption>
         <h3 id="fig-shapes"><span class="fig">Fig. 26.</span>—How a run is built: four shapes.</h3>
-        <p class="cap">Most runs combine these four shapes, drawn here from real runs. Squares are agents, as in Fig. 25; each step
+        <p class="cap">Most runs are built from one or two of these four shapes, drawn here from real runs. Squares are agents, as in Fig. 25; each step
           says what its agents were given, what they did and, where it was counted, what they handed on. In every shape, later
           agents check the earlier agents' work instead of taking it on trust; the last panel holds the runs that fit no single
           shape. Pick a run under a panel to draw it.</p>
@@ -1498,7 +1565,7 @@
         repositories, archive.org scans including the Biodiversity Heritage Library, FHL's own publication lists recovered from
         the Internet Archive, and news) and wrote a rerunnable script; a script searched OpenAlex; and Claude exported
         <span data-source="methods_facts" data-field="value" data-where="fact=wos_records">—</span> Web of Science records through the UW Libraries in a browser, after the compiler signed in
-        (Fig. 28, row 1). <span data-fm="n-critique">—</span> more agent looked for gaps, and <span data-fm="n-gapfill">—</span> more filled them. Rows were joined into one candidate when they shared a DOI or a
+        (Fig. 28, row 1). Web of Science supplied bibliographic records, among them indexed author addresses, abstracts and funding text, but no full texts; 353 Verified publications were found there and in no other source. <span data-fm="n-critique">—</span> more agent looked for gaps, and <span data-fm="n-gapfill">—</span> more filled them. Rows were joined into one candidate when they shared a DOI or a
         PubMed, PubMed Central or OpenAlex identifier, or when their titles matched closely (a fuzzy similarity of at least 93
         of 100), their years differed by at most one and their first authors shared a surname. Written rules decided the
         clear cases. AI agents judged the rest against a written screening guide that lists the station's names and the common
@@ -1594,7 +1661,7 @@
         <p class="cap">Rounds in which checking agents re-opened other agents' (or a script's) work; the audit of the census
           decisions is in Fig. 32 and the screening calibration in Fig. 28. Each row shows what the checking agents did with
           the items they re-opened (■ an agent, □ a script, ▨ a checking agent, ⊠ a reviewer). The thin line under each bar
-          shows the share of all items re-opened. <span data-fm="checks-claim" hidden>Checkers rewrote nearly every
+          shows the share of all items re-opened. Some checks described in the text are not drawn, among them those of the archive lists (run 18), the economic evidence (run 39), the discoveries and training counts (runs 48 and 50 to 53) and the papers reviewed one by one (run 54). <span data-fm="checks-claim" hidden>Checkers rewrote nearly every
           profile but rarely overturned a reading.</span></p>
       </figcaption>
     </figure>
@@ -1625,32 +1692,32 @@
         people, did the audit; a human check of a sample would strengthen it.</p>
     </div>
     <div class="fp-fig">
-        <h3 id="tab-audit"><span class="fig">Table IX.</span>—Independent audit.</h3>
+        <h3 id="tab-audit"><span class="fig">Table IX.</span>—Audit by separate AI agents.</h3>
         <div class="fp-scroll"><table id="tbl-audit" class="ruled" data-source="audit_tiers" data-row-key="tier">
           <thead><tr><th data-field="tier">Tier</th><th data-field="precision" class="num">Correct</th>
             <th data-field="checked" class="num">Records checked</th><th data-field="interval" class="num">95% interval</th></tr></thead>
           <tbody></tbody>
         </table></div>
-        <p class="cap">"Correct" is the precision defined in the Audit paragraph above, shown for each evidence tier.</p>
+        <p class="cap">"Correct" is the precision defined in the Audit paragraph above, shown for each evidence tier and for a sample of the news items (see News, below).</p>
       </div>
     <div class="fp-notes">
-      <p><span class="runin">Hand-reviewed papers.</span>—The searches missed eight classic San Juan shore papers, and three more were
-        set aside because their only source was an FHL newsletter. One agent looked up each of the eleven and a second re-checked it.
-        Four name FHL and are Verified. Six are closed, so they are Probable on later sources. One, read in full, does not name FHL and
-        counts zero. These papers are outside the audit sample. Publication years that later checks found wrong were corrected by hand, and 29 records were excluded whose only FHL link was the address of the journal's handling editor, not an author. A 1970 PhD thesis, a scan
+      <p><span class="runin">Papers reviewed one by one.</span>—The searches missed eight classic San Juan shore papers, and three more were
+        set aside because their only source was an FHL newsletter. AI agents reviewed these one by one (the “hand review” of Fig. 28): one agent looked up each of the eleven, a second re-opened every source and a critic looked for what they missed.
+        Four name FHL and are Verified, one of them (Vadas 1977) on search excerpts of its 1982 reprint rather than a full reading. Six are closed, so they are Probable on later sources. One, read in full, does not name FHL and
+        is excluded, like the other papers cited only in an FHL newsletter that were read and do not name it. Pamatmat 1965, which the searches had placed at Probable, was read in full and is Verified. These papers are outside the audit sample. The years of twelve papers that later checks found wrong were corrected from the printed article or its Crossref, Europe PMC or PubMed record: six of seven doubtful years tested in this review, and six found in the review of the network's people, which also corrected the authors of nine records (three papers by L. D. Partridge had carried a namesake's name), each change checked by a second agent. A 1970 PhD thesis, a scan
         no search could read, turned up in the re-check below; it names FHL and is Verified.</p>
       <p><span class="runin">Records on FHL pages and CVs.</span>—A written rule set aside <span data-source="methods_facts" data-field="value" data-where="fact=recheck_records">—</span> records found only on an FHL web
         page, a researcher's CV linked from FHL or an FHL newsletter, since a CV holds work done elsewhere and a newsletter cites other
         people's papers. AI agents tried to open each one, a second time where no second agent had tested the first try. A second agent re-opened every
-        positive decision, every highly cited record and a sample of the rest (<span data-source="methods_facts" data-field="value" data-where="fact=recheck_checks">—</span> in all), a third settled disagreements, and the coordinating session
-        changed <span data-source="methods_facts" data-field="value" data-where="fact=recheck_rulings">—</span> decisions after review. These agents ran in runs 56 and 58 (Table VIII).
+        positive decision, every highly cited record and a sample of the rest (<span data-source="methods_facts" data-field="value" data-where="fact=recheck_checks">—</span> in all), a third settled disagreements, and
+        <span data-source="methods_facts" data-field="value" data-where="fact=recheck_rulings">—</span> decisions were changed after review: <span data-source="methods_facts" data-field="value" data-where="fact=recheck_licensed_reads">—</span> under the compiler's ruling that full texts opened through a university network license do not count as read, 1 under the compiler's ruling that a society's own copy of a paper may be read from the Wayback Machine, and 12 by the coordinating session (five repeats of other records, three meeting talks with no published abstract, an obituary, a report series and two ties left uncertain on a strict reading). The review also corrected the authors of 18 records and the title, year or venue of 9, where the title match had brought in wrong or cut-off fields. The agents ran in runs 56 and 58 (Table VIII).
         <span data-source="methods_facts" data-field="value" data-where="fact=recheck_publications">—</span> are publications tied to FHL, <span data-source="methods_facts" data-field="value" data-where="fact=recheck_verified">—</span> Verified from the publication and <span data-source="methods_facts" data-field="value" data-where="fact=recheck_probable">—</span> Probable from another dated source, most of them reports
         and web documents by scientists at FHL; <span data-source="methods_facts" data-field="value" data-where="fact=recheck_news">—</span> are news items. <span data-source="methods_facts" data-field="value" data-where="fact=recheck_not_shown">—</span> were read and do not tie the work to FHL, <span data-source="methods_facts" data-field="value" data-where="fact=recheck_not_publication">—</span> are not publications and
         <span data-source="methods_facts" data-field="value" data-where="fact=recheck_duplicate">—</span> repeat another record. The other <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread">—</span> could not be read, nearly all behind paywalls or bot checks or with no copy online:
         <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread_person">—</span> on a person's page or CV are listed as Unverified candidates, and <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread_news">—</span> only cited on a news page are excluded. At the rates seen
         among those read, about <span data-source="methods_facts" data-field="value" data-where="fact=recheck_unread_like_read">—</span> of the unread would connect to FHL; papers with open copies are not a random sample, so this figure is left out of the
-        best estimate. Among the unread are <span data-source="methods_facts" data-field="value" data-where="fact=recheck_licensed_reads">—</span> papers that opened only on publisher pages that a university network license appears to have served; the census
-        uses only public copies, so these count as unread. Of the papers not tied to FHL, <span data-source="methods_facts" data-field="value" data-where="fact=recheck_archive_reads">—</span> were read from Wayback Machine copies,
+        best estimate. Among the unread are <span data-source="methods_facts" data-field="value" data-where="fact=recheck_licensed_reads">—</span> papers that opened only on publisher pages that a university network license appears to have served; under the
+        compiler's ruling these count as unread. The ruling also covers 15 readings in the verification push: each of those records keeps its decision from before the push, so 7 papers the push had read as naming FHL are Listed by FHL rather than Verified, and those 15 readings are left out of the rates that weight the unread records in the best estimate. Of the papers not tied to FHL, <span data-source="methods_facts" data-field="value" data-where="fact=recheck_archive_reads">—</span> were read from Wayback Machine copies,
         among them the society's own copies of <i>Limnology and Oceanography</i> papers whose publisher's site refuses automated reading. These records are outside the audit sample.</p>
       <p><span class="runin">Recall.</span>—FHL's own publication lists serve as an independent sample of FHL work. Recall is the
         share of listed papers that the database searches found on their own: <span data-source="headline" data-field="search_recall_vs_fhl_lists">—</span> overall, by decade in Fig. 33.</p>
@@ -1667,18 +1734,50 @@
       </figure>
     <h3 class="fp-subhead" id="census-details">Other data, sources and files</h3>
     <div class="fp-notes">
+      <p><span class="runin">At a glance.</span>—The summary at the head of the report is computed in the page from the published
+        data. Its counts of verified research papers, books, theses, student reports, datasets and other work, and of the news
+        items of Fig. 18, are yearly averages over 2016–2025. Its citations, counted as below, are totals for the verified
+        research papers of 2016–2025 and of all years, with the median per paper for 2016–2025; its institutions and
+        countries are those of Fig. 10, for all years. Each outlet's copy of a news story counts, and about two in five news
+        items of 2016–2025 are FHL's own posts and columns. The grouping of the measures is this report's, not a scheme set
+        by the university.</p>
       <p><span class="runin">Types and citations.</span>—Publication types come from each source's metadata, corrected by the
         screening agents, and are grouped into seven categories for Fig. 13. Citations are OpenAlex cited-by counts at
         retrieval, with Crossref, Europe PMC or DataCite counts where OpenAlex had none; other databases give different
         numbers. The citation rate in Fig. 17 divides a paper's citations by its age in years, counting the year of
         publication as one.</p>
+      <p><span class="runin">News.</span>—News items are counted apart from the publications and are not in the best estimate,
+        the topics or the citations. The agent that searched the news wrote a script that searched the sites of eleven
+        regional newspapers (among them the Journal of the San Juans, the Islands' Sounder and the Islands' Weekly) for the
+        station's names and six national science and environment outlets for "Friday Harbor"; the University of Washington's
+        news site; FHL's own News &amp; Events posts, among them the Tide Bite column; KUOW's site search; and Chronicling
+        America's historic newspapers to 1963, where an item is a whole page. UW and FHL pages were read from Internet
+        Archive copies. About 80 web searches by outlet and topic found more; where a site barred automated reading (the
+        Seattle Times and EurekAlert among them), the item rests on the search engine's summary. The New York Times, the
+        Associated Press, the BBC, The Guardian and Washington's digital newspaper archive could not be searched. AI agents
+        judged the 955 items that only this search found, in three batches, against the screening guide. They put each item
+        in one of four groups: coverage of research done at FHL or by its scientists or students; FHL as an institution
+        (events, courses, staff, facilities, funding, history); FHL named only in passing (Mention only); or the town or
+        another organization only (Excluded). They also gave each item a kind: independent journalism, press release, a
+        column or newsletter written by FHL, or a listing or brief. A calibration reviewer changed 5 decisions. Items that
+        other searches found were judged as publications are. In a final review on 20 November 2026, before the data were
+        frozen, AI agents re-read every news item one by one against the whole census and gave each one of the two groups
+        of Fig. 18 and a kind. Of the 641 items then counted, 119 (19%) were corrected or removed: 29 left the news count
+        (18 repeated an item in the same outlet, 7 named the station only in passing or not at all, 3 are publications
+        rather than news and 1 could not be confirmed), and 90 were corrected, most often in kind, year or group. Repeats
+        within an outlet were removed, but each outlet's copy of a story counts as an item, so a press release carried by
+        several outlets counts several times. Of the <span data-source="headline" data-field="news_items">—</span> news
+        items, 292 are coverage of FHL research and 320 are about FHL as an institution; Fig. 18 leaves out the 5 without a
+        year. By kind, 181 are FHL's own posts and columns, 177 press releases, 161 independent journalism and 93 listings or
+        briefs; in 2016–2025, 155 of the 358 items are FHL's own posts and columns and 95 are independent journalism. The
+        audit re-checked a sample of 20 news items, drawn before the final review, and confirmed all 20 (Table IX).</p>
       <p><span class="runin">Research topics.</span>—For Figs. 4 to 8, AI agents gave each of the
         <span data-source="methods_facts" data-field="value" data-where="fact=topic_classified">—</span> publications then in
         the census one of 13 research topics, an optional second topic and one of 13 organism groups, working from its
         title, journal and, for
         <span data-source="methods_facts" data-field="value" data-where="fact=topic_with_abstract">—</span> of them, an
-        abstract; the census as published holds <span data-source="headline" data-field="publications">—</span>, every one
-        with a topic. They
+        abstract; the census as published holds <span data-source="headline" data-field="publications">—</span>, all but 3
+        with a topic (the 3 items that the review of the news on 20 November found to be publications rather than news have none). They
         followed a written guide with definitions, rules for borderline cases and worked examples. The publications were
         shuffled into random batches, so that each batch's mix of topics could be checked against the whole. A separate
         agent labeled a random sample of
@@ -1701,15 +1800,16 @@
         <span data-source="methods_facts" data-field="value" data-where="fact=whiteley_records">—</span> publications, <span data-source="methods_facts" data-field="value" data-where="fact=whiteley_inferred">—</span> of them probable, inferred from a
         full-text match on non-marine work published since 2000. The <span data-source="methods_facts" data-field="value" data-where="fact=topic_labelled_session">—</span> publications that entered the census late, through the verification
         push (the other publications it verified already had topics), the hand review and the re-check of FHL pages, were labeled afterwards under the same guide, those of the re-check by an agent of run 59 with a second agent checking each label.</p>
-      <p><span class="runin">Clean-up.</span>—A final review after the topic classification merged
+      <p><span class="runin">Clean-up.</span>—A review after the topic classification, extended by later checks, merged
         <span data-source="methods_facts" data-field="value" data-where="fact=dedup_dropped">—</span> duplicate records into <span data-source="methods_facts" data-field="value" data-where="fact=dedup_kept">—</span>. These were the same article under two
         DOIs, a preprint and its published version, repository, reprint and translated copies, garbled copies from the
-        historical lists, and the same dataset deposited twice; a title scan after the verification push found 25 of them, the review of the network's people 8 and the re-check of FHL pages 1.
+        historical lists, the same dataset deposited twice and the same news story entered twice for one outlet; a title scan after the verification push found 25 of them, the review of the network's people 8, the re-check of FHL pages 1 and the final review of the news items 18.
         The kept record takes the strongest FHL evidence and the highest citation count in its group; a dataset, a
         conference abstract or a thesis counts as a work of its own. The review also removed <span data-source="methods_facts" data-field="value" data-where="fact=false_excluded">—</span>
-        records that are not publications or whose only FHL match lies in a reference list (whole issues, newsletters,
-        front matter, other institutions' catalogs and reports, meeting-abstract volumes, peer-review documents, data
-        downloads), and moved <span data-source="methods_facts" data-field="value" data-where="fact=mention_moved">—</span> obituaries, biographies and histories to Mention only, as the
+        records: some that are not publications (whole issues, newsletters, front matter, other institutions' catalogs and
+        reports, meeting-abstract volumes, peer-review documents, data downloads); some whose only FHL match lies in a
+        reference list, in a neighboring item on the same page or in a garbled address; and 29, found during the review of
+        the network's people, whose only FHL link is the address of a journal's handling editor rather than an author. It also moved <span data-source="methods_facts" data-field="value" data-where="fact=mention_moved">—</span> obituaries, biographies and histories to Mention only, as the
         screening guide prescribes. The audit's error rates were measured before this review, which removed many of the
         errors it found, so for the cleaned census the best estimate is somewhat conservative.</p>
       <p><span class="runin">Historical FHL core scientists.</span>—Older papers rarely carry an address, and many of the people who
@@ -1737,7 +1837,7 @@
         each, OpenAlex's history of the institutions on their papers gives where they came from (the earliest institution
         with a paper before or in their first FHL year) and where they went (the institution with papers in the most years
         after their last FHL paper, counting only institutions with at least two such years); those still publishing from
-        FHL in the last three years count as still at FHL. Citation links count, from OpenAlex reference lists, how often
+        FHL in the last three years count as still at FHL. The regions in section IV and Fig. 12 group the countries of the institutions the scientists came from: North America (the United States and Canada), Europe, Asia and the Pacific, and Latin America (Mexico included); those with no institution other than FHL on a paper before or in their first FHL year count as having begun at FHL. Citation links count, from OpenAlex reference lists, how often
         the FHL papers of one FHL core scientist cite another's. Advisor-student links come from UW thesis records,
         which name the advisor, and from Wikidata's doctoral-advisor and doctoral-student statements. People were matched to
         Wikidata by ORCID or by Wikidata's own links to the station, and advisors were followed up to five generations back;
@@ -1753,7 +1853,7 @@
         pages, CVs), with an independent second look at every verdict that did not rest on a direct source and an adjudicator
         where the two looks disagreed: <span data-source="methods_facts" data-field="value" data-where="fact=mentor_confirmed">—</span> of the <span data-source="methods_facts" data-field="value" data-where="fact=mentor_checked">—</span> were advisor, postdoctoral or
         student-research mentors and are drawn as documented, <span data-source="methods_facts" data-field="value" data-where="fact=mentor_peer">—</span> were collaborations between peers and were
-        removed, and <span data-source="methods_facts" data-field="value" data-where="fact=mentor_unclear">—</span> could not be settled; those that no other source documents are drawn as inferred (Table VIII). Lab rosters add
+        removed, and <span data-source="methods_facts" data-field="value" data-where="fact=mentor_unclear">—</span> could not be settled; those that no other source documents are drawn as inferred (dashed in Fig. 11). Lab rosters add
         <span data-source="methods_facts" data-field="value" data-where="fact=roster_links">—</span> documented links: AI agents read the public lab, team and alumni pages and CVs
         and listed the graduate students, postdocs, technicians, interns and staff named there, and a second agent re-opened
         every page to confirm each entry. Undergraduates named on a home-university lab page are included only if they also
@@ -1768,21 +1868,23 @@
         public sources (faculty and lab pages, CVs, ORCID, obituaries), and a second agent checked every claim against
         those sources and revised <span data-source="methods_facts" data-field="value" data-where="fact=profiles_revised">—</span> of them. In all the network holds <span data-source="methods_facts" data-field="value" data-where="fact=network_links">—</span> links among <span data-source="methods_facts" data-field="value" data-where="fact=network_people">—</span> people. OpenAlex groups papers into
         people automatically and sometimes merges or splits people with similar names. Two such merges were corrected by
-        hand: L. D. Partridge (FHL papers 1975–79) and Volker Schmid (1988–92) had each been merged with a different scientist
+        written overrides in the build code: L. D. Partridge (FHL papers 1975–79) and Volker Schmid (1988–92) had each been merged with a different scientist
         of the same name, a biogerontologist and a statistician. Matthew R. Baker's record likewise held a namesake's earlier papers, so its starting point and first institution are left out. Three scientists whose papers OpenAlex had split between
         two records, David O. Duggins, Aaron W. E. Galloway and Thomas E. Schroeder (each also recorded under initials), were
-        joined by hand, and E. J. Lund's OpenAlex destination, the University of Copenhagen, which contradicts his career at
+        joined the same way, and E. J. Lund's OpenAlex destination, the University of Copenhagen, which contradicts his career at
         the University of Texas, is left out. FHL core scientists identified by address are few before about 1970 because older papers carry no address
         metadata.</p>
       <p><span class="runin">Sections on the network's people.</span>—Everyone in the network has an entry in "Find a person". Beyond the profiles, AI agents
-        wrote <span data-source="methods_facts" data-field="value" data-where="fact=sections">—</span> shorter sections from public pages, papers, theses and ORCID records, and a second agent checked each claim. They cover
+        wrote <span data-source="methods_facts" data-field="value" data-where="fact=sections">—</span> shorter sections from public pages, papers, theses and ORCID records, and a second agent checked each claim: in the main drafting run (run 55) the checker kept 716 of 1,580 sections as written, revised 843 and cut 21 to a one-line listing, and kept 624 of 654 proposed links. The sections cover
         professional facts only. Later careers of undergraduates, interns and technicians appear only where the person is clearly the same and stayed in science. School students were not researched;
         they and a few others, <span data-source="methods_facts" data-field="value" data-where="fact=listings">—</span> people in all, have one sentence taken from their listing. Web searches ran out partway through, so about
         <span data-source="methods_facts" data-field="value" data-where="fact=sections_thin">—</span> sections rest on the listing, sometimes with the person's papers, and say little; “was listed as” in a section means the statement rests on that one page. Agents re-opened the pages behind the links:
         <span data-source="methods_facts" data-field="value" data-where="fact=links_removed">—</span> links with no page stating a teaching or supervising tie were removed, and their people left the network unless another link holds them; many labels were
         corrected to what the page says, such as a course student or the reader of a thesis; and <span data-source="methods_facts" data-field="value" data-where="fact=links_added">—</span> links came from pages the section writers read, with
-        <span data-source="methods_facts" data-field="value" data-where="fact=people_added">—</span> people in them who were not in the network before, written up in the same way. Two spellings were treated as one person only after a check. Pages that show personal
-        contact details are named without a link. Timeline years come from a public record, a section, a profile, a degree year, a roster or another dated link, or from the person's first paper, or for a few from a thesis year less five or a birth year plus 25; a person with none of these is placed from their teachers or students, and a teacher whose year would fall level with or after their earliest student is placed five years before that student. <span id="sections-audit">“MS student” covers any master's degree. Some course links cite a class-work page that lists the student's project but names no teacher; the teacher is named on the course's information page, which does not date the listing for every year. A last audit by fresh agents checked 170 sections claim by claim (six of them twice), with a second agent testing each claimed error: of 1,904 claim checks, 9 (0.5%) found the claim wrong, 1 found it unsupported and 25 could not be completed, 21 because the page refused automated readers, 2 because it required a sign-in, 1 because the site could not be reached and 1 because the page was a scan the agent did not read; of 72 links, 67 held, 2 had the wrong label and 3 could not be opened; in the 286 links attached to the sampled sections, 54 further problems were confirmed: 35 wrong or loose labels, source tags or dates, 18 links or citations and 1 link with no support. Those errors were corrected, except that 8 of the links stay named without a link because their pages show personal contact details. The sample was weighted toward long sections, which held 6 of the 9 wrong claims; the sections outside the sample will hold errors at a similar or lower rate per claim. No person has read all the sections.</span></p>
+        <span data-source="methods_facts" data-field="value" data-where="fact=people_added">—</span> people in them who were not in the network before, written up in the same way. Two spellings were treated as one person only after a check. The section writers noted 215 further pages, such as lab people pages and biographies, that might hold more links; these were not followed up. Four course links of one teacher that reviewers had ruled for removal stay in the network on the compiler's ruling. Pages that show personal
+        contact details are named without a link. Timeline years come from a public record, a section, a profile, a degree year, a roster or another dated link, or from the person's first paper, or for a few from a thesis year less five or a birth year plus 25; a person with none of these is placed from their teachers or students, and a teacher whose year would fall level with or after their earliest student is placed five years before that student. <span id="sections-audit">“MS student” covers any master's degree. Some course links cite a class-work page that lists the student's project but names no teacher; the teacher is named on the course's information page, which does not date the listing for every year. A first audit checked a random 130 sections claim by claim; once a second agent had tested each claimed error, 15 of 1,282 claims proved wrong, 14 unsupported and 2 possibly about a namesake. In the same review, skeptics overturned 23 of 364 rulings on reported link problems; the audit's findings and the fact-checkers' notes were then applied to 274 sections. A last audit by fresh agents checked 170 sections claim by claim (six of them twice), with a second agent testing each claimed error: of 1,904 claim checks, 9 (0.5%) found the claim wrong, 1 found it unsupported and 25 could not be completed, 21 because the page refused automated readers, 2 because it required a sign-in, 1 because the site could not be reached and 1 because the page was a scan the agent did not read; of 72 links, 67 held, 2 had the wrong label and 3 could not be opened; in the 286 links attached to the sampled sections, 54 further problems were confirmed: 35 wrong or loose labels, source tags or dates, 18 links or citations and 1 link with no support. Those errors were corrected, except that 8 of the links stay named without a link because their pages show personal contact details. The sample was weighted toward long sections, which held 6 of the 9 wrong claims; the sections outside the sample will hold errors at a similar or lower rate per claim. Four further rounds of checks (runs 64 to 67), each testing the fixes of the round before, found 61, 45, 21 and 13 faults. No person has read all the sections.</span></p>
+      <p><span class="runin">Who writes the research papers.</span>—The figure at the head of the report and the yearly figures in its opening paragraph split each year's verified research papers (journal articles, reviews and letters) by whether an FHL core scientist identified by address is among the authors. Authors are matched by OpenAlex author identifier, or by name where a record lists no OpenAlex authors. The research papers these scientists published wherever they were are OpenAlex's yearly counts of articles, reviews and letters with any of them as an author, each work counted once, retrieved by a script on 29 October 2026. These totals were not screened: they rest on OpenAlex's type labels and on its grouping of papers into people (above).</p>
+      <p><span class="runin">Co-authors.</span>—Fig. 10 counts every institution named on a verified publication with an OpenAlex record (2,673 of the 4,901 verified publications other than news items), once per publication, with FHL itself left out. OpenAlex gives each institution's location: 1,298 institutions in 78 countries.</p>
       </div>
     </details>
     <figure class="fp-fig fm-fig">
@@ -1801,15 +1903,16 @@
         permission. AI agents extracted <span data-source="methods_facts" data-field="value" data-where="fact=history_extracted">—</span> dated events, another merged them into one timeline, and
         fact-checkers checked every event; three image searches proposed candidates that second agents checked for license
         and year before picture editors chose among them and fact-checkers checked every caption (Figs. 26 and 31). Images
-        are shown only where they are in the public domain, openly licensed, or FHL's own.</p>
+        are shown only where they are in the public domain, openly licensed, or FHL's own. The agents that extracted and merged the events gave each one a kind, from a fixed list of ten, and an importance from 1 to 5 for a reader of the station's history; the events rated 5 are its turning points, marked ✦ in the chronicle.</p>
       <p id="method-discoveries"><span class="runin">Discoveries.</span>—AI agents swept the census, the chronicle and the literature of each field for FHL's major
-        contributions; of more than 110 candidates, 56 are listed. An entry needed two things: independent credit in a later source, or
+        contributions. Six sweeps proposed 279 candidates, many of them repeats; merged, they came to more than 110, of which 55 were shortlisted and 54 kept after a second reader tried to refute each. A completeness review, run without web search, named gaps; a second round kept 2 more entries and 15 additions to existing ones and rejected 55 candidates, so 56 are listed. An entry needed two things: independent credit in a later source, or
         sustained citation with a specific FHL link; and an FHL link stated in the paper or another source, beyond a line in FHL's
         bibliography. One agent wrote each entry from the sources, independent agents tried to refute it, and a critic looked for what was missing. Another
         agent rewrote each for readers and a further one compared the rewrite with the checked text. Two agents judged each entry's
-        label independently and a third settled disagreements, taking the weaker label when two fit; a last review against each entry's evidence changed 11 of the labels. Many publishers' full texts could not be opened, so some entries rest on abstracts and on what a source says of the site.
+        label independently and a third settled the seven disagreements, taking the weaker label when two fit; a last review against each entry's evidence changed 11 of the labels. A lay reader read each of the 11 field groups, and together they proposed 71 fixes; four reviewers then reported 63 findings, 15 of them marked must-fix. Many publishers' full texts could not be opened, so some entries rest on abstracts and on what a source says of the site. A few entries quote what papers say of FHL from open archived copies that the verification push could not open (among them Self and Jumars 1988, Satterlie, LaBarbera and Spencer 1985 and Mayer et al. 1997); the census keeps those papers in the tier it gave them.
         Citation counts, read in 2026, come from the census, OpenAlex, Crossref, Europe PMC or Web of Science and are not comparable with each other. The list is a selection: 1935–1960 is thin, partly because the
-        war interrupted the station, and some classic San Juan papers cited here are missing from the census. They are not added to its counts.</p>
+        war interrupted the station. Some papers cited here, such as Shelford et al. 1935, Ridgway and Ashley 1967 and Willows 1967, are not in the census and do not enter its counts; the classic San Juan shore papers the searches missed are in it (see Papers reviewed one by one).</p>
+      <p><span class="runin">Aequorin and GFP.</span>—Fig. 19 counts PubMed records indexed under the subject headings Green Fluorescent Proteins and Aequorin, by the year each record entered PubMed, as NCBI's public E-utilities gave them on 2 November 2026. The steps of Table IV come from the economic sweep of innovations (run 39). Each step rests on a primary source (Nobel lectures, Shimomura's Nobel biography, the prize announcement, the papers themselves, a patent and a published table of GFP patents), and the sweep was fact-checked with the others in that run.</p>
     </div>
     <details class="fm-more">
       <summary>How the chronicle was gathered, in detail</summary>
@@ -1847,13 +1950,13 @@
       </div>
     </details>
     <div class="fp-notes">
-      <p><span class="runin">Classes and art.</span>—The lists of classes, staff and artists in residence in section X were
-        gathered from public records by AI agents and fact-checked by others. For the figure of course topics, agents gave
+      <p><span class="runin">Classes, staff and artists.</span>—AI agents (run 18) built eleven lists from public records: people with a documented role at the station before about 1985 (in three periods), directors, faculty, support staff, classes (in three periods), artists in residence, and the death years of FHL core scientists given in Table I. The sources were the Regents' minutes, summer-session announcements, UW bulletins, catalogs, yearbooks and time schedules, the station's Publications, FHL's newsletters and archived web pages, the centennial timeline and the report's chronicle, and for death years Wikidata, obituaries and memorial pages; the number of reports per course comes from the student reports deposited in UW ResearchWorks. For each list a second agent checked 15 to 24 entries against their sources, choosing the least certain and the most consequential: of 204 entries checked, 116 held, 85 were corrected and 3 were dropped. A curation run (run 19) applied the corrections, merged duplicates, applied the rule for historical FHL core scientists and kept professional facts only. The other entries were not checked one by one; each gives its sources. For the figure of course topics, agents gave
         each of the <span data-source="methods_facts" data-field="value" data-where="fact=course_titles">—</span> distinct course titles one topic from a fixed list, and a further agent reviewed
         them all for consistency, changing <span data-source="methods_facts" data-field="value" data-where="fact=course_review_changes">—</span>. A single AI agent assigned the artists'
         kinds of work from a fixed list and the archive's descriptions, without a separate review. The gallery shows
         FHL's photographs of artists at work in its studio (<span data-source="methods_facts" data-field="value" data-where="fact=art_images">—</span> shown), used with FHL's permission;
         images of the finished works are the artists' own and are not reproduced here without their permission.</p>
+      <p><span class="runin">Overview figures.</span>—The unnumbered figures at the head of sections IX and X draw only on data shown elsewhere in the report. The first sets the chronicle's eras under the station's names, its events (turning points filled) and the verified publications a year, news items left out, on one time line. The second draws each discovery from the first to the last year of its work given in its entry, marked by FHL's part in it, and below it, year by year: the courses in the class list, leaving out entries marked cancelled, probably not held or without formal classes; the directors, associate and assistant directors, resident faculty, research faculty and staff scientists of the staff list in post; the artists and writers in residence; and the projects and gifts of Fig. 23 from 1913 on, in 2024 dollars. Their photographs come from the chronicle and from FHL's photographs of artists at work.</p>
       <p><span class="runin">Not searched.</span>—Google Scholar and Scopus (no automated access), BIOSIS Previews, Zoological
         Record and ASFA. Because of the acknowledgment gap before about 2008 (Fig. 33), counts are a lower bound, especially
         for 1985–2010 and before 1970.</p>
@@ -1893,9 +1996,11 @@
         is the 2015–2024 projects found in the regents' minutes, NSF records and state capital budgets. Double counting is
         avoided by counting room, board and fees once (in operations), leaving scholarships out as transfers, and keeping the
         university's overhead on grants and the departmental pay of resident faculty as memo lines.</p>
+      <p><span class="runin">Grants and funders.</span>—Awards for work at FHL (Fig. 21, Table VI) come from public award records. NSF's award database was searched for the station's names and places (Friday Harbor, the San Juan Islands and nearby waters), for awards performed or made in Friday Harbor, for field-station, instrument and similar programs in Washington and for awards to the station's directors and resident faculty. An AI agent (run 39) read each award's title and abstract and classed it, with a confidence; amounts are NSF's own. Awards for FHL's facilities, for research and training based at FHL and for meetings held there are counted. Awards carried out partly at FHL, and awards to scientists resident at FHL in the award's years whose records do not name it, are shown but not counted; mentions, other Friday Harbor organizations and work done elsewhere are left out. NIH projects count where the RePORTER record places the work at FHL, and USAspending gives two federal workshop grants and a sub-award. NSF grants of 1957–1971, before the database, come from the regents' minutes and NSF's annual reports. The funders named by census papers (Fig. 22) are OpenAlex's funder and award records for the <span data-source="econ_facts" data-field="display" data-where="fact=matched_papers">—</span> papers matched by DOI in the census as it stood on 2 November 2026, before the papers reviewed one by one and the re-check of records on FHL pages and CVs (above). The NSF and NIH awards these papers name were priced from NSF's database and NIH RePORTER, leaving out awards that begin more than a year after the last paper naming them, as likely misread numbers. An award counts as placed at FHL where the award search placed it there, or where its record gives Friday Harbor with the university as awardee. The projects and gifts of Fig. 23 come from the regents' minutes, FHL's archived web pages and newsletters, NSF award records, the centennial timeline and a UW news release. A fact-check re-opened the sources of these sweeps and the pricing: of 160 checks, 107 confirmed the figure, 46 corrected it and 7 could not be verified (run 39).</p>
+      <p><span class="runin">Training counts.</span>—The counts under "Beyond spending" (section X) that are not the report's own come from public sources: FHL's newsletters and news pages and a UW proposal, read from Internet Archive copies, and an NSF award's outcomes report. An AI agent gathered them and a second agent checked them; of the 28 counts gathered, the check confirmed or corrected 27 and could not open the source of one (run 50). A review before publication checked them again against their sources (run 53).</p>
       <p><span class="runin">Uncertainty.</span>—Each of the <span data-source="econ_facts" data-field="display" data-where="fact=n_inputs">—</span> inputs has a stated basis. Most carry a low, central and high value and are varied together; the rest are fixed shares, mappings or memo values. The ranges quoted, most of them skewed upward, are the 10th to 90th percentiles of <span data-source="econ_facts" data-field="display" data-where="fact=n_draws">—</span> Monte Carlo draws;
-        Fig. 35 moves one input at a time. Three independent reviews (economic method, the provenance of every input, and the
-        regional treatment against peer marine stations) were answered before the results were fixed. The output per direct
+        Fig. 35 moves one input at a time. Three reviews by separate AI agents (economic method, the provenance of every input, and the
+        regional treatment against peer marine stations) raised 29 issues, 2 of them blocking and 8 major, which were answered before the results were fixed (run 41). The output per direct
         dollar, 1.81 in the state and 1.36 in the county, sits beside published values for peer marine laboratories (1.83 for
         Bigelow Laboratory in Maine, 1.53 for Duke's marine laboratory in its county).</p>
     </div>
@@ -1935,21 +2040,21 @@
         <a href="https://github.com/weertman/fhl-research-profile/blob/main/docs/economic_model_method.md" target="_blank" rel="noopener">full method</a>
         and the model's <a href="https://github.com/weertman/fhl-research-profile/tree/main/data/economics" target="_blank" rel="noopener">inputs, results and sensitivities</a>
         are published with the data; the code is kept with the census files. AI agents (Claude Opus 5.5) gathered the
-        sources, built the model and reviewed it (runs 39 to 41, Table VIII).</p>
+        sources, surveyed how the university and peer marine stations classify economic impact (re-opening 64 cited publications), built the model and reviewed it (runs 39 to 41, Table VIII); the second audit of the whole report and its follow-up checks re-read the economic figures, method and sources (runs 42 to 44).</p>
     </div>
 
     <h3 class="fp-subhead" id="ai-use">The use of artificial intelligence</h3>
     <div class="fp-notes">
       <p><span class="runin">Platform.</span>—The census, its code, the spreadsheet, the figures and this page were produced
         with Claude Code (version 2.1.295 and later), Anthropic's coding agent, in the Claude desktop app on macOS, from 13 October
-        to 13 November 2026. The
+        to 21 November 2026 (UTC). The
         coordinating session and every agent it started used the model Claude Opus 5.5 (claude-opus-5-5). The census and
         the drafting of this page ran at the "xhigh" reasoning-effort setting, the second highest of five
         (low, medium, high, xhigh, max). From the topic classification onward (14 October, 18:10 UTC), including the people
         section and the check of inferred mentors, the setting was "max", the highest. It returned to "xhigh" (Table VIII) for the
         chronicle's second image search and a review of the page's phone layout (15–16 October), and for the verification push, the
         archive searches and the review of 28 October. From 28 October, 22:41 UTC (Claude Code 2.1.309), the session's record
-        gives "high", for runs 22–69: the research for the methods diagrams, the later searches for images, course topics and
+        gives "high", for runs 22–73: the research for the methods diagrams, the later searches for images, course topics and
         art, and all the work from 29 October on. These are the coordinating session's settings. The agents' own
         logs record each agent's setting (Table VIII): one step lower for the runs at "max" (runs 9–13, logged "xhigh"), and the
         same as the session's for the other runs with logs (runs 7 and 8, also at "max", left none). Claude Code's ultracode
@@ -1959,9 +2064,10 @@
         <span data-source="methods_facts" data-field="value" data-where="fact=ai_agents">—</span> agents.
         Runs 1–6, from the first prompt to a complete census and page on 13–14 October, took
         <span data-source="methods_facts" data-field="value" data-where="fact=build_hours">—</span> hours of wall-clock time,
-        most of it unattended; runs 7–25 extended and checked it on 14–16 and 28–29 October; and runs 26–69, from 29 October
+        most of it unattended; runs 7–25 extended and checked it on 14–16 and 28–29 October; runs 26–69, from 29 October
         to 13 November, reviewed and revised the report and built the economic contribution, the discoveries, the sections on
-        the network's people and the re-checks of the census.</p>
+        the network's people and the re-checks of the census; and runs 70–73, from 20 to 21 November, reviewed the census and
+        the page before release, fixed what the review found and laid out a poster of the report.</p>
       <p><span class="runin">Agents counted.</span>—Agents launched: <span data-fm="agents-launched">—</span>; counted:
         <span data-fm="agents-counted">—</span>. <span data-fm="agents-unreturned">—</span> reading and re-checking agents of run 16 never returned after the
         run was stopped, and the other <span data-fm="agents-other">—</span> were first launches of runs 24 and 55
@@ -1973,18 +2079,27 @@
         sources through their programming interfaces, judged ambiguous records, ran the audit, and drafted and designed this
         page. The compiler set the task and made the further requests listed below, signed in to the UW Libraries and Web of
         Science with their own account, and saved the exported files; Claude operated the Web of Science export in a browser
-        after that sign-in. No person screened individual records; the compiler ruled on a few questions the agents raised (see the prompts below).</p>
+        after that sign-in. No person screened individual records. The compiler ruled on a few questions the agents raised, among them that full texts opened through a university network license do not count as read, that a society's own copy of its paper may be read from the Wayback Machine when the publisher's site refuses automated reading, and that four course links of one teacher, which reviewers had ruled for removal, stay in the network.</p>
       <p><span class="runin">Safeguards.</span>—Agents had no accounts or passwords, did not get around paywalls, bot checks or
-        CAPTCHAs, and treated fetched pages as data rather than as instructions. Paywalled publications were judged from
+        CAPTCHAs, and treated fetched pages as data rather than as instructions. Some publisher pages opened without a login because the agents' computer was on the university's network; under the compiler's ruling those readings do not count (see Records on FHL pages and CVs). Paywalled publications were judged from
         their metadata and abstract; where the connection could not be seen they stay Probable or Listed by FHL rather than
         Verified, and the catalog says why. Personal email addresses found in records were
         removed from the outputs.</p>
       <p><span class="runin">Limits.</span>—AI judgments can be wrong; the audit's error rates (Table IX) and the topic
         agreement rates above describe how often.
         Treat individual records as leads to check, and the totals as estimates with the stated uncertainty.</p>
-      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app from 13 October to 13 November 2026.
+      <p><span class="runin">Reviews of the report.</span>—AI agents also reviewed the report itself in rounds, and most rounds tested each
+        finding against the files before it was fixed. Two audits of the whole report confirmed 146 of 152 and 76 of 85
+        findings (runs 36 and 42); later runs checked that the fixes held (runs 37, 43 and 44) and tried to refute the last
+        edits (run 49). Other reviews covered the phone layout, the tabs, rounds of changes, the feedback form and the Methods
+        figures (runs 15, 20, 26 to 28, 30, 31 and 33); wording that narrated the report's own editing (run 35); a shortening
+        that kept every fact (run 38); the move of material between tabs (runs 45 to 47); the discoveries (run 53); the term
+        FHL core scientists (run 57); the merge of the re-check into the census (run 60); and the Methods tab against the run
+        record and the data (run 69). Table VIII gives each run's findings. A review before the freeze on 20 November 2026 (run 70) had six agents check every news item, the Methods tab and open questions on single papers and
+        events, and a seventh look for what they missed; a separate agent tested each finding before it was fixed.</p>
+      <p><span class="runin">Prompts.</span>—The work followed from the prompts below, typed into the Claude desktop app from 13 October to 20 November 2026.
         Early messages about signing in, saving files and progress are summarized rather than quoted, and so are the
-        compiler's rulings on named people in the network and on one census record; a report sent from the page itself is shown as a one-line note, and
+        compiler's rulings on named people in the network and on how papers may be read (given under Division of labor); a report sent from the page itself is shown as a one-line note, and
         the link to the feedback form's web app is withheld. Each prompt shows when it
         was typed (Pacific time) and the output tokens (text, reasoning and tool calls) it led to: those Claude generated in
         the main session before the next prompt, plus those of the agents started in that time. A workflow's agents count
@@ -2381,7 +2496,7 @@
   });
   dash.calc('best_estimate', {
     title: 'Best estimate of FHL publications',
-    description: 'Verified publications at the precision the independent audit measured, plus the probable and listed records that could not be read, each at the share of its tier that named FHL when the verification push could read the paper (the audit precision where too few were read). Listed records read in full that do not name FHL count zero.',
+    description: 'Verified publications at the precision the audit measured, plus the probable and listed records that could not be read, each at the share of its tier that named FHL when the verification push could read the paper (the audit precision where too few were read). Listed records read in full that do not name FHL count zero.',
     inputs: ['headline', 'audit_tiers'],
     fn: (headline, audit_tiers) => {
       const h = headline[0];
@@ -2400,7 +2515,7 @@
   });
   dash.calc('scorecard', {
     title: 'What the station produces, by measure',
-    description: 'Yearly averages over 2016–2025 of verified work that names FHL, sorted by kind (research papers, training, open data, other); citations to the research papers; news stories; and co-author institutions.',
+    description: 'Yearly averages over 2016–2025 of verified work that names FHL, sorted by kind (research papers, training, open data, other); citations to the research papers; news items; and co-author institutions.',
     inputs: ['publications', 'network_split', 'news_by_year', 'coauthor_places'],
     fn: (publications, network_split, news_by_year, coauthor_places) => {
       const Y0 = 2016, Y1 = 2025, N = Y1 - Y0 + 1, inY = (r) => +r.year >= Y0 && +r.year <= Y1;
@@ -2424,7 +2539,7 @@
         { group: 'Training', measure: 'theses', value: perYear(THESES), unit: 'a year', label: 'theses and dissertations name FHL', note: '', kind: 'training' },
         { group: 'Training', measure: 'student_reports', value: perYear(REPORTS), unit: 'a year', label: 'student and course reports', note: 'mostly from FHL classes', kind: 'training' },
         { group: 'Open data', measure: 'datasets', value: perYear(DATA), unit: 'a year', label: 'datasets and software name FHL', note: '', kind: 'data' },
-        { group: 'Public reach', measure: 'news', value: news, unit: 'a year', label: 'news stories about the station or its research', note: 'found by web search; a sample, not a full count (Fig. 18)' },
+        { group: 'Public reach', measure: 'news', value: news, unit: 'a year', label: 'news items about the station or its research', note: 'each outlet\'s copy counts; about two in five are FHL\'s own posts and columns; a sample, not a full count (Fig. 18)' },
         { group: 'Collaboration', measure: 'institutions', value: coauthor_places.length, unit: '', label: 'institutions on the co-author map (Fig. 10) co-authored verified work with FHL, all years', note: '' },
         { group: 'Collaboration', measure: 'countries', value: new Set(coauthor_places.map((r) => r.country).filter(Boolean)).size, unit: '', label: 'countries those institutions are in', note: '' },
         { group: 'Other output', measure: 'other', value: other, unit: 'a year', label: 'conference abstracts, reports, preprints, editorials and the rest', note: '', kind: 'other' },
@@ -2541,7 +2656,8 @@
   // The dashboard's d3 has no map module, so the two projections the map uses are written out here with d3-geo's
   // formulas: Natural Earth I for the world, and an Albers conic equal-area projection for North America.
   const RAD = Math.PI / 180;
-  const wrapLon = (l) => (l > 180 ? l - 360 : l < -180 ? l + 360 : l);
+  // A small tolerance keeps points that sit on the edge meridian (180.00000000000006 in the land data) on their side.
+  const wrapLon = (l) => (l > 180 + 1e-9 ? l - 360 : l < -180 - 1e-9 ? l + 360 : l);
   const naturalEarth1 = (lam, phi) => {
     const p2 = phi * phi, p4 = p2 * p2;
     return [lam * (0.8707 - 0.131979 * p2 + p4 * (-0.013791 + p4 * (0.003971 * p2 - 0.001529 * p4))),
@@ -2958,7 +3074,7 @@
       const evs = shown.filter((r) => r.year >= era.start && r.year <= era.end).sort((a, b) => a.year - b.year || String(a.date).localeCompare(String(b.date)));
       const pl = plates.filter((im) => +im.year >= era.start && +im.year <= era.end).sort((a, b) => (+a.year - +b.year) || byOrder(a, b));
       if (!evs.length && !pl.length) return;
-      const box = make('details', 'fp-era-box'); box.open = openEras.has(era.start);
+      const box = make('details', 'fp-era-box'); box.id = `era-${era.start}`; box.open = openEras.has(era.start);
       box.addEventListener('toggle', () => { if (box.open) openEras.add(era.start); else openEras.delete(era.start); });
       const sum = make('summary');
       const head = make('div', 'fp-era');
@@ -3015,6 +3131,232 @@
     if (phone()) { pic = document.createElement('div'); pic.className = 'pan'; pic.append(img); }
     dlg.replaceChildren(btn, pic, p);
     dlg.showModal();
+  }
+
+  // The years an artist or writer was in residence: every year from start to end, except that intermittent residents count
+  // only in the years written in their 'years' field (e.g. '2013-2015; 2025').
+  function artistYears(r) {
+    const a = +r.start_year, b = Math.max(a, +r.end_year || a);
+    if (!a) return [];
+    let ys = d3.range(a, Math.min(b, 2026) + 1);
+    if (r.year_note === 'intermittent' || /;/.test(String(r.years))) {
+      const s = new Set();
+      for (const m of String(r.years).matchAll(/(\d{4})(?:\s*-\s*(\d{2,4}))?/g)) {
+        const lo = +m[1], q = m[2], hi = q ? +(q.length === 4 ? q : m[1].slice(0, 4 - q.length) + q) : lo;
+        for (let y = lo; y <= hi; y++) s.add(y);
+      }
+      ys = ys.filter((y) => s.has(y));
+    }
+    return ys;
+  }
+
+  // The overviews at the head of the Chronicle (section IX) and of Science and society (section X): a row of photographs,
+  // each a link that opens one part of the tab, over one figure on a shared time line. The photographs are images the
+  // chronicle and the artists' archive already show, with their credits. Drawn with the rest, and again when either tab is
+  // opened, since the figures need the tab on screen to measure their width.
+  const OV_ERA_IMG = { 1903: 'IMG053', 1909: 'IMG020', 1918: 'IMG016', 1930: 'IMG141', 1958: 'IMG023' };
+  const OV_SCI = [
+    { img: 'IMG122', href: '#discoveries', name: 'Discoveries' },
+    { img: 'IMG026', href: '#economics', name: 'Economic contribution' },
+    { img: 'IMG130', href: '#arch-classes', name: 'Classes' },
+    { img: 'IMG171', href: '#arch-staff', name: 'Directors and staff' },
+    { img: 'ART14', href: '#arch-artists', name: 'Artists in residence' },
+  ];
+  const ovMake = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  // The photographs, as links; returns the link elements, for the leader lines.
+  function ovPlates(box, items) {
+    const els = items.map((it) => {
+      const a = ovMake('a', 'fp-ov-plate'); a.href = it.href;
+      if (it.im) { const img = ovMake('img'); img.loading = 'lazy'; img.src = thumbSrc(it.im); img.alt = it.im.alt || ''; a.append(img); }
+      if (it.top) a.append(ovMake('span', 'yrs', it.top));
+      a.append(ovMake('span', 'nm', it.name));
+      if (it.sub) a.append(ovMake('span', 'sub', it.sub));
+      return a;
+    });
+    box.replaceChildren(...els);
+    return els;
+  }
+  const ovCredits = (el, ims) => { if (el) el.textContent = `Photographs, left to right: ${ims.filter(Boolean).map((im) => `${im.year ? `${im.year}, ` : ''}${im.credit}`.replace(/\.\s*$/, '')).join('; ')}.`; };
+  // Thin lines from each photograph down to its place on the time line (wide screens, photographs in one row).
+  function ovLeaders(svg, el, plates, xs, y1) {
+    if (phone()) return;
+    const r0 = el.getBoundingClientRect();
+    const rs = plates.map((p) => p.getBoundingClientRect());
+    if (!r0.width || rs.some((r) => !r.width || Math.abs(r.top - rs[0].top) > 2)) return;
+    const k = (+svg.attr('viewBox').split(' ')[2]) / r0.width;
+    rs.forEach((r, i) => {
+      const cx = ((r.left + r.right) / 2 - r0.left) * k, tx = xs[i];
+      if (tx == null) return;
+      svg.append('path').attr('class', 'lead').attr('d', `M${cx},0 V${y1 * 0.3} C${cx},${y1 * 0.75} ${tx},${y1 * 0.45} ${tx},${y1}`);
+    });
+  }
+  function drawOverviews() {
+    safely(document.getElementById('ch-hist-ov'), drawHistOverview);
+    safely(document.getElementById('ch-sci-ov'), drawSciOverview);
+  }
+  function drawHistOverview() {
+    const el = document.getElementById('ch-hist-ov'), box = document.getElementById('hist-ov-plates');
+    if (!el || !box) return;
+    hideTip(el);
+    if (!state(el, ['history_events', 'history_images', 'history_eras', 'by_year'])) return;
+    const imgs = new Map(dash.data('history_images').data.map((r) => [r.image_id, r]));
+    const eras = dash.data('history_eras').data.map((r) => ({ ...r, start: +r.start, end: +r.end }));
+    const ph = phone();
+    const plates = ovPlates(box, eras.map((e) => ({ im: imgs.get(OV_ERA_IMG[e.start]), href: `#era-${e.start}`,
+      top: `${e.start}–${e.end >= 2026 ? 'today' : e.end}`, name: e.name })));
+    ovCredits(document.getElementById('hist-ov-credits'), eras.map((e) => imgs.get(OV_ERA_IMG[e.start])));
+    const KEYS = [['Turning point', FILL.solid], ['Other event', FILL.open]];
+    legend(document.getElementById('lg-hist-ov'), KEYS);
+    const evs = dash.data('history_events').data.map((r) => ({ ...r, year: +r.year, turning: +r.importance >= 5 })).filter((r) => r.year);
+    const pubs = dash.data('by_year').data.map((r) => ({ x: +r.year, n: +r.publications })).filter((r) => r.x >= 1903);
+    const lead = ph ? 6 : 34, bandH = ph ? 20 : 26, rad = ph ? 2.4 : 3.1, gap = 1.2;
+    const width0 = Math.max(260, el.clientWidth);
+    const x = d3.scaleLinear([1903, 2027], [3, width0 - 3]);
+    // events: stacked in columns one mark wide, turning points nearest the band
+    const col = 2 * rad + gap;
+    const cols = d3.group(evs.slice().sort((a, b) => b.turning - a.turning || a.year - b.year), (d) => Math.floor((x(d.year + 0.5) - 3) / col));
+    const maxStack = d3.max([...cols.values()], (v) => v.length) || 1;
+    const evTop = lead + bandH + 6, evH = maxStack * col + 4;
+    const pubTop = evTop + evH + 20, pubH = ph ? 44 : 58;
+    const { svg, width, height } = svgFor(el, pubTop + pubH + 24);
+    // the eras
+    const eg = svg.append('g').selectAll('g').data(eras).join('g').attr('class', 'dl')
+      .on('click', (event, e) => { location.hash = `#era-${e.start}`; })
+      .on('mousemove', (event, e) => showTip(el, event, e.name, [[null, null, `${e.start}–${e.end >= 2026 ? 'today' : e.end}`]]))
+      .on('mouseleave', () => hideTip(el));
+    eg.append('rect').attr('class', 'mark').attr('x', (e) => x(e.start)).attr('y', lead).attr('height', bandH)
+      .attr('width', (e) => Math.max(1, x(Math.min(e.end, 2026) + 1) - x(e.start)))
+      .style('fill', (e, i) => (i % 2 ? FILL.grayl : FILL.open));
+    eg.each(function (e) { // the era's name inside its band, where it fits
+      const w = x(Math.min(e.end, 2026) + 1) - x(e.start);
+      const t = d3.select(this).append('text').attr('class', 'era').attr('x', x(e.start) + w / 2).attr('y', lead + bandH / 2)
+        .attr('dy', '0.35em').attr('text-anchor', 'middle').attr('font-size', ph ? 10.5 : 12).text(e.name);
+      if (t.node().getComputedTextLength() > w - 8) t.remove();
+    });
+    // the events
+    const pts = [];
+    cols.forEach((v, c) => v.forEach((d, i) => pts.push({ ...d, cx: 3 + c * col + col / 2, cy: evTop + rad + i * col })));
+    svg.append('g').selectAll('circle').data(pts).join('circle').attr('class', 'mark ev').attr('r', rad)
+      .attr('cx', (d) => d.cx).attr('cy', (d) => d.cy).attr('data-key', (d) => (d.turning ? KEYS[0][0] : KEYS[1][0]))
+      .style('fill', (d) => (d.turning ? FILL.solid : FILL.open))
+      .on('mousemove', (event, d) => showTip(el, event, `${d.year}${d.precision === 'decade' ? ' (about)' : ''} · ${d.title}`, [[null, null, d.type]]))
+      .on('mouseleave', () => hideTip(el))
+      .on('click', (event, d) => { location.hash = `#hist-${d.id}`; });
+    // verified publications a year
+    const ymax = d3.max(pubs, (d) => d.n) || 1;
+    const y = d3.scaleLinear([0, ymax], [pubTop + pubH, pubTop]);
+    svg.append('text').attr('class', 'ptitle').attr('x', 3).attr('y', pubTop - 8).text('Verified publications a year');
+    const tick = d3.ticks(0, ymax, 2).filter((t) => t > 0).pop();
+    if (tick) {
+      svg.append('line').attr('class', 'gridline').attr('x1', 3).attr('x2', width - 3).attr('y1', y(tick)).attr('y2', y(tick));
+      svg.append('text').attr('class', 'pcount').attr('x', 3).attr('y', y(tick) - 4).text(`${f(tick)} a year`);
+    }
+    svg.append('path').datum(pubs).attr('class', 'mark')
+      .attr('d', d3.area().x((d) => x(d.x + 0.5)).y0(pubTop + pubH).y1((d) => y(d.n)).curve(d3.curveStepAfter))
+      .style('fill', FILL.grayl).style('stroke-width', 0.8);
+    svg.append('rect').attr('x', 3).attr('y', pubTop).attr('width', width - 6).attr('height', pubH).style('fill', 'transparent')
+      .on('mousemove', (event) => {
+        const yr = Math.round(x.invert(d3.pointer(event, svg.node())[0]) - 0.5), r = pubs.find((d) => d.x === yr);
+        if (r) showTip(el, event, String(yr), [[null, null, `${f(r.n)} verified publication${r.n === 1 ? '' : 's'}`]]);
+      })
+      .on('mouseleave', () => hideTip(el));
+    svg.append('g').attr('transform', `translate(0,${pubTop + pubH})`)
+      .call(d3.axisBottom(x).tickValues(ph ? [1910, 1950, 1990, 2020] : [1910, 1930, 1950, 1970, 1990, 2010]).tickFormat((d) => d).tickSizeOuter(0)).call(cleanAxis);
+    ovLeaders(svg, el, plates, eras.map((e) => (x(e.start) + x(Math.min(e.end, 2026) + 1)) / 2), lead);
+  }
+  function drawSciOverview() {
+    const el = document.getElementById('ch-sci-ov'), box = document.getElementById('sci-ov-plates');
+    if (!el || !box) return;
+    hideTip(el);
+    const need = ['discoveries', 'classes', 'staff', 'artists', 'econ_capital_timeline', 'history_images', 'art_images'];
+    if (!state(el, need)) return;
+    const ph = phone();
+    const imgs = new Map([...dash.data('history_images').data, ...dash.data('art_images').data].map((r) => [r.image_id, r]));
+    const disc = dash.data('discoveries').data.map((r) => {
+      const ys = (String(r.years_short || r.years).match(/\d{4}/g) || []).map(Number);
+      return { ...r, a: d3.min(ys), b: d3.max(ys) };
+    }).filter((r) => r.a);
+    const split = (t) => String(t || '').split(/\s+\|\s+/).map((v) => v.trim()).filter(Boolean);
+    const notCourse = /no formal classes|\(cancell?ed\)|probably not held/i;
+    const courses = d3.rollup(dash.data('classes').data, (v) => d3.sum(v, (r) => split(r.title).filter((t) => !notCourse.test(t)).length), (r) => +r.year);
+    const SCI_STAFF = new Set(['director', 'associate or assistant director', 'resident faculty', 'research faculty or staff scientist']);
+    const posts = dash.data('staff').data.filter((r) => SCI_STAFF.has(r.category) && +r.start_year)
+      .map((r) => ({ a: +r.start_year, b: Math.min(2026, Math.max(+r.end_year || +r.start_year, +r.start_year)) }));
+    const artists = dash.data('artists').data;
+    const artYears = new Map();
+    artists.forEach((r) => artistYears(r).forEach((yr) => artYears.set(yr, (artYears.get(yr) || 0) + 1)));
+    const capital = d3.rollup(dash.data('econ_capital_timeline').data.filter((r) => +r.amount_2024), (v) => d3.sum(v, (r) => +r.amount_2024), (r) => +r.year);
+    const money = (v) => (v >= 1e6 ? `$${(v / 1e6).toFixed(v >= 1e7 ? 0 : 1)} million` : `$${f(Math.round(v / 1e3))} thousand`);
+    const nCourses = d3.sum([...courses.values()]);
+    const econ = dash.data('econ_facts').status === 'ok' ? (dash.data('econ_facts').data.find((r) => r.fact === 'wa_output') || {}).display : null;
+    const items = OV_SCI.map((it) => ({ ...it, im: imgs.get(it.img) }));
+    const subs = { '#discoveries': `${f(disc.length)} discoveries`, '#economics': econ ? `about ${econ} a year` : null,
+      '#arch-classes': `${f(nCourses)} course entries`, '#arch-staff': `${f(dash.data('staff').data.length)} posts`,
+      '#arch-artists': `${f(artists.length)} artists and writers` };
+    ovPlates(box, items.map((it) => ({ im: it.im, href: it.href, name: it.name, sub: subs[it.href] })));
+    ovCredits(document.getElementById('sci-ov-credits'), items.map((it) => it.im));
+    const TIES = [['Done at FHL', FILL.solid], ['Based at FHL, work partly elsewhere', FILL.hatch], ['Partly at FHL', FILL.open]];
+    legend(document.getElementById('lg-sci-ov'), TIES);
+    // the discoveries, packed into lanes
+    const lanes = [];
+    disc.sort((p, q) => p.a - q.a || q.b - p.b).forEach((d) => {
+      let i = lanes.findIndex((end) => end + 2 < d.a);
+      if (i < 0) { i = lanes.length; lanes.push(0); }
+      lanes[i] = d.b; d.lane = i;
+    });
+    const laneH = ph ? 5 : 6, laneGap = 2, labH = 18, rowGap = 14, rowH = ph ? 30 : 40;
+    const discH = lanes.length * (laneH + laneGap);
+    const rows = [
+      { key: 'courses', title: 'Courses taught a year', data: courses, fill: FILL.solid, fmt: (v) => `${f(v)} course${v === 1 ? '' : 's'}`, total: `${f(nCourses)} in all` },
+      { key: 'staff', title: 'Directors and faculty in residence, in post', data: new Map(d3.range(1904, 2027).map((yr) => [yr, posts.filter((p) => p.a <= yr && yr <= p.b).length])),
+        fill: FILL.cross, fmt: (v) => `${f(v)} in post`, total: `${f(posts.length)} posts` },
+      { key: 'artists', title: 'Artists and writers in residence', data: artYears, fill: FILL.dots, fmt: (v) => `${f(v)} in residence`, total: `${f(artists.length)} in all` },
+      { key: 'capital', title: 'Buildings, docks, land, vessels and instruments, 2024 dollars', data: capital, fill: FILL.hatch, fmt: money,
+        total: `${money(d3.sum([...capital.values()]))} in all` },
+    ];
+    const discTop = labH + 3;
+    let top = discTop + discH + rowGap;
+    rows.forEach((r) => { r.top = top + labH; top = r.top + rowH + rowGap; });
+    const { svg, width } = svgFor(el, top + 16);
+    const x = d3.scaleLinear([1903, 2027], [3, width - 3]);
+    const bw = Math.max(1, x(1904) - x(1903) - (x(1904) - x(1903) > 4 ? 1 : 0));
+    const title = (yy, t, total) => { // the row's name at left, its totals at right; the name is shortened if they would meet
+      let rw = 0;
+      if (total) rw = svg.append('text').attr('class', 'pcount').attr('x', width - 3).attr('y', yy - 6).attr('text-anchor', 'end').text(total).node().getComputedTextLength();
+      svg.append('text').attr('class', 'ptitle').attr('x', 3).attr('y', yy - 6).text(t)
+        .each(function () { let s = t; while (this.getComputedTextLength() > width - rw - 18 && s.length > 6) { s = s.slice(0, -2); this.textContent = `${s}…`; } });
+    };
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(0,${discTop})`)
+      .call(d3.axisTop(x).tickValues([1910, 1930, 1950, 1970, 1990, 2010]).tickFormat('').tickSize(-(top - discTop))).call(cleanAxis)
+      .call((g) => g.select('.domain').remove());
+    title(discTop, 'Discoveries, over the years of their work', `${f(disc.length)} in all`);
+    const tieFill = (d) => (TIES.find(([k]) => k === d.tie_label) || TIES[2])[1];
+    svg.append('g').selectAll('rect').data(disc).join('rect').attr('class', 'mark dl')
+      .attr('x', (d) => x(d.a)).attr('y', (d) => discTop + d.lane * (laneH + laneGap)).attr('height', laneH)
+      .attr('width', (d) => Math.max(laneH, x(d.b + 1) - x(d.a))).attr('rx', 1)
+      .attr('data-key', (d) => (TIES.find(([k]) => k === d.tie_label) || TIES[2])[0]).style('fill', tieFill)
+      .on('mousemove', (event, d) => showTip(el, event, d.title, [[null, null, `${d.years_short || d.years} · ${d.tie_label}`], [null, null, d.group]]))
+      .on('mouseleave', () => hideTip(el))
+      .on('click', (event, d) => { location.hash = `#disc-${d.id}`; });
+    rows.forEach((r) => {
+      const vals = [...r.data.entries()].filter(([yr, v]) => v > 0 && yr >= 1903 && yr <= 2026);
+      const vmax = d3.max(vals, ([, v]) => v) || 1;
+      const yy = d3.scaleLinear([0, vmax], [r.top + rowH, r.top]);
+      title(r.top, r.title, `${r.total} · peak ${r.fmt(vmax)}`);
+      svg.append('line').attr('class', 'base').attr('x1', 3).attr('x2', width - 3).attr('y1', r.top + rowH).attr('y2', r.top + rowH).style('stroke-width', 0.6);
+      svg.append('g').selectAll('rect').data(vals).join('rect').attr('class', 'mark').style('stroke-width', bw > 3 ? 0.5 : 0)
+        .attr('x', ([yr]) => x(yr)).attr('width', bw).attr('y', ([, v]) => yy(v)).attr('height', ([, v]) => r.top + rowH - yy(v))
+        .style('fill', r.key === 'courses' ? FILL.solid : r.fill);
+      svg.append('rect').attr('x', 3).attr('y', r.top).attr('width', width - 6).attr('height', rowH).style('fill', 'transparent')
+        .on('mousemove', (event) => {
+          const yr = Math.floor(x.invert(d3.pointer(event, svg.node())[0]));
+          showTip(el, event, `${yr} · ${r.title.replace(/, 2024 dollars$/, '')}`, [[null, null, r.data.get(yr) ? r.fmt(r.data.get(yr)) : 'none recorded']]);
+        })
+        .on('mouseleave', () => hideTip(el));
+    });
+    svg.append('g').attr('transform', `translate(0,${top - rowGap})`)
+      .call(d3.axisBottom(x).tickValues(ph ? [1910, 1950, 1990, 2020] : [1910, 1930, 1950, 1970, 1990, 2010]).tickFormat((d) => d).tickSizeOuter(0)).call(cleanAxis)
+      .call((g) => g.select('.domain').remove());
   }
 
   // Under the mentoring network (Fig. 11), on its time axis: the technicians and staff from the chronicle's staff archive
@@ -3405,7 +3747,7 @@
     const id = decodeURIComponent((h || '').slice(1));
     const t = id && document.getElementById(id);
     if (t) return tabOfEl(t);
-    return /^#(history|hist-|land|chronicle)/.test(h || '') ? 'chronicle' : /^#(science|arch-|disc|econ|beyond)/.test(h || '') ? 'science' : /^#method/.test(h || '') ? 'methods' : 'report';
+    return /^#(history|hist-|era-|land|chronicle)/.test(h || '') ? 'chronicle' : /^#(science|arch-|disc|econ|beyond)/.test(h || '') ? 'science' : /^#method/.test(h || '') ? 'methods' : 'report';
   };
   const currentTab = () => (fpRoot.classList.contains('tab-chronicle') ? 'chronicle' : fpRoot.classList.contains('tab-science') ? 'science' : fpRoot.classList.contains('tab-methods') ? 'methods' : 'report');
   let pendingTarget = (location.hash || '').length > 1; // a link into the page, followed once its target is drawn
@@ -3418,6 +3760,7 @@
     if (drawnHidden.has(tab) && typeof redraw === 'function') redraw();
     if (sci && typeof drawArchive === 'function' && dash.data('staff').status === 'ok') drawArchive();
     if (sci && drawnOnce) drawChronicleEcon();
+    if ((sci || tab === 'chronicle') && drawnOnce && typeof drawOverviews === 'function') drawOverviews();
   };
   // Open whatever folds the address points into (a folded figure, an era of the chronicle), then go there.
   const openTarget = () => {
@@ -3523,18 +3866,7 @@
       if (state(elArt, ['artists'])) {
         const rows = [];
         ad.data.filter((r) => +r.start_year).forEach((r) => {
-          const a = +r.start_year, b = Math.max(a, +r.end_year || a);
-          // Intermittent residents count only in the years written in their 'years' field (e.g. '2013-2015; 2025').
-          let ys = d3.range(a, Math.min(b, 2026) + 1);
-          if (r.year_note === 'intermittent' || /;/.test(String(r.years))) {
-            const s = new Set();
-            for (const m of String(r.years).matchAll(/(\d{4})(?:\s*-\s*(\d{2,4}))?/g)) {
-              const lo = +m[1], q = m[2], hi = q ? +(q.length === 4 ? q : m[1].slice(0, 4 - q.length) + q) : lo;
-              for (let y = lo; y <= hi; y++) s.add(y);
-            }
-            ys = ys.filter((y) => s.has(y));
-          }
-          ys.forEach((y) => rows.push({ x: y, k: KIND[r.kind] || KINDS[4], n: 1, name: r.name }));
+          artistYears(r).forEach((y) => rows.push({ x: y, k: KIND[r.kind] || KINDS[4], n: 1, name: r.name }));
         });
         const lo = d3.min(rows, (r) => r.x) || 1924;
         d3.range(lo, 2027).forEach((y) => rows.push({ x: y, k: KINDS[0], n: 0 }));
@@ -4054,7 +4386,9 @@
       // research papers only: other kinds of work are different outputs, counted in the summary below
       const A = avg('by_fhl_scientists_research'), B = avg('by_others_research'), U = avg('no_author_data_research'), T = avg('fhl_scientists_all_research');
       const r0 = (v) => f(Math.round(v));
-      [['split-research', A + B + U], ['split-fhl', A], ['split-others', B], ['split-all', T]].forEach(([id, v]) => { const e = document.getElementById(id); if (e) e.textContent = r0(v); });
+      // the parts shown add up to the whole shown: the visitors' part is the rounded total less the other rounded parts
+      const nB = Math.round(A + B + U) - Math.round(A) - Math.round(U);
+      [['split-research', A + B + U], ['split-fhl', A], ['split-others', nB], ['split-all', T]].forEach(([id, v]) => { const e = document.getElementById(id); if (e) e.textContent = r0(v); });
       // A flow chart: the papers that name FHL (left) and everything FHL core scientists publish (right) meet in the middle,
       // where FHL core scientists' papers name the station.
       const nSci = dash.data('people').status === 'ok' ? dash.data('people').data.filter((p) => (p.basis || 'address') === 'address').length : 173;
@@ -4077,10 +4411,10 @@
         { cx: W * 0.25, w: tw, num: `${r0(A + B + U)} a year`, label: 'research papers name FHL (verified, 2016–2025 average)',
           note: U >= 0.5 ? `${r0(U)} of them have no author data` : '' },
         { cx: W * 0.75, w: tw, num: `${r0(T)} a year`, label: `research papers by the ${f(nSci)} FHL core scientists, wherever they were`,
-          note: 'FHL core scientists: FHL is their address on at least three verified publications (section IV)' },
+          note: 'FHL core scientists identified by address: FHL is their address on at least three verified publications (section IV)' },
       ];
       const bots = [
-        { cx: colW * 0.5, fill: SPLIT[1][1], name: SPLIT[1][0], num: r0(B), label: 'by visitors, students and other collaborators', from: [0] },
+        { cx: colW * 0.5, fill: SPLIT[1][1], name: SPLIT[1][0], num: r0(nB), label: 'by visitors, students and other collaborators', from: [0] },
         { cx: colW * 1.5, fill: SPLIT[0][1], name: SPLIT[0][0], num: r0(A), label: 'by FHL core scientists, naming FHL', from: [0, 1], shared: true },
         { cx: colW * 2.5, fill: SPLIT[3][1], name: 'By FHL core scientists, not naming FHL', num: f(Math.round(T) - Math.round(A)), label: 'by FHL core scientists, not naming FHL', from: [1] },
       ];
@@ -4270,8 +4604,8 @@
 
     // ---- news ------------------------------------------------------------------------------------------------
     const elN = document.getElementById('ch-news');
-    const newsKeys = ['Coverage of FHL research', 'FHL as an institution', 'Other FHL news'];
-    const newsFills = [FILL.solid, FILL.hatch, FILL.dots];
+    const newsKeys = ['Coverage of FHL research', 'FHL as an institution'];
+    const newsFills = [FILL.solid, FILL.hatch];
     legend(document.getElementById('lg-news'), newsKeys.map((k, i) => [k, newsFills[i]]));
     if (state(elN, ['news_by_year'])) {
       // the whole dated sample, with every year from the first item on, so years without items keep their place
@@ -4343,6 +4677,7 @@
 
     // ---- chronicle of the station ------------------------------------------------------------------------------
     drawHistory();
+    drawOverviews();
 
     // ---- the prompts, as typed: when, and the output tokens each led to ----------------------------------------
     const pr = dash.data('prompts');
