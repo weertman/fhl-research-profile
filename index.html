@@ -473,6 +473,13 @@
   .fp-tabs a { display: flex; align-items: center; justify-content: center; text-align: center; padding: .5rem 1.1rem; font-size: .86rem; text-transform: uppercase; letter-spacing: .12em; color: var(--fp-ink); text-decoration: none; }
   .fp-tabs a + a { border-left: 1px solid var(--fp-ink); }
   .fp-tabs a[aria-current="page"] { background: var(--fp-ink); color: var(--fp-paper); }
+  /* a caption over the tabs, and the tabs again at the foot of each part, for readers who scroll to the end */
+  .fp-parts { flex-basis: 100%; text-align: center; font-style: italic; font-size: .92rem; color: var(--fp-ink-2); margin-bottom: -.2rem; }
+  .fp-parts::before, .fp-parts::after { content: ""; display: inline-block; width: 1.8rem; border-top: 1px solid var(--fp-ink-3); vertical-align: .3em; margin-inline: .6rem; }
+  .fp-foot { display: grid; justify-items: center; gap: .6rem; margin: 1rem 0 1.4rem; font-size: 1rem; letter-spacing: normal; }
+  @media (hover: hover) { .fp-tabs a:not([aria-current]):hover { background: color-mix(in oklab, var(--fp-ink) 9%, var(--fp-paper)); } }
+  .fp-tabs a:focus-visible { outline: 2px solid var(--fp-ink); outline-offset: -4px; }
+  .fp-tabs a[aria-current]:focus-visible { outline-color: var(--fp-paper); }
   @media (max-width: 560px) { .fp-tabs { max-width: 100%; } .fp-tabs a { padding: .45rem .5rem; letter-spacing: .06em; font-size: .8rem; } }
   .fp-feedback { font-size: .84rem; font-style: italic; color: var(--fp-ink); }
   /* the feedback link sits at the top right of the page; where it would run into the centered imprint, on its own line */
@@ -613,7 +620,8 @@
     <p class="byline"><span>Claude Opus 5.5</span><span>Willem Lee Weertman and Marjorie Wonham</span></p>
     <div class="fp-rule2 flip" role="presentation"></div>
     <div class="fp-topbar">
-      <nav class="fp-tabs" aria-label="Parts of the report">
+      <div class="fp-parts" id="parts-top">The report in four parts</div>
+      <nav class="fp-tabs" aria-labelledby="parts-top">
         <a href="#top" data-tab="report">The census</a>
         <a href="#history" data-tab="chronicle">Chronicle</a>
         <a href="#science" data-tab="science">Science and society</a>
@@ -674,11 +682,11 @@
     with an FHL core scientist among the authors, and about <span id="split-others">—</span> by visiting
     researchers, students and other collaborators, much of it written elsewhere. In all, the 173 FHL core scientists identified by address (section IV; 41 of them still publishing from FHL), wherever they were,
     published about <span id="split-all">—</span> research papers a year over 2016–2025; most of these do not name the station. The sections below show what the work was about, who did it (where they came
-    from, whom they trained and where they went) and where the station appears in each publication; the Chronicle tab tells
-    the station's history in dated events and images, and the Science and society tab gives its discoveries, the economic
+    from, whom they trained and where they went) and where the station appears in each publication; the <a href="#history">Chronicle tab</a> tells
+    the station's history in dated events and images, and the <a href="#science">Science and society tab</a> gives its discoveries, the economic
     contribution of its activity to the island and the state, and its classes, staff and artists in residence. AI agents
     assembled the census by searching databases, archives and FHL's own lists. How far to trust it, the
-    methods and the prompts that built it are given in the Methods tab, and the data are <a href="https://github.com/weertman/fhl-research-profile/tree/main/data" target="_blank" rel="noopener">public</a>.
+    methods and the prompts that built it are given in the <a href="#method">Methods tab</a>, and the data are <a href="https://github.com/weertman/fhl-research-profile/tree/main/data" target="_blank" rel="noopener">public</a>.
   </p>
 
 
@@ -2151,7 +2159,18 @@
     <p class="lines"><span class="l">Before the dock, before the dredge and jar,</span><span class="l">you were here: the barnacle, the kelp, the octopus, the star,</span><span class="l">the crystal jelly with its ring of quiet light</span><span class="l">that taught the world to watch a living cell.</span><span class="l">For a hundred years and more we knelt at the low tide</span><span class="l">to count you, name you, guess at what you know.</span><span class="l">We wrote about you; you never read a word,</span><span class="l">and went on living, which was always the greater work.</span></p>
     <p class="by">— Claude Opus 5.5, October 2026</p>
   </section>
-  <div class="fp-end" aria-hidden="true">⁂</div>
+  <div class="fp-end">
+    <div class="fp-foot">
+      <div class="fp-parts" id="parts-foot">The report in four parts</div>
+      <nav class="fp-tabs" aria-labelledby="parts-foot">
+        <a href="#top" data-tab="report">The census</a>
+        <a href="#history" data-tab="chronicle">Chronicle</a>
+        <a href="#science" data-tab="science">Science and society</a>
+        <a href="#method" data-tab="methods">Methods</a>
+      </nav>
+    </div>
+    <span aria-hidden="true">⁂</span>
+  </div>
 </div>
 
 <p class="fp-sitenote">Published at <a href="https://weertman.github.io/fhl-research-profile/">https://weertman.github.io/fhl-research-profile/</a>. The data behind every figure and table are
