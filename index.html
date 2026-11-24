@@ -582,6 +582,7 @@
     .fp-legend svg { margin-top: .12em; }
     .fp-legend .fp-keybtn { padding-block: .2rem; }
     .fp-tabs a { padding: .6rem .55rem; letter-spacing: .05em; }
+    @media (max-width: 360px) { .fp-tabs a { padding: .55rem .3rem; letter-spacing: .02em; font-size: .74rem; } }
     .fp-defbox dl { grid-template-columns: 1fr; gap: 0 0; }
     .fp-defbox dd { margin-bottom: .35rem; }
     .fp-toggle { gap: .4rem; }
@@ -2162,7 +2163,7 @@
   <div class="fp-end">
     <div class="fp-foot">
       <div class="fp-parts" id="parts-foot">The report in four parts</div>
-      <nav class="fp-tabs" aria-labelledby="parts-foot">
+      <nav class="fp-tabs" aria-label="The report in four parts, end of page">
         <a href="#top" data-tab="report">The census</a>
         <a href="#history" data-tab="chronicle">Chronicle</a>
         <a href="#science" data-tab="science">Science and society</a>
